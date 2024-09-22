@@ -61,7 +61,8 @@ export const PostersProvider = ({ children }) => {
   useEffect(() => {
     const fetchPosters = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/posters')
+        const response = await axios.get('http://212.132.119.74:3003/posters')
+
         setPosters(response.data)
         setSelectedPoster(response.data[0])
       } catch (error) {
