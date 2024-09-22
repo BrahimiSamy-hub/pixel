@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: 'Sora', sans-serif;
+  --font-code: 'Source Code Pro', monospace;
+  --font-grotesk: 'Space Grotesk', sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-n-8 text-n-1 text-base;
+  }
+}
+
+.rotate-45 {
+  @apply rotate-[45deg];
+}
+
+.font {
+  font-family: 'Puritan', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.rotate-90 {
+  @apply rotate-[90deg];
+}
+
+.rotate-135 {
+  @apply rotate-[135deg];
+}
+
+.rotate-180 {
+  @apply rotate-[180deg];
+}
+
+.rotate-225 {
+  @apply rotate-[225deg];
+}
+
+.rotate-270 {
+  @apply rotate-[270deg];
+}
+
+.rotate-315 {
+  @apply rotate-[315deg];
+}
+
+.rotate-360 {
+  @apply rotate-[360deg];
+}
+
+.-rotate-45 {
+  @apply rotate-[-45deg];
+}
+
+.-rotate-90 {
+  @apply rotate-[-90deg];
+}
+
+.-rotate-135 {
+  @apply rotate-[-135deg];
+}
+
+.-rotate-180 {
+  @apply rotate-[-180deg];
+}
+
+.-rotate-225 {
+  @apply rotate-[-225deg];
+}
+
+.-rotate-270 {
+  @apply rotate-[-270deg];
+}
+
+.-rotate-315 {
+  @apply rotate-[-315deg];
+}
+
+.-rotate-360 {
+  @apply rotate-[-360deg];
+}
+
+.pixel-text {
+  font-family: 'Press Start 2P', cursive;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pixel-effect {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0;
+}
+
+.bg-green {
+  background-color: green;
+  box-shadow: 0 0 0 1px green, 0 0 0 2px green, 0 0 0 3px green, 0 0 0 4px green;
+}
+
+.bg-red {
+  background-color: red;
+  box-shadow: 0 0 0 1px red, 0 0 0 2px red, 0 0 0 3px red, 0 0 0 4px red;
+}
+
+.bg-yellow {
+  background-color: yellow;
+  box-shadow: 0 0 0 1px yellow, 0 0 0 2px yellow, 0 0 0 3px yellow,
+    0 0 0 4px yellow;
+}
+
+.bg-orange {
+  background-color: orange;
+  box-shadow: 0 0 0 1px orange, 0 0 0 2px orange, 0 0 0 3px orange,
+    0 0 0 4px orange;
+}
