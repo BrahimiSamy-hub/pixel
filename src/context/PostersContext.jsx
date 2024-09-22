@@ -61,7 +61,7 @@ export const PostersProvider = ({ children }) => {
   useEffect(() => {
     const fetchPosters = async () => {
       try {
-        const response = await axios.get('http://212.132.119.74:3003/posters')
+        const response = await axios.get('https://api.pixeldz.store/posters')
 
         setPosters(response.data)
         setSelectedPoster(response.data[0])
