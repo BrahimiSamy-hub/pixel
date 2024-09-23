@@ -2,8 +2,6 @@ import ButtonGradient from '../assets/svg/ButtonGradient'
 import Benefits from '../components/Benefits'
 import Collaboration from '../components/Collaboration'
 import Hero from '../components/Hero'
-import Roadmap from '../components/Roadmap'
-import Services from '../components/Services'
 import Contact from '../components/Contact'
 
 const Home = () => {
@@ -13,8 +11,6 @@ const Home = () => {
         <Hero />
         <Benefits />
         <Collaboration />
-        {/* <Services /> */}
-        {/* <Roadmap /> */}
         <Contact />
       </div>
 

@@ -2,7 +2,6 @@ import Section from './Section'
 import Heading from './Heading'
 import { useForm } from 'react-hook-form'
 import { ToastContainer, toast } from 'react-toastify'
-import wilayas from '../constants/wilaya.json'
 import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
@@ -15,7 +14,6 @@ const Contact = () => {
   } = useForm()
 
   const onSubmit = (data) => {
-    console.log(data)
     toast.success(t('messageSent'))
     reset()
   }

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { check, neonService } from '../assets'
 import { audioPricing } from '../constants'
 import Button from './Button'
@@ -19,6 +20,12 @@ const formatPrice = (price) => {
 }
 
 const AudioPricing = () => {
+  const navigate = useNavigate()
+
+  const handleContactUs = () => {
+    navigate('/contact', { state: { service: 'Audio' } })
+  }
+
   return (
     <Swiper
       spaceBetween={16}
@@ -46,7 +53,11 @@ const AudioPricing = () => {
                 </div>
               </div>
 
-              <Button className='w-full mb-6' white='true'>
+              <Button
+                className='w-full mb-6'
+                white='true'
+                onClick={handleContactUs}
+              >
                 Contact us
               </Button>
 

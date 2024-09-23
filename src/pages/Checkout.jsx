@@ -1,35 +1,3 @@
-// import React, { useState } from 'react'
-// import { useForm } from 'react-hook-form'
-// import Section from '../components/Section'
-// import { FaCircleCheck, FaSpinner } from 'react-icons/fa6'
-// import { Link } from 'react-router-dom'
-// import ButtonGradient from '../assets/svg/ButtonGradient'
-// import wilayasData from '../constants/wilaya.json'
-// import emailjs from 'emailjs-com'
-// import { useCart } from '../context/CartContext'
-// import { useTranslation } from 'react-i18next'
-
-// const Checkout = () => {
-//   const { t } = useTranslation()
-//   const { cartItems, removeFromCart, getTotalQuantity } = useCart()
-//   const [isOrderSuccessful, setIsOrderSuccessful] = useState(false)
-//   const [isLoading, setIsLoading] = useState(false)
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-//   } = useForm()
-
-//   const calculateTotal = (products) => {
-//     const subtotal = products.reduce(
-//       (acc, product) => acc + product.price * product.quantity,
-//       0
-//     )
-//     const delivery = 400
-//     const total = subtotal + delivery
-//     return { subtotal, delivery, total }
-//   }
-
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Section from '../components/Section'
@@ -157,7 +125,7 @@ const Checkout = () => {
                   type='text'
                   id='name'
                   {...register('name', { required: t('nameRequired') })}
-                  className={`w-full px-4 py-3 border rounded-md bg-white focus:border-white ${
+                  className={`w-full px-4 py-3 border rounded-md bg-white text-black focus:border-white ${
                     errors.name ? 'border-red-500' : ''
                   }`}
                   placeholder={t('enterName')}
@@ -179,7 +147,7 @@ const Checkout = () => {
                   type='email'
                   id='email'
                   {...register('email', { required: t('emailRequired') })}
-                  className={`w-full px-4 py-3 border rounded-md bg-white focus:border-white ${
+                  className={`w-full px-4 py-3 border rounded-md bg-white text-black focus:border-white ${
                     errors.email ? 'border-red-500' : ''
                   }`}
                   placeholder={t('enterEmail')}
@@ -207,7 +175,7 @@ const Checkout = () => {
                       message: t('invalidMobileNumber'),
                     },
                   })}
-                  className={`w-full px-4 py-3 border rounded-md bg-white focus:border-white ${
+                  className={`w-full px-4 py-3 border rounded-md bg-white text-black focus:border-white ${
                     errors.mobileNumber ? 'border-red-500' : ''
                   }`}
                   placeholder={t('enterMobileNumber')}

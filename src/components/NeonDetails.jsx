@@ -1,36 +1,43 @@
-import { check, neonService } from '../assets'
+import { useNavigate } from 'react-router-dom'
+import { check } from '../assets'
 import { pubPricing } from '../constants'
 import Button from './Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-const formatPrice = (price) => {
-  if (price.toLowerCase() === 'devis') {
-    return 'Devis'
+const NeonPricing = () => {
+  const navigate = useNavigate()
+
+  const handleContactUs = () => {
+    navigate('/contact', { state: { service: 'Identité visuelle' } })
   }
 
-  if (price.includes('/ m²')) {
-    const parts = price.split('/ m²')
+  const formatPrice = (price) => {
+    if (price.toLowerCase() === 'devis') {
+      return 'Devis'
+    }
+
+    if (price.includes('/ m²')) {
+      const parts = price.split('/ m²')
+      return (
+        <>
+          {parts[0]}{' '}
+          <small>
+            <sup>DA / m²</sup>
+          </small>
+        </>
+      )
+    }
+
     return (
       <>
-        {parts[0]}{' '}
+        {price}{' '}
         <small>
-          <sup>DA / m²</sup>
+          <sup>DA</sup>
         </small>
       </>
     )
   }
 
-  return (
-    <>
-      {price}{' '}
-      <small>
-        <sup>DA</sup>
-      </small>
-    </>
-  )
-}
-
-const NeonPricing = () => {
   return (
     <Swiper
       spaceBetween={16}
@@ -58,7 +65,11 @@ const NeonPricing = () => {
                 </div>
               </div>
 
-              <Button className='w-full mb-6' white='true'>
+              <Button
+                className='w-full mb-6'
+                white='true'
+                onClick={handleContactUs}
+              >
                 Contact us
               </Button>
 

@@ -9,6 +9,7 @@ import Photo from './pages/PhotoPricing'
 import Audio from './pages/AudioPricing'
 import Weeding from './pages/WeedingPricing'
 import Dev from './pages/DevPricing'
+import ContactUsServices from './pages/ContactUsServices'
 import Infographie from './pages/InfographiePricing'
 import Neon from './pages/NeonPricing'
 import Shop from './pages/Shop'
@@ -17,6 +18,7 @@ import Cart from './components/Cart'
 import ScrollToTop from './utils/ScrollToTop'
 import { CartProvider } from './context/CartContext'
 import { PostersProvider } from './context/PostersContext'
+
 import Checkout from './pages/Checkout'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -74,6 +76,7 @@ const App = () => {
               <Route path='/infographie' element={<Infographie />} />
               <Route path='/neon' element={<Neon />} />
               <Route path='/checkout' element={<Checkout />} />
+              <Route path='/contact' element={<ContactUsServices />} />
               <Route path='/rules' element={<Rules />} />
             </Routes>
             <Footer />

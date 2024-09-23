@@ -1,9 +1,16 @@
+import { useNavigate } from 'react-router-dom'
 import { check, neonService } from '../assets'
 import { photoPricing } from '../constants'
 import Button from './Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 const PhotoPricing = () => {
+  const navigate = useNavigate()
+
+  const handleContactUs = () => {
+    navigate('/contact', { state: { service: 'Photo / Video' } })
+  }
+
   return (
     <Swiper
       spaceBetween={16}
@@ -29,7 +36,11 @@ const PhotoPricing = () => {
               <sup className='h4 font-bold'> DA</sup>
             </div>
 
-            <Button className='w-full mb-6' white='true'>
+            <Button
+              className='w-full mb-6'
+              white='true'
+              onClick={handleContactUs}
+            >
               Contact us
             </Button>
 
