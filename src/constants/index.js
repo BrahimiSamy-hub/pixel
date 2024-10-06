@@ -407,7 +407,8 @@ export const audioPricing = [
   {
     id: '0',
     title: 'Sound effect',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    description:
+      'Spécialisé dans la création deffets sonores de haute qualité qui ajoutent une dimension immersive a vos productions audiovisuelles. Que vous travaillez sur un film, un jeu vidéo, un podcast ou une compagne publicitaire, notre exeprtise sonore vous permet de captiver votre audience et denrichir leur expérience.',
     price: '4000',
     features: [
       'An advanced AI chatbot that can understand complex queries',
@@ -418,7 +419,8 @@ export const audioPricing = [
   {
     id: '1',
     title: 'Voix off',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    description:
+      'Notre équipe de voix talentueuses est préte a trasmettre votre message avec clarté et impact.',
     price: '6000',
     features: [
       'An AI chatbot that can understand your queries',
@@ -430,7 +432,8 @@ export const audioPricing = [
   {
     id: '2',
     title: 'Music original production',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    description:
+      'Bénéficiez dune approche créative et collaborative, visant a réaliser de la musique personnalisée, adaptée a vos besion, spécifiques et qui vous ressemble.',
     price: '10000',
     features: [
       'An AI chatbot that can understand your queries',
@@ -443,31 +446,60 @@ export const audioPricing = [
 export const photoPricing = [
   {
     id: '0',
-    title: 'Shooting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
-    price: '8000',
-    features: ['lorem '],
+    title: 'Photo',
+    description:
+      'Spécialisés dans la photographie, nous sommes la pour assurer vos shooting professionnel.',
+    price: '4000',
+    features: [
+      'Portrait',
+      'Shooting professionnel',
+      'Shooting artistique',
+      'Shooting produit / commercial',
+      'Traitement et restoration de photos',
+    ],
   },
   {
     id: '1',
-    title: 'Pack social media management',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
-    price: '40000',
-    features: ['lorem'],
+    title: 'Vidéo',
+    description:
+      'Nous créons des images percutantes qui ccaptivent votre audience et renforcent votre message de marque.',
+    price: '30000',
+    features: [
+      'Spot Publicitaire',
+      'Clip cidéo / teaser',
+      'Short movie',
+      'Documentaire',
+      'Réels',
+      'Montage vidéo',
+      'Interview / podcast',
+    ],
   },
   {
     id: '2',
-    title: 'Shot publicitaire',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
-    price: '300000',
-    features: ['lorem'],
+    title: 'Pack Social Media Management',
+    description:
+      'Nous vous aiderons a établir une présence forte et engageante sur les plateformes numériques avec des stratégies sur mesure pour acroitre votre visibilité, intéragir avec votre audience et renforcer votre image de marque.',
+    price: '40000',
+    features: ['*', '*', '*', '*', '*', '*', '*'],
   },
 ]
 
 export const weedingPricing = [
   {
     id: '0',
-    title: 'Pack jasmin',
+    title: 'Pack Rose',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    price: '29000',
+    features: [
+      '2 Photographe',
+      'Couverture photo et video',
+      'Montage video (FHD)',
+      'USB 16Gb',
+    ],
+  },
+  {
+    id: '1',
+    title: 'Pack Jasmin',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
     price: '39000',
     features: [
@@ -480,8 +512,25 @@ export const weedingPricing = [
     ],
   },
   {
-    id: '1',
-    title: 'Pack lilas',
+    id: '2',
+    title: 'Pack Iris',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    price: '48000',
+    features: [
+      '4 Photographe',
+      'Couverture photo et video',
+      'Préparation (Homme et Femme)',
+      'Shooting studio',
+      'Montage video (4K)',
+      'Traitment Photos',
+      'Photobook',
+      '2 Cadre (60x40cm)',
+      'USB 32Gb',
+    ],
+  },
+  {
+    id: '3',
+    title: 'Pack Lilas',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
     price: '68000',
     features: [
@@ -496,8 +545,8 @@ export const weedingPricing = [
     ],
   },
   {
-    id: '2',
-    title: 'Pack tulip',
+    id: '4',
+    title: 'Pack Tulip',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
     price: '99000',
     features: [
@@ -512,29 +561,62 @@ export const weedingPricing = [
       'USB 64Gb / drone',
     ],
   },
+
+  {
+    id: '5',
+    title: 'Pack Orchidée',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    price: '130000',
+    features: [
+      '6 Photographe',
+      'Couverture photo et video',
+      'Préparation (Homme et Femme)',
+
+      'Shooting studio',
+      'Montage video (6K)',
+      'Short movie (6K)',
+      'Traitment Photos',
+      'Photobook',
+      '4 Cadre (60x40cm)',
+      'USB 64Gb / drone',
+    ],
+  },
 ]
 
 export const pubPricing = [
   {
     id: '0',
-    title: 'Affichage urbain',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    title: 'Impression',
+    description:
+      'Notre équipe est la pour vous garantir des impréssions avec résultats exeptionnels.',
     price: 'Devis',
-    features: ['lorem '],
+    features: [
+      'Packaging',
+      'Carte de visite, flyers, depliant',
+      'Invitation, carte medical, calendrier',
+      'Menu',
+      'Photo book',
+      'Stickers',
+      'Banner, drapeaux',
+      'Poster, tableaux, cadre',
+      'Habillage vitrine',
+    ],
   },
   {
     id: '1',
-    title: 'Impression',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
-    price: '1800 / m²',
-    features: ['lorem'],
-  },
-  {
-    id: '2',
     title: 'Traveaux publicitaire',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    description:
+      'Que vous ayez besion de panneaux, de supports événementiels, notre équipe est préte a realiser vos projets avec expertise',
     price: 'Devis',
-    features: ['lorem'],
+    features: [
+      'Autocollant, bache PVC, canva',
+      'Alucobond, dilphane, malamine, MDF',
+      'Flocage (Tshirt, Casquette, Tablier)',
+
+      'Sac shopping (plastique, kraft)',
+      'Boitier lumineaux',
+      'Neon LED (intérieur/extérieur)',
+    ],
   },
 ]
 
@@ -542,40 +624,81 @@ export const logoPricing = [
   {
     id: '0',
     title: 'Graphic design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    description:
+      'Notre équipe de designers talentueux est préte a donner vie a vos concepts.',
     price: '1000',
-    features: ['lorem'],
+    features: [
+      'Conception Logo et identité visuelle',
+      'Conception Packaging',
+      'Conception Social media post',
+      'Conception carte de visite, flyers, depliant',
+      'Conception invitation, carte medical, calendrier',
+      'Conception menu',
+      'Conception photo book',
+      'Conception stickers',
+      'Conception banner, drapeaux',
+      'Conception poster, tableaux, cadre',
+      'Conception vitrine',
+    ],
   },
   {
     id: '1',
-    title: 'Identité visuelle',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
-    price: '4000',
-    features: ['lorem '],
-  },
-  {
-    id: '2',
     title: 'Pack social media',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    description:
+      'Capter lattention et engager votre audience. Nous tranformons des données compleces en visuels attrayants, facilitant la compégnsion et le partage de votre message.',
     price: '10000',
-    features: ['lorem'],
+    features: ['Social media post'],
   },
 ]
 
 export const devPricing = [
   {
     id: '0',
-    title: 'E-commerce site',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+    title: 'E-commerce',
+    description:
+      'Que vous soyez une start-up ou une entreprise établie, nous vous offrons les outils et lexpertise nécessaires pour transformer vos visiteur en clients fidéles sur votre sites e-commerce sur mesure.',
     price: '40000',
-    features: ['lorem'],
+    features: [
+      'Design personalisé',
+      '5 Pages',
+      'Dashboard ( Ajout, Modification, Suprission de produits )',
+      'Reception de commande sur telegram',
+    ],
   },
   {
     id: '1',
     title: 'Landing page',
+    description:
+      'Vous souhaitez promouvoir un produit, générer des leads ou annoncer un événement, nos page datterissage sur mesure sont concues pour captiver votre audience et macimiser vos résultats.',
+    price: 'Devis',
+    features: [
+      '6 Photographe',
+      'Couverture photo et video',
+      'Préparation (Homme et Femme)',
+      'Shooting studio',
+      'Montage video (4K)',
+      'Traitment Photos',
+      'Photobook',
+      '3 Cadre (60x40cm)',
+      'USB 64Gb / drone',
+    ],
+  },
+  {
+    id: '2',
+    title: 'Mobile APP',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
-    price: '50000',
-    features: ['lorem '],
+    price: 'Devis',
+    features: [
+      '6 Photographe',
+      'Couverture photo et video',
+      'Préparation (Homme et Femme)',
+      'Shooting studio',
+      'Montage video (4K)',
+      'Traitment Photos',
+      'Photobook',
+      '3 Cadre (60x40cm)',
+      'USB 64Gb / drone',
+    ],
   },
 ]
 

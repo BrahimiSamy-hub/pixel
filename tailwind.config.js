@@ -3,9 +3,16 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 import plugin from 'tailwindcss/plugin'
 
 export default {
+  mode: 'jit', // This enables JIT mode
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      transitionDuration: {
+        DEFAULT: '300ms',
+      },
+      transitionTimingFunction: {
+        DEFAULT: 'ease-out',
+      },
       colors: {
         color: {
           1: '#AD5E23',
@@ -74,6 +81,7 @@ export default {
     },
   },
   plugins: [
+    require('@tailwindcss/forms'),
     plugin(function ({ addBase, addComponents, addUtilities }) {
       addBase({})
       addComponents({

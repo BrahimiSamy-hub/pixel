@@ -123,7 +123,7 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
         <div className='relative' ref={dropdownRef}>
-          {/* <button
+          <button
             className='p-2 bg-[#0E0C15] border rounded border-[#26242C] hover:border-[#F18A27] flex items-center'
             onClick={() => setDropdownOpen(!dropdownOpen)}
           >
@@ -144,7 +144,7 @@ const Header = () => {
               )?.name
             }
             <FaChevronDown className='ml-2' />
-          </button> */}
+          </button>
           {dropdownOpen && (
             <div className='absolute mt-2 border rounded'>
               {languages.map((lang) => (

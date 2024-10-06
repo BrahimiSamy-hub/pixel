@@ -18,7 +18,7 @@ import Cart from './components/Cart'
 import ScrollToTop from './utils/ScrollToTop'
 import { CartProvider } from './context/CartContext'
 import { PostersProvider } from './context/PostersContext'
-
+import SingleProductDetails from './components/SingleProduct'
 import Checkout from './pages/Checkout'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -68,6 +68,8 @@ const App = () => {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/shop' element={<Shop />} />
+              <Route path='/singleProduct' element={<SingleProductDetails />} />
+
               <Route path='/portfolio' element={<Portfolio />} />
               <Route path='/photo' element={<Photo />} />
               <Route path='/audio' element={<Audio />} />

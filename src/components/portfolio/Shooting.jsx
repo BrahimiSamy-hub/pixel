@@ -40,7 +40,7 @@ const ImageComponent = ({ src, alt }) => (
         src={src}
         loading='lazy'
         alt={alt}
-        className='border object-cover rounded-xl ml-5 w-80 min-h-64 h-full'
+        className='border object-cover rounded-xl w-80 min-h-80 h-full'
       />
     </PhotoView>
   </div>
@@ -49,7 +49,7 @@ const ImageComponent = ({ src, alt }) => (
 const Shooting = () => {
   return (
     <PhotoProvider>
-      <div className='grid grid-cols-3 gap-10 my-14' data-aos='fade-up'>
+      <div className='grid grid-cols-3 gap-10' data-aos='fade-up'>
         {images.map((image, index) => (
           <Suspense fallback={<div>Loading...</div>} key={index}>
             <ImageComponent src={image.src} alt={image.alt} />

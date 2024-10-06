@@ -6,7 +6,7 @@ import speedy from '../../assets/portfolio/speedy.jpg'
 const Logo = () => {
   return (
     <PhotoProvider>
-      <div className='grid grid-cols-3 gap-10 my-14'>
+      <div className='grid grid-cols-3 gap-10 '>
         <div className='flex justify-center col-span-3 md:col-span-2 lg:col-span-1 hover:cursor-pointer'>
           <PhotoView src={speedy}>
             <img
