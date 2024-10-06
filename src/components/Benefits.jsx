@@ -63,7 +63,7 @@ const Benefits = () => {
                         width={380}
                         height={362}
                         alt={t(item.title)}
-                        className='w-full h-full object-cover'
+                        className='w-full h-full object-fill'
                       />
                     )}
                   </div>

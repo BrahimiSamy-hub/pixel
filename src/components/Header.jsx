@@ -77,7 +77,7 @@ const Header = () => {
   const languages = [
     { code: 'en', name: 'English', flag: 'https://flagcdn.com/w20/gb.png' },
     { code: 'fr', name: 'Français', flag: 'https://flagcdn.com/w20/fr.png' },
-    // { code: 'ar', name: 'العربية', flag: 'https://flagcdn.com/w20/sa.png' },
+    { code: 'ar', name: 'العربية', flag: 'https://flagcdn.com/w20/sa.png' },
   ]
 
   return (
@@ -137,13 +137,13 @@ const Header = () => {
               alt='Current Language'
               className='inline-block mr-2'
             />
-            {
+            {/* {
               languages.find(
                 (lang) =>
                   lang.code === (localStorage.getItem('i18nextLng') || 'en')
               )?.name
-            }
-            <FaChevronDown className='ml-2' />
+            } */}
+            <FaChevronDown className='mx-2' />
           </button>
           {dropdownOpen && (
             <div className='absolute mt-2 border rounded'>

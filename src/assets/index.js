@@ -208,7 +208,22 @@ import carte13D from './cards/carte13.jpg'
 import carte14D from './cards/carte14.jpg'
 import carte15D from './cards/carte15.jpg'
 
+import servicePhoto from './services/servicePhoto.png'
+import serviceInfo from './services/serviceInfo.png'
+import serviceWeeding from './services/serviceWeeding.png'
+import serviceDev from './services/serviceDev.png'
+import serviceAudio from './services/serviceAudio.png'
+import serviceAudio2 from './services/serviceAudio2.png'
+import servicePub from './services/servicePub.png'
+
 export {
+  servicePhoto,
+  serviceInfo,
+  serviceWeeding,
+  serviceDev,
+  serviceAudio,
+  serviceAudio2,
+  servicePub,
   loupBleu,
   filleDeJoie,
   villagois,

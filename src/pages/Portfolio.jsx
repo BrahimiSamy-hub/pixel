@@ -178,12 +178,11 @@ const Portfolio = () => {
             </div>
           </div>
         </Dialog>
-
+        <h1 className='h1 font-bold text-center pt-36 text-white'>
+          {t('portfolioP')}
+        </h1>
         <main className='ml-10 max-w-7xl'>
-          <div className='items-baseline pb-6 pt-24'>
-            <h1 className='h1 font-bold text-center pt-8 text-white'>
-              {t('portfolioP')}
-            </h1>
+          <div className='items-baseline pb-6'>
             <div className='flex items-center justify-center mt-8'>
               <button
                 type='button'
