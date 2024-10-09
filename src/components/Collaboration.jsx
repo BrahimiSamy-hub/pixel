@@ -27,7 +27,7 @@ const Collaboration = () => {
               </li>
             ))}
           </ul>
-          <Link to='/portfolio'>
+          <Link to='/portfolio' draggable='false'>
             <Button className='w-44'>Portfolio</Button>
           </Link>
         </div>
@@ -35,14 +35,16 @@ const Collaboration = () => {
         <div className='lg:ml-auto xl:w-[38rem] mt-20' data-aos='fade-left'>
           <div className='relative left-1/2 flex w-[20rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100'>
             <div className='flex w-60 aspect-square m-auto border border-n-6 rounded-full'>
-              <div className='w-[6rem] aspect-square m-auto p-[0.2rem] bg-[#F18A27] rounded-full'>
-                <div className='flex items-center justify-center w-full h-full bg-n-8 rounded-full'>
+              <div className='w-[8rem] aspect-square m-auto p-[0.2rem] bg-[#F18A27] rounded-full '>
+                <div className='flex items-center justify-center w-full h-full bg-n-8 rounded-full '>
                   <img
                     src={p}
-                    width={50}
-                    height={50}
+                    className=''
+                    width={70}
+                    height={70}
                     alt='pixel'
                     loading='lazy'
+                    draggable='false'
                   />
                 </div>
               </div>
@@ -57,17 +59,21 @@ const Collaboration = () => {
                   }`}
                 >
                   <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                    // className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                    //   index * 45
+                    // }`}
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem]  -rotate-${
                       index * 45
                     }`}
                   >
                     <img
                       loading='lazy'
-                      className='m-auto'
-                      width={35}
-                      height={35}
+                      className='m-auto object-contain '
+                      width={50}
+                      height={50}
                       alt={app.title}
                       src={app.icon}
+                      draggable='false'
                     />
                   </div>
                 </li>

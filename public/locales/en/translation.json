@@ -84,6 +84,7 @@
   "VoyantDescription": "Description du Voyant",
 
   "home": "Home",
+  "aboutUs": "About-us",
   "P": "Portfolio",
   "shop": "Shop",
 
@@ -107,7 +108,7 @@
   "heroDescription": "A creative agency specializing in providing outstanding services in the fields of design, photography, decoration, and filmmaking and development.",
   "shopButton": "Shop",
   "servicesButton": "Services",
-  "companyLogosTagline": "Helping people create beautiful content at",
+  "companyLogosTagline": "Some of the clients with whom we have had the pleasure of collaborating",
   "contactTitle": "Contact Us",
   "contactText": "We will respond as soon as possible",
   "askQuestion": "Ask a Question",

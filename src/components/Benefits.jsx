@@ -36,8 +36,8 @@ const Benefits = () => {
         />
         <div className='flex flex-wrap gap-10 mb-10 justify-center'>
           {benefits.map((item) => (
-            <Link to={item.url} key={item.id}>
-              <div className='block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] shadow-lg border border-n-6 rounded-md'>
+            <Link to={item.url} key={item.id} draggable='false'>
+              <div className='block relative  bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] shadow-lg border border-n-6'>
                 <div className='relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none'>
                   <h5 className='h5 mb-5'>{t(item.title)}</h5>
                   <p className='body-2 mb-6 text-n-3'>{t(item.text)}</p>
@@ -54,8 +54,8 @@ const Benefits = () => {
 
                 {/* {item.light && <GradientLight />} */}
 
-                <div className='absolute inset-0.5 bg-n-8'>
-                  <div className='absolute inset-0 opacity-10 transition-opacity hover:opacity-30'>
+                <div className='absolute inset-0 bg-n-8'>
+                  <div className='absolute inset-0 opacity-10 transition-opacity hover:opacity-40'>
                     {item.imageUrl && (
                       <img
                         loading='lazy'

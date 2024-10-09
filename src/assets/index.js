@@ -16,6 +16,7 @@ import homeSmile from './home-smile.svg'
 import file02 from './file-02.svg'
 import searchMd from './search-md.svg'
 import plusSquare from './plus-square.svg'
+import pixelHero5 from './pixelHero5.png'
 import recording03 from './recording-03.svg'
 import recording01 from './recording-01.svg'
 import disc02 from './disc-02.svg'
@@ -96,10 +97,9 @@ import NewtechCeram from './logo/NewtechCeram.svg'
 import curve1 from './collaboration/curve-1.svg'
 import curve2 from './collaboration/curve-2.svg'
 import discord from './collaboration/discord.png'
-import figma from './collaboration/figma.png'
+
 import framer from './collaboration/framer.png'
 import notion from './collaboration/notion.png'
-import photoshop from './collaboration/photoshop.png'
 import protopie from './collaboration/protopie.png'
 import raindrop from './collaboration/raindrop.png'
 import slack from './collaboration/slack.png'
@@ -215,8 +215,29 @@ import serviceDev from './services/serviceDev.png'
 import serviceAudio from './services/serviceAudio.png'
 import serviceAudio2 from './services/serviceAudio2.png'
 import servicePub from './services/servicePub.png'
+import heroImage from './heroImage.png'
+import pixelHero from './pixelHero.png'
+import pixelHero2 from './pixelHero2.png'
+import vsCode from './collaboration/vsCode.svg'
+import AE from './collaboration/AE.svg'
+import illustrator from './collaboration/illustrator.svg'
+import premierPro from './collaboration/premierPro.svg'
+import lightroom from './collaboration/lightroom.svg'
+import davinci from './collaboration/davinvi.svg'
+import figma from './collaboration/figma.svg'
+import photoshop from './collaboration/photoshop.svg'
+import pixelH from './pixelH.png'
 
 export {
+  vsCode,
+  AE,
+  illustrator,
+  premierPro,
+  lightroom,
+  davinci,
+  pixelHero,
+  pixelHero2,
+  heroImage,
   servicePhoto,
   serviceInfo,
   serviceWeeding,
@@ -395,6 +416,8 @@ export {
   loup,
   card,
   cat,
+  pixelHero5,
+  pixelH,
   donut,
   joker,
   weed,

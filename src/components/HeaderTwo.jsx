@@ -39,7 +39,7 @@ const HeaderTwo = () => {
                 <div className='row align-items-center'>
                   <div className='col-xl-2 col-lg-5 col-md-5 col-sm-4 col-6'>
                     <div className='logo'>
-                      <Link to='/'>
+                      <Link to='/' draggable='false'>
                         <img src='/path/to/logo.svg' alt='logo' />
                       </Link>
                     </div>

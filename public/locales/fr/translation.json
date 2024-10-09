@@ -88,6 +88,7 @@
   "LoupAlphaDescription": "Ce loup-garou peut une fois dans la partie choisir d'infecter la victime des loups-garous et la transformer en loup mais l'infecté garde les pouvoirs de sa carte initiale et conserve son rôle initial, la voyante ne pourra jamais savoir que c'est un loup-garou.",
 
   "home": "Acceuil",
+  "aboutUs": "À propos",
   "portfolio": "Portfolio",
   "shop": "Boutique",
 
@@ -111,7 +112,7 @@
   "heroDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quidem ut, ratione odit, doloribus iste?",
   "shopButton": "Boutique",
   "servicesButton": "Services",
-  "companyLogosTagline": "Aide les gens à créer du contenu magnifique chez",
+  "companyLogosTagline": "Quelques-uns des clienst avec lesquels nous avons eu le plaisir de collaborer",
   "contactTitle": "Contactez-nous",
   "contactText": "Nous répondrons dès que possible",
   "askQuestion": "Poser votre Question",

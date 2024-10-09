@@ -40,7 +40,7 @@ const ImageComponent = ({ src, alt }) => (
         src={src}
         loading='lazy'
         alt={alt}
-        className='border object-cover rounded-xl w-80 min-h-80 h-full'
+        className='object-cover rounded-xl w-80 min-h-80 h-full'
       />
     </PhotoView>
   </div>

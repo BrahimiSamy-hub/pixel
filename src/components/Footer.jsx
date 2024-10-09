@@ -15,12 +15,12 @@ const Footer = () => {
               href='mailto:pixel.agency05@gmail.com'
               className=' hover:text-[#F18A27]'
             >
-              Email: pixel.agency05@gmail.com
+              pixel.agency05@gmail.com
             </a>
           </p>
           <p>
             <a href='tel:+0770696982' className=' hover:text-[#F18A27]'>
-              Telephone: 0770 69 69 82
+              0770 69 69 82
             </a>
           </p>
         </div>

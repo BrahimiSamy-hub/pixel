@@ -1,4 +1,11 @@
-import { curve, heroBackground, robot, hero1 } from '../assets'
+import {
+  curve,
+  heroBackground,
+  robot,
+  hero1,
+  heroImage,
+  pixelH,
+} from '../assets'
 import Button from './Button'
 import Section from './Section'
 import { BackgroundCircles, BottomLine, Gradient } from './design/Hero'
@@ -25,26 +32,22 @@ const Hero = () => {
     >
       <div className='container relative mt-10' ref={parallaxRef}>
         <div className='relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] '>
-          <h1 className='h1 mb-6'>
+          <h1 className='h1 mb-6 items-center flex justify-center flex-col'>
             {t('heroTitle')}&nbsp;
             <br />
-            <span className='mt-2 pixel-text inline-block relative'>
-              Pixel
-              {/* <img
-                src={curve}
-                className='absolute top-full left-0 w-full xl:-mt-2'
-                width={624}
-                height={28}
-                alt='Curve'
-              /> */}
-            </span>
+            <img
+              src={pixelH}
+              alt=''
+              className='w-80 object-contain'
+              draggable='false'
+            />
           </h1>
 
           <p className='body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8'>
             {t('heroDescription')}
           </p>
           <div className=' flex gap-10 justify-center'>
-            <Link to='/shop'>
+            <Link to='/shop' draggable='false'>
               <Button white>{t('shopButton')}</Button>
             </Link>
             <a href='#services'>
@@ -53,11 +56,11 @@ const Hero = () => {
           </div>
         </div>
         <div className='relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24'>
-          <div className='relative z-1 p-0.5 rounded-2xl bg-orange-500'>
+          <div className='relative z-1 p-0.5 rounded-2xl'>
             <div className='aspect-[33/40]  rounded-t-[0.9rem] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490] ]:'>
               <img
-                src={hero1}
-                className='w-full h-full object-cover'
+                src={heroImage}
+                className='w-full h-full object-contain float-animation'
                 width={1024}
                 height={490}
                 alt='AI'

@@ -20,11 +20,16 @@ const navigation = [
   },
   {
     id: '1',
+    titleKey: 'aboutUs',
+    url: '/about-us',
+  },
+  {
+    id: '2',
     titleKey: 'portfolioP',
     url: '/portfolio',
   },
   {
-    id: '2',
+    id: '3',
     titleKey: 'shop',
     url: '/shop',
   },
@@ -75,9 +80,8 @@ const Header = () => {
   }
 
   const languages = [
-    { code: 'en', name: 'English', flag: 'https://flagcdn.com/w20/gb.png' },
     { code: 'fr', name: 'Français', flag: 'https://flagcdn.com/w20/fr.png' },
-    { code: 'ar', name: 'العربية', flag: 'https://flagcdn.com/w20/sa.png' },
+    { code: 'en-US', name: 'English', flag: 'https://flagcdn.com/w20/gb.png' },
   ]
 
   return (
@@ -85,10 +89,9 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full z-40 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
         openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'
       }`}
-      dir={isArabic ? 'rtl' : 'ltr'}
     >
       <div className='flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-2'>
-        <Link className='block w-[12rem] xl:mr-8' to='/'>
+        <Link className='block w-[12rem] xl:mr-8' to='/' draggable='false'>
           <img
             src={logowhite}
             alt='Pixel'
@@ -104,6 +107,7 @@ const Header = () => {
           <div className='relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row lg:pr-20'>
             {navigation.map((item) => (
               <Link
+                draggable='false'
                 key={item.id}
                 to={item.url}
                 onClick={handleClick}
@@ -135,35 +139,31 @@ const Header = () => {
                 )?.flag
               }
               alt='Current Language'
-              className='inline-block mr-2'
+              className='inline-block mr-2 object-contain'
             />
-            {/* {
-              languages.find(
-                (lang) =>
-                  lang.code === (localStorage.getItem('i18nextLng') || 'en')
-              )?.name
-            } */}
-            <FaChevronDown className='mx-2' />
+            <FaChevronDown className='' />
           </button>
           {dropdownOpen && (
-            <div className='absolute mt-2 border rounded'>
+            <div className='absolute mt-2 border border-[#26242C] rounded overflow-hidden'>
               {languages.map((lang) => (
                 <button
                   key={lang.code}
                   onClick={() => changeLanguage(lang.code)}
-                  className='flex items-center w-full p-2 hover:bg-[#F18A28]'
+                  className='flex items-center w-full p-2 pr-6 hover:bg-[#F18A28] bg-n-7'
                 >
-                  <img src={lang.flag} alt={lang.name} className='mr-2' />
+                  <img
+                    src={lang.flag}
+                    alt={lang.name}
+                    className='mr-2 object-contain'
+                  />
+
                   {lang.name}
                 </button>
               ))}
             </div>
           )}
         </div>
-        <button
-          className='ml-6 mr-2 relative hidden lg:flex'
-          onClick={toggleCart}
-        >
+        <button className='ml-6 relative hidden lg:flex' onClick={toggleCart}>
           <FaCartShopping
             size={40}
             color='#F18A27'
@@ -173,14 +173,17 @@ const Header = () => {
             {getTotalQuantity()}
           </span>
         </button>
-
-        <FaCartShopping
-          size={35}
-          color='#F18A27'
-          className='lg:hidden hover:cursor-pointer ml-28 hover:scale-110 transition-transform duration-150'
-          onClick={toggleCart}
-        />
-        <Button className='ml-auto lg:hidden' onClick={toggleNavigation}>
+        <button className='relative flex lg:hidden' onClick={toggleCart}>
+          <FaCartShopping
+            size={35}
+            color='#F18A27'
+            className='hover:scale-110 -mr-3 ml-3 transition-transform duration-150'
+          />
+          <span className='absolute -top-2 -right-5 flex items-center justify-center w-5 h-5 font-bold text-[#F18A28] bg-white rounded-full'>
+            {getTotalQuantity()}
+          </span>
+        </button>
+        <Button className='ml-6 lg:hidden' onClick={toggleNavigation}>
           <MenuSvg openNavigation={openNavigation} />
         </Button>
       </div>

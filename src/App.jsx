@@ -23,12 +23,13 @@ import Checkout from './pages/Checkout'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Rules from './pages/RulesLoup'
+import AboutUs from './pages/AboutUs'
 import Loading from './components/Loading'
 
 const App = () => {
   const [loading, setLoading] = useState(true)
   const [language, setLanguage] = useState(
-    localStorage.getItem('i18nextLng') || 'en'
+    localStorage.getItem('i18nextLng') || 'fr'
   )
   const { t } = useTranslation()
 
@@ -59,32 +60,33 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
-      {loading ? (
+      {/* {loading ? (
         <Loading onLoadingComplete={handleLoadingComplete} />
-      ) : (
-        <CartProvider>
-          <PostersProvider>
-            <Header />
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/shop' element={<Shop />} />
-              <Route path='/singleProduct' element={<SingleProductDetails />} />
-              <Route path='/portfolio' element={<Portfolio />} />
-              <Route path='/photo' element={<Photo />} />
-              <Route path='/audio' element={<Audio />} />
-              <Route path='/weeding' element={<Weeding />} />
-              <Route path='/dev' element={<Dev />} />
-              <Route path='/infographie' element={<Infographie />} />
-              <Route path='/neon' element={<Neon />} />
-              <Route path='/checkout' element={<Checkout />} />
-              <Route path='/contact' element={<ContactUsServices />} />
-              <Route path='/rules' element={<Rules />} />
-            </Routes>
-            <Footer />
-            <Cart />
-          </PostersProvider>
-        </CartProvider>
-      )}
+      ) : ( */}
+      <CartProvider>
+        <PostersProvider>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/shop' element={<Shop />} />
+            <Route path='/singleProduct' element={<SingleProductDetails />} />
+            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/about-us' element={<AboutUs />} />
+            <Route path='/photo' element={<Photo />} />
+            <Route path='/audio' element={<Audio />} />
+            <Route path='/weeding' element={<Weeding />} />
+            <Route path='/dev' element={<Dev />} />
+            <Route path='/infographie' element={<Infographie />} />
+            <Route path='/neon' element={<Neon />} />
+            <Route path='/checkout' element={<Checkout />} />
+            <Route path='/contact' element={<ContactUsServices />} />
+            <Route path='/rules' element={<Rules />} />
+          </Routes>
+          <Footer />
+          <Cart />
+        </PostersProvider>
+      </CartProvider>
+      {/* )} */}
     </Router>
   )
 }
