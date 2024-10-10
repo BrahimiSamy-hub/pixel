@@ -31,9 +31,29 @@
   animation: float 3s ease-in-out infinite;
 }
 
+/* Faq.css */
+.transition-all {
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition for height and opacity */
+}
+
+.max-h-0 {
+  max-height: 0; /* Start with a max-height of 0 */
+  opacity: 0; /* Start with opacity 0 */
+}
+
+.max-h-screen {
+  max-height: 200px; /* Set a reasonable max height to enable transition */
+  opacity: 1; /* Set opacity to 1 when opened */
+}
+
+.overflow-hidden {
+  overflow: hidden; /* Prevent overflow during transition */
+}
+
 * {
+  /* outline: 1px solid red; */
   scroll-behavior: smooth;
-  /* user-select: none; */
+  user-select: none;
 }
 
 @layer base {

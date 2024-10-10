@@ -1,4 +1,3 @@
-import React from 'react'
 import Section from './Section'
 import { socials } from '../constants'
 
@@ -19,7 +18,7 @@ const Footer = () => {
             </a>
           </p>
           <p>
-            <a href='tel:+0770696982' className=' hover:text-[#F18A27]'>
+            <a href='tel:+0770696982' className='hover:text-[#F18A27]'>
               0770 69 69 82
             </a>
           </p>

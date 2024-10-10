@@ -38,7 +38,7 @@ const Tableaux = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className='border rounded-xl ml-5 w-80 h-full'
+                className='rounded-xl ml-5 w-80 h-full'
               />
             </PhotoView>
           </div>

@@ -28,7 +28,6 @@ export const CartProvider = ({ children }) => {
       }
     })
   }
-  console.log(cartItems)
 
   const removeFromCart = (heroId) => {
     setCartItems((prevItems) =>

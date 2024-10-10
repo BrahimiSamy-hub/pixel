@@ -11,7 +11,7 @@ import MenuSvg from '../assets/svg/MenuSvg'
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import { FaChevronDown } from 'react-icons/fa'
-
+import ButtonGradient from '../assets/svg/ButtonGradient'
 const navigation = [
   {
     id: '0',
@@ -187,6 +187,7 @@ const Header = () => {
           <MenuSvg openNavigation={openNavigation} />
         </Button>
       </div>
+      <ButtonGradient />
     </div>
   )
 }

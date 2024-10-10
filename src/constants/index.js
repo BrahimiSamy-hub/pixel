@@ -332,7 +332,7 @@ export const collabContent = [
   },
   {
     id: '2',
-    title: 'Weeding',
+    title: 'Wedding',
   },
   {
     id: '3',
@@ -358,34 +358,6 @@ export const collabContent = [
 
 export const collabApps = [
   {
-    id: '0',
-    title: 'Figma',
-    icon: figma,
-    width: 26,
-    height: 36,
-  },
-  {
-    id: '1',
-    title: 'Notion',
-    icon: AE,
-    width: 34,
-    height: 36,
-  },
-  {
-    id: '2',
-    title: 'Discord',
-    icon: vsCode,
-    width: 36,
-    height: 28,
-  },
-  {
-    id: '3',
-    title: 'Slack',
-    icon: illustrator,
-    width: 34,
-    height: 35,
-  },
-  {
     id: '4',
     title: 'Photoshop',
     icon: photoshop,
@@ -394,24 +366,55 @@ export const collabApps = [
   },
   {
     id: '5',
-    title: 'Protopie',
+    title: 'lightroom',
     icon: lightroom,
     width: 34,
     height: 34,
   },
   {
+    id: '3',
+    title: 'illustrator',
+    icon: illustrator,
+    width: 34,
+    height: 35,
+  },
+  {
+    id: '1',
+    title: 'AE',
+    icon: AE,
+    width: 34,
+    height: 36,
+  },
+
+  {
     id: '6',
-    title: 'Framer',
+    title: 'premierPro',
     icon: premierPro,
     width: 26,
     height: 34,
   },
+
   {
     id: '7',
-    title: 'Raindrop',
+    title: 'davinci',
     icon: davinci,
     width: 38,
     height: 32,
+  },
+
+  {
+    id: '0',
+    title: 'Figma',
+    icon: figma,
+    width: 26,
+    height: 36,
+  },
+  {
+    id: '2',
+    title: 'vsCode',
+    icon: vsCode,
+    width: 36,
+    height: 28,
   },
 ]
 
@@ -682,35 +685,20 @@ export const devPricing = [
     title: 'Landing page',
     description:
       'Vous souhaitez promouvoir un produit, générer des leads ou annoncer un événement, nos page datterissage sur mesure sont concues pour captiver votre audience et macimiser vos résultats.',
-    price: 'Devis',
+    price: 'Sur Devis',
     features: [
-      '6 Photographe',
-      'Couverture photo et video',
-      'Préparation (Homme et Femme)',
-      'Shooting studio',
-      'Montage video (4K)',
-      'Traitment Photos',
-      'Photobook',
-      '3 Cadre (60x40cm)',
-      'USB 64Gb / drone',
+      'Design personalisé',
+      'Nombre de Pages au choix',
+      'Dashboard ( Modification des pages )',
+      'Reception des messages sur telegram',
     ],
   },
   {
     id: '2',
     title: 'Mobile APP',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
-    price: 'Devis',
-    features: [
-      '6 Photographe',
-      'Couverture photo et video',
-      'Préparation (Homme et Femme)',
-      'Shooting studio',
-      'Montage video (4K)',
-      'Traitment Photos',
-      'Photobook',
-      '3 Cadre (60x40cm)',
-      'USB 64Gb / drone',
-    ],
+    price: 'Sur Devis',
+    features: ['Design personalisé', 'Nombre de Pages au choix'],
   },
 ]
 
@@ -794,7 +782,7 @@ export const benefits = [
   },
   {
     id: '2',
-    title: 'weeding',
+    title: 'Wedding',
     text: 'weeding_text',
     backgroundUrl: './src/assets/benefits/card-3.svg',
     icon: 'GiDiamondRing',

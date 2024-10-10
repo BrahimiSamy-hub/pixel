@@ -13,8 +13,8 @@ const NeonPricing = () => {
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
         >
-          <div className='container'>
-            <h1 className='text-center h1 mb-6'>Publicité</h1>
+          <div className='container min-h-screen'>
+            <h1 className='text-center h1 mb-6 uppercase'>Publicité</h1>
             <PricingList />
           </div>
         </Section>

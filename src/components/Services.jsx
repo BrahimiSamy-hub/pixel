@@ -9,7 +9,7 @@ import {
   VideoChatMessage,
 } from './design/Services'
 import Generating from './Generating'
-import video from '../assets/videos/video.mp4'
+// import video from '../assets/videos/video.mp4'
 
 const Services = () => {
   return (
@@ -117,7 +117,7 @@ const Services = () => {
                   height={400}
                   alt='Scary robot'
                 /> */}
-                <video
+                {/* <video
                   preload='auto'
                   controls
                   autoPlay
@@ -125,7 +125,7 @@ const Services = () => {
                   className='h-[20rem] object-fill md:h-[25rem]'
                 >
                   <source src={video} type='video/mp4' />
-                </video>
+                </video> */}
 
                 {/* <VideoChatMessage /> */}
                 {/* <VideoBar /> */}

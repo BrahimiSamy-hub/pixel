@@ -90,25 +90,25 @@
 
   "details": "more details",
   "our_services": "Our Services",
-  "our_services_description": "Discover our wide range of services tailored to meet your needs.",
+  "our_services_description": "The art of visual for the service of your vision.",
   "photo_video": "Photo / Video",
-  "photo_video_text": "Lets users quickly find answers to their questions without having to search through multiple sources.",
+  "photo_video_text": "The art of visual for the service of your vision.",
   "infographie": "Infographie",
-  "infographie_text": "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-  "weeding": "Weeding",
-  "weeding_text": "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+  "infographie_text": "Transform your ideas into impactful visuals.",
+  "weeding": "Wedding",
+  "weeding_text": "Capture your precious moments, as every single instant deserves to be preserved.",
   "development": "Development",
-  "development_text": "Lets users quickly find answers to their questions without having to search through multiple sources.",
+  "development_text": "Your partner in digital development.",
   "audio": "Audio",
-  "audio_text": "Lets users quickly find answers to their questions without having to search through multiple sources.",
+  "audio_text": "Experience the art of sound at your fingertips with your audio partner.",
   "publicite": "Publicité",
-  "publicite_text": "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+  "publicite_text": "Bring your brand to life and enhance your visibility to elevate your presence.",
 
   "heroTitle": "Explore the Possibilities of Content Creation with",
-  "heroDescription": "A creative agency specializing in providing outstanding services in the fields of design, photography, decoration, and filmmaking and development.",
+  "heroDescription": "Creativity has no limits at our agency, we focus on providing outstanding services in design, photography, decoration, filmmaking and development.",
   "shopButton": "Shop",
   "servicesButton": "Services",
-  "companyLogosTagline": "Some of the clients with whom we have had the pleasure of collaborating",
+  "companyLogosTagline": "Some of the clients we&#39;ve had the pleasure of working with",
   "contactTitle": "Contact Us",
   "contactText": "We will respond as soon as possible",
   "askQuestion": "Ask a Question",
@@ -165,7 +165,7 @@
   "photo": "Photo",
   "apps": "Apps",
   "printing": "Printing",
-  "weedingP": "Weeding",
+  "weedingP": "Wedding",
   "logo": "Logo",
   "visitCards": "Visit Cards",
   "sac": "Sac",
@@ -180,6 +180,7 @@
   "cinematographie": "Cinématographie",
   "spotPublicitaire": "Spot Publicitaire",
   "shooting": "Shooting",
+  "startingFrom": "Starting from",
   "product": "Product",
   "etiquette": "Etiquette",
   "emballage": "Emballage",
@@ -193,5 +194,275 @@
   "wall": "Wall",
   "certificatInvitation": "Certificat ",
   "vitrine": "Vitrine",
-  "frigo": "Frigo"
+  "frigo": "Frigo",
+
+  "pricing": {
+    "audio": [
+      {
+        "id": "0",
+        "title": "Sound Effect",
+        "description": "Specializing in creating high-quality sound effects that add an immersive dimension to your audiovisual productions.",
+        "price": "4000",
+        "features": [
+          "An advanced AI chatbot capable of understanding complex requests",
+          "An analytical dashboard to track your conversations",
+          "Priority support for quick issue resolution"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Voice Over",
+        "description": "Our talented voice team is ready to convey your message with clarity and impact.",
+        "price": "6000",
+        "features": [
+          "An AI chatbot capable of understanding your requests",
+          "Personalized recommendations based on your preferences",
+          "Ability to explore the application at no cost"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Original Music Production",
+        "description": "Benefit from a creative and collaborative approach, aiming to create custom music tailored to your specific needs.",
+        "price": "10000",
+        "features": [
+          "An AI chatbot capable of understanding your requests",
+          "Personalized recommendations based on your preferences",
+          "Ability to explore the application at no cost"
+        ]
+      }
+    ],
+    "photo": [
+      {
+        "id": "0",
+        "title": "Photography",
+        "description": "Specialized in photography, we are here to ensure your professional shoots.",
+        "price": "4000",
+        "features": [
+          "Portrait",
+          "Professional shooting",
+          "Artistic shooting",
+          "Product/commercial shooting",
+          "Photo editing and restoration"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Video",
+        "description": "We create impactful imagery that captivates your audience and strengthens your brand message.",
+        "price": "30000",
+        "features": [
+          "Commercial spot",
+          "Video clip/teaser",
+          "Short film",
+          "Documentary",
+          "Reels",
+          "Video editing",
+          "Interview/podcast"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Social Media Management Pack",
+        "description": "We will help you establish a strong and engaging presence on digital platforms.",
+        "price": "40000",
+        "features": ["*", "*", "*", "*", "*", "*", "*"]
+      }
+    ],
+    "wedding": [
+      {
+        "id": "0",
+        "title": "Rose Pack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "29000",
+        "features": [
+          "2 Photographers",
+          "Photo and video coverage",
+          "Video editing (FHD)",
+          "USB 16GB"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Jasmine Pack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "39000",
+        "features": [
+          "4 Photographers",
+          "Photo and video coverage",
+          "Video editing (FHD)",
+          "Photo processing",
+          "Photobook",
+          "USB 16GB"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Iris Pack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "48000",
+        "features": [
+          "4 Photographers",
+          "Photo and video coverage",
+          "Preparation (Men and Women)",
+          "Studio shooting",
+          "Video editing (4K)",
+          "Photo processing",
+          "Photobook",
+          "2 Frames (60x40cm)",
+          "USB 32GB"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Lilac Pack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "68000",
+        "features": [
+          "4 Photographers",
+          "Photo and video coverage",
+          "Preparation (Men and Women)",
+          "Video editing (4K)",
+          "Photo processing",
+          "Photobook",
+          "2 Frames (60x40cm)",
+          "USB 32GB / drone"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Tulip Pack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "99000",
+        "features": [
+          "6 Photographers",
+          "Photo and video coverage",
+          "Preparation (Men and Women)",
+          "Studio shooting",
+          "Video editing (4K)",
+          "Photo processing",
+          "Photobook",
+          "3 Frames (60x40cm)",
+          "USB 64GB / drone"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Orchid Pack",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "130000",
+        "features": [
+          "6 Photographers",
+          "Photo and video coverage",
+          "Preparation (Men and Women)",
+          "Studio shooting",
+          "Video editing (6K)",
+          "Short film (6K)",
+          "Photo processing",
+          "Photobook",
+          "4 Frames (60x40cm)",
+          "USB 64GB / drone"
+        ]
+      }
+    ],
+    "pub": [
+      {
+        "id": "0",
+        "title": "Printing",
+        "description": "Our team is here to ensure you receive prints with exceptional results.",
+        "price": "On Request",
+        "features": [
+          "Packaging",
+          "Business cards, flyers, brochures",
+          "Invitations, medical cards, calendars",
+          "Menus",
+          "Photo books",
+          "Stickers",
+          "Banners, flags",
+          "Posters, frames, boards",
+          "Window dressing"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Advertising Work",
+        "description": "Whether you need panels or event materials, our team is ready to execute your projects with expertise.",
+        "price": "On Request",
+        "features": [
+          "Stickers, PVC tarpaulins, canvas",
+          "Alucobond, dilphane, melamine, MDF",
+          "Flocage (T-shirt, Cap, Apron)",
+          "Shopping bags (plastic, kraft)",
+          "Light boxes",
+          "LED neon (indoor/outdoor)"
+        ]
+      }
+    ],
+    "logo": [
+      {
+        "id": "0",
+        "title": "Graphic Design",
+        "description": "Our team of talented designers is ready to bring your concepts to life.",
+        "price": "1000",
+        "features": [
+          "Logo and visual identity design",
+          "Packaging design",
+          "Social media publication design",
+          "Business card, flyer, brochure design",
+          "Invitation, medical card, calendar design",
+          "Menu design",
+          "Photo book design",
+          "Sticker design",
+          "Banner, flag design",
+          "Poster, frame, board design",
+          "Window design"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Social Media Pack",
+        "description": "Capturing attention and engaging your audience.",
+        "price": "10000",
+        "features": ["Social media publications"]
+      }
+    ],
+    "dev": [
+      {
+        "id": "0",
+        "title": "E-commerce",
+        "description": "Whether you are a startup or an established business, we provide the tools and expertise you need.",
+        "price": "40000",
+        "features": [
+          "Custom design",
+          "5 Pages",
+          "Dashboard (Add, Modify, Delete products)",
+          "Receive orders via Telegram"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Landing Page",
+        "description": "Want to promote a product, generate leads, or announce an event?",
+        "price": "On Quote",
+        "features": [
+          "Custom design",
+          "Number of pages as desired",
+          "Dashboard (Modify pages)",
+          "Receive messages via Telegram"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Mobile Application",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "price": "On Quote",
+        "features": [
+          "Custom design",
+          "User-friendly interface",
+          "Integration with various APIs",
+          "Real-time notifications"
+        ]
+      }
+    ]
+  }
 }

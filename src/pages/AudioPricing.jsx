@@ -13,8 +13,8 @@ const AudioPricing = () => {
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
         >
-          <div className='container'>
-            <h1 className='text-center h1 mb-6'>Audio</h1>
+          <div className='container min-h-screen'>
+            <h1 className='h1 text-center mb-6 uppercase'>Audio</h1>
             <PricingList />
           </div>
         </Section>

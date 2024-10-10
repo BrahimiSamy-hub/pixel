@@ -99,21 +99,22 @@
   "photo_video_text": "L'art de l'image au service de votre vision.",
   "infographie": "Pixel Creative",
   "infographie_text": "Transformez vos idées en visual percutants.",
-  "weeding": "Pixel Weedings",
+  "weeding": "Pixel Weddings",
   "weeding_text": "Capturez vos moments précieux car chaque instant mérite d'etre immortalisé.",
   "development": "Pixel Development",
   "development_text": "Vorte partenaire en développement numérique.",
   "audio": "Pixel Sounds",
   "audio_text": "L'art du son a votre portée avec voter partenaire sonore.",
-  "publicite": "Pixel Publicité",
+  "publicite": "Pixel Advertisement",
   "publicite_text": "Donnez vie a votre marque et boostrez votre visibilité pour propulsez votre marque.",
 
   "heroTitle": "Explorez les Possibilités de la Création de Contenu avec",
-  "heroDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quidem ut, ratione odit, doloribus iste?",
+  "heroDescription": "La créativité n’a pas de limites dans notre agence. Nous nous concentrons sur l’offre de services exceptionnels en design, photographie, décoration, réalisation de films et dévelopment.",
   "shopButton": "Boutique",
   "servicesButton": "Services",
   "companyLogosTagline": "Quelques-uns des clienst avec lesquels nous avons eu le plaisir de collaborer",
   "contactTitle": "Contactez-nous",
+  "startingFrom": "À partir de",
   "contactText": "Nous répondrons dès que possible",
   "askQuestion": "Poser votre Question",
   "nameLabel": "Nom",
@@ -197,5 +198,263 @@
   "wall": "Mur",
   "certificatInvitation": "Certificat ",
   "vitrine": "Vitrine",
-  "frigo": "Frigo"
+  "frigo": "Frigo",
+
+  "pricing": {
+    "audio": [
+      {
+        "id": "0",
+        "title": "Effet sonore",
+        "description": "Spécialisé dans la création d'effets sonores de haute qualité qui ajoutent une dimension immersive à vos productions audiovisuelles.",
+        "price": "4000",
+        "features": [
+          "Un chatbot IA avancé capable de comprendre des requêtes complexes",
+          "Un tableau de bord analytique pour suivre vos conversations",
+          "Support prioritaire pour résoudre rapidement les problèmes"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Voix off",
+        "description": "Notre équipe de voix talentueuses est prête à transmettre votre message avec clarté et impact.",
+        "price": "6000",
+        "features": [
+          "Un chatbot IA capable de comprendre vos requêtes",
+          "Recommandations personnalisées basées sur vos préférences",
+          "Possibilité d'explorer l'application sans aucun coût"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Production musicale originale",
+        "description": "Bénéficiez d'une approche créative et collaborative, visant à réaliser de la musique personnalisée, adaptée à vos besoins spécifiques.",
+        "price": "10000",
+        "features": [
+          "Un chatbot IA capable de comprendre vos requêtes",
+          "Recommandations personnalisées basées sur vos préférences",
+          "Possibilité d'explorer l'application sans aucun coût"
+        ]
+      }
+    ],
+    "photo": [
+      {
+        "id": "0",
+        "title": "Photo",
+        "description": "Spécialisés dans la photographie, nous sommes là pour assurer vos shootings professionnels.",
+        "price": "4000",
+        "features": [
+          "Portrait",
+          "Shooting professionnel",
+          "Shooting artistique",
+          "Shooting produit / commercial",
+          "Traitement et restauration de photos"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Vidéo",
+        "description": "Nous créons des images percutantes qui captivent votre audience et renforcent votre message de marque.",
+        "price": "30000",
+        "features": [
+          "Spot Publicitaire",
+          "Clip vidéo / teaser",
+          "Court métrage",
+          "Documentaire",
+          "Réels",
+          "Montage vidéo",
+          "Interview / podcast"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Pack Gestion des Réseaux Sociaux",
+        "description": "Nous vous aiderons à établir une présence forte et engageante sur les plateformes numériques.",
+        "price": "40000",
+        "features": ["*", "*", "*", "*", "*", "*", "*"]
+      }
+    ],
+    "wedding": [
+      {
+        "id": "0",
+        "title": "Pack Rose",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "29000",
+        "features": [
+          "2 Photographes",
+          "Couverture photo et vidéo",
+          "Montage vidéo (FHD)",
+          "USB 16Go"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Pack Jasmin",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "39000",
+        "features": [
+          "4 Photographes",
+          "Couverture photo et vidéo",
+          "Montage vidéo (FHD)",
+          "Traitement photos",
+          "Photobook",
+          "USB 16Go"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Pack Iris",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "48000",
+        "features": [
+          "4 Photographes",
+          "Couverture photo et vidéo",
+          "Préparation (Homme et Femme)",
+          "Shooting studio",
+          "Montage vidéo (4K)",
+          "Traitement Photos",
+          "Photobook",
+          "2 Cadres (60x40cm)",
+          "USB 32Go"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Pack Lilas",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "68000",
+        "features": [
+          "4 Photographes",
+          "Couverture photo et vidéo",
+          "Préparation (Homme et Femme)",
+          "Montage vidéo (4K)",
+          "Traitement Photos",
+          "Photobook",
+          "2 Cadres (60x40cm)",
+          "USB 32Go / drone"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Pack Tulipe",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "99000",
+        "features": [
+          "6 Photographes",
+          "Couverture photo et vidéo",
+          "Préparation (Homme et Femme)",
+          "Shooting studio",
+          "Montage vidéo (4K)",
+          "Traitement Photos",
+          "Photobook",
+          "3 Cadres (60x40cm)",
+          "USB 64Go / drone"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Pack Orchidée",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+        "price": "130000",
+        "features": [
+          "6 Photographes",
+          "Couverture photo et vidéo",
+          "Préparation (Homme et Femme)",
+          "Shooting studio",
+          "Montage vidéo (6K)",
+          "Court métrage (6K)",
+          "Traitement Photos",
+          "Photobook",
+          "4 Cadres (60x40cm)",
+          "USB 64Go / drone"
+        ]
+      }
+    ],
+    "pub": [
+      {
+        "id": "0",
+        "title": "Impression",
+        "description": "Notre équipe est là pour vous garantir des impressions avec des résultats exceptionnels.",
+        "price": "Sur Devis",
+        "features": [
+          "Packaging",
+          "Carte de visite, flyers, dépliants",
+          "Invitation, carte médicale, calendrier",
+          "Menu",
+          "Photo book",
+          "Stickers",
+          "Bannière, drapeaux",
+          "Affiche, tableaux, cadre",
+          "Habillage vitrine"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Travaux publicitaires",
+        "description": "Que vous ayez besoin de panneaux, de supports événementiels, notre équipe est prête à réaliser vos projets avec expertise.",
+        "price": "Sur Devis",
+        "features": [
+          "Autocollant, bâche PVC, toile",
+          "Alucobond, dilphane, mélamine, MDF",
+          "Flocage (T-shirt, Casquette, Tablier)",
+          "Sac shopping (plastique, kraft)",
+          "Boîtier lumineux",
+          "Néon LED (intérieur/extérieur)"
+        ]
+      }
+    ],
+    "logo": [
+      {
+        "id": "0",
+        "title": "Design graphique",
+        "description": "Notre équipe de designers talentueux est prête à donner vie à vos concepts.",
+        "price": "1000",
+        "features": [
+          "Conception de Logo et identité visuelle",
+          "Conception Packaging",
+          "Conception de publications pour réseaux sociaux",
+          "Conception de carte de visite, flyers, dépliants",
+          "Conception d'invitations, cartes médicales, calendriers",
+          "Conception de menus",
+          "Conception de photo book",
+          "Conception de stickers",
+          "Conception de bannières, drapeaux",
+          "Conception d'affiches, tableaux, cadres",
+          "Conception de vitrines"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Pack réseaux sociaux",
+        "description": "Capter l'attention et engager votre audience.",
+        "price": "10000",
+        "features": ["Publications pour réseaux sociaux"]
+      }
+    ],
+    "dev": [
+      {
+        "id": "0",
+        "title": "E-commerce",
+        "description": "Que vous soyez une start-up ou une entreprise établie, nous vous offrons les outils et l'expertise nécessaires.",
+        "price": "40000",
+        "features": [
+          "Design personnalisé",
+          "5 Pages",
+          "Tableau de bord (Ajout, Modification, Suppression de produits)",
+          "Réception de commande sur Telegram"
+        ]
+      },
+      {
+        "id": "1",
+        "title": "Landing page",
+        "description": "Vous souhaitez promouvoir un produit, générer des leads ou annoncer un événement.",
+        "price": "Sur Devis",
+        "features": [
+          "Design personnalisé",
+          "Nombre de Pages au choix",
+          "Tableau de bord (Modification des pages)",
+          "Réception des messages sur Telegram"
+        ]
+      }
+    ]
+  }
 }

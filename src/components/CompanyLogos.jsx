@@ -19,7 +19,7 @@ const CompanyLogos = ({ className }) => {
           delay: 0,
           disableOnInteraction: true,
         }}
-        speed={5000}
+        speed={4000}
         slidesPerView={4}
         loop={true}
         modules={[Autoplay]}

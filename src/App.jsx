@@ -24,10 +24,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Rules from './pages/RulesLoup'
 import AboutUs from './pages/AboutUs'
-import Loading from './components/Loading'
 
 const App = () => {
-  const [loading, setLoading] = useState(true)
   const [language, setLanguage] = useState(
     localStorage.getItem('i18nextLng') || 'fr'
   )
@@ -53,16 +51,9 @@ const App = () => {
     return () => window.removeEventListener('storage', handleLanguageChange)
   }, [language])
 
-  const handleLoadingComplete = () => {
-    setLoading(false)
-  }
-
   return (
     <Router>
       <ScrollToTop />
-      {/* {loading ? (
-        <Loading onLoadingComplete={handleLoadingComplete} />
-      ) : ( */}
       <CartProvider>
         <PostersProvider>
           <Header />
@@ -86,7 +77,6 @@ const App = () => {
           <Cart />
         </PostersProvider>
       </CartProvider>
-      {/* )} */}
     </Router>
   )
 }

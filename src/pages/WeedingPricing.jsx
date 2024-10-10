@@ -12,8 +12,8 @@ const WeedingPricing = () => {
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
         >
-          <div className='container'>
-            <h1 className='text-center h1 mb-6'>Weeding</h1>
+          <div className='container min-h-screen'>
+            <h1 className='text-center h1 mb-6 uppercase'>Weeding</h1>
             <PricingList />
           </div>
         </Section>

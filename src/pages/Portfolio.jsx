@@ -7,7 +7,6 @@ import PortfolioEcommerce from '../components/portfolio/E-commerce'
 import PortfolioGestionaire from '../components/portfolio/Gestionaire'
 import PortfolioMobileApp from '../components/portfolio/MobileApp'
 import PortfolioWebsite from '../components/portfolio/WebSite'
-import PortfolioReel from '../components/portfolio/Reel'
 import PortfolioCinématographie from '../components/portfolio/Cinématographie'
 import PortfolioSpot from '../components/portfolio/Spot'
 import PortfolioEtiquette from '../components/portfolio/Etiquette'
@@ -27,6 +26,7 @@ import PortfolioCards from '../components/portfolio/Cards'
 import PortfolioSac from '../components/portfolio/Sac'
 import PortfolioTshirts from '../components/portfolio/Frigo'
 import PortfolioFlyer from '../components/portfolio/Flyer'
+import Button from '../components/Button'
 import { useTranslation } from 'react-i18next'
 import {
   Dialog,
@@ -53,7 +53,7 @@ const subcategoryComponents = {
   menu: PortfolioMenu,
   socialMediaPosts: PortfolioPosts,
   voixOff: PortfolioWebsite,
-  reel: PortfolioReel,
+  reel: PortfolioWebsite,
   cinematographie: PortfolioCinématographie,
   spotPublicitaire: PortfolioSpot,
   etiquette: PortfolioEtiquette,
@@ -109,188 +109,6 @@ const Portfolio = () => {
     return Component ? <Component /> : <div>{t('Select a subcategory')}</div>
   }
 
-  // return (
-  //   <>
-  //     <div className='min-h-screen'>
-  //       <img
-  //         src={pixelHero2}
-  //         alt=''
-  //         className=' w-48 h-48 left-0 top-20 absolute rounded -rotate-45'
-  //       />
-  //       <img
-  //         src={pixelHero2}
-  //         alt=''
-  //         className=' w-48 h-48 right-0 top-20 absolute rounded rotate-45'
-  //       />
-  //       {/* Mobile filter dialog */}
-  //       <Dialog
-  //         open={mobileFiltersOpen}
-  //         onClose={setMobileFiltersOpen}
-  //         className='relative z-40 lg:hidden'
-  //       >
-  //         <div className='fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-out' />
-  //         <div className='fixed inset-0 z-40 flex'>
-  //           <div className='relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl'>
-  //             <div className='flex items-center justify-between px-4'>
-  //               <h2 className='text-lg font-medium text-black'>Filters</h2>
-  //               <button
-  //                 type='button'
-  //                 onClick={() => setMobileFiltersOpen(false)}
-  //                 className='-mr-2 flex h-10 w-10 items-center rounded-md p-2 text-black'
-  //               >
-  //                 <XMarkIcon className='h-6 w-6' aria-hidden='true' />
-  //               </button>
-  //             </div>
-
-  //             {/* Filters */}
-  //             <form className='mt-4 border-t'>
-  //               {Object.entries(subcategories).map(
-  //                 ([categoryName, subcatKeys]) => (
-  //                   <Disclosure
-  //                     key={categoryName}
-  //                     as='div'
-  //                     className='border-t border-gray-200 px-4 py-6'
-  //                   >
-  //                     <h3 className='-mx-2 -my-3 flow-root'>
-  //                       <DisclosureButton className='group flex w-full items-center justify-between px-2 py-3 text-white hover:text-gray-500'>
-  //                         <span className='font-medium text-gray-900'>
-  //                           {categoryName}
-  //                         </span>
-  //                         <span className='ml-6 flex items-center'>
-  //                           <PlusIcon
-  //                             className='h-5 w-5 group-data-[open]:hidden'
-  //                             aria-hidden='true'
-  //                           />
-  //                           <MinusIcon
-  //                             className='h-5 w-5 [.group:not([data-open])_&]:hidden'
-  //                             aria-hidden='true'
-  //                           />
-  //                         </span>
-  //                       </DisclosureButton>
-  //                     </h3>
-  //                     <DisclosurePanel className='pt-6'>
-  //                       <div className='space-y-6'>
-  //                         {subcatKeys.map((subcatKey, subcatIdx) => (
-  //                           <div key={subcatKey} className='flex items-center'>
-  //                             <input
-  //                               type='radio'
-  //                               id={`filter-mobile-${categoryName}-${subcatIdx}`}
-  //                               name='subcategory'
-  //                               value={subcatKey}
-  //                               checked={selectedSubcategory === subcatKey}
-  //                               onChange={() =>
-  //                                 setSelectedSubcategory(subcatKey)
-  //                               }
-  //                               className='h-4 w-4 rounded border-gray-300 text-color-1 focus:ring-color-1'
-  //                             />
-  //                             <label
-  //                               htmlFor={`filter-mobile-${categoryName}-${subcatIdx}`}
-  //                               className='ml-3 min-w-0 flex-1 text-gray-500'
-  //                             >
-  //                               {subcatKey.charAt(0).toUpperCase() +
-  //                                 subcatKey
-  //                                   .slice(1)
-  //                                   .replace(/([A-Z])/g, ' $1')
-  //                                   .trim()}
-  //                             </label>
-  //                           </div>
-  //                         ))}
-  //                       </div>
-  //                     </DisclosurePanel>
-  //                   </Disclosure>
-  //                 )
-  //               )}
-  //             </form>
-  //           </div>
-  //         </div>
-  //       </Dialog>
-  //       <h1 className='h1 font-bold text-center pt-36 text-white'>
-  //         {t('portfolioP')}
-  //       </h1>
-  //       <main className='ml-10 max-w-7xl'>
-  //         <div className='items-baseline pb-6'>
-  //           <div className='flex items-center justify-center mt-8'>
-  //             <button
-  //               type='button'
-  //               onClick={() => setMobileFiltersOpen(true)}
-  //               className='-m-2 ml-4 p-2 text-white hover:text-gray-500 lg:hidden border'
-  //             >
-  //               <div className='flex gap-2 justify-center '>
-  //                 <FunnelIcon className='h-5 w-5' aria-hidden='true' /> Filter
-  //               </div>
-  //             </button>
-  //           </div>
-  //         </div>
-
-  //         <section aria-labelledby='portfolio-heading' className='pb-24 pt-6'>
-  //           <div className='grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4'>
-  //             {/* Desktop Filters */}
-  //             <form className='hidden lg:block'>
-  //               {Object.entries(subcategories).map(
-  //                 ([categoryName, subcatKeys]) => (
-  //                   <Disclosure
-  //                     key={categoryName}
-  //                     as='div'
-  //                     className='border-b border-gray-200 py-6'
-  //                   >
-  //                     <h3 className='-my-3 flow-root'>
-  //                       <DisclosureButton className='group flex w-full items-center justify-between  py-3 text-sm text-white hover:text-gray-500'>
-  //                         <span className='font-medium '>{categoryName}</span>
-  //                         <span className='ml-6 flex items-center'>
-  //                           <PlusIcon
-  //                             className='h-5 w-5 group-data-[open]:hidden'
-  //                             aria-hidden='true'
-  //                           />
-  //                           <MinusIcon
-  //                             className='h-5 w-5 [.group:not([data-open])_&]:hidden'
-  //                             aria-hidden='true'
-  //                           />
-  //                         </span>
-  //                       </DisclosureButton>
-  //                     </h3>
-  //                     <DisclosurePanel className='pt-6'>
-  //                       <div className='space-y-4'>
-  //                         {subcatKeys.map((subcatKey, subcatIdx) => (
-  //                           <div key={subcatKey} className='flex items-center'>
-  //                             <input
-  //                               type='radio'
-  //                               id={`filter-${categoryName}-${subcatIdx}`}
-  //                               name='subcategory'
-  //                               value={subcatKey}
-  //                               checked={selectedSubcategory === subcatKey}
-  //                               onChange={() =>
-  //                                 setSelectedSubcategory(subcatKey)
-  //                               }
-  //                               className='h-4 w-4 rounded border-gray-300 text-color-1 focus:ring-color-1'
-  //                             />
-  //                             <label
-  //                               htmlFor={`filter-${categoryName}-${subcatIdx}`}
-  //                               className='ml-3 text-sm text-white'
-  //                             >
-  //                               {subcatKey.charAt(0).toUpperCase() +
-  //                                 subcatKey
-  //                                   .slice(1)
-  //                                   .replace(/([A-Z])/g, ' $1')
-  //                                   .trim()}
-  //                             </label>
-  //                           </div>
-  //                         ))}
-  //                       </div>
-  //                     </DisclosurePanel>
-  //                   </Disclosure>
-  //                 )
-  //               )}
-  //             </form>
-
-  //             {/* Portfolio content */}
-  //             <div className='lg:col-span-3 w-full'>{renderComponent()}</div>
-  //           </div>
-  //         </section>
-  //       </main>
-  //     </div>
-  //     <ButtonGradient />
-  //   </>
-  // )
   return (
     <>
       <div className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden`}>
@@ -302,16 +120,16 @@ const Portfolio = () => {
         >
           <div className='container'>
             <div className='flex flex-col justify-center items-center'>
-              <img
+              {/* <img
                 src={pixelHero2}
                 alt=''
-                className=' w-48 h-48 left-0 top-20 absolute rounded -rotate-45'
+                className=' w-48 h-48 left-0 top-20 z-20 absolute rounded -rotate-45'
               />
               <img
                 src={pixelHero2}
                 alt=''
-                className=' w-48 h-48 right-0 top-20 absolute rounded rotate-45'
-              />
+                className=' w-48 h-48 right-0 top-20 z-20 absolute rounded rotate-45'
+              /> */}
               {/* Mobile filter dialog */}
               <Dialog
                 open={mobileFiltersOpen}
@@ -404,19 +222,19 @@ const Portfolio = () => {
               <h1 className='h1 font-bold text-center text-white'>
                 {t('portfolioP')}
               </h1>
-              <main className='ml-10 max-w-7xl'>
-                <div className='items-baseline pb-6'>
+              <main className='max-w-7xl'>
+                <div className='items-baseline '>
                   <div className='flex items-center justify-center'>
-                    <button
+                    <Button
                       type='button'
                       onClick={() => setMobileFiltersOpen(true)}
-                      className='-m-2 ml-4 p-2 text-white hover:text-gray-500 lg:hidden border'
+                      className='my-5 lg:hidden'
                     >
-                      <div className='flex gap-2 justify-center '>
+                      <div className='flex gap-2 justify-center items-center '>
                         <FunnelIcon className='h-5 w-5' aria-hidden='true' />{' '}
-                        Filter
+                        Categories
                       </div>
-                    </button>
+                    </Button>
                   </div>
                 </div>
 

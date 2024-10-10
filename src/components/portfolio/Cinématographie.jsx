@@ -13,7 +13,7 @@ const Cinématographie = () => {
               src={speedy}
               alt='Shirt 1'
               // className='object-fill w-full h-full border rounded-xl min-w-56 min-h-56 '
-              className='border rounded-xl ml-5 w-80 h-full'
+              className='rounded-xl ml-5 w-80 h-full'
             />
           </PhotoView>
         </div>

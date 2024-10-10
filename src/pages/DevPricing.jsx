@@ -13,8 +13,8 @@ const DevPricing = () => {
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
         >
-          <div className='container'>
-            <h1 className='text-center h1 mb-6'>Development</h1>
+          <div className='container min-h-screen'>
+            <h1 className='text-center h1 mb-6 uppercase'>Development</h1>
             <PricingList />
           </div>
         </Section>

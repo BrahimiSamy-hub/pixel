@@ -12,7 +12,7 @@ const Frigo = () => {
             <img
               src={speedy}
               alt='Shirt 1'
-              className='border rounded-xl ml-5 w-80 h-full'
+              className='rounded-xl ml-5 w-80 h-full'
             />
           </PhotoView>
         </div>

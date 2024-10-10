@@ -277,8 +277,8 @@ const SingleProductDetails = () => {
     },
     colors: ['#FF0000', '#00FF00', '#0000FF'], // Sample colors
     sizes: [
-      { _id: 'size1', longeur: 30, largeur: 40, epesseur: 5, inStock: true },
-      { _id: 'size2', longeur: 35, largeur: 45, epesseur: 6, inStock: false },
+      { _id: 'size1', longeur: 30, largeur: 40, inStock: true },
+      { _id: 'size2', longeur: 35, largeur: 45, inStock: false },
     ],
   }
 
@@ -336,17 +336,22 @@ const SingleProductDetails = () => {
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
         >
-          <div className='container flex w-full items-center overflow-hidden '>
+          <div className='container flex w-full items-center overflow-hidden mb-10'>
             <div className='grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8'>
               {/* Image Gallery */}
               <div className='sm:col-span-4 lg:col-span-5'>
-                <div className='flex flex-col'>
+                <div className='flex flex-col relative'>
+                  <div className='absolute top-0 right-0 bg-red-500 flex items-center rounded-tr-md p-2 rounded-bl-md '>
+                    <span className='animate-pulse duration-300 transition-transform'>
+                      NEW
+                    </span>
+                  </div>
                   {selectedImage ? (
                     <img
                       src={selectedImage}
                       alt='Product image'
                       className={classNames(
-                        'object-contain object-center h-[350px] rounded-lg bg-gray-100 transition-opacity duration-300',
+                        'object-contain object-center h-[500px] rounded-lg border border-n-5 transition-opacity duration-300',
                         isAnimating ? 'opacity-0' : 'opacity-100'
                       )}
                       loading='lazy'
@@ -369,7 +374,7 @@ const SingleProductDetails = () => {
                             className={classNames(
                               'h-24 w-24 object-contain rounded-md cursor-pointer border',
                               selectedImage === url
-                                ? 'border-indigo-500'
+                                ? 'border-[#f18A27]'
                                 : 'border-[#4241417a]'
                             )}
                             onClick={() => handleImageChange(url)}
@@ -383,27 +388,27 @@ const SingleProductDetails = () => {
 
               {/* Product Details */}
               <div className='sm:col-span-8 lg:col-span-7'>
-                <h2 className='text-4xl  flex justify-between'>
+                <h2 className='text-4xl flex justify-between'>
                   <span className='font-bold'>{product.engName}</span>
                   <small
                     className={classNames(
-                      'text-xl border rounded p-2 flex text-center',
+                      'text-xl rounded p-2 h-full flex text-center',
                       product.inStock
                         ? 'text-green-500 bg-green-500/15'
                         : 'text-red-500 bg-red-500/15'
                     )}
                   >
-                    {product.inStock ? t('inStock') : t('outOfStock')}
+                    {product.inStock ? t('Available') : t('Unavailable')}
                   </small>
                 </h2>
 
                 <div className='mt-2'>
-                  <p className='text-2xl  font-bold'>
+                  <h2 className='h2 text-[#F17A28] font-bold'>
                     {product.price}
                     <small>
-                      <sup className='ml-1'>DA</sup>
+                      <sup> DA</sup>
                     </small>
-                  </p>
+                  </h2>
                 </div>
 
                 <div aria-labelledby='options-heading' className='mt-10'>
@@ -415,7 +420,7 @@ const SingleProductDetails = () => {
                     {/* Colors */}
                     {product.colors && product.colors.length > 0 && (
                       <div>
-                        <h4 className='text-sm font-medium '>{t('color')}</h4>
+                        <h4 className='h4'>Choose a hero</h4>
 
                         <RadioGroup
                           value={selectedColor}
@@ -433,22 +438,20 @@ const SingleProductDetails = () => {
                                 className={({ active, checked }) =>
                                   classNames(
                                     active && checked
-                                      ? 'ring ring-offset-1 ring-indigo-500 '
+                                      ? 'ring ring-offset-1 ring-[#f18A27] '
                                       : '',
                                     !active && checked
-                                      ? 'ring-2 ring-indigo-500 focus:scale-110 transition-transform duration-300'
+                                      ? 'ring-2 ring-[#f18A27]'
                                       : '',
-                                    'relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none '
+                                    'relative -m-0.5 flex cursor-pointer items-center justify-center  p-0.5 focus:outline-none '
                                   )
                                 }
                               >
-                                <RadioGroup.Label as='span' className='sr-only'>
-                                  {`${t('color')} ${color}`}
-                                </RadioGroup.Label>
-                                <span
-                                  aria-hidden='true'
-                                  style={{ backgroundColor: color }}
-                                  className='h-8 w-8 rounded-full border border-black border-opacity-10'
+                                <img
+                                  src=''
+                                  alt={'Product 1'}
+                                  className='h-24 w-24 object-contain rounded-md cursor-pointer border'
+                                  loading='lazy'
                                 />
                               </RadioGroup.Option>
                             ))}
@@ -469,7 +472,7 @@ const SingleProductDetails = () => {
                     {/* Sizes */}
                     <div className='mt-10'>
                       <div className='flex items-center justify-between'>
-                        <h4 className='text-sm font-medium '>{t('size')}</h4>
+                        <h4 className='h4'>Size</h4>
                       </div>
 
                       <RadioGroup
@@ -478,37 +481,38 @@ const SingleProductDetails = () => {
                         className='mt-4'
                       >
                         <RadioGroup.Label className='sr-only'>
-                          {t('chooseSize')}
+                          Choose a size
                         </RadioGroup.Label>
                         <div className='grid grid-cols-4 gap-4'>
                           {product.sizes.map((size) => (
                             <RadioGroup.Option
-                              key={size._id}
+                              key={size.id}
                               value={size}
-                              disabled={!size.inStock}
+                              disabled={!size.isAvailable}
                               className={({ active }) =>
                                 classNames(
-                                  size.inStock
-                                    ? 'cursor-pointer bg-white  shadow-sm'
+                                  size.isAvailable
+                                    ? 'cursor-pointer bg-white text-gray-900 shadow-sm'
                                     : 'cursor-not-allowed bg-gray-50 text-gray-200',
-                                  active ? 'ring-2 ring-indigo-500' : '',
+                                  active ? 'ring-2 ring-[#f17a28]' : '',
                                   'group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1'
                                 )
                               }
                             >
                               {({ active, checked }) => (
                                 <>
-                                  <RadioGroup.Label as='span'>
-                                    {size.longeur} * {size.largeur} *{' '}
-                                    {size.epesseur}
+                                  <RadioGroup.Label
+                                    as='span'
+                                    className='font-bold text-xl'
+                                  >
+                                    {size.name}
                                   </RadioGroup.Label>
-
-                                  {size.inStock ? (
+                                  {size.isAvailable ? (
                                     <span
                                       className={classNames(
                                         active ? 'border' : 'border-2',
                                         checked
-                                          ? 'border-indigo-500'
+                                          ? 'border-[#f17a28]'
                                           : 'border-transparent',
                                         'pointer-events-none absolute -inset-px rounded-md'
                                       )}

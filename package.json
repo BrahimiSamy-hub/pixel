@@ -35,7 +35,7 @@
     "react-video-js-player": "^1.1.1",
     "react-world-flags": "^1.6.0",
     "scroll-lock": "^2.1.5",
-    "swiper": "^11.1.1"
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
