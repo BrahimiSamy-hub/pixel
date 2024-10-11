@@ -1,7 +1,6 @@
 import Section from './Section'
 import Heading from './Heading'
 import { useForm } from 'react-hook-form'
-import { ToastContainer, toast } from 'react-toastify'
 import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
@@ -14,7 +13,6 @@ const Contact = () => {
   } = useForm()
 
   const onSubmit = (data) => {
-    toast.success(t('messageSent'))
     reset()
   }
 
@@ -156,6 +154,7 @@ const Contact = () => {
             <div className=' bg-n-7 rounded-3xl overflow-hidden min-h-[35rem]'>
               <iframe
                 src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.9825938283684!2d6.170534775461951!3d35.554132072628484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f41158da88865b%3A0xf23a3bf30fc4c9fc!2sPixel%20Creative%20Agency!5e0!3m2!1sfr!2sdz!4v1715290385507!5m2!1sfr!2sdz'
+                title='MapsLocalisation'
                 allowFullScreen=''
                 loading='lazy'
                 className='w-full h-full'
@@ -165,18 +164,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <ToastContainer
-        position='bottom-right'
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme='dark'
-      />
     </Section>
   )
 }

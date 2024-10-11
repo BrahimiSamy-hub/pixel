@@ -17,7 +17,6 @@ const ContactUsServices = () => {
   } = useForm()
 
   const onSubmit = (data) => {
-    toast.success(t('messageSent'))
     reset()
   }
 
