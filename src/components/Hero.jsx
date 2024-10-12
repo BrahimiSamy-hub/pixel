@@ -5,6 +5,7 @@ import {
   hero1,
   heroImage,
   pixelH,
+  astro,
 } from '../assets'
 import Button from './Button'
 import Section from './Section'
@@ -59,7 +60,7 @@ const Hero = () => {
           <div className='relative z-1 p-0.5 rounded-2xl'>
             <div className='aspect-[33/40]  rounded-t-[0.9rem] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490] ]:'>
               <img
-                src={heroImage}
+                src={astro}
                 className='w-full h-full object-contain float-animation'
                 width={1024}
                 height={490}

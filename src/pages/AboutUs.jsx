@@ -2,15 +2,16 @@ import Section from '../components/Section'
 import ServiceCard from '../components/ServiceCard'
 import Faq from '../components/Faq'
 import { FaShippingFast, FaCreditCard, FaHeadset } from 'react-icons/fa'
+
 export const services = [
   {
     icon: <FaShippingFast size={30} />,
-    label: 'Free Shipping',
+    label: '2 Days Shipping',
     subtext: 'Enjoy seamless shopping with our complimentary shipping service.',
   },
   {
     icon: <FaCreditCard size={30} />,
-    label: 'Payment On Delivery',
+    label: 'Cash On Delivery',
     subtext:
       'Experience worry-free transactions with our secure payment options.',
   },
@@ -41,19 +42,20 @@ const AboutUs = () => {
                   <div className='h-1 bg-[#F17A28] mt-2 mb-4 rounded w-full max-w-56'></div>
                 </div>
 
-                <p className='body-1  text-center mx-auto mb-6 text-n-2 lg:mb-8'>
+                <p className='body-1 max-w-5xl text-center mx-auto mb-6 text-n-2 lg:mb-8'>
                   Bienvenue chez Pixel, votre partenaire créatif en
                   photographie. Fondée en 2018 par une équipe de passionnés,
                   notre agence se consacre à capturer des moments uniques et à
-                  raconter des histoires à travers l&#39;objectif. Nous croyons
-                  que chaque image doit évoquer une émotion et laisser une
-                  empreinte durable. Que vous soyez une entreprise cherchant à
-                  promouvoir votre marque, un couple célébrant un moment spécial
-                  ou un artiste souhaitant mettre en valeur son travail, nous
-                  nous engageons à comprendre vos besoins et à transformer votre
-                  vision en réalité. Avec une approche personnalisée, nous
+                  raconter des histoires à travers l&#39;objectif. <br /> Nous
+                  croyons que chaque image doit évoquer une émotion et laisser
+                  une empreinte durable. Que vous soyez une entreprise cherchant
+                  à promouvoir votre marque, un couple célébrant un moment
+                  spécial ou un artiste souhaitant mettre en valeur son travail,
+                  nous nous engageons à comprendre vos besoins et à transformer
+                  votre vision en réalité. Avec une approche personnalisée, nous
                   combinons notre expertise technique à un sens aigu de
-                  l&#39;esthétique pour créer des visuels qui se démarquent.
+                  l&#39;esthétique pour créer des visuels qui se démarquent.{' '}
+                  <br />
                   Notre mission est de fournir des images de haute qualité qui
                   captivent votre audience et renforcent votre message.
                   Rejoignez-nous dans cette aventure, et ensemble, donnons vie à

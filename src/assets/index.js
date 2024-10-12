@@ -24,6 +24,9 @@ import chromecast from './chrome-cast.svg'
 import sliders04 from './sliders-04.svg'
 import loading from './loading.png'
 import background from './background.jpg'
+import wedd from './wedd.jpg'
+import pubS from './pubS.jpg'
+import astro from './astro.png'
 
 import loupBleu from './roles/loupBleu.svg'
 import filleDeJoie from './roles/filleDeJoie.svg'
@@ -229,6 +232,9 @@ import photoshop from './collaboration/photoshop.svg'
 import pixelH from './pixelH.png'
 
 export {
+  astro,
+  wedd,
+  pubS,
   vsCode,
   AE,
   illustrator,
