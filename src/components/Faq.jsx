@@ -1,56 +1,22 @@
 import React, { useState } from 'react'
-
-const questions = [
-  {
-    question: 'What photography services do you offer?',
-    answer:
-      'We offer a range of photography services, including portraits, events, product photography, and commercial shoots tailored to meet your specific needs.',
-  },
-  {
-    question: 'Can you help with printing my photos?',
-    answer:
-      'Absolutely! We provide high-quality printing services, offering a variety of print sizes and finishes to showcase your photos beautifully.',
-  },
-  {
-    question: 'What is your filmmaking process?',
-    answer:
-      'Our filmmaking process involves pre-production planning, shooting, and post-production editing, ensuring that your vision is brought to life effectively.',
-  },
-  {
-    question: 'Do you provide web development services?',
-    answer:
-      'Yes, we offer web development services to create visually appealing and functional websites, optimized for both desktop and mobile devices.',
-  },
-  {
-    question: 'How long does a typical project take?',
-    answer:
-      'Project timelines vary based on the complexity and scope. We will provide a detailed timeline during the consultation phase.',
-  },
-  {
-    question: 'Can I request a custom quote?',
-    answer:
-      'Definitely! We can provide custom quotes based on your specific requirements. Please contact us with your project details for an accurate estimate.',
-  },
-  {
-    question: 'Do you have a portfolio I can view?',
-    answer:
-      'Yes, we have a portfolio showcasing our work in photography, filmmaking, and web development. You can view it on our website to get a sense of our style and capabilities.',
-  },
-]
+import { useTranslation } from 'react-i18next'
 
 const Faq = () => {
+  const { t } = useTranslation()
   const [openQuestionIndex, setOpenQuestionIndex] = useState(null)
 
   const toggleOpen = (index) => {
     setOpenQuestionIndex((prevIndex) => (prevIndex === index ? null : index))
   }
 
+  const questions = t('faq.questions', { returnObjects: true })
+
   return (
     <section className='py-5'>
       <div className='mx-auto max-w-7xl'>
-        <div className='max-w-xl mx-auto text-center flex flex-col items-center'>
-          <h2 className='text-4xl font-bold'>Frequently Asked Questions</h2>
-          <div className='h-1 bg-[#F17A28] mt-2 mb-4 rounded w-full'></div>
+        <div className='mx-auto text-center flex flex-col items-center'>
+          <h2 className='text-4xl font-bold'>{t('faq.title')}</h2>
+          <div className='h-1 bg-[#F17A28] mt-2 mb-4 rounded w-full max-w-xl'></div>
         </div>
 
         <div className='w-full mt-8 space-y-4 md:mt-16'>
@@ -62,7 +28,7 @@ const Faq = () => {
               <button
                 type='button'
                 className='flex items-center justify-between w-full px-4 py-5 sm:p-6'
-                onClick={() => toggleOpen(index)} // Call the toggle function with index
+                onClick={() => toggleOpen(index)}
               >
                 <span className='flex text-lg font-semibold'>
                   {item.question}
@@ -70,7 +36,7 @@ const Faq = () => {
                 <svg
                   className={`w-7 h-7 transition-transform duration-200 ${
                     openQuestionIndex === index ? 'rotate-0' : 'rotate-180'
-                  }`} // Rotate based on state
+                  }`}
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
                   viewBox='0 0 24 24'
@@ -90,7 +56,7 @@ const Faq = () => {
                   openQuestionIndex === index
                     ? 'max-h-screen opacity-100'
                     : 'max-h-0 opacity-0'
-                }`} // Control height and opacity
+                }`}
               >
                 <div className='px-4 pb-5 sm:px-6 sm:pb-6 text-n-2'>
                   <p>{item.answer}</p>

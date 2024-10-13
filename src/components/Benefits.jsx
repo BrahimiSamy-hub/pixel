@@ -55,7 +55,7 @@ const Benefits = () => {
                 {/* {item.light && <GradientLight />} */}
 
                 <div className='absolute inset-0 bg-n-8'>
-                  <div className='absolute inset-0 opacity-10 transition-opacity hover:opacity-40'>
+                  <div className='absolute inset-0 opacity-10 transition-opacity hover:opacity-40  '>
                     {item.imageUrl && (
                       <img
                         loading='lazy'
@@ -63,7 +63,7 @@ const Benefits = () => {
                         width={380}
                         height={362}
                         alt={t(item.title)}
-                        className='w-full h-full object-fill'
+                        className='w-full h-full object-cover '
                       />
                     )}
                   </div>

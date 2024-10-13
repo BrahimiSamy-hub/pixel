@@ -4,16 +4,11 @@ import { useTranslation } from 'react-i18next'
 import Roles from '../components/Roles'
 
 const RulesLoup = () => {
-  const { t, i18n } = useTranslation()
-
-  // const isArabic = i18n.language === 'ar'
+  const { t } = useTranslation()
 
   return (
     <>
-      <div
-        className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden`}
-        // dir={isArabic ? 'rtl' : 'ltr'}
-      >
+      <div className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden`}>
         <Section
           className='pt-[8rem] -mt-[5.25rem] min-h-screen'
           crosses

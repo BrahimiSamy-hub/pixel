@@ -440,17 +440,15 @@ const SingleProductDetails = () => {
                                     active && checked
                                       ? 'ring ring-offset-1 ring-[#f18A27] '
                                       : '',
-                                    !active && checked
-                                      ? 'ring-2 ring-[#f18A27]'
-                                      : '',
+                                    !active && checked ? '' : '',
                                     'relative -m-0.5 flex cursor-pointer items-center justify-center  p-0.5 focus:outline-none '
                                   )
                                 }
                               >
                                 <img
-                                  src=''
+                                  src='https://api.pixeldz.store/uploads/670ac88288aac3bb78c1e859/Brook.jpg'
                                   alt={'Product 1'}
-                                  className='h-24 w-24 object-contain rounded-md cursor-pointer border'
+                                  className='h-[100p] w-[70px] object-cover rounded-md cursor-pointer'
                                   loading='lazy'
                                 />
                               </RadioGroup.Option>

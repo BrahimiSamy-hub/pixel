@@ -456,5 +456,57 @@
         ]
       }
     ]
+  },
+
+  "about_us": {
+    "header": "Notre Histoire",
+    "description": "Bienvenue chez Pixel, votre partenaire créatif en photographie. Fondée en 2018 par une équipe de passionnés, notre agence se consacre à capturer des moments uniques et à raconter des histoires à travers l'objectif. Nous croyons que chaque image doit évoquer une émotion et laisser une empreinte durable. Que vous soyez une entreprise cherchant à promouvoir votre marque, un couple célébrant un moment spécial ou un artiste souhaitant mettre en valeur son travail, nous nous engageons à comprendre vos besoins et à transformer votre vision en réalité. Avec une approche personnalisée, nous allions expertise technique et sens aigu de l'esthétique pour créer des visuels qui se démarquent. Notre mission est de fournir des images de haute qualité qui captivent votre audience et renforcent votre message. Rejoignez-nous dans cette aventure, et ensemble, donnons vie à vos idées.",
+    "services": {
+      "shipping": {
+        "label": "Livraison en 2 jours",
+        "subtext": "Profitez d'un shopping sans effort avec notre service de livraison gratuit."
+      },
+      "cash_on_delivery": {
+        "label": "Paiement à la livraison",
+        "subtext": "Vivez des transactions sans souci avec nos options de paiement sécurisées."
+      },
+      "support": {
+        "label": "Support 24/7",
+        "subtext": "Notre équipe dédiée est là pour vous aider à chaque étape."
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "questions": [
+      {
+        "question": "Quels services de photographie proposez-vous ?",
+        "answer": "Nous proposons une gamme de services de photographie, y compris les portraits, les événements, la photographie de produits, et les séances commerciales adaptées à vos besoins spécifiques."
+      },
+      {
+        "question": "Pouvez-vous m'aider à imprimer mes photos ?",
+        "answer": "Absolument ! Nous offrons des services d'impression de haute qualité, avec une variété de tailles et de finitions pour mettre en valeur vos photos."
+      },
+      {
+        "question": "Quel est votre processus de réalisation de films ?",
+        "answer": "Notre processus de réalisation de films comprend la planification en pré-production, le tournage, et le montage en post-production, garantissant que votre vision prend vie de manière efficace."
+      },
+      {
+        "question": "Proposez-vous des services de développement web ?",
+        "answer": "Oui, nous proposons des services de développement web pour créer des sites web esthétiques et fonctionnels, optimisés pour les appareils de bureau et mobiles."
+      },
+      {
+        "question": "Combien de temps dure un projet typique ?",
+        "answer": "La durée des projets varie en fonction de la complexité et de la portée. Nous vous fournirons un calendrier détaillé pendant la phase de consultation."
+      },
+      {
+        "question": "Puis-je demander un devis personnalisé ?",
+        "answer": "Bien sûr ! Nous pouvons vous fournir des devis personnalisés en fonction de vos besoins spécifiques. Veuillez nous contacter avec les détails de votre projet pour obtenir une estimation précise."
+      },
+      {
+        "question": "Avez-vous un portfolio que je peux consulter ?",
+        "answer": "Oui, nous avons un portfolio présentant notre travail en photographie, réalisation de films, et développement web. Vous pouvez le consulter sur notre site web pour avoir une idée de notre style et de nos compétences."
+      }
+    ]
   }
 }

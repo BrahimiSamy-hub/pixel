@@ -765,15 +765,6 @@ export const devPricing = [
 
 export const benefits = [
   {
-    id: '0',
-    title: 'photo_video',
-    text: 'photo_video_text',
-    backgroundUrl: './src/assets/benefits/card-1.svg',
-    icon: 'FaCamera',
-    imageUrl: servicePhoto,
-    url: '/photo',
-  },
-  {
     id: '1',
     title: 'infographie',
     text: 'infographie_text',
@@ -783,15 +774,15 @@ export const benefits = [
     url: '/infographie',
   },
   {
-    id: '2',
-    title: 'Wedding',
-    text: 'weeding_text',
-    backgroundUrl: './src/assets/benefits/card-3.svg',
-    icon: 'GiDiamondRing',
-    imageUrl: wedd,
-    light: true,
-    url: '/weeding',
+    id: '0',
+    title: 'photo_video',
+    text: 'photo_video_text',
+    backgroundUrl: './src/assets/benefits/card-1.svg',
+    icon: 'FaCamera',
+    imageUrl: servicePhoto,
+    url: '/photo',
   },
+
   {
     id: '3',
     title: 'development',
@@ -803,15 +794,6 @@ export const benefits = [
     url: '/dev',
   },
   {
-    id: '4',
-    title: 'audio',
-    text: 'audio_text',
-    backgroundUrl: './src/assets/benefits/card-5.svg',
-    icon: 'FaMusic',
-    imageUrl: serviceAudio2,
-    url: '/audio',
-  },
-  {
     id: '5',
     title: 'publicite',
     text: 'publicite_text',
@@ -819,6 +801,26 @@ export const benefits = [
     icon: 'FaLightbulb',
     imageUrl: pubS,
     url: '/neon',
+  },
+
+  {
+    id: '2',
+    title: 'Wedding',
+    text: 'weeding_text',
+    backgroundUrl: './src/assets/benefits/card-3.svg',
+    icon: 'GiDiamondRing',
+    imageUrl: wedd,
+    light: true,
+    url: '/weeding',
+  },
+  {
+    id: '4',
+    title: 'audio',
+    text: 'audio_text',
+    backgroundUrl: './src/assets/benefits/card-5.svg',
+    icon: 'FaMusic',
+    imageUrl: serviceAudio2,
+    url: '/audio',
   },
 ]
 

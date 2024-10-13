@@ -81,5 +81,23 @@
   "TueurEnSerieDescription": "Description du Tueur En Série",
   "VampireDescription": "Description du Vampire",
   "VoleurDescription": "Description du Voleur",
-  "VoyantDescription": "Description du Voyant"
+  "VoyantDescription": "Description du Voyant",
+  "about_us": {
+    "header": "قصتنا",
+    "description": "مرحبًا بكم في Pixel، شريكك الإبداعي في التصوير الفوتوغرافي. تأسست في عام 2018 بواسطة فريق من المتحمسين، تتخصص وكالتنا في التقاط اللحظات الفريدة...",
+    "services": {
+      "shipping": {
+        "label": "شحن خلال يومين",
+        "subtext": "استمتع بتسوق سلس مع خدمة الشحن المجانية لدينا."
+      },
+      "cash_on_delivery": {
+        "label": "الدفع عند الاستلام",
+        "subtext": "استمتع بمعاملات آمنة مع خيارات الدفع الموثوقة لدينا."
+      },
+      "support": {
+        "label": "دعم على مدار الساعة",
+        "subtext": "فريقنا المخصص هنا لمساعدتك في كل خطوة."
+      }
+    }
+  }
 }

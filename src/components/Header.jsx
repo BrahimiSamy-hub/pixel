@@ -350,12 +350,11 @@ const Header = () => {
             </div>
           )}
         </div>
-        <button className='ml-6 relative hidden lg:flex' onClick={toggleCart}>
-          <FaCartShopping
-            size={40}
-            color='#F18A27'
-            className='hover:scale-110 transition-transform duration-150'
-          />
+        <button
+          className='ml-6 relative hidden lg:flex hover:rotate-12 transition-transform duration-150'
+          onClick={toggleCart}
+        >
+          <FaCartShopping size={40} color='#F18A27' />
           <span className='absolute -top-2 -right-3 flex items-center justify-center w-6 h-6 font-bold text-[#F18A28] bg-white rounded-full'>
             {getTotalQuantity()}
           </span>

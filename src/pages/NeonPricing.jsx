@@ -1,8 +1,7 @@
 import ButtonGradient from '../assets/svg/ButtonGradient'
 import Section from '../components/Section'
 import PricingList from '../components/NeonDetails'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+
 const NeonPricing = () => {
   return (
     <>

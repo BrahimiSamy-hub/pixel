@@ -1,11 +1,10 @@
 import Section from '../components/Section'
 import ButtonGradient from '../assets/svg/ButtonGradient'
-import SingleProduct from '../components/SingleProduct'
 import { usePosters } from '../context/PostersContext'
 import { Link } from 'react-router-dom'
+
 const Shop = () => {
-  const { posters, selectedPoster, open, setOpen, handlePosterClick } =
-    usePosters()
+  const { posters, handlePosterClick } = usePosters()
 
   return (
     <>
