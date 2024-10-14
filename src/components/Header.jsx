@@ -216,7 +216,7 @@ const navigation = [
   { id: '0', titleKey: 'home', url: '/' },
   { id: '1', titleKey: 'aboutUs', url: '/about-us' },
   { id: '2', titleKey: 'portfolioP', url: '/portfolio' },
-  { id: '3', titleKey: 'shop', url: '/shop' },
+  { id: '3', titleKey: 'shop', url: '/categories' },
 ]
 
 const Header = () => {
@@ -279,7 +279,7 @@ const Header = () => {
       }`}
     >
       <div className='flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-2'>
-        <Link className='block w-[12rem] xl:mr-8' to='/' draggable='false'>
+        <Link className='block ' to='/' draggable='false'>
           <img
             src={logowhite}
             alt='Pixel'
@@ -292,7 +292,7 @@ const Header = () => {
             openNavigation ? 'flex' : 'hidden'
           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
-          <div className='relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row lg:pr-20'>
+          <div className='relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row'>
             {navigation.map((item) => (
               <Link
                 draggable='false'

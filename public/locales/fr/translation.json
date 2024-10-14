@@ -162,7 +162,7 @@
   "continueShopping": "Continuer vos achats",
   "or": "ou",
 
-  "portfolioP": "Portefeuille",
+  "portfolioP": "Portfolio",
   "visualIdentity": "Identité Visuelle",
   "graphicDesign": "Conception Graphique",
   "video": "Vidéo",
@@ -508,5 +508,17 @@
         "answer": "Oui, nous avons un portfolio présentant notre travail en photographie, réalisation de films, et développement web. Vous pouvez le consulter sur notre site web pour avoir une idée de notre style et de nos compétences."
       }
     ]
+  },
+
+  "collaboration": {
+    "title": "Notre Portfolio",
+    "button": "Portfolio"
+  },
+  "shopP": {
+    "title": "Notre Boutique",
+    "postersFound": "Produit(s) trouvé(s)",
+    "newLabel": "NOUVEAU",
+    "inStock": "En Stock",
+    "outOfStock": "Rupture de Stock"
   }
 }

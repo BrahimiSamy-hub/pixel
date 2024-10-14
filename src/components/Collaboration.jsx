@@ -1,16 +1,20 @@
 import { brainwaveSymbol, check, p } from '../assets'
-import { collabApps, collabContent, collabText } from '../constants'
+import { collabApps } from '../constants'
+import { collabContent } from '../constants'
 import Button from './Button'
 import Section from './Section'
 import { LeftCurve, RightCurve } from './design/Collaboration'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Collaboration = () => {
+  const { t } = useTranslation()
+
   return (
     <Section crosses id='portfolio'>
       <div className='container lg:flex'>
         <div className='max-w-[25rem] flex flex-col' data-aos='fade-right'>
-          <h2 className='h2 mb-4 md:mb-8'>Our Portfolio</h2>
+          <h2 className='h2 mb-4 md:mb-8'>{t('collaboration.title')}</h2>
           <ul className='max-w-[22rem] mb-10 md:mb-14 grid grid-cols-4 gap-1'>
             {collabContent.map((item) => (
               <li className='mb-3 py-3 col-span-2 ' key={item.id}>
@@ -28,7 +32,7 @@ const Collaboration = () => {
             ))}
           </ul>
           <Link to='/portfolio' draggable='false'>
-            <Button className='w-44'>Portfolio</Button>
+            <Button className='w-44'>{t('collaboration.button')}</Button>
           </Link>
         </div>
 
@@ -59,10 +63,7 @@ const Collaboration = () => {
                   }`}
                 >
                   <div
-                    // className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
-                    //   index * 45
-                    // }`}
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem]  -rotate-${
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] -rotate-${
                       index * 45
                     }`}
                   >

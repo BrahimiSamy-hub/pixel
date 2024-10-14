@@ -18,8 +18,10 @@ import Cart from './components/Cart'
 import ScrollToTop from './utils/ScrollToTop'
 import { CartProvider } from './context/CartContext'
 import { PostersProvider } from './context/PostersContext'
-import SingleProductDetails from './components/SingleProduct'
+import { CategoriesProvider } from './context/CategoriesContext'
+import SingleProduct from './components/SingleProduct'
 import Checkout from './pages/Checkout'
+import Categories from './pages/Categories'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Rules from './pages/RulesLoup'
@@ -55,27 +57,30 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <CartProvider>
-        <PostersProvider>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/shop' element={<Shop />} />
-            <Route path='/singleProduct' element={<SingleProductDetails />} />
-            <Route path='/portfolio' element={<Portfolio />} />
-            <Route path='/about-us' element={<AboutUs />} />
-            <Route path='/photo' element={<Photo />} />
-            <Route path='/audio' element={<Audio />} />
-            <Route path='/weeding' element={<Weeding />} />
-            <Route path='/dev' element={<Dev />} />
-            <Route path='/infographie' element={<Infographie />} />
-            <Route path='/neon' element={<Neon />} />
-            <Route path='/checkout' element={<Checkout />} />
-            <Route path='/contact' element={<ContactUsServices />} />
-            <Route path='/rules' element={<Rules />} />
-          </Routes>
-          <Footer />
-          <Cart />
-        </PostersProvider>
+        <CategoriesProvider>
+          <PostersProvider>
+            <Header />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/categories' element={<Categories />} />
+              <Route path='/shop/:categoryId' element={<Shop />} />
+              <Route path='/singleProduct/:id' element={<SingleProduct />} />
+              <Route path='/portfolio' element={<Portfolio />} />
+              <Route path='/about-us' element={<AboutUs />} />
+              <Route path='/photo' element={<Photo />} />
+              <Route path='/audio' element={<Audio />} />
+              <Route path='/weeding' element={<Weeding />} />
+              <Route path='/dev' element={<Dev />} />
+              <Route path='/infographie' element={<Infographie />} />
+              <Route path='/neon' element={<Neon />} />
+              <Route path='/checkout' element={<Checkout />} />
+              <Route path='/contact' element={<ContactUsServices />} />
+              <Route path='/rules' element={<Rules />} />
+            </Routes>
+            <Footer />
+            <Cart />
+          </PostersProvider>
+        </CategoriesProvider>
       </CartProvider>
     </Router>
   )

@@ -517,5 +517,16 @@
         "answer": "Yes, we have a portfolio showcasing our work in photography, filmmaking, and web development. You can view it on our website to get a sense of our style and capabilities."
       }
     ]
+  },
+  "collaboration": {
+    "title": "Our Portfolio",
+    "button": "Portfolio"
+  },
+  "shopP": {
+    "title": "Our Shop",
+    "postersFound": "Product(s) found",
+    "newLabel": "NEW",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock"
   }
 }
