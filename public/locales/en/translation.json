@@ -489,16 +489,20 @@
     "title": "Frequently Asked Questions",
     "questions": [
       {
-        "question": "What photography services do you offer?",
-        "answer": "We offer a range of photography services, including portraits, events, product photography, and commercial shoots tailored to meet your specific needs."
+        "question": "What types of photography services do you offer?",
+        "answer": "We offer a wide range of photography services, including wedding photography, portrait sessions, event photography, product photography, fashion shoots, and commercial photography. Each service is tailored to meet the specific needs of our clients."
       },
       {
         "question": "Can you help with printing my photos?",
-        "answer": "Absolutely! We provide high-quality printing services, offering a variety of print sizes and finishes to showcase your photos beautifully."
+        "answer": "Yes, we can assist with printing your photos! We offer high-quality printing options and can help you choose the best formats and finishes to showcase your images. Just let us know your preferences, and we’ll take care of the rest!"
+      },
+      {
+        "question": "What are your pricing options?",
+        "answer": "Our pricing varies depending on the type of service. We provide packages that cater to different budgets, which you can view on our website's services list."
       },
       {
         "question": "What is your filmmaking process?",
-        "answer": "Our filmmaking process involves pre-production planning, shooting, and post-production editing, ensuring that your vision is brought to life effectively."
+        "answer": "Our filmmaking process involves pre-production planning, filming, post-production editing, feedback revisions, and final delivery, all while maintaining open communication to realize your vision."
       },
       {
         "question": "Do you provide web development services?",
@@ -506,15 +510,15 @@
       },
       {
         "question": "How long does a typical project take?",
-        "answer": "Project timelines vary based on the complexity and scope. We will provide a detailed timeline during the consultation phase."
+        "answer": "A typical project usually takes between a few weeks to a couple of months, depending on its complexity and scope. We'll provide a more accurate timeline during our initial consultation."
       },
       {
         "question": "Can I request a custom quote?",
-        "answer": "Definitely! We can provide custom quotes based on your specific requirements. Please contact us with your project details for an accurate estimate."
+        "answer": "Definitely! We can provide custom quotes based on your specific requirements. Just let us know your specific needs and project details, and we'll be happy to provide a tailored estimate."
       },
       {
         "question": "Do you have a portfolio I can view?",
-        "answer": "Yes, we have a portfolio showcasing our work in photography, filmmaking, and web development. You can view it on our website to get a sense of our style and capabilities."
+        "answer": "Yes, we have a portfolio available for you to view! You can check it out on our website, where you’ll find a selection of our recent work across various photography and filmmaking projects and web development."
       }
     ]
   },

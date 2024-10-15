@@ -480,32 +480,36 @@
     "title": "Questions Fréquemment Posées",
     "questions": [
       {
-        "question": "Quels services de photographie proposez-vous ?",
-        "answer": "Nous proposons une gamme de services de photographie, y compris les portraits, les événements, la photographie de produits, et les séances commerciales adaptées à vos besoins spécifiques."
+        "question": "Quels types de services de photographie proposez-vous ?",
+        "answer": "Nous offrons une large gamme de services de photographie, y compris la photographie de mariage, les séances de portrait, la photographie d'événements, la photographie de produits, les shootings de mode et la photographie commerciale. Chaque service est adapté aux besoins spécifiques de nos clients."
       },
       {
-        "question": "Pouvez-vous m'aider à imprimer mes photos ?",
-        "answer": "Absolument ! Nous offrons des services d'impression de haute qualité, avec une variété de tailles et de finitions pour mettre en valeur vos photos."
+        "question": "Pouvez-vous m'aider à imprimer mes photos ? ",
+        "answer": "Oui, nous pouvons vous aider à imprimer vos photos ! Nous proposons des options d'impression de haute qualité et pouvons vous aider à choisir les meilleurs formats et finitions pour mettre en valeur vos images. Faites-nous simplement part de vos préférences, et nous nous occuperons du reste !"
+      },
+      {
+        "question": "Quelles sont vos options de tarification ?",
+        "answer": "Nos tarifs varient en fonction du type de service. Nous proposons des forfaits adaptés à différents budgets, que vous pouvez consulter sur la liste de nos services sur notre site web."
       },
       {
         "question": "Quel est votre processus de réalisation de films ?",
-        "answer": "Notre processus de réalisation de films comprend la planification en pré-production, le tournage, et le montage en post-production, garantissant que votre vision prend vie de manière efficace."
+        "answer": "Notre processus de réalisation de films comprend la planification en pré-production, le tournage, le montage en post-production, les révisions basées sur vos retours et la livraison finale, tout en maintenant une communication ouverte pour réaliser votre vision."
       },
       {
         "question": "Proposez-vous des services de développement web ?",
-        "answer": "Oui, nous proposons des services de développement web pour créer des sites web esthétiques et fonctionnels, optimisés pour les appareils de bureau et mobiles."
+        "answer": "Oui, nous proposons des services de développement web pour créer des sites visuellement attrayants et fonctionnels, optimisés pour les ordinateurs de bureau et les appareils mobiles."
       },
       {
-        "question": "Combien de temps dure un projet typique ?",
-        "answer": "La durée des projets varie en fonction de la complexité et de la portée. Nous vous fournirons un calendrier détaillé pendant la phase de consultation."
+        "question": "Combien de temps dure un projet typique ?  ",
+        "answer": "Un projet typique prend généralement entre quelques semaines et quelques mois, en fonction de sa complexité et de sa portée. Nous vous fournirons un délai plus précis lors de notre consultation initiale."
       },
       {
         "question": "Puis-je demander un devis personnalisé ?",
-        "answer": "Bien sûr ! Nous pouvons vous fournir des devis personnalisés en fonction de vos besoins spécifiques. Veuillez nous contacter avec les détails de votre projet pour obtenir une estimation précise."
+        "answer": "Certainement ! Nous pouvons fournir des devis personnalisés en fonction de vos besoins spécifiques. Faites-nous part de vos exigences et détails de projet, et nous serons heureux de vous fournir une estimation adaptée."
       },
       {
-        "question": "Avez-vous un portfolio que je peux consulter ?",
-        "answer": "Oui, nous avons un portfolio présentant notre travail en photographie, réalisation de films, et développement web. Vous pouvez le consulter sur notre site web pour avoir une idée de notre style et de nos compétences."
+        "question": "Avez-vous un portfolio que je peux consulter ? ",
+        "answer": "Oui, nous avons un portfolio disponible pour vous ! Vous pouvez le consulter sur notre site web, où vous trouverez une sélection de nos travaux récents dans divers projets de photographie, de réalisation de films et de développement web."
       }
     ]
   },

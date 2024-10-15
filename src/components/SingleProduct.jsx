@@ -63,7 +63,9 @@ const SingleProduct = () => {
 
   // Add a loading state
   if (!singleProduct) {
-    return <div className='text-center'>Loading product details...</div> // Show loading message
+    return (
+      <div className='min-h-screen text-center'>Loading product details...</div>
+    )
   }
 
   // Check if the required properties are available
@@ -102,14 +104,14 @@ const SingleProduct = () => {
                 <div className='mt-4 space-x-2 flex justify-around'>
                   {mainImageUrl && (
                     <img
-                      src={singleProduct.sideImage?.url}
+                      src={singleProduct.mainImage?.url}
                       alt='Main Product'
                       className='h-24 w-24 object-contain rounded-md cursor-pointer'
                       onClick={() => handleImageChange(mainImageUrl)}
                       loading='lazy'
                     />
                   )}
-                  {heroes.map(
+                  {/* {heroes.map(
                     (hero) =>
                       hero.mainImage?.url && (
                         <img
@@ -121,7 +123,7 @@ const SingleProduct = () => {
                           loading='lazy'
                         />
                       )
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -177,7 +179,7 @@ const SingleProduct = () => {
                               value={hero.mainImage?.url}
                             >
                               <img
-                                src={hero.cardImage?.url}
+                                src={hero.mainImage?.url}
                                 alt={hero.name}
                                 className='h-24 rounded-lg object-contain cursor-pointer'
                               />
