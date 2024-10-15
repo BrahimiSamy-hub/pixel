@@ -92,7 +92,7 @@ const SingleProduct = () => {
                   </span>
                 </div>
                 <img
-                  src={selectedImage || mainImageUrl || ''}
+                  src={selectedImage}
                   alt='Product image'
                   className={classNames(
                     'object-contain w-full rounded-lg  transition-opacity duration-300',
@@ -102,28 +102,20 @@ const SingleProduct = () => {
                 />
                 {/* Thumbnail Images */}
                 <div className='mt-4 space-x-2 flex justify-around'>
-                  {mainImageUrl && (
-                    <img
-                      src={singleProduct.mainImage?.url}
-                      alt='Main Product'
-                      className='h-24 w-24 object-contain rounded-md cursor-pointer'
-                      onClick={() => handleImageChange(mainImageUrl)}
-                      loading='lazy'
-                    />
-                  )}
-                  {/* {heroes.map(
-                    (hero) =>
-                      hero.mainImage?.url && (
-                        <img
-                          key={hero._id}
-                          src={hero.mainImage.url}
-                          alt={hero.name}
-                          className='h-24 w-24 object-contain rounded-md cursor-pointer'
-                          onClick={() => handleImageChange(hero.mainImage.url)}
-                          loading='lazy'
-                        />
-                      )
-                  )} */}
+                  <img
+                    src={singleProduct.mainImage?.url}
+                    alt='Main Product'
+                    className='h-24 w-24 object-contain rounded-md cursor-pointer'
+                    onClick={() => handleImageChange(mainImageUrl)}
+                    loading='lazy'
+                  />
+                  <img
+                    src={singleProduct.sideImage?.url}
+                    alt='Main Product'
+                    className='h-24 w-24 object-contain rounded-md cursor-pointer'
+                    onClick={() => handleImageChange(mainImageUrl)}
+                    loading='lazy'
+                  />
                 </div>
               </div>
             </div>
@@ -172,7 +164,8 @@ const SingleProduct = () => {
                         <RadioGroup.Label className='sr-only'>
                           {t('chooseColor')}
                         </RadioGroup.Label>
-                        <span className='flex items-center space-x-3'>
+                        {/* Responsive Grid */}
+                        <div className='grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-2'>
                           {heroes.map((hero) => (
                             <RadioGroup.Option
                               key={hero._id}
@@ -181,11 +174,12 @@ const SingleProduct = () => {
                               <img
                                 src={hero.mainImage?.url}
                                 alt={hero.name}
-                                className='h-24 rounded-lg object-contain cursor-pointer'
+                                className='rounded-lg object-contain cursor-pointer'
+                                loading='lazy'
                               />
                             </RadioGroup.Option>
                           ))}
-                        </span>
+                        </div>
                       </RadioGroup>
                     </div>
                   )}
@@ -202,7 +196,7 @@ const SingleProduct = () => {
                             className={classNames(
                               'rounded-lg py-2 px-4',
                               selectedSize === size.name // Updated to compare with size.name
-                                ? 'bg-orange-600 text-white'
+                                ? 'bg-white text-black border-2 border-[#F17A28]'
                                 : 'bg-white'
                             )}
                             onClick={() => setSelectedSize(size.name)} // Set selected size to size.name

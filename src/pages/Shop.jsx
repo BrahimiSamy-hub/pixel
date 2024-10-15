@@ -5,15 +5,20 @@ import { usePosters } from '../context/PostersContext'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 const Shop = () => {
   const { t } = useTranslation()
   const { categoryId } = useParams()
   const { posters, handlePosterClick, fetchPosters } = usePosters()
+  const navigate = useNavigate() // Add this to navigate back
+
   useEffect(() => {
     if (categoryId) {
       fetchPosters(categoryId) // Fetch posters for the selected category
     }
   }, [categoryId, fetchPosters])
+
   return (
     <>
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden min-h-screen'>
@@ -25,7 +30,28 @@ const Shop = () => {
         >
           <div className='container relative'>
             <div className='mx-auto max-w-2xl px-4 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8'>
-              <h1 className='h1'>{t('shopP.title')}</h1>
+              {/* Chevron button to go back */}
+              <button
+                onClick={() => navigate(-1)}
+                className='h1 flex items-center'
+              >
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  className='h-20 w-20 mr-2'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M15 19l-7-7 7-7'
+                  />
+                </svg>
+                {t('shopP.title')}
+              </button>
+
               <h2 className='text-right'>
                 {posters.length} {t('shopP.postersFound')}
               </h2>
