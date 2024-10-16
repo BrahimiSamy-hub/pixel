@@ -1,46 +1,75 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { RadioGroup } from '@headlessui/react'
 import { useTranslation } from 'react-i18next'
 import Section from './Section'
 import { usePosters } from '../context/PostersContext'
+import { useCart } from '../context/CartContext' // Import the useCart hook
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
+}
+
+const useDebounce = (callback, delay) => {
+  const debounceTimeoutRef = useRef()
+
+  const debouncedCallback = useCallback(
+    (...args) => {
+      if (debounceTimeoutRef.current) {
+        clearTimeout(debounceTimeoutRef.current)
+      }
+      debounceTimeoutRef.current = setTimeout(() => {
+        callback(...args)
+      }, delay)
+    },
+    [callback, delay]
+  )
+
+  return debouncedCallback
 }
 
 const SingleProduct = () => {
   const { t } = useTranslation()
   const { id } = useParams()
   const { singleProduct, fetchSingleProduct } = usePosters()
-  const [selectedImage, setSelectedImage] = useState('')
-  const [selectedColor, setSelectedColor] = useState('')
-  const [selectedSize, setSelectedSize] = useState('')
-  const [isAnimating, setIsAnimating] = useState(false)
+  const { addToCart } = useCart() // Use the addToCart function from CartContext
   const navigate = useNavigate()
 
+  // State to manage the selection of hero, image, size
+  const [selectedImage, setSelectedImage] = useState('')
+  const [selectedColor, setSelectedColor] = useState('')
+  const [selectedHeroName, setSelectedHeroName] = useState('')
+  const [selectedSize, setSelectedSize] = useState('')
+  const [isAnimating, setIsAnimating] = useState(false)
+  const [isFirstLoad, setIsFirstLoad] = useState(true)
+
+  // Fetch the product details by ID
   useEffect(() => {
     if (id) {
       fetchSingleProduct(id)
     }
   }, [id, fetchSingleProduct])
 
+  // Set default hero, size, and image on the first load
   useEffect(() => {
-    if (singleProduct) {
-      // Set the selected image if mainImage exists
-      if (singleProduct.mainImage && singleProduct.mainImage.url) {
-        setSelectedImage(singleProduct.mainImage.url)
-      }
-      // Set the selected color if heroes exist
-      if (singleProduct.heroes && singleProduct.heroes.length > 0) {
-        setSelectedColor(singleProduct.heroes[0]?.mainImage?.url || '')
-      }
-      // Set the selected size if sizes exist
-      if (singleProduct.sizes && singleProduct.sizes.length > 0) {
-        setSelectedSize(singleProduct.sizes[0]?.name || '') // Updated to use name
-      }
+    if (singleProduct && isFirstLoad) {
+      const firstHero = singleProduct.heroes?.[0]
+      setSelectedImage(firstHero?.cardImage?.url || '')
+      setSelectedColor(firstHero?.cardImage?.url || '')
+      setSelectedHeroName(firstHero?.name || singleProduct.name)
+      setSelectedSize(singleProduct.sizes?.[0]?.name || '')
+      setIsFirstLoad(false)
     }
-  }, [singleProduct])
+  }, [singleProduct, isFirstLoad])
+
+  // Debounced hero change function
+  const handleHeroChange = (hero) => {
+    setSelectedColor(hero.cardImage?.url)
+    setSelectedImage(hero.cardImage?.url)
+    setSelectedHeroName(hero.name)
+  }
+
+  const debouncedHeroChange = useDebounce(handleHeroChange, 200)
 
   const handleImageChange = (url) => {
     setIsAnimating(true)
@@ -52,23 +81,36 @@ const SingleProduct = () => {
 
   const handleAddToCart = (event) => {
     event.preventDefault()
-    // Handle add to cart functionality here
+    // Prepare product details for adding to cart
+    const productDetails = {
+      selectedHero: {
+        _id: selectedHeroName, // Replace with actual hero ID if available
+        name: selectedHeroName,
+        cardImage: {
+          url: selectedImage,
+        },
+      },
+      price: singleProduct.price,
+      size: selectedSize,
+      // Include other necessary product details if needed
+    }
+    addToCart(productDetails) // Call the addToCart method
   }
 
   const handleInstantBuy = (event) => {
     event.preventDefault()
-    // Handle instant buy functionality here
     navigate('/checkout')
   }
 
   // Add a loading state
   if (!singleProduct) {
     return (
-      <div className='min-h-screen text-center'>Loading product details...</div>
+      <div className='min-h-screen text-center flex justify-center items-center'>
+        Loading product details...
+      </div>
     )
   }
 
-  // Check if the required properties are available
   const mainImageUrl = singleProduct.mainImage?.url
   const heroes = singleProduct.heroes || []
   const sizes = singleProduct.sizes || []
@@ -95,7 +137,7 @@ const SingleProduct = () => {
                   src={selectedImage}
                   alt='Product image'
                   className={classNames(
-                    'object-contain w-full rounded-lg  transition-opacity duration-300',
+                    'object-contain w-full rounded-lg transition-opacity duration-300',
                     isAnimating ? 'opacity-0' : 'opacity-100'
                   )}
                   loading='lazy'
@@ -111,7 +153,7 @@ const SingleProduct = () => {
                   />
                   <img
                     src={singleProduct.sideImage?.url}
-                    alt='Main Product'
+                    alt='Side Product'
                     className='h-24 w-24 object-contain rounded-md cursor-pointer'
                     onClick={() => handleImageChange(mainImageUrl)}
                     loading='lazy'
@@ -137,6 +179,9 @@ const SingleProduct = () => {
               </h2>
 
               <div className='mt-2'>
+                <span className='font-bold text-4xl text-[#F17A28]'>
+                  {selectedHeroName}
+                </span>
                 <h2 className='h2 text-[#F17A28] font-bold'>
                   {singleProduct.price}
                   <small>
@@ -145,87 +190,91 @@ const SingleProduct = () => {
                 </h2>
               </div>
 
-              {/* Options */}
-              <div aria-labelledby='options-heading' className='mt-10'>
-                <h3 id='options-heading' className='sr-only'>
-                  {t('productOptions')}
-                </h3>
-
-                <form>
-                  {/* Colors */}
-                  {heroes.length > 0 && (
-                    <div>
-                      <h4 className='h4'>Choose a hero</h4>
-                      <RadioGroup
-                        value={selectedColor}
-                        onChange={setSelectedColor}
-                        className='mt-4'
-                      >
-                        <RadioGroup.Label className='sr-only'>
-                          {t('chooseColor')}
-                        </RadioGroup.Label>
-                        {/* Responsive Grid */}
-                        <div className='grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 gap-2'>
-                          {heroes.map((hero) => (
-                            <RadioGroup.Option
-                              key={hero._id}
-                              value={hero.mainImage?.url}
-                            >
+              {/* Heroes */}
+              {heroes.length > 0 && (
+                <div className='mt-10'>
+                  <h4 className='h4'>Choose a hero</h4>
+                  <RadioGroup
+                    value={selectedColor}
+                    onChange={(value) => {
+                      const hero = heroes.find(
+                        (h) => h.cardImage?.url === value
+                      )
+                      if (hero) debouncedHeroChange(hero)
+                    }}
+                    className='mt-4'
+                  >
+                    <RadioGroup.Label className='sr-only'>
+                      {t('chooseColor')}
+                    </RadioGroup.Label>
+                    <div className='grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-2'>
+                      {heroes.map((hero) => (
+                        <RadioGroup.Option
+                          key={hero._id}
+                          value={hero.cardImage?.url}
+                          className={({ active, checked }) =>
+                            classNames(
+                              'relative rounded-lg cursor-pointer focus:outline-none',
+                              checked ? 'ring-4 ring-[#F17A28]' : ''
+                            )
+                          }
+                        >
+                          {({ checked }) => (
+                            <>
                               <img
                                 src={hero.mainImage?.url}
                                 alt={hero.name}
-                                className='rounded-lg object-contain cursor-pointer'
-                                loading='lazy'
+                                className='object-contain rounded-md'
                               />
-                            </RadioGroup.Option>
-                          ))}
-                        </div>
-                      </RadioGroup>
+                            </>
+                          )}
+                        </RadioGroup.Option>
+                      ))}
                     </div>
-                  )}
+                  </RadioGroup>
+                </div>
+              )}
 
-                  {/* Sizes */}
-                  {sizes.length > 0 && (
-                    <div className='mt-6'>
-                      <h4 className='h4'>{t('size')}</h4>
-                      <div className='flex items-center space-x-3'>
-                        {sizes.map((size) => (
-                          <button
-                            type='button'
-                            key={size._id} // Updated to use _id
-                            className={classNames(
-                              'rounded-lg py-2 px-4',
-                              selectedSize === size.name // Updated to compare with size.name
-                                ? 'bg-white text-black border-2 border-[#F17A28]'
-                                : 'bg-white'
-                            )}
-                            onClick={() => setSelectedSize(size.name)} // Set selected size to size.name
-                          >
-                            {size.name}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Actions */}
-                  <div className='mt-10 flex gap-x-4'>
-                    <button
-                      type='button'
-                      className='bg-red-500 text-white py-2 px-4 rounded-lg'
-                      onClick={handleInstantBuy}
-                    >
-                      {t('buyNow')}
-                    </button>
-                    <button
-                      type='button'
-                      className='bg-blue-500 text-white py-2 px-4 rounded-lg'
-                      onClick={handleAddToCart}
-                    >
-                      {t('addToCart')}
-                    </button>
+              {/* Sizes */}
+              {sizes.length > 0 && (
+                <div className='mt-6'>
+                  <h4 className='h4'>{t('size')}</h4>
+                  <div className='flex items-center space-x-3'>
+                    {sizes.map((size) => (
+                      <button
+                        type='button'
+                        key={size._id}
+                        className={classNames(
+                          'rounded-lg py-2 px-4',
+                          selectedSize === size.name
+                            ? 'bg-white text-black border-4 border-[#F17A28]'
+                            : 'bg-white'
+                        )}
+                        onClick={() => setSelectedSize(size.name)}
+                      >
+                        {size.name}
+                      </button>
+                    ))}
                   </div>
-                </form>
+                </div>
+              )}
+
+              {/* Actions */}
+              <div className='mt-10 flex gap-x-4'>
+                <button
+                  type='button'
+                  className='bg-red-500 text-white py-2 px-4 rounded-lg'
+                  onClick={handleInstantBuy}
+                >
+                  {t('buyNow')}
+                </button>
+                <button
+                  type='button'
+                  className='bg-blue-500 text-white py-2 px-4 rounded-lg'
+                  onClick={handleAddToCart}
+                >
+                  {t('addToCart')}
+                </button>
               </div>
             </div>
           </div>

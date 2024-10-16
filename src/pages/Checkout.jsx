@@ -201,7 +201,7 @@ const Checkout = () => {
                   id='wilaya'
                   {...register('wilaya', { required: t('wilayaRequired') })}
                   defaultValue=''
-                  className={`px-3 py-3 border rounded-md bg-white text-gray-500 focus:border-white ${
+                  className={`pl-3 py-3 border rounded-md bg-white text-gray-500 focus:border-white ${
                     errors.wilaya ? 'border-red-500' : ''
                   }`}
                 >
@@ -235,7 +235,7 @@ const Checkout = () => {
                     required: t('shippingMethodRequired'),
                   })}
                   defaultValue=''
-                  className={`px-3 py-3 border rounded-md bg-white text-gray-500 focus:border-white ${
+                  className={`pl-3 py-3 border rounded-md bg-white text-gray-500 focus:border-white ${
                     errors.method ? 'border-red-500' : ''
                   }`}
                 >
