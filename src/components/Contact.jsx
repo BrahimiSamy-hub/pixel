@@ -18,7 +18,7 @@ const Contact = () => {
 
   return (
     <Section id='how-to-use'>
-      <div className='container mt-10' data-aos='fade-up'>
+      <div className='container' data-aos='fade-up'>
         <Heading title={t('contactTitle')} text={t('contactText')} />
         <div className='relative'>
           <div className='relative z-1 grid gap-5 lg:grid-cols-2'>

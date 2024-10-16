@@ -1,4 +1,4 @@
-import { brainwaveSymbol, check, p } from '../assets'
+import { check, p } from '../assets'
 import { collabApps } from '../constants'
 import { collabContent } from '../constants'
 import Button from './Button'

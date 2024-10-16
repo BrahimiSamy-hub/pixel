@@ -33,8 +33,8 @@ const ContactUsServices = () => {
             <h1 className='text-center h1 mb-6'>{service} Service</h1>
             <div className='relative '>
               <div className='relative z-1 grid gap-5'>
-                <div className='relative  border border-n-1/10 rounded-3xl overflow-hidden'>
-                  <div className='flex flex-row'>
+                <div className='relative border border-n-1/10 rounded-3xl overflow-hidden '>
+                  <div className='flex flex-row '>
                     <form
                       className='w-full p-4 '
                       onSubmit={handleSubmit(onSubmit)}
@@ -63,7 +63,7 @@ const ContactUsServices = () => {
                         )}
                       </div>
 
-                      {/* <div className='mb-4'>
+                      <div className='mb-4'>
                         <label
                           className='block mb-2 text-sm font-medium'
                           htmlFor='email'
@@ -92,7 +92,7 @@ const ContactUsServices = () => {
                             {errors.email.message}
                           </p>
                         )}
-                      </div> */}
+                      </div>
 
                       <div className='mb-4'>
                         <label

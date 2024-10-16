@@ -60,7 +60,7 @@ const subcategoryComponents = {
   shooting: PortfolioShooting,
   product: PortfolioProduct,
   webApp: PortfolioWebsite,
-  appMobile: PortfolioMobileApp,
+  appMobile: PortfolioEcommerce,
   gestionaire: PortfolioGestionaire,
   tableaux: PortfolioTableaux,
   wall: PortfolioWall,

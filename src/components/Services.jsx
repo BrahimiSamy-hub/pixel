@@ -1,13 +1,8 @@
 import Section from './Section'
 import Heading from './Heading'
-import { service1, service2, service3, service, check } from '../assets'
+import { check } from '../assets'
 import { brainwaveServices, brainwaveServicesIcons } from '../constants'
-import {
-  PhotoChatMessage,
-  Gradient,
-  VideoBar,
-  VideoChatMessage,
-} from './design/Services'
+import { PhotoChatMessage, VideoBar, VideoChatMessage } from './design/Services'
 import Generating from './Generating'
 // import video from '../assets/videos/video.mp4'
 
@@ -28,7 +23,7 @@ const Services = () => {
                 width={800}
                 alt='Smartest AI'
                 height={730}
-                src={service}
+                src=''
               />
             </div>
 
@@ -51,14 +46,14 @@ const Services = () => {
               </ul>
             </div>
 
-            {/* <Generating className='absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2' /> */}
+            <Generating className='absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2' />
           </div>
 
           <div className='relative z-1 grid gap-5 lg:grid-cols-2'>
             <div className='relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden'>
               <div className='absolute inset-0'>
                 <img
-                  src={service2}
+                  src=''
                   className='h-full w-full object-cover'
                   width={630}
                   height={750}
@@ -110,30 +105,28 @@ const Services = () => {
               </div>
 
               <div className='relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]'>
-                {/* <img
-                  src={service3}
+                <img
+                  src=''
                   className='w-full h-full object-cover'
                   width={520}
                   height={400}
                   alt='Scary robot'
-                /> */}
-                {/* <video
+                />
+                <video
                   preload='auto'
                   controls
                   autoPlay
                   muted
                   className='h-[20rem] object-fill md:h-[25rem]'
                 >
-                  <source src={video} type='video/mp4' />
-                </video> */}
+                  <source src='' type='video/mp4' />
+                </video>
 
-                {/* <VideoChatMessage /> */}
-                {/* <VideoBar /> */}
+                <VideoChatMessage />
+                <VideoBar />
               </div>
             </div>
           </div>
-
-          <Gradient />
         </div>
       </div>
     </Section>

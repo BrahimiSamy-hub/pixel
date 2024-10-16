@@ -1,12 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import {
-  FaCamera,
-  FaSeedling,
-  FaCode,
-  FaMusic,
-  FaLightbulb,
-} from 'react-icons/fa'
+import { FaCamera, FaCode, FaMusic, FaLightbulb } from 'react-icons/fa'
 import { GiDiamondRing } from 'react-icons/gi'
 import { CiPen } from 'react-icons/ci'
 import Heading from './Heading'
@@ -52,7 +45,7 @@ const Benefits = () => {
                   </div>
                 </div>
 
-                {/* {item.light && <GradientLight />} */}
+                {item.light && <GradientLight />}
 
                 <div className='absolute inset-0 bg-n-8'>
                   <div className='absolute inset-0 opacity-10 transition-opacity hover:opacity-40  '>

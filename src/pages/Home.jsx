@@ -5,6 +5,7 @@ import Hero from '../components/Hero'
 import Contact from '../components/Contact'
 import Services from '../components/Services'
 import Roadmap from '../components/Roadmap'
+
 const Home = () => {
   return (
     <>
@@ -12,8 +13,8 @@ const Home = () => {
         <Hero />
         <Benefits />
         <Collaboration />
-        {/* <Services />
-        <Roadmap /> */}
+        {/* <Services /> */}
+        {/* <Roadmap /> */}
         <Contact />
       </div>
 
