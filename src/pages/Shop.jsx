@@ -1,55 +1,52 @@
+// Shop.js
 import Section from '../components/Section'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import ButtonGradient from '../assets/svg/ButtonGradient'
 import { usePosters } from '../context/PostersContext'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { FaChevronLeft } from 'react-icons/fa'
 const Shop = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation() // Include i18n here
   const { categoryId } = useParams()
+  const location = useLocation()
   const { posters, handlePosterClick, fetchPosters } = usePosters()
-  const navigate = useNavigate() // Add this to navigate back
+  const navigate = useNavigate()
+
+  // Get the selected category from the location state
+  const selectedCategory = location.state?.selectedCategory
+
+  // Determine the name to use based on the current language
+  const categoryName =
+    selectedCategory && i18n.language === 'fr'
+      ? selectedCategory.frName
+      : selectedCategory?.engName
 
   useEffect(() => {
     if (categoryId) {
-      fetchPosters(categoryId) // Fetch posters for the selected category
+      fetchPosters(categoryId)
     }
   }, [categoryId, fetchPosters])
 
   return (
     <>
-      <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden min-h-screen'>
+      <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section
-          className='pt-[8rem] -mt-[5.25rem]'
+          className='pt-[8rem] -mt-[5.25rem] h-screen'
           crosses
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
         >
           <div className='container relative'>
             <div className='mx-auto max-w-2xl px-4 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8'>
-              {/* Chevron button to go back */}
               <button
                 onClick={() => navigate(-1)}
-                className='h1 flex items-center'
+                className='h1 flex items-center mb-10'
               >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-20 w-20 mr-2'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M15 19l-7-7 7-7'
-                  />
-                </svg>
-                {t('shopP.title')}
+                <FaChevronLeft size={60} className='mr-10' />
+                {categoryName ? categoryName : t('shopP.title')}
               </button>
 
               <h2 className='text-right'>

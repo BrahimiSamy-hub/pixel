@@ -1,3 +1,4 @@
+// Categories.js
 import Section from '../components/Section'
 import ButtonGradient from '../assets/svg/ButtonGradient'
 import { Link } from 'react-router-dom'
@@ -7,9 +8,7 @@ import { useCategories } from '../context/CategoriesContext'
 const Categories = () => {
   const { t, i18n } = useTranslation()
   const { categories } = useCategories()
-
-  // Determine the current language
-  const currentLanguage = i18n.language // e.g., 'en' or 'fr'
+  const currentLanguage = i18n.language
 
   return (
     <>
@@ -22,17 +21,17 @@ const Categories = () => {
         >
           <div className='container relative'>
             <div className='mx-auto max-w-2xl px-4 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8'>
-              <h1 className='h1'>{t('categories.title')}</h1>
+              <h1 className='h1 mb-10'>{t('categories.title')}</h1>
               <h2 className='text-right'>
                 {t('categories.found', { count: categories.length })}
               </h2>
 
-              {/* Responsive Grid */}
               <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {categories.map((category, index) => (
                   <Link
                     key={index}
-                    to={`/shop/${category._id}`} // Pass category id to /shop
+                    to={`/shop/${category._id}`} // Keep the route format
+                    state={{ selectedCategory: category }} // Pass the selected category data
                     draggable='false'
                     className='group relative'
                     data-aos='flip-up'
@@ -49,7 +48,7 @@ const Categories = () => {
                           currentLanguage === 'fr'
                             ? category.frName
                             : category.engName
-                        } // Use appropriate name
+                        }
                         className='h-full w-full object-contain object-center lg:h-full lg:w-full rounded'
                         loading='lazy'
                       />
@@ -64,8 +63,7 @@ const Categories = () => {
                             />
                             {currentLanguage === 'fr'
                               ? category.frName
-                              : category.engName}{' '}
-                            {/* Use appropriate name */}
+                              : category.engName}
                           </button>
                         </h3>
                       </div>
