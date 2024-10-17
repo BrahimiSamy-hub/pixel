@@ -108,7 +108,7 @@
   "heroDescription": "Creativity has no limits at our agency, we focus on providing outstanding services in design, photography, decoration, filmmaking and development.",
   "shopButton": "Shop",
   "servicesButton": "Services",
-  "companyLogosTagline": "Some of the clients we&#39;ve had the pleasure of working with",
+  "companyLogosTagline": "Some of the clients we've had the pleasure of working with",
   "contactTitle": "Contact Us",
   "contactText": "We will respond as soon as possible",
   "askQuestion": "Ask a Question",
@@ -532,5 +532,11 @@
     "newLabel": "NEW",
     "inStock": "In Stock",
     "outOfStock": "Out of Stock"
+  },
+
+  "categories": {
+    "title": "Choose a Category",
+    "found": "{{count}} Category(s) found",
+    "newLabel": "New"
   }
 }

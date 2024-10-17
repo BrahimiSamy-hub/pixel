@@ -518,6 +518,11 @@
     "title": "Notre Portfolio",
     "button": "Portfolio"
   },
+  "categories": {
+    "title": "Choisissez une catégorie",
+    "found": "{{count}} Catégorie(s) trouvée(s)",
+    "newLabel": "Nouveau"
+  },
   "shopP": {
     "title": "Notre Boutique",
     "postersFound": "Produit(s) trouvé(s)",

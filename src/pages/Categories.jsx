@@ -5,8 +5,11 @@ import { useTranslation } from 'react-i18next'
 import { useCategories } from '../context/CategoriesContext'
 
 const Categories = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { categories } = useCategories()
+
+  // Determine the current language
+  const currentLanguage = i18n.language // e.g., 'en' or 'fr'
 
   return (
     <>
@@ -19,9 +22,9 @@ const Categories = () => {
         >
           <div className='container relative'>
             <div className='mx-auto max-w-2xl px-4 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8'>
-              <h1 className='h1'>Choose a Category</h1>
+              <h1 className='h1'>{t('categories.title')}</h1>
               <h2 className='text-right'>
-                {categories.length} Categorie(s) found
+                {t('categories.found', { count: categories.length })}
               </h2>
 
               {/* Responsive Grid */}
@@ -34,15 +37,19 @@ const Categories = () => {
                     className='group relative'
                     data-aos='flip-up'
                   >
-                    <div className='overflow-hidden lg:aspect-none group-hover:opacity-75 bg-[#c9c9c9]  border border-[#F17A28] rounded'>
+                    <div className='overflow-hidden lg:aspect-none group-hover:opacity-75 bg-[#c9c9c9] border border-[#F17A28] rounded'>
                       {category.new && (
                         <span className='absolute top-0 left-0 bg-red-500 text-white text-xs font-bold px-2 py-1 animate-pulse rounded-br-full'>
-                          {t('shopP.newLabel')}
+                          {t('categories.newLabel')}
                         </span>
                       )}
                       <img
                         src={category.image?.url}
-                        alt={category.endName}
+                        alt={
+                          currentLanguage === 'fr'
+                            ? category.frName
+                            : category.engName
+                        } // Use appropriate name
                         className='h-full w-full object-contain object-center lg:h-full lg:w-full rounded'
                         loading='lazy'
                       />
@@ -55,7 +62,10 @@ const Categories = () => {
                               aria-hidden='true'
                               className='absolute inset-0'
                             />
-                            {category.engName}
+                            {currentLanguage === 'fr'
+                              ? category.frName
+                              : category.engName}{' '}
+                            {/* Use appropriate name */}
                           </button>
                         </h3>
                       </div>
