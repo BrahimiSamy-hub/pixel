@@ -3,7 +3,7 @@ import Section from '../components/Section'
 import ServiceCard from '../components/ServiceCard'
 import Faq from '../components/Faq'
 import { FaShippingFast, FaCreditCard, FaHeadset } from 'react-icons/fa'
-
+import { BackgroundCircles } from '../components/design/Hero'
 const AboutUs = () => {
   const { t } = useTranslation()
 
@@ -26,18 +26,18 @@ const AboutUs = () => {
   ]
 
   return (
-    <div className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden`}>
+    <div className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden `}>
       <Section
-        className='pt-[8rem] -mt-[5.25rem] min-h-screen'
+        className='pt-[8rem] -mt-[5.25rem] min-h-screen '
         crosses
         crossesOffset='lg:translate-y-[5.25rem]'
         customPaddings
       >
-        <div className='container'>
-          <div className='grid grid-cols-1 md:grid-cols-1 gap-10'>
+        <div className='container  '>
+          <div className='grid grid-cols-1 md:grid-cols-1 gap-10 '>
             <div className='flex flex-col'>
-              <div className='text-center justify-center items-center flex flex-col '>
-                <h2 className='text-4xl font-bold'>{t('about_us.header')}</h2>
+              <div className='text-center justify-center items-center flex flex-col  '>
+                <h2 className='h2 font-bold'>{t('about_us.header')}</h2>
                 <div className='h-1 bg-[#F17A28] mt-2 mb-4 rounded w-full max-w-56'></div>
               </div>
               <p className='body-1 max-w-5xl text-center mx-auto mb-6 text-n-2 lg:mb-8'>
@@ -61,6 +61,7 @@ const AboutUs = () => {
           </div>
         </div>
       </Section>
+      <BackgroundCircles />
     </div>
   )
 }

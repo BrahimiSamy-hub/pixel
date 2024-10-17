@@ -26,13 +26,16 @@ const Benefits = () => {
         <Heading
           className='md:max-w-md lg:max-w-2xl'
           title={t('our_services')}
+          tag='Expertise You Can Trust'
         />
+
         <div className='flex flex-wrap gap-10 mb-10 justify-center'>
           {benefits.map((item) => (
             <Link to={item.url} key={item.id} draggable='false'>
               <div className='block relative  bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] shadow-lg border border-n-6'>
                 <div className='relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none'>
                   <h5 className='h5 mb-5'>{t(item.title)}</h5>
+
                   <p className='body-2 mb-6 text-n-3'>{t(item.text)}</p>
                   <div className='flex items-center mt-auto object-contain'>
                     <div className='text-3xl border p-2 rounded border-[#F17A28] bg-[#F17A28]'>

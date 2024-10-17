@@ -31,6 +31,36 @@
   animation: float 3s ease-in-out infinite;
 }
 
+.float-animation-1 {
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
+
+.float-animation-2 {
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+.float-animation-3 {
+  animation-duration: 5s;
+  animation-delay: 1.5s;
+}
+
+.float-animation-4 {
+  animation-duration: 3.5s;
+  animation-delay: 0.8s;
+}
+
+.float-animation-5 {
+  animation-duration: 4.5s;
+  animation-delay: 0.2s;
+}
+
+.float-animation-6 {
+  animation-duration: 5.5s;
+  animation-delay: 1.3s;
+}
+
 /* Faq.css */
 .transition-all {
   transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition for height and opacity */
