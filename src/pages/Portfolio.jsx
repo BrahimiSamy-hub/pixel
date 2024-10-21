@@ -87,7 +87,7 @@ const Portfolio = () => {
       'tshirt',
       'flyer',
     ],
-    [t('graphicDesign')]: ['books', 'menu', 'socialMediaPosts'],
+    [t('graphicDesign')]: ['books', 'Menu', 'socialMediaPosts'],
     [t('video')]: ['voixOff', 'reel', 'cinematographie', 'spotPublicitaire'],
     [t('photo')]: ['PhotoShoot', 'Product photography'],
     [t('packaging')]: ['etiquette', 'emballage'],
