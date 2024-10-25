@@ -157,7 +157,7 @@ const Cart = () => {
                             {t('or')}{' '}
                             <Link
                               draggable='false'
-                              to='/shop'
+                              to='/categories'
                               className='font-medium text-color-1 hover:opacity-75'
                               onClick={toggleCart}
                             >

@@ -535,7 +535,7 @@
   },
 
   "categories": {
-    "title": "Choose a Category",
+    "title": "Choose a category",
     "found": "{{count}} Category(s) found",
     "newLabel": "New"
   }

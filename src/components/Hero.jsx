@@ -2,7 +2,7 @@ import { curve, pixelH, astro } from '../assets'
 import Button from './Button'
 import Section from './Section'
 import { BackgroundCircles, BottomLine, Gradient } from './design/Hero'
-import { ScrollParallax } from 'react-just-parallax'
+import { ScrollParallax, MouseParallax } from 'react-just-parallax'
 import { useRef } from 'react'
 
 import CompanyLogos from './CompanyLogos'
@@ -25,13 +25,13 @@ const Hero = () => {
         <div className='relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] '>
           <h1 className='h1 mb-6 items-center flex justify-center flex-col'>
             {t('heroTitle')}&nbsp;
-            <br />
+            <br />{' '}
             <img
               src={pixelH}
               alt=''
               className='w-80 object-contain'
               draggable='false'
-            />
+            />{' '}
           </h1>
 
           <p className='body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8'>
@@ -48,15 +48,17 @@ const Hero = () => {
         </div>
         <div className='relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24'>
           <div className='relative z-1 p-0.5 rounded-2xl'>
-            <div className='aspect-[33/40]  rounded-t-[0.9rem] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490] ]:'>
-              <img
-                src={astro}
-                className='w-full h-full object-contain float-animation'
-                width={1024}
-                height={490}
-                alt='AI'
-              />
-            </div>
+            <MouseParallax>
+              <div className='aspect-[33/40]  rounded-t-[0.9rem] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490] ]:'>
+                <img
+                  src={astro}
+                  className='w-full h-full object-contain float-animation'
+                  width={1024}
+                  height={490}
+                  alt='AI'
+                />
+              </div>
+            </MouseParallax>
           </div>
 
           <BackgroundCircles />

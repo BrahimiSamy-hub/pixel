@@ -1,9 +1,7 @@
-import logo from './logo.jpg'
 import p from './P.png'
 import logowhite from './logowhite.png'
 import check from './check.svg'
-import brainwaveSymbol from './brainwave-symbol.svg'
-import brainwaveWhiteSymbol from './brainwave-symbol-white.svg'
+
 import play from './play.svg'
 import gradient from './gradient.png'
 import smallSphere from './4-small.png'
@@ -11,7 +9,6 @@ import homeSmile from './home-smile.svg'
 import file02 from './file-02.svg'
 import searchMd from './search-md.svg'
 import plusSquare from './plus-square.svg'
-import pixelHero5 from './pixelHero5.png'
 import recording03 from './recording-03.svg'
 import recording01 from './recording-01.svg'
 import disc02 from './disc-02.svg'
@@ -111,14 +108,12 @@ import serviceAudio from './services/audio.png'
 import servicePub from './services/publicité.png'
 
 import heroImage from './heroImage.png'
-import pixelHero from './pixelHero.png'
-import pixelHero2 from './pixelHero2.png'
 
-import vsCode from './collaboration/vsCode.svg'
-import AE from './collaboration/AE.svg'
 import curve1 from './collaboration/curve-1.svg'
 import curve2 from './collaboration/curve-2.svg'
 
+import vsCode from './collaboration/vsCode.svg'
+import AE from './collaboration/AE.svg'
 import illustrator from './collaboration/illustrator.svg'
 import premierPro from './collaboration/premierPro.svg'
 import lightroom from './collaboration/lightroom.svg'
@@ -128,7 +123,79 @@ import photoshop from './collaboration/photoshop.svg'
 
 import pixelH from './pixelH.png'
 
+import carte from '../assets/portfolio/carte-visite/carte.png'
+import carte1 from '../assets/portfolio/carte-visite/carte1.jpg'
+
+import flyer from '../assets/portfolio/flyers/flyer.jpg'
+import flyer1 from '../assets/portfolio/flyers/flyer1.jpg'
+import flyer2 from '../assets/portfolio/flyers/flyer2.jpg'
+import flyer3 from '../assets/portfolio/flyers/flyer3.jpg'
+import flyer4 from '../assets/portfolio/flyers/flyer4.jpg'
+import flyer5 from '../assets/portfolio/flyers/flyer5.jpg'
+import flyer6 from '../assets/portfolio/flyers/flyer6.jpg'
+
+import frigo from '../assets/portfolio/frigo/frigo.jpg'
+import frigo1 from '../assets/portfolio/frigo/frigo1.jpg'
+import frigo2 from '../assets/portfolio/frigo/frigo2.jpg'
+import frigo3 from '../assets/portfolio/frigo/frigo3.jpg'
+import frigo4 from '../assets/portfolio/frigo/frigo4.jpg'
+
+import book from '../assets/portfolio/book/book.jpg'
+import book1 from '../assets/portfolio/book/book1.jpg'
+import book2 from '../assets/portfolio/book/book2.jpg'
+
+import post from '../assets/portfolio/post/post.jpg'
+import post1 from '../assets/portfolio/post/post1.jpg'
+import post2 from '../assets/portfolio/post/post2.jpg'
+import post3 from '../assets/portfolio/post/post3.jpg'
+import post4 from '../assets/portfolio/post/post4.jpg'
+import post5 from '../assets/portfolio/post/post5.jpg'
+import post6 from '../assets/portfolio/post/post6.jpg'
+import post7 from '../assets/portfolio/post/post7.jpg'
+import post8 from '../assets/portfolio/post/post8.jpg'
+
+import menu from '../assets/portfolio/menu/menu.jpg'
+import menu1 from '../assets/portfolio/menu/menu1.jpg'
+import menu2 from '../assets/portfolio/menu/menu2.jpg'
+import menu3 from '../assets/portfolio/menu/menu3.jpg'
+import menu4 from '../assets/portfolio/menu/menu4.jpg'
+import menu5 from '../assets/portfolio/menu/menu5.jpg'
+import menu6 from '../assets/portfolio/menu/menu6.jpg'
+
 export {
+  carte,
+  carte1,
+  flyer,
+  flyer1,
+  flyer2,
+  flyer3,
+  flyer4,
+  flyer5,
+  flyer6,
+  frigo,
+  frigo1,
+  frigo2,
+  frigo3,
+  frigo4,
+  book,
+  book1,
+  book2,
+  post,
+  post1,
+  post2,
+  post3,
+  post4,
+  post5,
+  post6,
+  post7,
+  post8,
+  menu,
+  menu1,
+  menu2,
+  menu3,
+  menu4,
+  menu5,
+  menu6,
   astro,
   curve2,
   curve1,
@@ -138,8 +205,6 @@ export {
   premierPro,
   lightroom,
   davinci,
-  pixelHero,
-  pixelHero2,
   heroImage,
   servicePhoto,
   serviceInfo,
@@ -185,7 +250,6 @@ export {
   vampire,
   voleur,
   voyant,
-  logo,
   p,
   Frosty,
   Crunchy,
@@ -211,8 +275,6 @@ export {
   Benpack,
   logowhite,
   check,
-  brainwaveSymbol,
-  brainwaveWhiteSymbol,
   play,
   gradient,
   smallSphere,
@@ -245,6 +307,5 @@ export {
   instagram,
   telegram,
   twitter,
-  pixelHero5,
   pixelH,
 }

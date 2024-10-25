@@ -1,14 +1,27 @@
-import Heading from '../components/Heading'
-import { FaChevronDown } from 'react-icons/fa'
 import { useState } from 'react'
 
-import Button from '../components/Button'
-import { useTranslation } from 'react-i18next'
+import Heading from '../components/Heading'
+import PixelCircles from '../components/design/PixelCircles'
 import Section from '../components/Section'
+import Button from '../components/Button'
+
+import { useTranslation } from 'react-i18next'
+
+import { FaChevronDown } from 'react-icons/fa'
+import {
+  Dialog,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react'
+import {
+  XMarkIcon,
+  FunnelIcon,
+  PlusIcon,
+  MinusIcon,
+} from '@heroicons/react/20/solid'
 
 import PortfolioEcommerce from '../components/portfolio/E-commerce'
-import PortfolioGestionaire from '../components/portfolio/Gestionaire'
-
 import PortfolioWebsite from '../components/portfolio/WebSite'
 import PortfolioCinématographie from '../components/portfolio/Cinématographie'
 import PortfolioSpot from '../components/portfolio/Spot'
@@ -29,19 +42,7 @@ import PortfolioCards from '../components/portfolio/Cards'
 import PortfolioSac from '../components/portfolio/Sac'
 import PortfolioTshirts from '../components/portfolio/Frigo'
 import PortfolioFlyer from '../components/portfolio/Flyer'
-import {
-  Dialog,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from '@headlessui/react'
-import {
-  XMarkIcon,
-  FunnelIcon,
-  PlusIcon,
-  MinusIcon,
-} from '@heroicons/react/20/solid'
-import { BackgroundCircles } from '../components/design/Hero'
+
 // Subcategory component mapping
 const subcategoryComponents = {
   logo: PortfolioLogo,
@@ -53,25 +54,22 @@ const subcategoryComponents = {
   books: PortfolioBooks,
   menu: PortfolioMenu,
   socialMediaPosts: PortfolioPosts,
-  voixOff: PortfolioWebsite,
   reel: PortfolioWebsite,
   cinematographie: PortfolioCinématographie,
   spotPublicitaire: PortfolioSpot,
   etiquette: PortfolioEtiquette,
   emballage: PortfolioEmballage,
-  shooting: PortfolioShooting,
-  product: PortfolioProduct,
+  PhotoShoot: PortfolioShooting,
+  'Product photography': PortfolioProduct,
   webApp: PortfolioWebsite,
-  appMobile: PortfolioEcommerce,
-  gestionaire: PortfolioGestionaire,
+  'Mobile APP': PortfolioEcommerce,
+  'E-commerce': PortfolioEcommerce,
   tableaux: PortfolioTableaux,
   wall: PortfolioWall,
   certificatInvitation: PortfolioCertificat,
   vitrine: PortfolioVitrine,
   frigo: PortfolioFrigo,
-  ecommerce: PortfolioEcommerce,
-  blogs: PortfolioEcommerce,
-  portfolios: PortfolioEcommerce,
+  weeding: PortfolioEcommerce,
 }
 
 // Categories with subcategories
@@ -87,8 +85,8 @@ const Portfolio = () => {
       'tshirt',
       'flyer',
     ],
-    [t('graphicDesign')]: ['books', 'Menu', 'socialMediaPosts'],
-    [t('video')]: ['voixOff', 'reel', 'cinematographie', 'spotPublicitaire'],
+    [t('graphicDesign')]: ['books', 'menu', 'socialMediaPosts'],
+    // [t('video')]: ['reel', 'cinematographie', 'spotPublicitaire'],
     [t('photo')]: ['PhotoShoot', 'Product photography'],
     [t('packaging')]: ['etiquette', 'emballage'],
     [t('apps')]: ['webApp', 'Mobile APP', 'E-commerce'],
@@ -99,7 +97,7 @@ const Portfolio = () => {
       'vitrine',
       'frigo',
     ],
-    [t('weedingP')]: ['ecommerce', 'blogs', 'portfolios'],
+    [t('weedingP')]: ['weeding'],
   }
 
   const [selectedSubcategory, setSelectedSubcategory] = useState('logo')
@@ -112,7 +110,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden`}>
+      <div className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden `}>
         <Section
           className='pt-[8rem] -mt-[5.25rem] min-h-screen'
           crosses
@@ -120,7 +118,7 @@ const Portfolio = () => {
           customPaddings
         >
           <div className='container'>
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center items-center '>
               {/* Mobile filter dialog */}
               <Dialog
                 open={mobileFiltersOpen}
@@ -148,7 +146,6 @@ const Portfolio = () => {
                       {Object.entries(subcategories).map(
                         ([categoryName, subcatKeys]) => (
                           <Disclosure
-                            defaultOpen='false'
                             key={categoryName}
                             as='div'
                             className='border-t border-gray-200 px-4 py-6'
@@ -218,19 +215,7 @@ const Portfolio = () => {
               />
 
               <main className='max-w-7xl'>
-                <div className='hidden w-3 h-3 top-[170px] left-[150px] absolute bg-[#cc2f4a] rounded-full xl:block  float-animation float-animation-4 ' />
-                <div className='hidden w-3 h-3 top-[280px] absolute bg-[#e4ad22] rounded-full xl:block  float-animation float-animation-2' />
-                <div className='hidden w-3 h-3 top-[210px] left-[220px] absolute bg-[#45a4a1] rounded-full xl:block  float-animation float-animation-3' />
-                <div className='hidden w-3 h-3 top-[230px] left-[300px] absolute bg-[#cc2f4a] rounded-full xl:block  float-animation float-animation-4' />
-                <div className='hidden w-3 h-3 top-[250px] left-[385px] absolute bg-[#45a4a1] rounded-full xl:block  float-animation float-animation-5' />
-                <div className='hidden w-3 h-3 top-[220px] left-[440px] absolute bg-[#a0bc2b] rounded-full xl:block  float-animation float-animation-6' />
-
-                <div className='hidden w-3 h-3 top-[170px] right-[150px] absolute bg-[#cc2f4a] rounded-full xl:block float-animation  float-animation-1 ' />
-                <div className='hidden w-3 h-3 top-[280px] right-[100px] absolute bg-[#e4ad22] rounded-full xl:block  float-animation float-animation-2' />
-                <div className='hidden w-3 h-3 top-[210px] right-[220px] absolute bg-[#45a4a1] rounded-full xl:block  float-animation float-animation-3' />
-                <div className='hidden w-3 h-3 top-[230px] right-[300px] absolute bg-[#cc2f4a] rounded-full xl:block  float-animation float-animation-4' />
-                <div className='hidden w-3 h-3 top-[250px] right-[385px] absolute bg-[#45a4a1] rounded-full xl:block  float-animation float-animation-5' />
-                <div className='hidden w-3 h-3 top-[220px] right-[440px] absolute bg-[#a0bc2b] rounded-full xl:block  float-animation float-animation-6' />
+                <PixelCircles />
                 <div className='items-baseline '>
                   <div className='flex items-center justify-center'>
                     <Button
@@ -250,23 +235,22 @@ const Portfolio = () => {
                   aria-labelledby='portfolio-heading'
                   className='pb-24 pt-6'
                 >
-                  <div className='grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4'>
+                  <div className='grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4 '>
                     {/* Desktop Filters */}
-                    <div className='hidden lg:block'>
+                    <div className='hidden lg:block '>
                       <div className=''>
                         {Object.entries(subcategories).map(
                           ([categoryName, subcatKeys]) => (
                             <Disclosure
-                              defaultOpen='true'
                               key={categoryName}
                               as='div'
-                              className='border border-n-5 rounded-xl py-4'
+                              className='border border-n-5 rounded-xl py-4 mb-5'
                             >
                               <h3 className='font-medium px-4'>
-                                <DisclosureButton className='flex w-full justify-between text-left items-center'>
+                                <DisclosureButton className='flex w-full justify-between text-left items-center group'>
                                   <span className='h5'>{categoryName}</span>
                                   <span className='ml-1 flex items-center'>
-                                    <FaChevronDown />
+                                    <FaChevronDown className='group-data-[open]:rotate-180 transition-transform duration-200' />
                                   </span>
                                 </DisclosureButton>
                               </h3>
@@ -299,7 +283,6 @@ const Portfolio = () => {
                       </div>
                     </div>
 
-                    {/* Portfolio Components */}
                     <div className='lg:col-span-3'>{renderComponent()}</div>
                   </div>
                 </section>

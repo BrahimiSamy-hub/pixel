@@ -14,7 +14,7 @@ const Categories = () => {
     <>
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden min-h-screen'>
         <Section
-          className='pt-[8rem] -mt-[5.25rem]'
+          className='pt-[8rem] -mt-[5.25rem] min-h-screen'
           crosses
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
