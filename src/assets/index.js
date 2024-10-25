@@ -162,6 +162,42 @@ import menu4 from '../assets/portfolio/menu/menu4.jpg'
 import menu5 from '../assets/portfolio/menu/menu5.jpg'
 import menu6 from '../assets/portfolio/menu/menu6.jpg'
 
+import certificat from '../assets/portfolio/certificat/certificat.jpg'
+import certificat1 from '../assets/portfolio/certificat/certificat1.jpg'
+
+import wedding from '../assets/portfolio/wedding/wedding.jpg'
+
+import food from '../assets/portfolio/food/food.jpg'
+import food1 from '../assets/portfolio/food/food1.jpg'
+import food2 from '../assets/portfolio/food/food2.jpg'
+import food3 from '../assets/portfolio/food/food3.jpg'
+import food4 from '../assets/portfolio/food/food4.jpg'
+import food5 from '../assets/portfolio/food/food5.jpg'
+import food6 from '../assets/portfolio/food/food6.jpg'
+import food7 from '../assets/portfolio/food/food7.jpg'
+import food8 from '../assets/portfolio/food/food8.jpg'
+import food9 from '../assets/portfolio/food/food9.png'
+import food10 from '../assets/portfolio/food/food10.jpg'
+
+import packaging from '../assets/portfolio/packaging/packaging.jpg'
+import packaging1 from '../assets/portfolio/packaging/packaging1.jpg'
+import packaging2 from '../assets/portfolio/packaging/packaging2.jpg'
+import packaging3 from '../assets/portfolio/packaging/packaging3.jpg'
+import packaging4 from '../assets/portfolio/packaging/packaging4.jpg'
+import packaging5 from '../assets/portfolio/packaging/packaging5.jpg'
+
+import product from '../assets/portfolio/product/product.png'
+import product1 from '../assets/portfolio/product/product1.jpg'
+import product2 from '../assets/portfolio/product/product2.jpg'
+import product3 from '../assets/portfolio/product/product3.jpg'
+import product4 from '../assets/portfolio/product/product4.jpg'
+import product5 from '../assets/portfolio/product/product5.jpg'
+import product6 from '../assets/portfolio/product/product6.jpg'
+import product7 from '../assets/portfolio/product/product7.jpg'
+import product8 from '../assets/portfolio/product/product8.jpg'
+import product9 from '../assets/portfolio/product/product9.jpg'
+import product10 from '../assets/portfolio/product/product10.jpg'
+
 export {
   carte,
   carte1,
@@ -196,6 +232,37 @@ export {
   menu4,
   menu5,
   menu6,
+  certificat,
+  certificat1,
+  wedding,
+  packaging,
+  packaging1,
+  packaging2,
+  packaging3,
+  packaging4,
+  packaging5,
+  food,
+  food1,
+  food2,
+  food3,
+  food4,
+  food5,
+  food6,
+  food7,
+  food8,
+  food9,
+  food10,
+  product,
+  product1,
+  product2,
+  product3,
+  product4,
+  product5,
+  product6,
+  product7,
+  product8,
+  product9,
+  product10,
   astro,
   curve2,
   curve1,

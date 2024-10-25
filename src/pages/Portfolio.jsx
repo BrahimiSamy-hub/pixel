@@ -39,15 +39,15 @@ import PortfolioMenu from '../components/portfolio/Menu'
 import PortfolioPosts from '../components/portfolio/Posts'
 import PortfolioLogo from '../components/portfolio/Logo'
 import PortfolioCards from '../components/portfolio/Cards'
-import PortfolioSac from '../components/portfolio/Sac'
 import PortfolioTshirts from '../components/portfolio/Frigo'
 import PortfolioFlyer from '../components/portfolio/Flyer'
+import PortfolioWeeding from '../components/portfolio/Wedding'
+import PortfolioFood from '../components/portfolio/Food'
 
 // Subcategory component mapping
 const subcategoryComponents = {
   logo: PortfolioLogo,
   visitCards: PortfolioCards,
-  sac: PortfolioSac,
   habillage: PortfolioTshirts,
   tshirt: PortfolioTshirts,
   flyer: PortfolioFlyer,
@@ -55,21 +55,23 @@ const subcategoryComponents = {
   menu: PortfolioMenu,
   socialMediaPosts: PortfolioPosts,
   reel: PortfolioWebsite,
+  teaser: PortfolioWebsite,
   cinematographie: PortfolioCinématographie,
   spotPublicitaire: PortfolioSpot,
   etiquette: PortfolioEtiquette,
   emballage: PortfolioEmballage,
   PhotoShoot: PortfolioShooting,
   'Product photography': PortfolioProduct,
+  'Food photography': PortfolioFood,
   webApp: PortfolioWebsite,
   'Mobile APP': PortfolioEcommerce,
   'E-commerce': PortfolioEcommerce,
   tableaux: PortfolioTableaux,
   wall: PortfolioWall,
-  certificatInvitation: PortfolioCertificat,
+  certificat: PortfolioCertificat,
   vitrine: PortfolioVitrine,
   frigo: PortfolioFrigo,
-  weeding: PortfolioEcommerce,
+  weeding: PortfolioWeeding,
 }
 
 // Categories with subcategories
@@ -80,23 +82,16 @@ const Portfolio = () => {
     [t('visualIdentity')]: [
       'logo',
       'visitCards',
-      'sac',
       'habillage',
       'tshirt',
       'flyer',
     ],
     [t('graphicDesign')]: ['books', 'menu', 'socialMediaPosts'],
-    // [t('video')]: ['reel', 'cinematographie', 'spotPublicitaire'],
-    [t('photo')]: ['PhotoShoot', 'Product photography'],
+    [t('video')]: ['teaser', 'reel', 'cinematographie', 'spotPublicitaire'],
+    [t('photo')]: ['PhotoShoot', 'Product photography', 'Food photography'],
     [t('packaging')]: ['etiquette', 'emballage'],
     [t('apps')]: ['webApp', 'Mobile APP', 'E-commerce'],
-    [t('printing')]: [
-      'tableaux',
-      'wall',
-      'certificatInvitation',
-      'vitrine',
-      'frigo',
-    ],
+    [t('printing')]: ['tableaux', 'wall', 'certificat', 'vitrine', 'frigo'],
     [t('weedingP')]: ['weeding'],
   }
 
