@@ -3,18 +3,18 @@ import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 import { frigo, frigo1, frigo2, frigo3, frigo4 } from '../../assets'
 const images = [
-  { src: frigo, alt: 'frigo' },
-  { src: frigo1, alt: 'frigo' },
-  { src: frigo2, alt: 'frigo' },
-  { src: frigo3, alt: 'frigo' },
-  { src: frigo4, alt: 'frigo' },
-  { src: frigo, alt: 'frigo' },
-  { src: frigo1, alt: 'frigo' },
-  { src: frigo2, alt: 'frigo' },
-  { src: frigo3, alt: 'frigo' },
-  { src: frigo4, alt: 'frigo' },
-  { src: frigo, alt: 'frigo' },
-  { src: frigo1, alt: 'frigo' },
+  { src: frigo, alt: 'Frigo' },
+  { src: frigo1, alt: 'Frigo' },
+  { src: frigo2, alt: 'Frigo' },
+  { src: frigo3, alt: 'Frigo' },
+  { src: frigo4, alt: 'Frigo' },
+  { src: frigo, alt: 'Frigo' },
+  { src: frigo1, alt: 'Frigo' },
+  { src: frigo2, alt: 'Frigo' },
+  { src: frigo3, alt: 'Frigo' },
+  { src: frigo4, alt: 'Frigo' },
+  { src: frigo, alt: 'Frigo' },
+  { src: frigo1, alt: 'Frigo' },
 ]
 
 const ImageComponent = ({ src, alt }) => (
