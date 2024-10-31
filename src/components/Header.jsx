@@ -79,14 +79,9 @@ const Header = () => {
         openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'
       }`}
     >
-      <div className='flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-2'>
+      <div className='flex items-center px-2 lg:px-7.5 xl:px-10 max-lg:py-2'>
         <Link className='block ' to='/' draggable='false'>
-          <img
-            src={logowhite}
-            alt='Pixel'
-            className='w-[150px]'
-            loading='lazy'
-          />
+          <img src={logowhite} alt='Pixel' className='w-44' loading='lazy' />
         </Link>
         <nav
           className={`${

@@ -46,7 +46,7 @@ export const BackgroundCircles = ({ parallaxRef }) => {
       <Rings />
 
       <MouseParallax strength={0.07} parallaxContainerRef={parallaxRef}>
-        <div className='absolute bottom-1/2 left-20 top-20 w-0.25 h-1/2 origin-bottom rotate-[46deg] sm:top-0 sm:left-1/2'>
+        <div className='absolute bottom-1/2 w-0.25 h-1/2 origin-bottom rotate-[46deg] top-0 left-1/2'>
           <div
             className={`w-5 h-5 -ml-1 -mt-36 bg-[#cc2f4a] rounded-full transition-transform duration-500 ease-out float-animation ${
               mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'

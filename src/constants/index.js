@@ -529,7 +529,7 @@ export const benefits = [
     icon: 'CiPen',
     light: true,
     imageUrl: serviceInfo,
-    url: '/infographie',
+    url: '/creative',
   },
   {
     id: '0',
@@ -539,7 +539,7 @@ export const benefits = [
     icon: 'FaCamera',
     light: true,
     imageUrl: servicePhoto,
-    url: '/photo',
+    url: '/photoLab',
   },
 
   {
@@ -550,7 +550,7 @@ export const benefits = [
     icon: 'FaCode',
     imageUrl: serviceDev,
     light: true,
-    url: '/dev',
+    url: '/development',
   },
   {
     id: '5',
@@ -560,7 +560,7 @@ export const benefits = [
     icon: 'FaLightbulb',
     light: true,
     imageUrl: servicePub,
-    url: '/neon',
+    url: '/advertisement',
   },
 
   {
@@ -571,7 +571,7 @@ export const benefits = [
     icon: 'GiDiamondRing',
     imageUrl: serviceWeeding,
     light: true,
-    url: '/weeding',
+    url: '/wedding',
   },
   {
     id: '4',
@@ -581,7 +581,7 @@ export const benefits = [
     icon: 'FaMusic',
     light: true,
     imageUrl: serviceAudio,
-    url: '/audio',
+    url: '/sounds',
   },
 ]
 

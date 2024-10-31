@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaChevronLeft } from 'react-icons/fa'
+
 const Shop = () => {
   const { t, i18n } = useTranslation() // Include i18n here
   const { categoryId } = useParams()
@@ -40,12 +41,12 @@ const Shop = () => {
           customPaddings
         >
           <div className='container relative'>
-            <div className='mx-auto max-w-2xl px-4 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8'>
+            <div className='mx-auto max-w-2xl sm:pb-24 lg:max-w-7xl'>
               <button
                 onClick={() => navigate(-1)}
                 className='h1 flex items-center mb-10'
               >
-                <FaChevronLeft size={60} className='mr-10' />
+                <FaChevronLeft size={45} className='mr-4 sm:mr-10' />
                 {categoryName ? categoryName : t('shopP.title')}
               </button>
 

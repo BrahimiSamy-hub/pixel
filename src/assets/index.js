@@ -186,7 +186,7 @@ import packaging3 from '../assets/portfolio/packaging/packaging3.jpg'
 import packaging4 from '../assets/portfolio/packaging/packaging4.jpg'
 import packaging5 from '../assets/portfolio/packaging/packaging5.jpg'
 
-import product from '../assets/portfolio/product/product.png'
+import product from '../assets/portfolio/product/product.jpg'
 import product1 from '../assets/portfolio/product/product1.jpg'
 import product2 from '../assets/portfolio/product/product2.jpg'
 import product3 from '../assets/portfolio/product/product3.jpg'

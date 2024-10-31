@@ -67,12 +67,12 @@ const App = () => {
               <Route path='/singleProduct/:id' element={<SingleProduct />} />
               <Route path='/portfolio' element={<Portfolio />} />
               <Route path='/about-us' element={<AboutUs />} />
-              <Route path='/photo' element={<Photo />} />
-              <Route path='/audio' element={<Audio />} />
-              <Route path='/weeding' element={<Weeding />} />
-              <Route path='/dev' element={<Dev />} />
-              <Route path='/infographie' element={<Infographie />} />
-              <Route path='/neon' element={<Neon />} />
+              <Route path='/photoLab' element={<Photo />} />
+              <Route path='/sounds' element={<Audio />} />
+              <Route path='/wedding' element={<Weeding />} />
+              <Route path='/development' element={<Dev />} />
+              <Route path='/creative' element={<Infographie />} />
+              <Route path='/advertisement' element={<Neon />} />
               <Route path='/checkout' element={<Checkout />} />
               <Route path='/contact' element={<ContactUsServices />} />
               <Route path='/rules' element={<Rules />} />
