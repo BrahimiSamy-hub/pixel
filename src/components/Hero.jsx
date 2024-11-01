@@ -29,12 +29,12 @@ const Hero = () => {
             <img
               src={pixelH}
               alt=''
-              className='w-80 object-contain'
+              className='w-64 object-contain'
               draggable='false'
             />{' '}
           </h1>
 
-          <p className='body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8'>
+          <p className='h7 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8'>
             {t('heroDescription')}
           </p>
           <div className=' flex gap-10 justify-center'>

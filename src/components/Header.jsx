@@ -156,7 +156,7 @@ const Header = () => {
           </span>
         </button>
         <div className='flex gap-8 items-center'>
-          <button className='relative flex lg:hidden' onClick={toggleCart}>
+          {/* <button className='relative flex lg:hidden' onClick={toggleCart}>
             <FaCartShopping
               size={35}
               color='#F18A27'
@@ -165,7 +165,7 @@ const Header = () => {
             <span className='absolute -top-2 -right-5 flex items-center justify-center w-5 h-5 font-bold text-[#F18A28] bg-white rounded-full'>
               {getTotalQuantity()}
             </span>
-          </button>
+          </button> */}
           <Button className='lg:hidden' onClick={toggleNavigation}>
             <MenuSvg openNavigation={openNavigation} />
           </Button>

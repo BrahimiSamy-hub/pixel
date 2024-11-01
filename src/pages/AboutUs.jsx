@@ -38,7 +38,7 @@ const AboutUs = () => {
             <div className='flex flex-col'>
               <div className='text-center justify-center items-center flex flex-col  '>
                 <h2 className='h2 font-bold'>{t('about_us.header')}</h2>
-                <div className='h-1 bg-[#F17A28] mt-2 mb-4 rounded w-full max-w-56'></div>
+                <div className='h-1 bg-[#F17A28] mt-2 mb-4 rounded w-1/6'></div>
               </div>
               <p className='body-1 max-w-5xl text-center mx-auto mb-6 text-n-2 lg:mb-8'>
                 {t('about_us.description')}
