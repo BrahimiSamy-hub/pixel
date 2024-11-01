@@ -206,7 +206,7 @@ const Portfolio = () => {
               <Heading
                 className='md:max-w-md lg:max-w-2xl'
                 title={t('portfolioP')}
-                tag='Our Work in Action'
+                tag={t('portfolioTag')}
               />
 
               <main className='max-w-7xl'>

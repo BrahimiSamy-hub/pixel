@@ -79,7 +79,7 @@ const Header = () => {
         openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'
       }`}
     >
-      <div className='flex items-center px-2 lg:px-7.5 xl:px-10 max-lg:py-2'>
+      <div className='flex items-center justify-between px-4 lg:px-7.5 xl:px-10 max-lg:py-2'>
         <Link className='block ' to='/' draggable='false'>
           <img src={logowhite} alt='Pixel' className='w-44' loading='lazy' />
         </Link>
@@ -110,7 +110,7 @@ const Header = () => {
 
           <HamburgerMenu />
         </nav>
-        <div className='relative' ref={dropdownRef}>
+        <div className='relative lg:flex hidden' ref={dropdownRef}>
           <button
             className='p-2 bg-[#0E0C15] border rounded border-[#26242C] hover:border-[#F18A27] flex items-center'
             onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -119,7 +119,7 @@ const Header = () => {
               src={
                 languages.find(
                   (lang) =>
-                    lang.code === (localStorage.getItem('i18nextLng') || 'fr') // Show French flag first
+                    lang.code === (localStorage.getItem('i18nextLng') || 'fr')
                 )?.flag
               }
               alt='Current Language'
@@ -147,7 +147,7 @@ const Header = () => {
           )}
         </div>
         <button
-          className='ml-6 relative hidden lg:flex hover:rotate-12 transition-transform duration-150'
+          className='ml-6 relative lg:flex hidden hover:rotate-12 transition-transform duration-150'
           onClick={toggleCart}
         >
           <FaCartShopping size={40} color='#F18A27' />
@@ -155,19 +155,21 @@ const Header = () => {
             {getTotalQuantity()}
           </span>
         </button>
-        <button className='relative flex lg:hidden' onClick={toggleCart}>
-          <FaCartShopping
-            size={35}
-            color='#F18A27'
-            className='hover:scale-110 -mr-3 ml-3 transition-transform duration-150'
-          />
-          <span className='absolute -top-2 -right-5 flex items-center justify-center w-5 h-5 font-bold text-[#F18A28] bg-white rounded-full'>
-            {getTotalQuantity()}
-          </span>
-        </button>
-        <Button className='ml-6 lg:hidden' onClick={toggleNavigation}>
-          <MenuSvg openNavigation={openNavigation} />
-        </Button>
+        <div className='flex gap-8 items-center'>
+          <button className='relative flex lg:hidden' onClick={toggleCart}>
+            <FaCartShopping
+              size={35}
+              color='#F18A27'
+              className='hover:scale-110 -mr-3 ml-3 transition-transform duration-150'
+            />
+            <span className='absolute -top-2 -right-5 flex items-center justify-center w-5 h-5 font-bold text-[#F18A28] bg-white rounded-full'>
+              {getTotalQuantity()}
+            </span>
+          </button>
+          <Button className='lg:hidden' onClick={toggleNavigation}>
+            <MenuSvg openNavigation={openNavigation} />
+          </Button>
+        </div>
       </div>
       <ButtonGradient />
     </div>
