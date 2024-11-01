@@ -125,6 +125,16 @@ import pixelH from './pixelH.png'
 
 import carte from '../assets/portfolio/carte-visite/carte.png'
 import carte1 from '../assets/portfolio/carte-visite/carte1.jpg'
+import carte2 from '../assets/portfolio/carte-visite/carte2.png'
+import carte3 from '../assets/portfolio/carte-visite/carte3.png'
+import carte4 from '../assets/portfolio/carte-visite/carte4.png'
+import carte5 from '../assets/portfolio/carte-visite/carte5.png'
+import carte6 from '../assets/portfolio/carte-visite/carte6.png'
+import carte7 from '../assets/portfolio/carte-visite/carte7.png'
+import carte8 from '../assets/portfolio/carte-visite/carte8.png'
+import carte9 from '../assets/portfolio/carte-visite/carte9.png'
+import carte10 from '../assets/portfolio/carte-visite/carte10.png'
+import carte11 from '../assets/portfolio/carte-visite/carte11.png'
 
 import flyer from '../assets/portfolio/flyers/flyer.jpg'
 import flyer1 from '../assets/portfolio/flyers/flyer1.jpg'
@@ -198,9 +208,46 @@ import product8 from '../assets/portfolio/product/product8.jpg'
 import product9 from '../assets/portfolio/product/product9.jpg'
 import product10 from '../assets/portfolio/product/product10.jpg'
 
+import shooting from '../assets/portfolio/Shooting/shooting.jpg'
+import shooting1 from '../assets/portfolio/Shooting/shooting1.jpg'
+import shooting2 from '../assets/portfolio/Shooting/shooting2.jpg'
+import shooting3 from '../assets/portfolio/Shooting/shooting3.jpg'
+import shooting4 from '../assets/portfolio/Shooting/shooting4.jpg'
+import shooting5 from '../assets/portfolio/Shooting/shooting5.jpg'
+import shooting6 from '../assets/portfolio/Shooting/shooting6.jpg'
+import shooting7 from '../assets/portfolio/Shooting/shooting7.jpg'
+import shooting8 from '../assets/portfolio/Shooting/shooting8.jpg'
+import shooting9 from '../assets/portfolio/Shooting/shooting9.jpg'
+import shooting10 from '../assets/portfolio/Shooting/shooting10.jpg'
+import shooting11 from '../assets/portfolio/Shooting/shooting11.jpg'
+import shooting12 from '../assets/portfolio/Shooting/shooting12.jpg'
+
 export {
   carte,
   carte1,
+  carte2,
+  carte3,
+  carte4,
+  carte5,
+  carte6,
+  carte7,
+  carte8,
+  carte9,
+  carte10,
+  carte11,
+  shooting,
+  shooting1,
+  shooting2,
+  shooting3,
+  shooting4,
+  shooting5,
+  shooting6,
+  shooting7,
+  shooting8,
+  shooting9,
+  shooting10,
+  shooting11,
+  shooting12,
   flyer,
   flyer1,
   flyer2,
