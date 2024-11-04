@@ -17,20 +17,25 @@ const ContactUsServices = () => {
   } = useForm()
 
   const onSubmit = (data) => {
+    const formData = {
+      ...data,
+      service,
+    }
+
+    console.log(formData)
     reset()
   }
-
   return (
     <>
-      <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
+      <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden h-screen'>
         <Section
           className='pt-[10rem] -mt-[5.25rem]'
           crosses
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
         >
-          <div className='container'>
-            <h1 className='text-center h1 mb-6'>{service} Service</h1>
+          <div className='container '>
+            <h1 className='text-center h1 mb-6'>{service}</h1>
             <div className='relative '>
               <div className='relative z-1 grid gap-5'>
                 <div className='relative border border-n-1/10 rounded-3xl overflow-hidden '>

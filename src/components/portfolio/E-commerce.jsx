@@ -7,7 +7,7 @@ const images = [{ src: '', alt: '' }]
 const ImageComponent = ({ src, alt }) => (
   <div className='flex justify-center col-span-3 md:col-span-2 lg:col-span-1 hover:cursor-pointer'>
     <PhotoView src=''>
-      <img src='' alt='' className=' rounded-xl w-80 min-h-80 border' />
+      <img src='' alt='' className=' rounded-xl w-80 min-h-80' />
     </PhotoView>
   </div>
 )

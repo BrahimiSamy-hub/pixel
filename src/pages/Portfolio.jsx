@@ -22,6 +22,7 @@ import {
 } from '@heroicons/react/20/solid'
 
 import PortfolioEcommerce from '../components/portfolio/E-commerce'
+import PortfolioMobile from '../components/portfolio/MobileApp'
 import PortfolioWebsite from '../components/portfolio/WebSite'
 import PortfolioCinématographie from '../components/portfolio/Cinématographie'
 import PortfolioSpot from '../components/portfolio/Spot'
@@ -45,9 +46,11 @@ import PortfolioLogo from '../components/portfolio/Logo'
 import PortfolioCards from '../components/portfolio/Cards'
 import PortfolioTshirts from '../components/portfolio/Frigo'
 import PortfolioFlyer from '../components/portfolio/Flyer'
-import PortfolioWeeding from '../components/portfolio/Wedding'
+
 import PortfolioFood from '../components/portfolio/Food'
 
+import PortfolioWeeding from '../components/portfolio/Wedding'
+import PortfolioWeedingVideos from '../components/portfolio/WeddingVideos'
 // Subcategory component mapping
 const subcategoryComponents = {
   logo: PortfolioLogo,
@@ -69,15 +72,16 @@ const subcategoryComponents = {
   PhotoShoot: PortfolioShooting,
   'Product photography': PortfolioProduct,
   'Food photography': PortfolioFood,
-  webApp: PortfolioWebsite,
-  'Mobile APP': PortfolioEcommerce,
+  'Landing Page': PortfolioWebsite,
+  'Mobile Application': PortfolioMobile,
   'E-commerce': PortfolioEcommerce,
   tableaux: PortfolioTableaux,
   wall: PortfolioWall,
   certificat: PortfolioCertificat,
   vitrine: PortfolioVitrine,
   frigo: PortfolioFrigo,
-  weeding: PortfolioWeeding,
+  photo: PortfolioWeeding,
+  video: PortfolioWeedingVideos,
 }
 
 const Portfolio = () => {
@@ -96,7 +100,7 @@ const Portfolio = () => {
     [t('video')]: ['trailer', 'reel', 'cinematographie', 'spotPublicitaire'],
     [t('photo')]: ['PhotoShoot', 'Product photography', 'Food photography'],
     [t('packaging')]: ['emballage'],
-    [t('apps')]: ['webApp', 'Mobile APP', 'E-commerce'],
+    [t('apps')]: ['Landing Page', 'E-commerce', 'Mobile Application'],
     [t('printing')]: [
       'tableaux',
       'wall',
@@ -105,7 +109,7 @@ const Portfolio = () => {
       'frigo',
       'etiquette',
     ],
-    [t('weedingP')]: ['weeding'],
+    [t('weedingP')]: ['photo', 'video'],
   }
 
   const [selectedSubcategory, setSelectedSubcategory] = useState('logo')
