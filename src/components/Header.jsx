@@ -81,7 +81,7 @@ const Header = () => {
     >
       <div className='flex items-center justify-between px-4 lg:px-7.5 xl:px-10 max-lg:py-2'>
         <Link className='block ' to='/' draggable='false'>
-          <img src={logowhite} alt='Pixel' className='w-44' loading='lazy' />
+          <img src={logowhite} alt='Pixel' className='w-36' loading='lazy' />
         </Link>
         <nav
           className={`${

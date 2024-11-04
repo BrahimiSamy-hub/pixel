@@ -6,7 +6,7 @@ import Section from '../components/Section'
 import Button from '../components/Button'
 
 import { useTranslation } from 'react-i18next'
-
+import { IoSettings } from 'react-icons/io5'
 import { FaChevronDown } from 'react-icons/fa'
 import {
   Dialog,
@@ -25,6 +25,8 @@ import PortfolioEcommerce from '../components/portfolio/E-commerce'
 import PortfolioWebsite from '../components/portfolio/WebSite'
 import PortfolioCinématographie from '../components/portfolio/Cinématographie'
 import PortfolioSpot from '../components/portfolio/Spot'
+import PortfolioReel from '../components/portfolio/Reel'
+import PortfolioTrailer from '../components/portfolio/Trailer'
 import PortfolioEtiquette from '../components/portfolio/Etiquette'
 import PortfolioEmballage from '../components/portfolio/Emballage'
 import PortfolioShooting from '../components/portfolio/Shooting'
@@ -35,7 +37,9 @@ import PortfolioCertificat from '../components/portfolio/Certificat'
 import PortfolioVitrine from '../components/portfolio/Vitrine'
 import PortfolioFrigo from '../components/portfolio/Frigo'
 import PortfolioBooks from '../components/portfolio/Books'
-import PortfolioMenu from '../components/portfolio/Menu'
+import PortfolioMenuBook from '../components/portfolio/MenuBook'
+import PortfolioMenuTV from '../components/portfolio/MenuTV'
+import PortfolioMenuA4 from '../components/portfolio/MenuA4'
 import PortfolioPosts from '../components/portfolio/Posts'
 import PortfolioLogo from '../components/portfolio/Logo'
 import PortfolioCards from '../components/portfolio/Cards'
@@ -52,10 +56,12 @@ const subcategoryComponents = {
   tshirt: PortfolioTshirts,
   flyer: PortfolioFlyer,
   books: PortfolioBooks,
-  menu: PortfolioMenu,
+  'Menu A4': PortfolioMenuA4,
+  'Menu Book': PortfolioMenuBook,
+  'Menu TV': PortfolioMenuTV,
   socialMediaPosts: PortfolioPosts,
-  reel: PortfolioWebsite,
-  teaser: PortfolioWebsite,
+  reel: PortfolioReel,
+  trailer: PortfolioTrailer,
   cinematographie: PortfolioCinématographie,
   spotPublicitaire: PortfolioSpot,
   etiquette: PortfolioEtiquette,
@@ -74,7 +80,6 @@ const subcategoryComponents = {
   weeding: PortfolioWeeding,
 }
 
-// Categories with subcategories
 const Portfolio = () => {
   const { t } = useTranslation()
 
@@ -86,12 +91,20 @@ const Portfolio = () => {
       'tshirt',
       'flyer',
     ],
-    [t('graphicDesign')]: ['books', 'menu', 'socialMediaPosts'],
-    [t('video')]: ['teaser', 'reel', 'cinematographie', 'spotPublicitaire'],
+    [t('menu')]: ['Menu A4', 'Menu TV', 'Menu Book'],
+    [t('graphicDesign')]: ['books', 'socialMediaPosts'],
+    [t('video')]: ['trailer', 'reel', 'cinematographie', 'spotPublicitaire'],
     [t('photo')]: ['PhotoShoot', 'Product photography', 'Food photography'],
-    [t('packaging')]: ['etiquette', 'emballage'],
+    [t('packaging')]: ['emballage'],
     [t('apps')]: ['webApp', 'Mobile APP', 'E-commerce'],
-    [t('printing')]: ['tableaux', 'wall', 'certificat', 'vitrine', 'frigo'],
+    [t('printing')]: [
+      'tableaux',
+      'wall',
+      'certificat',
+      'vitrine',
+      'frigo',
+      'etiquette',
+    ],
     [t('weedingP')]: ['weeding'],
   }
 
@@ -112,18 +125,18 @@ const Portfolio = () => {
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
         >
-          <div className='container'>
+          <div className=''>
             <div className='flex flex-col justify-center items-center '>
               {/* Mobile filter dialog */}
               <Dialog
                 open={mobileFiltersOpen}
                 onClose={setMobileFiltersOpen}
-                className='relative z-40 lg:hidden'
+                className='relative z-50 lg:hidden'
               >
                 <div className='fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-out' />
                 <div className='fixed inset-0 z-40 flex'>
                   <div className='relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-n-7 py-4 pb-12 shadow-xl'>
-                    <div className='flex items-center justify-between px-4 mt-20'>
+                    <div className='flex items-center justify-between px-4 '>
                       <h2 className='text-lg font-medium text-white'>
                         Filters
                       </h2>
@@ -204,25 +217,28 @@ const Portfolio = () => {
                 </div>
               </Dialog>
               <Heading
-                className='md:max-w-md lg:max-w-2xl'
+                className='md:max-w-md lg:max-w-2xl text-center'
                 title={t('portfolioP')}
                 tag={t('portfolioTag')}
               />
 
               <main className='max-w-7xl'>
                 <PixelCircles />
-                <div className='items-baseline '>
-                  <div className='flex items-center justify-center'>
-                    <Button
+                <div className=''>
+                  <div className=' right-0 fixed'>
+                    <button
                       type='button'
                       onClick={() => setMobileFiltersOpen(true)}
-                      className='my-5 lg:hidden'
+                      className='lg:hidden rotate-10 '
                     >
-                      <div className='flex gap-2 justify-center items-center '>
-                        <FunnelIcon className='h-5 w-5' aria-hidden='true' />{' '}
-                        Categories
+                      <div className=''>
+                        <IoSettings
+                          className='h-16 w-16 rounded-l-lg p-2 bg-[#F17A28] '
+                          aria-hidden='true'
+                        />{' '}
+                        {/* Categories */}
                       </div>
-                    </Button>
+                    </button>
                   </div>
                 </div>
 
@@ -239,25 +255,27 @@ const Portfolio = () => {
                             <Disclosure
                               key={categoryName}
                               as='div'
-                              className='border border-n-5 rounded-xl py-4 mb-5'
+                              className='border border-n-5 rounded-xl pt-4 mb-5'
                             >
                               <h3 className='font-medium px-4'>
                                 <DisclosureButton className='flex w-full justify-between text-left items-center group'>
-                                  <span className='h5'>{categoryName}</span>
+                                  <span className='h5 mb-3'>
+                                    {categoryName}
+                                  </span>
                                   <span className='ml-1 flex items-center'>
                                     <FaChevronDown className='group-data-[open]:rotate-180 transition-transform duration-200' />
                                   </span>
                                 </DisclosureButton>
                               </h3>
-                              <DisclosurePanel className='pt-4'>
-                                <div className='grid grid-cols-1 gap-2'>
+                              <DisclosurePanel className=''>
+                                <div className='grid grid-cols-1'>
                                   {subcatKeys.map((subcatKey) => (
                                     <div
                                       key={subcatKey}
                                       onClick={() =>
                                         setSelectedSubcategory(subcatKey)
                                       }
-                                      className={`flex cursor-pointer items-center justify-between rounded-lg p-3 text-white transition-colors duration-200 ease-in-out ${
+                                      className={`flex cursor-pointer items-center justify-between last:rounded-b-lg p-4 text-white transition-colors duration-200 ease-in-out ${
                                         selectedSubcategory === subcatKey
                                           ? 'bg-[#F17A28] text-white'
                                           : 'hover:bg-gray-200 hover:text-black'

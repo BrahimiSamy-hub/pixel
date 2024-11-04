@@ -164,13 +164,32 @@ import post6 from '../assets/portfolio/post/post6.jpg'
 import post7 from '../assets/portfolio/post/post7.jpg'
 import post8 from '../assets/portfolio/post/post8.jpg'
 
-import menu from '../assets/portfolio/menu/menu.jpg'
-import menu1 from '../assets/portfolio/menu/menu1.jpg'
-import menu2 from '../assets/portfolio/menu/menu2.jpg'
-import menu3 from '../assets/portfolio/menu/menu3.jpg'
-import menu4 from '../assets/portfolio/menu/menu4.jpg'
-import menu5 from '../assets/portfolio/menu/menu5.jpg'
-import menu6 from '../assets/portfolio/menu/menu6.jpg'
+import menuA4 from '../assets/portfolio/menuA4/menuA4.png'
+import menuA41 from '../assets/portfolio/menuA4/menuA41.png'
+import menuA42 from '../assets/portfolio/menuA4/menuA42.png'
+import menuA43 from '../assets/portfolio/menuA4/menuA43.png'
+import menuA44 from '../assets/portfolio/menuA4/menuA44.png'
+import menuA45 from '../assets/portfolio/menuA4/menuA45.png'
+import menuA46 from '../assets/portfolio/menuA4/menuA46.png'
+
+import menuTV from '../assets/portfolio/menuTV/menuTV.png'
+import menuTV1 from '../assets/portfolio/menuTV/menuTV1.png'
+import menuTV2 from '../assets/portfolio/menuTV/menuTV2.png'
+import menuTV3 from '../assets/portfolio/menuTV/menuTV3.png'
+
+import menuBook from '../assets/portfolio/menuBook/menuBook.png'
+import menuBook1 from '../assets/portfolio/menuBook/menuBook1.png'
+import menuBook2 from '../assets/portfolio/menuBook/menuBook2.png'
+import menuBook3 from '../assets/portfolio/menuBook/menuBook3.png'
+import menuBook4 from '../assets/portfolio/menuBook/menuBook4.png'
+import menuBook5 from '../assets/portfolio/menuBook/menuBook5.png'
+import menuBook6 from '../assets/portfolio/menuBook/menuBook6.png'
+import menuBook7 from '../assets/portfolio/menuBook/menuBook7.png'
+import menuBook8 from '../assets/portfolio/menuBook/menuBook8.png'
+import menuBook9 from '../assets/portfolio/menuBook/menuBook9.png'
+import menuBook10 from '../assets/portfolio/menuBook/menuBook10.png'
+import menuBook11 from '../assets/portfolio/menuBook/menuBook11.png'
+import menuBook12 from '../assets/portfolio/menuBook/menuBook12.png'
 
 import certificat from '../assets/portfolio/certificat/certificat.jpg'
 import certificat1 from '../assets/portfolio/certificat/certificat1.jpg'
@@ -272,13 +291,30 @@ export {
   post6,
   post7,
   post8,
-  menu,
-  menu1,
-  menu2,
-  menu3,
-  menu4,
-  menu5,
-  menu6,
+  menuA4,
+  menuA41,
+  menuA42,
+  menuA43,
+  menuA44,
+  menuA45,
+  menuA46,
+  menuBook,
+  menuBook1,
+  menuBook2,
+  menuBook3,
+  menuBook4,
+  menuBook5,
+  menuBook6,
+  menuBook7,
+  menuBook8,
+  menuBook9,
+  menuBook10,
+  menuBook11,
+  menuBook12,
+  menuTV,
+  menuTV1,
+  menuTV2,
+  menuTV3,
   certificat,
   certificat1,
   wedding,

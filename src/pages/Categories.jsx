@@ -43,7 +43,7 @@ const Categories = () => {
                         </span>
                       )}
                       <img
-                        src={category.image?.url}
+                        src={category.image.url}
                         alt={
                           currentLanguage === 'fr'
                             ? category.frName
