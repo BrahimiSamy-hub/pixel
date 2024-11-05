@@ -19,7 +19,7 @@ const CompanyLogos = ({ className }) => {
           delay: 0,
           disableOnInteraction: true,
         }}
-        speed={4000}
+        speed={3000}
         slidesPerView={4}
         loop={true}
         modules={[Autoplay]}
@@ -47,10 +47,9 @@ const CompanyLogos = ({ className }) => {
             <div className='flex items-center justify-center h-[17.5rem]'>
               <img
                 src={logo}
-                width={134}
-                height={28}
+                width={140}
                 alt='logo'
-                className='object-contain hover:scale-125 transition-transform duration-300'
+                className='object-contain hover:scale-110 transition-transform duration-300'
               />
             </div>
           </SwiperSlide>

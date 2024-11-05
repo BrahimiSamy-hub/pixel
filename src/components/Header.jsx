@@ -12,6 +12,7 @@ import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import { FaChevronDown } from 'react-icons/fa'
 import ButtonGradient from '../assets/svg/ButtonGradient'
+import HeaderUp from './HeaderUp'
 
 const navigation = [
   { id: '0', titleKey: 'home', url: '/' },
@@ -64,7 +65,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    const savedLanguage = 'fr' // Default to French
+    const savedLanguage = 'fr'
     i18n.changeLanguage(savedLanguage)
   }, [i18n])
 
@@ -74,89 +75,91 @@ const Header = () => {
   ]
 
   return (
-    <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
-        openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'
-      }`}
-    >
-      <div className='flex items-center justify-between px-4 lg:px-7.5 xl:px-10 max-lg:py-2'>
-        <Link className='block ' to='/' draggable='false'>
-          <img src={logowhite} alt='Pixel' className='w-36' loading='lazy' />
-        </Link>
-        <nav
-          className={`${
-            openNavigation ? 'flex' : 'hidden'
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
-        >
-          <div className='relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row'>
-            {navigation.map((item) => (
-              <Link
-                draggable='false'
-                key={item.id}
-                to={item.url}
-                onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                  item.onlyMobile ? 'lg:hidden' : ''
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname
-                    ? 'z-2 lg:text-[#F18A27]'
-                    : 'lg:text-n-1/50'
-                } lg:leading-5 lg:hover:text-[#F18A27] xl:px-12`}
-              >
-                {t(item.titleKey)}
-              </Link>
-            ))}
-          </div>
-
-          <HamburgerMenu />
-        </nav>
-        <div className='relative lg:flex hidden' ref={dropdownRef}>
-          <button
-            className='p-2 bg-[#0E0C15] border rounded border-[#26242C] hover:border-[#F18A27] flex items-center'
-            onClick={() => setDropdownOpen(!dropdownOpen)}
+    <>
+      <div
+        className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
+          openNavigation ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'
+        }`}
+      >
+        {/* <HeaderUp /> */}
+        <nav className='flex items-center justify-between px-4 lg:px-7.5 xl:px-10 max-lg:py-2'>
+          <Link className='block ' to='/' draggable='false'>
+            <img src={logowhite} alt='Pixel' className='w-36' loading='lazy' />
+          </Link>
+          <nav
+            className={`${
+              openNavigation ? 'flex' : 'hidden'
+            } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
           >
-            <img
-              src={
-                languages.find(
-                  (lang) =>
-                    lang.code === (localStorage.getItem('i18nextLng') || 'fr')
-                )?.flag
-              }
-              alt='Current Language'
-              className='inline-block mr-2 object-contain'
-            />
-            <FaChevronDown className='' />
-          </button>
-          {dropdownOpen && (
-            <div className='absolute mt-2 border border-[#26242C] rounded overflow-hidden'>
-              {languages.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => changeLanguage(lang.code)}
-                  className='flex items-center w-full p-2 pr-6 hover:bg-[#F18A28] bg-n-7'
+            <div className='relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row'>
+              {navigation.map((item) => (
+                <Link
+                  draggable='false'
+                  key={item.id}
+                  to={item.url}
+                  onClick={handleClick}
+                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                    item.onlyMobile ? 'lg:hidden' : ''
+                  } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold ${
+                    item.url === pathname
+                      ? 'z-2 lg:text-[#F18A27]'
+                      : 'lg:text-n-1/50'
+                  } lg:leading-5 lg:hover:text-[#F18A27] xl:px-12`}
                 >
-                  <img
-                    src={lang.flag}
-                    alt={lang.name}
-                    className='mr-2 object-contain'
-                  />
-                  {lang.name}
-                </button>
+                  {t(item.titleKey)}
+                </Link>
               ))}
             </div>
-          )}
-        </div>
-        <button
-          className='ml-6 relative lg:flex hidden hover:rotate-12 transition-transform duration-150'
-          onClick={toggleCart}
-        >
-          <FaCartShopping size={40} color='#F18A27' />
-          <span className='absolute -top-2 -right-3 flex items-center justify-center w-6 h-6 font-bold text-[#F18A28] bg-white rounded-full'>
-            {getTotalQuantity()}
-          </span>
-        </button>
-        <div className='flex gap-8 items-center'>
-          {/* <button className='relative flex lg:hidden' onClick={toggleCart}>
+
+            <HamburgerMenu />
+          </nav>
+          <div className='relative max-sm:hidden lg:block' ref={dropdownRef}>
+            <button
+              className='p-2 bg-[#0E0C15] border rounded border-[#26242C] hover:border-[#F18A27] flex items-center'
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              <img
+                src={
+                  languages.find(
+                    (lang) =>
+                      lang.code === (localStorage.getItem('i18nextLng') || 'fr')
+                  )?.flag
+                }
+                alt='Current Language'
+                className='inline-block mr-2 object-contain'
+              />
+              <FaChevronDown className='' />
+            </button>
+            {dropdownOpen && (
+              <div className='absolute border border-[#26242C] rounded overflow-hidden'>
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => changeLanguage(lang.code)}
+                    className='flex items-center w-full p-2 pr-6 hover:bg-[#F18A28] bg-n-7'
+                  >
+                    <img
+                      src={lang.flag}
+                      alt={lang.name}
+                      className='mr-2 object-contain'
+                    />
+                    {lang.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+          <button
+            className='ml-6 relative lg:flex hidden hover:rotate-12 transition-transform duration-150'
+            onClick={toggleCart}
+          >
+            <FaCartShopping size={40} color='#F18A27' />
+            <span className='absolute -top-2 -right-3 flex items-center justify-center w-6 h-6 font-bold text-[#F18A28] bg-white rounded-full'>
+              {getTotalQuantity()}
+            </span>
+          </button>
+          <div className='flex gap-8 items-center'>
+            {/* <button className='relative flex lg:hidden' onClick={toggleCart}>
             <FaCartShopping
               size={35}
               color='#F18A27'
@@ -166,13 +169,14 @@ const Header = () => {
               {getTotalQuantity()}
             </span>
           </button> */}
-          <Button className='lg:hidden' onClick={toggleNavigation}>
-            <MenuSvg openNavigation={openNavigation} />
-          </Button>
-        </div>
+            <Button className='lg:hidden' onClick={toggleNavigation}>
+              <MenuSvg openNavigation={openNavigation} />
+            </Button>
+          </div>
+        </nav>
+        <ButtonGradient />
       </div>
-      <ButtonGradient />
-    </div>
+    </>
   )
 }
 

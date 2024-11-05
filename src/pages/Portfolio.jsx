@@ -122,7 +122,9 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden `}>
+      <div
+        className={`pt-[4.75rem] -mt-[3rem] lg:pt-[8.25rem] overflow-hidden `}
+      >
         <Section
           className='pt-[8rem] -mt-[5.25rem] min-h-screen'
           crosses

@@ -26,9 +26,11 @@ const AboutUs = () => {
   ]
 
   return (
-    <div className={`pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden `}>
+    <div
+      className={`pt-[4.75rem] -mt-[2.65rem] lg:pt-[7.9rem] overflow-hidden `}
+    >
       <Section
-        className='pt-[8rem] -mt-[5.25rem] min-h-screen '
+        className='pt-[15rem] lg:pt-[8rem] -mt-[5.25rem] min-h-screen '
         crosses
         crossesOffset='lg:translate-y-[5.25rem]'
         customPaddings
@@ -61,7 +63,7 @@ const AboutUs = () => {
           </div>
         </div>
       </Section>
-      <BackgroundCircles />
+      {/* <BackgroundCircles /> */}
     </div>
   )
 }
