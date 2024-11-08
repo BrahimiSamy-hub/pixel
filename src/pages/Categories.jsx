@@ -36,7 +36,7 @@ const Categories = () => {
                     className='group relative'
                     data-aos='flip-up'
                   >
-                    <div className='overflow-hidden lg:aspect-none group-hover:opacity-75 bg-[#c9c9c9] border border-[#F17A28] rounded'>
+                    <div className='overflow-hidden lg:aspect-none group-hover:opacity-75 bg-[#c9c9c9] rounded'>
                       {category.new && (
                         <span className='absolute top-0 left-0 bg-red-500 text-white text-xs font-bold px-2 py-1 animate-pulse rounded-br-full'>
                           {t('categories.newLabel')}

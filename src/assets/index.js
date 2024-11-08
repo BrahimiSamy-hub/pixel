@@ -239,6 +239,22 @@ import menuBook12 from '../assets/portfolio/menuBook/menuBook12.png'
 import certificat from '../assets/portfolio/certificat/certificat.jpg'
 import certificat1 from '../assets/portfolio/certificat/certificat1.jpg'
 
+import bache from '../assets/portfolio/bache/bache.png'
+import bache1 from '../assets/portfolio/bache/bache1.png'
+import bache3 from '../assets/portfolio/bache/bache3.png'
+import bache4 from '../assets/portfolio/bache/bache4.png'
+import bache5 from '../assets/portfolio/bache/bache5.png'
+import bache6 from '../assets/portfolio/bache/bache6.png'
+import bache7 from '../assets/portfolio/bache/bache7.png'
+import bache8 from '../assets/portfolio/bache/bache8.png'
+import bache9 from '../assets/portfolio/bache/bache9.png'
+
+import tableau from '../assets/portfolio/tableau/tableau.png'
+import tableau1 from '../assets/portfolio/tableau/tableau1.png'
+import tableau2 from '../assets/portfolio/tableau/tableau2.png'
+import tableau3 from '../assets/portfolio/tableau/tableau3.png'
+import tableau4 from '../assets/portfolio/tableau/tableau4.png'
+
 import wedding from '../assets/portfolio/wedding/wedding.jpg'
 
 import food from '../assets/portfolio/food/food.jpg'
@@ -252,6 +268,15 @@ import food7 from '../assets/portfolio/food/food7.jpg'
 import food8 from '../assets/portfolio/food/food8.jpg'
 import food9 from '../assets/portfolio/food/food9.png'
 import food10 from '../assets/portfolio/food/food10.jpg'
+
+import poster from '../assets/portfolio/affiche/poster.png'
+import poster1 from '../assets/portfolio/affiche/poster1.png'
+import poster2 from '../assets/portfolio/affiche/poster2.png'
+import poster3 from '../assets/portfolio/affiche/poster3.png'
+import poster4 from '../assets/portfolio/affiche/poster4.png'
+import poster5 from '../assets/portfolio/affiche/poster5.png'
+import poster6 from '../assets/portfolio/affiche/poster6.png'
+import poster7 from '../assets/portfolio/affiche/poster7.png'
 
 import packaging from '../assets/portfolio/packaging/packaging.jpg'
 import packaging1 from '../assets/portfolio/packaging/packaging1.jpg'
@@ -299,6 +324,11 @@ export {
   carte9,
   carte10,
   carte11,
+  tableau,
+  tableau1,
+  tableau2,
+  tableau3,
+  tableau4,
   shooting,
   shooting1,
   shooting2,
@@ -312,6 +342,23 @@ export {
   shooting10,
   shooting11,
   shooting12,
+  poster,
+  poster1,
+  poster2,
+  poster3,
+  poster4,
+  poster5,
+  poster6,
+  poster7,
+  bache,
+  bache1,
+  bache3,
+  bache4,
+  bache5,
+  bache6,
+  bache7,
+  bache8,
+  bache9,
   sticker,
   sticker1,
   sticker2,

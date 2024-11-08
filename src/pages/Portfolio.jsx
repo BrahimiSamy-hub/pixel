@@ -16,8 +16,9 @@ import {
 import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/react/20/solid'
 
 import PortfolioEmballage from '../components/portfolio/Emballage'
-import PortfolioTableaux from '../components/portfolio/RollUp'
+import PortfolioRollUp from '../components/portfolio/RollUp'
 import PortfolioBache from '../components/portfolio/Bache'
+import PorfolioPoster from '../components/portfolio/Poster'
 import PortfolioCertificat from '../components/portfolio/Certificat'
 import PortfolioVitrine from '../components/portfolio/Vitrine'
 import PortfolioFrigo from '../components/portfolio/Frigo'
@@ -28,6 +29,7 @@ import PortfolioPosts from '../components/portfolio/Posts'
 import PortfolioLogo from '../components/portfolio/Logo'
 import PortfolioCards from '../components/portfolio/Cards'
 import PortfolioTshirts from '../components/portfolio/Frigo'
+import PortfolioTableau from '../components/portfolio/Tableau'
 
 import PortfolioCinématographie from '../components/portfolio/Cinématographie'
 import PortfolioSpot from '../components/portfolio/Spot'
@@ -72,12 +74,14 @@ const subcategoryComponents = {
   'Product photography': PortfolioProduct,
   'Food photography': PortfolioFood,
 
-  'Roll Up': PortfolioTableaux,
+  'Roll Up': PortfolioRollUp,
   wall: PortfolioBache,
   certificat: PortfolioCertificat,
   stickers: PortfolioStickers,
   vitrine: PortfolioVitrine,
   frigo: PortfolioFrigo,
+  poster: PorfolioPoster,
+  tableau: PortfolioTableau,
 
   'Landing Page': PortfolioWebsite,
   'Mobile Application': PortfolioMobile,
@@ -106,7 +110,15 @@ const Portfolio = () => {
     [t('video')]: ['trailers', 'reels', 'cinematographie', 'spotPublicitaire'],
     [t('photo')]: ['PhotoShoot', 'Product photography', 'Food photography'],
     // [t('packaging')]: ['emballage'],
-    [t('printing')]: ['Roll Up', 'wall', 'certificat', 'vitrine', 'frigo'],
+    [t('printing')]: [
+      'Roll Up',
+      'wall',
+      'certificat',
+      'vitrine',
+      'frigo',
+      'poster',
+      'tableau',
+    ],
     [t('apps')]: ['Landing Page', 'E-commerce', 'Mobile Application'],
     [t('weedingP')]: ['photo', 'video'],
   }
