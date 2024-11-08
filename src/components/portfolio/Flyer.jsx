@@ -15,20 +15,28 @@ import {
   flyer11,
   flyer12,
   flyer13,
+  trifold,
+  trifold1,
+  trifold2,
+  trifold3,
 } from '../../assets'
 
 const images = [
   { src: flyer1, alt: 'Flyer' },
   { src: flyer2, alt: 'Flyer' },
   { src: flyer3, alt: 'Flyer' },
+  { src: trifold1, alt: 'Trifold' },
   { src: flyer4, alt: 'Flyer' },
   { src: flyer5, alt: 'Flyer' },
   { src: flyer6, alt: 'Flyer' },
+  { src: trifold2, alt: 'Trifold' },
   { src: flyer7, alt: 'Flyer' },
+  { src: trifold3, alt: 'Trifold' },
   { src: flyer8, alt: 'Flyer' },
   { src: flyer9, alt: 'Flyer' },
   { src: flyer10, alt: 'Flyer' },
   { src: flyer11, alt: 'Flyer' },
+  { src: trifold, alt: 'Trifold' },
   { src: flyer12, alt: 'Flyer' },
   { src: flyer13, alt: 'Flyer' },
 ]

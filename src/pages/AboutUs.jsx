@@ -55,12 +55,12 @@ const AboutUs = () => {
               referrerPolicy='no-referrer-when-downgrade'
             ></iframe>
           </div>
-          <Faq />
           <div className='flex justify-center flex-wrap h-full gap-9 my-10'>
             {services.map((service) => (
               <ServiceCard key={service.label} {...service} />
             ))}
           </div>
+          <Faq />
         </div>
       </Section>
       {/* <BackgroundCircles /> */}

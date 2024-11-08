@@ -3,7 +3,6 @@ import { useState } from 'react'
 import Heading from '../components/Heading'
 import PixelCircles from '../components/design/PixelCircles'
 import Section from '../components/Section'
-import Button from '../components/Button'
 
 import { useTranslation } from 'react-i18next'
 import { IoSettings } from 'react-icons/io5'
@@ -14,72 +13,76 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react'
-import {
-  XMarkIcon,
-  FunnelIcon,
-  PlusIcon,
-  MinusIcon,
-} from '@heroicons/react/20/solid'
+import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/react/20/solid'
 
-import PortfolioEcommerce from '../components/portfolio/E-commerce'
-import PortfolioMobile from '../components/portfolio/MobileApp'
-import PortfolioWebsite from '../components/portfolio/WebSite'
-import PortfolioCinématographie from '../components/portfolio/Cinématographie'
-import PortfolioSpot from '../components/portfolio/Spot'
-import PortfolioReel from '../components/portfolio/Reel'
-import PortfolioTrailer from '../components/portfolio/Trailer'
-import PortfolioEtiquette from '../components/portfolio/Etiquette'
 import PortfolioEmballage from '../components/portfolio/Emballage'
-import PortfolioShooting from '../components/portfolio/Shooting'
-import PortfolioProduct from '../components/portfolio/Product'
 import PortfolioTableaux from '../components/portfolio/RollUp'
 import PortfolioBache from '../components/portfolio/Bache'
 import PortfolioCertificat from '../components/portfolio/Certificat'
 import PortfolioVitrine from '../components/portfolio/Vitrine'
 import PortfolioFrigo from '../components/portfolio/Frigo'
 import PortfolioBooks from '../components/portfolio/Books'
-import PortfolioMenuBook from '../components/portfolio/MenuBook'
-import PortfolioMenuTV from '../components/portfolio/MenuTV'
-import PortfolioMenuA4 from '../components/portfolio/MenuA4'
+import PortfolioFlyer from '../components/portfolio/Flyer'
+import PortfolioStickers from '../components/portfolio/Stickers'
 import PortfolioPosts from '../components/portfolio/Posts'
 import PortfolioLogo from '../components/portfolio/Logo'
 import PortfolioCards from '../components/portfolio/Cards'
 import PortfolioTshirts from '../components/portfolio/Frigo'
-import PortfolioFlyer from '../components/portfolio/Flyer'
 
+import PortfolioCinématographie from '../components/portfolio/Cinématographie'
+import PortfolioSpot from '../components/portfolio/Spot'
+import PortfolioReel from '../components/portfolio/Reel'
+import PortfolioTrailer from '../components/portfolio/Trailer'
+
+import PortfolioShooting from '../components/portfolio/Shooting'
 import PortfolioFood from '../components/portfolio/Food'
+import PortfolioProduct from '../components/portfolio/Product'
+
+import PortfolioMenuBook from '../components/portfolio/MenuBook'
+import PortfolioMenuTV from '../components/portfolio/MenuTV'
+import PortfolioMenuA4 from '../components/portfolio/MenuA4'
 
 import PortfolioWeeding from '../components/portfolio/Wedding'
 import PortfolioWeedingVideos from '../components/portfolio/WeddingVideos'
+
+import PortfolioEcommerce from '../components/portfolio/E-commerce'
+import PortfolioMobile from '../components/portfolio/MobileApp'
+import PortfolioWebsite from '../components/portfolio/WebSite'
+
 // Subcategory component mapping
 const subcategoryComponents = {
   logo: PortfolioLogo,
   visitCards: PortfolioCards,
-  habillage: PortfolioTshirts,
-  tshirt: PortfolioTshirts,
-  flyer: PortfolioFlyer,
+  't-shirt': PortfolioTshirts,
+  flyers: PortfolioFlyer,
   books: PortfolioBooks,
+  socialMediaPosts: PortfolioPosts,
+
   'Menu A4': PortfolioMenuA4,
   'Menu Book': PortfolioMenuBook,
   'Menu TV': PortfolioMenuTV,
-  socialMediaPosts: PortfolioPosts,
-  reel: PortfolioReel,
-  trailer: PortfolioTrailer,
+
+  reels: PortfolioReel,
+  trailers: PortfolioTrailer,
   cinematographie: PortfolioCinématographie,
   spotPublicitaire: PortfolioSpot,
-  etiquette: PortfolioEtiquette,
+
   emballage: PortfolioEmballage,
   PhotoShoot: PortfolioShooting,
   'Product photography': PortfolioProduct,
   'Food photography': PortfolioFood,
+
+  'Roll Up': PortfolioTableaux,
+  wall: PortfolioBache,
+  certificat: PortfolioCertificat,
+  stickers: PortfolioStickers,
+  vitrine: PortfolioVitrine,
+  frigo: PortfolioFrigo,
+
   'Landing Page': PortfolioWebsite,
   'Mobile Application': PortfolioMobile,
   'E-commerce': PortfolioEcommerce,
-  tableaux: PortfolioTableaux,
-  wall: PortfolioBache,
-  certificat: PortfolioCertificat,
-  vitrine: PortfolioVitrine,
-  frigo: PortfolioFrigo,
+
   photo: PortfolioWeeding,
   video: PortfolioWeedingVideos,
 }
@@ -88,27 +91,23 @@ const Portfolio = () => {
   const { t } = useTranslation()
 
   const subcategories = {
-    [t('visualIdentity')]: [
+    [t('graphicDesign')]: [
       'logo',
       'visitCards',
-      'habillage',
-      'tshirt',
-      'flyer',
+
+      't-shirt',
+      'flyers',
+      'emballage',
+      'stickers',
+      'books',
+      'socialMediaPosts',
     ],
     [t('menu')]: ['Menu A4', 'Menu TV', 'Menu Book'],
-    [t('graphicDesign')]: ['books', 'socialMediaPosts'],
-    [t('video')]: ['trailer', 'reel', 'cinematographie', 'spotPublicitaire'],
+    [t('video')]: ['trailers', 'reels', 'cinematographie', 'spotPublicitaire'],
     [t('photo')]: ['PhotoShoot', 'Product photography', 'Food photography'],
-    [t('packaging')]: ['emballage'],
+    // [t('packaging')]: ['emballage'],
+    [t('printing')]: ['Roll Up', 'wall', 'certificat', 'vitrine', 'frigo'],
     [t('apps')]: ['Landing Page', 'E-commerce', 'Mobile Application'],
-    [t('printing')]: [
-      'tableaux',
-      'wall',
-      'certificat',
-      'vitrine',
-      'frigo',
-      'etiquette',
-    ],
     [t('weedingP')]: ['photo', 'video'],
   }
 

@@ -83,7 +83,7 @@ const Header = () => {
       >
         {/* <HeaderUp /> */}
         <nav className='flex items-center justify-between px-4 lg:px-7.5 xl:px-10 max-lg:py-2'>
-          <Link className='block ' to='/' draggable='false'>
+          <Link className='block ' to='/' draggable='false '>
             <img src={logowhite} alt='Pixel' className='w-36' loading='lazy' />
           </Link>
           <nav
@@ -98,9 +98,9 @@ const Header = () => {
                   key={item.id}
                   to={item.url}
                   onClick={handleClick}
-                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                  className={`block relative font-code uppercase text-n-1 transition-colors hover:text-color-1 ${
                     item.onlyMobile ? 'lg:hidden' : ''
-                  } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold ${
+                  } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-[0.8rem] lg:font-semibold ${
                     item.url === pathname
                       ? 'z-2 lg:text-[#F18A27]'
                       : 'lg:text-n-1/50'

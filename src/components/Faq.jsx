@@ -12,7 +12,7 @@ const Faq = () => {
   const questions = t('faq.questions', { returnObjects: true })
 
   return (
-    <section className='py-5'>
+    <section className='py-5 mb-20'>
       <div className='mx-auto max-w-7xl'>
         <div className='mx-auto text-center flex flex-col items-center'>
           <h2 className='text-4xl font-bold'>{t('faq.title')}</h2>

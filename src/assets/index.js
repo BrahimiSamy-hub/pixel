@@ -148,6 +148,19 @@ import carte9 from '../assets/portfolio/carte-visite/carte9.png'
 import carte10 from '../assets/portfolio/carte-visite/carte10.png'
 import carte11 from '../assets/portfolio/carte-visite/carte11.png'
 
+import logo from '../assets/portfolio/logo/logo.jpg'
+import logo1 from '../assets/portfolio/logo/logo1.jpg'
+import logo2 from '../assets/portfolio/logo/logo2.jpg'
+import logo3 from '../assets/portfolio/logo/logo3.jpg'
+import logo4 from '../assets/portfolio/logo/logo4.jpg'
+import logo5 from '../assets/portfolio/logo/logo5.jpg'
+import logo6 from '../assets/portfolio/logo/logo6.jpg'
+import logo7 from '../assets/portfolio/logo/logo7.jpg'
+import logo8 from '../assets/portfolio/logo/logo8.jpg'
+import logo9 from '../assets/portfolio/logo/logo9.jpg'
+import logo10 from '../assets/portfolio/logo/logo10.jpg'
+import logo11 from '../assets/portfolio/logo/logo11.jpg'
+
 import flyer1 from '../assets/portfolio/flyers/flyer1.png'
 import flyer2 from '../assets/portfolio/flyers/flyer2.png'
 import flyer3 from '../assets/portfolio/flyers/flyer3.png'
@@ -161,6 +174,10 @@ import flyer10 from '../assets/portfolio/flyers/flyer10.jpg'
 import flyer11 from '../assets/portfolio/flyers/flyer11.jpg'
 import flyer12 from '../assets/portfolio/flyers/flyer12.jpg'
 import flyer13 from '../assets/portfolio/flyers/flyer13.jpg'
+import trifold from '../assets/portfolio/flyers/trifold.png'
+import trifold1 from '../assets/portfolio/flyers/trifold1.png'
+import trifold2 from '../assets/portfolio/flyers/trifold2.png'
+import trifold3 from '../assets/portfolio/flyers/trifold3.png'
 
 import frigo from '../assets/portfolio/frigo/frigo.jpg'
 import frigo1 from '../assets/portfolio/frigo/frigo1.jpg'
@@ -172,15 +189,25 @@ import book from '../assets/portfolio/book/book.jpg'
 import book1 from '../assets/portfolio/book/book1.jpg'
 import book2 from '../assets/portfolio/book/book2.jpg'
 
-import post from '../assets/portfolio/post/post.jpg'
-import post1 from '../assets/portfolio/post/post1.jpg'
-import post2 from '../assets/portfolio/post/post2.jpg'
-import post3 from '../assets/portfolio/post/post3.jpg'
-import post4 from '../assets/portfolio/post/post4.jpg'
-import post5 from '../assets/portfolio/post/post5.jpg'
-import post6 from '../assets/portfolio/post/post6.jpg'
-import post7 from '../assets/portfolio/post/post7.jpg'
-import post8 from '../assets/portfolio/post/post8.jpg'
+import post from '../assets/portfolio/posts/post.png'
+import post1 from '../assets/portfolio/posts/post1.png'
+import post2 from '../assets/portfolio/posts/post2.png'
+import post3 from '../assets/portfolio/posts/post3.png'
+import post4 from '../assets/portfolio/posts/post4.png'
+import post5 from '../assets/portfolio/posts/post5.png'
+import post6 from '../assets/portfolio/posts/post6.png'
+import post7 from '../assets/portfolio/posts/post7.png'
+import post8 from '../assets/portfolio/posts/post8.png'
+
+import sticker from '../assets/portfolio/stickers/sticker.jpg'
+import sticker1 from '../assets/portfolio/stickers/sticker1.jpg'
+import sticker2 from '../assets/portfolio/stickers/sticker2.jpg'
+import sticker3 from '../assets/portfolio/stickers/sticker3.jpg'
+import sticker4 from '../assets/portfolio/stickers/sticker4.jpg'
+import sticker5 from '../assets/portfolio/stickers/sticker5.jpg'
+import sticker6 from '../assets/portfolio/stickers/sticker6.jpg'
+import sticker7 from '../assets/portfolio/stickers/sticker7.jpg'
+import sticker8 from '../assets/portfolio/stickers/sticker8.jpg'
 
 import menuA4 from '../assets/portfolio/menuA4/menuA4.png'
 import menuA41 from '../assets/portfolio/menuA4/menuA41.png'
@@ -285,6 +312,27 @@ export {
   shooting10,
   shooting11,
   shooting12,
+  sticker,
+  sticker1,
+  sticker2,
+  sticker3,
+  sticker4,
+  sticker5,
+  sticker6,
+  sticker7,
+  sticker8,
+  logo,
+  logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo8,
+  logo9,
+  logo10,
+  logo11,
   flyer1,
   flyer2,
   flyer3,
@@ -298,6 +346,10 @@ export {
   flyer11,
   flyer12,
   flyer13,
+  trifold,
+  trifold1,
+  trifold2,
+  trifold3,
   rollUp,
   rollUp1,
   rollUp2,
