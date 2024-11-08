@@ -123,6 +123,18 @@ import photoshop from './collaboration/photoshop.svg'
 
 import pixelH from './pixelH.png'
 
+import rollUp from '../assets/portfolio/rollUp/rollUp.png'
+import rollUp1 from '../assets/portfolio/rollUp/rollUp1.png'
+import rollUp2 from '../assets/portfolio/rollUp/rollUp2.png'
+import rollUp3 from '../assets/portfolio/rollUp/rollUp3.png'
+import rollUp4 from '../assets/portfolio/rollUp/rollUp4.png'
+import rollUp5 from '../assets/portfolio/rollUp/rollUp5.png'
+import rollUp6 from '../assets/portfolio/rollUp/rollUp6.png'
+import rollUp7 from '../assets/portfolio/rollUp/rollUp7.png'
+import rollUp8 from '../assets/portfolio/rollUp/rollUp8.png'
+import rollUp9 from '../assets/portfolio/rollUp/rollUp9.png'
+import rollUp10 from '../assets/portfolio/rollUp/rollUp10.png'
+
 import carte from '../assets/portfolio/carte-visite/carte.png'
 import carte1 from '../assets/portfolio/carte-visite/carte1.jpg'
 import carte2 from '../assets/portfolio/carte-visite/carte2.png'
@@ -136,13 +148,19 @@ import carte9 from '../assets/portfolio/carte-visite/carte9.png'
 import carte10 from '../assets/portfolio/carte-visite/carte10.png'
 import carte11 from '../assets/portfolio/carte-visite/carte11.png'
 
-import flyer from '../assets/portfolio/flyers/flyer.jpg'
-import flyer1 from '../assets/portfolio/flyers/flyer1.jpg'
-import flyer2 from '../assets/portfolio/flyers/flyer2.jpg'
-import flyer3 from '../assets/portfolio/flyers/flyer3.jpg'
-import flyer4 from '../assets/portfolio/flyers/flyer4.jpg'
+import flyer1 from '../assets/portfolio/flyers/flyer1.png'
+import flyer2 from '../assets/portfolio/flyers/flyer2.png'
+import flyer3 from '../assets/portfolio/flyers/flyer3.png'
+import flyer4 from '../assets/portfolio/flyers/flyer4.png'
 import flyer5 from '../assets/portfolio/flyers/flyer5.jpg'
-import flyer6 from '../assets/portfolio/flyers/flyer6.jpg'
+import flyer6 from '../assets/portfolio/flyers/flyer6.png'
+import flyer7 from '../assets/portfolio/flyers/flyer7.png'
+import flyer8 from '../assets/portfolio/flyers/flyer8.jpg'
+import flyer9 from '../assets/portfolio/flyers/flyer9.png'
+import flyer10 from '../assets/portfolio/flyers/flyer10.jpg'
+import flyer11 from '../assets/portfolio/flyers/flyer11.jpg'
+import flyer12 from '../assets/portfolio/flyers/flyer12.jpg'
+import flyer13 from '../assets/portfolio/flyers/flyer13.jpg'
 
 import frigo from '../assets/portfolio/frigo/frigo.jpg'
 import frigo1 from '../assets/portfolio/frigo/frigo1.jpg'
@@ -267,13 +285,30 @@ export {
   shooting10,
   shooting11,
   shooting12,
-  flyer,
   flyer1,
   flyer2,
   flyer3,
   flyer4,
   flyer5,
   flyer6,
+  flyer7,
+  flyer8,
+  flyer9,
+  flyer10,
+  flyer11,
+  flyer12,
+  flyer13,
+  rollUp,
+  rollUp1,
+  rollUp2,
+  rollUp3,
+  rollUp4,
+  rollUp5,
+  rollUp6,
+  rollUp7,
+  rollUp8,
+  rollUp9,
+  rollUp10,
   frigo,
   frigo1,
   frigo2,

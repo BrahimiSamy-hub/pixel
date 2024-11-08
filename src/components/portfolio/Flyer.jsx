@@ -2,28 +2,35 @@ import React, { Suspense } from 'react'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 import {
-  flyer,
   flyer1,
   flyer2,
   flyer3,
   flyer4,
   flyer5,
   flyer6,
+  flyer7,
+  flyer8,
+  flyer9,
+  flyer10,
+  flyer11,
+  flyer12,
+  flyer13,
 } from '../../assets'
 
 const images = [
-  { src: flyer, alt: 'Flyer' },
   { src: flyer1, alt: 'Flyer' },
   { src: flyer2, alt: 'Flyer' },
   { src: flyer3, alt: 'Flyer' },
   { src: flyer4, alt: 'Flyer' },
   { src: flyer5, alt: 'Flyer' },
   { src: flyer6, alt: 'Flyer' },
-  { src: flyer2, alt: 'Flyer' },
-  { src: flyer3, alt: 'Flyer' },
-  { src: flyer1, alt: 'Flyer' },
-  { src: flyer4, alt: 'Flyer' },
-  { src: flyer5, alt: 'Flyer' },
+  { src: flyer7, alt: 'Flyer' },
+  { src: flyer8, alt: 'Flyer' },
+  { src: flyer9, alt: 'Flyer' },
+  { src: flyer10, alt: 'Flyer' },
+  { src: flyer11, alt: 'Flyer' },
+  { src: flyer12, alt: 'Flyer' },
+  { src: flyer13, alt: 'Flyer' },
 ]
 
 const ImageComponent = ({ src, alt }) => (

@@ -32,8 +32,8 @@ import PortfolioEtiquette from '../components/portfolio/Etiquette'
 import PortfolioEmballage from '../components/portfolio/Emballage'
 import PortfolioShooting from '../components/portfolio/Shooting'
 import PortfolioProduct from '../components/portfolio/Product'
-import PortfolioTableaux from '../components/portfolio/Tableaux'
-import PortfolioWall from '../components/portfolio/Wall'
+import PortfolioTableaux from '../components/portfolio/RollUp'
+import PortfolioBache from '../components/portfolio/Bache'
 import PortfolioCertificat from '../components/portfolio/Certificat'
 import PortfolioVitrine from '../components/portfolio/Vitrine'
 import PortfolioFrigo from '../components/portfolio/Frigo'
@@ -76,7 +76,7 @@ const subcategoryComponents = {
   'Mobile Application': PortfolioMobile,
   'E-commerce': PortfolioEcommerce,
   tableaux: PortfolioTableaux,
-  wall: PortfolioWall,
+  wall: PortfolioBache,
   certificat: PortfolioCertificat,
   vitrine: PortfolioVitrine,
   frigo: PortfolioFrigo,
