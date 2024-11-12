@@ -16,6 +16,7 @@ const Cart = () => {
       0
     )
   }
+  console.log(cartItems)
 
   const isCartEmpty = () => {
     return cartItems.length === 0
@@ -78,7 +79,7 @@ const Cart = () => {
                                     <img
                                       loading='lazy'
                                       src={product.selectedHero.cardImage.url}
-                                      alt=''
+                                      alt='Product Image'
                                       className='h-full w-full object-contain object-center'
                                     />
                                   </div>
@@ -87,6 +88,7 @@ const Cart = () => {
                                     <div>
                                       <div className='flex justify-between text-base font-medium'>
                                         <h3>{product.selectedHero.name}</h3>
+
                                         <p className='ml-4'>
                                           {product.price}{' '}
                                           <small>
@@ -94,9 +96,6 @@ const Cart = () => {
                                           </small>
                                         </p>
                                       </div>
-                                      <p className='mt-1 text-sm text-gray-500'>
-                                        {product.color}
-                                      </p>
                                     </div>
                                     <div className='flex flex-1 items-end justify-between text-sm'>
                                       <p className='text-gray-500'>

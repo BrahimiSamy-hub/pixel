@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { RadioGroup } from '@headlessui/react'
 import { useTranslation } from 'react-i18next'
 import Section from './Section'
@@ -32,8 +32,7 @@ const SingleProduct = () => {
   const { t } = useTranslation()
   const { id } = useParams()
   const { singleProduct, fetchSingleProduct } = usePosters()
-  const { addToCart } = useCart() // Use the addToCart function from CartContext
-  const navigate = useNavigate()
+  const { addToCart } = useCart()
 
   // State to manage the selection of hero, image, size
   const [selectedImage, setSelectedImage] = useState('')
@@ -43,7 +42,6 @@ const SingleProduct = () => {
   const [isAnimating, setIsAnimating] = useState(false)
   const [isFirstLoad, setIsFirstLoad] = useState(true)
 
-  // Fetch the product details by ID
   useEffect(() => {
     if (id) {
       fetchSingleProduct(id)
@@ -86,6 +84,7 @@ const SingleProduct = () => {
       selectedHero: {
         _id: selectedHeroName, // Replace with actual hero ID if available
         name: selectedHeroName,
+
         cardImage: {
           url: selectedImage,
         },
@@ -95,11 +94,6 @@ const SingleProduct = () => {
       // Include other necessary product details if needed
     }
     addToCart(productDetails) // Call the addToCart method
-  }
-
-  const handleInstantBuy = (event) => {
-    event.preventDefault()
-    navigate('/checkout')
   }
 
   // Add a loading state
@@ -128,11 +122,6 @@ const SingleProduct = () => {
             {/* Image Gallery */}
             <div className='sm:col-span-4 lg:col-span-5'>
               <div className='flex flex-col relative'>
-                <div className='absolute top-0 right-0 bg-red-500 flex items-center rounded-tr-md p-2 rounded-bl-md'>
-                  <span className='animate-pulse duration-300 transition-transform'>
-                    NEW
-                  </span>
-                </div>
                 <img
                   src={selectedImage}
                   alt='Product image'
@@ -145,17 +134,19 @@ const SingleProduct = () => {
                 {/* Thumbnail Images */}
                 <div className='mt-4 space-x-2 flex justify-around'>
                   <img
-                    src={singleProduct.mainImage?.url}
+                    src={selectedImage}
                     alt='Main Product'
                     className='h-24 w-24 object-contain rounded-md cursor-pointer'
-                    onClick={() => handleImageChange(mainImageUrl)}
+                    onClick={() => handleImageChange(selectedImage)}
                     loading='lazy'
                   />
                   <img
                     src={singleProduct.sideImage?.url}
                     alt='Side Product'
                     className='h-24 w-24 object-contain rounded-md cursor-pointer'
-                    onClick={() => handleImageChange(mainImageUrl)}
+                    // onClick={() =>
+                    //   handleImageChange(singleProduct.sideImage?.url)
+                    // }
                     loading='lazy'
                   />
                 </div>
@@ -215,7 +206,7 @@ const SingleProduct = () => {
                           className={({ active, checked }) =>
                             classNames(
                               'relative rounded-lg cursor-pointer focus:outline-none',
-                              checked ? 'ring-4 ring-[#F17A28]' : ''
+                              checked ? 'ring-2 ring-[#F17A28]' : ''
                             )
                           }
                         >
@@ -225,6 +216,9 @@ const SingleProduct = () => {
                                 src={hero.mainImage?.url}
                                 alt={hero.name}
                                 className='object-contain rounded-md'
+                                onClick={() =>
+                                  handleImageChange(hero.cardImage?.url)
+                                }
                               />
                             </>
                           )}
@@ -247,10 +241,15 @@ const SingleProduct = () => {
                         className={classNames(
                           'rounded-lg py-2 px-4',
                           selectedSize === size.name
-                            ? 'bg-white text-black border-4 border-[#F17A28]'
-                            : 'bg-white'
+                            ? 'bg-white text-black border-2 border-[#F17A28]'
+                            : size.available
+                            ? 'bg-white'
+                            : 'bg-gray-300 text-gray-500'
                         )}
-                        onClick={() => setSelectedSize(size.name)}
+                        onClick={() =>
+                          size.isAvailable && setSelectedSize(size.name)
+                        }
+                        disabled={!size.isAvailable} // Disable button if size is not available
                       >
                         {size.name}
                       </button>
@@ -260,17 +259,10 @@ const SingleProduct = () => {
               )}
 
               {/* Actions */}
-              <div className='mt-10 flex gap-x-4'>
+              <div className='mt-10 '>
                 <button
                   type='button'
-                  className='bg-red-500 text-white py-2 px-4 rounded-lg'
-                  onClick={handleInstantBuy}
-                >
-                  {t('buyNow')}
-                </button>
-                <button
-                  type='button'
-                  className='bg-blue-500 text-white py-2 px-4 rounded-lg'
+                  className='bg-[#f17a28] flex-1 w-full text-white py-2 px-4 rounded-lg hover:opacity-75'
                   onClick={handleAddToCart}
                 >
                   {t('addToCart')}

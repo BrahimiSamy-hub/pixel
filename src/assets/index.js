@@ -38,7 +38,8 @@ import jokerLoup from './roles/joker.svg'
 import idiot from './roles/idiot.svg'
 import lancien from './roles/lancien.svg'
 import lePreux from './roles/lePreux.svg'
-import loupNormal from './roles/loup.svg'
+import loupNormal from './roles/loupNormal.png'
+import loupMystique from './roles/loupMystique.png'
 import loupAlpha from './roles/loupAlpha.svg'
 import loupBlanc from './roles/loupBlanc.svg'
 import loupIcon from './roles/loupIcon.svg'
@@ -497,6 +498,7 @@ export {
   serviceAudio,
   servicePub,
   loupBleu,
+  loupMystique,
   filleDeJoie,
   villagois,
   avocat,

@@ -22,9 +22,9 @@ import {
   lancien,
   lePreux,
   loupNormal,
+  loupMystique,
   loupAlpha,
   loupBlanc,
-  loupIcon,
   loupRouge,
   magicien,
   maitreDuTemps,
@@ -50,9 +50,96 @@ const Roles = () => {
       descriptionKey: 'VillageoisDescription',
     },
     {
+      image: loupNormal,
+      titleKey: 'LoupNormal',
+      descriptionKey: 'LoupNormalDescription',
+    },
+
+    {
+      image: sorciere,
+      titleKey: 'Sorciere',
+      descriptionKey: 'SorciereDescription',
+    },
+    {
+      image: salvateur,
+      titleKey: 'Salvateur',
+      descriptionKey: 'SalvateurDescription',
+    },
+    {
+      image: chasseur,
+      titleKey: 'Chasseur',
+      descriptionKey: 'ChasseurDescription',
+    },
+    {
+      image: voyant,
+      titleKey: 'Voyant',
+      descriptionKey: 'VoyantDescription',
+    },
+    {
+      image: doubleur,
+      titleKey: 'Doubleur',
+      descriptionKey: 'DoubleurDescription',
+    },
+    {
+      image: petiteFille,
+      titleKey: 'PetiteFille',
+      descriptionKey: 'PetiteFilleDescription',
+    },
+    {
+      image: cupidon,
+      titleKey: 'Cupidon',
+      descriptionKey: 'CupidonDescription',
+    },
+    { image: idiot, titleKey: 'Idiot', descriptionKey: 'IdiotDescription' },
+    {
+      image: loupAlpha,
+      titleKey: 'LoupAlpha',
+      descriptionKey: 'LoupAlphaDescription',
+    },
+    {
+      image: loupRouge,
+      titleKey: 'LoupRouge',
+      descriptionKey: 'LoupRougeDescription',
+    },
+    {
+      image: loupMystique,
+      titleKey: 'LoupMystique',
+      descriptionKey: 'LoupMystiqueDescription',
+    },
+    {
       image: loupBleu,
       titleKey: 'LoupBleu',
       descriptionKey: 'LoupBleuDescription',
+    },
+    {
+      image: loupBlanc,
+      titleKey: 'LoupBlanc',
+      descriptionKey: 'LoupBlancDescription',
+    },
+    {
+      image: enfantSauvage,
+      titleKey: 'EnfantSauvage',
+      descriptionKey: 'EnfantSauvageDescription',
+    },
+    {
+      image: flutiste,
+      titleKey: 'Flutiste',
+      descriptionKey: 'FlutisteDescription',
+    },
+    {
+      image: vampire,
+      titleKey: 'Vampire',
+      descriptionKey: 'VampireDescription',
+    },
+    {
+      image: fantome,
+      titleKey: 'Fantome',
+      descriptionKey: 'FantomeDescription',
+    },
+    {
+      image: voleur,
+      titleKey: 'Voleur',
+      descriptionKey: 'VoleurDescription',
     },
     {
       image: filleDeJoie,
@@ -60,9 +147,19 @@ const Roles = () => {
       descriptionKey: 'FilleDeJoieDescription',
     },
     {
+      image: comedien,
+      titleKey: 'Comedien',
+      descriptionKey: 'ComedienDescription',
+    },
+    {
       image: avocat,
       titleKey: 'Avocat',
       descriptionKey: 'AvocatDescription',
+    },
+    {
+      image: lePreux,
+      titleKey: 'LePreux',
+      descriptionKey: 'LePreuxDescription',
     },
     { image: barbu, titleKey: 'Barbu', descriptionKey: 'BarbuDescription' },
     {
@@ -71,14 +168,14 @@ const Roles = () => {
       descriptionKey: 'BourreauDescription',
     },
     {
-      image: chaman,
-      titleKey: 'Chaman',
-      descriptionKey: 'ChamanDescription',
+      image: revenant,
+      titleKey: 'Revenant',
+      descriptionKey: 'RevenantDescription',
     },
     {
-      image: chasseur,
-      titleKey: 'Chasseur',
-      descriptionKey: 'ChasseurDescription',
+      image: jokerLoup,
+      titleKey: 'JokerLoup',
+      descriptionKey: 'JokerLoupDescription',
     },
     {
       image: chevalier,
@@ -86,19 +183,9 @@ const Roles = () => {
       descriptionKey: 'ChevalierDescription',
     },
     {
-      image: comedien,
-      titleKey: 'Comedien',
-      descriptionKey: 'ComedienDescription',
-    },
-    {
-      image: corbeau,
-      titleKey: 'Corbeau',
-      descriptionKey: 'CorbeauDescription',
-    },
-    {
-      image: cupidon,
-      titleKey: 'Cupidon',
-      descriptionKey: 'CupidonDescription',
+      image: lancien,
+      titleKey: 'Lancien',
+      descriptionKey: 'LancienDescription',
     },
     {
       image: detective,
@@ -106,70 +193,9 @@ const Roles = () => {
       descriptionKey: 'DetectiveDescription',
     },
     {
-      image: doubleur,
-      titleKey: 'Doubleur',
-      descriptionKey: 'DoubleurDescription',
-    },
-    {
-      image: enfantSauvage,
-      titleKey: 'EnfantSauvage',
-      descriptionKey: 'EnfantSauvageDescription',
-    },
-    {
-      image: fantome,
-      titleKey: 'Fantome',
-      descriptionKey: 'FantomeDescription',
-    },
-    {
-      image: flutiste,
-      titleKey: 'Flutiste',
-      descriptionKey: 'FlutisteDescription',
-    },
-    {
-      image: jokerLoup,
-      titleKey: 'JokerLoup',
-      descriptionKey: 'JokerLoupDescription',
-    },
-    { image: idiot, titleKey: 'Idiot', descriptionKey: 'IdiotDescription' },
-    {
-      image: lancien,
-      titleKey: 'Lancien',
-      descriptionKey: 'LancienDescription',
-    },
-    {
-      image: lePreux,
-      titleKey: 'LePreux',
-      descriptionKey: 'LePreuxDescription',
-    },
-    {
-      image: loupNormal,
-      titleKey: 'LoupNormal',
-      descriptionKey: 'LoupNormalDescription',
-    },
-    {
-      image: loupAlpha,
-      titleKey: 'LoupAlpha',
-      descriptionKey: 'LoupAlphaDescription',
-    },
-    {
-      image: loupBlanc,
-      titleKey: 'LoupBlanc',
-      descriptionKey: 'LoupBlancDescription',
-    },
-    {
-      image: loupIcon,
-      titleKey: 'LoupIcon',
-      descriptionKey: 'LoupIconDescription',
-    },
-    {
-      image: loupRouge,
-      titleKey: 'LoupRouge',
-      descriptionKey: 'LoupRougeDescription',
-    },
-    {
-      image: magicien,
-      titleKey: 'Magicien',
-      descriptionKey: 'MagicienDescription',
+      image: tueurEnSerie,
+      titleKey: 'TueurEnSerie',
+      descriptionKey: 'TueurEnSerieDescription',
     },
     {
       image: maitreDuTemps,
@@ -177,54 +203,29 @@ const Roles = () => {
       descriptionKey: 'MaitreDuTempsDescription',
     },
     {
+      image: magicien,
+      titleKey: 'Magicien',
+      descriptionKey: 'MagicienDescription',
+    },
+    {
       image: noName,
       titleKey: 'PilleurDeTombe',
       descriptionKey: 'PilleurDeTombeDescription',
     },
     {
-      image: petiteFille,
-      titleKey: 'PetiteFille',
-      descriptionKey: 'PetiteFilleDescription',
+      image: chaman,
+      titleKey: 'Chaman',
+      descriptionKey: 'ChamanDescription',
+    },
+    {
+      image: corbeau,
+      titleKey: 'Corbeau',
+      descriptionKey: 'CorbeauDescription',
     },
     {
       image: renard,
       titleKey: 'Renard',
       descriptionKey: 'RenardDescription',
-    },
-    {
-      image: revenant,
-      titleKey: 'Revenant',
-      descriptionKey: 'RevenantDescription',
-    },
-    {
-      image: salvateur,
-      titleKey: 'Salvateur',
-      descriptionKey: 'SalvateurDescription',
-    },
-    {
-      image: sorciere,
-      titleKey: 'Sorciere',
-      descriptionKey: 'SorciereDescription',
-    },
-    {
-      image: tueurEnSerie,
-      titleKey: 'TueurEnSerie',
-      descriptionKey: 'TueurEnSerieDescription',
-    },
-    {
-      image: vampire,
-      titleKey: 'Vampire',
-      descriptionKey: 'VampireDescription',
-    },
-    {
-      image: voleur,
-      titleKey: 'Voleur',
-      descriptionKey: 'VoleurDescription',
-    },
-    {
-      image: voyant,
-      titleKey: 'Voyant',
-      descriptionKey: 'VoyantDescription',
     },
   ]
 
