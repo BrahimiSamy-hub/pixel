@@ -18,6 +18,7 @@ import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/react/20/solid'
 import PortfolioEmballage from '../components/portfolio/Emballage'
 import PortfolioRollUp from '../components/portfolio/RollUp'
 import PortfolioBache from '../components/portfolio/Bache'
+import PortfolioWall from '../components/portfolio/Wall'
 import PorfolioPoster from '../components/portfolio/Poster'
 import PortfolioCertificat from '../components/portfolio/Certificat'
 import PortfolioVitrine from '../components/portfolio/Vitrine'
@@ -73,9 +74,9 @@ const subcategoryComponents = {
   PhotoShoot: PortfolioShooting,
   'Product photography': PortfolioProduct,
   'Food photography': PortfolioFood,
-
+  wall: PortfolioWall,
   'Roll Up': PortfolioRollUp,
-  wall: PortfolioBache,
+  bache: PortfolioBache,
   certificat: PortfolioCertificat,
   stickers: PortfolioStickers,
   vitrine: PortfolioVitrine,
@@ -98,24 +99,20 @@ const Portfolio = () => {
     [t('graphicDesign')]: [
       'logo',
       'visitCards',
-
-      't-shirt',
       'flyers',
       'emballage',
       'stickers',
-      'books',
       'socialMediaPosts',
     ],
     [t('menu')]: ['Menu A4', 'Menu TV', 'Menu Book'],
     [t('video')]: ['trailers', 'reels', 'cinematographie', 'spotPublicitaire'],
     [t('photo')]: ['PhotoShoot', 'Product photography', 'Food photography'],
-    // [t('packaging')]: ['emballage'],
     [t('printing')]: [
       'Roll Up',
+      'bache',
       'wall',
       'certificat',
       'vitrine',
-      'frigo',
       'poster',
       'tableau',
     ],

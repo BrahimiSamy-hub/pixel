@@ -279,6 +279,13 @@ import poster5 from '../assets/portfolio/affiche/poster5.png'
 import poster6 from '../assets/portfolio/affiche/poster6.png'
 import poster7 from '../assets/portfolio/affiche/poster7.png'
 
+import wall from '../assets/portfolio/wall/wall.png'
+import wall2 from '../assets/portfolio/wall/wall2.png'
+import wall3 from '../assets/portfolio/wall/wall3.png'
+import wall4 from '../assets/portfolio/wall/wall4.png'
+import wall5 from '../assets/portfolio/wall/wall5.png'
+import wall6 from '../assets/portfolio/wall/wall6.png'
+
 import packaging from '../assets/portfolio/packaging/packaging.jpg'
 import packaging1 from '../assets/portfolio/packaging/packaging1.jpg'
 import packaging2 from '../assets/portfolio/packaging/packaging2.jpg'
@@ -369,6 +376,12 @@ export {
   sticker6,
   sticker7,
   sticker8,
+  wall,
+  wall2,
+  wall3,
+  wall4,
+  wall5,
+  wall6,
   logo,
   logo1,
   logo2,

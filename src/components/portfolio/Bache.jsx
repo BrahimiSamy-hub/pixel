@@ -33,7 +33,7 @@ const ImageComponent = ({ src, alt }) => (
   </div>
 )
 
-const Wall = () => {
+const Bache = () => {
   return (
     <PhotoProvider>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2 lg:gap-5'>
@@ -47,4 +47,4 @@ const Wall = () => {
   )
 }
 
-export default Wall
+export default Bache

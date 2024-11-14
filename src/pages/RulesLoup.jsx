@@ -2,6 +2,7 @@ import Section from '../components/Section'
 import ButtonGradient from '../assets/svg/ButtonGradient'
 import { useTranslation } from 'react-i18next'
 import Roles from '../components/Roles'
+import title from '../assets/roles/title.svg'
 
 const RulesLoup = () => {
   const { t } = useTranslation()
@@ -17,9 +18,12 @@ const RulesLoup = () => {
         >
           <div className='container mb-8'>
             <div>
-              <h1 className='h1 uppercase text-center text-wrap'>
-                {t('titleWerWerwolf')}
-              </h1>
+              <img
+                src={title}
+                alt='title'
+                className='object-contain '
+                draggable='false'
+              />
 
               <p className='uppercase h5 my-8'>
                 {t('descriptionWerwolf')}
