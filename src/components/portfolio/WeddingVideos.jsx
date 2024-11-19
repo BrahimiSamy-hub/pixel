@@ -2,44 +2,37 @@ import React, { Suspense } from 'react'
 
 const videos = [
   {
-    src: 'https://www.youtube.com/embed/bVw_qsCNu30',
+    src: ' https://youtube.com/embed/8bGAYPNX_kw',
+
     title: 'Crunchy Restaurant Promo',
   },
   {
-    src: 'https://www.youtube.com/embed/cgq_AYufDoE',
+    src: 'https://youtube.com/embed/khBRheURY8Y',
     title: 'Chemsou Concert Trailer',
   },
   {
-    src: 'https://www.youtube.com/embed/EcKI9b4DxEw',
+    src: 'https://youtube.com/embed/a55vdtKqNdk',
     title: 'Azas Rugs Promo',
   },
   {
-    src: 'https://www.youtube.com/embed/OipP4mS7uTg',
+    src: 'https://youtube.com/embed/H3REhBCZyMM',
     title: 'Benchenett Concert Trailer',
   },
   {
-    src: 'https://www.youtube.com/embed/CJZFsMx9CaQ',
+    src: 'https://youtube.com/embed/V5QPBuA1DW4',
     title: 'Articore Presentation',
   },
   {
-    src: 'https://www.youtube.com/embed/4kCO6niEbtg',
+    src: 'https://youtube.com/embed/q0rLWbBiE4U',
     title: 'Articore Presentation',
   },
   {
-    src: 'https://www.youtube.com/embed/fetDAomZ118',
+    src: 'https://youtube.com/embed/jCKCLg6vqLo',
     title: 'Articore Presentation',
   },
   {
-    src: 'https://www.youtube.com/embed/D5k7UWrUM4g',
+    src: 'https://youtube.com/embed/KCgDcQr8zQ0',
     title: 'AURASIS Festival Opening',
-  },
-  {
-    src: 'https://youtube.com/embed/5WPD6b8Z_Cg',
-    title: 'The Perfect Crunchy Burger',
-  },
-  {
-    src: 'https://www.youtube.com/embed/xXUUA87F-Ps',
-    title: 'Chemsou Freeklane Couverture Concert',
   },
 ]
 
@@ -48,13 +41,13 @@ const VideoComponent = ({ src, title }) => (
     <iframe
       src={src}
       title={title}
-      className='rounded-xl w-full min-h-80 '
+      className='rounded-xl w-full min-h-96 object-cover'
+      frameBorder='0'
       allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
       allowFullScreen
     ></iframe>
   </div>
 )
-
 const WeddingVideos = () => {
   return (
     <div className='grid grid-cols-3 gap-5'>

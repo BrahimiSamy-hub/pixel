@@ -15,6 +15,7 @@ import {
   logo10,
   logo11,
 } from '../../assets'
+
 const images = [
   { src: logo, alt: 'Logo' },
   { src: logo1, alt: 'Logo' },

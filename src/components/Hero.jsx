@@ -62,7 +62,7 @@ const Hero = () => {
             {t('heroDescription')}
           </p>
           <div className=' flex gap-10 justify-center'>
-            <Link to='/shop' draggable='false'>
+            <Link to='/categories' draggable='false'>
               <Button white>{t('shopButton')}</Button>
             </Link>
             <a href='#services'>

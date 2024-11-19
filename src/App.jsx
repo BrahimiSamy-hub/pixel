@@ -19,6 +19,7 @@ import ScrollToTop from './utils/ScrollToTop'
 import { CartProvider } from './context/CartContext'
 import { PostersProvider } from './context/PostersContext'
 import { CategoriesProvider } from './context/CategoriesContext'
+import { ContactProvider } from './context/ContactContext'
 import SingleProduct from './components/SingleProduct'
 import Checkout from './pages/Checkout'
 import Categories from './pages/Categories'
@@ -59,26 +60,28 @@ const App = () => {
       <CartProvider>
         <CategoriesProvider>
           <PostersProvider>
-            <Header />
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/categories' element={<Categories />} />
-              <Route path='/shop/:categoryId' element={<Shop />} />
-              <Route path='/singleProduct/:id' element={<SingleProduct />} />
-              <Route path='/portfolio' element={<Portfolio />} />
-              <Route path='/about-us' element={<AboutUs />} />
-              <Route path='/photoLab' element={<Photo />} />
-              <Route path='/sounds' element={<Audio />} />
-              <Route path='/wedding' element={<Weeding />} />
-              <Route path='/development' element={<Dev />} />
-              <Route path='/creative' element={<Infographie />} />
-              <Route path='/advertisement' element={<Neon />} />
-              <Route path='/checkout' element={<Checkout />} />
-              <Route path='/contact' element={<ContactUsServices />} />
-              <Route path='/rules' element={<Rules />} />
-            </Routes>
-            <Footer />
-            <Cart />
+            <ContactProvider>
+              <Header />
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/categories' element={<Categories />} />
+                <Route path='/shop/:categoryId' element={<Shop />} />
+                <Route path='/singleProduct/:id' element={<SingleProduct />} />
+                <Route path='/portfolio' element={<Portfolio />} />
+                <Route path='/about-us' element={<AboutUs />} />
+                <Route path='/photoLab' element={<Photo />} />
+                <Route path='/sounds' element={<Audio />} />
+                <Route path='/wedding' element={<Weeding />} />
+                <Route path='/development' element={<Dev />} />
+                <Route path='/creative' element={<Infographie />} />
+                <Route path='/advertisement' element={<Neon />} />
+                <Route path='/checkout' element={<Checkout />} />
+                <Route path='/contact' element={<ContactUsServices />} />
+                <Route path='/rules' element={<Rules />} />
+              </Routes>
+              <Footer />
+              <Cart />
+            </ContactProvider>
           </PostersProvider>
         </CategoriesProvider>
       </CartProvider>

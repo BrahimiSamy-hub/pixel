@@ -16,7 +16,6 @@ const Cart = () => {
       0
     )
   }
-  console.log(cartItems)
 
   const isCartEmpty = () => {
     return cartItems.length === 0

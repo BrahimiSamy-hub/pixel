@@ -319,7 +319,13 @@ import shooting10 from '../assets/portfolio/Shooting/shooting10.jpg'
 import shooting11 from '../assets/portfolio/Shooting/shooting11.jpg'
 import shooting12 from '../assets/portfolio/Shooting/shooting12.jpg'
 
+import antic from '../assets/portfolio/landingPage/AnticMockup.png'
+import beleghni from '../assets/portfolio/landingPage/BeleghniMockup.png'
+import broker from '../assets/portfolio/landingPage/BrokerMockup.png'
 export {
+  antic,
+  broker,
+  beleghni,
   carte,
   carte1,
   carte2,
