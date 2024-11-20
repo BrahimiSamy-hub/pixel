@@ -20,7 +20,7 @@ export const ContactProvider = ({ children }) => {
     setError(null)
     setSuccess(false)
     try {
-      await axios.post('http://localhost:3000/contact', data)
+      await axios.post('https://api.pixeldz.store/contact', data)
       setSuccess(true)
     } catch (err) {
       setError(err.message)
