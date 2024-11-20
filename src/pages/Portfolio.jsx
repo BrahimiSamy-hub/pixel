@@ -46,7 +46,6 @@ import PortfolioMenuTV from '../components/portfolio/MenuTV'
 import PortfolioMenuA4 from '../components/portfolio/MenuA4'
 
 import PortfolioWeeding from '../components/portfolio/Wedding'
-import PortfolioWeedingVideos from '../components/portfolio/WeddingVideos'
 
 import PortfolioEcommerce from '../components/portfolio/E-commerce'
 import PortfolioMobile from '../components/portfolio/MobileApp'
@@ -89,7 +88,6 @@ const subcategoryComponents = {
   'E-commerce': PortfolioEcommerce,
 
   photo: PortfolioWeeding,
-  video: PortfolioWeedingVideos,
 }
 
 const Portfolio = () => {
@@ -117,7 +115,7 @@ const Portfolio = () => {
       'tableau',
     ],
     [t('apps')]: ['Landing Page', 'E-commerce', 'Mobile Application'],
-    [t('weedingP')]: ['photo', 'video'],
+    [t('weedingP')]: ['photo'],
   }
 
   const [selectedSubcategory, setSelectedSubcategory] = useState('logo')

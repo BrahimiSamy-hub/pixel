@@ -51,7 +51,6 @@ const AboutUs = () => {
               src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12983.930370880267!2d6.1731097!3d35.5541321!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f41158da88865b%3A0xf23a3bf30fc4c9fc!2sPixel%20Creative%20Agency!5e0!3m2!1sfr!2sdz!4v1728480388311!5m2!1sfr!2sdz'
               title='MapsLocalisation'
               className='rounded-md h-[500px] w-full mb-10'
-              loading='lazy'
               referrerPolicy='no-referrer-when-downgrade'
             ></iframe>
           </div>

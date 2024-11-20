@@ -1,10 +1,10 @@
-import { curve, pixelH, astro } from '../assets'
+import { curve, pixelH, astroSVG } from '../assets'
 import Button from './Button'
 import Section from './Section'
 import { BackgroundCircles, BottomLine, Gradient } from './design/Hero'
-import { ScrollParallax, MouseParallax } from 'react-just-parallax'
+
 import { useRef } from 'react'
-import { FaFacebookF, FaTiktok, FaInstagram } from 'react-icons/fa'
+
 import CompanyLogos from './CompanyLogos'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -33,31 +33,7 @@ const Hero = () => {
               draggable='false'
             />
           </h1>
-          {/* <div className='absolute -left-[400px] -rotate-90 flex gap-10 items-center -mt-20'>
-            <h1 className='h6 font-bold uppercase'>Follow us</h1>
-            <a
-              href='https://www.instagram.com/_pixeldz'
-              target='_blank'
-              className='hover:scale-125 transition-transform duration-300'
-            >
-              <FaInstagram size={25} className='hover:text-[#f17a28]' />
-            </a>
 
-            <a
-              href='https://www.facebook.com/pixel.lab.3110?mibextid=LQQJ4d'
-              target='_blank'
-              className='hover:scale-125 transition-transform duration-300'
-            >
-              <FaFacebookF size={25} className='hover:text-[#f17a28]' />
-            </a>
-            <a
-              href='https://www.tiktok.com/@pixel.creativeagency'
-              target='_blank'
-              className='hover:scale-125 transition-transform duration-300 hover:text-[#f17a28]'
-            >
-              <FaTiktok size={25} />
-            </a>
-          </div> */}
           <p className='h6 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8'>
             {t('heroDescription')}
           </p>
@@ -74,7 +50,7 @@ const Hero = () => {
           <div className='relative z-1 p-0.5 rounded-2xl'>
             <div className='rounded-t-[0.9rem] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490] ]:'>
               <img
-                src={astro}
+                src={astroSVG}
                 className='w-full h-full object-contain float-animation'
                 width={1024}
                 height={490}

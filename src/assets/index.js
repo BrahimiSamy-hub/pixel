@@ -1,6 +1,8 @@
 import p from './P.png'
 import logowhite from './logowhite.png'
 import check from './check.svg'
+import logoSVG from './logoSVG.svg'
+import astroSVG from './astroSVG.svg'
 
 import play from './play.svg'
 import gradient from './gradient.png'
@@ -257,6 +259,17 @@ import tableau3 from '../assets/portfolio/tableau/tableau3.png'
 import tableau4 from '../assets/portfolio/tableau/tableau4.png'
 
 import wedding from '../assets/portfolio/wedding/wedding.jpg'
+import wedding1 from '../assets/portfolio/wedding/wedding1.jpg'
+import wedding2 from '../assets/portfolio/wedding/wedding2.jpg'
+import wedding3 from '../assets/portfolio/wedding/wedding3.jpg'
+import wedding4 from '../assets/portfolio/wedding/wedding4.jpg'
+import wedding5 from '../assets/portfolio/wedding/wedding5.jpg'
+import wedding6 from '../assets/portfolio/wedding/wedding6.jpg'
+import wedding7 from '../assets/portfolio/wedding/wedding7.jpg'
+import wedding8 from '../assets/portfolio/wedding/wedding8.jpg'
+import wedding9 from '../assets/portfolio/wedding/wedding9.jpg'
+import wedding10 from '../assets/portfolio/wedding/wedding10.jpg'
+import wedding11 from '../assets/portfolio/wedding/wedding11.jpg'
 
 import food from '../assets/portfolio/food/food.jpg'
 import food1 from '../assets/portfolio/food/food1.jpg'
@@ -323,6 +336,8 @@ import antic from '../assets/portfolio/landingPage/AnticMockup.png'
 import beleghni from '../assets/portfolio/landingPage/BeleghniMockup.png'
 import broker from '../assets/portfolio/landingPage/BrokerMockup.png'
 export {
+  logoSVG,
+  astroSVG,
   antic,
   broker,
   beleghni,
@@ -472,6 +487,17 @@ export {
   certificat,
   certificat1,
   wedding,
+  wedding1,
+  wedding2,
+  wedding3,
+  wedding4,
+  wedding5,
+  wedding6,
+  wedding7,
+  wedding8,
+  wedding9,
+  wedding10,
+  wedding11,
   packaging,
   packaging1,
   packaging2,
