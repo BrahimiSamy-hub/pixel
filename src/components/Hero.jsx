@@ -54,7 +54,8 @@ const Hero = () => {
                 className='w-full h-full object-contain float-animation'
                 width={1024}
                 height={490}
-                alt='AI'
+                alt='Astro'
+                draggable='false'
               />
             </div>
           </div>

@@ -110,9 +110,9 @@ const SingleProduct = () => {
   const sizes = singleProduct.sizes || []
 
   return (
-    <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden min-h-screen'>
+    <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden '>
       <Section
-        className='pt-[8rem] -mt-[5.25rem]'
+        className='pt-[8rem] -mt-[5.25rem] min-h-screen'
         crosses
         crossesOffset='lg:translate-y-[5.25rem]'
         customPaddings
@@ -132,7 +132,7 @@ const SingleProduct = () => {
                   loading='lazy'
                 />
                 {/* Thumbnail Images */}
-                <div className='mt-4 space-x-2 flex justify-around'>
+                {/* <div className='mt-4 space-x-2 flex justify-around'>
                   <img
                     src={selectedImage}
                     alt='Main Product'
@@ -149,14 +149,16 @@ const SingleProduct = () => {
                     // }
                     loading='lazy'
                   />
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Product Details */}
             <div className='sm:col-span-8 lg:col-span-7'>
               <h2 className='text-4xl flex justify-between'>
-                <span className='font-bold'>{singleProduct.name}</span>
+                <span className='font-bold'>
+                  {singleProduct.name} - {selectedHeroName}
+                </span>
                 <small
                   className={classNames(
                     'text-xl rounded p-2 h-full flex text-center',
@@ -170,9 +172,6 @@ const SingleProduct = () => {
               </h2>
 
               <div className='mt-2'>
-                <span className='font-bold text-4xl text-[#F17A28]'>
-                  {selectedHeroName}
-                </span>
                 <h2 className='h2 text-[#F17A28] font-bold'>
                   {singleProduct.price}
                   <small>
@@ -183,8 +182,8 @@ const SingleProduct = () => {
 
               {/* Heroes */}
               {heroes.length > 0 && (
-                <div className='mt-10'>
-                  <h4 className='h4'>Choose a hero</h4>
+                <div className='mt-5'>
+                  <h4 className='h4'>Choose an image</h4>
                   <RadioGroup
                     value={selectedColor}
                     onChange={(value) => {
@@ -198,14 +197,14 @@ const SingleProduct = () => {
                     <RadioGroup.Label className='sr-only'>
                       {t('chooseColor')}
                     </RadioGroup.Label>
-                    <div className='grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-2'>
+                    <div className='grid grid-cols-4 items-center sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-2'>
                       {heroes.map((hero) => (
                         <RadioGroup.Option
                           key={hero._id}
                           value={hero.cardImage?.url}
                           className={({ active, checked }) =>
                             classNames(
-                              'relative rounded-lg cursor-pointer focus:outline-none',
+                              'relative rounded-lg cursor-pointer focus:outline-none ',
                               checked ? 'ring-2 ring-[#F17A28]' : ''
                             )
                           }
@@ -215,7 +214,7 @@ const SingleProduct = () => {
                               <img
                                 src={hero.mainImage?.url}
                                 alt={hero.name}
-                                className='object-contain rounded-md'
+                                className='object-contain rounded-md '
                                 onClick={() =>
                                   handleImageChange(hero.cardImage?.url)
                                 }

@@ -84,7 +84,7 @@ const Header = () => {
         {/* <HeaderUp /> */}
         <nav className='flex items-center justify-between px-4 lg:px-7.5 xl:px-10 max-lg:py-2'>
           <Link className='block ' to='/' draggable='false '>
-            <img src={logoSVG} alt='Pixel' className='w-40' />
+            <img src={logoSVG} alt='Pixel' className='w-40' draggable='false' />
           </Link>
           <nav
             className={`${
@@ -103,7 +103,7 @@ const Header = () => {
                   } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-[0.8rem] lg:font-semibold ${
                     item.url === pathname
                       ? 'z-2 lg:text-[#F18A27]'
-                      : 'lg:text-n-1/50'
+                      : 'lg:text-n-3'
                   } lg:leading-5 lg:hover:text-[#F18A27] xl:px-12`}
                 >
                   {t(item.titleKey)}

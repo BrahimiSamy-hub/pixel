@@ -47,7 +47,6 @@ import PortfolioMenuA4 from '../components/portfolio/MenuA4'
 
 import PortfolioWeeding from '../components/portfolio/Wedding'
 
-import PortfolioEcommerce from '../components/portfolio/E-commerce'
 import PortfolioMobile from '../components/portfolio/MobileApp'
 import PortfolioWebsite from '../components/portfolio/WebSite'
 
@@ -83,9 +82,8 @@ const subcategoryComponents = {
   poster: PorfolioPoster,
   tableau: PortfolioTableau,
 
-  'Landing Page': PortfolioWebsite,
+  'Web Application': PortfolioWebsite,
   'Mobile Application': PortfolioMobile,
-  'E-commerce': PortfolioEcommerce,
 
   photo: PortfolioWeeding,
 }
@@ -114,7 +112,7 @@ const Portfolio = () => {
       'poster',
       'tableau',
     ],
-    [t('apps')]: ['Landing Page', 'E-commerce', 'Mobile Application'],
+    [t('apps')]: ['Web Application', 'Mobile Application'],
     [t('weedingP')]: ['photo'],
   }
 
@@ -132,7 +130,7 @@ const Portfolio = () => {
         className={`pt-[4.75rem] -mt-[3rem] lg:pt-[8.25rem] overflow-hidden `}
       >
         <Section
-          className='pt-[8rem] -mt-[5.25rem] min-h-screen'
+          className='pt-[12rem] sm:xl:pt-[8rem] -mt-[5.25rem] min-h-screen'
           crosses
           crossesOffset='lg:translate-y-[5.25rem]'
           customPaddings
@@ -148,8 +146,8 @@ const Portfolio = () => {
                 <div className='fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-out' />
                 <div className='fixed inset-0 z-40 flex'>
                   <div className='relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-n-7 py-4 pb-12 shadow-xl'>
-                    <div className='flex items-center justify-between px-4 '>
-                      <h2 className='text-lg font-medium text-white'>
+                    <div className='flex items-center justify-between px-4'>
+                      <h2 className='text-lg font-medium text-white '>
                         Filters
                       </h2>
                       <button
