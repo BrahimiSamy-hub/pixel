@@ -13,7 +13,7 @@ const AudioPricing = () => {
           customPaddings
         >
           <div className='container min-h-screen'>
-            <h1 className='h1 text-center mb-6 uppercase'>Audio</h1>
+            <h1 className='h1 text-center mb-6 uppercase'>Pixel Sounds</h1>
             <PricingList />
           </div>
         </Section>

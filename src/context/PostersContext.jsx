@@ -40,6 +40,7 @@ export const PostersProvider = ({ children }) => {
 
   useEffect(() => {
     fetchPosters()
+    console.log(posters)
   }, [])
 
   const handlePosterClick = (poster) => {

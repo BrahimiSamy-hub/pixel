@@ -107,7 +107,8 @@ const Cart = () => {
                                           className='font-medium text-red-500 hover:text-red-300 border p-1 rounded-md border-red-500 hover:border-red-300'
                                           onClick={() =>
                                             removeFromCart(
-                                              product.selectedHero._id
+                                              product.selectedHero._id,
+                                              product.size
                                             )
                                           }
                                         >

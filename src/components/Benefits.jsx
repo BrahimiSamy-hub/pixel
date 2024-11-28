@@ -56,6 +56,7 @@ const Benefits = () => {
                       <img
                         loading='lazy'
                         src={item.imageUrl}
+                        draggable='false'
                         width={380}
                         height={362}
                         alt={t(item.title)}

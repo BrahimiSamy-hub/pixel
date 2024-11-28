@@ -13,7 +13,7 @@ const PhotoPricing = () => {
           customPaddings
         >
           <div className='container min-h-screen'>
-            <h1 className='text-center h1 mb-6 uppercase'>Photo / Video</h1>
+            <h1 className='text-center h1 mb-6 uppercase'>Pixel Photo Lab</h1>
             <PricingList />
           </div>
         </Section>

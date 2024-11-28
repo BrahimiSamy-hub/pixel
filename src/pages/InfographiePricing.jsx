@@ -13,7 +13,7 @@ const InfographiePricing = () => {
           customPaddings
         >
           <div className='container min-h-screen'>
-            <h1 className='text-center h1 mb-6 uppercase'>Infographie</h1>
+            <h1 className='text-center h1 mb-6 uppercase '>Pixel Creative</h1>
             <PricingList />
           </div>
         </Section>

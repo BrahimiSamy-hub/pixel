@@ -211,7 +211,7 @@
     "audio": [
       {
         "id": "0",
-        "title": "Effet sonore",
+        "title": "Effet Sonore",
         "description": "Spécialisé dans la création d'effets sonores de haute qualité qui ajoutent une dimension immersive à vos productions audiovisuelles.",
         "price": "4000",
         "features": [
@@ -222,7 +222,7 @@
       },
       {
         "id": "1",
-        "title": "Voix off",
+        "title": "Voix Off",
         "description": "Notre équipe de voix talentueuses est prête à transmettre votre message avec clarté et impact.",
         "price": "6000",
         "features": [
@@ -233,7 +233,7 @@
       },
       {
         "id": "2",
-        "title": "Production musicale originale",
+        "title": "Production Musicale Originale",
         "description": "Bénéficiez d'une approche créative et collaborative, visant à réaliser de la musique personnalisée, adaptée à vos besoins spécifiques.",
         "price": "10000",
         "features": [
@@ -396,7 +396,7 @@
       },
       {
         "id": "1",
-        "title": "Travaux publicitaires",
+        "title": "Travaux Publicitaires",
         "description": "Que vous ayez besoin de panneaux, de supports événementiels, notre équipe est prête à réaliser vos projets avec expertise.",
         "price": "Sur Devis",
         "features": [
@@ -412,7 +412,7 @@
     "logo": [
       {
         "id": "0",
-        "title": "Design graphique",
+        "title": "Design Graphique",
         "description": "Notre équipe de designers talentueux est prête à donner vie à vos concepts.",
         "price": "1000",
         "features": [
@@ -431,7 +431,7 @@
       },
       {
         "id": "1",
-        "title": "Pack réseaux sociaux",
+        "title": "Pack Réseaux Sociaux",
         "description": "Capter l'attention et engager votre audience.",
         "price": "10000",
         "features": ["Publications pour réseaux sociaux"]
@@ -442,7 +442,7 @@
         "id": "0",
         "title": "E-commerce",
         "description": "Vous souhaitez promouvoir un produit, ou vendre votre produit enligne, alors vous avez besoin d'un site ecom",
-        "price": "40000",
+        "price": "Sur Devis",
         "features": [
           "Design personnalisé",
           "5 Pages",
@@ -452,7 +452,7 @@
       },
       {
         "id": "1",
-        "title": "Landing page",
+        "title": "Landing Page",
         "description": "Que vous soyez une start-up ou une entreprise établie, nous vous offrons les outils et l'expertise nécessaires.",
         "price": "Sur Devis",
         "features": [

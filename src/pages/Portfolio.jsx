@@ -83,7 +83,7 @@ const subcategoryComponents = {
   tableau: PortfolioTableau,
 
   'Web Application': PortfolioWebsite,
-  'Mobile Application': PortfolioMobile,
+  // 'Mobile Application': PortfolioMobile,
 
   photo: PortfolioWeeding,
 }
@@ -112,7 +112,7 @@ const Portfolio = () => {
       'poster',
       'tableau',
     ],
-    [t('apps')]: ['Web Application', 'Mobile Application'],
+    [t('apps')]: ['Web Site'],
     [t('weedingP')]: ['photo'],
   }
 

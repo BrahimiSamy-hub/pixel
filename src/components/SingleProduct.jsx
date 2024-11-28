@@ -45,8 +45,14 @@ const SingleProduct = () => {
   useEffect(() => {
     if (id) {
       fetchSingleProduct(id)
+      setSelectedImage('')
+      setSelectedColor('')
+      setSelectedHeroName('')
+      setIsFirstLoad('true')
+      setSelectedSize('')
+      setIsAnimating('false')
     }
-  }, [id, fetchSingleProduct])
+  }, [])
 
   // Set default hero, size, and image on the first load
   useEffect(() => {
@@ -79,21 +85,29 @@ const SingleProduct = () => {
 
   const handleAddToCart = (event) => {
     event.preventDefault()
+
+    // Determine the price based on the selected size or the product's base price
+    const selectedSizeDetails = singleProduct.sizes?.find(
+      (size) => size.name === selectedSize
+    )
+    const price = selectedSizeDetails?.price || singleProduct.price
+
     // Prepare product details for adding to cart
     const productDetails = {
       selectedHero: {
         _id: selectedHeroName, // Replace with actual hero ID if available
         name: selectedHeroName,
-
         cardImage: {
           url: selectedImage,
         },
       },
-      price: singleProduct.price,
+      price, // Use the determined price
       size: selectedSize,
       // Include other necessary product details if needed
     }
-    addToCart(productDetails) // Call the addToCart method
+
+    // Add product to cart
+    addToCart(productDetails)
   }
 
   // Add a loading state
@@ -173,88 +187,107 @@ const SingleProduct = () => {
 
               <div className='mt-2'>
                 <h2 className='h2 text-[#F17A28] font-bold'>
-                  {singleProduct.price}
+                  {singleProduct.price ||
+                    sizes.find((size) => size.name === selectedSize)?.price ||
+                    t('Price unavailable')}
                   <small>
                     <sup> DA</sup>
                   </small>
                 </h2>
               </div>
 
-              {/* Heroes */}
-              {heroes.length > 0 && (
+              {singleProduct.name === 'Werewolfs' ? (
+                // Show specific text and link for the "Werewolfs" product
                 <div className='mt-5'>
-                  <h4 className='h4'>Choose an image</h4>
-                  <RadioGroup
-                    value={selectedColor}
-                    onChange={(value) => {
-                      const hero = heroes.find(
-                        (h) => h.cardImage?.url === value
-                      )
-                      if (hero) debouncedHeroChange(hero)
-                    }}
-                    className='mt-4'
+                  <p className='text-lg font-semibold text-gray-800'>
+                    Explore our exclusive Werewolfs collection!
+                  </p>
+                  <a
+                    href='/werewolfs-collection'
+                    className='text-[#F17A28] underline mt-2 block'
                   >
-                    <RadioGroup.Label className='sr-only'>
-                      {t('chooseColor')}
-                    </RadioGroup.Label>
-                    <div className='grid grid-cols-4 items-center sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-2'>
-                      {heroes.map((hero) => (
-                        <RadioGroup.Option
-                          key={hero._id}
-                          value={hero.cardImage?.url}
-                          className={({ active, checked }) =>
-                            classNames(
-                              'relative rounded-lg cursor-pointer focus:outline-none ',
-                              checked ? 'ring-2 ring-[#F17A28]' : ''
-                            )
-                          }
-                        >
-                          {({ checked }) => (
-                            <>
-                              <img
-                                src={hero.mainImage?.url}
-                                alt={hero.name}
-                                className='object-contain rounded-md '
-                                onClick={() =>
-                                  handleImageChange(hero.cardImage?.url)
-                                }
-                              />
-                            </>
-                          )}
-                        </RadioGroup.Option>
-                      ))}
-                    </div>
-                  </RadioGroup>
+                    Click here to see more.
+                  </a>
                 </div>
-              )}
-
-              {/* Sizes */}
-              {sizes.length > 0 && (
-                <div className='mt-6'>
-                  <h4 className='h4'>{t('size')}</h4>
-                  <div className='flex items-center space-x-3'>
-                    {sizes.map((size) => (
-                      <button
-                        type='button'
-                        key={size._id}
-                        className={classNames(
-                          'rounded-lg py-2 px-4',
-                          selectedSize === size.name
-                            ? 'bg-white text-black border-2 border-[#F17A28]'
-                            : size.available
-                            ? 'bg-white'
-                            : 'bg-gray-300 text-gray-500'
-                        )}
-                        onClick={() =>
-                          size.isAvailable && setSelectedSize(size.name)
-                        }
-                        disabled={!size.isAvailable} // Disable button if size is not available
+              ) : (
+                <>
+                  {/* Conditional rendering for "Choose an image" */}
+                  {heroes.length > 1 && (
+                    <div className='mt-5'>
+                      <h4 className='h4'>Choose an image</h4>
+                      <RadioGroup
+                        value={selectedColor}
+                        onChange={(value) => {
+                          const hero = heroes.find(
+                            (h) => h.cardImage?.url === value
+                          )
+                          if (hero) debouncedHeroChange(hero)
+                        }}
+                        className='mt-4'
                       >
-                        {size.name}
-                      </button>
-                    ))}
-                  </div>
-                </div>
+                        <RadioGroup.Label className='sr-only'>
+                          {t('chooseColor')}
+                        </RadioGroup.Label>
+                        <div className='grid grid-cols-4 items-center sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-2'>
+                          {heroes.map((hero) => (
+                            <RadioGroup.Option
+                              key={hero._id}
+                              value={hero.cardImage?.url}
+                              className={({ active, checked }) =>
+                                classNames(
+                                  'relative rounded-lg cursor-pointer focus:outline-none ',
+                                  checked ? 'ring-2 ring-[#F17A28]' : ''
+                                )
+                              }
+                            >
+                              {({ checked }) => (
+                                <>
+                                  <img
+                                    src={hero.mainImage?.url}
+                                    alt={hero.name}
+                                    className='object-contain rounded-md '
+                                    onClick={() =>
+                                      handleImageChange(hero.cardImage?.url)
+                                    }
+                                  />
+                                </>
+                              )}
+                            </RadioGroup.Option>
+                          ))}
+                        </div>
+                      </RadioGroup>
+                    </div>
+                  )}
+
+                  {/* Conditional rendering for "Sizes" */}
+                  {sizes.length > 1 && (
+                    <div className='mt-6'>
+                      <h4 className='h4'>{t('size')}</h4>
+                      <div className='flex items-center space-x-3'>
+                        {sizes.map((size) => (
+                          <button
+                            type='button'
+                            key={size._id}
+                            className={classNames(
+                              'rounded-lg py-2 px-4',
+                              selectedSize === size.name
+                                ? 'bg-white text-black border-2 border-[#F17A28]'
+                                : size.available
+                                ? 'bg-white'
+                                : 'bg-gray-300 text-gray-500'
+                            )}
+                            onClick={() =>
+                              size.isAvailable && setSelectedSize(size.name)
+                            }
+                            disabled={!size.isAvailable} // Disable button if size is not available
+                          >
+                            {size.name}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
 
               {/* Actions */}

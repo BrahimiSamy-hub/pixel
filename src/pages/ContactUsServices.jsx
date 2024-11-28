@@ -45,7 +45,7 @@ const ContactUsServices = () => {
           customPaddings
         >
           <div className='container'>
-            <h1 className='text-center h1 mb-6'>{service}</h1>
+            <h1 className='text-center h1 mb-6 uppercase'>{service}</h1>
             {success ? (
               // Success message displayed after form submission
               <div className='w-full min-h-[450px] border border-n-6 p-4 rounded-xl flex flex-col justify-center items-center gap-6'>
