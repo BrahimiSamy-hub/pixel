@@ -34,39 +34,49 @@ const SingleProduct = () => {
   const { singleProduct, fetchSingleProduct } = usePosters()
   const { addToCart } = useCart()
 
-  // State to manage the selection of hero, image, size
   const [selectedImage, setSelectedImage] = useState('')
   const [selectedColor, setSelectedColor] = useState('')
   const [selectedHeroName, setSelectedHeroName] = useState('')
   const [selectedSize, setSelectedSize] = useState('')
   const [isAnimating, setIsAnimating] = useState(false)
   const [isFirstLoad, setIsFirstLoad] = useState(true)
+  const [loading, setLoading] = useState(false) // Loading state
 
   useEffect(() => {
     if (id) {
-      fetchSingleProduct(id)
+      // Reset states immediately when product ID changes
+
+      // Fetch the new product and stop loading after completion
+      fetchSingleProduct(id).finally(() => setLoading(false))
       setSelectedImage('')
       setSelectedColor('')
       setSelectedHeroName('')
-      setIsFirstLoad('true')
       setSelectedSize('')
-      setIsAnimating('false')
+      setIsAnimating(false)
+      setIsFirstLoad(true)
+      setLoading(true) // Set loading to true
     }
-  }, [])
+  }, [id])
 
-  // Set default hero, size, and image on the first load
   useEffect(() => {
     if (singleProduct && isFirstLoad) {
       const firstHero = singleProduct.heroes?.[0]
-      setSelectedImage(firstHero?.cardImage?.url || '')
-      setSelectedColor(firstHero?.cardImage?.url || '')
-      setSelectedHeroName(firstHero?.name || singleProduct.name)
-      setSelectedSize(singleProduct.sizes?.[0]?.name || '')
+      const firstSize = singleProduct.sizes?.[0]
+
+      if (firstHero) {
+        console.log('Default Hero:', firstHero.name)
+        setSelectedImage(firstHero.cardImage?.url || '')
+        setSelectedColor(firstHero.cardImage?.url || '')
+        setSelectedHeroName(firstHero.name || singleProduct.name)
+      }
+      if (firstSize) {
+        console.log('Default Size:', firstSize.name)
+        setSelectedSize(firstSize.name || '')
+      }
+
       setIsFirstLoad(false)
     }
   }, [singleProduct, isFirstLoad])
-
-  // Debounced hero change function
   const handleHeroChange = (hero) => {
     setSelectedColor(hero.cardImage?.url)
     setSelectedImage(hero.cardImage?.url)
@@ -85,33 +95,27 @@ const SingleProduct = () => {
 
   const handleAddToCart = (event) => {
     event.preventDefault()
-
-    // Determine the price based on the selected size or the product's base price
     const selectedSizeDetails = singleProduct.sizes?.find(
       (size) => size.name === selectedSize
     )
     const price = selectedSizeDetails?.price || singleProduct.price
 
-    // Prepare product details for adding to cart
     const productDetails = {
       selectedHero: {
-        _id: selectedHeroName, // Replace with actual hero ID if available
+        _id: selectedHeroName,
         name: selectedHeroName,
         cardImage: {
           url: selectedImage,
         },
       },
-      price, // Use the determined price
+      price,
       size: selectedSize,
-      // Include other necessary product details if needed
     }
 
-    // Add product to cart
     addToCart(productDetails)
   }
 
-  // Add a loading state
-  if (!singleProduct) {
+  if (loading) {
     return (
       <div className='min-h-screen text-center flex justify-center items-center'>
         Loading product details...
@@ -119,10 +123,16 @@ const SingleProduct = () => {
     )
   }
 
-  const mainImageUrl = singleProduct.mainImage?.url
+  if (!singleProduct) {
+    return (
+      <div className='min-h-screen text-center flex justify-center items-center'>
+        No product found.
+      </div>
+    )
+  }
+
   const heroes = singleProduct.heroes || []
   const sizes = singleProduct.sizes || []
-
   return (
     <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden '>
       <Section
@@ -143,7 +153,6 @@ const SingleProduct = () => {
                     'object-contain w-full rounded-lg transition-opacity duration-300',
                     isAnimating ? 'opacity-0' : 'opacity-100'
                   )}
-                  loading='lazy'
                 />
                 {/* Thumbnail Images */}
                 {/* <div className='mt-4 space-x-2 flex justify-around'>
@@ -152,16 +161,7 @@ const SingleProduct = () => {
                     alt='Main Product'
                     className='h-24 w-24 object-contain rounded-md cursor-pointer'
                     onClick={() => handleImageChange(selectedImage)}
-                    loading='lazy'
-                  />
-                  <img
-                    src={singleProduct.sideImage?.url}
-                    alt='Side Product'
-                    className='h-24 w-24 object-contain rounded-md cursor-pointer'
-                    // onClick={() =>
-                    //   handleImageChange(singleProduct.sideImage?.url)
-                    // }
-                    loading='lazy'
+                  
                   />
                 </div> */}
               </div>
@@ -173,6 +173,7 @@ const SingleProduct = () => {
                 <span className='font-bold'>
                   {singleProduct.name} - {selectedHeroName}
                 </span>
+
                 <small
                   className={classNames(
                     'text-xl rounded p-2 h-full flex text-center',
@@ -181,7 +182,7 @@ const SingleProduct = () => {
                       : 'text-red-500 bg-red-500/15'
                   )}
                 >
-                  {singleProduct.stock ? t('Available') : t('Unavailable')}
+                  {singleProduct.stock ? t('available') : t('Unavailable')}
                 </small>
               </h2>
 
@@ -194,6 +195,9 @@ const SingleProduct = () => {
                     <sup> DA</sup>
                   </small>
                 </h2>
+                <span className='text-4xl mt-5'>
+                  Material: {singleProduct.material}
+                </span>
               </div>
 
               {singleProduct.name === 'Werewolfs' ? (
@@ -214,7 +218,7 @@ const SingleProduct = () => {
                   {/* Conditional rendering for "Choose an image" */}
                   {heroes.length > 1 && (
                     <div className='mt-5'>
-                      <h4 className='h4'>Choose an image</h4>
+                      {/* <h4 className='h4'>Choose an image</h4> */}
                       <RadioGroup
                         value={selectedColor}
                         onChange={(value) => {

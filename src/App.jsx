@@ -64,9 +64,9 @@ const App = () => {
               <Header />
               <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/categories' element={<Categories />} />
+                <Route path='/shop' element={<Categories />} />
                 <Route path='/shop/:categoryId' element={<Shop />} />
-                <Route path='/singleProduct/:id' element={<SingleProduct />} />
+                <Route path='/product/:id' element={<SingleProduct />} />
                 <Route path='/portfolio' element={<Portfolio />} />
                 <Route path='/about-us' element={<AboutUs />} />
                 <Route path='/photoLab' element={<Photo />} />

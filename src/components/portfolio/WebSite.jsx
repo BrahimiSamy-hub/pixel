@@ -1,13 +1,14 @@
 import React, { Suspense } from 'react'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
-import { antic, beleghni, broker, pixel } from '../../assets'
+import { antic, beleghni, broker, pixel, comfortSpace } from '../../assets'
 
 const images = [
   { src: antic, alt: 'Antic Landing Page' },
-  { src: beleghni, alt: 'Beleghni Landing Page' },
+  { src: beleghni, alt: 'Beleghni Dashboard' },
   { src: broker, alt: 'Broker Landing Page' },
   { src: pixel, alt: 'Pixel Landing Page' },
+  { src: comfortSpace, alt: 'comforceSpace Ecommerce' },
 ]
 
 const ImageComponent = ({ src, alt }) => (

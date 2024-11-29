@@ -18,7 +18,7 @@ const navigation = [
   { id: '0', titleKey: 'home', url: '/' },
   { id: '1', titleKey: 'aboutUs', url: '/about-us' },
   { id: '2', titleKey: 'portfolioP', url: '/portfolio' },
-  { id: '3', titleKey: 'shop', url: '/categories' },
+  { id: '3', titleKey: 'shop', url: '/shop' },
 ]
 
 const Header = () => {

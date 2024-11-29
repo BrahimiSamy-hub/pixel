@@ -83,7 +83,7 @@ const Shop = () => {
                     // Render the clickable card
                     <Link
                       key={index}
-                      to={`/singleProduct/${poster._id}`}
+                      to={`/product/${poster._id}`}
                       draggable='false'
                       className='group relative'
                       data-aos='flip-up'

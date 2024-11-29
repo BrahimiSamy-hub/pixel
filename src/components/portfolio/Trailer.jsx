@@ -22,8 +22,9 @@ const videos = [
     title: 'Articore Presentation',
   },
   {
-    src: 'https://www.youtube.com/embed/4kCO6niEbtg',
-    title: 'Articore Presentation',
+    src: 'https://youtube.com/embed/r442kz0PFFA',
+    title:
+      'Couverture de la Soutenance des Médecins | Célébrons l’Excellence Médicale',
   },
   {
     src: 'https://www.youtube.com/embed/fetDAomZ118',
@@ -40,6 +41,14 @@ const videos = [
   {
     src: 'https://www.youtube.com/embed/xXUUA87F-Ps',
     title: 'Chemsou Freeklane Couverture Concert',
+  },
+  {
+    src: 'https://www.youtube.com/embed/1v6JS9YHcs0',
+    title: 'NewTech Ceram - Publicité | Excellence en Céramique',
+  },
+  {
+    src: 'https://www.youtube.com/embed/uxlNs9yoj58',
+    title: 'Nada Al Rayhane - Ad Ezzi Ssaa',
   },
 ]
 

@@ -17,8 +17,8 @@ import {
 } from '../../assets'
 
 const images = [
-  { src: carte, alt: 'Visit Card' },
-  { src: carte1, alt: 'Visit Card' },
+  // { src: carte, alt: 'Visit Card' },
+  // { src: carte1, alt: 'Visit Card' },
   { src: carte2, alt: 'Visit Card' },
   { src: carte3, alt: 'Visit Card' },
   { src: carte4, alt: 'Visit Card' },

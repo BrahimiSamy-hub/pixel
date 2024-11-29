@@ -336,9 +336,11 @@ import antic from '../assets/portfolio/landingPage/AnticMockup.jpg'
 import beleghni from '../assets/portfolio/landingPage/BeleghniMockup.jpg'
 import broker from '../assets/portfolio/landingPage/BrokerMockup.png'
 import pixel from '../assets/portfolio/landingPage/PixelMockup.png'
+import comfortSpace from '../assets/portfolio/landingPage/ComfortSpaceMockup.png'
 
 export {
   logoSVG,
+  comfortSpace,
   pixel,
   astroSVG,
   antic,

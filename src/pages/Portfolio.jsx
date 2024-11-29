@@ -68,7 +68,7 @@ const subcategoryComponents = {
   cinematographie: PortfolioCinématographie,
   spotPublicitaire: PortfolioSpot,
 
-  emballage: PortfolioEmballage,
+  // emballage: PortfolioEmballage,
   PhotoShoot: PortfolioShooting,
   'Product photography': PortfolioProduct,
   'Food photography': PortfolioFood,
@@ -82,7 +82,7 @@ const subcategoryComponents = {
   poster: PorfolioPoster,
   tableau: PortfolioTableau,
 
-  'Web Application': PortfolioWebsite,
+  Websites: PortfolioWebsite,
   // 'Mobile Application': PortfolioMobile,
 
   photo: PortfolioWeeding,
@@ -96,7 +96,7 @@ const Portfolio = () => {
       'logo',
       'visitCards',
       'flyers',
-      'emballage',
+      // 'emballage',
       'stickers',
       'socialMediaPosts',
     ],
@@ -107,12 +107,12 @@ const Portfolio = () => {
       'Roll Up',
       'bache',
       'wall',
-      'certificat',
-      'vitrine',
+      // 'certificat',
+      // 'vitrine',
       'poster',
       'tableau',
     ],
-    [t('apps')]: ['Web Site'],
+    [t('apps')]: ['Websites'],
     [t('weedingP')]: ['photo'],
   }
 
