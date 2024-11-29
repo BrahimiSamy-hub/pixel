@@ -146,31 +146,27 @@ export const collabContent = [
   },
   {
     id: '1',
-    title: 'Video',
-  },
-  {
-    id: '2',
-    title: 'Wedding',
-  },
-  {
-    id: '3',
     title: 'Graphic Design',
   },
   {
-    id: '4',
-    title: 'Visual Identity',
+    id: '2',
+    title: 'Menu',
   },
   {
-    id: '5',
+    id: '3',
+    title: 'Video',
+  },
+  {
+    id: '4',
     title: 'Printing',
   },
   {
-    id: '6',
-    title: 'Developement',
+    id: '5',
+    title: 'Websites',
   },
   {
-    id: '7',
-    title: 'Packaging',
+    id: '6',
+    title: 'Wedding',
   },
 ]
 
@@ -527,7 +523,7 @@ export const benefits = [
     text: 'infographie_text',
     backgroundUrl: './src/assets/benefits/card-2.svg',
     icon: 'CiPen',
-    light: true,
+    light: false,
     imageUrl: serviceInfo,
     url: '/creative',
   },
@@ -537,7 +533,7 @@ export const benefits = [
     text: 'photo_video_text',
     backgroundUrl: './src/assets/benefits/card-1.svg',
     icon: 'FaCamera',
-    light: true,
+    light: false,
     imageUrl: servicePhoto,
     url: '/photoLab',
   },
@@ -549,7 +545,7 @@ export const benefits = [
     backgroundUrl: './src/assets/benefits/card-4.svg',
     icon: 'FaCode',
     imageUrl: serviceDev,
-    light: true,
+    light: false,
     url: '/development',
   },
   {
@@ -558,7 +554,7 @@ export const benefits = [
     text: 'publicite_text',
     backgroundUrl: './src/assets/benefits/card-6.svg',
     icon: 'FaLightbulb',
-    light: true,
+    light: false,
     imageUrl: servicePub,
     url: '/advertisement',
   },
@@ -570,7 +566,7 @@ export const benefits = [
     backgroundUrl: './src/assets/benefits/card-3.svg',
     icon: 'GiDiamondRing',
     imageUrl: serviceWeeding,
-    light: true,
+    light: false,
     url: '/wedding',
   },
   {
@@ -579,7 +575,7 @@ export const benefits = [
     text: 'audio_text',
     backgroundUrl: './src/assets/benefits/card-5.svg',
     icon: 'FaMusic',
-    light: true,
+    light: false,
     imageUrl: serviceAudio,
     url: '/sounds',
   },

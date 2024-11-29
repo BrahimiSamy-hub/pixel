@@ -28,7 +28,6 @@ const images = [
   { src: carte8, alt: 'Visit Card' },
   { src: carte9, alt: 'Visit Card' },
   { src: carte10, alt: 'Visit Card' },
-  { src: carte11, alt: 'Visit Card' },
 ]
 
 const ImageComponent = ({ src, alt }) => (

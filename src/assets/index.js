@@ -124,7 +124,7 @@ import davinci from './collaboration/davinvi.svg'
 import figma from './collaboration/figma.svg'
 import photoshop from './collaboration/photoshop.svg'
 
-import pixelH from './pixelH.png'
+import pixelH from './pixelH.svg'
 
 import rollUp from '../assets/portfolio/rollUp/rollUp.jpg'
 import rollUp1 from '../assets/portfolio/rollUp/rollUp1.jpg'
@@ -334,9 +334,9 @@ import shooting12 from '../assets/portfolio/Shooting/shooting12.jpg'
 
 import antic from '../assets/portfolio/landingPage/AnticMockup.jpg'
 import beleghni from '../assets/portfolio/landingPage/BeleghniMockup.jpg'
-import broker from '../assets/portfolio/landingPage/BrokerMockup.png'
-import pixel from '../assets/portfolio/landingPage/PixelMockup.png'
-import comfortSpace from '../assets/portfolio/landingPage/ComfortSpaceMockup.png'
+import broker from '../assets/portfolio/landingPage/BrokerMockup.jpg'
+import pixel from '../assets/portfolio/landingPage/PixelMockup.jpg'
+import comfortSpace from '../assets/portfolio/landingPage/ComfortSpaceMockup.jpg'
 
 export {
   logoSVG,

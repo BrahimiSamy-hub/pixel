@@ -1,5 +1,7 @@
 {
   "portfolioTag": "notre travail en action",
+  "wolfrules": "Explore the game rules",
+  "click": "Click here",
   "available": "Disponible",
   "expertise": "Une expertise de confiance",
   "titleWerWerwolf": "Werewolves",
@@ -175,7 +177,7 @@
   "video": "Vidéo",
   "packaging": "Emballage",
   "photo": "Photo",
-  "apps": "Applications",
+  "apps": "Site Web",
   "printing": "Impression",
 
   "weedingP": "Mariage",
@@ -215,33 +217,21 @@
         "title": "Effet Sonore",
         "description": "Spécialisé dans la création d'effets sonores de haute qualité qui ajoutent une dimension immersive à vos productions audiovisuelles.",
         "price": "4000",
-        "features": [
-          "Un chatbot IA avancé capable de comprendre des requêtes complexes",
-          "Un tableau de bord analytique pour suivre vos conversations",
-          "Support prioritaire pour résoudre rapidement les problèmes"
-        ]
+        "features": []
       },
       {
         "id": "1",
         "title": "Voix Off",
         "description": "Notre équipe de voix talentueuses est prête à transmettre votre message avec clarté et impact.",
         "price": "6000",
-        "features": [
-          "Un chatbot IA capable de comprendre vos requêtes",
-          "Recommandations personnalisées basées sur vos préférences",
-          "Possibilité d'explorer l'application sans aucun coût"
-        ]
+        "features": []
       },
       {
         "id": "2",
         "title": "Production Musicale Originale",
         "description": "Bénéficiez d'une approche créative et collaborative, visant à réaliser de la musique personnalisée, adaptée à vos besoins spécifiques.",
         "price": "10000",
-        "features": [
-          "Un chatbot IA capable de comprendre vos requêtes",
-          "Recommandations personnalisées basées sur vos préférences",
-          "Possibilité d'explorer l'application sans aucun coût"
-        ]
+        "features": []
       }
     ],
     "photo": [
@@ -278,7 +268,11 @@
         "title": "Pack Gestion des Réseaux Sociaux",
         "description": "Nous vous aiderons à établir une présence forte et engageante sur les plateformes numériques.",
         "price": "40000",
-        "features": ["*", "*", "*", "*", "*", "*", "*"]
+        "features": [
+          "Creation de contenu",
+          "Gestion de la page",
+          "Stratégie marketing"
+        ]
       }
     ],
     "wedding": [
@@ -527,7 +521,7 @@
     "button": "Portfolio"
   },
   "categories": {
-    "title": "Choisissez une catégorie",
+    "title": "Catégories",
     "found": "{{count}} Catégorie(s) trouvée(s)",
     "newLabel": "Nouveau"
   },

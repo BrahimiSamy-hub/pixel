@@ -1,5 +1,7 @@
 {
   "expertise": "Exeprtise you can trust",
+  "wolfrules": "Explore the game rules",
+  "click": "Click here",
   "available": "Available",
   "portfolioTag": "our work in action",
   "titleWerWerwolf": "Werewolves",
@@ -100,17 +102,17 @@
   "details": "more details",
   "our_services": "Our Services",
   "our_services_description": "The art of visual for the service of your vision.",
-  "photo_video": "Photo / Video",
+  "photo_video": "Pixel Photo Lab",
   "photo_video_text": "The art of visual for the service of your vision.",
-  "infographie": "Infographie",
+  "infographie": "Pixel Creative",
   "infographie_text": "Transform your ideas into impactful visuals.",
-  "weeding": "Wedding",
+  "weeding": "Pixel Weddings",
   "weeding_text": "Capture your precious moments, as every single instant deserves to be preserved.",
-  "development": "Development",
+  "development": "Pixel Development",
   "development_text": "Your partner in digital development.",
-  "audio": "Audio",
+  "audio": "Pixel Sounds",
   "audio_text": "Experience the art of sound at your fingertips with your audio partner.",
-  "publicite": "Publicité",
+  "publicite": "Pixel Advertisement",
   "publicite_text": "Bring your brand to life and enhance your visibility to elevate your presence.",
 
   "heroTitle": "Explore the Possibilities of Content Creation with",
@@ -173,7 +175,7 @@
   "video": "Video",
   "packaging": "Packaging",
   "photo": "Photo",
-  "apps": "Application",
+  "apps": "Websites",
   "printing": "Printing",
   "weedingP": "Wedding",
   "logo": "Logo",
@@ -213,33 +215,21 @@
         "title": "Sound Effect",
         "description": "Specializing in creating high-quality sound effects that add an immersive dimension to your audiovisual productions.",
         "price": "4000",
-        "features": [
-          "An advanced AI chatbot capable of understanding complex requests",
-          "An analytical dashboard to track your conversations",
-          "Priority support for quick issue resolution"
-        ]
+        "features": []
       },
       {
         "id": "1",
         "title": "Voice Over",
         "description": "Our talented voice team is ready to convey your message with clarity and impact.",
         "price": "6000",
-        "features": [
-          "An AI chatbot capable of understanding your requests",
-          "Personalized recommendations based on your preferences",
-          "Ability to explore the application at no cost"
-        ]
+        "features": []
       },
       {
         "id": "2",
         "title": "Original Music Production",
         "description": "Benefit from a creative and collaborative approach, aiming to create custom music tailored to your specific needs.",
         "price": "10000",
-        "features": [
-          "An AI chatbot capable of understanding your requests",
-          "Personalized recommendations based on your preferences",
-          "Ability to explore the application at no cost"
-        ]
+        "features": []
       }
     ],
     "photo": [
@@ -276,7 +266,11 @@
         "title": "Social Media Management Pack",
         "description": "We will help you establish a strong and engaging presence on digital platforms.",
         "price": "40000",
-        "features": ["*", "*", "*", "*", "*", "*", "*"]
+        "features": [
+          "Content creation",
+          "Page management",
+          "Marketing strategy"
+        ]
       }
     ],
     "wedding": [
@@ -453,7 +447,7 @@
         "id": "1",
         "title": "Landing Page",
         "description": "Whether you are a startup or an established business, we provide the tools and expertise you need.",
-        "price": "On Quote",
+        "price": "On Request",
         "features": [
           "Custom design",
           "Number of pages as desired",
@@ -465,7 +459,7 @@
         "id": "2",
         "title": "Mobile Application",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "price": "On Quote",
+        "price": "On Request",
         "features": [
           "Custom design",
           "User-friendly interface",
@@ -545,7 +539,7 @@
   },
 
   "categories": {
-    "title": "Choose a category",
+    "title": "Categories",
     "found": "{{count}} Category(s) found",
     "newLabel": "New"
   }

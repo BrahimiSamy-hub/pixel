@@ -51,7 +51,7 @@ const Benefits = () => {
                 {item.light && <GradientLight />}
 
                 <div className='absolute inset-0 bg-n-8'>
-                  <div className='absolute inset-0 opacity-10 transition-opacity hover:opacity-40  '>
+                  <div className='absolute inset-0 opacity-25 transition-opacity hover:opacity-50  '>
                     {item.imageUrl && (
                       <img
                         loading='lazy'

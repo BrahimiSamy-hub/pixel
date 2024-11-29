@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import Section from './Section'
 import { usePosters } from '../context/PostersContext'
 import { useCart } from '../context/CartContext' // Import the useCart hook
+import { Link } from 'react-router-dom'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -202,16 +203,16 @@ const SingleProduct = () => {
 
               {singleProduct.name === 'Werewolfs' ? (
                 // Show specific text and link for the "Werewolfs" product
-                <div className='mt-5'>
-                  <p className='text-lg font-semibold text-gray-800'>
-                    Explore our exclusive Werewolfs collection!
+                <div className='mt-5 flex items-center gap-2'>
+                  <p className='text-lg font-semibold text-white'>
+                    {t('wolfrules')}
                   </p>
-                  <a
-                    href='/werewolfs-collection'
-                    className='text-[#F17A28] underline mt-2 block'
+                  <Link
+                    to='/rules'
+                    className='text-[#F17A28] underline block font-bold'
                   >
-                    Click here to see more.
-                  </a>
+                    {t('click')}
+                  </Link>
                 </div>
               ) : (
                 <>

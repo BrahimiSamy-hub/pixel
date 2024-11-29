@@ -83,7 +83,7 @@ const Header = () => {
       >
         {/* <HeaderUp /> */}
         <nav className='flex items-center justify-between px-4 lg:px-7.5 xl:px-10 max-lg:py-2'>
-          <Link className='block ' to='/' draggable='false '>
+          <Link className='block ' to='/' draggable='false'>
             <img src={logoSVG} alt='Pixel' className='w-40' draggable='false' />
           </Link>
           <nav
@@ -109,11 +109,48 @@ const Header = () => {
                   {t(item.titleKey)}
                 </Link>
               ))}
+              <div className='relative lg:hidden block' ref={dropdownRef}>
+                <button
+                  className='p-3 bg-[#0E0C15] border rounded border-[#26242C] flex items-center'
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                  <img
+                    src={
+                      languages.find(
+                        (lang) =>
+                          lang.code ===
+                          (localStorage.getItem('i18nextLng') || 'fr')
+                      )?.flag
+                    }
+                    alt='Current Language'
+                    className='inline-block mr-2 object-contain'
+                  />
+                  <FaChevronDown className='' />
+                </button>
+                {dropdownOpen && (
+                  <div className='absolute border border-[#26242C] rounded overflow-hidden'>
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className='flex items-center w-full p-2 pr-6 hover:bg-[#F18A28] bg-n-7'
+                      >
+                        <img
+                          src={lang.flag}
+                          alt={lang.name}
+                          className='mr-2 object-contain'
+                        />
+                        {lang.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             <HamburgerMenu />
           </nav>
-          <div className='relative max-sm:hidden lg:block' ref={dropdownRef}>
+          <div className='relative lg:block hidden ' ref={dropdownRef}>
             <button
               className='p-2 bg-[#0E0C15] border rounded border-[#26242C] hover:border-[#F18A27] flex items-center'
               onClick={() => setDropdownOpen(!dropdownOpen)}

@@ -55,7 +55,7 @@ const subcategoryComponents = {
   logo: PortfolioLogo,
   visitCards: PortfolioCards,
   't-shirt': PortfolioTshirts,
-  flyers: PortfolioFlyer,
+  'flyers / dépliant': PortfolioFlyer,
   books: PortfolioBooks,
   socialMediaPosts: PortfolioPosts,
 
@@ -83,7 +83,7 @@ const subcategoryComponents = {
   tableau: PortfolioTableau,
 
   Websites: PortfolioWebsite,
-  // 'Mobile Application': PortfolioMobile,
+  'Mobile Application': PortfolioMobile,
 
   photo: PortfolioWeeding,
 }
@@ -95,13 +95,13 @@ const Portfolio = () => {
     [t('graphicDesign')]: [
       'logo',
       'visitCards',
-      'flyers',
+      'flyers / dépliant',
       // 'emballage',
       'stickers',
       'socialMediaPosts',
     ],
     [t('menu')]: ['Menu A4', 'Menu TV', 'Menu Book'],
-    [t('video')]: ['trailers', 'reels', 'cinematographie', 'spotPublicitaire'],
+    [t('video')]: ['reels', 'trailers', 'cinematographie', 'spotPublicitaire'],
     [t('photo')]: ['PhotoShoot', 'Product photography', 'Food photography'],
     [t('printing')]: [
       'Roll Up',

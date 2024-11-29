@@ -2,28 +2,18 @@ import React, { Suspense } from 'react'
 
 const videos = [
   {
-    src: 'https://www.youtube.com/embed/bVw_qsCNu30',
-    title: 'Crunchy Restaurant Promo',
-  },
-  {
-    src: 'https://www.youtube.com/embed/cgq_AYufDoE',
-    title: 'Chemsou Concert Trailer',
-  },
-  {
     src: 'https://www.youtube.com/embed/EcKI9b4DxEw',
     title: 'Azas Rugs Promo',
   },
-  {
-    src: 'https://www.youtube.com/embed/OipP4mS7uTg',
-    title: 'Benchenett Concert Trailer',
-  },
+
   {
     src: 'https://www.youtube.com/embed/CJZFsMx9CaQ',
     title: 'Articore Presentation',
   },
   {
-    src: 'https://www.youtube.com/embed/4kCO6niEbtg',
-    title: 'Articore Presentation',
+    src: 'https://youtube.com/embed/r442kz0PFFA',
+    title:
+      'Couverture de la Soutenance des Médecins | Célébrons l’Excellence Médicale',
   },
   {
     src: 'https://www.youtube.com/embed/fetDAomZ118',
@@ -34,12 +24,16 @@ const videos = [
     title: 'AURASIS Festival Opening',
   },
   {
-    src: 'https://youtube.com/embed/5WPD6b8Z_Cg',
-    title: 'The Perfect Crunchy Burger',
+    src: 'https://www.youtube.com/embed/4kCO6niEbtg',
+    title: 'Articore Presentation',
   },
   {
     src: 'https://www.youtube.com/embed/xXUUA87F-Ps',
     title: 'Chemsou Freeklane Couverture Concert',
+  },
+  {
+    src: 'https://www.youtube.com/embed/1v6JS9YHcs0',
+    title: 'NewTech Ceram - Publicité | Excellence en Céramique',
   },
 ]
 
