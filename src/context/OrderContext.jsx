@@ -15,7 +15,7 @@ export const OrderProvider = ({ children }) => {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/orders',
+        'https://api.pixeldz.store/orders',
         orderData,
         {
           headers: {

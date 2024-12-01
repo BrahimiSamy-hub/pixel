@@ -945,7 +945,8 @@ const Checkout = () => {
               </button>
             </form>
           )}
-          <div className='w-full h-[600px] border p-4 rounded-xl'>
+          <div className='w-full h-[600px] border p-4 rounded-xl relative'>
+            {' '}
             <h2 className='text-3xl font-extrabold mb-4 text-center'>
               {t('cart')}
             </h2>

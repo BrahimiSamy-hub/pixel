@@ -171,7 +171,10 @@ const SingleProduct = () => {
             <div className='sm:col-span-8 lg:col-span-7'>
               <h2 className='text-4xl flex justify-between'>
                 <span className='font-bold'>
-                  {singleProduct.name} - {selectedHeroName}
+                  {singleProduct.name} - {selectedHeroName}{' '}
+                  <small className='text-[18px]'>
+                    ({singleProduct.material})
+                  </small>
                 </span>
 
                 <small
@@ -195,9 +198,9 @@ const SingleProduct = () => {
                     <sup> DA</sup>
                   </small>
                 </h2>
-                <span className='text-4xl mt-5'>
-                  Material: {singleProduct.material}
-                </span>
+                {/* <span className='text-4xl mt-5'>
+                  {t('material')}: {singleProduct.material}
+                </span> */}
               </div>
 
               {singleProduct.name === 'Werewolfs' ? (
@@ -240,7 +243,7 @@ const SingleProduct = () => {
                               className={({ active, checked }) =>
                                 classNames(
                                   'relative rounded-lg cursor-pointer focus:outline-none ',
-                                  checked ? 'ring-2 ring-[#F17A28]' : ''
+                                  checked ? 'ring-4 ring-[#F17A28]' : ''
                                 )
                               }
                             >

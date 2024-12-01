@@ -17,7 +17,7 @@ const PhotoPricing = () => {
   return (
     <Swiper
       spaceBetween={16}
-      slidesPerView={1}
+      slidesPerView={1.15}
       breakpoints={{
         640: { slidesPerView: 1 },
         1024: { slidesPerView: 3.5 },
