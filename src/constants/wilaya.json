@@ -3,292 +3,292 @@
     {
       "id": 1,
       "name": "ADRAR",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 2,
       "name": "CHLEF",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 3,
       "name": "LAGHOUAT",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 4,
       "name": "OUM EL BOUAGHI",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 5,
       "name": "BATNA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 6,
       "name": "BEJAIA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 7,
       "name": "BISKRA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 8,
       "name": "BECHAR",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 9,
       "name": "BLIDA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 10,
       "name": "BOUIRA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 11,
       "name": "TAMANRASSET",
-      "deliveryMethods": { "home": 5000, "desk": 900 }
+      "deliveryMethods": { "home": 9000, "desk": 500 }
     },
     {
       "id": 12,
       "name": "TEBESSA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 13,
       "name": "TLEMCEN",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 14,
       "name": "TIARET",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 15,
       "name": "TIZI-OUZOU",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 16,
       "name": "ALGER",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 17,
       "name": "DJELFA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 18,
       "name": "JIJEL",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 19,
       "name": "SETIF",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 20,
       "name": "SAIDA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 21,
       "name": "SKIKDA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 22,
       "name": "SIDI BEL-ABBES",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 23,
       "name": "ANNABA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 24,
       "name": "GUELMA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 25,
       "name": "CONSTANTINE",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 26,
       "name": "MEDEA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 27,
       "name": "MOSTAGANEM",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 28,
       "name": "M’SILA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 29,
       "name": "MASCARA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 30,
       "name": "OUARGLA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 31,
       "name": "ORAN",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 32,
       "name": "EL BAYADH",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 33,
       "name": "ILLIZI",
-      "deliveryMethods": { "home": 5000, "desk": 900 }
+      "deliveryMethods": { "home": 9000, "desk": 500 }
     },
     {
       "id": 34,
       "name": "BORDJ BOU ARRERIDJ",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 35,
       "name": "BOUMERDES",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 36,
       "name": "EL TARF",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 37,
       "name": "TINDOUF",
-      "deliveryMethods": { "home": 5000, "desk": 900 }
+      "deliveryMethods": { "home": 9000, "desk": 500 }
     },
     {
       "id": 38,
       "name": "TISSEMSILT",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 39,
       "name": "EL OUED",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 40,
       "name": "KHENCHLA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 41,
       "name": "SOUK AHRAS",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 42,
       "name": "TIPAZA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 43,
       "name": "MILA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 44,
       "name": "AIN DEFLA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 45,
       "name": "NAAMA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 46,
       "name": "AIN TEMOUCHENT",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 47,
       "name": "GHARDAIA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 48,
       "name": "RELIZANE",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 49,
       "name": "TIMIMOUN",
-      "deliveryMethods": { "home": 5000, "desk": 900 }
+      "deliveryMethods": { "home": 9000, "desk": 500 }
     },
     {
       "id": 50,
       "name": "BORDJ BADJI MOKHTAR",
-      "deliveryMethods": { "home": 5000, "desk": 900 }
+      "deliveryMethods": { "home": 9000, "desk": 500 }
     },
     {
       "id": 51,
       "name": "OULED DJELLAL",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 52,
       "name": "BENI ABBES",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 53,
       "name": "IN SALAH",
-      "deliveryMethods": { "home": 5000, "desk": 900 }
+      "deliveryMethods": { "home": 9000, "desk": 500 }
     },
     {
       "id": 54,
       "name": "IN GUEZZAM",
-      "deliveryMethods": { "home": 5000, "desk": 900 }
+      "deliveryMethods": { "home": 9000, "desk": 500 }
     },
     {
       "id": 55,
       "name": "TOUGGOURT",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 56,
       "name": "DJANET",
-      "deliveryMethods": { "home": 5000, "desk": 900 }
+      "deliveryMethods": { "home": 9000, "desk": 500 }
     },
     {
       "id": 57,
       "name": "EL MGHAIER",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     },
     {
       "id": 58,
       "name": "EL MENIAA",
-      "deliveryMethods": { "home": 500, "desk": 900 }
+      "deliveryMethods": { "home": 900, "desk": 500 }
     }
   ]
 }

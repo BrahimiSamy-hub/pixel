@@ -150,6 +150,7 @@ const Cart = () => {
                                 : ''
                             }`}
                             onClick={toggleCart}
+                            disabled={handleCheckoutClick}
                           >
                             {t('checkout')}
                           </Link>
