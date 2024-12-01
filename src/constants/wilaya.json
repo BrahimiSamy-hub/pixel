@@ -1,62 +1,294 @@
 {
   "wilayas": [
-    "1 - ADRAR",
-    "2 - CHLEF",
-    "3 - LAGHOUAT",
-    "4 - OUM EL BOUAGHI",
-    "5 - BATNA",
-    "6 - BEJAIA",
-    "7 - BISKRA",
-    "8 - BECHAR",
-    "9 - BLIDA",
-    "10 - BOUIRA",
-    "11 - TAMANRASSET",
-    "12 - TEBESSA",
-    "13 - TLEMCEN",
-    "14 - TIARET",
-    "15 - TIZI-OUZOU",
-    "16 - ALGER",
-    "17 - DJELFA",
-    "18 - JIJEL",
-    "19 - SETIF",
-    "20 - SAIDA",
-    "21 - SKIKDA",
-    "22 - SIDI BEL-ABBES",
-    "23 - ANNABA",
-    "24 - GUELMA",
-    "25 - CONSTANTINE",
-    "26 - MEDEA",
-    "27 - MOSTAGANEM",
-    "28 - M’SILA",
-    "29 - MASCARA",
-    "30 - OUARGLA",
-    "31 - ORAN",
-    "32 - EL BAYADH",
-    "33 - ILLIZI",
-    "34 - BORDJ BOU ARRERIDJ",
-    "35 - BOUMERDES",
-    "36 - EL TARF",
-    "37 - TINDOUF",
-    "38 - TISSEMSILT",
-    "39 - EL OUED",
-    "40 - KHENCHLA",
-    "41 - SOUK AHRAS",
-    "42 - TIPAZA",
-    "43 - MILA",
-    "44 - AIN DEFLA",
-    "45 - NAAMA",
-    "46 - AIN TEMOUCHENT",
-    "47 - GHARDAIA",
-    "48 - RELIZANE",
-    "49 - TIMIMOUN",
-    "50 - BORDJ BADJI MOKHTAR",
-    "51 - OULED DJELLAL",
-    "52 - BENI ABBES",
-    "53 - IN SALAH",
-    "54 - IN GUEZZAM",
-    "55 - TOUGGOURT",
-    "56 - DJANET",
-    "57 - EL MGHAIER",
-    "58 - EL MENIAA"
+    {
+      "id": 1,
+      "name": "ADRAR",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 2,
+      "name": "CHLEF",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 3,
+      "name": "LAGHOUAT",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 4,
+      "name": "OUM EL BOUAGHI",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 5,
+      "name": "BATNA",
+      "deliveryMethods": { "home": 500, "desk": 200 }
+    },
+    {
+      "id": 6,
+      "name": "BEJAIA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 7,
+      "name": "BISKRA",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 8,
+      "name": "BECHAR",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 9,
+      "name": "BLIDA",
+      "deliveryMethods": { "home": 500, "desk": 200 }
+    },
+    {
+      "id": 10,
+      "name": "BOUIRA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 11,
+      "name": "TAMANRASSET",
+      "deliveryMethods": { "home": 1000, "desk": 500 }
+    },
+    {
+      "id": 12,
+      "name": "TEBESSA",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 13,
+      "name": "TLEMCEN",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 14,
+      "name": "TIARET",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 15,
+      "name": "TIZI-OUZOU",
+      "deliveryMethods": { "home": 500, "desk": 200 }
+    },
+    {
+      "id": 16,
+      "name": "ALGER",
+      "deliveryMethods": { "home": 400, "desk": 100 }
+    },
+    {
+      "id": 17,
+      "name": "DJELFA",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 18,
+      "name": "JIJEL",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 19,
+      "name": "SETIF",
+      "deliveryMethods": { "home": 500, "desk": 200 }
+    },
+    {
+      "id": 20,
+      "name": "SAIDA",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 21,
+      "name": "SKIKDA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 22,
+      "name": "SIDI BEL-ABBES",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 23,
+      "name": "ANNABA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 24,
+      "name": "GUELMA",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 25,
+      "name": "CONSTANTINE",
+      "deliveryMethods": { "home": 500, "desk": 200 }
+    },
+    {
+      "id": 26,
+      "name": "MEDEA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 27,
+      "name": "MOSTAGANEM",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 28,
+      "name": "M’SILA",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 29,
+      "name": "MASCARA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 30,
+      "name": "OUARGLA",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 31,
+      "name": "ORAN",
+      "deliveryMethods": { "home": 500, "desk": 200 }
+    },
+    {
+      "id": 32,
+      "name": "EL BAYADH",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 33,
+      "name": "ILLIZI",
+      "deliveryMethods": { "home": 1000, "desk": 500 }
+    },
+    {
+      "id": 34,
+      "name": "BORDJ BOU ARRERIDJ",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 35,
+      "name": "BOUMERDES",
+      "deliveryMethods": { "home": 500, "desk": 200 }
+    },
+    {
+      "id": 36,
+      "name": "EL TARF",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 37,
+      "name": "TINDOUF",
+      "deliveryMethods": { "home": 1000, "desk": 500 }
+    },
+    {
+      "id": 38,
+      "name": "TISSEMSILT",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 39,
+      "name": "EL OUED",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 40,
+      "name": "KHENCHLA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 41,
+      "name": "SOUK AHRAS",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 42,
+      "name": "TIPAZA",
+      "deliveryMethods": { "home": 500, "desk": 200 }
+    },
+    {
+      "id": 43,
+      "name": "MILA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 44,
+      "name": "AIN DEFLA",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 45,
+      "name": "NAAMA",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 46,
+      "name": "AIN TEMOUCHENT",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 47,
+      "name": "GHARDAIA",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 48,
+      "name": "RELIZANE",
+      "deliveryMethods": { "home": 600, "desk": 250 }
+    },
+    {
+      "id": 49,
+      "name": "TIMIMOUN",
+      "deliveryMethods": { "home": 1000, "desk": 500 }
+    },
+    {
+      "id": 50,
+      "name": "BORDJ BADJI MOKHTAR",
+      "deliveryMethods": { "home": 1000, "desk": 500 }
+    },
+    {
+      "id": 51,
+      "name": "OULED DJELLAL",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 52,
+      "name": "BENI ABBES",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 53,
+      "name": "IN SALAH",
+      "deliveryMethods": { "home": 1000, "desk": 500 }
+    },
+    {
+      "id": 54,
+      "name": "IN GUEZZAM",
+      "deliveryMethods": { "home": 1000, "desk": 500 }
+    },
+    {
+      "id": 55,
+      "name": "TOUGGOURT",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    },
+    {
+      "id": 56,
+      "name": "DJANET",
+      "deliveryMethods": { "home": 1000, "desk": 500 }
+    },
+    {
+      "id": 57,
+      "name": "EL MGHAIER",
+      "deliveryMethods": { "home": 700, "desk": 300 }
+    },
+    {
+      "id": 58,
+      "name": "EL MENIAA",
+      "deliveryMethods": { "home": 800, "desk": 400 }
+    }
   ]
 }

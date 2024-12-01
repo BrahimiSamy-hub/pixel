@@ -1,4 +1,3 @@
-// Categories.js
 import Section from '../components/Section'
 import ButtonGradient from '../assets/svg/ButtonGradient'
 import { Link } from 'react-router-dom'
@@ -27,49 +26,59 @@ const Categories = () => {
               </h2>
 
               <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-                {categories.map((category, index) => (
-                  <Link
-                    key={index}
-                    to={`/shop/${category._id}`} // Keep the route format
-                    state={{ selectedCategory: category }} // Pass the selected category data
-                    draggable='false'
-                    className='group relative'
-                    data-aos='flip-up'
-                  >
-                    <div className='overflow-hidden lg:aspect-none group-hover:opacity-75 bg-[#c9c9c9] rounded'>
-                      {category.new && (
-                        <span className='absolute top-0 left-0 bg-red-500 text-white text-xs font-bold px-2 py-1 animate-pulse rounded-br-full'>
-                          {t('categories.newLabel')}
-                        </span>
-                      )}
-                      <img
-                        src={category.image.url}
-                        alt={
-                          currentLanguage === 'fr'
-                            ? category.frName
-                            : category.engName
-                        }
-                        className='h-full w-full object-contain object-center lg:h-full lg:w-full rounded'
-                        loading='lazy'
-                      />
-                    </div>
-                    <div className='mt-4 flex justify-center'>
-                      <div>
-                        <h3 className='text-xl font-bold'>
-                          <button>
-                            <span
-                              aria-hidden='true'
-                              className='absolute inset-0'
-                            />
-                            {currentLanguage === 'fr'
+                {categories.map((category, index) => {
+                  const isNeons = category.engName === 'Neons' // Check if it's the "Neons" category
+                  return (
+                    <div
+                      key={index}
+                      className={`group relative ${
+                        isNeons ? 'cursor-not-allowed opacity-50' : ''
+                      }`} // Disable and change appearance for Neons
+                      data-aos='flip-up'
+                    >
+                      <div className='overflow-hidden lg:aspect-none group-hover:opacity-75 bg-[#c9c9c9] rounded'>
+                        <img
+                          src={category.image.url}
+                          alt={
+                            currentLanguage === 'fr'
                               ? category.frName
-                              : category.engName}
-                          </button>
-                        </h3>
+                              : category.engName
+                          }
+                          className='h-full w-full object-contain object-center lg:h-full lg:w-full rounded'
+                          loading='lazy'
+                        />
                       </div>
+                      <div className='mt-4 flex justify-center'>
+                        <div>
+                          <h3 className='text-xl font-bold'>
+                            <button>
+                              <span
+                                aria-hidden='true'
+                                className='absolute inset-0'
+                              />
+                              {isNeons ? (
+                                <span className=''>{t('COMING SOON')}</span>
+                              ) : currentLanguage === 'fr' ? (
+                                category.frName
+                              ) : (
+                                category.engName
+                              )}
+                            </button>
+                          </h3>
+                        </div>
+                      </div>
+                      {/* Disable the link for "Neons" category */}
+                      {!isNeons && (
+                        <Link
+                          to={`/shop/${category._id}`}
+                          state={{ selectedCategory: category }}
+                          draggable='false'
+                          className='absolute inset-0'
+                        />
+                      )}
                     </div>
-                  </Link>
-                ))}
+                  )
+                })}
               </div>
             </div>
           </div>

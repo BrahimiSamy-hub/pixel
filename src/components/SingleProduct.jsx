@@ -58,26 +58,25 @@ const SingleProduct = () => {
       setLoading(true) // Set loading to true
     }
   }, [id])
-
   useEffect(() => {
-    if (singleProduct && isFirstLoad) {
-      const firstHero = singleProduct.heroes?.[0]
-      const firstSize = singleProduct.sizes?.[0]
+    if (singleProduct && !loading) {
+      const firstHero = singleProduct.heroes[0]
+      const firstSize = singleProduct.sizes[0]
 
       if (firstHero) {
-        console.log('Default Hero:', firstHero.name)
         setSelectedImage(firstHero.cardImage?.url || '')
         setSelectedColor(firstHero.cardImage?.url || '')
         setSelectedHeroName(firstHero.name || singleProduct.name)
       }
+
       if (firstSize) {
-        console.log('Default Size:', firstSize.name)
         setSelectedSize(firstSize.name || '')
       }
 
       setIsFirstLoad(false)
     }
-  }, [singleProduct, isFirstLoad])
+  }, [singleProduct, loading])
+
   const handleHeroChange = (hero) => {
     setSelectedColor(hero.cardImage?.url)
     setSelectedImage(hero.cardImage?.url)

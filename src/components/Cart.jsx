@@ -73,7 +73,7 @@ const Cart = () => {
                               className='-my-6 divide-y divide-gray-200'
                             >
                               {cartItems.map((product) => (
-                                <li key={product.id} className='flex py-6'>
+                                <li key={product._id} className='flex py-6'>
                                   <div className='h-1/4 w-1/4 overflow-hidden rounded-md border border-gray-200 bg-[#c9c9c9]'>
                                     <img
                                       loading='lazy'
@@ -96,6 +96,9 @@ const Cart = () => {
                                         </p>
                                       </div>
                                     </div>
+                                    <p className='text-gray-500'>
+                                      {product.size}
+                                    </p>
                                     <div className='flex flex-1 items-end justify-between text-sm'>
                                       <p className='text-gray-500'>
                                         {t('qty')} {product.quantity}
