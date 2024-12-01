@@ -22,7 +22,7 @@ const ImageComponent = ({ src, alt }) => (
 const Tableau = () => {
   return (
     <PhotoProvider>
-      <div className='grid grid-cols-3 gap-5'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-2 px-0'>
         {images.map((image, index) => (
           <Suspense fallback={<div>Loading...</div>} key={index}>
             <ImageComponent src={image.src} alt={image.alt} />
