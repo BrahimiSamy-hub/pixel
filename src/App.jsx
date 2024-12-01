@@ -28,7 +28,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Rules from './pages/RulesLoup'
 import AboutUs from './pages/AboutUs'
-
+import 'react-toastify/dist/ReactToastify.css'
 const App = () => {
   const [language, setLanguage] = useState(
     localStorage.getItem('i18nextLng') || 'fr'

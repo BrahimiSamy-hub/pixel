@@ -141,11 +141,30 @@ const SingleProduct = () => {
         crossesOffset='lg:translate-y-[5.25rem]'
         customPaddings
       >
-        <div className='container flex w-full items-center overflow-hidden mb-10'>
+        <div className='container  w-full items-center overflow-hidden mb-10'>
           <div className='grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8'>
             {/* Image Gallery */}
             <div className='sm:col-span-4 lg:col-span-5'>
-              <div className='flex flex-col relative'>
+              <h2 className='text-2xl justify-between mb-2 hidden max-sm:flex'>
+                <span className='font-bold'>
+                  {singleProduct.name} - {selectedHeroName}{' '}
+                  <small className='text-[18px]'>
+                    ({singleProduct.material})
+                  </small>
+                </span>
+
+                <small
+                  className={classNames(
+                    'text-xl rounded p-2 h-full flex flex-row text-center',
+                    singleProduct.stock
+                      ? 'text-green-500 bg-green-500/15'
+                      : 'text-red-500 bg-red-500/15'
+                  )}
+                >
+                  {singleProduct.stock ? t('available') : t('Unavailable')}
+                </small>
+              </h2>
+              <div className='relative'>
                 <img
                   src={selectedImage}
                   alt='Product image'
@@ -169,7 +188,7 @@ const SingleProduct = () => {
 
             {/* Product Details */}
             <div className='sm:col-span-8 lg:col-span-7'>
-              <h2 className='text-4xl flex justify-between'>
+              <h2 className='text-2xl justify-between flex max-sm:hidden'>
                 <span className='font-bold'>
                   {singleProduct.name} - {selectedHeroName}{' '}
                   <small className='text-[18px]'>
@@ -179,7 +198,7 @@ const SingleProduct = () => {
 
                 <small
                   className={classNames(
-                    'text-xl rounded p-2 h-full flex text-center',
+                    'text-xl rounded p-2 h-full flex flex-row text-center',
                     singleProduct.stock
                       ? 'text-green-500 bg-green-500/15'
                       : 'text-red-500 bg-red-500/15'
@@ -189,8 +208,8 @@ const SingleProduct = () => {
                 </small>
               </h2>
 
-              <div className='mt-2'>
-                <h2 className='h2 text-[#F17A28] font-bold'>
+              <div className=''>
+                <h2 className='h1 text-[#F17A28] font-bold'>
                   {singleProduct.price ||
                     sizes.find((size) => size.name === selectedSize)?.price ||
                     t('Price unavailable')}
@@ -198,12 +217,9 @@ const SingleProduct = () => {
                     <sup> DA</sup>
                   </small>
                 </h2>
-                {/* <span className='text-4xl mt-5'>
-                  {t('material')}: {singleProduct.material}
-                </span> */}
               </div>
 
-              {singleProduct.name === 'Werewolfs' ? (
+              {singleProduct.name === 'LES LOUPS GAROUS DE THIERCELIEUX' ? (
                 // Show specific text and link for the "Werewolfs" product
                 <div className='mt-5 flex items-center gap-2'>
                   <p className='text-lg font-semibold text-white'>
@@ -235,7 +251,7 @@ const SingleProduct = () => {
                         <RadioGroup.Label className='sr-only'>
                           {t('chooseColor')}
                         </RadioGroup.Label>
-                        <div className='grid grid-cols-4 items-center sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-2'>
+                        <div className='grid grid-cols-6 items-center sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-2'>
                           {heroes.map((hero) => (
                             <RadioGroup.Option
                               key={hero._id}
@@ -252,7 +268,7 @@ const SingleProduct = () => {
                                   <img
                                     src={hero.mainImage?.url}
                                     alt={hero.name}
-                                    className='object-contain rounded-md '
+                                    className='object-contain rounded-md'
                                     onClick={() =>
                                       handleImageChange(hero.cardImage?.url)
                                     }
@@ -288,7 +304,13 @@ const SingleProduct = () => {
                             }
                             disabled={!size.isAvailable} // Disable button if size is not available
                           >
-                            {size.name}
+                            <div> {size.name}</div>
+                            <div className='text-[#f17a28]'>
+                              {size.price}{' '}
+                              <small className='text-sm'>
+                                <sup> DA</sup>
+                              </small>{' '}
+                            </div>
                           </button>
                         ))}
                       </div>

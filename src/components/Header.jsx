@@ -26,7 +26,7 @@ const Header = () => {
   const { pathname } = useLocation()
   const [openNavigation, setOpenNavigation] = useState(false)
   const { t, i18n } = useTranslation()
-
+  const [dropdownOpenMobile, setDropdownOpenMobile] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
 
@@ -46,6 +46,7 @@ const Header = () => {
     i18next.changeLanguage(lng)
     localStorage.setItem('i18nextLng', lng)
     setDropdownOpen(false)
+    setDropdownOpenMobile(false)
   }
 
   const toggleNavigation = () => {
@@ -112,7 +113,7 @@ const Header = () => {
               <div className='relative lg:hidden block' ref={dropdownRef}>
                 <button
                   className='p-3 bg-[#0E0C15] border rounded border-[#26242C] flex items-center'
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  onClick={() => setDropdownOpenMobile(!dropdownOpenMobile)}
                 >
                   <img
                     src={
@@ -127,7 +128,7 @@ const Header = () => {
                   />
                   <FaChevronDown className='' />
                 </button>
-                {dropdownOpen && (
+                {dropdownOpenMobile && (
                   <div className='absolute border border-[#26242C] rounded overflow-hidden'>
                     {languages.map((lang) => (
                       <button
