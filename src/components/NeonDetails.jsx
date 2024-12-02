@@ -40,7 +40,9 @@ const NeonPricing = () => {
               <div className='text-[2.5rem] leading-none font-bold'>
                 {item.price} {/* Only show "DA" if price is not 'Devis' */}
                 {item.price !== 'Sur Devis' && item.price !== 'On Request' && (
-                  <sup className='h4 font-bold'> DA</sup>
+                  <sup className='h6 font-bold'>
+                    <small> DA</small>
+                  </sup>
                 )}
               </div>
             </div>

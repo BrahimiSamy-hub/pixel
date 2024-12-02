@@ -34,7 +34,10 @@ const WeedingPricing = () => {
             item.price
           ) : (
             <>
-              {item.price} <sup className='h4 font-bold'>DA</sup>
+              {item.price}
+              <sup className='h6 font-bold'>
+                <sup> DA</sup>
+              </sup>
             </>
           )
 
@@ -49,13 +52,11 @@ const WeedingPricing = () => {
 
               {/* Conditionally render "starting from" only if price is not 'Devis' or 'On Quote' */}
               {item.price !== 'Devis' && item.price !== 'On Quote' && (
-                <small>{t('startingFrom')}</small>
+                <small className='h6'>{t('startingFrom')}</small>
               )}
 
               <div className='flex items-center h-[5.5rem] mb-6'>
-                <div className='text-[3.5rem] leading-none font-bold'>
-                  {price}
-                </div>
+                <div className='h1 leading-none font-bold'>{price}</div>
               </div>
 
               <Button

@@ -45,9 +45,6 @@ const SingleProduct = () => {
 
   useEffect(() => {
     if (id) {
-      // Reset states immediately when product ID changes
-
-      // Fetch the new product and stop loading after completion
       fetchSingleProduct(id).finally(() => setLoading(false))
       setSelectedImage('')
       setSelectedColor('')
@@ -55,7 +52,7 @@ const SingleProduct = () => {
       setSelectedSize('')
       setIsAnimating(false)
       setIsFirstLoad(true)
-      setLoading(true) // Set loading to true
+      setLoading(true)
     }
   }, [id])
   useEffect(() => {

@@ -40,11 +40,13 @@ const InfographiePricing = () => {
             )}
 
             <div className='flex items-center h-[5.5rem] mb-6'>
-              <div className='text-[3.5rem] leading-none font-bold'>
+              <div className='h1 leading-none font-bold'>
                 {item.price}{' '}
                 {/* Only show "DA" if price is not 'Devis' or 'On Quote' */}
                 {item.price !== 'Devis' && item.price !== 'On Quote' && (
-                  <sup className='h4 font-bold'> DA</sup>
+                  <sup className='h6 font-bold'>
+                    <small> DA</small>
+                  </sup>
                 )}
               </div>
             </div>

@@ -33,10 +33,10 @@ const PhotoPricing = () => {
             </p>
             <small> {t('startingFrom')}</small>
             <div className='flex items-center h-[5.5rem] mb-6'>
-              <div className='text-[3.5rem] leading-none font-bold'>
-                {item.price}{' '}
-              </div>
-              <sup className='h4 font-bold'> DA</sup>
+              <div className='h1 leading-none font-bold'>{item.price} </div>
+              <sup className='h6 font-bold'>
+                <small> DA</small>
+              </sup>
             </div>
 
             <Button

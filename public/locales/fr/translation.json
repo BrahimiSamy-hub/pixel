@@ -458,6 +458,13 @@
           "Tableau de bord (Modification des pages)",
           "Réception des messages sur Telegram"
         ]
+      },
+      {
+        "id": "2",
+        "title": "Mobile Application",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "price": "On Request",
+        "features": []
       }
     ]
   },

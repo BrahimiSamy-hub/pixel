@@ -437,7 +437,7 @@
         "id": "0",
         "title": "E-commerce",
         "description": "Want to promote a product, and sell it online, then u need an ecom website.",
-        "price": "40000",
+        "price": "On Request",
         "features": [
           "Custom design",
           "5 Pages",
@@ -462,12 +462,7 @@
         "title": "Mobile Application",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "price": "On Request",
-        "features": [
-          "Custom design",
-          "User-friendly interface",
-          "Integration with various APIs",
-          "Real-time notifications"
-        ]
+        "features": []
       }
     ]
   },
