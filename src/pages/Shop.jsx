@@ -29,7 +29,7 @@ const Shop = () => {
     if (categoryId) {
       fetchPosters(categoryId)
     }
-  }, [categoryId, fetchPosters])
+  }, [categoryId])
 
   return (
     <>
