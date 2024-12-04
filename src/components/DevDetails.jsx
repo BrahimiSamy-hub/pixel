@@ -33,14 +33,14 @@ const DevPricing = () => {
             </p>
 
             {/* Conditionally render "starting from" only if the price is not 'Sur Devis' */}
-            {item.price !== 'devis' || item.price !== 'On Quote' || (
+            {item.price !== 'Sur Devis' && item.price !== 'On Request' && (
               <small>{t('startingFrom')}</small>
             )}
 
             <div className='flex items-center h-[5.5rem] mb-6'>
               <div className='h3 leading-none font-bold'>
                 {item.price} {/* Hide DA if price is 'Sur devis' */}
-                {item.price !== 'devis' || item.price !== 'On Quote' || (
+                {item.price !== 'Sur Devis' && item.price !== 'On Request' && (
                   <sup className='h4 font-bold'> DA</sup>
                 )}
               </div>
