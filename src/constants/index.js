@@ -317,7 +317,7 @@ export const weedingPricing = [
   {
     id: '0',
     title: 'Pack Rose',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+
     price: '29000',
     features: [
       '2 Photographe',
@@ -329,7 +329,7 @@ export const weedingPricing = [
   {
     id: '1',
     title: 'Pack Jasmin',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+
     price: '39000',
     features: [
       '4 Photographe',
@@ -343,7 +343,7 @@ export const weedingPricing = [
   {
     id: '2',
     title: 'Pack Iris',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+
     price: '48000',
     features: [
       '4 Photographe',
@@ -360,7 +360,7 @@ export const weedingPricing = [
   {
     id: '3',
     title: 'Pack Lilas',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+
     price: '68000',
     features: [
       '4 Photographe',
@@ -376,7 +376,7 @@ export const weedingPricing = [
   {
     id: '4',
     title: 'Pack Tulip',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+
     price: '99000',
     features: [
       '6 Photographe',
@@ -394,7 +394,7 @@ export const weedingPricing = [
   {
     id: '5',
     title: 'Pack Orchidée',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+
     price: '130000',
     features: [
       '6 Photographe',
@@ -510,7 +510,7 @@ export const devPricing = [
   {
     id: '2',
     title: 'Mobile APP',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.',
+
     price: 'Sur Devis',
     features: ['Design personalisé', 'Nombre de Pages au choix'],
   },

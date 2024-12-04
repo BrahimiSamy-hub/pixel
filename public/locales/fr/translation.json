@@ -281,7 +281,7 @@
       {
         "id": "0",
         "title": "Pack Rose",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "29000",
         "features": [
           "2 Photographes",
@@ -293,7 +293,7 @@
       {
         "id": "1",
         "title": "Pack Jasmin",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "39000",
         "features": [
           "4 Photographes",
@@ -307,7 +307,7 @@
       {
         "id": "2",
         "title": "Pack Iris",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "48000",
         "features": [
           "4 Photographes",
@@ -324,7 +324,7 @@
       {
         "id": "3",
         "title": "Pack Lilas",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "68000",
         "features": [
           "4 Photographes",
@@ -340,7 +340,7 @@
       {
         "id": "4",
         "title": "Pack Tulipe",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "99000",
         "features": [
           "6 Photographes",
@@ -357,7 +357,7 @@
       {
         "id": "5",
         "title": "Pack Orchidée",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "130000",
         "features": [
           "6 Photographes",
