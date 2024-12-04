@@ -279,7 +279,7 @@
       {
         "id": "0",
         "title": "Rose Pack",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "29000",
         "features": [
           "2 Photographers",
@@ -291,7 +291,7 @@
       {
         "id": "1",
         "title": "Jasmine Pack",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "39000",
         "features": [
           "4 Photographers",
@@ -305,7 +305,7 @@
       {
         "id": "2",
         "title": "Iris Pack",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "48000",
         "features": [
           "4 Photographers",
@@ -322,7 +322,7 @@
       {
         "id": "3",
         "title": "Lilac Pack",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "68000",
         "features": [
           "4 Photographers",
@@ -338,7 +338,7 @@
       {
         "id": "4",
         "title": "Tulip Pack",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "99000",
         "features": [
           "6 Photographers",
@@ -355,7 +355,7 @@
       {
         "id": "5",
         "title": "Orchid Pack",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.",
+
         "price": "130000",
         "features": [
           "6 Photographers",
@@ -460,7 +460,7 @@
       {
         "id": "2",
         "title": "Mobile Application",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
         "price": "On Request",
         "features": []
       }
