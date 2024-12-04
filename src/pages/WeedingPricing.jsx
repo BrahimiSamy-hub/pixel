@@ -13,7 +13,7 @@ const WeedingPricing = () => {
           customPaddings
         >
           <div className='container min-h-screen'>
-            <h1 className='text-center h1 mb-6 uppercase'>Weeding</h1>
+            <h1 className='text-center h1 mb-6 uppercase'>Wedding</h1>
             <PricingList />
           </div>
         </Section>
