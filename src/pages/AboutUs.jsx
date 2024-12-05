@@ -30,12 +30,12 @@ const AboutUs = () => {
       className={`pt-[4.75rem] -mt-[2.65rem] lg:pt-[7.9rem] overflow-hidden `}
     >
       <Section
-        className='pt-[15rem] lg:pt-[8rem] -mt-[5.25rem] min-h-screen '
+        className='pt-[12rem] lg:pt-[8rem] -mt-[5.25rem] min-h-screen '
         crosses
         crossesOffset='lg:translate-y-[5.25rem]'
         customPaddings
       >
-        <div className='container  '>
+        <div className='container'>
           <div className='grid grid-cols-1 md:grid-cols-1 gap-10 '>
             <div className='flex flex-col'>
               <div className='text-center justify-center items-center flex flex-col  '>
