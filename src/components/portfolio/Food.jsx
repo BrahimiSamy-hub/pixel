@@ -35,7 +35,6 @@ const ImageComponent = ({ src, alt }) => (
       <img
         src={src}
         alt={alt}
-        loading='lazy'
         className=' rounded-xl w-80 object-contain object-center'
       />
     </PhotoView>

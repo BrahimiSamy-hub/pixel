@@ -4,6 +4,7 @@ import AOS from 'aos'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
+import Snowfall from 'react-snowfall' // Import the snowfall package
 import Home from './pages/Home'
 import Photo from './pages/PhotoPricing'
 import Audio from './pages/AudioPricing'
@@ -29,6 +30,7 @@ import Footer from './components/Footer'
 import Rules from './pages/RulesLoup'
 import AboutUs from './pages/AboutUs'
 import 'react-toastify/dist/ReactToastify.css'
+
 const App = () => {
   const [language, setLanguage] = useState(
     localStorage.getItem('i18nextLng') || 'fr'
@@ -57,6 +59,16 @@ const App = () => {
 
   return (
     <Router>
+      <Snowfall // Add the snowfall effect here
+        color='#ffffff' // Customize the snow color
+        snowflakeCount={25} // Adjust the number of snowflakes
+        style={{
+          position: 'fixed', // Ensure the effect is fixed on the viewport
+          width: '100vw',
+          height: '100vh',
+          zIndex: 9999,
+        }}
+      />
       <ScrollToTop />
       <CartProvider>
         <CategoriesProvider>

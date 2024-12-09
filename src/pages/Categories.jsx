@@ -45,7 +45,6 @@ const Categories = () => {
                               : category.engName
                           }
                           className='h-full w-full object-contain object-center lg:h-full lg:w-full rounded'
-                          loading='lazy'
                         />
                       </div>
                       <div className='mt-4 flex justify-center'>

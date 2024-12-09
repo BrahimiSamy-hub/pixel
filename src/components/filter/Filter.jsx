@@ -26,7 +26,6 @@ const AccordionItem = ({ header, children, ...rest }) => (
           }`}
           src={chevron}
           alt='Chevron'
-          loading='lazy'
         />
       </>
     )}

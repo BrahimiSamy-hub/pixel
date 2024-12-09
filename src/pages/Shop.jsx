@@ -70,7 +70,6 @@ const Shop = () => {
                           src={poster.mainImage?.url}
                           alt=''
                           className='h-full w-full object-center lg:h-full lg:w-full rounded'
-                          loading='lazy'
                         />
                       </div>
                       <div className='mt-4 flex justify-center'>
@@ -98,7 +97,6 @@ const Shop = () => {
                           src={poster.mainImage?.url}
                           alt=''
                           className='h-full w-full object-center lg:h-full lg:w-full rounded'
-                          loading='lazy'
                         />
                       </div>
                       <div className='mt-4 flex justify-center'>

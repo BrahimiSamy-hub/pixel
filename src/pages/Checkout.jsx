@@ -274,7 +274,6 @@ const Checkout = () => {
                     <li key={index} className='flex py-6'>
                       <div className='h-1/4 w-1/4 rounded-md overflow-hidden border border-gray-200'>
                         <img
-                          loading='lazy'
                           src={product.selectedHero.cardImage.url}
                           alt='Hero img'
                           className='h-full w-full object-contain object-center'
