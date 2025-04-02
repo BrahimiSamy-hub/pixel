@@ -59,16 +59,16 @@ const App = () => {
 
   return (
     <Router>
-      <Snowfall // Add the snowfall effect here
-        color='#ffffff' // Customize the snow color
-        snowflakeCount={25} // Adjust the number of snowflakes
+      {/* <Snowfall 
+        color='#ffffff' 
+        snowflakeCount={25}
         style={{
-          position: 'fixed', // Ensure the effect is fixed on the viewport
+          position: 'fixed', 
           width: '100vw',
           height: '100vh',
           zIndex: 9999,
         }}
-      />
+      /> */}
       <ScrollToTop />
       <CartProvider>
         <CategoriesProvider>
