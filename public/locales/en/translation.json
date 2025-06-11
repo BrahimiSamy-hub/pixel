@@ -116,6 +116,8 @@
   "audio_text": "Experience the art of sound at your fingertips with your audio partner.",
   "publicite": "Pixel Advertisement",
   "publicite_text": "Bring your brand to life and enhance your visibility to elevate your presence.",
+  "ready_to_start": "Ready to start your project",
+  "contact_us_today": "Contact us today and let's bring your vision to life",
 
   "heroTitle": "Explore the Possibilities of Content Creation with",
   "heroDescription": "Creativity has no limits at our agency, we focus on providing outstanding services in design, photography, decoration, filmmaking and development web.",
@@ -538,6 +540,12 @@
   "categories": {
     "title": "Categories",
     "found": "{{count}} Category(s) found",
-    "newLabel": "New"
+    "newLabel": "New",
+    "loading": "Loading...",
+    "comingSoon": "Coming Soon",
+    "viewCategory": "View category",
+    "exploreCategory": "Explore this category",
+    "noCategories": "No categories available",
+    "noCategoriesDescription": "There are currently no categories to display. Please check back later."
   }
 }

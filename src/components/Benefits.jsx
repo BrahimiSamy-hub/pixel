@@ -29,42 +29,93 @@ const Benefits = () => {
           tag={t('expertise')}
         />
 
-        <div className='flex flex-wrap gap-10 mb-10 justify-center'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 px-4'>
           {benefits.map((item) => (
-            <Link to={item.url} key={item.id} draggable='false'>
-              <div className='block relative  bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] shadow-lg border border-n-6'>
-                <div className='relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none'>
-                  <h5 className='h5 mb-5'>{t(item.title)}</h5>
+            <Link
+              to={item.url}
+              key={item.id}
+              draggable='false'
+              className='group'
+            >
+              <div className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 hover:border-[#F17A28]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#F17A28]/20'>
+                {/* Background Image with Enhanced Overlay */}
+                <div className='absolute inset-0'>
+                  {item.imageUrl && (
+                    <img
+                      loading='lazy'
+                      src={item.imageUrl}
+                      draggable='false'
+                      alt={t(item.title)}
+                      className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
+                    />
+                  )}
+                  <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/70 transition-all duration-500'></div>
+                </div>
 
-                  <p className='body-2 mb-6 text-n-3'>{t(item.text)}</p>
-                  <div className='flex items-center mt-auto object-contain'>
-                    <div className='text-3xl border p-2 rounded border-[#F17A28] bg-[#F17A28]'>
-                      {iconComponents[item.icon]}
+                {/* Content */}
+                <div className='relative z-10 flex flex-col h-80 p-8'>
+                  {/* Icon Section */}
+                  <div className='flex items-center justify-between mb-6'>
+                    <div className='relative'>
+                      <div className='w-16 h-16 bg-gradient-to-br from-[#F17A28] to-[#e5691f] rounded-xl flex items-center justify-center text-white text-2xl shadow-lg transform transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110'>
+                        {iconComponents[item.icon]}
+                      </div>
+                      <div className='absolute -inset-2 bg-[#F17A28]/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                     </div>
-                    <p className='ml-auto text-xs font-bold text-n-1 uppercase'>
-                      {t('details')}
+                    <div className='opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0'>
+                      <Arrow />
+                    </div>
+                  </div>
+
+                  {/* Text Content */}
+                  <div className='flex-1 space-y-4'>
+                    <h5 className='text-xl font-bold text-white group-hover:text-[#F17A28] transition-colors duration-300 leading-tight'>
+                      {t(item.title)}
+                    </h5>
+
+                    <p className='text-gray-300 text-sm leading-relaxed line-clamp-3 group-hover:text-gray-200 transition-colors duration-300'>
+                      {t(item.text)}
                     </p>
-                    <Arrow />
                   </div>
+
+                  {/* CTA Section */}
+                  <div className='pt-6 border-t border-white/10 group-hover:border-[#F17A28]/30 transition-colors duration-300'>
+                    <div className='flex items-center justify-between'>
+                      <span className='text-xs font-semibold text-gray-400 uppercase tracking-wider group-hover:text-[#F17A28] transition-colors duration-300'>
+                        {t('details')}
+                      </span>
+                      <div className='w-8 h-8 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-[#F17A28] transition-all duration-300'>
+                        <svg
+                          className='w-4 h-4 text-white transform transition-transform duration-300 group-hover:translate-x-1'
+                          fill='none'
+                          stroke='currentColor'
+                          viewBox='0 0 24 24'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M9 5l7 7-7 7'
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Floating Elements */}
+                  <div className='absolute top-4 right-4 w-2 h-2 bg-[#F17A28] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200'></div>
+                  <div className='absolute bottom-8 left-4 w-1 h-1 bg-white/40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300'></div>
                 </div>
 
-                {item.light && <GradientLight />}
-
-                <div className='absolute inset-0 bg-n-8'>
-                  <div className='absolute inset-0 opacity-25 transition-opacity hover:opacity-50  '>
-                    {item.imageUrl && (
-                      <img
-                        loading='lazy'
-                        src={item.imageUrl}
-                        draggable='false'
-                        width={380}
-                        height={362}
-                        alt={t(item.title)}
-                        className='w-full h-full object-cover '
-                      />
-                    )}
+                {/* Enhanced Gradient Light */}
+                {item.light && (
+                  <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
+                    <GradientLight />
                   </div>
-                </div>
+                )}
+
+                {/* Shimmer Effect */}
+                <div className='absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent'></div>
               </div>
             </Link>
           ))}

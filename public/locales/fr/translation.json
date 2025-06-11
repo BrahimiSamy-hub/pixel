@@ -118,6 +118,8 @@
   "audio_text": "L'art du son a votre portée avec voter partenaire sonore.",
   "publicite": "Pixel Advertisement",
   "publicite_text": "Donnez vie a votre marque et boostrez votre visibilité pour propulsez votre marque.",
+  "ready_to_start": "Prêt à démarrer votre projet",
+  "contact_us_today": "Contactez-nous aujourd'hui et donnons vie à votre vision",
 
   "heroTitle": "Explorez les Possibilités de la Création de Contenu avec",
   "heroDescription": "La créativité n’a pas de limites dans notre agence. Nous nous concentrons sur l’offre de services exceptionnels en design, photographie, décoration, réalisation de films et dévelopment web.",
@@ -532,7 +534,13 @@
   "categories": {
     "title": "Catégories",
     "found": "{{count}} Catégorie(s) trouvée(s)",
-    "newLabel": "Nouveau"
+    "newLabel": "Nouveau",
+    "loading": "Chargement...",
+    "comingSoon": "Bientôt disponible",
+    "viewCategory": "Voir la catégorie",
+    "exploreCategory": "Explorer cette catégorie",
+    "noCategories": "Aucune catégorie disponible",
+    "noCategoriesDescription": "Il n'y a actuellement aucune catégorie à afficher. Veuillez revenir plus tard."
   },
   "shopP": {
     "title": "Notre Boutique",

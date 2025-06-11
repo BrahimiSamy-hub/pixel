@@ -82,6 +82,8 @@
   "VampireDescription": "Description du Vampire",
   "VoleurDescription": "Description du Voleur",
   "VoyantDescription": "Description du Voyant",
+  "ready_to_start": "مستعد لبدء مشروعك",
+  "contact_us_today": "تواصل معنا اليوم ولنحقق رؤيتك",
   "about_us": {
     "header": "قصتنا",
     "description": "مرحبًا بكم في Pixel، شريكك الإبداعي في التصوير الفوتوغرافي. تأسست في عام 2018 بواسطة فريق من المتحمسين، تتخصص وكالتنا في التقاط اللحظات الفريدة...",
