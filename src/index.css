@@ -61,6 +61,160 @@
   animation-delay: 1.3s;
 }
 
+/* Enhanced GSAP-compatible animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(241, 122, 40, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(241, 122, 40, 0.6);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes morphing-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Utility classes for GSAP animations */
+.shimmer-effect {
+  animation: shimmer 2s infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+.scale-bounce {
+  animation: scale-bounce 2s ease-in-out infinite;
+}
+
+.slide-in-left {
+  animation: slide-in-left 1s ease-out;
+}
+
+.slide-in-right {
+  animation: slide-in-right 1s ease-out;
+}
+
+.fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+.morphing-gradient {
+  background: linear-gradient(-45deg, #f17a28, #e5691f, #ff8c42, #f17a28);
+  background-size: 400% 400%;
+  animation: morphing-gradient 3s ease infinite;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(241, 122, 40, 0.3);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(241, 122, 40, 0.5);
+}
+
+/* Text reveal animation */
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.text-reveal.revealed span {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* Faq.css */
 .transition-all {
   transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition for height and opacity */
@@ -195,4 +349,47 @@
   background-color: orange;
   box-shadow: 0 0 0 1px orange, 0 0 0 2px orange, 0 0 0 3px orange,
     0 0 0 4px orange;
+}
+
+/* GSAP-specific utility classes */
+.gsap-ready {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.gsap-animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth scrolling for better GSAP experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations for animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(241, 122, 40, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(241, 122, 40, 0.7);
 }

@@ -1,8 +1,10 @@
 import TagLine from './Tagline'
+import { forwardRef } from 'react'
 
-const Heading = ({ className, title, text, tag }) => {
+const Heading = forwardRef(({ className, title, text, tag }, ref) => {
   return (
     <div
+      ref={ref}
       className={`${className} max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center`}
     >
       {title && (
@@ -16,6 +18,8 @@ const Heading = ({ className, title, text, tag }) => {
       {text && <p className='body-2 mt-4 text-n-4'>{text}</p>}
     </div>
   )
-}
+})
+
+Heading.displayName = 'Heading'
 
 export default Heading

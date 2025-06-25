@@ -1,33 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      Pixel Creative Agency - Agence Créative en Algérie | Photographie, Design,
+      Web
+    </title>
+    <meta
+      name="title"
+      content="Pixel Creative Agency - Agence Créative en Algérie | Photographie, Design, Web"
+    />
+    <meta
+      name="description"
+      content="Agence créative professionnelle en Algérie spécialisée en photographie, vidéographie, design graphique, développement web et production audio. Services de mariage, branding et marketing digital."
+    />
+    <meta
+      name="keywords"
+      content="agence créative algérie, photographie professionnelle, design graphique, développement web, vidéographie, mariage, branding, marketing digital, production audio, impression, publicité"
+    />
+    <meta name="author" content="Pixel Creative Agency" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="French" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pixeldz.store/" />
+    <meta
+      property="og:title"
+      content="Pixel Creative Agency - Agence Créative en Algérie"
+    />
+    <meta
+      property="og:description"
+      content="Agence créative professionnelle spécialisée en photographie, design graphique, développement web et production audio en Algérie. Services complets pour entreprises et particuliers."
+    />
+    <meta
+      property="og:image"
+      content="https://pixeldz.store/src/assets/astro.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Pixel Creative Agency" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pixeldz.store/" />
+    <meta
+      property="twitter:title"
+      content="Pixel Creative Agency - Agence Créative en Algérie"
+    />
+    <meta
+      property="twitter:description"
+      content="Agence créative professionnelle spécialisée en photographie, design graphique, développement web et production audio en Algérie."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pixeldz.store/src/assets/astro.png"
+    />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="DZ" />
+    <meta name="geo.placename" content="Algérie" />
+    <meta name="geo.position" content="35.5541321;6.1731097" />
+    <meta name="ICBM" content="35.5541321, 6.1731097" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://pixeldz.store/" />
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Meta Tags for SEO -->
-    <meta
-      name="description"
-      content="Pixel is a creative agency specializing in photography, brand identity design, and website development. We craft unique visual experiences that elevate your brand and online presence."
-    />
-    <meta
-      name="keywords"
-      content="creative agency, photography,photographe batna, design batna, websites, site web batna, pixel batna ,creative agency batna , publicité batna, brand identity, website development, graphic design, digital design, web design, brand strategy, pixeldz, pixel studio."
-    />
-    <meta name="author" content="Pixel Creative Agency" />
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pixel Creative Agency",
+        "url": "https://pixeldz.store",
+        "logo": "https://pixeldz.store/src/assets/pixelH.png",
+        "description": "Agence créative professionnelle en Algérie spécialisée en photographie, vidéographie, design graphique, développement web et production audio.",
+        "foundingDate": "2018",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DZ",
+          "addressRegion": "Algérie"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "availableLanguage": ["French", "English", "Arabic"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/pixelcreativeagency",
+          "https://www.instagram.com/pixelcreativeagency",
+          "https://www.linkedin.com/company/pixelcreativeagency"
+        ],
+        "serviceArea": {
+          "@type": "Country",
+          "name": "Algérie"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services Créatifs",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Photographie Professionnelle",
+                "description": "Services de photographie pour mariages, portraits, événements et commercial"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Design Graphique",
+                "description": "Création de logos, identité visuelle, packaging et supports marketing"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Développement Web",
+                "description": "Sites e-commerce, landing pages et applications mobiles"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Production Audio",
+                "description": "Effets sonores, voix-off et production musicale originale"
+              }
+            }
+          ]
+        }
+      }
+    </script>
 
-    <!-- Canonical Tag -->
-    <link rel="canonical" href="https://pixeldz.store" />
+    <!-- Structured Data - Local Business -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Pixel Creative Agency",
+        "image": "https://pixeldz.store/src/assets/astro.png",
+        "description": "Agence créative professionnelle en Algérie",
+        "url": "https://pixeldz.store",
+        "telephone": "+213-XXX-XXX-XXX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "DZ",
+          "addressRegion": "Algérie"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.5541321,
+          "longitude": 6.1731097
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "currenciesAccepted": "DZD",
+        "paymentAccepted": "Cash, Bank Transfer"
+      }
+    </script>
 
-    <title>Pixel - Creative Agency</title>
+    <!-- Structured Data - WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Pixel Creative Agency",
+        "url": "https://pixeldz.store",
+        "description": "Agence créative professionnelle en Algérie",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://pixeldz.store/shop?search={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import Snowfall from 'react-snowfall' // Import the snowfall package
@@ -58,49 +59,51 @@ const App = () => {
   }, [language])
 
   return (
-    <Router>
-      {/* <Snowfall 
-        color='#ffffff' 
-        snowflakeCount={25}
-        style={{
-          position: 'fixed', 
-          width: '100vw',
-          height: '100vh',
-          zIndex: 9999,
-        }}
-      /> */}
-      <ScrollToTop />
-      <CartProvider>
-        <CategoriesProvider>
-          <PostersProvider>
-            <ContactProvider>
-              <OrderProvider>
-                <Header />
-                <Routes>
-                  <Route path='/' element={<Home />} />
-                  <Route path='/shop' element={<Categories />} />
-                  <Route path='/shop/:categoryId' element={<Shop />} />
-                  <Route path='/product/:id' element={<SingleProduct />} />
-                  <Route path='/portfolio' element={<Portfolio />} />
-                  <Route path='/about-us' element={<AboutUs />} />
-                  <Route path='/photoLab' element={<Photo />} />
-                  <Route path='/sounds' element={<Audio />} />
-                  <Route path='/wedding' element={<Weeding />} />
-                  <Route path='/development' element={<Dev />} />
-                  <Route path='/creative' element={<Infographie />} />
-                  <Route path='/advertisement' element={<Neon />} />
-                  <Route path='/checkout' element={<Checkout />} />
-                  <Route path='/contact' element={<ContactUsServices />} />
-                  <Route path='/rules' element={<Rules />} />
-                </Routes>
-                <Footer />
-                <Cart />
-              </OrderProvider>
-            </ContactProvider>
-          </PostersProvider>
-        </CategoriesProvider>
-      </CartProvider>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        {/* <Snowfall 
+          color='#ffffff' 
+          snowflakeCount={25}
+          style={{
+            position: 'fixed', 
+            width: '100vw',
+            height: '100vh',
+            zIndex: 9999,
+          }}
+        /> */}
+        <ScrollToTop />
+        <CartProvider>
+          <CategoriesProvider>
+            <PostersProvider>
+              <ContactProvider>
+                <OrderProvider>
+                  <Header />
+                  <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/shop' element={<Categories />} />
+                    <Route path='/shop/:categoryId' element={<Shop />} />
+                    <Route path='/product/:id' element={<SingleProduct />} />
+                    <Route path='/portfolio' element={<Portfolio />} />
+                    <Route path='/about-us' element={<AboutUs />} />
+                    <Route path='/photoLab' element={<Photo />} />
+                    <Route path='/sounds' element={<Audio />} />
+                    <Route path='/wedding' element={<Weeding />} />
+                    <Route path='/development' element={<Dev />} />
+                    <Route path='/creative' element={<Infographie />} />
+                    <Route path='/advertisement' element={<Neon />} />
+                    <Route path='/checkout' element={<Checkout />} />
+                    <Route path='/contact' element={<ContactUsServices />} />
+                    <Route path='/rules' element={<Rules />} />
+                  </Routes>
+                  <Footer />
+                  <Cart />
+                </OrderProvider>
+              </ContactProvider>
+            </PostersProvider>
+          </CategoriesProvider>
+        </CartProvider>
+      </Router>
+    </HelmetProvider>
   )
 }
 

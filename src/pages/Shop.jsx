@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaChevronLeft } from 'react-icons/fa'
+import AnimatedBackground from '../components/AnimatedBackground'
 
 const Shop = () => {
   const { t, i18n } = useTranslation() // Include i18n here
@@ -33,6 +34,7 @@ const Shop = () => {
 
   return (
     <>
+      <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section
           className='pt-[8rem] -mt-[5.25rem] min-h-screen'

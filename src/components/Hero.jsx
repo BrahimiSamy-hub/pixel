@@ -37,7 +37,7 @@ const Hero = () => {
           <p className='h6 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8'>
             {t('heroDescription')}
           </p>
-          <div className=' flex gap-10 justify-center'>
+          <div className='flex gap-10 justify-center'>
             <Link to='/shop' draggable='false'>
               <Button white>{t('shopButton')}</Button>
             </Link>
@@ -63,7 +63,7 @@ const Hero = () => {
           <BackgroundCircles />
         </div>
 
-        <CompanyLogos className='relative z-10 mt-20 lg:block ' />
+        <CompanyLogos className='relative z-10 mt-20 lg:block' />
       </div>
       {/* <BottomLine /> */}
     </Section>

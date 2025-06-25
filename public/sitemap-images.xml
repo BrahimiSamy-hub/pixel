@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage Images -->
+  <url>
+    <loc>https://pixeldz.store/</loc>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/astro.png</image:loc>
+      <image:title>Pixel Creative Agency - Professional Photography & Design Services</image:title>
+      <image:caption>Creative agency specializing in photography, videography, graphic design, and web development in Algeria</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/pixelH.png</image:loc>
+      <image:title>Pixel Creative Agency Logo</image:title>
+      <image:caption>Professional creative services for businesses and individuals</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Portfolio Images -->
+  <url>
+    <loc>https://pixeldz.store/portfolio</loc>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/photo/heroes.jpg</image:loc>
+      <image:title>Professional Photography Portfolio</image:title>
+      <image:caption>High-quality photography services including portraits, events, and commercial shoots</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/design/logo-design.jpg</image:loc>
+      <image:title>Graphic Design Portfolio</image:title>
+      <image:caption>Creative logo design and visual identity services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/video/video-production.jpg</image:loc>
+      <image:title>Video Production Portfolio</image:title>
+      <image:caption>Professional video production and editing services</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Wedding Services Images -->
+  <url>
+    <loc>https://pixeldz.store/wedding</loc>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/photo/wedding-ceremony.jpg</image:loc>
+      <image:title>Wedding Photography Services</image:title>
+      <image:caption>Complete wedding photography packages from Rose Pack to Orchid Pack</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/photo/wedding-preparation.jpg</image:loc>
+      <image:title>Wedding Preparation Photography</image:title>
+      <image:caption>Professional wedding preparation and ceremony coverage</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Graphic Design Services Images -->
+  <url>
+    <loc>https://pixeldz.store/creative</loc>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/design/brand-identity.jpg</image:loc>
+      <image:title>Brand Identity Design</image:title>
+      <image:caption>Complete brand identity and visual design services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/design/packaging-design.jpg</image:loc>
+      <image:title>Packaging Design Services</image:title>
+      <image:caption>Creative packaging and product design solutions</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Web Development Services Images -->
+  <url>
+    <loc>https://pixeldz.store/development</loc>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/web/ecommerce-website.jpg</image:loc>
+      <image:title>E-commerce Website Development</image:title>
+      <image:caption>Custom e-commerce websites with dashboard and order management</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/web/landing-page.jpg</image:loc>
+      <image:title>Landing Page Development</image:title>
+      <image:caption>High-converting landing pages for businesses and startups</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Audio Services Images -->
+  <url>
+    <loc>https://pixeldz.store/sounds</loc>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/audio/sound-production.jpg</image:loc>
+      <image:title>Audio Production Services</image:title>
+      <image:caption>Professional sound effects, voice-overs, and original music production</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Photography Services Images -->
+  <url>
+    <loc>https://pixeldz.store/photoLab</loc>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/photo/portrait-photography.jpg</image:loc>
+      <image:title>Professional Portrait Photography</image:title>
+      <image:caption>High-quality portrait and professional photography services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/photo/commercial-photography.jpg</image:loc>
+      <image:title>Commercial Photography</image:title>
+      <image:caption>Product and commercial photography for businesses</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Advertising Services Images -->
+  <url>
+    <loc>https://pixeldz.store/advertisement</loc>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/print/printing-services.jpg</image:loc>
+      <image:title>Printing and Advertising Services</image:title>
+      <image:caption>Professional printing, signage, and advertising materials</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pixeldz.store/src/assets/portfolio/print/neon-signs.jpg</image:loc>
+      <image:title>LED Neon Signs</image:title>
+      <image:caption>Custom LED neon signs for indoor and outdoor use</image:caption>
+    </image:image>
+  </url>
+</urlset> 

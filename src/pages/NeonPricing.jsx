@@ -1,10 +1,12 @@
 import ButtonGradient from '../assets/svg/ButtonGradient'
 import Section from '../components/Section'
 import PricingList from '../components/NeonDetails'
+import AnimatedBackground from '../components/AnimatedBackground'
 
 const NeonPricing = () => {
   return (
     <>
+      <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section
           className='pt-[10rem] -mt-[5.25rem]'
@@ -13,9 +15,7 @@ const NeonPricing = () => {
           customPaddings
         >
           <div className='container min-h-screen'>
-            <h1 className='text-center h1 mb-6 uppercase'>
-              Pixel Advertisement
-            </h1>
+            <h1 className='text-center h1 mb-6 uppercase'>Neon</h1>
             <PricingList />
           </div>
         </Section>

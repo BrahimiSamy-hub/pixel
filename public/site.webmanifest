@@ -1,19 +1,41 @@
 {
-    "name": "",
-    "short_name": "",
-    "icons": [
-       {
-          "src": "/android-chrome-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-       },
-       {
-        "src": "/android-chrome-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-        }
-    ],
-    "theme_color": "#FFFFFF",
-    "background_color": "#FFFFFF",
-    "display": "standalone"
- }
+  "name": "Pixel Creative Agency",
+  "short_name": "Pixel",
+  "description": "Agence créative professionnelle en Algérie spécialisée en photographie, design graphique, développement web et production audio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F0F23",
+  "theme_color": "#F17A28",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "categories": ["business", "photography", "design", "productivity"],
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}

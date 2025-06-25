@@ -1,4 +1,11 @@
-import { useState, useMemo, useCallback, Suspense, lazy } from 'react'
+import {
+  useState,
+  useMemo,
+  useCallback,
+  Suspense,
+  lazy,
+  useEffect,
+} from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { useTranslation } from 'react-i18next'
 import { IoSettings, IoClose } from 'react-icons/io5'
@@ -15,6 +22,10 @@ import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/react/20/solid'
 import Heading from '../components/Heading'
 import PixelCircles from '../components/design/PixelCircles'
 import Section from '../components/Section'
+import AnimatedBackground from '../components/AnimatedBackground'
+import SEOHead from '../components/SEOHead'
+import ButtonGradient from '../assets/svg/ButtonGradient'
+import PortfolioList from '../components/PortfolioList'
 
 // Lazy load portfolio components for better performance
 const PortfolioLogo = lazy(() => import('../components/portfolio/Logo'))
@@ -50,30 +61,192 @@ const PortfolioWebsite = lazy(() => import('../components/portfolio/WebSite'))
 const PortfolioMobile = lazy(() => import('../components/portfolio/MobileApp'))
 const PortfolioWeeding = lazy(() => import('../components/portfolio/Wedding'))
 
-// Loading component
+// Liquid Glass Background Component
+const LiquidGlassBackground = () => {
+  useEffect(() => {
+    const canvas = document.getElementById('liquid-canvas')
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+    let particles = []
+    const particleCount = 50
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width
+        this.y = Math.random() * canvas.height
+        this.size = Math.random() * 3 + 1
+        this.speedX = Math.random() * 2 - 1
+        this.speedY = Math.random() * 2 - 1
+        this.opacity = Math.random() * 0.5 + 0.1
+      }
+
+      update() {
+        this.x += this.speedX
+        this.y += this.speedY
+
+        if (this.x > canvas.width || this.x < 0) this.speedX *= -1
+        if (this.y > canvas.height || this.y < 0) this.speedY *= -1
+      }
+
+      draw() {
+        ctx.beginPath()
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(241, 122, 40, ${this.opacity})`
+        ctx.fill()
+      }
+    }
+
+    const init = () => {
+      particles = []
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle())
+      }
+    }
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      particles.forEach((particle) => {
+        particle.update()
+        particle.draw()
+      })
+
+      // Draw connections
+      particles.forEach((particle, i) => {
+        particles.slice(i + 1).forEach((otherParticle) => {
+          const dx = particle.x - otherParticle.x
+          const dy = particle.y - otherParticle.y
+          const distance = Math.sqrt(dx * dx + dy * dy)
+
+          if (distance < 100) {
+            ctx.beginPath()
+            ctx.strokeStyle = `rgba(241, 122, 40, ${
+              0.1 * (1 - distance / 100)
+            })`
+            ctx.lineWidth = 1
+            ctx.moveTo(particle.x, particle.y)
+            ctx.lineTo(otherParticle.x, otherParticle.y)
+            ctx.stroke()
+          }
+        })
+      })
+
+      requestAnimationFrame(animate)
+    }
+
+    init()
+    animate()
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+      init()
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
+  return (
+    <canvas
+      id='liquid-canvas'
+      className='fixed inset-0 pointer-events-none z-0'
+      style={{ filter: 'blur(1px)' }}
+    />
+  )
+}
+
+// Glassmorphism Card Component
+const GlassCard = ({ children, className = '', delay = 0 }) => {
+  return (
+    <div
+      style={{
+        animationDelay: `${delay}ms`,
+        animation: 'slideInUp 0.8s ease-out forwards',
+        opacity: 0,
+        transform: 'translateY(30px)',
+      }}
+    >
+      {/* Liquid glass overlay */}
+      <div className='absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 rounded-2xl' />
+
+      {/* Floating liquid particles */}
+      <div className='absolute top-4 right-4 w-2 h-2 bg-[#F17A28]/40 rounded-full animate-pulse-glow' />
+      <div
+        className='absolute bottom-6 left-6 w-1 h-1 bg-[#F17A28]/30 rounded-full animate-pulse-glow'
+        style={{ animationDelay: '1s' }}
+      />
+      <div
+        className='absolute top-1/2 left-4 w-1.5 h-1.5 bg-[#F17A28]/20 rounded-full animate-pulse-glow'
+        style={{ animationDelay: '2s' }}
+      />
+
+      {/* Content */}
+      <div className='relative z-10 p-6'>{children}</div>
+    </div>
+  )
+}
+
+// Animated Loading Spinner with Glass Effect
 const LoadingSpinner = () => (
   <div className='flex items-center justify-center min-h-[400px]'>
-    <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-[#F17A28]'></div>
+    <div className='relative animate-liquid-float'>
+      {/* Outer glass ring */}
+      <div className='w-16 h-16 rounded-full border-2 border-white/20 backdrop-blur-sm bg-white/5 animate-spin'>
+        <div className='absolute inset-0 rounded-full border-t-2 border-[#F17A28] animate-ping' />
+      </div>
+
+      {/* Inner liquid effect */}
+      <div className='absolute inset-2 rounded-full bg-gradient-to-r from-[#F17A28]/30 to-[#F17A28]/10 animate-pulse' />
+
+      {/* Center dot */}
+      <div className='absolute inset-6 rounded-full bg-[#F17A28] animate-bounce' />
+
+      {/* Floating particles around spinner */}
+      <div className='absolute -top-2 -right-2 w-2 h-2 bg-[#F17A28]/60 rounded-full animate-pulse-glow' />
+      <div
+        className='absolute -bottom-2 -left-2 w-1.5 h-1.5 bg-[#F17A28]/40 rounded-full animate-pulse-glow'
+        style={{ animationDelay: '0.5s' }}
+      />
+      <div
+        className='absolute -top-1 -left-1 w-1 h-1 bg-[#F17A28]/30 rounded-full animate-pulse-glow'
+        style={{ animationDelay: '1s' }}
+      />
+      <div
+        className='absolute -bottom-1 -right-1 w-1.5 h-1.5 bg-[#F17A28]/50 rounded-full animate-pulse-glow'
+        style={{ animationDelay: '1.5s' }}
+      />
+    </div>
   </div>
 )
 
-// Error boundary component
+// Enhanced Error Fallback with Glass Effect
 const ErrorFallback = ({ error, resetErrorBoundary }) => (
-  <div className='flex flex-col items-center justify-center min-h-[400px] text-center p-8'>
+  <GlassCard className='min-h-[400px] text-center p-8'>
     <div className='text-red-500 mb-4'>
-      <svg
-        className='w-16 h-16 mx-auto'
-        fill='none'
-        stroke='currentColor'
-        viewBox='0 0 24 24'
-      >
-        <path
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          strokeWidth='2'
-          d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.963-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z'
-        />
-      </svg>
+      <div className='relative w-16 h-16 mx-auto'>
+        <div className='absolute inset-0 rounded-full bg-red-500/20 animate-pulse' />
+        <svg
+          className='w-16 h-16 mx-auto relative z-10'
+          fill='none'
+          stroke='currentColor'
+          viewBox='0 0 24 24'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
+            d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.963-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z'
+          />
+        </svg>
+      </div>
     </div>
     <h3 className='text-lg font-semibold text-white mb-2'>
       Something went wrong
@@ -81,14 +254,14 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => (
     <p className='text-gray-400 mb-4'>Failed to load portfolio content</p>
     <button
       onClick={resetErrorBoundary}
-      className='px-4 py-2 bg-[#F17A28] text-white rounded-lg hover:bg-[#e16a1f] transition-colors'
+      className='px-6 py-3 bg-gradient-to-r from-[#F17A28] to-[#e16a1f] text-white rounded-lg hover:from-[#e16a1f] hover:to-[#d15a1f] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[0_0_20px_rgba(241,122,40,0.5)]'
     >
       Try again
     </button>
-  </div>
+  </GlassCard>
 )
 
-// Mobile Filter Dialog Component
+// Enhanced Mobile Filter Dialog with Glass Effect
 const MobileFilterDialog = ({
   isOpen,
   onClose,
@@ -106,7 +279,7 @@ const MobileFilterDialog = ({
         leave='transition-opacity ease-linear duration-300'
         leaveFrom='opacity-100'
         leaveTo='opacity-0'
-        className='fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm'
+        className='fixed inset-0 bg-black/60 backdrop-blur-md'
         onClick={onClose}
       />
 
@@ -119,55 +292,71 @@ const MobileFilterDialog = ({
           leave='transition ease-in-out duration-300 transform'
           leaveFrom='translate-x-0'
           leaveTo='translate-x-full'
-          className='relative ml-auto flex h-full w-full max-w-sm flex-col overflow-y-auto bg-n-8/95 backdrop-blur-xl shadow-2xl border-l border-n-6'
+          className='relative ml-auto flex h-full w-full max-w-sm flex-col overflow-y-auto backdrop-blur-2xl bg-white/10 border-l border-white/20 shadow-2xl'
         >
-          {/* Header */}
-          <div className='flex items-center justify-between p-6 border-b border-n-6'>
+          {/* Header with glass effect */}
+          <div className='flex items-center justify-between p-6 border-b border-white/20 bg-white/5 backdrop-blur-sm'>
             <h2 className='text-xl font-semibold text-white'>Categories</h2>
             <button
               onClick={onClose}
-              className='p-2 rounded-lg hover:bg-n-6 transition-colors text-white'
+              className='p-2 rounded-lg hover:bg-white/10 transition-all duration-300 text-white hover:scale-110'
             >
               <IoClose className='h-6 w-6' />
             </button>
           </div>
 
-          {/* Categories */}
+          {/* Categories with enhanced glass effect */}
           <div className='flex-1 p-4 space-y-4'>
-            {Object.entries(categories).map(([categoryName, subcatKeys]) => (
-              <Disclosure
-                key={categoryName}
-                as='div'
-                className='bg-n-7 rounded-xl overflow-hidden'
-              >
-                <DisclosureButton className='flex w-full items-center justify-between p-4 text-left hover:bg-n-6 transition-colors'>
-                  <span className='font-medium text-white'>{categoryName}</span>
-                  <FaChevronDown className='h-4 w-4 text-gray-400 group-data-[open]:rotate-180 transition-transform duration-200' />
-                </DisclosureButton>
-                <DisclosurePanel className='border-t border-n-6'>
-                  {subcatKeys.map((subcatKey) => (
-                    <button
-                      key={subcatKey}
-                      onClick={() => {
-                        onSubcategoryChange(subcatKey)
-                        onClose()
-                      }}
-                      className={`w-full text-left p-4 transition-colors ${
-                        selectedSubcategory === subcatKey
-                          ? 'bg-[#F17A28] text-white'
-                          : 'text-gray-300 hover:bg-n-6 hover:text-white'
-                      }`}
-                    >
-                      {subcatKey.charAt(0).toUpperCase() +
-                        subcatKey
-                          .slice(1)
-                          .replace(/([A-Z])/g, ' $1')
-                          .trim()}
-                    </button>
-                  ))}
-                </DisclosurePanel>
-              </Disclosure>
-            ))}
+            {Object.entries(categories).map(
+              ([categoryName, subcatKeys], index) => (
+                <Disclosure
+                  key={categoryName}
+                  as='div'
+                  className='backdrop-blur-xl bg-white/5 rounded-xl overflow-hidden border border-white/10 shadow-lg hover:shadow-xl transition-all duration-300'
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    animation: 'slideInRight 0.6s ease-out forwards',
+                    opacity: 0,
+                    transform: 'translateX(30px)',
+                  }}
+                >
+                  <DisclosureButton className='flex w-full items-center justify-between p-4 text-left hover:bg-white/10 transition-all duration-300 group'>
+                    <span className='font-medium text-white'>
+                      {categoryName}
+                    </span>
+                    <FaChevronDown className='h-4 w-4 text-gray-400 group-data-[open]:rotate-180 transition-transform duration-300' />
+                  </DisclosureButton>
+                  <DisclosurePanel className='border-t border-white/10'>
+                    {subcatKeys.map((subcatKey, subIndex) => (
+                      <button
+                        key={subcatKey}
+                        onClick={() => {
+                          onSubcategoryChange(subcatKey)
+                          onClose()
+                        }}
+                        className={`w-full text-left p-4 transition-all duration-300 hover:scale-[1.02] ${
+                          selectedSubcategory === subcatKey
+                            ? 'bg-gradient-to-r from-[#F17A28] to-[#e16a1f] text-white shadow-lg'
+                            : 'text-gray-300 hover:bg-white/10 hover:text-white'
+                        }`}
+                        style={{
+                          animationDelay: `${index * 100 + subIndex * 50}ms`,
+                          animation: 'fadeInUp 0.5s ease-out forwards',
+                          opacity: 0,
+                          transform: 'translateY(20px)',
+                        }}
+                      >
+                        {subcatKey.charAt(0).toUpperCase() +
+                          subcatKey
+                            .slice(1)
+                            .replace(/([A-Z])/g, ' $1')
+                            .trim()}
+                      </button>
+                    ))}
+                  </DisclosurePanel>
+                </Disclosure>
+              )
+            )}
           </div>
         </Transition.Child>
       </div>
@@ -175,7 +364,7 @@ const MobileFilterDialog = ({
   )
 }
 
-// Desktop Filter Component
+// Enhanced Desktop Filters with Glass Effect
 const DesktopFilters = ({
   categories,
   selectedSubcategory,
@@ -184,31 +373,61 @@ const DesktopFilters = ({
   return (
     <div className='hidden lg:block space-y-6'>
       <div className='sticky top-24'>
-        {Object.entries(categories).map(([categoryName, subcatKeys]) => (
+        {Object.entries(categories).map(([categoryName, subcatKeys], index) => (
           <Disclosure
             key={categoryName}
             as='div'
-            className='bg-n-8/50 backdrop-blur-sm border border-n-6 rounded-2xl mb-4 overflow-hidden shadow-lg'
+            className='backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl mb-4 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 animate-glass-glow'
             defaultOpen={subcatKeys.includes(selectedSubcategory)}
+            style={{
+              animationDelay: `${index * 150}ms`,
+              animation: 'slideInLeft 0.8s ease-out forwards',
+              opacity: 0,
+              transform: 'translateX(-30px)',
+            }}
           >
-            <DisclosureButton className='flex w-full items-center justify-between p-6 text-left hover:bg-n-7 transition-colors group'>
+            {/* Floating particles for each category */}
+            <div className='absolute top-3 right-3 w-1 h-1 bg-[#F17A28]/40 rounded-full animate-pulse-glow' />
+            <div
+              className='absolute bottom-3 left-3 w-0.5 h-0.5 bg-[#F17A28]/30 rounded-full animate-pulse-glow'
+              style={{ animationDelay: '1s' }}
+            />
+
+            <DisclosureButton className='flex w-full items-center justify-between p-6 text-left hover:bg-white/10 transition-all duration-300 group'>
               <span className='text-lg font-semibold text-white'>
                 {categoryName}
               </span>
               <FaChevronDown className='h-5 w-5 text-gray-400 group-data-[open]:rotate-180 transition-transform duration-300' />
             </DisclosureButton>
-            <DisclosurePanel className='border-t border-n-6'>
+            <DisclosurePanel className='border-t border-white/10'>
               <div className='p-2'>
-                {subcatKeys.map((subcatKey) => (
+                {subcatKeys.map((subcatKey, subIndex) => (
                   <button
                     key={subcatKey}
                     onClick={() => onSubcategoryChange(subcatKey)}
-                    className={`w-full text-left p-4 rounded-lg mb-2 last:mb-0 transition-all duration-200 ${
+                    className={`w-full text-left p-4 rounded-lg mb-2 last:mb-0 transition-all duration-300 hover:scale-[1.02] relative overflow-hidden ${
                       selectedSubcategory === subcatKey
-                        ? 'bg-[#F17A28] text-white shadow-lg transform scale-[1.02]'
-                        : 'text-gray-300 hover:bg-n-6 hover:text-white hover:transform hover:scale-[1.01]'
+                        ? 'bg-gradient-to-r from-[#F17A28] to-[#e16a1f] text-white shadow-lg transform scale-[1.02]'
+                        : 'text-gray-300 hover:bg-white/10 hover:text-white'
                     }`}
+                    style={{
+                      animationDelay: `${index * 150 + subIndex * 100}ms`,
+                      animation: 'fadeInUp 0.6s ease-out forwards',
+                      opacity: 0,
+                      transform: 'translateY(20px)',
+                    }}
                   >
+                    {/* Liquid effect for selected items */}
+                    {selectedSubcategory === subcatKey && (
+                      <>
+                        <div className='absolute top-2 right-2 w-1 h-1 bg-white/60 rounded-full animate-pulse-glow' />
+                        <div
+                          className='absolute bottom-2 left-2 w-0.5 h-0.5 bg-white/40 rounded-full animate-pulse-glow'
+                          style={{ animationDelay: '0.5s' }}
+                        />
+                      </>
+                    )}
+
                     {subcatKey.charAt(0).toUpperCase() +
                       subcatKey
                         .slice(1)
@@ -304,16 +523,16 @@ const Portfolio = () => {
     setMobileFiltersOpen(false)
   }, [])
 
-  // Memoized component renderer with error boundary
+  // Enhanced component renderer with glass effect
   const renderComponent = useCallback(() => {
     const Component = subcategoryComponents[selectedSubcategory]
     if (!Component) {
       return (
-        <div className='flex items-center justify-center min-h-[400px] text-center'>
-          <div className='text-gray-400 animate-slideUp'>
-            <div className='w-16 h-16 mx-auto mb-4 rounded-full bg-n-6 flex items-center justify-center'>
+        <GlassCard className='min-h-[400px] text-center' delay={200}>
+          <div className='text-gray-400'>
+            <div className='w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#F17A28]/20 to-[#F17A28]/10 backdrop-blur-sm flex items-center justify-center border border-[#F17A28]/30'>
               <svg
-                className='w-8 h-8'
+                className='w-8 h-8 text-[#F17A28]'
                 fill='none'
                 stroke='currentColor'
                 viewBox='0 0 24 24'
@@ -326,12 +545,14 @@ const Portfolio = () => {
                 />
               </svg>
             </div>
-            <p className='text-lg mb-2'>{t('Select a subcategory')}</p>
-            <p className='text-sm text-gray-500'>
+            <p className='text-lg mb-2 text-white'>
+              {t('Select a subcategory')}
+            </p>
+            <p className='text-sm text-gray-400'>
               Choose a category from the sidebar to view portfolio items
             </p>
           </div>
-        </div>
+        </GlassCard>
       )
     }
 
@@ -344,86 +565,176 @@ const Portfolio = () => {
     )
   }, [selectedSubcategory, subcategoryComponents, t])
 
+  const portfolioStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: 'Portfolio Pixel Creative Agency',
+    description:
+      'Découvrez notre portfolio de travaux créatifs incluant photographie, design graphique, vidéographie et développement web.',
+    url: 'https://pixeldz.store/portfolio',
+    creator: {
+      '@type': 'Organization',
+      name: 'Pixel Creative Agency',
+    },
+    genre: [
+      'Photography',
+      'Graphic Design',
+      'Video Production',
+      'Web Development',
+    ],
+    keywords:
+      'portfolio photographie, design graphique, vidéographie, développement web, travaux créatifs',
+  }
+
   return (
-    <div className='pt-[4.75rem] -mt-[3rem] lg:pt-[8.25rem] overflow-hidden'>
-      <Section
-        className='pt-[12rem] sm:xl:pt-[8rem] -mt-[5.25rem] min-h-screen'
-        crosses
-        crossesOffset='lg:translate-y-[5.25rem]'
-        customPaddings
-      >
-        <div className='relative'>
-          {/* Mobile Filter Button */}
-          <button
-            onClick={handleMobileFiltersToggle}
-            className='lg:hidden fixed top-1/2 right-4 z-40 transform -translate-y-1/2 bg-[#F17A28] hover:bg-[#e16a1f] rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110'
-            aria-label='Open filters'
-          >
-            <IoSettings className='h-6 w-6 text-white' />
-          </button>
+    <>
+      <SEOHead
+        title='Portfolio'
+        description='Découvrez notre portfolio de travaux créatifs incluant photographie professionnelle, design graphique, vidéographie et développement web. Exemples de nos réalisations en Algérie.'
+        keywords='portfolio photographie algérie, design graphique, vidéographie, développement web, travaux créatifs, exemples réalisations'
+        url='https://pixeldz.store/portfolio'
+        structuredData={portfolioStructuredData}
+      />
+      <AnimatedBackground />
+      <LiquidGlassBackground />
 
-          {/* Mobile Filter Dialog */}
-          <ErrorBoundary
-            FallbackComponent={ErrorFallback}
-            onError={(error, errorInfo) => {
-              console.error('Mobile Filter Dialog Error:', error, errorInfo)
-            }}
-          >
-            <MobileFilterDialog
-              isOpen={mobileFiltersOpen}
-              onClose={handleMobileFiltersClose}
-              categories={subcategories}
-              selectedSubcategory={selectedSubcategory}
-              onSubcategoryChange={handleSubcategoryChange}
-            />
-          </ErrorBoundary>
+      {/* Add CSS animations */}
+      <style jsx>{`
+        @keyframes slideInUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-          <div className='flex flex-col justify-center items-center'>
-            <Heading
-              className='md:max-w-md lg:max-w-2xl text-center mb-12'
-              title={t('portfolioP')}
-              tag={t('portfolioTag')}
-            />
+        @keyframes slideInLeft {
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
 
-            <main className='max-w-7xl w-full'>
-              <PixelCircles />
+        @keyframes slideInRight {
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
 
-              <section
-                aria-labelledby='portfolio-heading'
-                className='pb-24 pt-6'
-              >
-                <div className='grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4'>
-                  {/* Desktop Filters */}
-                  <DesktopFilters
-                    categories={subcategories}
-                    selectedSubcategory={selectedSubcategory}
-                    onSubcategoryChange={handleSubcategoryChange}
-                  />
+        @keyframes fadeInUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-                  {/* Content Area */}
-                  <div className='lg:col-span-3'>
-                    <div className='bg-n-8/30 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-n-6 shadow-xl transition-all duration-300 hover:shadow-2xl animate-scaleIn'>
-                      <ErrorBoundary
-                        FallbackComponent={ErrorFallback}
-                        onError={(error, errorInfo) => {
-                          console.error(
-                            'Portfolio Component Error:',
-                            error,
-                            errorInfo
-                          )
-                        }}
-                      >
-                        {renderComponent()}
-                      </ErrorBoundary>
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes scaleIn {
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      `}</style>
+
+      <div className='pt-[4.75rem] -mt-[3rem] lg:pt-[8.25rem] overflow-hidden'>
+        <Section
+          className='pt-[12rem] sm:xl:pt-[8rem] -mt-[5.25rem] min-h-screen'
+          crosses
+          crossesOffset='lg:translate-y-[5.25rem]'
+          customPaddings
+        >
+          <div className='relative'>
+            {/* Enhanced Mobile Filter Button with Glass Effect */}
+            <button
+              onClick={handleMobileFiltersToggle}
+              className='lg:hidden fixed top-1/2 right-4 z-40 transform -translate-y-1/2 backdrop-blur-xl bg-white/10 border border-white/20 hover:bg-white/20 rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(241,122,40,0.5)] animate-liquid-float'
+              aria-label='Open filters'
+            >
+              <IoSettings className='h-6 w-6 text-white animate-spin-slow' />
+
+              {/* Floating particles around button */}
+              <div className='absolute -top-1 -right-1 w-1.5 h-1.5 bg-[#F17A28]/60 rounded-full animate-pulse-glow' />
+              <div
+                className='absolute -bottom-1 -left-1 w-1 h-1 bg-[#F17A28]/40 rounded-full animate-pulse-glow'
+                style={{ animationDelay: '0.7s' }}
+              />
+              <div
+                className='absolute -top-0.5 -left-0.5 w-0.5 h-0.5 bg-[#F17A28]/30 rounded-full animate-pulse-glow'
+                style={{ animationDelay: '1.4s' }}
+              />
+            </button>
+
+            {/* Mobile Filter Dialog */}
+            <ErrorBoundary
+              FallbackComponent={ErrorFallback}
+              onError={(error, errorInfo) => {
+                console.error('Mobile Filter Dialog Error:', error, errorInfo)
+              }}
+            >
+              <MobileFilterDialog
+                isOpen={mobileFiltersOpen}
+                onClose={handleMobileFiltersClose}
+                categories={subcategories}
+                selectedSubcategory={selectedSubcategory}
+                onSubcategoryChange={handleSubcategoryChange}
+              />
+            </ErrorBoundary>
+
+            <div className='flex flex-col justify-center items-center'>
+              <Heading
+                className='md:max-w-md lg:max-w-2xl text-center mb-12'
+                title={t('portfolioP')}
+                tag={t('portfolioTag')}
+              />
+
+              <main className='max-w-7xl w-full'>
+                {/* <PixelCircles /> */}
+
+                <section
+                  aria-labelledby='portfolio-heading'
+                  className='pb-24 pt-6'
+                >
+                  <div className='grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4'>
+                    {/* Desktop Filters */}
+                    <DesktopFilters
+                      categories={subcategories}
+                      selectedSubcategory={selectedSubcategory}
+                      onSubcategoryChange={handleSubcategoryChange}
+                    />
+
+                    {/* Enhanced Content Area with Glass Effect */}
+                    <div className='lg:col-span-3'>
+                      <GlassCard className='p-6 lg:p-8' delay={300}>
+                        <ErrorBoundary
+                          FallbackComponent={ErrorFallback}
+                          onError={(error, errorInfo) => {
+                            console.error(
+                              'Portfolio Component Error:',
+                              error,
+                              errorInfo
+                            )
+                          }}
+                        >
+                          {renderComponent()}
+                        </ErrorBoundary>
+                      </GlassCard>
                     </div>
                   </div>
-                </div>
-              </section>
-            </main>
+                </section>
+              </main>
+            </div>
           </div>
-        </div>
-      </Section>
-    </div>
+        </Section>
+      </div>
+
+      <ButtonGradient />
+    </>
   )
 }
 

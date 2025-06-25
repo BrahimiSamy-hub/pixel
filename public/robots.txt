@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://pixeldz.store/sitemap.xml
+Sitemap: https://pixeldz.store/sitemap-images.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /uploads/temp/
+
+# Allow important directories
+Allow: /shop/
+Allow: /portfolio/
+Allow: /about-us/
+Allow: /contact/
+Allow: /uploads/
+
+# Crawl delay for better server performance
+Crawl-delay: 1 

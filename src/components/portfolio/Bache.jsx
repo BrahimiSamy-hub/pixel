@@ -12,10 +12,10 @@ import {
   bache8,
   bache9,
 } from '../../assets'
+
 const images = [
   { src: bache, alt: 'Bache' },
   { src: bache1, alt: 'Bache' },
-
   { src: bache3, alt: 'Bache' },
   { src: bache4, alt: 'Bache' },
   { src: bache5, alt: 'Bache' },

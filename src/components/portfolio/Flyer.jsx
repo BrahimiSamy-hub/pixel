@@ -27,22 +27,22 @@ const images = [
   { src: flyer3, alt: 'Flyer' },
   { src: trifold1, alt: 'Trifold' },
   { src: flyer4, alt: 'Flyer' },
-  // { src: flyer5, alt: 'Flyer' },
+  { src: flyer5, alt: 'Flyer' },
   { src: flyer6, alt: 'Flyer' },
   { src: trifold2, alt: 'Trifold' },
   { src: flyer7, alt: 'Flyer' },
   { src: trifold3, alt: 'Trifold' },
-  // { src: flyer8, alt: 'Flyer' },
+  { src: flyer8, alt: 'Flyer' },
   { src: flyer9, alt: 'Flyer' },
-  // { src: flyer10, alt: 'Flyer' },
-  // { src: flyer11, alt: 'Flyer' },
+  { src: flyer10, alt: 'Flyer' },
+  { src: flyer11, alt: 'Flyer' },
   { src: trifold, alt: 'Trifold' },
-  // { src: flyer12, alt: 'Flyer' },
-  // { src: flyer13, alt: 'Flyer' },
+  { src: flyer12, alt: 'Flyer' },
+  { src: flyer13, alt: 'Flyer' },
 ]
 
 const ImageComponent = ({ src, alt }) => (
-  <div className='flex justify-center col-span-3 md:col-span-2 lg:col-span-1 hover:cursor-pointer'>
+  <div className='flex justify-center col-span-1 hover:cursor-pointer'>
     <PhotoView src={src}>
       <img src={src} alt={alt} className=' rounded-xl w-80  object-contain' />
     </PhotoView>
@@ -52,7 +52,7 @@ const ImageComponent = ({ src, alt }) => (
 const Flyer = () => {
   return (
     <PhotoProvider>
-      <div className='grid grid-cols-3 gap-10'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2 lg:gap-5'>
         {images.map((image, index) => (
           <Suspense fallback={<div>Loading...</div>} key={index}>
             <ImageComponent src={image.src} alt={image.alt} />

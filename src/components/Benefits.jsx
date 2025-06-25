@@ -20,9 +20,10 @@ const iconComponents = {
 
 const Benefits = () => {
   const { t } = useTranslation()
+
   return (
     <Section id='services'>
-      <div className='container relative z-2 mt-8' data-aos='fade-up'>
+      <div className='container relative z-2 mt-8'>
         <Heading
           className='md:max-w-md lg:max-w-2xl'
           title={t('our_services')}

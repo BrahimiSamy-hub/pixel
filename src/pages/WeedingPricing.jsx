@@ -1,10 +1,12 @@
 import ButtonGradient from '../assets/svg/ButtonGradient'
 import Section from '../components/Section'
 import PricingList from '../components/WeedingDetails'
+import AnimatedBackground from '../components/AnimatedBackground'
 
 const WeedingPricing = () => {
   return (
     <>
+      <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section
           className='pt-[10rem] -mt-[5.25rem]'

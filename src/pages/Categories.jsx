@@ -3,6 +3,7 @@ import ButtonGradient from '../assets/svg/ButtonGradient'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useCategories } from '../context/CategoriesContext'
+import AnimatedBackground from '../components/AnimatedBackground'
 
 const Categories = () => {
   const { t, i18n } = useTranslation()
@@ -11,6 +12,7 @@ const Categories = () => {
 
   return (
     <>
+      <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden min-h-screen'>
         <Section
           className='pt-[8rem] -mt-[5.25rem] min-h-screen'

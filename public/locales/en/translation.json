@@ -141,9 +141,18 @@
   "messageLabel": "Message",
   "messageRequired": "Message is required",
   "messageMinLength": "Message must be at least 10 characters long",
+  "messageMaxLength": "Message must not exceed 500 characters",
+  "messageHelp": "Tell us about your project or inquiry",
   "enterMessage": "Enter your message",
   "submitButton": "Submit",
   "messageSent": "Message sent successfully!",
+  "contactSuccess": "Message sent successfully!",
+  "contactError": "Failed to send message. Please try again.",
+  "sending": "Sending...",
+  "formSubmitting": "Form is being submitted",
+  "formReady": "Form is ready to submit",
+  "nameMinLength": "Name must be at least 2 characters long",
+  "ourLocation": "Our Location",
 
   "submitOrder": "Submit Order",
   "orderCompleted": "Order completed successfully",
@@ -497,7 +506,7 @@
       },
       {
         "question": "Can you help with printing my photos?",
-        "answer": "Yes, we can assist with printing your photos! We offer high-quality printing options and can help you choose the best formats and finishes to showcase your images. Just let us know your preferences, and we’ll take care of the rest!"
+        "answer": "Yes, we can assist with printing your photos! We offer high-quality printing options and can help you choose the best formats and finishes to showcase your images. Just let us know your preferences, and we'll take care of the rest!"
       },
       {
         "question": "What are your pricing options?",
@@ -521,7 +530,7 @@
       },
       {
         "question": "Do you have a portfolio I can view?",
-        "answer": "Yes, we have a portfolio available for you to view! You can check it out on our website, where you’ll find a selection of our recent work across various photography and filmmaking projects and web development."
+        "answer": "Yes, we have a portfolio available for you to view! You can check it out on our website, where you'll find a selection of our recent work across various photography and filmmaking projects and web development."
       }
     ]
   },
