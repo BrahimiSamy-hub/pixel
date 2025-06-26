@@ -25,7 +25,6 @@ import Section from '../components/Section'
 import AnimatedBackground from '../components/AnimatedBackground'
 import SEOHead from '../components/SEOHead'
 import ButtonGradient from '../assets/svg/ButtonGradient'
-import PortfolioList from '../components/PortfolioList'
 
 // Lazy load portfolio components for better performance
 const PortfolioLogo = lazy(() => import('../components/portfolio/Logo'))
