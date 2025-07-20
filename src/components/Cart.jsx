@@ -5,10 +5,12 @@ import { useCart } from '../context/CartContext'
 import { Link } from 'react-router-dom'
 import { FaTrashAlt } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 const Cart = () => {
   const { t } = useTranslation()
   const { isOpen, toggleCart, cartItems, removeFromCart } = useCart()
+  const { trackButtonClick, trackAddToCart } = useAnalytics()
 
   const calculateSubtotal = () => {
     return cartItems.reduce(
@@ -24,6 +26,8 @@ const Cart = () => {
   const handleCheckoutClick = (e) => {
     if (isCartEmpty()) {
       e.preventDefault()
+    } else {
+      trackButtonClick('checkout', 'cart')
     }
   }
 
@@ -108,12 +112,16 @@ const Cart = () => {
                                         <button
                                           type='button'
                                           className='font-medium text-red-500 hover:text-red-300 border p-1 rounded-md border-red-500 hover:border-red-300'
-                                          onClick={() =>
+                                          onClick={() => {
                                             removeFromCart(
                                               product.selectedHero._id,
                                               product.size
                                             )
-                                          }
+                                            trackButtonClick(
+                                              'remove_from_cart',
+                                              'cart'
+                                            )
+                                          }}
                                         >
                                           <FaTrashAlt size={25} />
                                         </button>
@@ -162,7 +170,10 @@ const Cart = () => {
                               draggable='false'
                               to='/shop'
                               className='font-medium text-color-1 hover:opacity-75'
-                              onClick={toggleCart}
+                              onClick={() => {
+                                toggleCart()
+                                trackButtonClick('continue_shopping', 'cart')
+                              }}
                             >
                               {t('continueShopping')}
                               <span aria-hidden='true'> &rarr;</span>

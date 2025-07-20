@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next'
 import { FaChevronDown } from 'react-icons/fa'
 import ButtonGradient from '../assets/svg/ButtonGradient'
 import HeaderUp from './HeaderUp'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 const navigation = [
   { id: '0', titleKey: 'home', url: '/' },
@@ -29,6 +30,7 @@ const Header = () => {
   const [dropdownOpenMobile, setDropdownOpenMobile] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
+  const { trackButtonClick, trackNavigation } = useAnalytics()
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -47,6 +49,7 @@ const Header = () => {
     localStorage.setItem('i18nextLng', lng)
     setDropdownOpen(false)
     setDropdownOpenMobile(false)
+    trackButtonClick('language_change', 'header')
   }
 
   const toggleNavigation = () => {
@@ -63,6 +66,10 @@ const Header = () => {
     if (!openNavigation) return
     enablePageScroll()
     setOpenNavigation(false)
+  }
+
+  const handleNavigation = (fromPage, toPage) => {
+    trackNavigation(fromPage, toPage)
   }
 
   useEffect(() => {
@@ -98,7 +105,10 @@ const Header = () => {
                   draggable='false'
                   key={item.id}
                   to={item.url}
-                  onClick={handleClick}
+                  onClick={() => {
+                    handleClick()
+                    handleNavigation(pathname, item.url)
+                  }}
                   className={`block relative font-code uppercase text-n-1 transition-colors hover:text-color-1 ${
                     item.onlyMobile ? 'lg:hidden' : ''
                   } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-[0.8rem] lg:font-semibold ${
@@ -189,7 +199,10 @@ const Header = () => {
           </div>
           <button
             className='ml-6 relative lg:flex hidden hover:rotate-12 transition-transform duration-150'
-            onClick={toggleCart}
+            onClick={() => {
+              toggleCart()
+              trackButtonClick('cart_open', 'header')
+            }}
           >
             <FaCartShopping size={40} color='#F18A27' />
             <span className='absolute -top-2 -right-3 flex items-center justify-center w-6 h-6 font-bold text-[#F18A28] bg-white rounded-full'>

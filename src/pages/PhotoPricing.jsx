@@ -2,8 +2,16 @@ import ButtonGradient from '../assets/svg/ButtonGradient'
 import Section from '../components/Section'
 import PricingList from '../components/PhotoDetails'
 import AnimatedBackground from '../components/AnimatedBackground'
+import { useAnalytics } from '../hooks/useAnalytics'
+import { useEffect } from 'react'
 
 const PhotoPricing = () => {
+  const { trackPricingView } = useAnalytics()
+
+  useEffect(() => {
+    trackPricingView('photography')
+  }, [trackPricingView])
+
   return (
     <>
       <AnimatedBackground />

@@ -18,6 +18,7 @@ import {
   Transition,
 } from '@headlessui/react'
 import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/react/20/solid'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 
 import Heading from '../components/Heading'
 import PixelCircles from '../components/design/PixelCircles'
@@ -25,6 +26,7 @@ import Section from '../components/Section'
 import AnimatedBackground from '../components/AnimatedBackground'
 import SEOHead from '../components/SEOHead'
 import ButtonGradient from '../assets/svg/ButtonGradient'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 // Lazy load portfolio components for better performance
 const PortfolioLogo = lazy(() => import('../components/portfolio/Logo'))
@@ -446,8 +448,23 @@ const DesktopFilters = ({
 // Main Portfolio Component
 const Portfolio = () => {
   const { t } = useTranslation()
-  const [selectedSubcategory, setSelectedSubcategory] = useState('logo')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const navigate = useNavigate()
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const { trackPortfolioView, trackButtonClick } = useAnalytics()
+
+  // Get category from URL params or default to 'logo'
+  const categoryFromUrl = searchParams.get('category')
+  const [selectedSubcategory, setSelectedSubcategory] = useState(
+    categoryFromUrl || 'logo'
+  )
+
+  // Update URL when category changes
+  useEffect(() => {
+    if (categoryFromUrl && categoryFromUrl !== selectedSubcategory) {
+      setSelectedSubcategory(categoryFromUrl)
+    }
+  }, [categoryFromUrl])
 
   // Memoized subcategory components mapping
   const subcategoryComponents = useMemo(
@@ -510,13 +527,24 @@ const Portfolio = () => {
   )
 
   // Memoized handlers
-  const handleSubcategoryChange = useCallback((subcategory) => {
-    setSelectedSubcategory(subcategory)
-  }, [])
+  const handleSubcategoryChange = useCallback(
+    (subcategory) => {
+      setSelectedSubcategory(subcategory)
+
+      // Update URL with the selected category
+      const newSearchParams = new URLSearchParams(searchParams)
+      newSearchParams.set('category', subcategory)
+      setSearchParams(newSearchParams)
+
+      trackPortfolioView(subcategory)
+    },
+    [trackPortfolioView, searchParams, setSearchParams]
+  )
 
   const handleMobileFiltersToggle = useCallback(() => {
     setMobileFiltersOpen((prev) => !prev)
-  }, [])
+    trackButtonClick('mobile_filters_toggle', 'portfolio')
+  }, [trackButtonClick])
 
   const handleMobileFiltersClose = useCallback(() => {
     setMobileFiltersOpen(false)

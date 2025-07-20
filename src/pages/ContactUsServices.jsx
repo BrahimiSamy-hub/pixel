@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom' // Import Link for navigation
 import AnimatedBackground from '../components/AnimatedBackground'
 import Contact from '../components/Contact'
 import SEOHead from '../components/SEOHead'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 const ContactUsServices = () => {
   const location = useLocation()
@@ -24,6 +25,7 @@ const ContactUsServices = () => {
 
   // Access the context values and submitContactForm function
   const { loading, error, success, submitContactForm } = useContact()
+  const { trackContactForm, trackServiceInquiry } = useAnalytics()
 
   const onSubmit = (data) => {
     const formData = {
@@ -35,6 +37,8 @@ const ContactUsServices = () => {
     }
 
     submitContactForm(formData) // Call the context function to submit the form data
+    trackContactForm(service) // Track contact form submission
+    trackServiceInquiry(service) // Track service inquiry
     reset() // Reset the form after submission
   }
 

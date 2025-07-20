@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaChevronLeft } from 'react-icons/fa'
 import AnimatedBackground from '../components/AnimatedBackground'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 const Shop = () => {
   const { t, i18n } = useTranslation() // Include i18n here
@@ -16,6 +17,7 @@ const Shop = () => {
   const location = useLocation()
   const { posters, handlePosterClick, fetchPosters } = usePosters()
   const navigate = useNavigate()
+  const { trackEvent, trackButtonClick } = useAnalytics()
 
   // Get the selected category from the location state
   const selectedCategory = location.state?.selectedCategory
@@ -29,8 +31,9 @@ const Shop = () => {
   useEffect(() => {
     if (categoryId) {
       fetchPosters(categoryId)
+      trackEvent('shop', 'category_view', categoryId)
     }
-  }, [categoryId])
+  }, [categoryId, trackEvent])
 
   return (
     <>
@@ -45,7 +48,10 @@ const Shop = () => {
           <div className='container relative'>
             <div className='mx-auto max-w-2xl sm:pb-24 lg:max-w-7xl'>
               <button
-                onClick={() => navigate(-1)}
+                onClick={() => {
+                  navigate(-1)
+                  trackButtonClick('back_button', 'shop')
+                }}
                 className='h1 flex items-center mb-10'
               >
                 <FaChevronLeft size={45} className='mr-4 sm:mr-10' />
@@ -104,7 +110,12 @@ const Shop = () => {
                       <div className='mt-4 flex justify-center'>
                         <div>
                           <h3 className='text-md font-bold'>
-                            <button onClick={() => handlePosterClick(poster)}>
+                            <button
+                              onClick={() => {
+                                handlePosterClick(poster)
+                                trackEvent('shop', 'product_view', poster.name)
+                              }}
+                            >
                               <span
                                 aria-hidden='true'
                                 className='absolute inset-0'

@@ -84,6 +84,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-86F35330NS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-86F35330NS', {
+        page_title: 'Pixel Creative Agency',
+        page_location: window.location.href,
+        send_page_view: true,
+      })
+    </script>
+
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
       {

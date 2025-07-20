@@ -15,7 +15,7 @@ const NeonPricing = () => {
           customPaddings
         >
           <div className='container min-h-screen'>
-            <h1 className='text-center h1 mb-6 uppercase'>Neon</h1>
+            <h1 className='text-center h1 mb-6 uppercase'>Advertisement</h1>
             <PricingList />
           </div>
         </Section>

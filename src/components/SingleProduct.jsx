@@ -6,6 +6,7 @@ import Section from './Section'
 import { usePosters } from '../context/PostersContext'
 import { useCart } from '../context/CartContext' // Import the useCart hook
 import { Link } from 'react-router-dom'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -34,6 +35,7 @@ const SingleProduct = () => {
   const { id } = useParams()
   const { singleProduct, fetchSingleProduct } = usePosters()
   const { addToCart } = useCart()
+  const { trackAddToCart, trackEvent } = useAnalytics()
 
   const [selectedImage, setSelectedImage] = useState('')
   const [selectedColor, setSelectedColor] = useState('')
@@ -110,6 +112,12 @@ const SingleProduct = () => {
     }
 
     addToCart(productDetails)
+    trackAddToCart(selectedHeroName, singleProduct.name, price)
+    trackEvent(
+      'ecommerce',
+      'add_to_cart',
+      `${singleProduct.name} - ${selectedSize}`
+    )
   }
 
   if (loading) {

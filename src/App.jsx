@@ -6,6 +6,8 @@ import { HelmetProvider } from 'react-helmet-async'
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import Snowfall from 'react-snowfall' // Import the snowfall package
+import GoogleAnalytics from './components/GoogleAnalytics'
+import { useAnalytics } from './hooks/useAnalytics'
 import Home from './pages/Home'
 import Photo from './pages/PhotoPricing'
 import Audio from './pages/AudioPricing'
@@ -37,13 +39,18 @@ const App = () => {
     localStorage.getItem('i18nextLng') || 'fr'
   )
   const { t } = useTranslation()
+  const { trackError } = useAnalytics()
 
   useEffect(() => {
-    AOS.init({
-      duration: 1500,
-      once: false,
-    })
-  }, [])
+    try {
+      AOS.init({
+        duration: 1500,
+        once: false,
+      })
+    } catch (error) {
+      trackError('AOS initialization failed', false)
+    }
+  }, [trackError])
 
   useEffect(() => {
     const handleLanguageChange = () => {
@@ -61,6 +68,7 @@ const App = () => {
   return (
     <HelmetProvider>
       <Router>
+        <GoogleAnalytics />
         {/* <Snowfall 
           color='#ffffff' 
           snowflakeCount={25}

@@ -10,12 +10,14 @@ import { useTranslation } from 'react-i18next'
 import { FaTrashAlt } from 'react-icons/fa'
 import { useOrder } from '../context/OrderContext'
 import AnimatedBackground from '../components/AnimatedBackground'
+import { useAnalytics } from '../hooks/useAnalytics'
 
 const Checkout = () => {
   const { t } = useTranslation()
   const { cartItems, removeFromCart, clearCart } = useCart()
   const { createOrder, isOrderLoading } = useOrder()
   const [isOrderSuccessful, setIsOrderSuccessful] = useState(false)
+  const { trackPurchase, trackEvent, trackButtonClick } = useAnalytics()
   const {
     register,
     handleSubmit,
@@ -67,9 +69,16 @@ const Checkout = () => {
       // Call createOrder from OrderContext
       await createOrder(orderData)
       setIsOrderSuccessful(true)
+
+      // Track purchase event
+      const transactionId = `order_${Date.now()}`
+      trackPurchase(transactionId, total)
+      trackEvent('ecommerce', 'purchase_completed', `Total: ${total} DZD`)
+
       clearCart() // Clear the cart after successful order creation
     } catch (error) {
       console.error('Error submitting order:', error)
+      trackEvent('error', 'checkout_error', error.message)
     }
   }
 
