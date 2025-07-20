@@ -448,34 +448,114 @@
     "dev": [
       {
         "id": "0",
-        "title": "E-commerce",
-        "description": "Vous souhaitez promouvoir un produit, ou vendre votre produit enligne, alors vous avez besoin d'un site ecom",
+        "title": "Site Web Vitrine",
+        "description": "Site web professionnel pour présenter votre entreprise, vos services et votre portfolio avec un design moderne et responsive.",
         "price": "Sur Devis",
         "features": [
-          "Design personnalisé",
-          "5 Pages",
-          "Tableau de bord (Ajout, Modification, Suppression de produits)",
-          "Réception de commande sur Telegram"
+          "Design personnalisé et moderne",
+          "5-10 pages selon vos besoins",
+          "Responsive design (mobile, tablette, desktop)",
+          "Optimisation SEO de base",
+          "Formulaire de contact",
+          "Intégration réseaux sociaux",
+          "Tableau de bord d'administration",
+          "Hébergement et nom de domaine inclus (1 an)",
+          "Formation à l'utilisation",
+          "Support technique 3 mois"
         ]
       },
       {
         "id": "1",
-        "title": "Landing Page",
-        "description": "Que vous soyez une start-up ou une entreprise établie, nous vous offrons les outils et l'expertise nécessaires.",
+        "title": "Site E-commerce",
+        "description": "Plateforme de vente en ligne complète avec gestion des produits, panier d'achat et système de paiement sécurisé.",
         "price": "Sur Devis",
         "features": [
-          "Design personnalisé",
-          "Nombre de Pages au choix",
-          "Tableau de bord (Modification des pages)",
-          "Réception des messages sur Telegram"
+          "Design e-commerce professionnel",
+          "Catalogue de produits illimité",
+          "Système de panier et commandes",
+          "Gestion des stocks en temps réel",
+          "Paiements sécurisés (carte, virement)",
+          "Tableau de bord administrateur complet",
+          "Gestion des clients et commandes",
+          "Système de notifications (email, SMS)",
+          "Optimisation SEO e-commerce",
+          "Hébergement et nom de domaine inclus (1 an)",
+          "Formation complète",
+          "Support technique 6 mois"
         ]
       },
       {
         "id": "2",
-        "title": "Mobile Application",
-
+        "title": "Application Mobile",
+        "description": "Application mobile native ou hybride pour iOS et Android avec fonctionnalités avancées et interface utilisateur intuitive.",
         "price": "Sur Devis",
-        "features": []
+        "features": [
+          "Application native iOS et Android",
+          "Design UI/UX personnalisé",
+          "Fonctionnalités sur mesure",
+          "Synchronisation cloud",
+          "Notifications push",
+          "Intégration API tierces",
+          "Mode hors ligne",
+          "Sécurité et chiffrement",
+          "Publication sur App Store et Google Play",
+          "Maintenance et mises à jour",
+          "Support technique 12 mois"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Landing Page",
+        "description": "Page d'atterrissage optimisée pour convertir les visiteurs en clients avec des call-to-action stratégiques.",
+        "price": "Sur Devis",
+        "features": [
+          "Design conversion-optimisé",
+          "A/B testing intégré",
+          "Formulaires de capture de leads",
+          "Intégration CRM",
+          "Analytics et tracking",
+          "Optimisation SEO",
+          "Version mobile optimisée",
+          "Temps de chargement ultra-rapide",
+          "Hébergement haute performance",
+          "Support technique 3 mois"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Application Web Progressive (PWA)",
+        "description": "Application web moderne qui fonctionne comme une application native avec installation sur l'écran d'accueil.",
+        "price": "Sur Devis",
+        "features": [
+          "Installation sur écran d'accueil",
+          "Fonctionnement hors ligne",
+          "Notifications push",
+          "Performance optimisée",
+          "Interface native-like",
+          "Synchronisation automatique",
+          "Sécurité renforcée",
+          "Compatibilité multi-navigateurs",
+          "Mises à jour automatiques",
+          "Support technique 6 mois"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "API et Backend",
+        "description": "Développement d'API RESTful et de systèmes backend robustes pour alimenter vos applications et sites web.",
+        "price": "Sur Devis",
+        "features": [
+          "API RESTful sécurisée",
+          "Base de données optimisée",
+          "Authentification JWT",
+          "Documentation API complète",
+          "Tests automatisés",
+          "Monitoring et logs",
+          "Sauvegarde automatique",
+          "Scalabilité cloud",
+          "Sécurité et chiffrement",
+          "Support technique 12 mois"
+        ]
       }
     ]
   },
@@ -483,6 +563,15 @@
   "about_us": {
     "header": "Notre Histoire",
     "description": "Bienvenue chez Pixel, votre partenaire créatif en photographie. Fondée en 2018 par une équipe de passionnés, notre agence se consacre à capturer des moments uniques et à raconter des histoires à travers l'objectif. Nous croyons que chaque image doit évoquer une émotion et laisser une empreinte durable. Que vous soyez une entreprise cherchant à promouvoir votre marque, un couple célébrant un moment spécial ou un artiste souhaitant mettre en valeur son travail, nous nous engageons à comprendre vos besoins et à transformer votre vision en réalité. Avec une approche personnalisée, nous allions expertise technique et sens aigu de l'esthétique pour créer des visuels qui se démarquent. Notre mission est de fournir des images de haute qualité qui captivent votre audience et renforcent votre message. Rejoignez-nous dans cette aventure, et ensemble, donnons vie à vos idées.",
+    "ourLocation": "Notre Localisation",
+    "strategicallyLocated": "Stratégiquement situé pour mieux vous servir",
+    "support247": "Support 24/7",
+    "alwaysHere": "Toujours là quand vous avez le plus besoin de nous",
+    "qualityFirst": "Qualité d'abord",
+    "excellenceDetail": "L'excellence dans chaque détail que nous livrons",
+    "visitStudio": "Visitez Notre Studio",
+    "studioDescription": "Venez voir où la magie se produit. Notre espace créatif est conçu pour inspirer l'innovation et la collaboration.",
+    "creativeHeadquarters": "Notre siège créatif",
     "services": {
       "shipping": {
         "label": "Livraison en 2 jours",
@@ -500,6 +589,7 @@
   },
   "faq": {
     "title": "Questions Fréquemment Posées",
+    "subtitle": "Trouvez des réponses aux questions fréquemment posées sur nos services et processus",
     "questions": [
       {
         "question": "Quels types de services de photographie proposez-vous ?",

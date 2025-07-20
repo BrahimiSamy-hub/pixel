@@ -446,34 +446,114 @@
     "dev": [
       {
         "id": "0",
-        "title": "E-commerce",
-        "description": "Want to promote a product, and sell it online, then u need an ecom website.",
+        "title": "Showcase Website",
+        "description": "Professional website to showcase your business, services, and portfolio with modern and responsive design.",
         "price": "On Request",
         "features": [
-          "Custom design",
-          "5 Pages",
-          "Dashboard (Add, Modify, Delete products)",
-          "Receive orders via Telegram"
+          "Custom and modern design",
+          "5-10 pages based on your needs",
+          "Responsive design (mobile, tablet, desktop)",
+          "Basic SEO optimization",
+          "Contact form",
+          "Social media integration",
+          "Admin dashboard",
+          "Hosting and domain included (1 year)",
+          "Usage training",
+          "Technical support 3 months"
         ]
       },
       {
         "id": "1",
-        "title": "Landing Page",
-        "description": "Whether you are a startup or an established business, we provide the tools and expertise you need.",
+        "title": "E-commerce Website",
+        "description": "Complete online sales platform with product management, shopping cart, and secure payment system.",
         "price": "On Request",
         "features": [
-          "Custom design",
-          "Number of pages as desired",
-          "Dashboard (Modify pages)",
-          "Receive messages via Telegram"
+          "Professional e-commerce design",
+          "Unlimited product catalog",
+          "Shopping cart and order system",
+          "Real-time inventory management",
+          "Secure payments (card, bank transfer)",
+          "Complete admin dashboard",
+          "Customer and order management",
+          "Notification system (email, SMS)",
+          "E-commerce SEO optimization",
+          "Hosting and domain included (1 year)",
+          "Complete training",
+          "Technical support 6 months"
         ]
       },
       {
         "id": "2",
         "title": "Mobile Application",
-
+        "description": "Native or hybrid mobile application for iOS and Android with advanced features and intuitive user interface.",
         "price": "On Request",
-        "features": []
+        "features": [
+          "Native iOS and Android app",
+          "Custom UI/UX design",
+          "Tailored features",
+          "Cloud synchronization",
+          "Push notifications",
+          "Third-party API integration",
+          "Offline mode",
+          "Security and encryption",
+          "App Store and Google Play publication",
+          "Maintenance and updates",
+          "Technical support 12 months"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Landing Page",
+        "description": "Conversion-optimized landing page to convert visitors into customers with strategic call-to-actions.",
+        "price": "On Request",
+        "features": [
+          "Conversion-optimized design",
+          "Integrated A/B testing",
+          "Lead capture forms",
+          "CRM integration",
+          "Analytics and tracking",
+          "SEO optimization",
+          "Mobile-optimized version",
+          "Ultra-fast loading time",
+          "High-performance hosting",
+          "Technical support 3 months"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Progressive Web App (PWA)",
+        "description": "Modern web application that works like a native app with home screen installation.",
+        "price": "On Request",
+        "features": [
+          "Home screen installation",
+          "Offline functionality",
+          "Push notifications",
+          "Optimized performance",
+          "Native-like interface",
+          "Automatic synchronization",
+          "Enhanced security",
+          "Multi-browser compatibility",
+          "Automatic updates",
+          "Technical support 6 months"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "API and Backend",
+        "description": "Development of RESTful APIs and robust backend systems to power your applications and websites.",
+        "price": "On Request",
+        "features": [
+          "Secure RESTful API",
+          "Optimized database",
+          "JWT authentication",
+          "Complete API documentation",
+          "Automated testing",
+          "Monitoring and logging",
+          "Automatic backup",
+          "Cloud scalability",
+          "Security and encryption",
+          "Technical support 12 months"
+        ]
       }
     ]
   },
@@ -481,6 +561,15 @@
   "about_us": {
     "header": "Our Story",
     "description": "Welcome to Pixel, your creative partner in photography. Founded in 2018 by a team of enthusiasts, our agency is dedicated to capturing unique moments and telling stories through the lens. We believe that every image should evoke emotion and leave a lasting impression. Whether you're a business looking to promote your brand, a couple celebrating a special moment, or an artist showcasing their work, we are committed to understanding your needs and transforming your vision into reality. With a personalized approach, we combine technical expertise with a keen sense of aesthetics to create visuals that stand out. Our mission is to provide high-quality images that captivate your audience and strengthen your message. Join us on this adventure, and together, let's bring your ideas to life.",
+    "ourLocation": "Our Location",
+    "strategicallyLocated": "Strategically located to serve you better",
+    "support247": "24/7 Support",
+    "alwaysHere": "Always here when you need us most",
+    "qualityFirst": "Quality First",
+    "excellenceDetail": "Excellence in every detail we deliver",
+    "visitStudio": "Visit Our Studio",
+    "studioDescription": "Come and see where the magic happens. Our creative space is designed to inspire innovation and collaboration.",
+    "creativeHeadquarters": "Our creative headquarters",
     "services": {
       "shipping": {
         "label": "2 Days Shipping",
@@ -499,6 +588,7 @@
 
   "faq": {
     "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to commonly asked questions about our services and processes",
     "questions": [
       {
         "question": "What types of photography services do you offer?",

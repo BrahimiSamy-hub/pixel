@@ -17,14 +17,13 @@ const Faq = () => {
         {/* Header Section */}
         <div className='mx-auto text-center flex flex-col items-center mb-16'>
           <div className='relative'>
-            <h2 className='text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#F17A28] via-[#FF6B35] to-[#F17A28] bg-clip-text text-transparent'>
+            <h2 className='text-5xl lg:text-6xl font-bold text-white bg-clip-text text-transparent'>
               {t('faq.title')}
             </h2>
             <div className='absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-[#F17A28] to-[#FF6B35] rounded-full'></div>
           </div>
           <p className='mt-8 text-lg text-n-3 max-w-2xl leading-relaxed'>
-            Find answers to commonly asked questions about our services and
-            processes
+            {t('faq.subtitle')}
           </p>
         </div>
 

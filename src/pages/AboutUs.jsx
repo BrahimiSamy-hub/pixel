@@ -47,13 +47,6 @@ const AboutUs = () => {
       <div
         className={`pt-[4.75rem] -mt-[2.65rem] lg:pt-[7.9rem] overflow-hidden relative`}
       >
-        {/* Animated Background Elements */}
-        <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-          <div className='absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-[#F17A28]/10 to-[#FF6B35]/10 rounded-full blur-3xl animate-pulse'></div>
-          <div className='absolute top-96 right-10 w-96 h-96 bg-gradient-to-l from-[#FF6B35]/8 to-[#F17A28]/8 rounded-full blur-3xl animate-pulse delay-1000'></div>
-          <div className='absolute bottom-20 left-1/2 transform -translate-x-1/2 w-80 h-80 bg-gradient-to-t from-[#F17A28]/5 to-transparent rounded-full blur-3xl'></div>
-        </div>
-
         <Section
           className='pt-[12rem] lg:pt-[8rem] -mt-[5.25rem] min-h-screen relative z-10'
           crosses
@@ -94,10 +87,10 @@ const AboutUs = () => {
                       </svg>
                     </div>
                     <h3 className='text-xl font-semibold text-n-1 mb-2 text-center'>
-                      Our Location
+                      {t('about_us.ourLocation')}
                     </h3>
                     <p className='text-n-3 text-center'>
-                      Strategically located to serve you better
+                      {t('about_us.strategicallyLocated')}
                     </p>
                   </div>
 
@@ -116,10 +109,10 @@ const AboutUs = () => {
                       </svg>
                     </div>
                     <h3 className='text-xl font-semibold text-n-1 mb-2 text-center'>
-                      24/7 Support
+                      {t('about_us.support247')}
                     </h3>
                     <p className='text-n-3 text-center'>
-                      Always here when you need us most
+                      {t('about_us.alwaysHere')}
                     </p>
                   </div>
 
@@ -134,10 +127,10 @@ const AboutUs = () => {
                       </svg>
                     </div>
                     <h3 className='text-xl font-semibold text-n-1 mb-2 text-center'>
-                      Quality First
+                      {t('about_us.qualityFirst')}
                     </h3>
                     <p className='text-n-3 text-center'>
-                      Excellence in every detail we deliver
+                      {t('about_us.excellenceDetail')}
                     </p>
                   </div>
                 </div>
@@ -148,12 +141,11 @@ const AboutUs = () => {
             <div className='mb-20'>
               <div className='text-center mb-12'>
                 <h2 className='text-6xl lg:text-5xl font-bold text-n-1 mb-4'>
-                  Visit Our Studio
+                  {t('about_us.visitStudio')}
                 </h2>
                 <div className='w-24 h-1 bg-gradient-to-r from-[#F17A28] to-[#FF6B35] rounded-full mx-auto mb-6'></div>
                 <p className='text-lg text-n-3 max-w-2xl mx-auto'>
-                  Come and see where the magic happens. Our creative space is
-                  designed to inspire innovation and collaboration.
+                  {t('about_us.studioDescription')}
                 </p>
               </div>
 
@@ -195,7 +187,7 @@ const AboutUs = () => {
                             Pixel Creative Agency
                           </h3>
                           <p className='text-gray-300 text-sm'>
-                            Our creative headquarters
+                            {t('about_us.creativeHeadquarters')}
                           </p>
                         </div>
                       </div>
