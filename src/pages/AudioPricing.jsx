@@ -13,6 +13,7 @@ import {
   FaVolumeUp,
 } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import SEOHead from '../components/SEOHead'
 
 const AudioPricing = () => {
   const { trackPricingView } = useAnalytics()
@@ -22,8 +23,37 @@ const AudioPricing = () => {
     trackPricingView('audio')
   }, [trackPricingView])
 
+  const audioStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Audio Production Services',
+    name: 'Production Audio - Pixel Creative Agency',
+    description:
+      'Services de production audio incluant effets sonores, voix-off, production musicale originale et mixage audio professionnel en Algérie.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Pixel Creative Agency',
+      url: 'https://pixeldz.store',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Algérie',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://pixeldz.store/sounds',
+    },
+  }
+
   return (
     <>
+      <SEOHead
+        title='Production Audio'
+        description='Services de production audio incluant effets sonores, voix-off, production musicale originale et mixage audio professionnel en Algérie. Studio professionnel et qualité supérieure.'
+        keywords='production audio algérie, effets sonores, voix-off, musique originale, mixage audio, studio enregistrement'
+        url='https://pixeldz.store/sounds'
+        structuredData={audioStructuredData}
+      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section

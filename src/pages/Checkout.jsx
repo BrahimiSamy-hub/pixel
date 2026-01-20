@@ -11,6 +11,7 @@ import { FaTrashAlt } from 'react-icons/fa'
 import { useOrder } from '../context/OrderContext'
 import AnimatedBackground from '../components/AnimatedBackground'
 import { useAnalytics } from '../hooks/useAnalytics'
+import SEOHead from '../components/SEOHead'
 
 const Checkout = () => {
   const { t } = useTranslation()
@@ -84,6 +85,12 @@ const Checkout = () => {
 
   return (
     <>
+      <SEOHead
+        title='Commande'
+        description='Finalisez votre commande sur Pixel Creative Agency'
+        url='https://pixeldz.store/checkout'
+        noindex={true}
+      />
       <AnimatedBackground />
       <Section
         className='pt-[10rem] min-h-screen pb-20'

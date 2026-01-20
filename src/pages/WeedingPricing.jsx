@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fa'
 import { GiDiamondRing } from 'react-icons/gi'
 import { useTranslation } from 'react-i18next'
+import SEOHead from '../components/SEOHead'
 
 const WeedingPricing = () => {
   const { trackPricingView } = useAnalytics()
@@ -23,8 +24,37 @@ const WeedingPricing = () => {
     trackPricingView('wedding')
   }, [trackPricingView])
 
+  const weddingStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Wedding Photography Services',
+    name: 'Photographie de Mariage - Pixel Creative Agency',
+    description:
+      'Packages complets de photographie de mariage en Algérie. De la préparation à la cérémonie, capturez tous les moments précieux de votre journée spéciale.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Pixel Creative Agency',
+      url: 'https://pixeldz.store',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Algérie',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://pixeldz.store/wedding',
+    },
+  }
+
   return (
     <>
+      <SEOHead
+        title='Photographie de Mariage'
+        description='Packages complets de photographie de mariage en Algérie. De la préparation à la cérémonie, capturez tous les moments précieux de votre journée spéciale. Packages personnalisables disponibles.'
+        keywords='photographie mariage algérie, photo mariage, wedding photography, photographe mariage, cérémonie mariage'
+        url='https://pixeldz.store/wedding'
+        structuredData={weddingStructuredData}
+      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section

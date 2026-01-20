@@ -5,11 +5,12 @@ import ButtonGradient from '../assets/svg/ButtonGradient'
 import { usePosters } from '../context/PostersContext'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaChevronLeft } from 'react-icons/fa'
 import AnimatedBackground from '../components/AnimatedBackground'
 import { useAnalytics } from '../hooks/useAnalytics'
+import SEOHead from '../components/SEOHead'
 
 const Shop = () => {
   const { t, i18n } = useTranslation() // Include i18n here
@@ -35,8 +36,55 @@ const Shop = () => {
     }
   }, [categoryId, trackEvent])
 
+  // Generate structured data for category page
+  const categoryStructuredData = useMemo(() => {
+    if (!selectedCategory) return null
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: categoryName || t('shopP.title'),
+      description: `Découvrez tous nos produits dans la catégorie ${categoryName}. ${posters.length} produits disponibles.`,
+      url: `https://pixeldz.store/shop/${categoryId}`,
+      image: selectedCategory.image?.url
+        ? `https://pixeldz.store${selectedCategory.image.url}`
+        : undefined,
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: posters.length,
+        itemListElement: posters
+          .filter((poster) => poster.name !== 'AlgeriaPoly')
+          .map((poster, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+              '@type': 'Product',
+              name: poster.name,
+              url: `https://pixeldz.store/product/${poster._id}`,
+              image: poster.mainImage?.url
+                ? `https://pixeldz.store${poster.mainImage.url}`
+                : undefined,
+            },
+          })),
+      },
+    }
+  }, [selectedCategory, categoryName, categoryId, posters, t])
+
   return (
     <>
+      <SEOHead
+        title={categoryName || t('shopP.title') || 'Boutique'}
+        description={`Découvrez tous nos produits dans la catégorie ${categoryName}. ${posters.length} produits disponibles avec différentes tailles et options personnalisables.`}
+        keywords={`${categoryName}, produits personnalisés, affiches, posters, pixel creative agency`}
+        url={`https://pixeldz.store/shop/${categoryId}`}
+        image={
+          selectedCategory?.image?.url
+            ? `https://pixeldz.store${selectedCategory.image.url}`
+            : undefined
+        }
+        imageAlt={categoryName || t('shopP.title')}
+        structuredData={categoryStructuredData}
+      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section

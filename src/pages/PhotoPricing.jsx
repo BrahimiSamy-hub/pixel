@@ -13,6 +13,7 @@ import {
   FaStar,
 } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import SEOHead from '../components/SEOHead'
 
 const PhotoPricing = () => {
   const { trackPricingView } = useAnalytics()
@@ -22,8 +23,37 @@ const PhotoPricing = () => {
     trackPricingView('photography')
   }, [trackPricingView])
 
+  const photoStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Photography Services',
+    name: 'Photographie Professionnelle - Pixel Creative Agency',
+    description:
+      'Services de photographie professionnelle incluant portraits, événements, mariages et photographie commerciale en Algérie.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Pixel Creative Agency',
+      url: 'https://pixeldz.store',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Algérie',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://pixeldz.store/photoLab',
+    },
+  }
+
   return (
     <>
+      <SEOHead
+        title='Photographie Professionnelle'
+        description='Services de photographie professionnelle incluant portraits, événements, mariages et photographie commerciale en Algérie. Devis gratuit et qualité professionnelle garantie.'
+        keywords='photographie professionnelle algérie, photos événements, mariage, portrait, photo commerciale, studio photo'
+        url='https://pixeldz.store/photoLab'
+        structuredData={photoStructuredData}
+      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section

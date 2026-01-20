@@ -13,6 +13,7 @@ import {
   FaRocket,
 } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import SEOHead from '../components/SEOHead'
 
 const NeonPricing = () => {
   const { trackPricingView } = useAnalytics()
@@ -22,8 +23,37 @@ const NeonPricing = () => {
     trackPricingView('advertisement')
   }, [trackPricingView])
 
+  const neonStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Advertising and Printing Services',
+    name: 'Publicité et Impression - Pixel Creative Agency',
+    description:
+      'Services de publicité incluant panneaux LED neon, impression, signalétique, bâches publicitaires et supports marketing visuels en Algérie.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Pixel Creative Agency',
+      url: 'https://pixeldz.store',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Algérie',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://pixeldz.store/advertisement',
+    },
+  }
+
   return (
     <>
+      <SEOHead
+        title='Publicité et Impression'
+        description='Services de publicité incluant panneaux LED neon, impression, signalétique, bâches publicitaires et supports marketing visuels en Algérie. Solutions publicitaires innovantes.'
+        keywords='publicité algérie, panneau neon, impression publicitaire, signalétique, bâche publicitaire, supports marketing'
+        url='https://pixeldz.store/advertisement'
+        structuredData={neonStructuredData}
+      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section

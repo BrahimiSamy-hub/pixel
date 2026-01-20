@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback, useRef } from 'react'
-import { useParams } from 'react-router-dom'
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
+import { useParams, useLocation } from 'react-router-dom'
 import { RadioGroup } from '@headlessui/react'
 import { useTranslation } from 'react-i18next'
 import Section from './Section'
@@ -7,6 +7,7 @@ import { usePosters } from '../context/PostersContext'
 import { useCart } from '../context/CartContext' // Import the useCart hook
 import { Link } from 'react-router-dom'
 import { useAnalytics } from '../hooks/useAnalytics'
+import SEOHead from './SEOHead'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -33,6 +34,7 @@ const useDebounce = (callback, delay) => {
 const SingleProduct = () => {
   const { t } = useTranslation()
   const { id } = useParams()
+  const location = useLocation()
   const { singleProduct, fetchSingleProduct } = usePosters()
   const { addToCart } = useCart()
   const { trackAddToCart, trackEvent } = useAnalytics()
@@ -138,8 +140,112 @@ const SingleProduct = () => {
 
   const heroes = singleProduct.heroes || []
   const sizes = singleProduct.sizes || []
+
+  // Get the selected category from location state for breadcrumbs
+  const selectedCategory = location.state?.selectedCategory
+  const categoryName = selectedCategory
+    ? selectedCategory.frName || selectedCategory.engName
+    : null
+
+  // Generate product structured data
+  const productStructuredData = useMemo(() => {
+    const basePrice = singleProduct.price || sizes[0]?.price || 0
+    const productImage =
+      selectedImage ||
+      heroes[0]?.cardImage?.url ||
+      heroes[0]?.mainImage?.url ||
+      singleProduct.mainImage?.url
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: `${singleProduct.name}${selectedHeroName ? ` - ${selectedHeroName}` : ''}`,
+      description: `Produit personnalisé ${singleProduct.name} - ${singleProduct.material || ''}. Taille disponible: ${selectedSize || sizes[0]?.name || 'Standard'}.`,
+      image: productImage
+        ? `https://pixeldz.store${productImage.startsWith('/') ? '' : '/'}${productImage}`
+        : undefined,
+      brand: {
+        '@type': 'Brand',
+        name: 'Pixel Creative Agency',
+      },
+      offers: {
+        '@type': 'Offer',
+        price: basePrice,
+        priceCurrency: 'DZD',
+        availability:
+          singleProduct.stock === false
+            ? 'https://schema.org/OutOfStock'
+            : 'https://schema.org/InStock',
+        url: `https://pixeldz.store/product/${id}`,
+      },
+      ...(categoryName && {
+        category: categoryName,
+      }),
+    }
+  }, [singleProduct, selectedImage, selectedHeroName, selectedSize, sizes, heroes, id, categoryName])
+
+  // Generate breadcrumb structured data
+  const breadcrumbStructuredData = useMemo(() => {
+    if (!categoryName) return null
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Accueil',
+          item: 'https://pixeldz.store',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Boutique',
+          item: 'https://pixeldz.store/shop',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: categoryName,
+          item: `https://pixeldz.store/shop/${selectedCategory?._id}`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: singleProduct.name,
+          item: `https://pixeldz.store/product/${id}`,
+        },
+      ],
+    }
+  }, [categoryName, selectedCategory, singleProduct, id])
+
+  const productImage =
+    selectedImage ||
+    heroes[0]?.cardImage?.url ||
+    heroes[0]?.mainImage?.url ||
+    singleProduct.mainImage?.url
+  const productImageUrl = productImage
+    ? `https://pixeldz.store${productImage.startsWith('/') ? '' : '/'}${productImage}`
+    : undefined
+
   return (
-    <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden '>
+    <>
+      <SEOHead
+        title={`${singleProduct.name}${selectedHeroName ? ` - ${selectedHeroName}` : ''}`}
+        description={`Découvrez ${singleProduct.name} - ${singleProduct.material || ''}. Produit personnalisé disponible en différentes tailles et variantes. Commandez maintenant sur Pixel Creative Agency.`}
+        keywords={`${singleProduct.name}, produit personnalisé, affiche, poster, ${singleProduct.material || ''}, pixel creative agency`}
+        url={`https://pixeldz.store/product/${id}`}
+        image={productImageUrl}
+        imageAlt={`${singleProduct.name}${selectedHeroName ? ` - ${selectedHeroName}` : ''}`}
+        type='product'
+        structuredData={
+          breadcrumbStructuredData
+            ? [productStructuredData, breadcrumbStructuredData]
+            : productStructuredData
+        }
+      />
+      <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden '>
       <Section
         className='pt-[8rem] -mt-[5.25rem] min-h-screen'
         crosses
@@ -339,6 +445,7 @@ const SingleProduct = () => {
         </div>
       </Section>
     </div>
+    </>
   )
 }
 

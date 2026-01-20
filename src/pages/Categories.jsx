@@ -4,14 +4,44 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useCategories } from '../context/CategoriesContext'
 import AnimatedBackground from '../components/AnimatedBackground'
+import SEOHead from '../components/SEOHead'
 
 const Categories = () => {
   const { t, i18n } = useTranslation()
   const { categories } = useCategories()
   const currentLanguage = i18n.language
 
+  const categoriesStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: t('categories.title') || 'Categories - Pixel Creative Agency',
+    description:
+      'Découvrez toutes nos catégories de produits créatifs. Affiches, posters et designs personnalisés pour tous vos besoins.',
+    url: 'https://pixeldz.store/shop',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: categories.length,
+      itemListElement: categories.map((category, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Product',
+          name: currentLanguage === 'fr' ? category.frName : category.engName,
+          url: `https://pixeldz.store/shop/${category._id}`,
+        },
+      })),
+    },
+  }
+
   return (
     <>
+      <SEOHead
+        title={t('categories.title') || 'Catégories'}
+        description='Découvrez toutes nos catégories de produits créatifs. Affiches, posters et designs personnalisés pour tous vos besoins. Explorez notre collection complète.'
+        keywords='catégories produits, affiches personnalisées, posters créatifs, design personnalisé, pixel creative agency'
+        url='https://pixeldz.store/shop'
+        structuredData={categoriesStructuredData}
+      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden min-h-screen'>
         <Section

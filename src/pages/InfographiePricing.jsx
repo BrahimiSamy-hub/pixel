@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fa'
 import { CiPen } from 'react-icons/ci'
 import { useTranslation } from 'react-i18next'
+import SEOHead from '../components/SEOHead'
 
 const InfographiePricing = () => {
   const { trackPricingView } = useAnalytics()
@@ -23,8 +24,37 @@ const InfographiePricing = () => {
     trackPricingView('infographie')
   }, [trackPricingView])
 
+  const infographieStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Graphic Design Services',
+    name: 'Design Graphique - Pixel Creative Agency',
+    description:
+      'Services de design graphique incluant création de logos, identité visuelle, packaging, supports marketing et design print en Algérie.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Pixel Creative Agency',
+      url: 'https://pixeldz.store',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Algérie',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://pixeldz.store/creative',
+    },
+  }
+
   return (
     <>
+      <SEOHead
+        title='Design Graphique'
+        description='Services de design graphique incluant création de logos, identité visuelle, packaging, supports marketing et design print en Algérie. Design créatif et professionnel.'
+        keywords='design graphique algérie, création logo, identité visuelle, packaging design, supports marketing, design print'
+        url='https://pixeldz.store/creative'
+        structuredData={infographieStructuredData}
+      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section

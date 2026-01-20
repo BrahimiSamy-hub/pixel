@@ -13,6 +13,7 @@ import {
   FaRocket,
 } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import SEOHead from '../components/SEOHead'
 
 const DevPricing = () => {
   const { trackPricingView } = useAnalytics()
@@ -22,8 +23,37 @@ const DevPricing = () => {
     trackPricingView('development')
   }, [trackPricingView])
 
+  const devStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Web Development Services',
+    name: 'Développement Web - Pixel Creative Agency',
+    description:
+      'Services de développement web incluant sites e-commerce, landing pages, applications mobiles et solutions web personnalisées en Algérie.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Pixel Creative Agency',
+      url: 'https://pixeldz.store',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Algérie',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://pixeldz.store/development',
+    },
+  }
+
   return (
     <>
+      <SEOHead
+        title='Développement Web'
+        description='Services de développement web incluant sites e-commerce, landing pages, applications mobiles et solutions web personnalisées en Algérie. Technologies modernes et performances optimales.'
+        keywords='développement web algérie, site e-commerce, landing page, application mobile, développement frontend, développement backend'
+        url='https://pixeldz.store/development'
+        structuredData={devStructuredData}
+      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section
