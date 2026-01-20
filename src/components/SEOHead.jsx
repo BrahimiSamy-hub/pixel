@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
 
 const SEOHead = ({
   title,
@@ -12,6 +13,13 @@ const SEOHead = ({
   updatedTime = null,
   imageAlt = null,
 }) => {
+  const { i18n } = useTranslation()
+  const currentLanguage = i18n.language || 'fr'
+  
+  // Determine locale based on current language (only fr or en, ignore ar)
+  const ogLocale = currentLanguage === 'en' ? 'en_US' : 'fr_FR'
+  const alternateLocale = currentLanguage === 'en' ? 'fr_FR' : 'en_US'
+  
   const defaultTitle = 'Pixel Creative Agency - Agence Créative en Algérie'
   const defaultDescription =
     'Agence créative professionnelle en Algérie spécialisée en photographie, vidéographie, design graphique, développement web et production audio.'
@@ -59,9 +67,8 @@ const SEOHead = ({
       <meta property='og:image:type' content='image/png' />
       <meta property='og:image:alt' content={pageImageAlt} />
       <meta property='og:site_name' content='Pixel Creative Agency' />
-      <meta property='og:locale' content='fr_FR' />
-      <meta property='og:locale:alternate' content='en_US' />
-      <meta property='og:locale:alternate' content='ar_DZ' />
+      <meta property='og:locale' content={ogLocale} />
+      <meta property='og:locale:alternate' content={alternateLocale} />
       {formattedUpdatedTime && (
         <meta property='og:updated_time' content={formattedUpdatedTime} />
       )}

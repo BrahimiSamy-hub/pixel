@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "npm run generate-sitemap && vite --host",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "build": "npm run generate-sitemap && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",

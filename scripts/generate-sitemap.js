@@ -23,7 +23,7 @@ const generateSitemap = (staticRoutes, categories, products) => {
   <!-- Static Routes -->
 `
 
-  // Add static routes with hreflang
+  // Add static routes with hreflang (fr and en only)
   staticRoutes.forEach((route) => {
     sitemap += `  <url>
     <loc>${BASE_URL}${route.path}</loc>
@@ -32,7 +32,6 @@ const generateSitemap = (staticRoutes, categories, products) => {
     <priority>${route.priority || '0.8'}</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}${route.path}" />
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}${route.path}" />
-    <xhtml:link rel="alternate" hreflang="ar" href="${BASE_URL}${route.path}" />
   </url>
   
 `
@@ -50,7 +49,6 @@ const generateSitemap = (staticRoutes, categories, products) => {
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/shop/${category._id}" />
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/shop/${category._id}" />
-    <xhtml:link rel="alternate" hreflang="ar" href="${BASE_URL}/shop/${category._id}" />
   </url>
   
 `
@@ -74,7 +72,6 @@ const generateSitemap = (staticRoutes, categories, products) => {
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/product/${product._id}" />
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/product/${product._id}" />
-    <xhtml:link rel="alternate" hreflang="ar" href="${BASE_URL}/product/${product._id}" />
   </url>
   
 `
