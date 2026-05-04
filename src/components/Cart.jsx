@@ -1,8 +1,9 @@
+"use client"
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useCart } from '../context/CartContext'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { FaTrashAlt } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 import { useAnalytics } from '../hooks/useAnalytics'
@@ -14,7 +15,7 @@ const Cart = () => {
 
   const calculateSubtotal = () => {
     return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
+      (total, item) => total + item.price * (item.quantity || 1),
       0
     )
   }
@@ -77,20 +78,20 @@ const Cart = () => {
                               className='-my-6 divide-y divide-gray-200'
                             >
                               {cartItems.map((product, index) => (
-                                <li key={index} className='flex py-6'>
-                                  <div className='h-1/4 w-1/4 overflow-hidden rounded-md border border-gray-200 bg-[#c9c9c9]'>
+                                <li key={index} className='flex py-6 text-left'>
+                                  <div className='h-24 w-24 overflow-hidden rounded-md border border-gray-200 bg-[#c9c9c9] shrink-0'>
                                     <img
                                       loading='lazy'
-                                      src={product.selectedHero.cardImage.url}
+                                      src={product.selectedHero?.cardImage?.url || product.image?.url}
                                       alt='Product Image'
-                                      className='h-full w-full object-contain object-center'
+                                      className='h-full w-full object-contain'
                                     />
                                   </div>
 
                                   <div className='ml-4 flex flex-1 flex-col'>
                                     <div>
                                       <div className='flex justify-between text-base font-medium'>
-                                        <h3>{product.selectedHero.name}</h3>
+                                        <h3>{product.selectedHero?.name || product.name}</h3>
 
                                         <p className='ml-4'>
                                           {product.price}{' '}
@@ -105,16 +106,16 @@ const Cart = () => {
                                     </p>
                                     <div className='flex flex-1 items-end justify-between text-sm'>
                                       <p className='text-gray-500'>
-                                        {t('qty')} {product.quantity}
+                                        {t('qty')} {product.quantity || 1}
                                       </p>
 
                                       <div className='flex'>
                                         <button
                                           type='button'
-                                          className='font-medium text-red-500 hover:text-red-300 border p-1 rounded-md border-red-500 hover:border-red-300'
+                                          className='font-medium text-red-500 hover:text-red-300 border p-1 rounded-md border-red-500'
                                           onClick={() => {
                                             removeFromCart(
-                                              product.selectedHero._id,
+                                              product.selectedHero?._id || product._id,
                                               product.size
                                             )
                                             trackButtonClick(
@@ -151,14 +152,13 @@ const Cart = () => {
                         <div className='mt-6'>
                           <Link
                             draggable='false'
-                            to='/checkout'
+                            href='/checkout'
                             className={`flex items-center justify-center rounded-md border border-transparent bg-color-1 px-6 py-3 text-base font-medium text-white shadow-sm hover:opacity-75 ${
                               isCartEmpty()
-                                ? 'opacity-50 cursor-not-allowed'
+                                ? 'opacity-50 cursor-not-allowed pointer-events-none'
                                 : ''
                             }`}
                             onClick={toggleCart}
-                            disabled={handleCheckoutClick}
                           >
                             {t('checkout')}
                           </Link>
@@ -168,7 +168,7 @@ const Cart = () => {
                             {t('or')}{' '}
                             <Link
                               draggable='false'
-                              to='/shop'
+                              href='/shop'
                               className='font-medium text-color-1 hover:opacity-75'
                               onClick={() => {
                                 toggleCart()

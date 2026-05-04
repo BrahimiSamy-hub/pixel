@@ -236,7 +236,7 @@ const Roles = () => {
         {roles.map((role, index) => (
           <li key={index} className='col-span-1 flex gap-4'>
             <img
-              src={role.image}
+              src={role.image?.src || role.image}
               alt=''
               className='w-14 h-20'
               draggable='false'

@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom'
+"use client"
+import { useRouter } from 'next/navigation'
 import { check } from '../assets'
 import { logoPricing } from '../constants'
 import Button from './Button'
@@ -7,13 +8,14 @@ import { useTranslation } from 'react-i18next'
 
 const InfographiePricing = () => {
   const { t } = useTranslation()
-  const navigate = useNavigate()
+  const router = useRouter()
 
   const handleContactUs = () => {
-    navigate('/contact', { state: { service: 'Infographie' } })
+    router.push('/contact?service=Design')
   }
 
   const pricingData = t('pricing.logo', { returnObjects: true })
+  if (!Array.isArray(pricingData)) return null
 
   return (
     <div className='max-w-[1400px] mx-auto px-4 py-12'>

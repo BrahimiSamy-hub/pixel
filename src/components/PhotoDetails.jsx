@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom'
+"use client"
+import { useRouter } from 'next/navigation'
 import { check } from '../assets'
 import Button from './Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -6,13 +7,14 @@ import { useTranslation } from 'react-i18next'
 
 const PhotoPricing = () => {
   const { t } = useTranslation()
-  const navigate = useNavigate()
+  const router = useRouter()
 
   const handleContactUs = () => {
-    navigate('/contact', { state: { service: 'Photo / Video' } })
+    router.push('/contact?service=Photo / Video')
   }
 
   const photoPricing = t('pricing.photo', { returnObjects: true })
+  if (!Array.isArray(photoPricing)) return null
 
   return (
     <Swiper

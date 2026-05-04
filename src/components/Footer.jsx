@@ -1,3 +1,4 @@
+"use client"
 import Section from './Section'
 import { socials } from '../constants'
 import { useAnalytics } from '../hooks/useAnalytics'
@@ -22,22 +23,26 @@ const Footer = () => {
         <div className='text-n-4 text-center'>
           <p>
             <a
-              href='mailto:pixel.agency05@gmail.com'
+              href='mailto:contact@pixeldz.store'
               className=' hover:text-[#F18A27]'
               onClick={() => handleContactClick('email')}
             >
-              pixel.agency05@gmail.com
+              contact@pixeldz.store
             </a>
           </p>
           <p>
             <a
-              href='tel:+0770696982'
+              href='tel:+213799018288'
               className='hover:text-[#F18A27]'
               onClick={() => handleContactClick('phone')}
             >
-              0770 69 69 82
+              0799 01 82 88
             </a>
           </p>
+          <div className='flex gap-4 mt-2 text-xs justify-center'>
+            <a href='/privacy-policy' className='hover:text-[#F18A27]'>Politique de confidentialité</a>
+            <a href='/terms' className='hover:text-[#F18A27]'>Conditions d&apos;utilisation</a>
+          </div>
         </div>
 
         <ul className='flex gap-5 flex-wrap'>
@@ -49,7 +54,7 @@ const Footer = () => {
               className='flex items-center justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-[#F18A27]'
               onClick={() => handleSocialClick(item.title.toLowerCase())}
             >
-              <img src={item.iconUrl} width={16} height={16} alt={item.title} />
+              <img src={item.iconUrl?.src || item.iconUrl} width={16} height={16} alt={item.title} />
             </a>
           ))}
         </ul>

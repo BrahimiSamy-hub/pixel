@@ -1,12 +1,13 @@
-import Section from '../components/Section'
-import ButtonGradient from '../assets/svg/ButtonGradient'
-import { Link } from 'react-router-dom'
+"use client"
+import dynamic from 'next/dynamic'
+import Section from '@/components/Section'
+import ButtonGradient from '@/assets/svg/ButtonGradient'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import { useCategories } from '../context/CategoriesContext'
-import AnimatedBackground from '../components/AnimatedBackground'
-import SEOHead from '../components/SEOHead'
+import { useCategories } from '@/context/CategoriesContext'
+const AnimatedBackground = dynamic(() => import('@/components/AnimatedBackground'), { ssr: false })
 
-const Categories = () => {
+const CategoriesClient = () => {
   const { t, i18n } = useTranslation()
   const { categories } = useCategories()
   const currentLanguage = i18n.language
@@ -35,12 +36,9 @@ const Categories = () => {
 
   return (
     <>
-      <SEOHead
-        title={t('categories.title') || 'Catégories'}
-        description='Découvrez toutes nos catégories de produits créatifs. Affiches, posters et designs personnalisés pour tous vos besoins. Explorez notre collection complète.'
-        keywords='catégories produits, affiches personnalisées, posters créatifs, design personnalisé, pixel creative agency'
-        url='https://pixeldz.store/shop'
-        structuredData={categoriesStructuredData}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoriesStructuredData) }}
       />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden min-h-screen'>
@@ -59,13 +57,13 @@ const Categories = () => {
 
               <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {categories.map((category, index) => {
-                  const isNeons = category.engName === 'Neons' // Check if it's the "Neons" category
+                  const isNeons = category.engName === 'Neons'
                   return (
                     <div
                       key={index}
                       className={`group relative ${
                         isNeons ? 'cursor-not-allowed opacity-50' : ''
-                      }`} // Disable and change appearance for Neons
+                      }`}
                       data-aos='flip-up'
                     >
                       <div className='overflow-hidden lg:aspect-none group-hover:opacity-75 bg-[#c9c9c9] rounded'>
@@ -98,11 +96,9 @@ const Categories = () => {
                           </h3>
                         </div>
                       </div>
-                      {/* Disable the link for "Neons" category */}
                       {!isNeons && (
                         <Link
-                          to={`/shop/${category._id}`}
-                          state={{ selectedCategory: category }}
+                          href={`/shop/${category._id}`}
                           draggable='false'
                           className='absolute inset-0'
                         />
@@ -121,4 +117,4 @@ const Categories = () => {
   )
 }
 
-export default Categories
+export default CategoriesClient

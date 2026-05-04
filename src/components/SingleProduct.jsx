@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import Section from './Section'
 import { usePosters } from '../context/PostersContext'
 import { useCart } from '../context/CartContext' // Import the useCart hook
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { useAnalytics } from '../hooks/useAnalytics'
 import SEOHead from './SEOHead'
 
@@ -337,7 +337,7 @@ const SingleProduct = () => {
                     {t('wolfrules')}
                   </p>
                   <Link
-                    to='/rules'
+                    href='/rules'
                     className='text-[#F17A28] underline block font-bold'
                   >
                     {t('click')}

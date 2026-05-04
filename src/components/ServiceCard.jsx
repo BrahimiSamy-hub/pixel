@@ -12,6 +12,7 @@ const ServiceCard = ({ icon, imgURL, label, subtext }) => {
               width={24}
               height={24}
               draggable='false'
+              loading='lazy'
             />
           )}
         </div>

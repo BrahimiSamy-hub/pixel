@@ -17,24 +17,24 @@ import {
 } from '../../assets'
 
 const images = [
-  { src: wedding, alt: 'Wedding' },
-  { src: wedding1, alt: 'Wedding' },
-  { src: wedding2, alt: 'Wedding' },
-  { src: wedding3, alt: 'Wedding' },
-  { src: wedding4, alt: 'Wedding' },
-  { src: wedding5, alt: 'Wedding' },
-  { src: wedding6, alt: 'Wedding' },
-  { src: wedding7, alt: 'Wedding' },
-  { src: wedding8, alt: 'Wedding' },
-  { src: wedding9, alt: 'Wedding' },
-  { src: wedding10, alt: 'Wedding' },
-  { src: wedding11, alt: 'Wedding' },
+  { src: wedding, alt: 'Pixel Creative Agency - Photographie de Mariage 1' },
+  { src: wedding1, alt: 'Pixel Creative Agency - Photographie de Mariage 2' },
+  { src: wedding2, alt: 'Pixel Creative Agency - Photographie de Mariage 3' },
+  { src: wedding3, alt: 'Pixel Creative Agency - Photographie de Mariage 4' },
+  { src: wedding4, alt: 'Pixel Creative Agency - Photographie de Mariage 5' },
+  { src: wedding5, alt: 'Pixel Creative Agency - Photographie de Mariage 6' },
+  { src: wedding6, alt: 'Pixel Creative Agency - Photographie de Mariage 7' },
+  { src: wedding7, alt: 'Pixel Creative Agency - Photographie de Mariage 8' },
+  { src: wedding8, alt: 'Pixel Creative Agency - Photographie de Mariage 9' },
+  { src: wedding9, alt: 'Pixel Creative Agency - Photographie de Mariage 10' },
+  { src: wedding10, alt: 'Pixel Creative Agency - Photographie de Mariage 11' },
+  { src: wedding11, alt: 'Pixel Creative Agency - Photographie de Mariage 12' },
 ]
 
 const ImageComponent = ({ src, alt }) => (
   <div className='flex justify-center col-span-1 hover:cursor-pointer'>
-    <PhotoView src={src}>
-      <img src={src} alt={alt} className=' rounded-xl w-80  object-contain' />
+    <PhotoView src={src?.src || src}>
+      <img src={src?.src || src} alt={alt} className=' rounded-xl w-80  object-contain' loading='lazy' />
     </PhotoView>
   </div>
 )

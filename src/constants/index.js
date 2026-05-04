@@ -525,7 +525,7 @@ export const benefits = [
     icon: 'CiPen',
     light: false,
     imageUrl: serviceInfo,
-    url: '/creative',
+    url: '/graphic-design',
   },
   {
     id: '0',
@@ -535,7 +535,7 @@ export const benefits = [
     icon: 'FaCamera',
     light: false,
     imageUrl: servicePhoto,
-    url: '/photoLab',
+    url: '/photo-lab',
   },
 
   {

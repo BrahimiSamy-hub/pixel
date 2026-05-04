@@ -1,10 +1,12 @@
-import ButtonGradient from '../assets/svg/ButtonGradient'
-import Section from '../components/Section'
-import PricingList from '../components/InfographieDetails'
-import AnimatedBackground from '../components/AnimatedBackground'
-import { useAnalytics } from '../hooks/useAnalytics'
+"use client"
+import ButtonGradient from '@/assets/svg/ButtonGradient'
+import Section from '@/components/Section'
+import PricingList from '@/components/InfographieDetails'
+import dynamic from 'next/dynamic'
+const AnimatedBackground = dynamic(() => import('@/components/AnimatedBackground'), { ssr: false })
+import { useAnalytics } from '@/hooks/useAnalytics'
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import {
   FaExternalLinkAlt,
   FaPalette,
@@ -14,9 +16,8 @@ import {
 } from 'react-icons/fa'
 import { CiPen } from 'react-icons/ci'
 import { useTranslation } from 'react-i18next'
-import SEOHead from '../components/SEOHead'
 
-const InfographiePricing = () => {
+const InfographiePricingClient = () => {
   const { trackPricingView } = useAnalytics()
   const { t } = useTranslation()
 
@@ -24,37 +25,8 @@ const InfographiePricing = () => {
     trackPricingView('infographie')
   }, [trackPricingView])
 
-  const infographieStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Graphic Design Services',
-    name: 'Design Graphique - Pixel Creative Agency',
-    description:
-      'Services de design graphique incluant création de logos, identité visuelle, packaging, supports marketing et design print en Algérie.',
-    provider: {
-      '@type': 'Organization',
-      name: 'Pixel Creative Agency',
-      url: 'https://pixeldz.store',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'Algérie',
-    },
-    availableChannel: {
-      '@type': 'ServiceChannel',
-      serviceUrl: 'https://pixeldz.store/creative',
-    },
-  }
-
   return (
     <>
-      <SEOHead
-        title='Design Graphique'
-        description='Services de design graphique incluant création de logos, identité visuelle, packaging, supports marketing et design print en Algérie. Design créatif et professionnel.'
-        keywords='design graphique algérie, création logo, identité visuelle, packaging design, supports marketing, design print'
-        url='https://pixeldz.store/creative'
-        structuredData={infographieStructuredData}
-      />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
         <Section
@@ -64,19 +36,17 @@ const InfographiePricing = () => {
           customPaddings
         >
           <div className='container min-h-screen'>
-            {/* Enhanced Header */}
             <div className='text-center mb-12'>
               <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#F17A28] to-[#e5691f] rounded-2xl mb-6 shadow-2xl'>
                 <CiPen className='w-10 h-10 text-white' />
               </div>
-              <h1 className='h1 mb-4 uppercase'>Infographie</h1>
+              <h1 className='h1 mb-4 uppercase'>Design Graphique & Identité Visuelle</h1>
               <p className='text-xl text-gray-300 max-w-2xl mx-auto mb-8'>
                 {t('infographie_text')}
               </p>
 
-              {/* Portfolio Link */}
               <Link
-                to='/portfolio?category=logo'
+                href='/portfolio?category=logo'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#F17A28] to-[#e5691f] hover:from-[#e5691f] hover:to-[#d15a1f] text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#F17A28]/25'
               >
                 {t('portfolioP')}
@@ -84,7 +54,6 @@ const InfographiePricing = () => {
               </Link>
             </div>
 
-            {/* Service Features Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>
               <div className='bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:border-[#F17A28]/50 transition-all duration-300'>
                 <FaPalette className='w-8 h-8 text-[#F17A28] mx-auto mb-4' />
@@ -110,7 +79,6 @@ const InfographiePricing = () => {
               </div>
             </div>
 
-            {/* Pricing List */}
             <PricingList />
           </div>
         </Section>
@@ -121,4 +89,4 @@ const InfographiePricing = () => {
   )
 }
 
-export default InfographiePricing
+export default InfographiePricingClient

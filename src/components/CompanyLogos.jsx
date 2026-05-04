@@ -1,3 +1,4 @@
+"use client"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -57,10 +58,11 @@ const CompanyLogos = ({ className }) => {
                   {/* Logo container with glass effect */}
                   <div className='relative z-10 p-6 flex items-center justify-center'>
                     <img
-                      src={logo}
+                      src={logo?.src || logo}
                       width={140}
-                      alt='logo'
+                      alt={logo?.name || `Pixel Creative Agency - Partenaire Logotype ${index + 1}`}
                       className='object-contain filter drop-shadow-sm transition-all duration-500 scale-110 drop-shadow-md brightness-105'
+                      loading='lazy'
                     />
                   </div>
 

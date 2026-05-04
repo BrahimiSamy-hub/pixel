@@ -4,17 +4,17 @@ import 'react-photo-view/dist/react-photo-view.css'
 import { antic, beleghni, broker, pixel, comfortSpace } from '../../assets'
 
 const images = [
-  { src: antic, alt: 'Antic Landing Page' },
-  { src: beleghni, alt: 'Beleghni Dashboard' },
-  { src: broker, alt: 'Broker Landing Page' },
-  { src: pixel, alt: 'Pixel Landing Page' },
-  { src: comfortSpace, alt: 'comforceSpace Ecommerce' },
+  { src: antic, alt: 'Pixel Creative Agency - Antic Landing Page Design' },
+  { src: beleghni, alt: 'Pixel Creative Agency - Beleghni Dashboard Design' },
+  { src: broker, alt: 'Pixel Creative Agency - Broker Landing Page Design' },
+  { src: pixel, alt: 'Pixel Creative Agency - Agency Website Design' },
+  { src: comfortSpace, alt: 'Pixel Creative Agency - ComfortSpace Ecommerce Design' },
 ]
 
 const ImageComponent = ({ src, alt }) => (
   <div className='flex justify-center col-span-1 hover:cursor-pointer'>
-    <PhotoView src={src}>
-      <img src={src} alt={alt} className=' rounded-xl w-80  object-contain' />
+    <PhotoView src={src?.src || src}>
+      <img src={src?.src || src} alt={alt} className=' rounded-xl w-80  object-contain' loading='lazy' />
     </PhotoView>
   </div>
 )

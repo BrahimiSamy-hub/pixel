@@ -1,0 +1,77 @@
+{
+  "home": "Home",
+  "aboutUs": "About Us",
+  "portfolio": "Portfolio",
+  "shop": "Shop",
+  "our_services": "Our Services",
+  "our_services_description": "Discover our wide range of services tailored to your needs.",
+  "photo_video": "Pixel Photo Lab",
+  "photo_video_text": "The art of imagery serving your vision.",
+  "infographie": "Pixel Creative",
+  "infographie_text": "Transform your ideas into impactful visuals.",
+  "weeding": "Pixel Weddings",
+  "weeding_text": "Capture your precious moments because every instant deserves to be immortalized.",
+  "development": "Pixel Development",
+  "development_text": "Your digital development partner.",
+  "audio": "Pixel Sounds",
+  "audio_text": "Sound art at your fingertips with your sound partner.",
+  "publicite": "Pixel Advertisement",
+  "publicite_text": "Bring your brand to life and boost your visibility to propel your brand.",
+  "heroTitle": "Explore Content Creation Possibilities with",
+  "heroDescription": "Creativity has no limits in our agency. We focus on offering exceptional services in design, photography, decoration, filmmaking, and web development.",
+  "shopButton": "Shop",
+  "servicesButton": "Services",
+  "pricing": {
+    "audio": [
+      {
+        "id": "0",
+        "title": "Sound Effects",
+        "description": "Specialized in high-quality sound effects for immersive audiovisual productions.",
+        "price": "4000"
+      }
+    ],
+    "photo": [
+      {
+        "id": "0",
+        "title": "Photography",
+        "description": "Professional shootings for portraits, products, and artistic needs.",
+        "price": "4000"
+      }
+    ]
+  },
+  "about_us": {
+    "header": "Our Story",
+    "description": "Welcome to Pixel, your creative partner in photography. Founded in 2018, we are dedicated to capturing unique moments.",
+    "ourLocation": "Our Location",
+    "strategicallyLocated": "Strategically located to better serve you",
+    "support247": "24/7 Support",
+    "alwaysHere": "Always here when you need us most",
+    "qualityFirst": "Quality First",
+    "excellenceDetail": "Excellence in every detail",
+    "visitStudio": "Visit Our Studio",
+    "studioDescription": "Come see where the magic happens.",
+    "creativeHeadquarters": "Our creative headquarters"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our services.",
+    "questions": [
+      {
+        "question": "What photography services do you offer?",
+        "answer": "We offer wedding, portrait, product, and commercial photography."
+      }
+    ]
+  },
+  "companyLogosTagline": "Some of the clients we've had the pleasure of collaborating with",
+  "contactTitle": "Contact Us",
+  "contactText": "We will respond as soon as possible",
+  "submitButton": "Submit",
+  "sending": "Sending...",
+  "contactSuccess": "Message sent successfully!",
+  "contactError": "Failed to send message.",
+  "ourLocation": "Our Location",
+  "collaboration": {
+    "title": "Our Portfolio",
+    "button": "Portfolio"
+  }
+}

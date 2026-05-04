@@ -1,23 +1,30 @@
 User-agent: *
 Allow: /
-
-# Sitemaps
-Sitemap: https://pixeldz.store/sitemap.xml
-Sitemap: https://pixeldz.store/sitemap-images.xml
-
-# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /uploads/temp/
 Disallow: /checkout
 
-# Allow important directories
-Allow: /shop/
-Allow: /portfolio/
-Allow: /about-us/
-Allow: /contact/
-Allow: /uploads/
+# Explicit AI crawler allowances for AI search visibility
+User-agent: GPTBot
+Allow: /
 
-# Crawl delay for better server performance
-Crawl-delay: 1 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Block ByteDance training crawler
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://pixeldz.store/sitemap.xml
+Sitemap: https://pixeldz.store/sitemap-images.xml

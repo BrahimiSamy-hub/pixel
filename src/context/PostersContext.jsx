@@ -1,4 +1,5 @@
-import { createContext, useState, useEffect, useContext } from 'react'
+"use client"
+import { createContext, useState, useEffect, useContext, useCallback } from 'react'
 import axios from 'axios'
 
 const PostersContext = createContext()
@@ -12,7 +13,7 @@ export const PostersProvider = ({ children }) => {
   const [open, setOpen] = useState(false)
   const [singleProduct, setSingleProduct] = useState(null) // State for a single product
 
-  const fetchPosters = async (categoryId = null) => {
+  const fetchPosters = useCallback(async (categoryId = null) => {
     try {
       const url = categoryId
         ? `https://api.pixeldz.store/posters?category=${categoryId}`
@@ -24,10 +25,10 @@ export const PostersProvider = ({ children }) => {
     } catch (error) {
       console.error('Error fetching posters:', error)
     }
-  }
+  }, [])
 
   // Function to fetch a single product by ID
-  const fetchSingleProduct = async (productId) => {
+  const fetchSingleProduct = useCallback(async (productId) => {
     try {
       const response = await axios.get(
         `https://api.pixeldz.store/posters/${productId}`
@@ -36,7 +37,7 @@ export const PostersProvider = ({ children }) => {
     } catch (error) {
       console.error('Error fetching single product:', error)
     }
-  }
+  }, [])
 
   useEffect(() => {
     fetchPosters()

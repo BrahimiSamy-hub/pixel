@@ -1,10 +1,11 @@
+"use client"
 import { check, p } from '../assets'
 import { collabApps } from '../constants'
 import { collabContent } from '../constants'
 import Button from './Button'
 import Section from './Section'
 import { LeftCurve, RightCurve } from './design/Collaboration'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 
 const Collaboration = () => {
@@ -20,7 +21,7 @@ const Collaboration = () => {
               <li className='mb-3 py-3 col-span-2 group' key={item.id}>
                 <div className='flex items-center transition-all duration-300 hover:bg-n-8/30 rounded-lg p-2 -m-2'>
                   <img
-                    src={check}
+                    src={check?.src || check}
                     width={24}
                     height={24}
                     alt='check'
@@ -34,7 +35,7 @@ const Collaboration = () => {
               </li>
             ))}
           </ul>
-          <Link to='/portfolio' draggable='false'>
+          <Link href='/portfolio' draggable='false'>
             <Button className='w-44'>{t('collaboration.button')}</Button>
           </Link>
         </div>
@@ -45,7 +46,7 @@ const Collaboration = () => {
               <div className='w-[8rem] aspect-square m-auto p-[0.2rem] bg-[#F18A27] rounded-full transition-all duration-300 hover:scale-105'>
                 <div className='flex items-center justify-center w-full h-full bg-n-8 rounded-full'>
                   <img
-                    src={p}
+                    src={p?.src || p}
                     className='transition-transform duration-300 hover:rotate-6'
                     width={70}
                     height={70}
@@ -76,7 +77,7 @@ const Collaboration = () => {
                       width={50}
                       height={50}
                       alt={app.title}
-                      src={app.icon}
+                      src={app.icon?.src || app.icon}
                       draggable='false'
                     />
                   </div>

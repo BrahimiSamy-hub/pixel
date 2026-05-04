@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+"use client"
+import Link from 'next/link'
 import {
   FaCamera,
   FaCode,
@@ -26,8 +27,8 @@ const iconComponents = {
 
 // Portfolio category mapping for each service
 const portfolioCategories = {
-  '/photoLab': 'PhotoShoot',
-  '/creative': 'logo',
+  '/photo-lab': 'PhotoShoot',
+  '/graphic-design': 'logo',
   '/wedding': 'photo',
   '/development': 'Websites',
   '/sounds': 'reels',
@@ -49,14 +50,14 @@ const Benefits = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 px-4'>
           {benefits.map((item) => (
             <div key={item.id} className='group relative'>
-              <Link to={item.url} draggable='false' className='block'>
+              <Link href={item.url} draggable='false' className='block'>
                 <div className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 hover:border-[#F17A28]/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#F17A28]/20'>
                   {/* Background Image with Enhanced Overlay */}
                   <div className='absolute inset-0'>
                     {item.imageUrl && (
                       <img
                         loading='lazy'
-                        src={item.imageUrl}
+                        src={item.imageUrl?.src || item.imageUrl}
                         draggable='false'
                         alt={t(item.title)}
                         className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
@@ -135,7 +136,7 @@ const Benefits = () => {
               {/* Portfolio Link Overlay */}
               {portfolioCategories[item.url] && (
                 <Link
-                  to={`/portfolio?category=${portfolioCategories[item.url]}`}
+                  href={`/portfolio?category=${portfolioCategories[item.url]}`}
                   className='absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'
                 >
                   <div className='bg-gradient-to-r from-[#F17A28] to-[#e5691f] hover:from-[#e5691f] hover:to-[#d15a1f] text-white px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 shadow-lg hover:scale-105 transition-all duration-300'>

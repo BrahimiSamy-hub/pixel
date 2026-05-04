@@ -1,3 +1,4 @@
+"use client"
 import SectionSvg from '../assets/svg/SectionSvg'
 import { forwardRef } from 'react'
 

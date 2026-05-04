@@ -1,9 +1,11 @@
+"use client"
 import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
-import { initGA, logPageView } from '../utils/analytics'
+import { usePathname, useSearchParams } from 'next/navigation'
+import { initGA, logPageView } from '@/utils/analytics'
 
 const GoogleAnalytics = () => {
-  const location = useLocation()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   useEffect(() => {
     // Initialize Google Analytics on component mount
@@ -11,11 +13,10 @@ const GoogleAnalytics = () => {
   }, [])
 
   useEffect(() => {
-    // Track page views when location changes
-    if (location.pathname) {
-      logPageView(location.pathname + location.search)
-    }
-  }, [location])
+    // Track page views when pathname or searchParams changes
+    const url = pathname + searchParams.toString()
+    logPageView(url)
+  }, [pathname, searchParams])
 
   return null // This component doesn't render anything
 }

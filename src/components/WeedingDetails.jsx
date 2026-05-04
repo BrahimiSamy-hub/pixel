@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom'
+"use client"
+import { useRouter } from 'next/navigation'
 import { check } from '../assets'
 import Button from './Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -6,10 +7,10 @@ import { useTranslation } from 'react-i18next'
 
 const WeedingPricing = () => {
   const { t } = useTranslation() // Initialize translation
-  const navigate = useNavigate()
+  const router = useRouter()
 
   const handleContactUs = () => {
-    navigate('/contact', { state: { service: 'Wedding' } })
+    router.push('/contact?service=Wedding')
   }
 
   const weedingPricing = t('pricing.wedding', { returnObjects: true }) // Ensure this fetches an array

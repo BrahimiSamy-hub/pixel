@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from 'react'
+"use client"
+import { createContext, useContext, useState, useCallback } from 'react'
 import axios from 'axios'
 
 // Create a context
@@ -15,7 +16,7 @@ export const ContactProvider = ({ children }) => {
   const [error, setError] = useState(null)
   const [success, setSuccess] = useState(false)
 
-  const submitContactForm = async (data) => {
+  const submitContactForm = useCallback(async (data) => {
     setLoading(true)
     setError(null)
     setSuccess(false)
@@ -27,7 +28,7 @@ export const ContactProvider = ({ children }) => {
     } finally {
       setLoading(false)
     }
-  }
+  }, [])
 
   return (
     <ContactContext.Provider

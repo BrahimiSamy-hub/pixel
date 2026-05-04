@@ -1,48 +1,16 @@
+"use client"
 import { useTranslation } from 'react-i18next'
-import Section from '../components/Section'
-import Faq from '../components/Faq'
-import AnimatedBackground from '../components/AnimatedBackground'
-import SEOHead from '../components/SEOHead'
+import Section from '@/components/Section'
+import Faq from '@/components/Faq'
+import dynamic from 'next/dynamic'
 
-const AboutUs = () => {
+const AnimatedBackground = dynamic(() => import('@/components/AnimatedBackground'), { ssr: false })
+
+const AboutUsClient = () => {
   const { t } = useTranslation()
-
-  const aboutStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'AboutPage',
-    name: 'À Propos - Pixel Creative Agency',
-    description:
-      "Découvrez l'histoire de Pixel Creative Agency, agence créative professionnelle en Algérie depuis 2018. Notre équipe dédiée à la création d'expériences visuelles uniques.",
-    url: 'https://pixeldz.store/about-us',
-    mainEntity: {
-      '@type': 'Organization',
-      name: 'Pixel Creative Agency',
-      foundingDate: '2018',
-      description:
-        'Agence créative professionnelle en Algérie spécialisée en photographie, design graphique et développement web',
-      url: 'https://pixeldz.store',
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'DZ',
-        addressRegion: 'Algérie',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'customer service',
-        availableLanguage: ['French', 'English', 'Arabic'],
-      },
-    },
-  }
 
   return (
     <>
-      <SEOHead
-        title='À Propos'
-        description="Découvrez l'histoire de Pixel Creative Agency, agence créative professionnelle en Algérie depuis 2018. Notre équipe dédiée à la création d'expériences visuelles uniques et mémorables."
-        keywords='pixel creative agency, histoire agence, équipe créative, algérie, photographie, design, depuis 2018'
-        url='https://pixeldz.store/about-us'
-        structuredData={aboutStructuredData}
-      />
       <AnimatedBackground />
       <div
         className={`pt-[4.75rem] -mt-[2.65rem] lg:pt-[7.9rem] overflow-hidden relative`}
@@ -57,8 +25,6 @@ const AboutUs = () => {
             {/* Hero Section */}
             <div className='text-center justify-center items-center flex flex-col mb-20'>
               <div className='relative mb-8'>
-                {/* Decorative elements */}
-
                 <h1 className='h1 font-bold bg-gradient-to-r from-[white] via-[white] to-[white] bg-clip-text text-transparent animate-fade-in-up'>
                   {t('about_us.header')}
                 </h1>
@@ -137,6 +103,61 @@ const AboutUs = () => {
               </div>
             </div>
 
+            {/* Our Team Section (E-E-A-T Signals) */}
+            <div className='mb-24 pt-10'>
+              <div className='text-center mb-16'>
+                <h2 className='h2 font-bold text-n-1 mb-4'>
+                  {t('about_us.meetTheTeam') || 'Rencontrez l’Équipe'}
+                </h2>
+                <div className='w-24 h-1 bg-gradient-to-r from-[#F17A28] to-[#FF6B35] rounded-full mx-auto mb-6'></div>
+                <p className='text-lg text-n-3 max-w-2xl mx-auto'>
+                  {t('about_us.teamSubtitle') || 'Des experts passionnés dévoués à donner vie à vos visions créatives en Algérie.'}
+                </p>
+              </div>
+
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
+                {[
+                  { role: 'Photographe Principal', icon: '📸', expertise: '7+ ans d’expérience' },
+                  { role: 'Lead Web Developer', icon: '💻', expertise: 'Expert Full-Stack' },
+                  { role: 'Directeur Artistique', icon: '🎨', expertise: 'Spécialiste Branding' },
+                  { role: 'Producteur Audio', icon: '🎵', expertise: 'Sound Design & Mix' }
+                ].map((member, i) => (
+                  <div key={i} className='group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-n-6 rounded-3xl p-8 hover:shadow-2xl hover:shadow-[#F17A28]/20 transition-all duration-500 hover:-translate-y-2 text-center'>
+                    <div className='w-20 h-20 bg-n-6 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto group-hover:scale-110 transition-transform duration-300'>
+                      {member.icon}
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-2'>{member.role}</h3>
+                    <p className='text-[#F17A28] font-medium mb-4'>{member.expertise}</p>
+                    <div className='w-12 h-0.5 bg-n-6 mx-auto mb-4 group-hover:w-20 transition-all duration-300'></div>
+                    <p className='text-n-3 text-sm'>
+                      Expert dévoué chez Pixel Creative Agency, garantissant l’excellence pour chaque projet.
+                    </p>
+
+                    {/* Person Schema for each role */}
+                    <script
+                      type='application/ld+json'
+                      dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                          '@context': 'https://schema.org',
+                          '@type': 'Person',
+                          'jobTitle': member.role,
+                          'worksFor': {
+                            '@type': 'Organization',
+                            'name': 'Pixel Creative Agency'
+                          },
+                          'address': {
+                            '@type': 'PostalAddress',
+                            'addressLocality': 'Batna',
+                            'addressCountry': 'DZ'
+                          }
+                        })
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Enhanced Map Section */}
             <div className='mb-20'>
               <div className='text-center mb-12'>
@@ -150,12 +171,9 @@ const AboutUs = () => {
               </div>
 
               <div className='relative group'>
-                {/* Map Container with enhanced styling */}
                 <div className='relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-n-6 rounded-3xl p-4 hover:shadow-2xl hover:shadow-[#F17A28]/20 transition-all duration-500'>
                   <div className='relative overflow-hidden rounded-2xl'>
-                    {/* Overlay gradient */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10 pointer-events-none'></div>
-
                     <iframe
                       src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12983.930370880267!2d6.1731097!3d35.5541321!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f41158da88865b%3A0xf23a3bf30fc4c9fc!2sPixel%20Creative%20Agency!5e0!3m2!1sfr!2sdz!4v1728480388311!5m2!1sfr!2sdz'
                       title='Pixel Creative Agency Location'
@@ -165,7 +183,6 @@ const AboutUs = () => {
                     ></iframe>
                   </div>
 
-                  {/* Location info overlay */}
                   <div className='absolute bottom-8 left-8 right-8 z-20'>
                     <div className='bg-black/80 backdrop-blur-md rounded-2xl p-6 border border-white/10'>
                       <div className='flex items-center space-x-4'>
@@ -201,56 +218,9 @@ const AboutUs = () => {
             <Faq />
           </div>
         </Section>
-
-        {/* Add custom animations */}
-        <style jsx>{`
-          @keyframes fade-in-up {
-            from {
-              opacity: 0;
-              transform: translateY(30px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-          @keyframes spin-slow {
-            from {
-              transform: rotate(0deg);
-            }
-            to {
-              transform: rotate(360deg);
-            }
-          }
-
-          .animate-fade-in-up {
-            animation: fade-in-up 0.6s ease-out forwards;
-          }
-
-          .animate-fade-in-up.delay-200 {
-            animation-delay: 0.2s;
-          }
-
-          .animate-fade-in-up.delay-300 {
-            animation-delay: 0.3s;
-          }
-
-          .animate-fade-in-up.delay-500 {
-            animation-delay: 0.5s;
-          }
-
-          .animate-fade-in-up.delay-700 {
-            animation-delay: 0.7s;
-          }
-
-          .animate-fade-in-up.delay-900 {
-            animation-delay: 0.9s;
-          }
-        `}</style>
       </div>
     </>
   )
 }
 
-export default AboutUs
+export default AboutUsClient

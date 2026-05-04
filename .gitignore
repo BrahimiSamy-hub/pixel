@@ -7,10 +7,31 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
 node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.*
+!.env.example
+
+# Next.js
+.next/
+out/
+
+# Test and coverage
+coverage/
+.nyc_output/
+
+# Misc build/cache
+.cache/
+.turbo/
 
 # Editor directories and files
 .vscode/*

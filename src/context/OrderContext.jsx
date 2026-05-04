@@ -1,4 +1,5 @@
-import { createContext, useState, useContext } from 'react'
+"use client"
+import { createContext, useState, useContext, useCallback } from 'react'
 import axios from 'axios'
 
 const OrderContext = createContext()
@@ -9,7 +10,7 @@ export const OrderProvider = ({ children }) => {
   const [isOrderLoading, setIsOrderLoading] = useState(false)
   const [orderError, setOrderError] = useState(null)
 
-  const createOrder = async (orderData) => {
+  const createOrder = useCallback(async (orderData) => {
     setIsOrderLoading(true)
     setOrderError(null)
 
@@ -30,7 +31,7 @@ export const OrderProvider = ({ children }) => {
     } finally {
       setIsOrderLoading(false)
     }
-  }
+  }, [])
 
   return (
     <OrderContext.Provider

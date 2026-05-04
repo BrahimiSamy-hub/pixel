@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom'
+"use client"
+import { useRouter } from 'next/navigation'
 import { check } from '../assets'
 import Button from './Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -6,10 +7,10 @@ import { useTranslation } from 'react-i18next'
 
 const AudioPricing = () => {
   const { t } = useTranslation()
-  const navigate = useNavigate()
+  const router = useRouter()
 
   const handleContactUs = () => {
-    navigate('/contact', { state: { service: 'Audio' } })
+    router.push('/contact?service=Audio')
   }
 
   const audioPricing = t('pricing.audio', { returnObjects: true })

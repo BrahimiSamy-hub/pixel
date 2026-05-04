@@ -1,9 +1,10 @@
+"use client"
 import { logowhite, logoSVG } from '../assets'
 import { FaCartShopping } from 'react-icons/fa6'
 import { HamburgerMenu } from './design/Header'
-import { useLocation } from 'react-router-dom'
+import { usePathname } from 'next/navigation'
 import { disablePageScroll, enablePageScroll } from 'scroll-lock'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { useCart } from '../context/CartContext'
 import Button from './Button'
@@ -24,7 +25,7 @@ const navigation = [
 
 const Header = () => {
   const { toggleCart, getTotalQuantity } = useCart()
-  const { pathname } = useLocation()
+  const pathname = usePathname()
   const [openNavigation, setOpenNavigation] = useState(false)
   const { t, i18n } = useTranslation()
   const [dropdownOpenMobile, setDropdownOpenMobile] = useState(false)
@@ -91,8 +92,8 @@ const Header = () => {
       >
         {/* <HeaderUp /> */}
         <nav className='flex items-center justify-between px-4 lg:px-7.5 xl:px-10 max-lg:py-2'>
-          <Link className='block ' to='/' draggable='false'>
-            <img src={logoSVG} alt='Pixel' className='w-40' draggable='false' />
+          <Link className='block ' href='/' draggable='false'>
+            <img src={logoSVG?.src || logoSVG} alt='Pixel' className='w-40' draggable='false' />
           </Link>
           <nav
             className={`${
@@ -104,7 +105,7 @@ const Header = () => {
                 <Link
                   draggable='false'
                   key={item.id}
-                  to={item.url}
+                  href={item.url}
                   onClick={() => {
                     handleClick()
                     handleNavigation(pathname, item.url)
@@ -130,7 +131,7 @@ const Header = () => {
                       languages.find(
                         (lang) =>
                           lang.code ===
-                          (localStorage.getItem('i18nextLng') || 'fr')
+                          (typeof window !== 'undefined' ? localStorage.getItem('i18nextLng') : 'fr') || 'fr'
                       )?.flag
                     }
                     alt='Current Language'
@@ -170,7 +171,7 @@ const Header = () => {
                 src={
                   languages.find(
                     (lang) =>
-                      lang.code === (localStorage.getItem('i18nextLng') || 'fr')
+                      lang.code === (typeof window !== 'undefined' ? localStorage.getItem('i18nextLng') : 'fr') || 'fr'
                   )?.flag
                 }
                 alt='Current Language'

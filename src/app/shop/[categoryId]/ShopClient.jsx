@@ -1,27 +1,27 @@
-// Shop.js
-import Section from '../components/Section'
-import { useParams, useLocation } from 'react-router-dom'
-import ButtonGradient from '../assets/svg/ButtonGradient'
-import { usePosters } from '../context/PostersContext'
-import { Link } from 'react-router-dom'
+"use client"
+import Section from '@/components/Section'
+import ButtonGradient from '@/assets/svg/ButtonGradient'
+import { usePosters } from '@/context/PostersContext'
+import { useCategories } from '@/context/CategoriesContext'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useMemo } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 import { FaChevronLeft } from 'react-icons/fa'
-import AnimatedBackground from '../components/AnimatedBackground'
-import { useAnalytics } from '../hooks/useAnalytics'
-import SEOHead from '../components/SEOHead'
+import dynamic from 'next/dynamic'
 
-const Shop = () => {
-  const { t, i18n } = useTranslation() // Include i18n here
-  const { categoryId } = useParams()
-  const location = useLocation()
+const AnimatedBackground = dynamic(() => import('@/components/AnimatedBackground'), { ssr: false })
+import { useAnalytics } from '@/hooks/useAnalytics'
+
+const ShopClient = ({ categoryId }) => {
+  const { t, i18n } = useTranslation()
+  const router = useRouter()
   const { posters, handlePosterClick, fetchPosters } = usePosters()
-  const navigate = useNavigate()
+  const { categories } = useCategories()
   const { trackEvent, trackButtonClick } = useAnalytics()
 
-  // Get the selected category from the location state
-  const selectedCategory = location.state?.selectedCategory
+  // Find the selected category from the context
+  const selectedCategory = categories.find((cat) => cat._id === categoryId)
 
   // Determine the name to use based on the current language
   const categoryName =
@@ -34,7 +34,7 @@ const Shop = () => {
       fetchPosters(categoryId)
       trackEvent('shop', 'category_view', categoryId)
     }
-  }, [categoryId, trackEvent])
+  }, [categoryId, fetchPosters, trackEvent])
 
   // Generate structured data for category page
   const categoryStructuredData = useMemo(() => {
@@ -72,18 +72,9 @@ const Shop = () => {
 
   return (
     <>
-      <SEOHead
-        title={categoryName || t('shopP.title') || 'Boutique'}
-        description={`Découvrez tous nos produits dans la catégorie ${categoryName}. ${posters.length} produits disponibles avec différentes tailles et options personnalisables.`}
-        keywords={`${categoryName}, produits personnalisés, affiches, posters, pixel creative agency`}
-        url={`https://pixeldz.store/shop/${categoryId}`}
-        image={
-          selectedCategory?.image?.url
-            ? `https://pixeldz.store${selectedCategory.image.url}`
-            : undefined
-        }
-        imageAlt={categoryName || t('shopP.title')}
-        structuredData={categoryStructuredData}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryStructuredData) }}
       />
       <AnimatedBackground />
       <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
@@ -97,10 +88,10 @@ const Shop = () => {
             <div className='mx-auto max-w-2xl sm:pb-24 lg:max-w-7xl'>
               <button
                 onClick={() => {
-                  navigate(-1)
+                  router.back()
                   trackButtonClick('back_button', 'shop')
                 }}
-                className='h1 flex items-center mb-10'
+                className='h1 flex items-center mb-10 text-left'
               >
                 <FaChevronLeft size={45} className='mr-4 sm:mr-10' />
                 {categoryName ? categoryName : t('shopP.title')}
@@ -110,12 +101,10 @@ const Shop = () => {
                 {posters.length} {t('shopP.postersFound')}
               </h2>
 
-              {/* Responsive Grid */}
               <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {posters.map((poster, index) => {
                   const isDisabled = poster.name === 'AlgeriaPoly'
                   return isDisabled ? (
-                    // Render a disabled card
                     <div
                       key={index}
                       className='group relative cursor-not-allowed'
@@ -135,10 +124,9 @@ const Shop = () => {
                       </div>
                     </div>
                   ) : (
-                    // Render the clickable card
                     <Link
                       key={index}
-                      to={`/product/${poster._id}`}
+                      href={`/product/${poster._id}`}
                       draggable='false'
                       className='group relative'
                       data-aos='flip-up'
@@ -157,9 +145,9 @@ const Shop = () => {
                       </div>
                       <div className='mt-4 flex justify-center'>
                         <div>
-                          <h3 className='text-md font-bold'>
+                          <h3 className='text-md font-bold text-center'>
                             <button
-                              onClick={() => {
+                              onClick={(e) => {
                                 handlePosterClick(poster)
                                 trackEvent('shop', 'product_view', poster.name)
                               }}
@@ -172,23 +160,6 @@ const Shop = () => {
                             </button>
                           </h3>
                         </div>
-                        {/* <div className='flex flex-col'>
-                          <p className='text-sm font-medium text-right'>
-                            {poster.price}
-                            <small>
-                              <sup>DA</sup>
-                            </small>
-                          </p>
-                          <p
-                            className={`text-sm ${
-                              poster.stock ? 'text-green-500' : 'text-red-500'
-                            }`}
-                          >
-                            {poster.stock
-                              ? t('shopP.inStock')
-                              : t('shopP.outOfStock')}
-                          </p>
-                        </div> */}
                       </div>
                     </Link>
                   )
@@ -204,4 +175,4 @@ const Shop = () => {
   )
 }
 
-export default Shop
+export default ShopClient

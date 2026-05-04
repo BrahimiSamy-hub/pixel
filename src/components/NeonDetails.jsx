@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom'
+"use client"
+import { useRouter } from 'next/navigation'
 import { check } from '../assets'
 import Button from './Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -6,13 +7,14 @@ import { useTranslation } from 'react-i18next'
 
 const NeonPricing = () => {
   const { t } = useTranslation()
-  const navigate = useNavigate()
+  const router = useRouter()
 
   const handleContactUs = () => {
-    navigate('/contact', { state: { service: 'Identité visuelle' } })
+    router.push('/contact?service=Neon')
   }
 
   const pubPricing = t('pricing.pub', { returnObjects: true }) // Get translated pricing data
+  if (!Array.isArray(pubPricing)) return null
 
   return (
     <Swiper

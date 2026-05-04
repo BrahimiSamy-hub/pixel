@@ -13,20 +13,20 @@ import {
   poster7,
 } from '../../assets'
 const images = [
-  { src: poster, alt: 'Poster' },
-  { src: poster1, alt: 'Poster' },
-  { src: poster2, alt: 'Poster' },
-  { src: poster3, alt: 'Poster' },
-  { src: poster4, alt: 'Poster' },
-  { src: poster5, alt: 'Poster' },
-  { src: poster6, alt: 'Poster' },
-  { src: poster7, alt: 'Poster' },
+  { src: poster, alt: 'Pixel Creative Agency Poster Design 1' },
+  { src: poster1, alt: 'Pixel Creative Agency Poster Design 2' },
+  { src: poster2, alt: 'Pixel Creative Agency Poster Design 3' },
+  { src: poster3, alt: 'Pixel Creative Agency Poster Design 4' },
+  { src: poster4, alt: 'Pixel Creative Agency Poster Design 5' },
+  { src: poster5, alt: 'Pixel Creative Agency Poster Design 6' },
+  { src: poster6, alt: 'Pixel Creative Agency Poster Design 7' },
+  { src: poster7, alt: 'Pixel Creative Agency Poster Design 8' },
 ]
 
 const ImageComponent = ({ src, alt }) => (
   <div className='flex justify-center col-span-1 hover:cursor-pointer'>
-    <PhotoView src={src}>
-      <img src={src} alt={alt} className=' rounded-xl w-80  object-contain' />
+    <PhotoView src={src?.src || src}>
+      <img src={src?.src || src} alt={alt} className=' rounded-xl w-80  object-contain' loading='lazy' />
     </PhotoView>
   </div>
 )

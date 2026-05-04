@@ -18,25 +18,25 @@ import {
 } from '../../assets'
 
 const images = [
-  { src: shooting, alt: 'Shooting' },
-  { src: shooting1, alt: 'Shooting' },
-  { src: shooting2, alt: 'Shooting' },
-  { src: shooting3, alt: 'Shooting' },
-  { src: shooting4, alt: 'Shooting' },
-  { src: shooting5, alt: 'Shooting' },
-  { src: shooting6, alt: 'Shooting' },
-  { src: shooting7, alt: 'Shooting' },
-  { src: shooting8, alt: 'Shooting' },
-  { src: shooting9, alt: 'Shooting' },
-  { src: shooting10, alt: 'Shooting' },
-  { src: shooting11, alt: 'Shooting' },
-  { src: shooting12, alt: 'Shooting' },
+  { src: shooting, alt: 'Pixel Creative Agency - Portrait Studio Shooting 1' },
+  { src: shooting1, alt: 'Pixel Creative Agency - Portrait Studio Shooting 2' },
+  { src: shooting2, alt: 'Pixel Creative Agency - Portrait Studio Shooting 3' },
+  { src: shooting3, alt: 'Pixel Creative Agency - Portrait Studio Shooting 4' },
+  { src: shooting4, alt: 'Pixel Creative Agency - Portrait Studio Shooting 5' },
+  { src: shooting5, alt: 'Pixel Creative Agency - Portrait Studio Shooting 6' },
+  { src: shooting6, alt: 'Pixel Creative Agency - Portrait Studio Shooting 7' },
+  { src: shooting7, alt: 'Pixel Creative Agency - Portrait Studio Shooting 8' },
+  { src: shooting8, alt: 'Pixel Creative Agency - Portrait Studio Shooting 9' },
+  { src: shooting9, alt: 'Pixel Creative Agency - Portrait Studio Shooting 10' },
+  { src: shooting10, alt: 'Pixel Creative Agency - Portrait Studio Shooting 11' },
+  { src: shooting11, alt: 'Pixel Creative Agency - Portrait Studio Shooting 12' },
+  { src: shooting12, alt: 'Pixel Creative Agency - Portrait Studio Shooting 13' },
 ]
 
 const ImageComponent = ({ src, alt }) => (
   <div className='flex justify-center col-span-1 hover:cursor-pointer'>
-    <PhotoView src={src}>
-      <img src={src} alt={alt} className=' rounded-xl w-80  object-contain' />
+    <PhotoView src={src?.src || src}>
+      <img src={src?.src || src} alt={alt} className=' rounded-xl w-80  object-contain' loading='lazy' />
     </PhotoView>
   </div>
 )
