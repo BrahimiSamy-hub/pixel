@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 import {
   loupBleu,
   villagois,
@@ -41,7 +41,7 @@ import {
 } from '../assets'
 
 const Roles = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   const roles = [
     {

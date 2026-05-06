@@ -61,28 +61,6 @@ import voyant from './roles/voyant.svg'
 
 import curve from './hero/curve.svg'
 
-import Frenchy from './logo/Frenchy.svg'
-import Crunchy from './logo/Crunchy.svg'
-import Frosty from './logo/Frosty.svg'
-import Azas from './logo/Azas.svg'
-import Benpack from './logo/Benpack.svg'
-import BoutiquePapillon from './logo/BoutiquePapillon.svg'
-import CeramDecor from './logo/CeramDecor.svg'
-import Cuanassa from './logo/Cuanassa.svg'
-import Cuisima from './logo/Cuisima.svg'
-import DinaPerez from './logo/DinaPerez.svg'
-import Elva from './logo/Elva.svg'
-import Fouad from './logo/Fouad.svg'
-import LerableDor from './logo/LerableDor.svg'
-import LuckyTravel from './logo/LuckyTravel.svg'
-import MaraaiAwrass from './logo/MaraaiAwrass.svg'
-import Oppo from './logo/Oppo.svg'
-import Plaza from './logo/Plaza.svg'
-import Pokébowl from './logo/Pokébowl.svg'
-import Securipcro from './logo/Securipcro.svg'
-import SoniaAttalah from './logo/SoniaAttalah.svg'
-import WonderFood from './logo/WonderFood.svg'
-import NewtechCeram from './logo/NewtechCeram.svg'
 
 import coins from './roadmap/coins.png'
 import done from './roadmap/done.svg'
@@ -587,28 +565,6 @@ export {
   voleur,
   voyant,
   p,
-  Frosty,
-  Crunchy,
-  Azas,
-  BoutiquePapillon,
-  CeramDecor,
-  Cuanassa,
-  Cuisima,
-  DinaPerez,
-  Elva,
-  Fouad,
-  LerableDor,
-  LuckyTravel,
-  MaraaiAwrass,
-  Oppo,
-  NewtechCeram,
-  Plaza,
-  Pokébowl,
-  Securipcro,
-  SoniaAttalah,
-  WonderFood,
-  Frenchy,
-  Benpack,
   logowhite,
   check,
   play,

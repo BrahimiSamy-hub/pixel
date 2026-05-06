@@ -1,5 +1,5 @@
 "use client"
-import Link from 'next/link'
+import { Link } from '@/navigation'
 import ButtonSvg from '../assets/svg/ButtonSvg'
 
 const Button = ({ className, href, onClick, children, px, white }) => {

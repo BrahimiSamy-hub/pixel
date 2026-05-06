@@ -1,5 +1,5 @@
 "use client"
-import Link from 'next/link'
+import { Link } from '@/navigation'
 import {
   FaCamera,
   FaCode,
@@ -14,7 +14,7 @@ import Section from './Section'
 import Arrow from '../assets/svg/Arrow'
 import { GradientLight } from './design/Benefits'
 import { benefits } from '../constants'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 
 const iconComponents = {
   FaCamera: <FaCamera />,
@@ -36,7 +36,7 @@ const portfolioCategories = {
 }
 
 const Benefits = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   return (
     <Section id='services'>

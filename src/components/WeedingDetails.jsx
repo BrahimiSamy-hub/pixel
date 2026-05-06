@@ -1,12 +1,12 @@
 "use client"
-import { useRouter } from 'next/navigation'
+import { useRouter  } from '@/navigation'
 import { check } from '../assets'
 import Button from './Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 
 const WeedingPricing = () => {
-  const { t } = useTranslation() // Initialize translation
+  const t = useTranslations() // Initialize translation
   const router = useRouter()
 
   const handleContactUs = () => {

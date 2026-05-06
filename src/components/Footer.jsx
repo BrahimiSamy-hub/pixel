@@ -1,7 +1,10 @@
 "use client"
 import Section from './Section'
+import { Link } from '@/navigation'
+import Image from 'next/image'
 import { socials } from '../constants'
 import { useAnalytics } from '../hooks/useAnalytics'
+import { FaCookieBite } from 'react-icons/fa'
 
 const Footer = () => {
   const { trackSocialMediaClick, trackButtonClick } = useAnalytics()
@@ -39,9 +42,18 @@ const Footer = () => {
               0799 01 82 88
             </a>
           </p>
-          <div className='flex gap-4 mt-2 text-xs justify-center'>
-            <a href='/privacy-policy' className='hover:text-[#F18A27]'>Politique de confidentialité</a>
-            <a href='/terms' className='hover:text-[#F18A27]'>Conditions d&apos;utilisation</a>
+          <div className='flex gap-4 mt-2 text-xs justify-center flex-wrap'>
+            <Link href='/politique-de-confidentialite' className='hover:text-[#F18A27]'>Politique de confidentialité</Link>
+            <Link href='/conditions-dutilisation' className='hover:text-[#F18A27]'>Conditions d&apos;utilisation</Link>
+            <Link href='/loup-garou-regles' className='hover:text-[#F18A27]'>Loup-Garou Règles</Link>
+            <button
+              id='manage-cookies-btn'
+              onClick={() => window.dispatchEvent(new CustomEvent('show-cookie-banner'))}
+              className='hover:text-[#F18A27] flex items-center gap-1 transition-colors duration-200'
+            >
+              <FaCookieBite className='text-[10px]' />
+              Gérer les cookies
+            </button>
           </div>
         </div>
 
@@ -54,7 +66,7 @@ const Footer = () => {
               className='flex items-center justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-[#F18A27]'
               onClick={() => handleSocialClick(item.title.toLowerCase())}
             >
-              <img src={item.iconUrl?.src || item.iconUrl} width={16} height={16} alt={item.title} />
+              <Image src={item.iconUrl?.src || item.iconUrl} width={16} height={16} alt={item.title} />
             </a>
           ))}
         </ul>

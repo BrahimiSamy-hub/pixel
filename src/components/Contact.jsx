@@ -2,12 +2,12 @@
 import Section from './Section'
 import Heading from './Heading'
 import { useForm } from 'react-hook-form'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 import { useContact } from '../context/ContactContext'
 import { useState, useEffect } from 'react'
 
 const Contact = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const {
     register,
     handleSubmit,

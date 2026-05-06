@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion'
 import chevron from '../../assets/chevron-down.svg'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 
 const subcategories = {
   visualIdentity: ['logo', 'visitCards', 'sac', 'habillage', 'tshirt', 'flyer'],
@@ -43,7 +43,7 @@ const AccordionItem = ({ header, children, ...rest }) => (
 )
 
 export default function Filter({ setSelectedSubcategory }) {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const [activeItem, setActiveItem] = useState(null)
 
   const handleItemClick = (item) => {

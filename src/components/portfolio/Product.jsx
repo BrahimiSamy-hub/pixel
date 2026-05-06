@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react'
-import { PhotoProvider, PhotoView } from 'react-photo-view'
-import 'react-photo-view/dist/react-photo-view.css'
+import React from 'react'
+import PortfolioGallery from './PortfolioGallery'
+
 import {
   product,
   product1,
@@ -29,26 +29,8 @@ const images = [
   { src: product10, alt: 'Pixel Creative Agency - Photographie de Produit 11' },
 ]
 
-const ImageComponent = ({ src, alt }) => (
-  <div className='flex justify-center col-span-1 hover:cursor-pointer'>
-    <PhotoView src={src?.src || src}>
-      <img src={src?.src || src} alt={alt} className=' rounded-xl w-80  object-contain' loading='lazy' />
-    </PhotoView>
-  </div>
-)
-
-const Product = () => {
-  return (
-    <PhotoProvider>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2 lg:gap-5'>
-        {images.map((image, index) => (
-          <Suspense fallback={<div>Loading...</div>} key={index}>
-            <ImageComponent src={image.src} alt={image.alt} />
-          </Suspense>
-        ))}
-      </div>
-    </PhotoProvider>
-  )
+const Product = ({ searchQuery = "", viewType = "grid" }) => {
+  return <PortfolioGallery items={images} searchQuery={searchQuery} viewType={viewType} />
 }
 
 export default Product

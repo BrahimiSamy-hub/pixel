@@ -1,20 +1,20 @@
 "use client"
-import { useRouter } from 'next/navigation'
+import { useRouter } from '@/navigation'
 import { check } from '../assets'
 import { logoPricing } from '../constants'
 import Button from './Button'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 
 const InfographiePricing = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const router = useRouter()
 
   const handleContactUs = () => {
     router.push('/contact?service=Design')
   }
 
-  const pricingData = t('pricing.logo', { returnObjects: true })
+  const pricingData = t.raw('pricing.logo')
   if (!Array.isArray(pricingData)) return null
 
   return (

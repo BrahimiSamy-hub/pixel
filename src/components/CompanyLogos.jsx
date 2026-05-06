@@ -1,17 +1,18 @@
 "use client"
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import { companyLogos } from '../constants'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 
 const CompanyLogos = ({ className }) => {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   return (
     <div className={className} data-aos='fade-up'>
-      <h5 className='tagline mb-6 text-center text-n-1/50'>
+      <h5 suppressHydrationWarning className='tagline mb-6 text-center text-n-1/50'>
         {t('companyLogosTagline')}
       </h5>
       <Swiper
@@ -57,12 +58,12 @@ const CompanyLogos = ({ className }) => {
 
                   {/* Logo container with glass effect */}
                   <div className='relative z-10 p-6 flex items-center justify-center'>
-                    <img
+                    <Image
                       src={logo?.src || logo}
                       width={140}
+                      height={140}
                       alt={logo?.name || `Pixel Creative Agency - Partenaire Logotype ${index + 1}`}
                       className='object-contain filter drop-shadow-sm transition-all duration-500 scale-110 drop-shadow-md brightness-105'
-                      loading='lazy'
                     />
                   </div>
 

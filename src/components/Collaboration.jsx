@@ -5,11 +5,11 @@ import { collabContent } from '../constants'
 import Button from './Button'
 import Section from './Section'
 import { LeftCurve, RightCurve } from './design/Collaboration'
-import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
+import { Link } from '@/navigation'
+import { useTranslations, useLocale } from 'next-intl'
 
 const Collaboration = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
 
   return (
     <Section crosses id='portfolio'>

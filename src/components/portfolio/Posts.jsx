@@ -1,50 +1,20 @@
-import React, { Suspense } from 'react'
-import { PhotoProvider, PhotoView } from 'react-photo-view'
-import 'react-photo-view/dist/react-photo-view.css'
-import {
-  post,
-  post1,
-  post2,
-  post3,
-  post4,
-  post5,
-  post6,
-  post7,
-  post8,
-} from '../../assets'
+import React from 'react'
+import PortfolioGallery from './PortfolioGallery'
+import { post, post1, post2, post3, post4, post5, post6, post7 } from '../../assets'
 
 const images = [
-  { src: post, alt: 'Post' },
-  { src: post1, alt: 'Post' },
-  { src: post2, alt: 'Post' },
-  { src: post3, alt: 'Post' },
-  { src: post4, alt: 'Post' },
-  { src: post5, alt: 'Post' },
-  { src: post6, alt: 'Post' },
-  { src: post7, alt: 'Post' },
-  { src: post8, alt: 'Post' },
+  { src: post, alt: 'Social Media Post 1' },
+  { src: post1, alt: 'Social Media Post 2' },
+  { src: post2, alt: 'Social Media Post 3' },
+  { src: post3, alt: 'Social Media Post 4' },
+  { src: post4, alt: 'Social Media Post 5' },
+  { src: post5, alt: 'Social Media Post 6' },
+  { src: post6, alt: 'Social Media Post 7' },
+  { src: post7, alt: 'Social Media Post 8' },
 ]
 
-const ImageComponent = ({ src, alt }) => (
-  <div className='flex justify-center col-span-1 hover:cursor-pointer'>
-    <PhotoView src={src?.src || src}>
-      <img src={src?.src || src} alt={alt} className=' rounded-xl w-80  object-contain' />
-    </PhotoView>
-  </div>
-)
-
-const Posts = () => {
-  return (
-    <PhotoProvider>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2 lg:gap-5'>
-        {images.map((image, index) => (
-          <Suspense fallback={<div>Loading...</div>} key={index}>
-            <ImageComponent src={image.src} alt={image.alt} />
-          </Suspense>
-        ))}
-      </div>
-    </PhotoProvider>
-  )
+const Posts = ({ searchQuery = "", viewType = "grid" }) => {
+  return <PortfolioGallery items={images} searchQuery={searchQuery} viewType={viewType} />
 }
 
 export default Posts

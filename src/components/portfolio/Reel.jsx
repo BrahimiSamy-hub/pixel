@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react'
+import React from 'react'
+import PortfolioGallery from './PortfolioGallery'
 
 const videos = [
   {
-    src: ' https://youtube.com/embed/8bGAYPNX_kw',
-
+    src: 'https://youtube.com/embed/8bGAYPNX_kw',
     title: 'Crunchy Restaurant Promo',
   },
   {
@@ -20,15 +20,15 @@ const videos = [
   },
   {
     src: 'https://youtube.com/embed/V5QPBuA1DW4',
-    title: 'Articore Presentation',
+    title: 'Articore Presentation 1',
   },
   {
     src: 'https://youtube.com/embed/q0rLWbBiE4U',
-    title: 'Articore Presentation',
+    title: 'Articore Presentation 2',
   },
   {
     src: 'https://youtube.com/embed/jCKCLg6vqLo',
-    title: 'Articore Presentation',
+    title: 'Articore Presentation 3',
   },
   {
     src: 'https://youtube.com/embed/KCgDcQr8zQ0',
@@ -36,29 +36,8 @@ const videos = [
   },
 ]
 
-const VideoComponent = ({ src, title }) => (
-  <div className='flex justify-center col-span-3 md:col-span-2 lg:col-span-1'>
-    <iframe
-      src={src}
-      title={title}
-      className='rounded-xl w-full min-h-96 object-cover'
-      frameBorder='0'
-      allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-      allowFullScreen
-    ></iframe>
-  </div>
-)
-
-const Reel = () => {
-  return (
-    <div className='grid grid-cols-3 gap-10'>
-      {videos.map((video, index) => (
-        <Suspense fallback={<div>Loading...</div>} key={index}>
-          <VideoComponent src={video.src} />
-        </Suspense>
-      ))}
-    </div>
-  )
+const Reel = ({ searchQuery = "", viewType = "grid" }) => {
+  return <PortfolioGallery items={videos} searchQuery={searchQuery} viewType={viewType} isVideo={true} />
 }
 
 export default Reel

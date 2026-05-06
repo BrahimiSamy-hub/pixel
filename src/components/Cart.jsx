@@ -3,13 +3,13 @@ import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useCart } from '../context/CartContext'
-import Link from 'next/link'
+import { Link } from '@/navigation'
 import { FaTrashAlt } from 'react-icons/fa'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 import { useAnalytics } from '../hooks/useAnalytics'
 
 const Cart = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const { isOpen, toggleCart, cartItems, removeFromCart } = useCart()
   const { trackButtonClick, trackAddToCart } = useAnalytics()
 
@@ -152,7 +152,7 @@ const Cart = () => {
                         <div className='mt-6'>
                           <Link
                             draggable='false'
-                            href='/checkout'
+                            href='/paiement'
                             className={`flex items-center justify-center rounded-md border border-transparent bg-color-1 px-6 py-3 text-base font-medium text-white shadow-sm hover:opacity-75 ${
                               isCartEmpty()
                                 ? 'opacity-50 cursor-not-allowed pointer-events-none'
@@ -168,7 +168,7 @@ const Cart = () => {
                             {t('or')}{' '}
                             <Link
                               draggable='false'
-                              href='/shop'
+                              href='/boutique'
                               className='font-medium text-color-1 hover:opacity-75'
                               onClick={() => {
                                 toggleCart()

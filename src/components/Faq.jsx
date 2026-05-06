@@ -1,9 +1,9 @@
 "use client"
 import React, { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 
 const Faq = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const [openQuestionIndex, setOpenQuestionIndex] = useState(null)
 
   const toggleOpen = (index) => {

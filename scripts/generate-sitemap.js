@@ -169,7 +169,7 @@ const main = async () => {
         priority: '0.8',
       },
       {
-        path: '/rules',
+        path: '/terms',
         lastmod: getCurrentDate(),
         changefreq: 'yearly',
         priority: '0.3',

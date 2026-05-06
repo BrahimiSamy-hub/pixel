@@ -10,11 +10,12 @@ import { BackgroundCircles, BottomLine, Gradient } from './design/Hero'
 import { useRef } from 'react'
 
 import CompanyLogos from './CompanyLogos'
-import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
+import { Link } from '@/navigation'
+import Image from 'next/image'
+import { useTranslations, useLocale } from 'next-intl'
 
 const Hero = () => {
-  const { t } = useTranslation()
+  const t = useTranslations()
   const parallaxRef = useRef(null)
 
   return (
@@ -29,15 +30,17 @@ const Hero = () => {
       >
         <div className='container relative mt-10' ref={parallaxRef}>
           <div className='relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] '>
-            <h1 className='h1 mb-6 items-center flex justify-center flex-col'>
+            <h1 suppressHydrationWarning className='h1 mb-6 items-center flex justify-center flex-col'>
               {t('heroTitle')}&nbsp;
               <br />
-              <img
+              <Image
                 src={pixelH?.src || pixelH}
                 alt='Pixel Creative Agency Logo'
                 className='w-64 object-contain'
                 draggable='false'
-                loading='eager'
+                width={256}
+                height={80}
+                priority
               />
             </h1>
 
@@ -45,25 +48,25 @@ const Hero = () => {
               {t('heroDescription')}
             </p>
             <div className='flex gap-10 justify-center'>
-              <Link href='/shop' draggable='false'>
+              <Link href='/boutique' draggable='false'>
                 <Button white>{t('shopButton')}</Button>
               </Link>
-              <a href='#services'>
+              <Link href='#services'>
                 <Button white>{t('servicesButton')}</Button>
-              </a>
+              </Link>
             </div>
           </div>
           <div className='relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24'>
             <div className='relative z-1 p-0.5 rounded-2xl'>
               <div className='rounded-t-[0.9rem] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490] ]:'>
-                <img
+                <Image
                   src={astroSVG?.src || astroSVG}
                   className='w-full h-full object-contain float-animation'
                   width={1024}
                   height={490}
                   alt='Pixel Creative Agency Mascot - Creative Astronaut'
                   draggable='false'
-                  loading='eager'
+                  priority
                 />
               </div>
             </div>

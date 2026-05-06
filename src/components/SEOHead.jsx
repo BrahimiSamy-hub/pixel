@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import { useTranslation } from 'react-i18next'
+import { useTranslations, useLocale } from 'next-intl'
 
 const SEOHead = ({
   title,
@@ -14,7 +14,7 @@ const SEOHead = ({
   imageAlt = null,
 }) => {
   const { i18n } = useTranslation()
-  const currentLanguage = i18n.language || 'fr'
+  const currentLanguage = locale || 'fr'
   
   // Determine locale based on current language (only fr or en, ignore ar)
   const ogLocale = currentLanguage === 'en' ? 'en_US' : 'fr_FR'

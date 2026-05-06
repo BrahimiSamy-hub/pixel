@@ -1,6 +1,5 @@
-import React, { Suspense } from 'react'
-import { PhotoProvider, PhotoView } from 'react-photo-view'
-import 'react-photo-view/dist/react-photo-view.css'
+import React from 'react'
+import PortfolioGallery from './PortfolioGallery'
 import {
   flyer1,
   flyer2,
@@ -22,45 +21,27 @@ import {
 } from '../../assets'
 
 const images = [
-  { src: flyer1, alt: 'Flyer' },
-  { src: flyer2, alt: 'Flyer' },
-  { src: flyer3, alt: 'Flyer' },
-  { src: trifold1, alt: 'Trifold' },
-  { src: flyer4, alt: 'Flyer' },
-  { src: flyer5, alt: 'Flyer' },
-  { src: flyer6, alt: 'Flyer' },
-  { src: trifold2, alt: 'Trifold' },
-  { src: flyer7, alt: 'Flyer' },
-  { src: trifold3, alt: 'Trifold' },
-  { src: flyer8, alt: 'Flyer' },
-  { src: flyer9, alt: 'Flyer' },
-  { src: flyer10, alt: 'Flyer' },
-  { src: flyer11, alt: 'Flyer' },
-  { src: trifold, alt: 'Trifold' },
-  { src: flyer12, alt: 'Flyer' },
-  { src: flyer13, alt: 'Flyer' },
+  { src: flyer1, alt: 'Flyer Design 1' },
+  { src: flyer2, alt: 'Flyer Design 2' },
+  { src: flyer3, alt: 'Flyer Design 3' },
+  { src: trifold1, alt: 'Trifold Design 1' },
+  { src: flyer4, alt: 'Flyer Design 4' },
+  { src: flyer5, alt: 'Flyer Design 5' },
+  { src: flyer6, alt: 'Flyer Design 6' },
+  { src: trifold2, alt: 'Trifold Design 2' },
+  { src: flyer7, alt: 'Flyer Design 7' },
+  { src: trifold3, alt: 'Trifold Design 3' },
+  { src: flyer8, alt: 'Flyer Design 8' },
+  { src: flyer9, alt: 'Flyer Design 9' },
+  { src: flyer10, alt: 'Flyer Design 10' },
+  { src: flyer11, alt: 'Flyer Design 11' },
+  { src: trifold, alt: 'Trifold Design 4' },
+  { src: flyer12, alt: 'Flyer Design 12' },
+  { src: flyer13, alt: 'Flyer Design 13' },
 ]
 
-const ImageComponent = ({ src, alt }) => (
-  <div className='flex justify-center col-span-1 hover:cursor-pointer'>
-    <PhotoView src={src?.src || src}>
-      <img src={src?.src || src} alt={alt} className=' rounded-xl w-80  object-contain' />
-    </PhotoView>
-  </div>
-)
-
-const Flyer = () => {
-  return (
-    <PhotoProvider>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2 lg:gap-5'>
-        {images.map((image, index) => (
-          <Suspense fallback={<div>Loading...</div>} key={index}>
-            <ImageComponent src={image.src} alt={image.alt} />
-          </Suspense>
-        ))}
-      </div>
-    </PhotoProvider>
-  )
+const Flyer = ({ searchQuery = "", viewType = "grid" }) => {
+  return <PortfolioGallery items={images} searchQuery={searchQuery} viewType={viewType} />
 }
 
 export default Flyer
