@@ -1,81 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
   <url>
     <loc>https://pixeldz.store/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pixeldz.store/" />
   </url>
+
+  <!-- Portfolio -->
   <url>
-    <loc>https://pixeldz.store/about-us</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pixeldz.store/portfolio</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://pixeldz.store/fr/portfolio</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/portfolio" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/portfolio" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/portfolio" />
   </url>
+
+  <!-- Boutique -->
   <url>
-    <loc>https://pixeldz.store/shop</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://pixeldz.store/fr/boutique</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/boutique" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/boutique" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/boutique" />
+  </url>
+
+  <!-- Développement Web & E-commerce -->
+  <url>
+    <loc>https://pixeldz.store/fr/developpement</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/developpement" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/developpement" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/developpement" />
+  </url>
+
+  <!-- Shooting Photo & Studio -->
+  <url>
+    <loc>https://pixeldz.store/fr/photo-lab</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/photo-lab" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/photo-lab" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/photo-lab" />
   </url>
+
+  <!-- Design Graphique, Logo & Cadres -->
   <url>
-    <loc>https://pixeldz.store/photo-lab</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://pixeldz.store/fr/design-graphique</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/design-graphique" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/design-graphique" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/design-graphique" />
+  </url>
+
+  <!-- Panneau Publicitaire & Impression -->
+  <url>
+    <loc>https://pixeldz.store/fr/publicite</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/publicite" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/publicite" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/publicite" />
+  </url>
+
+  <!-- Photographie Mariage -->
+  <url>
+    <loc>https://pixeldz.store/fr/mariage</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/mariage" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/mariage" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/mariage" />
+  </url>
+
+  <!-- Production Audio & Jingles -->
+  <url>
+    <loc>https://pixeldz.store/fr/sons</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/sons" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/sons" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/sons" />
   </url>
+
+  <!-- Contact -->
   <url>
-    <loc>https://pixeldz.store/graphic-design</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://pixeldz.store/fr/contact</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/contact" />
   </url>
+
+  <!-- À Propos -->
   <url>
-    <loc>https://pixeldz.store/wedding</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pixeldz.store/development</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pixeldz.store/sounds</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pixeldz.store/advertisement</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pixeldz.store/contact</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://pixeldz.store/fr/a-propos</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/a-propos" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/a-propos" />
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://pixeldz.store/ar/a-propos" />
+  </url>
+
+  <!-- City landing pages -->
+  <url>
+    <loc>https://pixeldz.store/fr/agence-alger</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/agence-alger" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/agence-alger" />
   </url>
   <url>
-    <loc>https://pixeldz.store/privacy-policy</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://pixeldz.store/fr/agence-oran</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/agence-oran" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/agence-oran" />
+  </url>
+  <url>
+    <loc>https://pixeldz.store/fr/agence-constantine</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/agence-constantine" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/agence-constantine" />
+  </url>
+  <url>
+    <loc>https://pixeldz.store/fr/agence-setif</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/agence-setif" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/agence-setif" />
+  </url>
+  <url>
+    <loc>https://pixeldz.store/fr/agence-annaba</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr-DZ" href="https://pixeldz.store/fr/agence-annaba" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://pixeldz.store/en/agence-annaba" />
+  </url>
+
+  <!-- Politique de confidentialité -->
+  <url>
+    <loc>https://pixeldz.store/fr/politique-de-confidentialite</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- Conditions d'utilisation -->
   <url>
-    <loc>https://pixeldz.store/terms</loc>
-    <lastmod>2026-04-03</lastmod>
+    <loc>https://pixeldz.store/fr/conditions-dutilisation</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
 </urlset>

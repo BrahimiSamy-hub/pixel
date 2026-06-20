@@ -105,61 +105,6 @@ const AboutUsClient = () => {
               </div>
             </div>
 
-            {/* Our Team Section (E-E-A-T Signals) */}
-            <div className='mb-24 pt-10'>
-              <div className='text-center mb-16'>
-                <h2 className='h2 font-bold text-n-1 mb-4'>
-                  {t('about_us.meetTheTeam') || 'Rencontrez l’Équipe'}
-                </h2>
-                <div className='w-24 h-1 bg-gradient-to-r from-[#F17A28] to-[#FF6B35] rounded-full mx-auto mb-6'></div>
-                <p className='text-lg text-n-3 max-w-2xl mx-auto'>
-                  {t('about_us.teamSubtitle') || 'Des experts passionnés dévoués à donner vie à vos visions créatives en Algérie.'}
-                </p>
-              </div>
-
-              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
-                {[
-                  { role: 'Photographe Principal', icon: '📸', expertise: '7+ ans d’expérience' },
-                  { role: 'Lead Web Developer', icon: '💻', expertise: 'Expert Full-Stack' },
-                  { role: 'Directeur Artistique', icon: '🎨', expertise: 'Spécialiste Branding' },
-                  { role: 'Producteur Audio', icon: '🎵', expertise: 'Sound Design & Mix' }
-                ].map((member, i) => (
-                  <div key={i} className='group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-n-6 rounded-3xl p-8 hover:shadow-2xl hover:shadow-[#F17A28]/20 transition-all duration-500 hover:-translate-y-2 text-center'>
-                    <div className='w-20 h-20 bg-n-6 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto group-hover:scale-110 transition-transform duration-300'>
-                      {member.icon}
-                    </div>
-                    <h3 className='text-xl font-bold text-white mb-2'>{member.role}</h3>
-                    <p className='text-[#F17A28] font-medium mb-4'>{member.expertise}</p>
-                    <div className='w-12 h-0.5 bg-n-6 mx-auto mb-4 group-hover:w-20 transition-all duration-300'></div>
-                    <p className='text-n-3 text-sm'>
-                      Expert dévoué chez Pixel Creative Agency, garantissant l’excellence pour chaque projet.
-                    </p>
-
-                    {/* Person Schema for each role */}
-                    <script
-                      type='application/ld+json'
-                      dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                          '@context': 'https://schema.org',
-                          '@type': 'Person',
-                          'jobTitle': member.role,
-                          'worksFor': {
-                            '@type': 'Organization',
-                            'name': 'Pixel Creative Agency'
-                          },
-                          'address': {
-                            '@type': 'PostalAddress',
-                            'addressLocality': 'Batna',
-                            'addressCountry': 'DZ'
-                          }
-                        })
-                      }}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Enhanced Map Section */}
             <div className='mb-20'>
               <div className='text-center mb-12'>

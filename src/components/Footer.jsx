@@ -1,10 +1,19 @@
 "use client"
 import Section from './Section'
 import { Link } from '@/navigation'
-import Image from 'next/image'
 import { socials } from '../constants'
 import { useAnalytics } from '../hooks/useAnalytics'
 import { FaCookieBite } from 'react-icons/fa'
+import { FaTiktok, FaInstagram, FaFacebookF } from 'react-icons/fa6'
+
+const socialIcon = (title) => {
+  switch (title) {
+    case 'TikTok': return <FaTiktok size={16} />
+    case 'Instagram': return <FaInstagram size={16} />
+    case 'Facebook': return <FaFacebookF size={16} />
+    default: return null
+  }
+}
 
 const Footer = () => {
   const { trackSocialMediaClick, trackButtonClick } = useAnalytics()
@@ -66,7 +75,7 @@ const Footer = () => {
               className='flex items-center justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-[#F18A27]'
               onClick={() => handleSocialClick(item.title.toLowerCase())}
             >
-              <Image src={item.iconUrl?.src || item.iconUrl} width={16} height={16} alt={item.title} />
+              {socialIcon(item.title)}
             </a>
           ))}
         </ul>

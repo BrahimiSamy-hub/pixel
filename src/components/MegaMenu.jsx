@@ -4,19 +4,19 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from '@/navigation'
 import { useTranslations } from 'next-intl'
-import { 
-  IoBrush, 
-  IoPrint, 
-  IoDesktop, 
-  IoPlay, 
-  IoShareSocial, 
+import {
+  IoBrush,
+  IoPrint,
+  IoDesktop,
+  IoPlay,
+  IoShareSocial,
   IoArrowForward
 } from 'react-icons/io5'
-import { 
+import {
   logo, logo1, logo2,
   rollUp, rollUp1, rollUp2,
   pixel,
-  roadmap1,
+  shooting1,
   post, post1, post2, post3,
   pixelH
 } from '@/assets'
@@ -70,7 +70,7 @@ const MegaMenu = ({ isOpen, onClose }) => {
       count: "15",
       url: '/portfolio/video',
       layout: 'video',
-      previews: [roadmap1]
+      previews: [shooting1]
     },
     {
       id: 'social',
@@ -88,15 +88,6 @@ const MegaMenu = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="fixed inset-0 top-[5rem] bg-black/60 backdrop-blur-md z-[49]"
-          />
-          
           {/* Menu Content */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -153,41 +144,38 @@ const MegaMenu = ({ isOpen, onClose }) => {
                       {item.layout === 'grid-3' && (
                         <div className="grid grid-cols-12 gap-1.5 h-full p-1.5">
                           <div className="col-span-7 h-full relative rounded-lg overflow-hidden">
-                            <Image src={item.previews[0]} alt="p" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                            <Image src={item.previews[0]} alt="" fill className="object-cover" />
                           </div>
                           <div className="col-span-5 flex flex-col gap-1.5 h-full">
                             <div className="h-1/2 relative rounded-lg overflow-hidden">
-                              <Image src={item.previews[1]} alt="p" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                              <Image src={item.previews[1]} alt="" fill className="object-cover" />
                             </div>
                             <div className="h-1/2 relative rounded-lg overflow-hidden">
-                              <Image src={item.previews[2]} alt="p" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                              <Image src={item.previews[2]} alt="" fill className="object-cover" />
                             </div>
                           </div>
                         </div>
                       )}
                       {item.layout === 'single' && (
                         <div className="h-full relative overflow-hidden">
-                           <Image src={item.previews[0]} alt="p" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                          <Image src={item.previews[0]} alt="" fill className="object-cover" />
                         </div>
                       )}
                       {item.layout === 'video' && (
-                        <div className="h-full relative group/vid overflow-hidden">
-                           <Image src={item.previews[0]} alt="p" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                           <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                              <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
-                                <IoPlay className="text-white text-xl translate-x-0.5" />
-                              </div>
-                           </div>
-                           <div className="absolute bottom-3 left-3 text-[10px] text-white/70 font-bold uppercase tracking-wider">
-                              Articorp <span className="text-white/40 ml-1">Promo 2024</span>
-                           </div>
+                        <div className="h-full relative overflow-hidden">
+                          <Image src={item.previews[0]} alt="" fill className="object-cover" />
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
+                              <IoPlay className="text-white text-xl translate-x-0.5" />
+                            </div>
+                          </div>
                         </div>
                       )}
                       {item.layout === 'grid-4' && (
                         <div className="grid grid-cols-2 gap-1.5 h-full p-1.5">
                           {item.previews.slice(0, 4).map((img, idx) => (
                             <div key={idx} className="relative rounded-lg overflow-hidden">
-                              <Image src={img} alt="p" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                              <Image src={img} alt="" fill className="object-cover" />
                             </div>
                           ))}
                         </div>
@@ -211,10 +199,10 @@ const MegaMenu = ({ isOpen, onClose }) => {
               {/* FOOTER */}
               <div className="flex items-center justify-between border-t border-white/5 px-8 py-6">
                 <div className="flex items-center gap-6">
-                   <HexagonIcon>
-                      <Image src={pixelH} alt="Pixel" width={24} height={24} className="opacity-80" />
-                   </HexagonIcon>
-                   <div>
+                  <HexagonIcon>
+                    <Image src={pixelH} alt="Pixel" width={24} height={24} className="opacity-80" />
+                  </HexagonIcon>
+                  <div>
                     <h4 className="mb-1 text-xl font-semibold text-white">
                       {t('cta_title')}
                     </h4>
@@ -242,4 +230,3 @@ const MegaMenu = ({ isOpen, onClose }) => {
 }
 
 export default MegaMenu
-

@@ -96,12 +96,7 @@ const Contact = () => {
           <Heading title={t('contactTitle')} text={t('contactText')} />
           <div className='relative'>
             <div className='relative z-1 grid gap-8 lg:grid-cols-2'>
-              <div className='relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:border-white/20 group'>
-                {/* Animated liquid effect overlay */}
-                <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out'></div>
-
-                {/* Shimmer effect */}
-                <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+              <div className='relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg'>
 
                 {/* Liquid border effect */}
                 <div className='absolute inset-0 rounded-3xl bg-gradient-to-r from-[#f17a28]/8 via-[#f17a28]/12 to-[#f17a28]/8 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
@@ -163,7 +158,7 @@ const Contact = () => {
                                 ? 'border-red-400 focus:border-red-400'
                                 : watchedFields.fullName
                                 ? 'border-green-400 focus:border-green-400'
-                                : 'border-n-3 focus:border-[#F17A28]'
+                                : 'border-white/10 focus:border-[#F17A28]'
                             }`}
                             placeholder={t('enterName')}
                             aria-describedby={
@@ -231,7 +226,7 @@ const Contact = () => {
                                 ? 'border-red-400 focus:border-red-400'
                                 : watchedFields.email && !errors.email
                                 ? 'border-green-400 focus:border-green-400'
-                                : 'border-n-3 focus:border-[#F17A28]'
+                                : 'border-white/10 focus:border-[#F17A28]'
                             }`}
                             placeholder={t('enterEmail')}
                             aria-describedby={
@@ -298,7 +293,7 @@ const Contact = () => {
                                 ? 'border-red-400 focus:border-red-400'
                                 : watchedFields.phone && !errors.phone
                                 ? 'border-green-400 focus:border-green-400'
-                                : 'border-n-3 focus:border-[#F17A28]'
+                                : 'border-white/10 focus:border-[#F17A28]'
                             }`}
                             placeholder={t('enterMobileNumber')}
                             aria-describedby={
@@ -368,7 +363,7 @@ const Contact = () => {
                                 ? 'border-red-400 focus:border-red-400'
                                 : watchedFields.message && !errors.message
                                 ? 'border-green-400 focus:border-green-400'
-                                : 'border-n-3 focus:border-[#F17A28]'
+                                : 'border-white/10 focus:border-[#F17A28]'
                             }`}
                             placeholder={t('enterMessage')}
                             rows='4'
@@ -474,21 +469,12 @@ const Contact = () => {
               </div>
 
               {/* Enhanced Map Section */}
-              <div className='bg-n-7 rounded-3xl overflow-hidden min-h-[35rem] relative group'>
-                <div className='absolute inset-0 bg-gradient-to-t from-n-8/50 to-transparent z-10 pointer-events-none'></div>
-                <div className='absolute top-4 left-4 z-20 bg-n-8/90 backdrop-blur-sm rounded-lg p-3 shadow-lg'>
-                  <div className='flex items-center space-x-2'>
-                    <div className='w-3 h-3 bg-[#F17A28] rounded-full animate-pulse'></div>
-                    <span className='text-n-1 text-sm font-medium'>
-                      {t('ourLocation')}
-                    </span>
-                  </div>
-                </div>
+              <div className='bg-n-7 rounded-3xl overflow-hidden min-h-[35rem] relative border border-white/10'>
                 <iframe
                   src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.9825938283684!2d6.170534775461951!3d35.554132072628484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f41158da88865b%3A0xf23a3bf30fc4c9fc!2sPixel%20Creative%20Agency!5e0!3m2!1sfr!2sdz!4v1715290385507!5m2!1sfr!2sdz'
                   title='MapsLocalisation'
                   allowFullScreen=''
-                  className='w-full h-full transition-transform duration-300 group-hover:scale-105'
+                  className='w-full h-full'
                   referrerPolicy='no-referrer-when-downgrade'
                   loading='lazy'
                 ></iframe>

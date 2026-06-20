@@ -10,15 +10,12 @@ import {
   premierPro,
   vsCode,
   lightroom,
-  facebook,
   serviceAudio,
   figma,
   file02,
   homeSmile,
-  instagram,
   notification2,
   notification3,
-
   notification4,
   photoshop,
   plusSquare,
@@ -30,7 +27,6 @@ import {
   roadmap4,
   searchMd,
   sliders04,
-  twitter,
   servicePub,
   serviceWeeding,
 } from '../assets'
@@ -58,41 +54,41 @@ export const brainwaveServicesIcons = [
 export const roadmap = [
   {
     id: '0',
-    title: 'Voice recognition',
-    text: 'Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.',
-    date: 'May 2023',
+    title: 'Studio Photo & Vidéo',
+    text: 'Création d\'un studio professionnel équipé pour des shootings produits, portraits et productions vidéo haut de gamme.',
+    date: '2021',
     status: 'done',
     imageUrl: roadmap1,
     colorful: true,
   },
   {
     id: '1',
-    title: 'Gamification',
-    text: 'Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.',
-    date: 'May 2023',
-    status: 'progress',
+    title: 'Boutique en ligne',
+    text: 'Lancement de notre boutique e-commerce pour commander des produits personnalisés directement en ligne.',
+    date: '2023',
+    status: 'done',
     imageUrl: roadmap2,
   },
   {
     id: '2',
-    title: 'Chatbot customization',
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-    date: 'May 2023',
+    title: 'Expansion régionale',
+    text: 'Extension de nos services à travers toute l\'Algérie avec des partenariats locaux et une livraison nationale.',
+    date: '2024',
     status: 'done',
     imageUrl: roadmap3,
   },
   {
     id: '3',
-    title: 'Integration with APIs',
-    text: 'Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.',
-    date: 'May 2023',
+    title: 'Application Mobile',
+    text: 'Développement d\'une application mobile pour suivre vos commandes et collaborer en temps réel avec notre équipe.',
+    date: '2025',
     status: 'progress',
     imageUrl: roadmap4,
   },
 ]
 
 export const collabText =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter."
+  "Des outils et des talents réunis pour donner vie à vos projets créatifs, de la conception à la livraison."
 
 export const collabContent = [
   {
@@ -190,39 +186,38 @@ export const collabApps = [
 export const audioPricing = [
   {
     id: '0',
-    title: 'Sound effect',
+    title: 'Effet Sonore',
     description:
-      'Spécialisé dans la création deffets sonores de haute qualité qui ajoutent une dimension immersive a vos productions audiovisuelles. Que vous travaillez sur un film, un jeu vidéo, un podcast ou une compagne publicitaire, notre exeprtise sonore vous permet de captiver votre audience et denrichir leur expérience.',
+      'Spécialisé dans la création d\'effets sonores de haute qualité qui ajoutent une dimension immersive à vos productions audiovisuelles.',
     price: '4000',
     features: [
-      'An advanced AI chatbot that can understand complex queries',
-      'An analytics dashboard to track your conversations',
-      'Priority support to solve issues quickly',
+      'Effets sonores sur mesure',
+      'Formats WAV / MP3 haute qualité',
+      'Livraison rapide',
     ],
   },
   {
     id: '1',
     title: 'Voix off',
     description:
-      'Notre équipe de voix talentueuses est préte a trasmettre votre message avec clarté et impact.',
+      'Notre équipe de voix talentueuses est prête à transmettre votre message avec clarté et impact.',
     price: '6000',
     features: [
-      'An AI chatbot that can understand your queries',
-      'Personalized recommendations based on your preferences',
-      'Ability to explore the app and its features without any cost',
-      'dqsdsqdqs',
+      'Voix masculine ou féminine',
+      'Enregistrement studio professionnel',
+      'Retouche et mixage inclus',
     ],
   },
   {
     id: '2',
-    title: 'Music original production',
+    title: 'Production Musicale Originale',
     description:
-      'Bénéficiez dune approche créative et collaborative, visant a réaliser de la musique personnalisée, adaptée a vos besion, spécifiques et qui vous ressemble.',
+      'Bénéficiez d\'une approche créative et collaborative, visant à réaliser de la musique personnalisée, adaptée à vos besoins spécifiques.',
     price: '10000',
     features: [
-      'An AI chatbot that can understand your queries',
-      'Personalized recommendations based on your preferences',
-      'Ability to explore the app and its features without any cost',
+      'Composition originale',
+      'Arrangements complets',
+      'Mixage et mastering inclus',
     ],
   },
 ]
@@ -262,9 +257,15 @@ export const photoPricing = [
     id: '2',
     title: 'Pack Social Media Management',
     description:
-      'Nous vous aiderons a établir une présence forte et engageante sur les plateformes numériques avec des stratégies sur mesure pour acroitre votre visibilité, intéragir avec votre audience et renforcer votre image de marque.',
+      'Nous vous aidons à établir une présence forte et engageante sur les plateformes numériques pour accroître votre visibilité et renforcer votre image de marque.',
     price: '40000',
-    features: ['*', '*', '*', '*', '*', '*', '*'],
+    features: [
+      'Création de contenu visuel (photos & vidéos)',
+      'Gestion de page (Facebook, Instagram, TikTok)',
+      'Stratégie éditoriale mensuelle',
+      'Planification et publication des posts',
+      'Rapport de performance mensuel',
+    ],
   },
 ]
 
@@ -539,20 +540,17 @@ export const benefits = [
 export const socials = [
   {
     id: '0',
-    title: 'Twitter',
-    iconUrl: twitter,
+    title: 'TikTok',
     url: 'https://www.tiktok.com/@pixel.creativeagency',
   },
   {
     id: '1',
     title: 'Instagram',
-    iconUrl: instagram,
-    url: 'https://www.instagram.com/pixel.photolab',
+    url: 'https://www.instagram.com/_pixeldz',
   },
   {
     id: '2',
     title: 'Facebook',
-    iconUrl: facebook,
     url: 'https://www.facebook.com/pixel.lab.3110?mibextid=LQQJ4d',
   },
 ]

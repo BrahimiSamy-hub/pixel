@@ -1,18 +1,33 @@
 import InfographiePricingClient from './InfographiePricingClient'
 
-export const metadata = {
-  title: 'Design Graphique & Identité Visuelle Algérie | Pixel',
-  description: 'Design graphique professionnel en Algérie: logos, charte graphique, packaging et supports de communication. Identité visuelle sur mesure par Pixel Agency.',
-  keywords: 'design graphique algérie, création logo, identité visuelle, packaging design, supports marketing, design print',
-  alternates: {
-    canonical: '/graphic-design',
-  },
+export async function generateMetadata({ params }) {
+  const { locale } = await params
+  const base = 'https://pixeldz.store'
+  return {
+    title: 'Design Graphique, Logo & Identité Visuelle en Algérie — Cadres & Impression',
+    description: 'Design graphique professionnel en Algérie : création logo, charte graphique, cadre photo, packaging, carte de visite et supports marketing. Identité visuelle sur mesure.',
+    keywords: 'design graphique algérie, création logo algérie, identité visuelle algérie, cadre photo algérie, cadre publicitaire, carte de visite algérie, packaging design algérie, infographie algérie, charte graphique algérie, supports marketing algérie, illustration algérie',
+    alternates: {
+      canonical: `${base}/${locale}/design-graphique`,
+      languages: {
+        'fr-DZ': `${base}/fr/design-graphique`,
+        'en-US': `${base}/en/design-graphique`,
+        'ar-DZ': `${base}/ar/design-graphique`,
+      },
+    },
+    openGraph: {
+      title: 'Design Graphique, Logo & Cadres — Algérie',
+      description: 'Création de logos, identités visuelles, cadres photo et supports marketing en Algérie.',
+      url: `${base}/${locale}/design-graphique`,
+      images: [{ url: `${base}/og-design.png`, width: 1200, height: 630 }],
+    },
+  }
 }
 
 const infographieStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Design Graphique & Identité Visuelle',
+  name: 'Design Graphique & Identité Visuelle — Algérie',
   provider: {
     '@type': 'LocalBusiness',
     name: 'Pixel Creative Agency',
@@ -24,10 +39,10 @@ const infographieStructuredData = {
       addressRegion: 'Batna',
     },
   },
-  serviceType: 'Graphic Design',
-  areaServed: { '@type': 'Country', "name": "Algeria" },
-  description: 'Création de logos, chartes graphiques, packaging et supports de communication visuels pour entreprises algériennes.',
-  url: 'https://pixeldz.store/graphic-design'
+  serviceType: 'Design Graphique, Identité Visuelle, Cadre & Impression',
+  areaServed: { '@type': 'Country', name: 'Algeria' },
+  description: 'Création de logos, chartes graphiques, cadres photo, packaging et supports de communication visuels pour entreprises algériennes.',
+  url: 'https://pixeldz.store/fr/design-graphique',
 }
 
 export default function InfographiePricingPage() {

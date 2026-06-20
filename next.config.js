@@ -28,9 +28,31 @@ const nextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/(.*)\\.(ico|png|svg|jpg|jpeg|gif|webp|woff|woff2|ttf|eot)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+    ]
+  },
   async redirects() {
     const locales = ['fr', 'en', 'ar']
-    const redirectPairs = [
+    const slugPairs = [
       { from: 'about-us', to: 'a-propos' },
       { from: 'advertisement', to: 'publicite' },
       { from: 'checkout', to: 'paiement' },
@@ -43,9 +65,11 @@ const nextConfig = {
       { from: 'testimonials', to: 'temoignages' },
       { from: 'wedding', to: 'mariage' },
     ]
+
     const redirects = []
+
     for (const locale of locales) {
-      for (const { from, to } of redirectPairs) {
+      for (const { from, to } of slugPairs) {
         redirects.push({
           source: `/${locale}/${from}`,
           destination: `/${locale}/${to}`,
