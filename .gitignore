@@ -43,3 +43,7 @@ coverage/
 *.njsproj
 *.sln
 *.sw?
+
+# TypeScript / Next
+next-env.d.ts
+*.tsbuildinfo

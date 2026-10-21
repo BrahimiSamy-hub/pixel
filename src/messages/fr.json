@@ -1,754 +1,1160 @@
 {
-  "portfolioTag": "notre travail en action",
-  "wolfrules": "Explore the game rules",
-  "click": "Click here",
-  "material": "Matiére",
-  "COMING SOON": "BIENTÔT",
-  "available": "Disponible",
-  "expertise": "Une expertise de confiance",
-  "titleWerWerwolf": "Werewolves",
-  "descriptionWerwolf": "Jeu de Cartes Werewolf contient",
-  "descriptionNumberCardsWerwolf": " 50 cartes waterproof",
-  "descriptionNumberRolesWerwolf": " (38 rôles différents)",
-  "titleRulesWerwolf": "Les Régles du jeu",
-  "descriptionRulesWerwolf": "La partie doit être menée par une personne ne prenant pas part au jeu. Le meneur distribue une carte à chaque joueur, au hasard. Puis chaque joueur découvre secrètement son identité en regardant sa carte. Les joueurs sont divisés en deux camps : les villageois (certains d'entre eux jouant un rôle spécial) et les loups-garous. Le but des villageois est de découvrir et d'éliminer les loups-garous, et le but des loups-garous est de ne pas se faire démasquer et d'éliminer tous les villageois. Les tours de jeu sont rythmés par une période de jour et une période de nuit. Durant la nuit, tous les joueurs ont les yeux fermés et ne doivent pas communiquer. Appelés par le meneur de jeu, les loups-garous se réveillent, et désignent ensemble (par gestes pour éviter de se faire reconnaître) un villageois qui sera leur victime. Les villageois qui ont des capacités spéciales (cupidon, sorcière, voyante...), sont également appelés tour à tour pour utiliser leurs pouvoirs respectifs. Le jour revenu, tout le monde se réveille et ouvre les yeux et le meneur de jeu révèle l'identité de la (ou les) victime(s). Les victimes n'interviennent plus jusqu'à la fin du jeu mais pourront garder les yeux ouverts et y assister. Les Villageois vont tenter de découvrir qui sont les loups-garous par déductions, discours, révélations... Les loups-garous (qui participent aux débats, bien sûr : ils habitent le village !) doivent éviter de se faire incriminer en détournant les soupçons sur d'autres personnes. Il y a donc un temps de discussion au cours duquel chacun tente de découvrir la véritable identité de chaque joueur. A la fin du débat, chaque joueur pointe du doigt une personne qu'il suspecte d'être loup-garou. Celui étant désigné par la majorité est exécuté et le meneur montre son identité. Il est donc éliminé, puis le jeu recommence à la tombée de la nuit. Lors de la première journée, il peut y avoir une action supplémentaire à faire avant de décider du coupable : il s'agit de l'élection du Maire du village. N'importe qui peut se présenter (même un loup-garou) et sa nomination est effectuée par vote. Son pouvoir se cumule avec ses éventuelles autres compétences, et il est très important. En effet, lors du vote des villageois, sa voix compte double. Quand le capitaine du village est éliminé (quelle qu'en soit la raison), c'est lui-même qui désigne son successeur, dans son dernier souffle. Le jeu se termine lorsqu'il ne reste plus que des villageois ou plus que des loups-garous.",
-  "rolesWerwolf": "Rôles",
-  "Villageois": "Villageois",
-  "LoupBleu": "Loup Bleu",
-  "FilleDeJoie": "Fille De Joie",
-  "Avocat": "Avocat",
-  "Barbu": "Barbu",
-  "Bourreau": "Bourreau",
-  "Chaman": "Chaman",
-  "Chasseur": "Chasseur",
-  "Chevalier": "Chevalier",
-  "Comedien": "Comédien",
-  "Corbeau": "Corbeau",
-  "Cupidon": "Cupidon",
-  "Detective": "Détective",
-  "Doubleur": "Doubleur",
-  "EnfantSauvage": "Enfant Sauvage",
-  "Fantome": "Fantôme",
-  "Flutiste": "Flûtiste",
-  "JokerLoup": "Joker",
-  "Idiot": "Idiot du village",
-  "Lancien": "L'ancien",
-  "LePreux": "Le Preux",
-  "LoupNormal": "Loup-Garou",
-  "LoupMystique": "Loup-Garou Mystique",
-  "LoupAlpha": "Loup-Garou Alpha",
-  "LoupBlanc": "Loup-Garou Blanc",
-  "LoupIcon": "Icône Loup",
-  "LoupIconDescription": "Description de l'icône Loup",
-  "FilleDeJoieDescription": "Une fois tous les deux tours, elle peut choisir un joueur et passer la nuit chez lui. Si les loups-garous l'attaquent alors qu'elle est chez un autre joueur, elle ne meurt pas.",
-  "unavailable": "Indisponible",
-
-  "LoupRouge": "Loup-Garou Rouge",
-  "Magicien": "Magicien",
-  "MaitreDuTemps": "Maître Du Temps",
-  "PilleurDeTombe": "Pilleur De Tombe",
-  "PetiteFille": "Petite Fille",
-  "Renard": "Renard",
-  "Revenant": "Revenant",
-  "Salvateur": "Salvateur",
-  "Sorciere": "Sorcière",
-  "TueurEnSerie": "Tueur En Série",
-  "Vampire": "Vampire",
-  "Voleur": "Voleur",
-  "Voyant": "Voyant",
-  "VillageoisDescription": "Le simple villageois n'a aucun pouvoir, il use de sa voix et de son droit de vote en journée pour éliminer les loups-garous.",
-  "LoupBleuDescription": "Ce Loup-Garou a la possibilité d'échapper à la Voyante, elle verra en lui qu'un simple villageois.",
-  "LoupRougeDescription": "Avant l'attaque des loups-garous, il peut désigner une personne et le meneur lui indiquera s'il s'agit d'un simple villageois ou d'un rôle VIP.",
-  "LoupGarouAlphaDescription": "Ce loup-garou peut une fois dans la partie choisir d'infecter la victime des loups-garous et la transformer en loup mais l'infecté garde les pouvoirs de sa carte initiale et conserve son rôle initial, la voyante ne pourra jamais savoir que c'est un loup-garou.",
-  "LoupGarouMystiqueDescription": "Il peut reprendre la carte d'un des joueurs qui ont quitté la partie (uniquement ceux tués par les loups-garous) et s'attribuer ses pouvoirs tout en restant un loup-garou.",
-  "SorciereDescription": "Elle possède deux potions : une de guérison et une d'empoisonnement. Elle ne peut utiliser chacune de ses potions qu'une seule fois au cours de la partie. Durant la nuit, lorsque les loups-garous se sont rendormis, le meneur de jeu va appeler la sorcière et va lui montrer la personne tuée par les loups-garous, elle décidera alors de ressusciter la personne tuée, tuer une autre personne en plus de la victime, ou de ne rien faire.",
-  "SalvateurDescription": "Le salvateur se réveille chaque nuit avant les loups-garous, et désigne au meneur de jeu un joueur qu'il protégera. Si ce joueur est la victime désignée par les loups-garous cette nuit, il survit à leur assaut. Il ne peut pas protéger la même personne deux tours de suite, mais il peut se protéger lui-même. La protection du Salvateur n'a aucune efficacité sur la victime de la sorcière et ne peut empêcher un amoureux de mourir de chagrin. S'il sauve la personne dévorée par les loups, la sorcière ne connaît pas la victime.",
-  "ChasseurDescription": "Le chasseur n'a aucun rôle particulier à jouer tant qu'il est vivant. Mais dès qu'il meurt - qu'il soit tué dans la nuit (Loups-garous, sorcière), à la suite d'une décision des villageois ou par la mort de son amoureux - il doit désigner une personne qui mourra également, sur-le-champ, d'une balle de son fusil.",
-  "VoyantDescription": "Au début de chaque nuit, elle est appelée par le meneur et peut désigner une personne dont elle découvrira secrètement l'identité.",
-  "DoubleurDescription": "Il peut choisir un joueur au début de la partie et copier sa carte, il obtiendra ainsi tous ses pouvoirs.",
-  "PetiteFilleDescription": "Pendant la nuit, lorsque les loups-garous se réveillent, la petite fille peut discrètement entrouvrir les yeux afin d'essayer de démasquer les loups-garous. Si la petite fille est démasquée à ce moment par les loups-garous, elle pourra être égorgée (en silence) à la place de la victime des loups-garous.",
-  "CupidonDescription": "Durant la nuit du premier tour de la partie (tour préliminaire), il va désigner deux personnes qui seront amoureuses jusqu'à la fin du jeu. Il peut choisir n'importe quels joueurs, y compris se désigner lui-même. Si l'une des deux personnes vient à mourir, l'autre meurt immédiatement de désespoir.",
-  "IdiotDescription": "Il n'a pas de pouvoir étant vivant. S'il est lynché par les villageois, ceux-ci le gracient immédiatement. Par la suite, l'idiot du village reste en vie, mais ne peut plus voter ni être élu capitaine du village. S'il assumait ce rôle, le capitaine est supprimé jusqu'à la fin de la partie. A l'inverse du vote des villageois, la potion de la sorcière, le tir du chasseur ou les loups-garous le tuent sans le gracier.",
-  "LoupBlancDescription": "Il est différent des autres loups-garous, qui eux sont persuadés qu'il est dans leur camp. Son but est d'être le dernier survivant. Il se réveille en même temps que les autres loups-garous et désigne la victime avec eux, mais une nuit sur deux il se réveille une deuxième fois seul et peut choisir d'éliminer un Villageois ou même un loup-garou.",
-  "EnfantSauvageDescription": "L'enfant sauvage choisit un joueur au début de la partie qui devient son modèle. Si le modèle meurt, l'enfant sauvage devient un loup-garou.",
-  "FlutisteDescription": "Ennemi à la fois des villageois et des loups-garous, le joueur de flûte se réveille à la fin de chaque nuit et choisit chaque fois deux nouveaux joueurs qu'il va charmer. Puis, il se rendort et le meneur de jeu réveille tous les joueurs charmés (anciens et nouveaux) pour qu'ils se reconnaissent. Les joueurs charmés continuent à jouer normalement (quel que soit leur rôle), mais si, à n'importe quel moment, le joueur de flûte est en vie et tous les autres joueurs vivants sont charmés, le joueur de flûte gagne immédiatement. Si le joueur de flûte est en couple, il devra charmer tout le monde sauf lui et son amoureux.",
-  "VampireDescription": "Ennemi à la fois des villageois et des loups-garous, le vampire se réveille au début de chaque nuit pour mordre un joueur. La victime se lèvera alors pour voir le visage du vampire. Dès lors, il ne pourra plus voter ou utiliser son pouvoir contre lui et devra tout faire pour que le vampire remporte la partie. (Si à un moment donné tous les joueurs encore présents dans la partie sont mordus, le clan des vampires gagne la partie. Si cette carte est infectée par les loups alors elle perd tous ses pouvoirs.",
-  "FantomeDescription": "Si le Fantôme est attaqué par les Loups-Garous il ne meurt pas.",
-  "VoleurDescription": "Si on décide de jouer avec le voleur, on doit ajouter deux cartes de plus au paquet de cartes qui seront distribuées en début de partie (soit 2 cartes de plus que le nombre de joueurs - le meneur de jeu n'étant pas un joueur). Au début de la première nuit (tour préliminaire), le meneur de jeu appelle le voleur. Il lui présente les deux cartes qui n'ont pas été distribuées. Le Voleur a le droit de choisir une de ces deux cartes ou de rester Voleur (auquel cas il a les pouvoirs d'un simple villageois). Si les deux cartes proposées sont deux loups-garous, le voleur est obligé d'en prendre une ; il n'est pas autorisé à rester simple villageois.",
-  "ComedienDescription": "Lorsque le comédien est présent dans la partie, le meneur de jeu choisit trois cartes supplémentaires (sauf loups-garous, chien-loup, enfant sauvage et voleur) qu'il place face révélée. Chaque nuit, le comédien choisit parmi ces trois cartes le rôle qu'il veut jouer jusqu'à la prochaine nuit. Lorsqu'un rôle est sélectionné, il est retiré de la partie afin que les autres joueurs puissent voir lequel a été sélectionné. Quand il ne peut plus choisir de rôle, il redevient simple villageois.",
-  "AvocatDescription": "Pendant la première Nuit, l'Avocat choisit deux joueurs autres que lui-même, qui deviennent ses clients. L'Avocat ne connait ni le rôle ni le camp de ses clients. La condition de victoire de l'Avocat est de faire en sorte qu'au moins un des deux clients remporte la partie vivant. (Ce qui signifie que la victoire de l'Avocat suppose la victoire d'un autre camp dans la partie). à la mort du dernier client, l'Avocat est aussitôt éliminé de la partie. A l'inverse, la mort de l'Avocat n'a aucune incidence sur ses clients. Les clients ne se connaissent pas entre eux, ne connaissent pas non plus l'Avocat et ne sont pas informés de leur statut de client. Toute tentative de mise en couple de l'Avocat échoue.",
-  "LepreuxDescription": "S'il est tué durant la nuit par les loups-garous, ces derniers ne se réveilleront pas le prochain tour.",
-  "BarbierDescription": "Peut (à tout moment de la journée) éliminer un joueur de son choix. Si le joueur éliminé est un Loup-garou, il survit à son acte. Sinon, il est immédiatement éliminé. Il ne peut utiliser son pouvoir qu'une fois lors de la partie.",
-  "BourreauDescription": "A tout moment de la journée, le bourreau peut choisir un joueur de son choix pour l'obliger à révéler son rôle et s'il est infecté par les loups ou non.",
-  "RevenantDescription": "S'il est tué pendant la nuit par n'importe quel rôle, il pourra participer au débat et au vote dans la journée et sera éliminé automatiquement à la tombée de la nuit.",
-  "JokerDescription": "A sa mort il peut offrir une seconde vie à la personne de son choix.",
-  "ChevalierDescription": "S'il est désigné comme cible par les loups-garous, son armure le protègera de leur première attaque.",
-  "AncienDescription": "Si l'ancien est la victime du vote du village, de la potion d'empoisonnement de la sorcière ou du tir du chasseur, il meurt et tous les villageois perdent leurs pouvoirs (le joueur de flûte, les loups-garous et le Vampire ne sont pas des villageois) Et si l'ancien est infecté par les loups, l'infection ne fonctionne pas.",
-  "DetectiveDescription": "Il peut choisir une fois par tour deux personnes, le Meneur de jeu lui dira alors si elles sont du même camp ou non.",
-  "TueurEnSerieDescription": "Une nuit sur deux, le tueur en série peut tuer une personne de son choix.",
-  "MaitreDuTempsDescription": "Si pendant le jour personne ne vote contre le maître du temps, le meneur doit le réveiller en premier durant la nuit. Il peut alors soit choisir de rallonger la nuit (deux nuits de suite où tous les rôles se réveilleront deux fois), ou bien de faire revenir le jour (le village tout entier se lèvera à nouveau et commencera les débats une deuxième fois).",
-  "MagicienDescription": "Une fois chaque deux tours, il peut intervertir la place de deux joueurs durant la nuit (y compris lui-même). Ex : si les loups-garous ou la sorcière attaquent le magicien alors qu'il a changé de place avec un autre joueur, c'est ce joueur qui meurt à sa place (même s'il s'agit d'un loup-garou).",
-  "PilleurDeTombeDescription": "Le Pilleur de tombe a le pouvoir de prendre la carte d'un des joueurs qui ont quitté la partie, le maître du jeu doit le réveiller chaque nuit afin de lui demander s'il veut choisir une carte ou non. Une fois que son choix est fait il continuera la partie avec cette carte.",
-  "ChamanDescription": "Le chaman doit impérativement utiliser son pouvoir la première nuit après l'infection. Son pouvoir consiste en une potion de guérison qui peut inverser l'effet d'infection des loups-garous. Autrement dit, si le joueur qui bénéficiera de cette potion est infecté, il redeviendra aussitôt un simple villageois et ne se réveillera plus avec les loups-garous (Toutefois il sera libre de dévoiler l'identité des loups-garous ou de les couvrir).",
-  "CorbeauDescription": "Il se réveille en dernier toutes les nuits et désigne au maître du jeu un joueur. Ce dernier aura automatiquement deux voix contre lui pour le prochain vote.",
-  "RenardDescription": "La nuit, à l'appel du meneur, le renard désigne trois joueurs voisins. Si un de ces joueurs est un loup-garou, le renard pourra recommencer à utiliser son pouvoir plus tard. Par contre, s'il ne désigne aucun loup-garou, il perdra son pouvoir définitivement en innocentant trois personnes. (Il n'est pas obligé de le faire chaque nuit).",
-  "BarbuDescription": "Il n'a pas de pouvoir spécial, mais sa barbe imposante lui confère un statut unique parmi les villageois.",
-  "JokerLoupDescription": "A sa mort, il peut offrir une seconde vie à la personne de son choix.",
-  "LancienDescription": "Si l'ancien est la victime du vote du village, de la potion d'empoisonnement de la sorcière ou du tir du chasseur, il meurt et tous les villageois perdent leurs pouvoirs (le joueur de flûte, les loups-garous et le Vampire ne sont pas des villageois) Et si l'ancien est infecté par les loups, l'infection ne fonctionne pas.",
-  "LePreuxDescription": "S'il est désigné comme cible par les loups-garous, son armure le protègera de leur première attaque.",
-  "LoupNormalDescription": "Ils se réveillent chaque nuit pour éliminer un villageois.",
-  "LoupMystiqueDescription": "II peut reprendre la carte d'un des joueurs qui ont quitté la partie (uniquement ceux tués par les loups-garous) et s'attribuer ses pouvoirs tout en restant un loup-garou.",
-  "LoupAlphaDescription": "Ce loup-garou peut une fois dans la partie choisir d'infecter la victime des loups-garous et la transformer en loup mais l'infecté garde les pouvoirs de sa carte initiale et conserve son rôle initial, la voyante ne pourra jamais savoir que c'est un loup-garou.",
-
-  "home": "Accueil",
-  "aboutUs": "À propos",
-  "portfolio": "Portfolio",
-  "P": "Portfolio",
-  "shop": "Boutique",
-
-  "size": "Taille",
-  "details": "plus de détails",
-  "portfolio_stats": {
-    "projects": "Projets réalisés",
-    "clients": "Clients satisfaits",
-    "experience": "Années d'expérience"
+  "Metadata": {
+    "default": {
+      "title": "Pixel Creative Agency — Agence créative en Algérie",
+      "description": "Agence créative en Algérie depuis 2018 — sites web, e-commerce, shooting photo, design graphique, panneaux publicitaires et production audio. Devis gratuit."
+    },
+    "home": {
+      "title": "Pixel Creative Agency — Agence créative en Algérie | Web, Photo, Design",
+      "description": "Agence créative à Batna depuis 2018 : développement web & e-commerce, shooting photo, design graphique, mariage, production audio, panneaux et impression. Devis gratuit sous 24 h."
+    },
+    "services": {
+      "title": "Nos services — photo, design, web, son, publicité",
+      "description": "Six studios spécialisés, un seul interlocuteur : Photo Lab, design graphique, mariage, développement web, production audio et publicité en Algérie."
+    },
+    "about": {
+      "title": "À propos — notre histoire depuis 2018",
+      "description": "Pixel Creative Agency, agence créative fondée en 2018 à Batna. Nos engagements, nos grandes étapes et notre studio."
+    },
+    "portfolio": {
+      "title": "Portfolio — nos réalisations en Algérie",
+      "description": "Identités visuelles, print, sites web, photo, vidéo et réseaux sociaux : découvrez plus de 200 réalisations de Pixel Creative Agency."
+    },
+    "portfolioCategory": {
+      "title": "{category} — Portfolio",
+      "description": "Réalisations {category} de Pixel Creative Agency, agence créative en Algérie."
+    },
+    "contact": {
+      "title": "Contact — devis gratuit sous 24 h",
+      "description": "Contactez Pixel Creative Agency par WhatsApp, téléphone ou e-mail. Devis gratuit et réponse sous 24 h, partout en Algérie."
+    },
+    "photo": {
+      "title": "Pixel Photo Lab — shooting photo & vidéo en Algérie",
+      "description": "Shooting professionnel, portrait, produit, spot publicitaire, réels et gestion des réseaux sociaux. Studio équipé à Batna, dès 4 000 DA."
+    },
+    "design": {
+      "title": "Design graphique & identité visuelle en Algérie",
+      "description": "Logo, charte graphique, packaging, menus, flyers et publications réseaux sociaux. Design graphique dès 1 000 DA."
+    },
+    "wedding": {
+      "title": "Photographe & vidéaste de mariage en Algérie",
+      "description": "Six packs mariage, de 2 à 6 photographes, montage FHD, 4K ou 6K, photobook, cadres et drone. Dès 29 000 DA."
+    },
+    "dev": {
+      "title": "Création de site web & e-commerce en Algérie",
+      "description": "Site vitrine, boutique e-commerce, application mobile, landing page, PWA et API. Devis gratuit sous 24 h, hébergement 1 an inclus."
+    },
+    "sound": {
+      "title": "Production audio — voix off, jingles, musique",
+      "description": "Effets sonores, voix off et production musicale originale pour vos spots, réels et podcasts. Dès 4 000 DA."
+    },
+    "ads": {
+      "title": "Publicité & impression — néons, enseignes, bâches",
+      "description": "Néons LED, enseignes, bâches PVC, roll-ups, habillage de vitrine et impressions de toutes tailles, partout en Algérie."
+    },
+    "shop": {
+      "title": "Boutique — posters, jeux & néons",
+      "description": "Posters sur toile, cadres, jeux de société et néons créés à l'atelier Pixel. Livraison en 2 jours, paiement à la livraison."
+    },
+    "shopCategory": {
+      "title": "{category} — Boutique",
+      "description": "{category} créés à l'atelier Pixel. Livraison partout en Algérie, paiement à la livraison."
+    },
+    "product": {
+      "title": "{name} — Boutique",
+      "description": "{name} par Pixel Creative Agency. Livraison partout en Algérie, paiement à la livraison."
+    },
+    "checkout": {
+      "title": "Panier & paiement",
+      "description": "Finalisez votre commande Pixel : livraison au bureau ou à domicile, paiement à la livraison."
+    },
+    "blog": {
+      "title": "Blog créatif — conseils & tendances",
+      "description": "Conseils, tendances et guides sur la photographie, le design et le web en Algérie."
+    },
+    "testimonials": {
+      "title": "Témoignages clients",
+      "description": "Ce que nos clients disent de Pixel Creative Agency : mariage, sites web, identité visuelle."
+    },
+    "city": {
+      "title": "Agence créative à {city} — web, photo, design",
+      "description": "Pixel Creative Agency intervient à {city} : site web, e-commerce, shooting photo, design graphique, panneaux publicitaires et production audio. Devis gratuit."
+    },
+    "terms": {
+      "title": "Conditions générales d'utilisation",
+      "description": "Les conditions générales d'utilisation du site Pixel Creative Agency."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Comment Pixel Creative Agency collecte, utilise et protège vos données personnelles."
+    },
+    "werewolf": {
+      "title": "Règles du jeu Loup-Garou",
+      "description": "Les règles des Loups-Garous de Thiercelieux et les rôles du jeu de cartes disponible dans la boutique Pixel."
+    },
+    "notFound": {
+      "title": "Page introuvable"
+    }
   },
-  "portfolio_filters": {
-    "title": "Filtres",
+  "Common": {
+    "skipToContent": "Aller au contenu",
+    "currency": "DA",
+    "from": "dès",
+    "onQuote": "Sur devis",
+    "freeQuote": "Devis gratuit",
+    "requestQuote": "Demander un devis",
+    "replyIn24h": "réponse sous 24 h",
+    "seeOffers": "Voir les offres",
+    "seeAllWork": "Tout le portfolio",
+    "home": "Accueil",
+    "breadcrumb": "Fil d'Ariane",
+    "new": "Nouveau",
+    "inStock": "En stock",
+    "comingSoon": "Bientôt disponible",
+    "close": "Fermer",
+    "starsLabel": "{count} étoiles sur 5"
+  },
+  "LocaleNames": {
+    "fr": "Français",
+    "en": "English",
+    "ar": "العربية"
+  },
+  "Nav": {
+    "main": "Navigation principale",
+    "home": "Accueil",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "shop": "Boutique",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact",
+    "cart": "{count, plural, =0 {Panier vide} one {Panier, # article} other {Panier, # articles}}",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "cta": "Devis gratuit",
+    "homeLabel": "Pixel Creative Agency — Accueil"
+  },
+  "TopBar": {
+    "location": "Batna, Algérie",
+    "hours": "Lun–Ven 09:00–18:00"
+  },
+  "Footer": {
+    "eyebrow": "Devis gratuit sous 24 h",
+    "title": "Un projet en tête ?",
+    "titleAccent": "Parlons-en.",
+    "lead": "Discutons ensemble de votre prochain succès — shooting, identité visuelle, site web ou enseigne lumineuse.",
+    "cta": "Demander un devis",
+    "about": "Agence créative à Batna depuis 2018. Photo, vidéo, design, web, son et publicité — pour toute l'Algérie.",
+    "studios": "Studios",
+    "agency": "Agence",
+    "shop": "Boutique",
+    "contact": "Contact",
+    "posters": "Posters",
+    "games": "Jeux",
+    "neons": "Néons",
+    "myCart": "Mon panier",
+    "testimonials": "Témoignages",
+    "cities": "On intervient aussi à",
+    "rights": "© {year} Pixel Creative Agency. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "werewolf": "Règles Loup-Garou",
+    "cookies": "Gérer les cookies",
+    "mascotAlt": "La mascotte astronaute de Pixel",
+    "hours": "Lun–Ven · 09:00–18:00"
+  },
+  "Cookie": {
+    "title": "Cookies",
+    "text": "Nous utilisons des cookies analytiques (Google Analytics) pour améliorer le site. Vous pouvez accepter ou refuser à tout moment.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "policy": "En savoir plus"
+  },
+  "Studios": {
+    "photo": {
+      "name": "Pixel Photo Lab",
+      "short": "Photo Lab",
+      "category": "Photo & vidéo",
+      "tagline": "L'art de l'image au service de votre vision : portraits, shootings produit, spots vidéo et gestion des réseaux sociaux."
+    },
+    "design": {
+      "name": "Pixel Creative",
+      "short": "Creative",
+      "category": "Design graphique",
+      "tagline": "Transformez vos idées en visuels percutants : logos, identités visuelles, packaging et contenus pour les réseaux."
+    },
+    "wedding": {
+      "name": "Pixel Weddings",
+      "short": "Weddings",
+      "category": "Mariage",
+      "tagline": "Chaque instant mérite d'être immortalisé : couverture photo et vidéo, photobook, cadres et prises de vue drone."
+    },
+    "dev": {
+      "name": "Pixel Development",
+      "short": "Development",
+      "category": "Web & mobile",
+      "tagline": "Votre partenaire numérique : sites vitrines, boutiques e-commerce, applications mobiles et API sur mesure."
+    },
+    "sound": {
+      "name": "Pixel Sounds",
+      "short": "Sounds",
+      "category": "Audio",
+      "tagline": "L'art du son à votre portée : effets sonores, voix off, jingles et production musicale originale."
+    },
+    "ads": {
+      "name": "Pixel Advertisement",
+      "short": "Advertisement",
+      "category": "Publicité & impression",
+      "tagline": "Donnez vie à votre marque : panneaux, enseignes, néons LED, bâches, roll-ups et habillage de vitrine."
+    }
+  },
+  "Timeline": {
+    "ongoing": "en cours",
+    "y2018": { "title": "Fondation", "text": "Pixel Creative Agency ouvre ses portes à Batna." },
+    "y2021": { "title": "Studio photo & vidéo", "text": "Un studio équipé pour les shootings produit, portraits et productions vidéo." },
+    "y2023": { "title": "Boutique en ligne", "text": "Posters, jeux et néons à commander directement sur le site." },
+    "y2024": { "title": "Expansion régionale", "text": "Partenariats locaux et livraison nationale." },
+    "y2025": { "title": "Application mobile", "text": "Suivre vos commandes et collaborer en temps réel avec l'équipe." }
+  },
+  "Reviews": {
+    "amel": {
+      "name": "Amel B.",
+      "role": "Mariée · juillet 2023",
+      "text": "Les photos de notre mariage sont magnifiques. L'équipe a su capturer chaque instant précieux avec une discrétion et une élégance incroyables."
+    },
+    "mohamed": {
+      "name": "Mohamed R.",
+      "role": "Propriétaire e-commerce",
+      "text": "Une équipe très professionnelle. Ils ont créé mon site de A à Z et le résultat est au-delà de mes attentes. Fortement recommandés !"
+    },
+    "yassine": {
+      "name": "Yassine T.",
+      "role": "Directeur de communication",
+      "text": "Pixel nous accompagne sur notre identité visuelle depuis 2 ans. Leur réactivité et leur créativité font toute la différence."
+    }
+  },
+  "Home": {
+    "hero": {
+      "eyebrow": "Agence créative · Batna · Depuis 2018",
+      "title": "La créativité n'a pas de",
+      "titleAccent": "limites.",
+      "lead": "Photo, vidéo, design graphique, sites web, son et impression : six studios réunis sous un même toit pour donner vie à vos idées, partout en Algérie.",
+      "ctaPrimary": "Devis gratuit",
+      "ctaSecondary": "Voir le portfolio",
+      "proof1": "Réponse sous 24 h",
+      "proof2": "Studio équipé à Batna",
+      "proof3": "Livraison dans toute l'Algérie",
+      "imageAlt": "Shooting artistique en robe rouge réalisé au studio Pixel",
+      "tagTitle": "Shooting artistique"
+    },
+    "stats": {
+      "founded": "Année de création à Batna",
+      "studios": "Studios spécialisés, une seule équipe",
+      "projects": "Projets publiés au portfolio",
+      "rating": "Note moyenne de nos clients"
+    },
+    "studios": {
+      "eyebrow": "Nos studios",
+      "title": "Six studios. Une seule équipe.",
+      "lead": "De l'idée à l'objet livré, chaque projet passe entre les mains de spécialistes — et reste suivi par un seul interlocuteur."
+    },
+    "work": {
+      "eyebrow": "Notre travail en action",
+      "title": "Des projets qui se voient."
+    },
+    "process": {
+      "eyebrow": "Méthode",
+      "title": "Quatre étapes, zéro surprise.",
+      "listen": { "title": "Écoute", "text": "Vous nous parlez de votre projet, de vos délais et de votre budget. Devis gratuit sous 24 h." },
+      "concept": { "title": "Concept", "text": "Moodboard, maquettes, direction artistique : on valide ensemble avant de produire." },
+      "production": { "title": "Production", "text": "Shooting, design, développement ou impression — tout se fait dans nos studios de Batna." },
+      "delivery": { "title": "Livraison", "text": "Fichiers HD, site en ligne ou supports imprimés livrés partout en Algérie." }
+    },
+    "story": {
+      "eyebrow": "Notre histoire",
+      "title": "Un studio à Batna, une équipe pour toute l'Algérie.",
+      "text": "Fondée en 2018 par une équipe de passionnés, Pixel allie expertise technique et sens aigu de l'esthétique pour créer des visuels qui se démarquent — et qui laissent une empreinte durable.",
+      "cta": "Découvrir l'agence",
+      "imageAlt": "Bureau de design avec tablette graphique et nuancier"
+    },
+    "shop": {
+      "eyebrow": "La boutique",
+      "title": "Posters, jeux & néons.",
+      "lead": "Conçus et imprimés dans notre atelier. Paiement à la livraison.",
+      "cta": "Visiter la boutique"
+    },
+    "testimonials": {
+      "eyebrow": "Ils en parlent",
+      "title": "La confiance se mérite.",
+      "cta": "Tous les avis"
+    },
+    "faq": {
+      "eyebrow": "Questions fréquentes",
+      "title": "Vous vous demandez…",
+      "lead": "Une autre question ? Écrivez-nous sur WhatsApp, on répond vite.",
+      "price": {
+        "q": "Quel est le prix d'un site web en Algérie ?",
+        "a": "Nos forfaits couvrent les landing pages, sites vitrines et boutiques e-commerce, avec des prix adaptés au marché algérien. Contactez-nous pour un devis gratuit."
+      },
+      "photo": {
+        "q": "Faites-vous du shooting photo professionnel ?",
+        "a": "Oui : produits, portraits, événements d'entreprise, mariages et shootings artistiques. Studio équipé à Batna, déplacements dans toute l'Algérie."
+      },
+      "ads": {
+        "q": "Proposez-vous des panneaux publicitaires et impressions ?",
+        "a": "Oui : panneaux, enseignes lumineuses, bâches, roll-ups, cadres et impressions grand format, partout en Algérie."
+      },
+      "ecommerce": {
+        "q": "Créez-vous des sites e-commerce ?",
+        "a": "Oui : paiement en ligne, gestion des commandes, optimisation SEO et interface responsive. Devis gratuit sous 24 h."
+      },
+      "outside": {
+        "q": "Êtes-vous disponibles en dehors de Batna ?",
+        "a": "Basés à Batna, nous intervenons dans toute l'Algérie pour le web, le design, la photo et la publicité."
+      }
+    }
+  },
+  "Work": {
+    "daryasmine": "Identité visuelle",
+    "fashionweek": "Shooting",
+    "izem": "Produit",
+    "broker": "Site web",
+    "wedding": "Reportage mariage",
+    "fashionweekAlt": "Affiche Fashion Week 2024, The Dance of the Volcano",
+    "izemAlt": "Shooting produit pour la boisson Izem Energy",
+    "brokerAlt": "Site web Broker sur plusieurs écrans",
+    "weddingAlt": "Marié posant devant sa voiture le jour du mariage",
+    "daryasmineAlt": "Identité visuelle Dar Yasmine"
+  },
+  "Services": {
+    "title": "Tout ce qu'il faut pour être",
+    "titleAccent": "vu.",
+    "lead": "Six studios spécialisés, un seul interlocuteur. Choisissez un service ou combinez-les — on s'occupe de la cohérence.",
+    "seePacks": "Voir les packs",
+    "hostingIncluded": "hébergement 1 an inclus",
+    "photo": {
+      "lead": "Des images percutantes qui captivent votre audience et renforcent votre message de marque — en studio à Batna ou sur site.",
+      "features": ["Portrait & shooting artistique", "Shooting produit / commercial", "Spot publicitaire, clip, réels", "Gestion des réseaux sociaux"]
+    },
+    "design": {
+      "lead": "Nos designers donnent vie à vos concepts : une identité cohérente, du logo à la vitrine.",
+      "features": ["Logo & identité visuelle", "Packaging & étiquettes", "Flyers, menus, cartes de visite", "Pack réseaux sociaux"]
+    },
+    "wedding": {
+      "lead": "Six formules, de la couverture essentielle au court métrage 6K — avec photobook, cadres et drone.",
+      "features": ["2 à 6 photographes", "Montage vidéo FHD, 4K ou 6K", "Préparation homme & femme", "Photobook & cadres 60×40"]
+    },
+    "dev": {
+      "lead": "Des sites et applications rapides, responsives et pensés pour le marché algérien.",
+      "features": ["Site vitrine & landing page", "Boutique e-commerce", "Application mobile & PWA", "API & backend"]
+    },
+    "sound": {
+      "lead": "Voix, effets et musique sur mesure pour donner une identité sonore à vos productions.",
+      "features": ["Effets sonores sur mesure", "Voix off masculine ou féminine", "Composition originale", "Mixage & mastering inclus"]
+    },
+    "ads": {
+      "lead": "Panneaux, supports événementiels et impressions aux résultats exceptionnels.",
+      "features": ["Néon LED & boîtier lumineux", "Bâche PVC, roll-up, drapeaux", "Alucobond, dilphane, MDF", "Flocage textile & sacs"]
+    }
+  },
+  "About": {
+    "eyebrow": "Depuis 2018",
+    "label": "Notre histoire",
+    "title": "Chaque image doit évoquer une émotion et laisser une",
+    "titleAccent": "empreinte durable.",
+    "galleryMain": "Tournage d'un événement sous lumière rouge",
+    "galleryHex": "Portrait d'enfant en studio sur fond jaune",
+    "gallerySmall": "Cortège de mariage avec fumigènes rouges",
+    "introTitle": "Une agence née à Batna, portée par une équipe de passionnés.",
+    "introP1": "Fondée en 2018, Pixel a commencé derrière l'objectif — à capturer des moments uniques et à raconter des histoires en images. Aujourd'hui, six studios travaillent sous le même toit : photo et vidéo, design graphique, mariage, développement web, son et publicité.",
+    "introP2": "Que vous soyez une entreprise qui veut promouvoir sa marque, un couple qui célèbre un moment unique ou un artiste qui veut montrer son travail, notre méthode reste la même : comprendre vos besoins, puis allier expertise technique et sens aigu de l'esthétique pour créer des visuels qui se démarquent.",
+    "values": {
+      "eyebrow": "Ce qui nous guide",
+      "title": "Trois engagements.",
+      "quality": { "title": "Qualité d'abord", "text": "L'excellence dans chaque détail que nous livrons — du fichier HD au néon posé." },
+      "support": { "title": "Support 24/7", "text": "Toujours là quand vous avez le plus besoin de nous, avant comme après la livraison." },
+      "proximity": { "title": "Proximité", "text": "Stratégiquement situés à Batna pour mieux vous servir, et présents dans toute l'Algérie." }
+    },
+    "timeline": {
+      "eyebrow": "Les grandes étapes",
+      "title": "De Batna à toute l'Algérie."
+    },
+    "tools": "Nos outils",
+    "visit": {
+      "eyebrow": "Notre siège créatif",
+      "title": "Visitez notre studio.",
+      "text": "Venez voir où la magie se produit : un espace conçu pour inspirer l'innovation et la collaboration.",
+      "city": "Ville",
+      "cityValue": "Batna, Algérie",
+      "hours": "Horaires",
+      "hoursValue": "Lundi–vendredi · 09:00–18:00",
+      "phone": "Téléphone",
+      "directions": "Itinéraire",
+      "mapLabel": "Emplacement du studio Pixel à Batna"
+    }
+  },
+  "Portfolio": {
+    "eyebrow": "Notre travail en action",
+    "title": "{count} projets.",
+    "titleAccent": "Zéro copier-coller.",
+    "filterLabel": "Filtrer par catégorie",
     "all": "Tous les projets",
-    "visual_identity": "Identité visuelle",
-    "packaging": "Packaging",
-    "print": "Print",
-    "digital": "Digital",
-    "photo": "Photo",
-    "conception": "Conception",
-    "video": "Vidéo",
-    "social": "Réseaux sociaux"
+    "count": "{count, plural, one {# projet} other {# projets}}",
+    "search": "Rechercher un projet…",
+    "searchLabel": "Rechercher un projet",
+    "empty": "Aucun projet ne correspond à votre recherche.",
+    "loadMore": "Charger plus de projets",
+    "visitSite": "Voir le site",
+    "play": "Lire la vidéo",
+    "open": "Agrandir",
+    "categories": {
+      "conception": "Conception",
+      "print": "Print",
+      "digital": "Digital",
+      "photo": "Photo",
+      "video": "Vidéo",
+      "social": "Réseaux sociaux"
+    },
+    "subs": {
+      "logo": "Logo & identité",
+      "businessCard": "Carte de visite",
+      "flyer": "Flyer & dépliant",
+      "poster": "Affiche",
+      "banner": "Bâche PVC",
+      "certificate": "Certificat",
+      "fridge": "Habillage frigo",
+      "mural": "Habillage mural",
+      "menu": "Menu",
+      "packaging": "Packaging",
+      "rollup": "Roll-up",
+      "stickers": "Stickers",
+      "canvas": "Tableau",
+      "social": "Réseaux sociaux",
+      "studio": "Shooting studio",
+      "product": "Photo produit",
+      "food": "Photo culinaire",
+      "wedding": "Mariage",
+      "web": "Site web",
+      "reels": "Réels & clips",
+      "trailer": "Bande-annonce",
+      "cinema": "Cinématographie",
+      "ad": "Spot publicitaire"
+    }
   },
-  "mega_menu": {
-    "conception": {
-      "title": "Conception",
-      "desc": "Logos, identités visuelles et univers de marque mémorables.",
-      "count": "24 Projets"
+  "Contact": {
+    "title": "Parlons de votre",
+    "titleAccent": "projet.",
+    "lead": "Un devis, une question, une idée encore floue ? Écrivez-nous : devis gratuit et réponse sous 24 h.",
+    "studioLegend": "Quel studio vous intéresse ?",
+    "other": "Autre / je ne sais pas",
+    "fields": {
+      "name": "Nom",
+      "namePlaceholder": "Entrez votre nom",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "05 / 06 / 07 XX XX XX XX",
+      "email": "E-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre projet ou de votre demande",
+      "messageHelp": "Entre 10 et 500 caractères."
     },
-    "print": {
-      "title": "Print",
-      "desc": "Supports imprimés impactants et designs prêts à marquer.",
-      "count": "18 Projets"
+    "required": "obligatoire",
+    "privacyNote": "Vos données servent uniquement à vous répondre.",
+    "privacyLink": "Politique de confidentialité",
+    "submit": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "success": "Message envoyé avec succès ! Nous vous répondons sous 24 h.",
+    "error": "Échec de l'envoi du message. Veuillez réessayer ou nous écrire sur WhatsApp.",
+    "errors": {
+      "nameMin": "Le nom doit comporter au moins 2 caractères.",
+      "email": "Format de l'e-mail invalide.",
+      "phone": "Numéro de téléphone algérien invalide.",
+      "messageMin": "Le message doit comporter au moins 10 caractères.",
+      "messageMax": "Le message ne doit pas dépasser 500 caractères."
     },
-    "digital": {
-      "title": "Digital",
-      "desc": "Solutions digitales modernes et expériences engageantes.",
-      "count": "21 Projets"
+    "aside": {
+      "fastest": "Le plus rapide · WhatsApp",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "studio": "Studio",
+      "days": "Lundi – vendredi",
+      "map": "Voir le plan d'accès"
+    },
+    "faq": {
+      "title": "Avant de nous écrire.",
+      "quote": {
+        "q": "Puis-je demander un devis personnalisé ?",
+        "a": "Certainement. Décrivez vos besoins et les détails du projet, nous vous envoyons une estimation sur mesure."
+      },
+      "duration": {
+        "q": "Combien de temps dure un projet typique ?",
+        "a": "De quelques semaines à quelques mois selon la complexité. Un délai précis vous est donné dès la première consultation."
+      },
+      "print": {
+        "q": "Pouvez-vous imprimer mes photos ?",
+        "a": "Oui, avec des options d'impression haute qualité : on vous aide à choisir les formats et finitions qui les mettent en valeur."
+      }
+    }
+  },
+  "Offer": {
+    "from": "dès",
+    "requestQuote": "Demander un devis",
+    "mostComplete": "Le plus complet"
+  },
+  "Photo": {
+    "eyebrow": "Pixel Photo Lab · Photo & vidéo",
+    "title": "L'art de l'image au service de votre",
+    "titleAccent": "vision.",
+    "lead": "Portraits, shootings produit, spots vidéo et contenus pour les réseaux — dans notre studio équipé à Batna ou directement chez vous.",
+    "ctaPrimary": "Réserver un shooting",
+    "ctaSecondary": "Voir les tarifs",
+    "heroMainAlt": "Affiche Fashion Week 2024 shootée au studio",
+    "heroHexAlt": "Portrait avec bijoux traditionnels",
+    "heroSmallAlt": "Shooting beauté rouge à lèvres",
+    "offers": {
+      "eyebrow": "Offres & tarifs",
+      "title": "Trois façons de travailler ensemble.",
+      "lead": "Prix de départ en dinars. Le devis final dépend du lieu, de la durée et du nombre de visuels."
+    },
+    "photo": {
+      "title": "Photo",
+      "text": "Nous sommes là pour assurer vos shootings professionnels, en studio ou en extérieur.",
+      "features": ["Portrait", "Shooting professionnel", "Shooting artistique", "Shooting produit / commercial", "Traitement et restauration de photos"]
     },
     "video": {
       "title": "Vidéo",
-      "desc": "Contenus vidéo créatifs qui racontent votre histoire.",
-      "count": "15 Projets"
+      "text": "Des images percutantes qui captivent votre audience et renforcent votre message de marque.",
+      "features": ["Spot publicitaire", "Clip vidéo / teaser", "Court métrage & documentaire", "Réels & montage vidéo", "Interview / podcast"]
     },
     "social": {
-      "title": "Réseaux sociaux",
-      "desc": "Visuels et contenus qui boostent votre présence en ligne.",
-      "count": "32 Projets"
+      "title": "Pack réseaux sociaux",
+      "text": "Une présence forte et engageante sur les plateformes pour accroître votre visibilité.",
+      "features": ["Création de contenu (photos & vidéos)", "Gestion Facebook, Instagram, TikTok", "Stratégie éditoriale mensuelle", "Planification et publication", "Rapport de performance mensuel"],
+      "cta": "Lancer mon pack"
     },
-    "view_all": "Voir les projets",
-    "cta_title": "Un projet en tête ?",
-    "cta_button": "Nous contacter"
+    "gallery": {
+      "title": "Sortis du studio.",
+      "tags": ["Portrait", "Produit", "Food", "Mode", "Enfants"]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Bon à savoir.",
+      "types": {
+        "q": "Quels types de photographie proposez-vous ?",
+        "a": "Mariage, portraits, événements, produits et mode — en studio comme en extérieur."
+      },
+      "video": {
+        "q": "Comment se déroule un tournage vidéo ?",
+        "a": "Pré-production, tournage, montage, révisions selon vos retours, puis livraison finale."
+      },
+      "print": {
+        "q": "Pouvez-vous imprimer mes photos ?",
+        "a": "Oui : tirages, cadres, tableaux et photobooks, avec conseils sur les formats et finitions."
+      }
+    }
   },
-  "portfolio_cta": {
-    "title": "Vous avez un projet ?",
-    "subtitle": "Discutons ensemble de votre prochain succès.",
-    "button": "Nous contacter"
+  "Design": {
+    "eyebrow": "Pixel Creative · Design graphique",
+    "title": "Transformez vos idées en visuels",
+    "titleAccent": "percutants.",
+    "lead": "Logo, charte, packaging, menus, réseaux sociaux : une identité cohérente sur chaque support.",
+    "cta": "Lancer mon identité",
+    "deliverables": {
+      "eyebrow": "Ce qu'on conçoit",
+      "title": "Onze supports, une seule signature.",
+      "items": ["Logo & identité visuelle", "Packaging", "Publications réseaux sociaux", "Cartes de visite, flyers, dépliants", "Invitations, cartes médicales, calendriers", "Menus", "Photo books", "Stickers", "Bannières & drapeaux", "Affiches, tableaux, cadres", "Habillage de vitrines"]
+    },
+    "pricing": {
+      "eyebrow": "Tarifs",
+      "title": "Deux formules, zéro surprise.",
+      "design": {
+        "title": "Design graphique",
+        "text": "Notre équipe de designers est prête à donner vie à vos concepts — un support ou une identité complète."
+      },
+      "social": {
+        "title": "Pack réseaux sociaux",
+        "text": "Capter l'attention et engager votre audience avec des publications régulières à votre image.",
+        "cta": "Choisir ce pack"
+      }
+    },
+    "work": {
+      "eyebrow": "Réalisations",
+      "title": "Des marques qui ont pris forme.",
+      "identity": "Identité",
+      "packaging": "Packaging",
+      "cards": "Cartes de visite",
+      "social": "Social",
+      "poster": "Affiche"
+    }
   },
-  "portfolio_search": "Rechercher un projet...",
-  "addToCart": "Ajouter au Panier",
-  "our_services": "Nos Services",
-  "our_services_description": "Découvrez notre large gamme de services adaptés à vos besoins.",
-  "photo_video": "Pixel Photo Lab",
-  "photo_video_text": "L'art de l'image au service de votre vision.",
-  "infographie": "Pixel Creative",
-  "infographie_text": "Transformez vos idées en visuels percutants.",
-  "Wedding": "Pixel Weddings",
-  "weeding_text": "Capturez vos moments précieux car chaque instant mérite d'être immortalisé.",
-  "development": "Pixel Development",
-  "development_text": "Votre partenaire en développement numérique.",
-  "audio": "Pixel Sounds",
-  "audio_text": "L'art du son à votre portée avec votre partenaire sonore.",
-  "publicite": "Pixel Advertisement",
-  "publicite_text": "Donnez vie à votre marque et boostez votre visibilité pour propulser votre marque.",
-  "ready_to_start": "Prêt à démarrer votre projet",
-  "contact_us_today": "Contactez-nous aujourd'hui et donnons vie à votre vision",
-
-  "heroTitle": "Explorez les Possibilités de la Création de Contenu avec",
-  "heroDescription": "La créativité n'a pas de limites dans notre agence. Nous nous concentrons sur l'offre de services exceptionnels en design, photographie, décoration, réalisation de films et développement web.",
-  "shopButton": "Boutique",
-  "servicesButton": "Services",
-  "companyLogosTagline": "Quelques-uns des clients avec lesquels nous avons eu le plaisir de collaborer",
-  "contactTitle": "Contactez-nous",
-  "startingFrom": "À partir de",
-  "contactText": "Nous répondrons dès que possible",
-  "askQuestion": "Poser votre Question",
-  "nameLabel": "Nom",
-  "nameRequired": "Le nom est requis",
-  "enterName": "Entrez le nom",
-  "emailLabel": "E-mail",
-  "emailRequired": "L'email est requis",
-  "invalidEmail": "Format de l'email invalide",
-  "enterEmail": "Entrez l'email",
-  "mobileNumberLabel": "Numéro de téléphone",
-  "mobileNumberRequired": "Le numéro de téléphone est requis",
-  "invalidMobileNumber": "Format du numéro de téléphone invalide",
-  "enterMobileNumber": "Entrez le numéro de téléphone",
-  "messageLabel": "Message",
-  "messageRequired": "Le message est requis",
-  "messageMinLength": "Le message doit comporter au moins 10 caractères",
-  "messageMaxLength": "Le message ne doit pas dépasser 500 caractères",
-  "messageHelp": "Parlez-nous de votre projet ou de votre demande",
-  "enterMessage": "Entrez votre message",
-  "submitButton": "Soumettre",
-  "messageSent": "Message envoyé avec succès!",
-  "contactSuccess": "Message envoyé avec succès!",
-  "contactError": "Échec de l'envoi du message. Veuillez réessayer.",
-  "sending": "Envoi en cours...",
-  "formSubmitting": "Le formulaire est en cours d'envoi",
-  "formReady": "Le formulaire est prêt à être envoyé",
-  "nameMinLength": "Le nom doit comporter au moins 2 caractères",
-  "ourLocation": "Notre Localisation",
-
-  "submitOrder": "Soumettre la commande",
-  "orderCompleted": "Commande terminée avec succès",
-  "thankYou": "Merci!",
-  "goBackToShop": "Retourner à la boutique",
-  "checkout": "Caisse",
-  "wilayaLabel": "Wilaya",
-  "wilayaRequired": "La wilaya est requise",
-  "selectWilaya": "Sélectionnez une wilaya",
-  "shippingMethodLabel": "Méthode de livraison",
-  "shippingMethodRequired": "La méthode de livraison est requise",
-  "selectShippingMethod": "Sélectionnez une méthode de livraison",
-  "desk": "Bureau",
-  "homeCheckout": "Domicile",
-  "loading": "Chargement...",
-  "cart": "Panier",
-  "subtotal": "Sous-total",
-  "delivery": "Livraison",
-  "total": "Total",
-  "qty": "Quantité",
-  "remove": "Supprimer",
-  "currency": "DA",
-  "shoppingCart": "Panier",
-  "closePanel": "Fermer le panneau",
-  "shippingTaxes": "Livraison et taxes calculées lors du paiement.",
-  "continueShopping": "Continuer vos achats",
-  "or": "ou",
-
-  "portfolioP": "Portfolio",
-  "visualIdentity": "Identité Visuelle",
-  "graphicDesign": "Conception",
-  "video": "Vidéo",
-  "packaging": "Emballage",
-  "photo": "Photo",
-  "apps": "Site Web",
-  "printing": "Impression",
-
-  "WeddingP": "Mariage",
-  "logo": "Logo",
-  "visitCards": "Cartes de Visite",
-  "sac": "Sac",
-  "habillage": "Habillage",
-  "tshirt": "T-shirt",
-  "flyer": "Flyer",
-  "books": "Livres",
-  "menu": "Menu",
-  "socialMediaPosts": "Publications sur les réseaux sociaux",
-  "voixOff": "Voix Off",
-  "reel": "Reel",
-  "cinematographie": "Cinématographie",
-  "spotPublicitaire": "Spot Publicitaire",
-  "shooting": "Shooting",
-  "product": "Produit",
-  "etiquette": "Étiquette",
-  "emballage": "Emballage",
-  "webApp": "Application Web",
-  "appMobile": "Application Mobile",
-  "gestionaire": "Gestionnaire",
-  "ecommerce": "E-commerce",
-  "blogs": "Blogs",
-  "portfolios": "Portfolios",
-  "Ps": "Ps",
-  "tableaux": "Tableaux",
-  "wall": "Mur",
-  "certificatInvitation": "Certificat ",
-  "vitrine": "Vitrine",
-  "frigo": "Frigo",
-
-  "pricing": {
-    "audio": [
-      {
-        "id": "0",
-        "title": "Effet Sonore",
-        "description": "Spécialisé dans la création d'effets sonores de haute qualité qui ajoutent une dimension immersive à vos productions audiovisuelles.",
-        "price": "4000",
-        "features": []
+  "Wedding": {
+    "eyebrow": "Pixel Weddings · Photo & film de mariage",
+    "title": "Chaque instant mérite d'être immortalisé.",
+    "lead": "Préparatifs, cortège, soirée : une équipe de 2 à 6 photographes et vidéastes, du film FHD au court métrage 6K.",
+    "heroAlt": "Couple de mariés front contre front",
+    "ctaPrimary": "Comparer les packs",
+    "ctaSecondary": "Vérifier ma date",
+    "packs": {
+      "eyebrow": "Six packs",
+      "title": "Choisissez votre fleur.",
+      "tablist": "Packs mariage",
+      "compare": "Comparatif détaillé",
+      "included": "Inclus",
+      "book": "Réserver ce pack",
+      "names": {
+        "rose": "Rose",
+        "jasmin": "Jasmin",
+        "iris": "Iris",
+        "lilas": "Lilas",
+        "tulipe": "Tulipe",
+        "orchidee": "Orchidée"
       },
-      {
-        "id": "1",
-        "title": "Voix Off",
-        "description": "Notre équipe de voix talentueuses est prête à transmettre votre message avec clarté et impact.",
-        "price": "6000",
-        "features": []
-      },
-      {
-        "id": "2",
-        "title": "Production Musicale Originale",
-        "description": "Bénéficiez d'une approche créative et collaborative, visant à réaliser de la musique personnalisée, adaptée à vos besoins spécifiques.",
-        "price": "10000",
-        "features": []
+      "badges": {
+        "rose": "L'essentiel",
+        "jasmin": "Avec photobook",
+        "iris": "Studio + 4K",
+        "lilas": "Avec drone",
+        "tulipe": "Grande équipe",
+        "orchidee": "Le grand film"
       }
-    ],
-    "photo": [
-      {
-        "id": "0",
-        "title": "Photo",
-        "description": "Spécialisés dans la photographie, nous sommes là pour assurer vos shootings professionnels.",
-        "price": "4000",
-        "features": [
-          "Portrait",
-          "Shooting professionnel",
-          "Shooting artistique",
-          "Shooting produit / commercial",
-          "Traitement et restauration de photos"
-        ]
-      },
-      {
-        "id": "1",
-        "title": "Vidéo",
-        "description": "Nous créons des images percutantes qui captivent votre audience et renforcent votre message de marque.",
-        "price": "30000",
-        "features": [
-          "Spot Publicitaire",
-          "Clip vidéo / teaser",
-          "Court métrage",
-          "Documentaire",
-          "Réels",
-          "Montage vidéo",
-          "Interview / podcast"
-        ]
-      },
-      {
-        "id": "2",
-        "title": "Pack Gestion des Réseaux Sociaux",
-        "description": "Nous vous aiderons à établir une présence forte et engageante sur les plateformes numériques.",
-        "price": "40000",
-        "features": [
-          "Creation de contenu",
-          "Gestion de la page",
-          "Stratégie marketing"
-        ]
-      }
-    ],
-    "wedding": [
-      {
-        "id": "0",
-        "title": "Pack Rose",
-
-        "price": "29000",
-        "features": [
-          "2 Photographes",
-          "Couverture photo et vidéo",
-          "Montage vidéo (FHD)",
-          "USB 16Go"
-        ]
-      },
-      {
-        "id": "1",
-        "title": "Pack Jasmin",
-
-        "price": "39000",
-        "features": [
-          "4 Photographes",
-          "Couverture photo et vidéo",
-          "Montage vidéo (FHD)",
-          "Traitement photos",
-          "Photobook",
-          "USB 16Go"
-        ]
-      },
-      {
-        "id": "2",
-        "title": "Pack Iris",
-
-        "price": "48000",
-        "features": [
-          "4 Photographes",
-          "Couverture photo et vidéo",
-          "Préparation (Homme et Femme)",
-          "Shooting studio",
-          "Montage vidéo (4K)",
-          "Traitement Photos",
-          "Photobook",
-          "2 Cadres (60x40cm)",
-          "USB 32Go"
-        ]
-      },
-      {
-        "id": "3",
-        "title": "Pack Lilas",
-
-        "price": "68000",
-        "features": [
-          "4 Photographes",
-          "Couverture photo et vidéo",
-          "Préparation (Homme et Femme)",
-          "Montage vidéo (4K)",
-          "Traitement Photos",
-          "Photobook",
-          "2 Cadres (60x40cm)",
-          "USB 32Go / drone"
-        ]
-      },
-      {
-        "id": "4",
-        "title": "Pack Tulipe",
-
-        "price": "99000",
-        "features": [
-          "6 Photographes",
-          "Couverture photo et vidéo",
-          "Préparation (Homme et Femme)",
-          "Shooting studio",
-          "Montage vidéo (4K)",
-          "Traitement Photos",
-          "Photobook",
-          "3 Cadres (60x40cm)",
-          "USB 64Go / drone"
-        ]
-      },
-      {
-        "id": "5",
-        "title": "Pack Orchidée",
-
-        "price": "130000",
-        "features": [
-          "6 Photographes",
-          "Couverture photo et vidéo",
-          "Préparation (Homme et Femme)",
-          "Shooting studio",
-          "Montage vidéo (6K)",
-          "Court métrage (6K)",
-          "Traitement Photos",
-          "Photobook",
-          "4 Cadres (60x40cm)",
-          "USB 64Go / drone"
-        ]
-      }
-    ],
-    "pub": [
-      {
-        "id": "0",
+    },
+    "rows": {
+      "photographers": "Photographes",
+      "coverage": "Couverture photo & vidéo",
+      "editing": "Montage vidéo",
+      "prep": "Préparation homme & femme",
+      "studio": "Shooting studio",
+      "retouch": "Traitement des photos",
+      "photobook": "Photobook",
+      "frames": "Cadres 60×40 cm",
+      "shortFilm": "Court métrage 6K",
+      "drone": "Drone",
+      "usb": "Clé USB"
+    },
+    "features": {
+      "photographers": "{count} photographes",
+      "coverage": "Couverture photo et vidéo",
+      "editing": "Montage vidéo {quality}",
+      "prep": "Préparation (homme et femme)",
+      "studio": "Shooting studio",
+      "retouch": "Traitement des photos",
+      "photobook": "Photobook",
+      "frames": "{count, plural, one {# cadre 60×40 cm} other {# cadres 60×40 cm}}",
+      "shortFilm": "Court métrage 6K",
+      "drone": "Prises de vue drone",
+      "usb": "Clé USB {size} Go"
+    },
+    "yes": "Inclus",
+    "no": "Non inclus",
+    "gb": "{size} Go",
+    "details": "Des détails qui racontent tout.",
+    "alts": {
+      "bouquet": "Bouquet de tulipes de la mariée",
+      "shoes": "Souliers, parfum et bijoux de la mariée",
+      "procession": "Cortège sous les fumigènes",
+      "hands": "Mains de la mariée et bague",
+      "groom": "Le marié devant la voiture"
+    }
+  },
+  "Dev": {
+    "eyebrow": "Pixel Development · Web & mobile",
+    "title": "Des sites qui",
+    "titleAccent": "vendent",
+    "titleEnd": ", pas juste qui existent.",
+    "lead": "Sites vitrines, boutiques e-commerce, applications mobiles et API : conçus, développés et hébergés par la même équipe.",
+    "ctaPrimary": "Devis sous 24 h",
+    "ctaSecondary": "Les offres",
+    "browser": "Projet client · Beleghni",
+    "heroAlt": "Site Beleghni affiché sur ordinateur, tablette et mobile",
+    "offers": {
+      "eyebrow": "Offres · sur devis",
+      "title": "Six formats, selon votre ambition.",
+      "lead": "Chaque projet est chiffré sur mesure. Envoyez-nous votre besoin, le devis arrive sous 24 h.",
+      "support": "Support {months} mois"
+    },
+    "vitrine": {
+      "title": "Site web vitrine",
+      "text": "Présentez votre entreprise, vos services et votre portfolio avec un design moderne et responsive.",
+      "features": ["5 à 10 pages selon vos besoins", "Tableau de bord d'administration", "Hébergement + domaine inclus 1 an"]
+    },
+    "ecommerce": {
+      "title": "Site e-commerce",
+      "text": "Vente en ligne complète : produits, panier, commandes et paiement sécurisé.",
+      "features": ["Catalogue illimité & stocks en temps réel", "Notifications e-mail et SMS", "Hébergement + domaine inclus 1 an"]
+    },
+    "mobile": {
+      "title": "Application mobile",
+      "text": "Native ou hybride pour iOS et Android, avec une interface intuitive.",
+      "features": ["Notifications push & mode hors ligne", "Intégration d'API tierces", "Publication App Store & Google Play"]
+    },
+    "landing": {
+      "title": "Landing page",
+      "text": "Une page pensée pour convertir vos visiteurs en clients.",
+      "features": ["A/B testing intégré", "Formulaires de capture & CRM", "Chargement ultra-rapide"]
+    },
+    "pwa": {
+      "title": "Application web progressive",
+      "text": "Une app web qui s'installe sur l'écran d'accueil comme une application native.",
+      "features": ["Fonctionnement hors ligne", "Synchronisation automatique", "Compatibilité multi-navigateurs"]
+    },
+    "api": {
+      "title": "API & backend",
+      "text": "Des API RESTful et des systèmes robustes pour alimenter vos applications.",
+      "features": ["Authentification JWT", "Documentation & tests automatisés", "Scalabilité cloud & sauvegardes"]
+    },
+    "work": {
+      "eyebrow": "Projets en ligne",
+      "title": "Déjà en ligne.",
+      "vitrine": "Site vitrine",
+      "web": "Site web",
+      "ecommerce": "E-commerce"
+    },
+    "base": {
+      "eyebrow": "Dans chaque projet",
+      "title": "Le socle, inclus d'office.",
+      "responsive": { "title": "Responsive", "text": "Mobile, tablette et ordinateur." },
+      "seo": { "title": "SEO", "text": "Optimisation de base pour Google." },
+      "custom": { "title": "Code sur mesure", "text": "Fonctionnalités adaptées à votre activité." },
+      "training": { "title": "Formation", "text": "Vous gérez votre site en autonomie." },
+      "support": { "title": "Support technique", "text": "De 3 à 12 mois selon l'offre." }
+    }
+  },
+  "Sound": {
+    "eyebrow": "Pixel Sounds · Production audio",
+    "title": "L'art du son,",
+    "titleAccent": "à votre portée.",
+    "lead": "Effets sonores, voix off et musique originale pour vos spots, réels, jingles et podcasts.",
+    "cta": "Réserver le studio",
+    "offers": {
+      "eyebrow": "Offres & tarifs",
+      "title": "Trois sons, une signature."
+    },
+    "sfx": {
+      "tag": "01 / SFX",
+      "title": "Effet sonore",
+      "text": "Des effets de haute qualité qui ajoutent une dimension immersive à vos productions audiovisuelles.",
+      "features": ["Effets sonores sur mesure", "Formats WAV / MP3 haute qualité", "Livraison rapide"]
+    },
+    "voice": {
+      "tag": "02 / VOIX",
+      "title": "Voix off",
+      "text": "Nos voix talentueuses transmettent votre message avec clarté et impact.",
+      "features": ["Voix masculine ou féminine", "Enregistrement studio professionnel", "Retouche et mixage inclus"]
+    },
+    "music": {
+      "tag": "03 / MUSIQUE",
+      "title": "Production musicale originale",
+      "text": "Une approche créative et collaborative pour une musique adaptée à vos besoins.",
+      "features": ["Composition originale", "Arrangements complets", "Mixage et mastering inclus"]
+    },
+    "uses": {
+      "eyebrow": "Pour quoi faire ?",
+      "title": "Le son qu'on reconnaît avant de voir le logo.",
+      "items": ["Spots publicitaires radio & TV", "Jingles de marque", "Réels & vidéos réseaux sociaux", "Podcasts & interviews"]
+    },
+    "micAlt": "Microphone de studio"
+  },
+  "Ads": {
+    "eyebrow": "Pixel Advertisement · Publicité & impression",
+    "title": "Votre marque, en",
+    "titleAccent": "grand format.",
+    "lead": "Néons LED, enseignes, bâches, roll-ups, habillage de vitrine et impressions de toutes tailles — pour booster votre visibilité.",
+    "ctaPrimary": "Chiffrer mon support",
+    "ctaSecondary": "Réalisations",
+    "heroAlt": "Enseigne néon « Neon — Brighten your world »",
+    "neonTag": "Néon LED",
+    "neonValue": "Intérieur & extérieur",
+    "workshops": {
+      "eyebrow": "Deux ateliers · sur devis",
+      "title": "Du flyer à la façade.",
+      "print": {
         "title": "Impression",
-        "description": "Notre équipe est là pour vous garantir des impressions avec des résultats exceptionnels.",
-        "price": "Sur Devis",
-        "features": [
-          "Packaging",
-          "Carte de visite, flyers, dépliants",
-          "Invitation, carte médicale, calendrier",
-          "Menu",
-          "Photo book",
-          "Stickers",
-          "Bannière, drapeaux",
-          "Affiche, tableaux, cadre",
-          "Habillage vitrine"
-        ]
+        "text": "Des impressions aux résultats exceptionnels, du petit format au grand.",
+        "items": ["Packaging", "Cartes de visite, flyers, dépliants", "Invitations, cartes médicales, calendriers", "Menus", "Photo books", "Stickers", "Bannières, drapeaux", "Affiches, tableaux, cadres", "Habillage vitrine"]
       },
-      {
-        "id": "1",
-        "title": "Travaux Publicitaires",
-        "description": "Que vous ayez besoin de panneaux, de supports événementiels, notre équipe est prête à réaliser vos projets avec expertise.",
-        "price": "Sur Devis",
-        "features": [
-          "Autocollant, bâche PVC, toile",
-          "Alucobond, dilphane, mélamine, MDF",
-          "Flocage (T-shirt, Casquette, Tablier)",
-          "Sac shopping (plastique, kraft)",
-          "Boîtier lumineux",
-          "Néon LED (intérieur/extérieur)"
-        ]
+      "works": {
+        "title": "Travaux publicitaires",
+        "text": "Panneaux, supports événementiels, enseignes : notre équipe réalise vos projets avec expertise.",
+        "items": ["Autocollant, bâche PVC, toile", "Alucobond, dilphane, mélamine, MDF", "Flocage t-shirt, casquette, tablier", "Sacs shopping plastique & kraft", "Boîtier lumineux", "Néon LED intérieur / extérieur"]
       }
-    ],
-    "logo": [
-      {
-        "id": "0",
-        "title": "Design Graphique",
-        "description": "Notre équipe de designers talentueux est prête à donner vie à vos concepts.",
-        "price": "1000",
-        "features": [
-          "Conception de Logo et identité visuelle",
-          "Conception Packaging",
-          "Conception de publications pour réseaux sociaux",
-          "Conception de carte de visite, flyers, dépliants",
-          "Conception d'invitations, cartes médicales, calendriers",
-          "Conception de menus",
-          "Conception de photo book",
-          "Conception de stickers",
-          "Conception de bannières, drapeaux",
-          "Conception d'affiches, tableaux, cadres",
-          "Conception de vitrines"
-        ]
+    },
+    "gallery": {
+      "title": "Posé, accroché, allumé.",
+      "mural": "Habillage mural",
+      "banner": "Bâche PVC",
+      "rollup": "Roll-up",
+      "billboard": "Panneau"
+    },
+    "quote": {
+      "eyebrow": "Devis express",
+      "title": "Trois infos, un prix sous 24 h.",
+      "lead": "Dites-nous quel support, quelles dimensions et où il sera installé.",
+      "type": "Type de support",
+      "types": {
+        "neon": "Néon LED",
+        "banner": "Bâche PVC",
+        "rollup": "Roll-up",
+        "lightbox": "Boîtier lumineux",
+        "storefront": "Habillage vitrine",
+        "other": "Autre"
       },
-      {
-        "id": "1",
-        "title": "Pack Réseaux Sociaux",
-        "description": "Capter l'attention et engager votre audience.",
-        "price": "10000",
-        "features": ["Publications pour réseaux sociaux"]
-      }
-    ],
-    "dev": [
-      {
-        "id": "0",
-        "title": "Site Web Vitrine",
-        "description": "Site web professionnel pour présenter votre entreprise, vos services et votre portfolio avec un design moderne et responsive.",
-        "price": "Sur Devis",
-        "features": [
-          "Design personnalisé et moderne",
-          "5-10 pages selon vos besoins",
-          "Responsive design (mobile, tablette, desktop)",
-          "Optimisation SEO de base",
-          "Formulaire de contact",
-          "Intégration réseaux sociaux",
-          "Tableau de bord d'administration",
-          "Hébergement et nom de domaine inclus (1 an)",
-          "Formation à l'utilisation",
-          "Support technique 3 mois"
-        ]
-      },
-      {
-        "id": "1",
-        "title": "Site E-commerce",
-        "description": "Plateforme de vente en ligne complète avec gestion des produits, panier d'achat et système de paiement sécurisé.",
-        "price": "Sur Devis",
-        "features": [
-          "Design e-commerce professionnel",
-          "Catalogue de produits illimité",
-          "Système de panier et commandes",
-          "Gestion des stocks en temps réel",
-          "Paiements sécurisés (carte, virement)",
-          "Tableau de bord administrateur complet",
-          "Gestion des clients et commandes",
-          "Système de notifications (email, SMS)",
-          "Optimisation SEO e-commerce",
-          "Hébergement et nom de domaine inclus (1 an)",
-          "Formation complète",
-          "Support technique 6 mois"
-        ]
-      },
-      {
-        "id": "2",
-        "title": "Application Mobile",
-        "description": "Application mobile native ou hybride pour iOS et Android avec fonctionnalités avancées et interface utilisateur intuitive.",
-        "price": "Sur Devis",
-        "features": [
-          "Application native iOS et Android",
-          "Design UI/UX personnalisé",
-          "Fonctionnalités sur mesure",
-          "Synchronisation cloud",
-          "Notifications push",
-          "Intégration API tierces",
-          "Mode hors ligne",
-          "Sécurité et chiffrement",
-          "Publication sur App Store et Google Play",
-          "Maintenance et mises à jour",
-          "Support technique 12 mois"
-        ]
-      },
-      {
-        "id": "3",
-        "title": "Landing Page",
-        "description": "Page d'atterrissage optimisée pour convertir les visiteurs en clients avec des call-to-action stratégiques.",
-        "price": "Sur Devis",
-        "features": [
-          "Design conversion-optimisé",
-          "A/B testing intégré",
-          "Formulaires de capture de leads",
-          "Intégration CRM",
-          "Analytics et tracking",
-          "Optimisation SEO",
-          "Version mobile optimisée",
-          "Temps de chargement ultra-rapide",
-          "Hébergement haute performance",
-          "Support technique 3 mois"
-        ]
-      },
-      {
-        "id": "4",
-        "title": "Application Web Progressive (PWA)",
-        "description": "Application web moderne qui fonctionne comme une application native avec installation sur l'écran d'accueil.",
-        "price": "Sur Devis",
-        "features": [
-          "Installation sur écran d'accueil",
-          "Fonctionnement hors ligne",
-          "Notifications push",
-          "Performance optimisée",
-          "Interface native-like",
-          "Synchronisation automatique",
-          "Sécurité renforcée",
-          "Compatibilité multi-navigateurs",
-          "Mises à jour automatiques",
-          "Support technique 6 mois"
-        ]
-      },
-      {
-        "id": "5",
-        "title": "API et Backend",
-        "description": "Développement d'API RESTful et de systèmes backend robustes pour alimenter vos applications et sites web.",
-        "price": "Sur Devis",
-        "features": [
-          "API RESTful sécurisée",
-          "Base de données optimisée",
-          "Authentification JWT",
-          "Documentation API complète",
-          "Tests automatisés",
-          "Monitoring et logs",
-          "Sauvegarde automatique",
-          "Scalabilité cloud",
-          "Sécurité et chiffrement",
-          "Support technique 12 mois"
-        ]
-      }
-    ]
+      "size": "Dimensions (L × H)",
+      "sizePlaceholder": "Ex. 200 × 80 cm",
+      "quantity": "Quantité",
+      "wilaya": "Wilaya",
+      "phone": "Téléphone",
+      "submit": "Recevoir mon devis",
+      "success": "Demande envoyée ! Nous vous rappelons sous 24 h avec un prix.",
+      "error": "L'envoi a échoué. Réessayez ou écrivez-nous sur WhatsApp."
+    }
   },
-
-  "about_us": {
-    "header": "Notre Histoire",
-    "description": "Bienvenue chez Pixel, votre partenaire créatif en photographie. Fondée en 2018 par une équipe de passionnés, notre agence se consacre à capturer des moments uniques et à raconter des histoires à travers l'objectif. Nous croyons que chaque image doit évoquer une émotion et laisser une empreinte durable. Que vous soyez une entreprise cherchant à promouvoir votre marque, un couple célébrant un moment spécial ou un artiste souhaitant mettre en valeur son travail, nous nous engageons à comprendre vos besoins et à transformer votre vision en réalité. Avec une approche personnalisée, nous allions expertise technique et sens aigu de l'esthétique pour créer des visuels qui se démarquent. Notre mission est de fournir des images de haute qualité qui captivent votre audience et renforcent votre message. Rejoignez-nous dans cette aventure, et ensemble, donnons vie à vos idées.",
-    "meetTheTeam": "Rencontrez l'Équipe",
-    "teamSubtitle": "Des experts passionnés dévoués à donner vie à vos visions créatives en Algérie.",
-    "ourLocation": "Notre Localisation",
-    "strategicallyLocated": "Stratégiquement situé pour mieux vous servir",
-    "support247": "Support 24/7",
-    "alwaysHere": "Toujours là quand vous avez le plus besoin de nous",
-    "qualityFirst": "Qualité d'abord",
-    "excellenceDetail": "L'excellence dans chaque détail que nous livrons",
-    "visitStudio": "Visitez Notre Studio",
-    "studioDescription": "Venez voir où la magie se produit. Notre espace créatif est conçu pour inspirer l'innovation et la collaboration.",
-    "creativeHeadquarters": "Notre siège créatif",
+  "Shop": {
+    "title": "Créé à l'atelier,",
+    "titleAccent": "livré chez vous.",
+    "lead": "Posters sur toile, cadres, jeux de société et néons, imprimés et assemblés dans nos studios de Batna.",
+    "categories": {
+      "posters": "Posters",
+      "games": "Jeux",
+      "neons": "Néons"
+    },
+    "categoryNotes": {
+      "posters": "{count, plural, one {# modèle} other {# modèles}}",
+      "games": "Loup-Garou & plus",
+      "neons": "Sur commande"
+    },
+    "categoryLead": {
+      "posters": "Toile, cadre, PMAA ou papier autocollant — vos héros, vos films et vos artistes préférés, en plusieurs formats.",
+      "games": "Des jeux de société pour vos soirées entre amis, imprimés sur cartes waterproof.",
+      "neons": "Votre texte, votre logo, vos couleurs : chaque néon LED est conçu à la demande."
+    },
+    "perks": {
+      "delivery": { "title": "Livraison en 2 jours", "text": "Bureau ou domicile, partout en Algérie" },
+      "cod": { "title": "Paiement à la livraison", "text": "Vous payez à réception" },
+      "support": { "title": "Support 24/7", "text": "Une équipe dédiée à chaque étape" }
+    },
+    "allProducts": "Tous les produits",
+    "all": "Tout",
+    "tabsLabel": "Catégories",
+    "addToCart": "Ajouter au panier",
+    "added": "{name} ajouté au panier",
+    "viewCart": "Voir le panier",
+    "priceFrom": "dès {price}",
+    "variants": "{count, plural, one {# visuel} other {# visuels}}",
+    "unavailable": "Bientôt disponible",
+    "loadError": "La boutique est momentanément indisponible. Réessayez dans quelques minutes.",
+    "neons": {
+      "title": "Les néons sont faits sur mesure.",
+      "text": "Votre texte, votre logo, vos couleurs : chaque néon LED est conçu à la demande par Pixel Advertisement.",
+      "cta": "Créer mon néon"
+    },
+    "filters": {
+      "title": "Filtres",
+      "reset": "Réinitialiser",
+      "material": "Matière",
+      "format": "Format",
+      "found": "{count, plural, =0 {Aucun produit} one {# produit trouvé} other {# produits trouvés}}",
+      "sort": "Trier par",
+      "sortNew": "Nouveautés",
+      "sortAsc": "Prix croissant",
+      "sortDesc": "Prix décroissant"
+    },
+    "materials": {
+      "canva": "Toile",
+      "frames": "Encadré",
+      "pmaa": "PMAA",
+      "sticker": "Papier autocollant",
+      "card": "Cartes"
+    }
+  },
+  "Product": {
+    "poster": "Poster",
+    "variant": "Visuel",
+    "variantsAvailable": "{count, plural, one {# disponible} other {# disponibles}}",
+    "size": "Taille",
+    "sizeValue": "{size} cm",
+    "quantity": "Quantité",
+    "decrease": "Diminuer la quantité",
+    "increase": "Augmenter la quantité",
+    "addToCart": "Ajouter au panier · {total}",
+    "added": "Ajouté au panier !",
+    "viewCart": "Voir le panier →",
+    "perks": {
+      "delivery": "Livraison en 2 jours, au bureau ou à domicile",
+      "cod": "Paiement à la livraison",
+      "question": "Une question ?"
+    },
+    "related": "Vous aimerez aussi",
+    "gallery": "Galerie du produit",
+    "view": "Vue {index}"
+  },
+  "Checkout": {
+    "title": "Votre commande",
+    "stepsLabel": "Étapes",
+    "steps": {
+      "cart": "Panier",
+      "delivery": "Livraison",
+      "confirmation": "Confirmation"
+    },
+    "delivery": "Livraison",
+    "fields": {
+      "name": "Nom complet",
+      "namePlaceholder": "Entrez votre nom",
+      "phone": "Téléphone",
+      "phonePlaceholder": "05 / 06 / 07 XX XX XX XX",
+      "wilaya": "Wilaya",
+      "wilayaPlaceholder": "Sélectionnez une wilaya"
+    },
+    "method": {
+      "legend": "Méthode de livraison",
+      "desk": { "label": "Bureau", "text": "Retrait au bureau du transporteur" },
+      "home": { "label": "Domicile", "text": "Livré à votre porte" }
+    },
+    "cod": {
+      "title": "Paiement à la livraison",
+      "text": "Vous réglez en espèces à la réception du colis."
+    },
+    "confirm": "Confirmer la commande",
+    "sending": "Envoi de la commande…",
+    "summary": "Panier",
+    "subtotal": "Sous-total",
+    "deliveryFee": "Livraison",
+    "chooseWilaya": "choisissez une wilaya",
+    "total": "Total",
+    "continue": "Continuer vos achats",
+    "remove": "Retirer {name}",
+    "empty": {
+      "title": "Votre panier est vide.",
+      "text": "Posters, jeux et néons vous attendent dans la boutique.",
+      "cta": "Retourner à la boutique"
+    },
+    "success": {
+      "title": "Merci !",
+      "text": "Commande terminée avec succès. Merci pour votre confiance — vous paierez à la réception.",
+      "cta": "Retourner à la boutique"
+    },
+    "errors": {
+      "nameMin": "Le nom est requis (2 caractères minimum).",
+      "phone": "Numéro de téléphone algérien invalide.",
+      "wilaya": "La wilaya est requise.",
+      "method": "La méthode de livraison est requise.",
+      "cart": "Votre panier est vide ou contient un produit indisponible.",
+      "generic": "La commande n'a pas pu être envoyée. Réessayez ou appelez-nous."
+    }
+  },
+  "Blog": {
+    "eyebrow": "Exploration",
+    "label": "Blog créatif",
+    "title": "Conseils &",
+    "titleAccent": "tendances.",
+    "lead": "Nos derniers articles sur la photographie, le design et le web en Algérie.",
+    "featured": "À la une",
+    "filtersLabel": "Catégories",
+    "filters": {
+      "all": "Tous",
+      "photo": "Photo",
+      "wedding": "Mariage",
+      "web": "Web",
+      "design": "Design"
+    },
+    "posts": {
+      "wedding": {
+        "title": "Comment choisir un photographe de mariage en Algérie",
+        "excerpt": "Découvrez nos conseils pour trouver le photographe idéal pour votre journée spéciale…"
+      },
+      "ecommerce": {
+        "title": "Les meilleures pratiques pour un site e-commerce algérien",
+        "excerpt": "Optimisez vos ventes en ligne avec nos recommandations techniques et design…"
+      },
+      "photo": {
+        "title": "Pourquoi investir dans la photographie professionnelle pour votre entreprise",
+        "excerpt": "L'impact des visuels de haute qualité sur votre image de marque et vos conversions…"
+      }
+    },
+    "empty": "Aucun article dans cette catégorie pour le moment.",
+    "instagram": {
+      "eyebrow": "Coulisses",
+      "title": "Les shootings du moment, en direct sur Instagram."
+    }
+  },
+  "Testimonials": {
+    "eyebrow": "Retours d'expérience",
+    "label": "Témoignages clients",
+    "title": "Ce que nos clients",
+    "titleAccent": "racontent.",
+    "average": "Note moyenne de nos clients",
+    "leaveReview": "Laisser un avis"
+  },
+  "City": {
+    "eyebrow": "— Pixel Creative Agency · {city}",
+    "title": "Agence créative",
+    "lead": "Pixel intervient à {city} pour tous vos projets créatifs : site web, e-commerce, shooting photo, design graphique, panneaux publicitaires et production audio.",
+    "ctaPrimary": "Devis gratuit",
+    "ctaSecondary": "Voir nos réalisations",
+    "switcher": "Choisir une ville",
+    "mapLabel": "Pixel est basé à Batna et intervient à {city}",
+    "studioPin": "Studio · Batna",
+    "coverage": "Intervention dans toute l'Algérie",
+    "servicesTitle": "Nos services à {city}",
+    "inCity": "à {city}",
     "services": {
-      "shipping": {
-        "label": "Livraison en 2 jours",
-        "subtext": "Profitez d'un shopping sans effort avec notre service de livraison gratuit."
-      },
-      "cash_on_delivery": {
-        "label": "Paiement à la livraison",
-        "subtext": "Vivez des transactions sans souci avec nos options de paiement sécurisées."
-      },
-      "support": {
-        "label": "Support 24/7",
-        "subtext": "Notre équipe dédiée est là pour vous aider à chaque étape."
-      }
+      "dev": "Développement web & e-commerce",
+      "photo": "Shooting photo professionnel",
+      "design": "Design graphique & logo",
+      "ads": "Panneau publicitaire & impression",
+      "wedding": "Photographie de mariage",
+      "sound": "Production audio & jingles"
+    },
+    "whyTitle": "Pourquoi choisir Pixel pour votre projet à {city} ?",
+    "why": {
+      "local": { "title": "Expérience locale", "text": "Nous connaissons le marché algérien et les attentes des clients à {city} et dans toute l'Algérie." },
+      "team": { "title": "Équipe créative", "text": "Studio photo professionnel, développeurs expérimentés et designers à votre service." },
+      "quote": { "title": "Devis rapide", "text": "Réponse sous 24 h, devis gratuit et sur mesure adapté à votre budget." }
+    },
+    "names": {
+      "alger": "Alger",
+      "oran": "Oran",
+      "constantine": "Constantine",
+      "annaba": "Annaba",
+      "setif": "Sétif"
     }
   },
-  "faq": {
-    "title": "Questions Fréquemment Posées",
-    "subtitle": "Trouvez des réponses aux questions fréquemment posées sur nos services et processus",
-    "questions": [
-      {
-        "question": "Quels types de services de photographie proposez-vous ?",
-        "answer": "Nous offrons une large gamme de services de photographie, y compris la photographie de mariage, les séances de portrait, la photographie d'événements, la photographie de produits, les shootings de mode et la photographie commerciale. Chaque service est adapté aux besoins spécifiques de nos clients."
-      },
-      {
-        "question": "Pouvez-vous m'aider à imprimer mes photos ? ",
-        "answer": "Oui, nous pouvons vous aider à imprimer vos photos ! Nous proposons des options d'impression de haute qualité et pouvons vous aider à choisir les meilleurs formats et finitions pour mettre en valeur vos images. Faites-nous simplement part de vos préférences, et nous nous occuperons du reste !"
-      },
-      {
-        "question": "Quelles sont vos options de tarification ?",
-        "answer": "Nos tarifs varient en fonction du type de service. Nous proposons des forfaits adaptés à différents budgets, que vous pouvez consulter sur la liste de nos services sur notre site web."
-      },
-      {
-        "question": "Quel est votre processus de réalisation de films ?",
-        "answer": "Notre processus de réalisation de films comprend la planification en pré-production, le tournage, le montage en post-production, les révisions basées sur vos retours et la livraison finale, tout en maintenant une communication ouverte pour réaliser votre vision."
-      },
-      {
-        "question": "Proposez-vous des services de développement web ?",
-        "answer": "Oui, nous proposons des services de développement web pour créer des sites visuellement attrayants et fonctionnels, optimisés pour les ordinateurs de bureau et les appareils mobiles."
-      },
-      {
-        "question": "Combien de temps dure un projet typique ?  ",
-        "answer": "Un projet typique prend généralement entre quelques semaines et quelques mois, en fonction de sa complexité et de sa portée. Nous vous fournirons un délai plus précis lors de notre consultation initiale."
-      },
-      {
-        "question": "Puis-je demander un devis personnalisé ?",
-        "answer": "Certainement ! Nous pouvons fournir des devis personnalisés en fonction de vos besoins spécifiques. Faites-nous part de vos exigences et détails de projet, et nous serons heureux de vous fournir une estimation adaptée."
-      },
-      {
-        "question": "Avez-vous un portfolio que je peux consulter ? ",
-        "answer": "Oui, nous avons un portfolio disponible pour vous ! Vous pouvez le consulter sur notre site web, où vous trouverez une sélection de nos travaux récents dans divers projets de photographie, de réalisation de films et de développement web."
-      }
-    ]
-  },
-
-  "collaboration": {
-    "title": "Notre Portfolio",
-    "button": "Portfolio"
-  },
-  "categories": {
-    "title": "Catégories",
-    "found": "{count} Catégorie(s) trouvée(s)",
-    "newLabel": "Nouveau",
-    "loading": "Chargement...",
-    "comingSoon": "Bientôt disponible",
-    "viewCategory": "Voir la catégorie",
-    "exploreCategory": "Explorer cette catégorie",
-    "noCategories": "Aucune catégorie disponible",
-    "noCategoriesDescription": "Il n'y a actuellement aucune catégorie à afficher. Veuillez revenir plus tard."
-  },
-  "shopP": {
-    "title": "Notre Boutique",
-    "postersFound": "Produit(s) trouvé(s)",
-    "newLabel": "NOUVEAU",
-    "inStock": "En Stock",
-    "outOfStock": "Rupture de Stock"
-  },
-  "metadata": {
+  "Legal": {
+    "tabs": {
+      "terms": "Conditions d'utilisation",
+      "privacy": "Confidentialité"
+    },
+    "toc": "Sommaire",
+    "updated": "Dernière mise à jour · {date}",
     "terms": {
-      "title": "Règles Loup-Garou | Pixel Creative Agency",
-      "description": "Consultez les règles du jeu Loup-Garou de Thiercelieux disponibles chez Pixel Creative Agency.",
-      "keywords": "loup-garou, règles du jeu, werewolf, pixel creative agency, algérie"
+      "title": "Conditions générales d'utilisation",
+      "acceptance": {
+        "title": "Acceptation des conditions",
+        "text": "En accédant et en utilisant le site web de Pixel Creative Agency (pixeldz.store), vous acceptez d'être lié par les présentes Conditions Générales d'Utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site."
+      },
+      "services": {
+        "title": "Services proposés",
+        "text": "Pixel Creative Agency propose des services de photographie professionnelle, design graphique, développement web, production audio et vidéo, et publicité. Les détails de chaque service, y compris les tarifs, sont disponibles sur notre site. Nous nous réservons le droit de modifier nos services à tout moment."
+      },
+      "property": {
+        "title": "Propriété intellectuelle",
+        "text": "Tout le contenu présent sur ce site (textes, images, vidéos, logos, design) est la propriété exclusive de Pixel Creative Agency et est protégé par les lois sur le droit d'auteur en vigueur en Algérie. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est strictement interdite."
+      },
+      "data": {
+        "title": "Données personnelles et cookies",
+        "text": "Nous collectons certaines données personnelles lors de l'utilisation de notre site (formulaires de contact, commandes, etc.). Ces données sont traitées conformément à notre Politique de confidentialité. Nous utilisons également des cookies analytiques (Google Analytics) pour améliorer notre site — vous pouvez gérer votre consentement via la bannière de cookies."
+      },
+      "liability": {
+        "title": "Limitation de responsabilité",
+        "text": "Pixel Creative Agency s'efforce de maintenir les informations du site à jour et exactes, mais ne peut garantir leur exhaustivité ou leur exactitude à tout moment. Nous déclinons toute responsabilité pour les dommages directs ou indirects résultant de l'utilisation de notre site ou de nos services."
+      },
+      "law": {
+        "title": "Droit applicable",
+        "text": "Les présentes conditions sont régies par le droit algérien. Tout litige relatif à leur interprétation ou exécution sera soumis aux tribunaux compétents de la wilaya de Batna, Algérie."
+      },
+      "changes": {
+        "title": "Modifications",
+        "text": "Nous nous réservons le droit de modifier ces Conditions Générales d'Utilisation à tout moment. Les modifications prennent effet dès leur publication sur le site. Nous vous encourageons à consulter régulièrement cette page."
+      },
+      "contact": {
+        "title": "Contact",
+        "text": "Pour toute question concernant ces conditions :"
+      }
     },
-    "conditions": {
-      "title": "Conditions Générales d'Utilisation | Pixel Creative Agency",
-      "description": "Consultez les conditions générales d'utilisation de Pixel Creative Agency.",
-      "keywords": "conditions générales, CGU, pixel creative agency, algérie"
-    },
-    "blog": {
-      "title": "Blog Créatif | Pixel Creative Agency",
-      "description": "Conseils, tendances et guides sur la photographie, le design et le web en Algérie."
-    },
-    "blogUI": {
-      "headerTitle": "Blog Créatif — Conseils & Tendances",
-      "tag": "Exploration",
-      "description": "Découvrez nos derniers articles sur le monde créatif en Algérie.",
-      "readMore": "Lire la suite"
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "intro": {
+        "title": "Introduction",
+        "text": "Chez Pixel Creative Agency, nous accordons une grande importance à la protection de vos données personnelles. Cette politique vous informe sur la manière dont nous collectons et traitons vos données conformément à la législation en vigueur en Algérie."
+      },
+      "collected": {
+        "title": "Données collectées",
+        "text": "Nous collectons les informations que vous nous fournissez directement via nos formulaires de contact ou lors de vos commandes :",
+        "items": ["Nom et prénom", "Adresse e-mail", "Numéro de téléphone", "Détails de votre projet ou commande"]
+      },
+      "usage": {
+        "title": "Utilisation des données",
+        "text": "Vos données sont utilisées exclusivement pour :",
+        "items": ["Répondre à vos demandes de devis ou d'informations", "Gérer vos commandes et la livraison de nos services", "Améliorer nos services et votre expérience sur notre site"]
+      },
+      "retention": {
+        "title": "Conservation des données",
+        "text": "Nous conservons vos données personnelles uniquement pour la durée nécessaire aux finalités pour lesquelles elles ont été collectées, sauf si la loi exige une durée de conservation plus longue."
+      },
+      "rights": {
+        "title": "Vos droits",
+        "text": "Conformément à la loi 18-07 relative à la protection des personnes physiques dans le traitement des données à caractère personnel, vous disposez d'un droit d'accès, de rectification et de suppression de vos données."
+      },
+      "contact": {
+        "title": "Contact",
+        "text": "Pour toute question concernant votre confidentialité, vous pouvez nous contacter :"
+      }
     }
   },
-  "breadcrumbs": {
-    "home": "Accueil",
-    "a-propos": "À propos",
-    "publicite": "Publicité",
-    "blog": "Blog",
-    "paiement": "Paiement",
-    "contact": "Contact",
-    "developpement": "Développement",
-    "design-graphique": "Design Graphique",
-    "photo-lab": "Photo Lab",
-    "portfolio": "Portfolio",
-    "politique-de-confidentialite": "Politique de confidentialité",
-    "produit": "Produit",
-    "boutique": "Boutique",
-    "sons": "Sons",
-    "loup-garou-regles": "Loup-Garou Règles",
-    "temoignages": "Témoignages",
-    "mariage": "Mariage",
-    "conditions-dutilisation": "Conditions d'utilisation"
+  "Werewolf": {
+    "games": "Jeux",
+    "eyebrow": "Jeu de cartes · Boutique Pixel",
+    "title": "Les Loups-Garous de Thiercelieux",
+    "boxAlt": "Boîte du jeu Les Loups-Garous de Thiercelieux",
+    "chips": ["50 cartes waterproof", "38 rôles différents", "Un meneur + vos amis"],
+    "readRules": "Lire les règles",
+    "rules": {
+      "eyebrow": "Les règles du jeu",
+      "title": "Une nuit, un jour, un vote.",
+      "setup": { "title": "Mise en place", "text": "Un meneur, qui ne joue pas, distribue une carte au hasard à chaque joueur. Chacun découvre secrètement son identité : villageois ou loup-garou." },
+      "night": { "title": "La nuit", "text": "Tout le monde ferme les yeux. Les loups-garous se réveillent et désignent ensemble, par gestes, leur victime. Les rôles spéciaux utilisent ensuite leurs pouvoirs." },
+      "day": { "title": "Le jour", "text": "Le village se réveille, le meneur révèle les victimes. Débat : les villageois cherchent les loups, qui détournent les soupçons." },
+      "vote": { "title": "Le vote", "text": "Chacun désigne un suspect. Le joueur désigné par la majorité est éliminé et son identité révélée. La nuit retombe." },
+      "mayor": { "title": "Le maire", "text": "Élu le premier jour — même un loup peut se présenter. Sa voix compte double. Éliminé, il désigne son successeur dans son dernier souffle." },
+      "end": { "title": "Fin de partie", "text": "Le jeu s'arrête quand il ne reste plus que des villageois… ou plus que des loups-garous." }
+    },
+    "roles": {
+      "eyebrow": "Les rôles",
+      "title": "Qui êtes-vous cette nuit ?",
+      "filter": "Filtrer par camp",
+      "camps": {
+        "all": "Tous",
+        "village": "Village",
+        "wolves": "Loups-Garous",
+        "solo": "Solitaires"
+      },
+      "campLabels": {
+        "village": "Village",
+        "wolves": "Loups-Garous",
+        "solo": "Solitaire"
+      },
+      "more": "… et bien d'autres rôles dans la boîte : Comédien, Avocat, Bourreau, Chaman, Maître du temps, Magicien, Fantôme, Revenant, Joker…",
+      "list": {
+        "villager": { "name": "Villageois", "text": "Aucun pouvoir : il use de sa voix et de son vote en journée pour éliminer les loups-garous." },
+        "seer": { "name": "Voyante", "text": "Chaque nuit, elle découvre secrètement l'identité d'un joueur." },
+        "witch": { "name": "Sorcière", "text": "Deux potions — une de guérison, une d'empoisonnement — utilisables une seule fois chacune." },
+        "guardian": { "name": "Salvateur", "text": "Chaque nuit, il protège un joueur de l'attaque des loups-garous." },
+        "hunter": { "name": "Chasseur", "text": "À sa mort, il élimine immédiatement un joueur de son choix." },
+        "cupid": { "name": "Cupidon", "text": "La première nuit, il désigne deux amoureux liés jusqu'à la fin du jeu." },
+        "littleGirl": { "name": "Petite fille", "text": "Elle peut entrouvrir les yeux pendant la nuit pour démasquer les loups." },
+        "knight": { "name": "Chevalier", "text": "Son armure le protège de la première attaque des loups-garous." },
+        "fox": { "name": "Renard", "text": "Il désigne trois voisins : le meneur lui dit si un loup se cache parmi eux." },
+        "detective": { "name": "Détective", "text": "Une fois par tour, il apprend si deux joueurs sont du même camp." },
+        "raven": { "name": "Corbeau", "text": "Il désigne un joueur qui aura deux voix contre lui au prochain vote." },
+        "werewolf": { "name": "Loup-Garou", "text": "Chaque nuit, les loups se réveillent pour éliminer un villageois." },
+        "alphaWolf": { "name": "Loup-Garou Alpha", "text": "Une fois par partie, il peut infecter la victime et la transformer en loup." },
+        "blueWolf": { "name": "Loup Bleu", "text": "Il échappe à la Voyante, qui ne voit en lui qu'un simple villageois." },
+        "redWolf": { "name": "Loup-Garou Rouge", "text": "Avant l'attaque, il apprend si un joueur est un simple villageois ou un rôle VIP." },
+        "mysticWolf": { "name": "Loup-Garou Mystique", "text": "Il reprend la carte d'une victime des loups et s'attribue ses pouvoirs." },
+        "whiteWolf": { "name": "Loup-Garou Blanc", "text": "Il chasse avec la meute… mais son but est d'être le dernier survivant." },
+        "piper": { "name": "Joueur de flûte", "text": "Ennemi de tous, il charme deux nouveaux joueurs chaque nuit." },
+        "vampire": { "name": "Vampire", "text": "Ennemi de tous, il mord un joueur au début de chaque nuit." },
+        "serialKiller": { "name": "Tueur en série", "text": "Une nuit sur deux, il peut tuer la personne de son choix." }
+      }
+    }
+  },
+  "NotFound": {
+    "label": "Erreur 404",
+    "title": "Houston, on a un problème.",
+    "text": "Cette page a dérivé hors de notre orbite. Elle a peut-être été déplacée, ou n'a jamais existé.",
+    "home": "Retour à l'accueil",
+    "contact": "Nous écrire",
+    "popular": "Ou filez vers :",
+    "mascotAlt": "La mascotte astronaute de Pixel, perdue dans l'espace"
   }
 }
