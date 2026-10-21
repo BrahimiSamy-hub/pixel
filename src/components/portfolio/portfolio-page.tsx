@@ -10,7 +10,12 @@ import { PortfolioGrid } from './portfolio-grid'
 function interleave<T extends { category: string }>(list: T[]) {
   const groups = Object.values(Object.groupBy(list, (i) => i.category)) as T[][]
   const out: T[] = []
-  for (let i = 0; out.length < list.length; i++) for (const g of groups) if (g[i]) out.push(g[i])
+  for (let i = 0; out.length < list.length; i++) {
+    for (const g of groups) {
+      const item = g[i]
+      if (item) out.push(item)
+    }
+  }
   return out
 }
 
