@@ -192,7 +192,7 @@ export function CheckoutView() {
                     </div>
                     <span className="text-[0.8125rem] text-mist">{[item.variant, item.size].filter(Boolean).join(' · ')}</span>
                     <div className="mt-auto flex items-center justify-between">
-                      <div className="flex items-center rounded-[0.625rem] border border-line-strong">
+                      <div className="flex items-center rounded-card border border-line-strong">
                         <button type="button" aria-label={tProduct('decrease')} onClick={() => setQuantity(item.key, item.quantity - 1)} className="flex size-9 items-center justify-center">
                           <Minus size={14} aria-hidden />
                         </button>

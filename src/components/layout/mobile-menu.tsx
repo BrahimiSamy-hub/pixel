@@ -28,7 +28,7 @@ export function MobileMenu() {
         onClick={() => dialog.current?.showModal()}
         aria-label={t('openMenu')}
         aria-haspopup="dialog"
-        className="flex size-12 items-center justify-center rounded-[14px] border border-line bg-ink-2 text-white lg:hidden"
+        className="flex size-12 items-center justify-center rounded-card border border-line bg-ink-2 text-white lg:hidden"
       >
         <Menu size={20} strokeWidth={1.8} aria-hidden />
       </button>
@@ -43,7 +43,7 @@ export function MobileMenu() {
             type="button"
             onClick={close}
             aria-label={t('closeMenu')}
-            className="flex size-12 items-center justify-center rounded-[14px] border border-line bg-ink-2"
+            className="flex size-12 items-center justify-center rounded-card border border-line bg-ink-2"
           >
             <X size={20} strokeWidth={1.8} aria-hidden />
           </button>

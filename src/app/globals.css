@@ -2,40 +2,63 @@
 
 /* Pixel brand tokens — mirrors the "Charte graphique" board of the redesign. */
 @theme {
-  --color-ink: #0e0c15;
-  --color-ink-2: #15131d;
-  --color-ink-3: #1b1b2e;
-  --color-line: #252134;
-  --color-line-strong: #3f3a52;
-  --color-lavender: #cac6dd;
-  --color-mist: #ada8c3;
-  --color-muted: #8f8aa6;
+  /* V1 "Nouvelle identité" — every colour is read from the Illustrator logo. */
+  --color-white: #f0efef; /* Paper: the PIXEL wordmark on dark */
+  --color-ink: #0f1010; /* Ink: background of the reversed logo */
+  --color-ink-2: #151616;
+  --color-ink-3: #1e1f1f;
+  --color-line: #2a2b2b;
+  --color-line-strong: #3a3b3b;
+  --color-lavender: #c9c6c3;
+  --color-mist: #a6a3a0;
+  --color-muted: #8c8986;
+  --color-paper: #f0efef;
+  --color-charcoal: #151515;
+  --color-stone: #5c5955;
 
-  --color-orange: #f18a27;
-  --color-orange-light: #f4a33f;
-  --color-orange-deep: #dd3f14;
-  --color-orange-tint: #2a1e14;
+  /* The symbol gradient: ember → flame → amber. Flame is the only solid accent. */
+  --color-orange: #ee7d22;
+  --color-orange-light: #f6a43d;
+  --color-orange-deep: #e75924;
+  --color-orange-tint: #2a1d12;
+  --color-ember: #e75924;
+  --color-flame: #ee7d22;
+  --color-amber: #f6a43d;
 
-  /* One colour per studio, taken from the dots of the logo. */
-  --color-teal: #4bb1af;
-  --color-yellow: #ebba3a;
-  --color-red: #e24a5e;
-  --color-red-tint: #2a1a24;
-  --color-lime: #acc544;
-  --color-lime-tint: #1e2614;
-  --color-violet: #858dff;
-  --color-whatsapp: #7adb78;
+  /* The old logo had four coloured dots; the new one has none. Studio tones now
+     all resolve to the brand accent so the site speaks with a single voice. */
+  --color-teal: #ee7d22;
+  --color-yellow: #f6a43d;
+  --color-red: #ee7d22;
+  --color-red-tint: #2a1d12;
+  --color-lime: #ee7d22;
+  --color-lime-tint: #2a1d12;
+  --color-violet: #ee7d22;
+  --color-whatsapp: #f6a43d;
 
-  --font-sans: var(--font-sora), var(--font-readex), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-source-code), var(--font-readex), ui-monospace, monospace;
-  --font-grotesk: var(--font-space-grotesk), var(--font-readex), ui-sans-serif, sans-serif;
+  --font-sans: var(--font-archivo), var(--font-readex), 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: var(--font-barlow), var(--font-readex), 'Arial Narrow', sans-serif;
+  --font-grotesk: var(--font-barlow), var(--font-readex), 'Arial Narrow', sans-serif;
 
-  --radius-field: 14px;
-  --radius-tile: 20px;
-  --radius-card: 24px;
-  --radius-block: 32px;
+  /* Angular brand: the symbol has no curves, so corners stay tight. */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+  --radius-2xl: 4px;
+  --radius-3xl: 4px;
+  --radius-field: 0px;
+  --radius-tile: 4px;
+  --radius-card: 4px;
+  --radius-block: 4px;
 
   --breakpoint-xs: 26rem;
+
+  --animate-marquee: px-marquee 48s linear infinite;
+  @keyframes px-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
 @layer base {
@@ -67,9 +90,10 @@
 
   /* Arabic: the script joins letters, so tracking and case transforms break it. */
   :lang(ar) {
-    --font-sans: var(--font-readex), var(--font-sora), ui-sans-serif, system-ui, sans-serif;
-    --font-mono: var(--font-readex), var(--font-source-code), ui-monospace, monospace;
-    --font-grotesk: var(--font-readex), var(--font-space-grotesk), ui-sans-serif, sans-serif;
+    --font-sans: var(--font-readex), var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    --font-mono: var(--font-readex), var(--font-barlow), ui-sans-serif, sans-serif;
+    --font-grotesk: var(--font-readex), var(--font-barlow), ui-sans-serif, sans-serif;
+    font-stretch: normal !important;
     letter-spacing: 0 !important;
     text-transform: none !important;
   }
@@ -102,81 +126,121 @@
 
 /* ── Shapes ─────────────────────────────────────────────────────────────── */
 
-/* Pointy-top hexagon, the geometry of the "P" monogram. */
+/* The P symbol itself: stem, folded facets, forward point. Used for photo masks,
+   bullets and markers. (Kept under the old `clip-hex` name so every page follows.) */
 @utility clip-hex {
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(0 7.7%, 32.2% 25.5%, 67.3% 0, 100% 29.2%, 100% 57.4%, 67.2% 86.3%, 37.8% 66%, 37.8% 100%, 0 83%);
+}
+@utility clip-mark {
+  clip-path: polygon(0 7.7%, 32.2% 25.5%, 67.3% 0, 100% 29.2%, 100% 57.4%, 67.2% 86.3%, 37.8% 66%, 37.8% 100%, 0 83%);
 }
 
-/* Elongated hexagon for buttons. Symmetric, so it reads the same in RTL. */
+/* Buttons end in the symbol's point: every action moves forward. Mirrored in RTL. */
 @utility clip-chamfer {
-  clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 16px 100%, 0 50%);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+  &:where([dir='rtl'], [dir='rtl'] *) {
+    clip-path: polygon(20px 0, 100% 0, 100% 100%, 20px 100%, 0 50%);
+  }
 }
 
 @utility clip-chamfer-sm {
-  clip-path: polygon(13px 0, calc(100% - 13px) 0, 100% 50%, calc(100% - 13px) 100%, 13px 100%, 0 50%);
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
+  &:where([dir='rtl'], [dir='rtl'] *) {
+    clip-path: polygon(16px 0, 100% 0, 100% 100%, 16px 100%, 0 50%);
+  }
+}
+
+/* Gradient text, reserved for one word of a page title. */
+@utility text-brand-gradient {
+  background: linear-gradient(90deg, var(--color-ember), var(--color-flame) 50%, var(--color-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Outlined numerals (process steps, studio indexes). */
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #6e6b68;
 }
 
 /* ── Typography scale ───────────────────────────────────────────────────── */
 
 @utility text-display {
-  font-size: clamp(3rem, 7.2vw, 7rem);
-  line-height: 0.98;
+  font-size: clamp(3.5rem, 8.6vw, 8.5rem);
+  line-height: 0.9;
   letter-spacing: -0.045em;
-  font-weight: 600;
+  font-weight: 800;
+  font-stretch: 112%;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
   &:lang(ar) {
     line-height: 1.22;
+    font-weight: 700;
   }
 }
 
 @utility text-h1 {
-  font-size: clamp(2.75rem, 6.2vw, 6rem);
-  line-height: 0.98;
+  font-size: clamp(2.875rem, 6.4vw, 6.25rem);
+  line-height: 0.9;
   letter-spacing: -0.045em;
-  font-weight: 600;
+  font-weight: 800;
+  font-stretch: 112%;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
   &:lang(ar) {
     line-height: 1.25;
+    font-weight: 700;
   }
 }
 
 @utility text-h2 {
-  font-size: clamp(2.25rem, 4.6vw, 4rem);
-  line-height: 1.04;
-  letter-spacing: -0.035em;
-  font-weight: 600;
+  font-size: clamp(2.375rem, 5vw, 4.75rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+  font-stretch: 112%;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
   &:lang(ar) {
     line-height: 1.3;
+    font-weight: 700;
   }
 }
 
 @utility text-h3 {
-  font-size: clamp(1.5rem, 2.2vw, 1.75rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  font-weight: 600;
+  font-size: clamp(1.625rem, 2.4vw, 2.125rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  font-stretch: 112%;
   &:lang(ar) {
     line-height: 1.45;
+    font-weight: 700;
   }
 }
 
 @utility text-lead {
-  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
   &:lang(ar) {
     line-height: 1.85;
-    font-weight: 400;
   }
 }
 
-/* Source Code Pro label: navigation, buttons, indexes. */
+/* Barlow Condensed label — echoes the wide-tracked "CREATIVE AGENCY" tagline. */
 @utility text-label {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   &:lang(ar) {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
   }
 }
 

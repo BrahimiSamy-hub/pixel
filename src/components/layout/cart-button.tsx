@@ -13,13 +13,13 @@ export function CartButton() {
     <Link
       href="/paiement"
       aria-label={t('cart', { count })}
-      className="relative flex size-12 items-center justify-center rounded-[14px] border border-line bg-ink-2 text-white transition-colors hover:border-line-strong"
+      className="relative flex size-12 items-center justify-center rounded-card border border-line bg-ink-2 text-white transition-colors hover:border-line-strong"
     >
       <ShoppingCart size={20} strokeWidth={1.8} aria-hidden />
       {count > 0 ? (
         <span
           aria-hidden
-          className="absolute -inset-e-1.5 -top-1.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-orange px-1 font-mono text-[0.6875rem] font-bold text-ink"
+          className="absolute -inset-e-1.5 -top-1.5 flex h-5 min-w-5 items-center justify-center bg-orange px-1 font-mono text-[0.8125rem] font-bold text-ink"
         >
           {count}
         </span>

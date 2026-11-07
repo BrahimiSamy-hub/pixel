@@ -66,14 +66,14 @@ export default async function PhotoLabPage({ params }: PageProps<'/[locale]/phot
             </div>
           </div>
           <div className="flex h-[clamp(26rem,42vw,36rem)] min-w-0 flex-[1_1_27.5rem] items-end gap-4">
-            <div className="relative h-full flex-[1.3] overflow-hidden rounded-[1.75rem] bg-ink-2">
+            <div className="relative h-full flex-[1.3] overflow-hidden rounded-card bg-ink-2">
               <Image src={fashionWeek} alt={t('heroMainAlt')} fill preload placeholder="blur" sizes="(min-width: 1024px) 360px, 55vw" className="object-cover" />
             </div>
             <div className="flex h-full flex-1 flex-col gap-4">
               <div className="relative flex-1 bg-teal clip-hex">
                 <Image src={jewel} alt={t('heroHexAlt')} fill placeholder="blur" sizes="280px" className="object-cover" />
               </div>
-              <div className="relative flex-1 overflow-hidden rounded-[1.75rem] bg-ink-2">
+              <div className="relative flex-1 overflow-hidden rounded-card bg-ink-2">
                 <Image src={lipstick} alt={t('heroSmallAlt')} fill placeholder="blur" sizes="280px" className="object-cover" />
               </div>
             </div>

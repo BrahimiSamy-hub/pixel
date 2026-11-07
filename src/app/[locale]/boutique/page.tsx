@@ -41,11 +41,11 @@ export default async function ShopPage({ params }: PageProps<'/[locale]/boutique
               const image = apiImageUrl(c.image)
               const href = slug === 'neons' ? '/publicite' : slug === 'games' ? '/loup-garou-regles' : `/boutique/${c._id}`
               return (
-                <Link key={c._id} href={href} className="group relative block aspect-4/3 overflow-hidden rounded-[1.75rem] bg-ink-2">
+                <Link key={c._id} href={href} className="group relative block aspect-4/3 overflow-hidden rounded-card bg-ink-2">
                   {image ? (
                     <Image src={image} alt="" fill sizes="(min-width: 1024px) 420px, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
                   ) : null}
-                  <span className="absolute inset-s-4 bottom-4 flex items-center gap-2.5 rounded-[0.875rem] bg-ink px-4 py-3 font-semibold">
+                  <span className="absolute inset-s-4 bottom-4 flex items-center gap-2.5 rounded-card bg-ink px-4 py-3 font-semibold">
                     {slug ? t(`categories.${slug}`) : categoryFallbackName(c, locale)}
                     {slug ? (
                       <span className="font-mono text-xs font-normal text-mist">
@@ -71,7 +71,7 @@ export default async function ShopPage({ params }: PageProps<'/[locale]/boutique
                 return { id: p._id, category: slug, node: <ProductCard product={p} showAdd isNew={NEW_PRODUCTS.has(p.name)} /> }
               })}
               emptyNeons={
-                <div className="flex flex-wrap items-center justify-between gap-6 rounded-[1.75rem] border border-dashed border-line-strong bg-ink-2 p-10 sm:p-16">
+                <div className="flex flex-wrap items-center justify-between gap-6 rounded-card border border-dashed border-line-strong bg-ink-2 p-10 sm:p-16">
                   <div className="flex max-w-xl flex-col gap-3">
                     <h3 className="text-h3">{t('neons.title')}</h3>
                     <p className="leading-relaxed text-mist">{t('neons.text')}</p>
@@ -81,7 +81,7 @@ export default async function ShopPage({ params }: PageProps<'/[locale]/boutique
               }
             />
           ) : (
-            <p role="status" className="rounded-[1.75rem] border border-dashed border-line-strong p-12 text-center text-mist">
+            <p role="status" className="rounded-card border border-dashed border-line-strong p-12 text-center text-mist">
               {t('loadError')}
             </p>
           )}

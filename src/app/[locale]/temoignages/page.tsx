@@ -42,7 +42,7 @@ export default async function TestimonialsPage({ params }: PageProps<'/[locale]/
               {t('title')} <span className="text-orange">{t('titleAccent')}</span>
             </h1>
           </div>
-          <div className="flex flex-[0_1_22.5rem] flex-col gap-3.5 rounded-[1.75rem] border border-line bg-ink-2 p-8">
+          <div className="flex flex-[0_1_22.5rem] flex-col gap-3.5 rounded-card border border-line bg-ink-2 p-8">
             <p className="flex items-baseline gap-2.5">
               <span className="text-[4rem] leading-none font-semibold tracking-[-0.04em]">{formatDecimal(site.rating.value, locale)}</span>
               <span className="text-xl text-mist">/ {site.rating.best}</span>

@@ -73,7 +73,7 @@ export default async function SoundPage({ params }: PageProps<'/[locale]/sons'>)
 
       <section className="section-y border-y border-line bg-ink-2">
         <Container className="flex flex-wrap items-center gap-x-16 gap-y-12">
-          <div className="relative aspect-square max-h-140 min-w-0 flex-[1_1_26rem] overflow-hidden rounded-[1.75rem]">
+          <div className="relative aspect-square max-h-140 min-w-0 flex-[1_1_26rem] overflow-hidden rounded-card">
             <Image src={mic} alt={t('micAlt')} fill placeholder="blur" sizes="(min-width: 1024px) 560px, 100vw" className="object-cover" />
           </div>
           <div className="flex min-w-0 flex-[1_1_26rem] flex-col gap-5.5">

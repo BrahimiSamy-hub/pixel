@@ -55,8 +55,9 @@ npm run typecheck  # regenerates route types, then tsc
 
 ## Brand
 
-Colours, type scale and shapes are tokens in `src/app/globals.css`:
+The identity follows the new Pixel logo (V1 "Nouvelle identité"). Tokens live in `src/app/globals.css`:
 
-- **Colours:** ink `#0E0C15` background and orange `#F18A27` for actions.
-- **Studio colours:** each studio takes one of the logo dots: Photo teal, Creative yellow, Weddings red, Development lime, Sounds violet, Advertisement orange.
-- **Shapes:** the hexagon from the "P" monogram is available as `clip-hex`, and buttons use `clip-chamfer`.
+- **Colours:** ink `#0F1010` background, paper `#F0EFEF` text, flame `#EE7D22` as the only solid accent. The ember → flame → amber gradient (`#E75924 → #EE7D22 → #F6A43D`) is reserved for the symbol and one word of a page title (`text-brand-gradient`). The old studio colour tokens (`teal`, `yellow`…) still exist but resolve to the brand accent.
+- **Type:** Archivo ExtraBold at 112 % width for headings (echoes the PIXEL wordmark), Barlow Condensed wide-tracked capitals for labels, buttons and navigation (echoes the CREATIVE AGENCY tagline), Archivo Regular for body text. Readex Pro for Arabic.
+- **Shapes:** `clip-mark` (alias `clip-hex`) is the P symbol, used for the hero photo mask, bullets and badges. Buttons use `clip-chamfer`: the symbol's forward point, mirrored in RTL. Corners stay tight (4 px).
+- **Logo files:** `src/assets/brand/` (full logo, lockup without tagline, symbol, white symbol).

@@ -30,7 +30,7 @@ export function QuoteForm() {
     <form
       action={action}
       noValidate
-      className="relative grid min-w-0 flex-[1.4_1_32.5rem] grid-cols-[repeat(auto-fit,minmax(13.75rem,1fr))] gap-5 rounded-[1.75rem] border border-line bg-ink-2 p-7 sm:p-11"
+      className="relative grid min-w-0 flex-[1.4_1_32.5rem] grid-cols-[repeat(auto-fit,minmax(13.75rem,1fr))] gap-5 rounded-card border border-line bg-ink-2 p-7 sm:p-11"
     >
       <Honeypot />
       <Field id="q-type" label={t('type')}>

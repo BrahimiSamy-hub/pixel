@@ -7,14 +7,14 @@ type Size = 'md' | 'sm'
 
 const variants: Record<Variant, string> = {
   primary: 'bg-orange text-ink hover:bg-orange-light',
-  secondary: 'bg-line text-white hover:bg-line-strong',
-  ink: 'bg-ink text-white hover:bg-ink-3',
-  light: 'bg-white text-ink hover:bg-lavender',
+  secondary: 'bg-ink-3 text-white hover:bg-line-strong',
+  ink: 'bg-ink text-white hover:bg-charcoal',
+  light: 'bg-paper text-ink hover:bg-lavender',
 }
 
 const sizes: Record<Size, string> = {
-  md: 'clip-chamfer min-h-14 px-8 text-[0.8125rem]',
-  sm: 'clip-chamfer-sm min-h-12 px-6 text-xs',
+  md: 'clip-chamfer min-h-14 ps-7 pe-11 text-lg',
+  sm: 'clip-chamfer-sm min-h-12 ps-5 pe-9 text-base',
 }
 
 export function buttonClass({
@@ -23,8 +23,8 @@ export function buttonClass({
   className,
 }: { variant?: Variant; size?: Size; className?: string } = {}) {
   return cn(
-    // The chamfer clip-path cuts an outer outline, so the focus ring is drawn inside.
-    'inline-flex shrink-0 items-center justify-center gap-3 font-mono font-bold tracking-[0.08em] uppercase transition-colors focus-visible:outline-offset-[-5px] focus-visible:outline-current disabled:cursor-not-allowed disabled:opacity-60',
+    // The pointed clip-path (the symbol's forward point) cuts an outer outline, so the focus ring is drawn inside.
+    'inline-flex shrink-0 items-center justify-center gap-3 font-mono font-bold tracking-[0.16em] uppercase transition-colors focus-visible:outline-offset-[-5px] focus-visible:outline-current disabled:cursor-not-allowed disabled:opacity-60',
     variants[variant],
     sizes[size],
     className,

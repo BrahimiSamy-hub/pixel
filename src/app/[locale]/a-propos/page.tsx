@@ -46,14 +46,14 @@ export default async function AboutPage({ params }: PageProps<'/[locale]/a-propo
       </section>
 
       <Container className="flex flex-wrap items-end gap-5 pt-10">
-        <div className="relative aspect-16/10 min-w-0 flex-[2_1_32rem] overflow-hidden rounded-[1.75rem] bg-ink-2">
+        <div className="relative aspect-16/10 min-w-0 flex-[2_1_32rem] overflow-hidden rounded-card bg-ink-2">
           <Image src={stage} alt={t('galleryMain')} fill preload placeholder="blur" sizes="(min-width: 1024px) 860px, 100vw" className="object-cover" />
         </div>
         <div className="flex min-w-0 flex-[1_1_16rem] flex-col gap-5">
           <div className="relative aspect-[0.866] w-[78%] self-end overflow-hidden bg-ink-2 clip-hex">
             <Image src={kid} alt={t('galleryHex')} fill placeholder="blur" sizes="320px" className="object-cover" />
           </div>
-          <div className="relative aspect-4/3 overflow-hidden rounded-[1.75rem] bg-ink-2">
+          <div className="relative aspect-4/3 overflow-hidden rounded-card bg-ink-2">
             <Image src={flares} alt={t('gallerySmall')} fill placeholder="blur" sizes="(min-width: 1024px) 420px, 100vw" className="object-cover" />
           </div>
         </div>
@@ -135,7 +135,7 @@ export default async function AboutPage({ params }: PageProps<'/[locale]/a-propo
           >
             <span className="flex -translate-y-[10%] flex-col items-center gap-2.5">
               <Image src={mark} alt="" unoptimized className="h-auto w-14" />
-              <span className="rounded-[0.625rem] border border-line bg-ink px-3.5 py-2 text-sm font-semibold whitespace-nowrap">{site.name}</span>
+              <span className="rounded-card border border-line bg-ink px-3.5 py-2 text-sm font-semibold whitespace-nowrap">{site.name}</span>
               <span className="font-mono text-xs text-mist" dir="ltr">
                 {site.geo.latitude}° N · {site.geo.longitude}° E
               </span>

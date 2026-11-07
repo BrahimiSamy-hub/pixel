@@ -39,7 +39,7 @@ export function ProductCard({ product, showAdd = false, isNew = false, className
 
   return (
     <article className={cn('flex flex-col gap-3.5', className)}>
-      <Link href={href} className="group relative block aspect-square overflow-hidden rounded-[1.375rem] border border-line bg-ink-2">
+      <Link href={href} className="group relative block aspect-square overflow-hidden rounded-card border border-line bg-ink-2">
         {image ? (
           <Image
             src={image}

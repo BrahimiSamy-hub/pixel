@@ -3,7 +3,7 @@ import { Breadcrumbs, type Crumb } from '@/components/ui/breadcrumbs'
 import { Container } from '@/components/ui/container'
 import { Eyebrow } from '@/components/ui/section-header'
 import { cn } from '@/lib/cn'
-import { toneClasses, type Tone } from '@/lib/studios'
+import type { Tone } from '@/lib/studios'
 
 /** Standard top of an inner page: breadcrumbs, eyebrow, display title with an accent, lead. */
 export function PageHero({
@@ -42,7 +42,7 @@ export function PageHero({
             {accent ? (
               <>
                 {' '}
-                <span className={toneClasses[tone].text}>{accent}</span>
+                <span className="text-brand-gradient">{accent}</span>
               </>
             ) : null}
           </h1>

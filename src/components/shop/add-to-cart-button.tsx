@@ -27,7 +27,7 @@ export function AddToCartButton({ item, className }: { item: Payload; className?
         })
       }}
       className={cn(
-        'flex min-h-12 items-center justify-center gap-2.5 rounded-[14px] border border-line-strong bg-ink-2 font-mono text-xs font-bold tracking-[0.08em] text-white uppercase transition-colors hover:border-orange',
+        'flex min-h-12 items-center justify-center gap-2.5 rounded-card border border-line-strong bg-ink-2 font-mono text-xs font-bold tracking-[0.08em] text-white uppercase transition-colors hover:border-orange',
         className,
       )}
     >

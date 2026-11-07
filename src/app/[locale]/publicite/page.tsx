@@ -63,7 +63,7 @@ export default async function AdsPage({ params }: PageProps<'/[locale]/publicite
             </div>
           </div>
           <div className="relative min-w-0 flex-[1_1_27.5rem]">
-            <div className="relative aspect-square overflow-hidden rounded-[1.75rem] bg-ink-2">
+            <div className="relative aspect-square overflow-hidden rounded-card bg-ink-2">
               <Image src={neon} alt="DZ Neon" fill preload placeholder="blur" sizes="(min-width: 1024px) 560px, 100vw" className="object-cover" />
             </div>
             <div className="absolute -inset-s-4 bottom-8 flex flex-col gap-1 rounded-2xl border border-line bg-ink px-5 py-4">
@@ -81,7 +81,7 @@ export default async function AdsPage({ params }: PageProps<'/[locale]/publicite
             {(['print', 'works'] as const).map((k) => {
               const highlight = k === 'works'
               return (
-                <article key={k} className={cn('flex flex-col gap-4.5 rounded-[1.75rem] p-10', highlight ? 'bg-orange text-ink' : 'border border-line bg-ink-2')}>
+                <article key={k} className={cn('flex flex-col gap-4.5 rounded-card p-10', highlight ? 'bg-orange text-ink' : 'border border-line bg-ink-2')}>
                   <h3 className="text-h3">{t(`workshops.${k}.title`)}</h3>
                   <p className={cn('leading-relaxed', !highlight && 'text-mist')}>{t(`workshops.${k}.text`)}</p>
                   <ul className={cn('grid grid-cols-[repeat(auto-fit,minmax(13.75rem,1fr))] gap-x-6 text-[0.9375rem]', !highlight && 'text-lavender')}>

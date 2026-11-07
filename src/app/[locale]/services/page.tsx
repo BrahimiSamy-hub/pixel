@@ -73,7 +73,7 @@ export default async function ServicesPage({ params }: PageProps<'/[locale]/serv
                 i < studioList.length - 1 && 'border-b border-line',
               )}
             >
-              <div className="relative aspect-4/3 min-w-0 flex-[1_1_28.75rem] overflow-hidden rounded-[1.75rem] bg-ink-2">
+              <div className="relative aspect-4/3 min-w-0 flex-[1_1_28.75rem] overflow-hidden rounded-card bg-ink-2">
                 <Image src={image.src} alt={alt} fill placeholder="blur" sizes="(min-width: 1024px) 620px, 100vw" className="object-cover" />
               </div>
               <div className="flex min-w-0 flex-[1_1_28.75rem] flex-col gap-5">

@@ -1,7 +1,7 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import logo from '@/assets/logoSVG.svg'
+import logo from '@/assets/brand/pixel-lockup-dark.svg'
 import { FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from '@/components/ui/brand-icons'
 import { ButtonLink } from '@/components/ui/button'
 import { Link } from '@/i18n/navigation'
@@ -59,7 +59,7 @@ export function Header() {
       <TopBar />
       <div className="mx-auto flex min-h-20 max-w-[1360px] items-center justify-between gap-6 px-4 sm:px-10">
         <Link href="/" aria-label={t('homeLabel')} className="flex shrink-0 items-center">
-          <Image src={logo} alt="" unoptimized preload className="h-12 w-auto sm:h-[3.375rem]" />
+          <Image src={logo} alt="" unoptimized preload className="h-9 w-auto sm:h-10" />
         </Link>
         <nav aria-label={t('main')} className="hidden lg:block">
           <NavLinks />

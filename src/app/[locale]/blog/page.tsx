@@ -37,7 +37,7 @@ export default async function BlogPage({ params }: PageProps<'/[locale]/blog'>) 
   const card = (p: Post, big = false) => (
     <article
       className={cn(
-        'flex overflow-hidden rounded-[1.75rem] border border-line bg-ink-2',
+        'flex overflow-hidden rounded-card border border-line bg-ink-2',
         big ? 'flex-wrap' : 'h-full flex-col',
       )}
     >
@@ -93,7 +93,7 @@ export default async function BlogPage({ params }: PageProps<'/[locale]/blog'>) 
           ]}
           posts={rest.map((p) => ({ key: p.key, category: p.category, node: card(p) }))}
           trailing={
-            <div className="flex flex-col justify-between gap-6 rounded-[1.75rem] bg-orange p-8 text-ink">
+            <div className="flex flex-col justify-between gap-6 rounded-card bg-orange p-8 text-ink">
               <div className="flex flex-col gap-3.5">
                 <span className="text-label font-bold">{t('instagram.eyebrow')}</span>
                 <h2 className="text-[1.75rem] leading-tight font-semibold tracking-[-0.02em]">{t('instagram.title')}</h2>

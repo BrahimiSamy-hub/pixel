@@ -54,7 +54,7 @@ export function ProductConfigurator({ product, isNew }: { product: ConfigurableP
       <div className="flex min-w-0 flex-[1.1_1_30rem] flex-col gap-4">
         <div className="relative aspect-square overflow-hidden rounded-block border border-line bg-ink-2">
           {image ? <Image key={image} src={image} alt={variant ? `${product.name} — ${variant.name}` : product.name} fill preload sizes="(min-width: 1024px) 640px, 100vw" className="object-cover" /> : null}
-          {isNew ? <span className="absolute inset-s-5 top-5 rounded-[0.625rem] bg-orange px-3 py-1.5 text-label font-bold text-ink">{tCommon('new')}</span> : null}
+          {isNew ? <span className="absolute inset-s-5 top-5 rounded-card bg-orange px-3 py-1.5 text-label font-bold text-ink">{tCommon('new')}</span> : null}
         </div>
         {product.variants.length > 1 ? (
           <ul aria-label={t('gallery')} className="no-scrollbar flex gap-3 overflow-x-auto pb-1">

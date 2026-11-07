@@ -26,8 +26,8 @@ export function LocaleSwitcher({ className }: { className?: string }) {
             aria-label={t(locale)}
             aria-current={locale === current ? 'true' : undefined}
             className={cn(
-              'flex min-h-8 min-w-9 items-center justify-center rounded-md px-2 font-mono text-xs font-semibold tracking-[0.08em]',
-              locale === current ? 'bg-line text-white' : 'text-mist hover:text-white',
+              'flex min-h-8 min-w-9 items-center justify-center px-2 font-mono text-sm font-bold tracking-[0.14em]',
+              locale === current ? 'bg-orange text-ink' : 'text-mist hover:text-white',
             )}
           >
             {short[locale]}

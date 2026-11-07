@@ -16,7 +16,7 @@ export function Eyebrow({
   return (
     <div className={cn('flex items-center gap-3 text-label text-mist', className)}>
       {index ? <span className={toneClasses[tone].text}>{index}</span> : null}
-      <span aria-hidden className="h-px w-7 bg-line-strong" />
+      <span aria-hidden className="h-px w-8 bg-line-strong" />
       <span>{children}</span>
     </div>
   )

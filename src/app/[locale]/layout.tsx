@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
-import { Readex_Pro, Sora, Source_Code_Pro, Space_Grotesk } from 'next/font/google'
+import { Archivo, Barlow_Condensed, Readex_Pro } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { ClientProviders } from '@/components/layout/client-providers'
 import { ConsentAndAnalytics } from '@/components/layout/cookie-consent'
@@ -12,9 +12,10 @@ import { getDirection, routing } from '@/i18n/routing'
 import { localizedUrl } from '@/lib/seo'
 import { site } from '@/lib/site'
 
-const sora = Sora({ subsets: ['latin', 'latin-ext'], variable: '--font-sora', display: 'swap' })
-const sourceCode = Source_Code_Pro({ subsets: ['latin'], variable: '--font-source-code', display: 'swap' })
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' })
+// Archivo with its width axis: ExtraBold at 112 % echoes the heavy, wide PIXEL wordmark.
+const archivo = Archivo({ subsets: ['latin', 'latin-ext'], axes: ['wdth'], variable: '--font-archivo', display: 'swap' })
+// Condensed, wide-tracked capitals: the voice of the "CREATIVE AGENCY" tagline.
+const barlow = Barlow_Condensed({ subsets: ['latin', 'latin-ext'], weight: ['500', '600', '700'], variable: '--font-barlow', display: 'swap' })
 // Arabic face. Not preloaded: only Arabic pages use it, and preloading would cost FR/EN visitors.
 const readex = Readex_Pro({ subsets: ['arabic', 'latin'], variable: '--font-readex', display: 'swap', preload: false })
 
@@ -26,7 +27,7 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0e0c15',
+  themeColor: '#0f1010',
   colorScheme: 'dark',
 }
 
@@ -64,7 +65,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
     <html
       lang={locale}
       dir={dir}
-      className={`${sora.variable} ${sourceCode.variable} ${spaceGrotesk.variable} ${readex.variable}`}
+      className={`${archivo.variable} ${barlow.variable} ${readex.variable}`}
       data-scroll-behavior="smooth"
     >
       <body className="flex min-h-dvh flex-col">

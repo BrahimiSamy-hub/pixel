@@ -79,7 +79,7 @@ export function CategoryFilters({ items, materials, sizes }: { items: Filterable
                   aria-pressed={size === s}
                   onClick={() => setSize(size === s ? null : s)}
                   className={cn(
-                    'min-h-10 rounded-[0.625rem] border px-3 text-sm',
+                    'min-h-10 rounded-card border px-3 text-sm',
                     size === s ? 'border-orange bg-orange-tint text-white' : 'border-line-strong text-lavender hover:border-mist',
                   )}
                   dir="ltr"

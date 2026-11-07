@@ -73,7 +73,7 @@ export default async function DesignPage({ params }: PageProps<'/[locale]/design
       </section>
 
       <Container className="flex flex-wrap gap-5">
-        <div className="relative aspect-square max-h-155 min-w-0 flex-[1.4_1_28.75rem] overflow-hidden rounded-[1.75rem] bg-ink-2">
+        <div className="relative aspect-square max-h-155 min-w-0 flex-[1.4_1_28.75rem] overflow-hidden rounded-card bg-ink-2">
           <Image src={sevenFour} alt="Seven Four — Sweet & Dessert" fill preload placeholder="blur" sizes="(min-width: 1024px) 760px, 100vw" className="object-cover" />
         </div>
         <div className="flex min-w-0 flex-[1_1_18.75rem] flex-col gap-5">
@@ -81,7 +81,7 @@ export default async function DesignPage({ params }: PageProps<'/[locale]/design
             { src: myJuice, alt: 'My Juice' },
             { src: articor, alt: 'Articor' },
           ].map((img) => (
-            <div key={img.alt} className="relative min-h-70 flex-1 overflow-hidden rounded-[1.75rem] bg-ink-2">
+            <div key={img.alt} className="relative min-h-70 flex-1 overflow-hidden rounded-card bg-ink-2">
               <Image src={img.src} alt={img.alt} fill placeholder="blur" sizes="(min-width: 1024px) 520px, 100vw" className="object-cover" />
             </div>
           ))}
@@ -112,7 +112,7 @@ export default async function DesignPage({ params }: PageProps<'/[locale]/design
             ].map((offer) => (
               <article
                 key={offer.key}
-                className={`flex flex-wrap items-end justify-between gap-x-10 gap-y-6 rounded-[1.75rem] p-10 ${offer.highlight ? 'bg-yellow text-ink' : 'border border-line bg-ink'}`}
+                className={`flex flex-wrap items-end justify-between gap-x-10 gap-y-6 rounded-card p-10 ${offer.highlight ? 'bg-yellow text-ink' : 'border border-line bg-ink'}`}
               >
                 <div className="flex min-w-0 flex-[1_1_16rem] flex-col gap-3.5">
                   <h3 className="text-h3">{t(`pricing.${offer.key as 'design'}.title`)}</h3>

@@ -67,7 +67,7 @@ export function ConsentAndAnalytics() {
       {showBanner ? (
         <section
           aria-label={t('title')}
-          className="fixed inset-x-4 bottom-4 z-50 mx-auto flex max-w-3xl flex-wrap items-center gap-x-6 gap-y-4 rounded-[1.25rem] border border-line bg-ink-2 p-5 shadow-2xl shadow-black/50 sm:p-6"
+          className="fixed inset-x-4 bottom-4 z-50 mx-auto flex max-w-3xl flex-wrap items-center gap-x-6 gap-y-4 rounded-card border border-line bg-ink-2 p-5 shadow-2xl shadow-black/50 sm:p-6"
         >
           <p className="min-w-0 flex-[1_1_20rem] text-sm leading-relaxed text-lavender">
             {t('text')}{' '}
