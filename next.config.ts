@@ -21,6 +21,7 @@ const legacySlugs: Array<[from: string, to: string]> = [
 const nextConfig: NextConfig = {
   reactCompiler: true,
   poweredByHeader: false,
+  serverExternalPackages: ['@libsql/client', 'sharp'],
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -38,6 +39,17 @@ const nextConfig: NextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+        ],
+      },
+      {
+        // The app API authenticates with bearer tokens, never cookies, so allowing any
+        // origin is safe (browsers do not attach the token on their own). Needed for Expo web.
+        source: '/api/v1/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: 'Authorization, Content-Type, Accept' },
+          { key: 'Access-Control-Max-Age', value: '86400' },
         ],
       },
       {

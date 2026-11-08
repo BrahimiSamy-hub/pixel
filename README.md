@@ -61,3 +61,37 @@ The identity follows the new Pixel logo (V1 "Nouvelle identité"). Tokens live i
 - **Type:** Archivo ExtraBold at 112 % width for headings (echoes the PIXEL wordmark), Barlow Condensed wide-tracked capitals for labels, buttons and navigation (echoes the CREATIVE AGENCY tagline), Archivo Regular for body text. Readex Pro for Arabic.
 - **Shapes:** `clip-mark` (alias `clip-hex`) is the P symbol, used for the hero photo mask, bullets and badges. Buttons use `clip-chamfer`: the symbol's forward point, mirrored in RTL. Corners stay tight (4 px).
 - **Logo files:** `src/assets/brand/` (full logo, lockup without tagline, symbol, white symbol).
+
+## Digital cards (Pixel Cards)
+
+The site is also the backend of the mobile app (`../pixel-mobile`). Pixel creates client accounts; each client gets a landing page at `/c/<username>` and a QR code that points to it. Clients edit their page from the app.
+
+### First run
+
+```bash
+cp .env.example .env.local       # DATABASE_URL, CARD_BASE_URL
+npm run db:migrate               # creates ./data/pixel.db (SQLite)
+npm run admin:create -- <username> <password>
+npm run dev                      # back office at http://localhost:3000/admin
+```
+
+**`CARD_BASE_URL` is printed into every QR code.** Set it to the final domain before any business card is printed: changing it later changes every QR code.
+
+### Pieces
+
+| Path | What |
+| --- | --- |
+| `src/server/db/schema.ts` | Drizzle schema: `users`, `cards` (page content as JSON), `media` (images), `sessions`. After a change: `npm run db:generate` then `npm run db:migrate`. |
+| `src/server/card-schema.ts` | zod schema of a card, themes, social networks. Mirrored by `pixel-mobile/src/lib/types.ts`: keep both in sync. |
+| `src/server/auth.ts` | Username + password (scrypt), opaque session tokens (only their SHA-256 is stored), login throttling. App: `Authorization: Bearer`. Back office: `pixel_admin` cookie. |
+| `src/app/admin/` | Back office (French, not indexed): create clients (the QR code exists from creation), download SVG/PNG, reset passwords, disable, delete. No public sign-up. |
+| `src/app/api/v1/` | App API: `auth/login`, `auth/logout`, `me`, `me/card` (PUT), `me/media` (POST multipart: logo / avatar / cover), `me/qr`, `me/password`. |
+| `src/app/c/[slug]/[[...lang]]/` | Public page. `/c/<user>` uses the client's default language, `/c/<user>/ar` forces one. Own `<html>`: no site header/footer. |
+| `src/components/card/` | Page markup and its five themes (`aurora`, `minimal`, `bold`, `card`, `elegant`) in `card-page.module.css`. `theme-vars.ts` adjusts the client's colours until text keeps WCAG AA contrast on each theme. |
+| `src/server/images.ts` | Uploads are re-encoded to WebP with sharp (SVG refused). Logo uploads also return a palette of brand colours, which the app applies to the page. |
+
+### Production notes
+
+- **Database:** a local SQLite file only works on a host with a persistent disk. On serverless hosting (Vercel), use Turso: `DATABASE_URL=libsql://…` plus `DATABASE_AUTH_TOKEN`, then `npm run db:migrate`.
+- **Images** are stored in the database, so there is no upload folder to back up.
+- **Login throttling** is kept in memory, so the limit applies per server instance.

@@ -47,3 +47,6 @@ coverage/
 # TypeScript / Next
 next-env.d.ts
 *.tsbuildinfo
+
+# Local database (cards app)
+/data/

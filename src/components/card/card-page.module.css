@@ -1,0 +1,908 @@
+/*
+ * Client landing pages. One markup, five themes selected with [data-theme].
+ * Colours come from theme-vars.ts as custom properties:
+ *   --p / --a          client primary / accent
+ *   --on-p / --on-a    readable text on them
+ *   --bg / --on-bg     page background and its text
+ *   --surface / --ink  card surfaces and their text
+ *   --p-text / --a-text   brand colours readable on --surface
+ *   --p-on-bg / --a-on-bg brand colours readable on --bg
+ * Logical properties only, so Arabic (RTL) works without overrides.
+ */
+
+.page {
+  --radius: 22px;
+  --radius-sm: 14px;
+  --gap: 14px;
+  --font-display: var(--font-archivo), var(--font-readex), system-ui, sans-serif;
+  --font-body: var(--font-archivo), var(--font-readex), system-ui, sans-serif;
+  --line: color-mix(in srgb, var(--ink) 10%, transparent);
+  --muted: color-mix(in srgb, var(--ink) 62%, transparent);
+
+  position: relative;
+  min-height: 100dvh;
+  overflow-x: clip;
+  background: var(--bg);
+  color: var(--on-bg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page:lang(ar) {
+  --font-display: var(--font-readex), system-ui, sans-serif;
+  --font-body: var(--font-readex), system-ui, sans-serif;
+}
+
+/* :where() keeps this at zero specificity so component classes can set their own colour. */
+:where(.page) :where(a) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page :focus-visible {
+  outline: 3px solid var(--a-on-bg);
+  outline-offset: 3px;
+}
+
+.page img {
+  display: block;
+  max-width: 100%;
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  margin-inline: auto;
+  width: min(100%, 520px);
+  padding: 20px 16px 40px;
+  display: grid;
+  gap: var(--gap);
+}
+
+/* ---------- Hero ---------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  display: grid;
+}
+
+.cover {
+  display: none;
+}
+
+.identity {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 6px;
+  padding-block: 28px 8px;
+}
+
+.portrait {
+  position: relative;
+  width: 116px;
+  height: 116px;
+  margin-block-end: 12px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 10px 40px -12px color-mix(in srgb, var(--p) 70%, transparent);
+}
+
+.portrait > img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.portrait[data-kind='logo'] > img {
+  object-fit: contain;
+  padding: 16px;
+}
+
+.portrait[data-kind='initials'] {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--p), var(--a));
+  color: var(--on-p);
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.logoBadge {
+  position: absolute;
+  inset-block-end: -4px;
+  inset-inline-end: -4px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 6px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.25);
+}
+
+.logoBadge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 7vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-stretch: 105%;
+  text-wrap: balance;
+}
+
+.role {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.role strong {
+  font-weight: 700;
+  color: var(--a-on-bg);
+}
+
+.bio {
+  margin: 8px 0 0;
+  max-width: 40ch;
+  font-size: 15px;
+  opacity: 0.75;
+  text-wrap: pretty;
+}
+
+/* ---------- Quick actions ------------------------------------------------- */
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  gap: 10px;
+}
+
+.actions[data-count='1'] { --cols: 1; }
+.actions[data-count='2'] { --cols: 2; }
+.actions[data-count='3'] { --cols: 3; }
+
+.action {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 14px 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.action:active {
+  transform: scale(0.97);
+}
+
+.actionIcon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--p);
+  color: var(--on-p);
+}
+
+.save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  border-radius: var(--radius-sm);
+  background: var(--a);
+  color: var(--on-a);
+  font-weight: 700;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.save:hover {
+  filter: brightness(1.06);
+}
+
+.save:active {
+  transform: scale(0.99);
+}
+
+/* ---------- Sections ------------------------------------------------------ */
+
+.section {
+  display: grid;
+  gap: 10px;
+  margin-block-start: 8px;
+}
+
+.sectionTitle {
+  margin: 0;
+  padding-inline: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.sectionTitle:lang(ar) {
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  gap: 10px;
+}
+
+.social {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 14px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  transition: transform 0.15s ease;
+}
+
+.social:hover {
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--brand);
+  color: #fff;
+}
+
+.social[style*='#FFFC00'] .socialIcon {
+  color: #111;
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.rows li + li {
+  border-block-start: 1px solid var(--line);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  transition: background 0.15s ease;
+}
+
+.row:hover {
+  background: color-mix(in srgb, var(--p) 6%, transparent);
+}
+
+.rowIcon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--p) 14%, transparent);
+  color: var(--p-text);
+}
+
+.rowText {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.rowText:has(> [dir='ltr']) {
+  text-align: start;
+}
+
+.rowLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.chevron {
+  flex: none;
+  color: var(--muted);
+}
+
+.chevron:dir(rtl),
+.page:lang(ar) .chevron {
+  transform: scaleX(-1);
+}
+
+.map {
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border: 0;
+  filter: saturate(0.9);
+}
+
+.mapFooter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.mapFooter > svg {
+  color: var(--p-text);
+}
+
+.mapFooter > span:first-of-type {
+  flex: 1;
+  min-width: 12ch;
+}
+
+.mapCta {
+  font-weight: 700;
+  color: var(--p-text);
+}
+
+/* ---------- Footer -------------------------------------------------------- */
+
+.footer {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  margin-block-start: 18px;
+  font-size: 13px;
+}
+
+.share {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid color-mix(in srgb, var(--on-bg) 25%, transparent);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.langs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--on-bg) 8%, transparent);
+}
+
+.langs a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+.langs a[aria-current] {
+  background: var(--on-bg);
+  color: var(--bg);
+  opacity: 1;
+  font-weight: 700;
+}
+
+.credit {
+  opacity: 0.55;
+}
+
+.decor {
+  display: none;
+}
+
+/* ==========================================================================
+   AURORA — dark, glowing blobs of the brand colours, glass surfaces.
+   ========================================================================== */
+
+.page[data-theme='aurora'] {
+  --line: rgb(255 255 255 / 0.08);
+}
+
+.page[data-theme='aurora'] .decor {
+  display: block;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  filter: blur(70px);
+  opacity: 0.55;
+}
+
+.page[data-theme='aurora'] .decor span {
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  background: var(--p);
+  animation: drift 22s ease-in-out infinite alternate;
+}
+
+.page[data-theme='aurora'] .decor span:nth-child(1) {
+  inset-block-start: -30vmax;
+  inset-inline-start: -20vmax;
+}
+
+.page[data-theme='aurora'] .decor span:nth-child(2) {
+  inset-block-start: 10vmax;
+  inset-inline-end: -35vmax;
+  background: var(--a);
+  animation-duration: 28s;
+}
+
+.page[data-theme='aurora'] .decor span:nth-child(3) {
+  inset-block-end: -40vmax;
+  inset-inline-start: -10vmax;
+  width: 50vmax;
+  height: 50vmax;
+  opacity: 0.6;
+  animation-duration: 34s;
+}
+
+@keyframes drift {
+  to {
+    transform: translate(6vmax, 8vmax) scale(1.15);
+  }
+}
+
+.page[data-theme='aurora'] .action,
+.page[data-theme='aurora'] .social,
+.page[data-theme='aurora'] .rows,
+.page[data-theme='aurora'] .map {
+  border: 1px solid rgb(255 255 255 / 0.09);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}
+
+.page[data-theme='aurora'] .portrait {
+  outline: 3px solid color-mix(in srgb, #fff 18%, transparent);
+  outline-offset: 5px;
+}
+
+.page[data-theme='aurora'] .rowIcon {
+  color: var(--p-on-bg);
+}
+
+.page[data-theme='aurora'] .mapFooter > svg,
+.page[data-theme='aurora'] .mapCta {
+  color: var(--p-on-bg);
+}
+
+/* ==========================================================================
+   MINIMAL — light and quiet. Left-aligned identity, hairlines, square-ish.
+   ========================================================================== */
+
+.page[data-theme='minimal'] {
+  --radius-sm: 12px;
+}
+
+.page[data-theme='minimal'] .identity {
+  justify-items: start;
+  text-align: start;
+  padding-block-start: 36px;
+}
+
+.page[data-theme='minimal'] .portrait {
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+  box-shadow: none;
+  border: 1px solid var(--line);
+}
+
+.page[data-theme='minimal'] .portrait[data-kind='logo'] > img {
+  padding: 10px;
+}
+
+.page[data-theme='minimal'] .name {
+  font-size: clamp(2rem, 9vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  font-stretch: 100%;
+}
+
+.page[data-theme='minimal'] .role strong {
+  color: var(--p-text);
+}
+
+.page[data-theme='minimal'] .bio {
+  max-width: none;
+}
+
+.page[data-theme='minimal'] .actions {
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.page[data-theme='minimal'] .action {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 0;
+  font-size: 15px;
+}
+
+.page[data-theme='minimal'] .action + .action {
+  border-block-start: 1px solid var(--line);
+}
+
+.page[data-theme='minimal'] .actionIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--p) 12%, transparent);
+  color: var(--p-text);
+}
+
+.page[data-theme='minimal'] .save {
+  background: #141414;
+  color: #fff;
+}
+
+.page[data-theme='minimal'] .rows,
+.page[data-theme='minimal'] .map,
+.page[data-theme='minimal'] .social {
+  border: 1px solid var(--line);
+}
+
+.page[data-theme='minimal'] .socials {
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+}
+
+.page[data-theme='minimal'] .social {
+  padding: 12px 4px;
+}
+
+.page[data-theme='minimal'] .socialIcon {
+  background: transparent;
+  color: var(--brand);
+  width: 32px;
+  height: 32px;
+}
+
+.page[data-theme='minimal'] .social[style*='#FFFC00'] .socialIcon,
+.page[data-theme='minimal'] .social[style*='#111111'] .socialIcon {
+  color: #141414;
+}
+
+.page[data-theme='minimal'] .socialName {
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   BOLD — the whole page in the client's colour, chunky black-outlined blocks.
+   ========================================================================== */
+
+.page[data-theme='bold'] {
+  --radius-sm: 16px;
+  --line: rgb(0 0 0 / 0.12);
+  --shadow: 4px 4px 0 #111;
+}
+
+.page[data-theme='bold']:dir(rtl),
+.page[data-theme='bold']:lang(ar) {
+  --shadow: -4px 4px 0 #111;
+}
+
+.page[data-theme='bold'] .identity {
+  padding-block: 36px 16px;
+}
+
+.page[data-theme='bold'] .portrait {
+  width: 128px;
+  height: 128px;
+  border-radius: 28px;
+  border: 3px solid #111;
+  box-shadow: var(--shadow);
+  rotate: -3deg;
+}
+
+.page[data-theme='bold'] .name {
+  font-size: clamp(2.25rem, 11vw, 3.25rem);
+  font-weight: 900;
+  font-stretch: 125%;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+}
+
+.page[data-theme='bold'] .name:lang(ar) {
+  text-transform: none;
+  line-height: 1.3;
+}
+
+.page[data-theme='bold'] .role strong {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--a);
+}
+
+.page[data-theme='bold'] .action,
+.page[data-theme='bold'] .social,
+.page[data-theme='bold'] .rows,
+.page[data-theme='bold'] .map,
+.page[data-theme='bold'] .save {
+  border: 2.5px solid #111;
+  box-shadow: var(--shadow);
+}
+
+.page[data-theme='bold'] .action:active,
+.page[data-theme='bold'] .save:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #111;
+}
+
+.page[data-theme='bold'] .actionIcon {
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+}
+
+.page[data-theme='bold'] .save {
+  min-height: 60px;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.page[data-theme='bold'] .save:lang(ar) {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.page[data-theme='bold'] .sectionTitle {
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.page[data-theme='bold'] .socialIcon {
+  border-radius: 12px;
+  border: 2px solid #111;
+}
+
+.page[data-theme='bold'] .share {
+  border: 2.5px solid currentColor;
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   CARD — a business card on screen: cover banner, overlapping portrait.
+   ========================================================================== */
+
+.page[data-theme='card'] {
+  --radius-sm: 18px;
+}
+
+.page[data-theme='card'] .shell {
+  padding-block-start: 16px;
+}
+
+.page[data-theme='card'] .hero {
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 30px 60px -30px color-mix(in srgb, var(--p) 55%, transparent);
+}
+
+.page[data-theme='card'] .cover {
+  display: block;
+  height: 150px;
+  background:
+    radial-gradient(circle at 20% 120%, color-mix(in srgb, var(--a) 90%, transparent), transparent 55%),
+    linear-gradient(135deg, var(--p), color-mix(in srgb, var(--p) 60%, var(--a)));
+}
+
+.page[data-theme='card'] .cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page[data-theme='card'] .identity {
+  margin-block-start: -64px;
+  padding: 0 20px 26px;
+}
+
+.page[data-theme='card'] .portrait {
+  border: 5px solid var(--surface);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+}
+
+.page[data-theme='card'] .role strong {
+  color: var(--p-text);
+}
+
+.page[data-theme='card'] .action,
+.page[data-theme='card'] .social,
+.page[data-theme='card'] .rows,
+.page[data-theme='card'] .map {
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -12px rgb(0 0 0 / 0.12);
+}
+
+.page[data-theme='card'] .actionIcon {
+  border-radius: 16px;
+}
+
+.page[data-theme='card'] .save {
+  background: linear-gradient(135deg, var(--p), color-mix(in srgb, var(--p) 55%, var(--a)));
+  color: var(--on-p);
+}
+
+.page[data-theme='card'] .footer {
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   ELEGANT — deep tone of the brand colour, serif display, fine gold-ish lines.
+   ========================================================================== */
+
+.page[data-theme='elegant'] {
+  --radius-sm: 6px;
+  --font-display: var(--font-fraunces), var(--font-readex), Georgia, serif;
+  --line: color-mix(in srgb, var(--a-on-bg) 22%, transparent);
+}
+
+.page[data-theme='elegant'] .shell {
+  padding-block-start: 32px;
+}
+
+.page[data-theme='elegant'] .identity {
+  position: relative;
+  padding-block: 20px 26px;
+}
+
+.page[data-theme='elegant'] .identity::after {
+  content: '';
+  width: 64px;
+  height: 1px;
+  margin-block-start: 14px;
+  background: var(--a-on-bg);
+}
+
+.page[data-theme='elegant'] .portrait {
+  width: 120px;
+  height: 120px;
+  box-shadow: none;
+  outline: 1px solid var(--a-on-bg);
+  outline-offset: 6px;
+}
+
+.page[data-theme='elegant'] .name {
+  font-weight: 500;
+  font-size: clamp(2rem, 9vw, 2.6rem);
+  letter-spacing: 0;
+  font-stretch: 100%;
+  font-style: italic;
+}
+
+.page[data-theme='elegant'] .name:lang(ar) {
+  font-style: normal;
+}
+
+.page[data-theme='elegant'] .role {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.page[data-theme='elegant'] .role:lang(ar) {
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.page[data-theme='elegant'] .action,
+.page[data-theme='elegant'] .social,
+.page[data-theme='elegant'] .rows,
+.page[data-theme='elegant'] .map {
+  border: 1px solid var(--line);
+}
+
+.page[data-theme='elegant'] .actionIcon {
+  background: transparent;
+  border: 1px solid var(--a-on-bg);
+  color: var(--a-on-bg);
+}
+
+.page[data-theme='elegant'] .save {
+  background: transparent;
+  border: 1px solid var(--a-on-bg);
+  color: var(--a-on-bg);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.page[data-theme='elegant'] .save:lang(ar) {
+  letter-spacing: 0;
+  font-size: 15px;
+}
+
+.page[data-theme='elegant'] .socialIcon {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--a-on-bg);
+  border-radius: 50%;
+}
+
+.page[data-theme='elegant'] .rowIcon,
+.page[data-theme='elegant'] .mapFooter > svg,
+.page[data-theme='elegant'] .mapCta {
+  color: var(--a-on-bg);
+  background: transparent;
+}
+
+.page[data-theme='elegant'] .sectionTitle {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
