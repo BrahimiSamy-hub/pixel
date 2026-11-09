@@ -38,8 +38,8 @@
 
 # Redirect www to non-www
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.pixeldz\.store [NC]
-RewriteRule ^(.*)$ https://pixeldz.store/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.pixelcreativeagency\.net [NC]
+RewriteRule ^(.*)$ https://pixelcreativeagency.net/$1 [L,R=301]
 
 # Redirect HTTP to HTTPS
 RewriteCond %{HTTPS} off

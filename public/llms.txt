@@ -1,5 +1,5 @@
 # Pixel Creative Agency — llms.txt
-# https://pixeldz.store
+# https://pixelcreativeagency.net
 
 ## About
 Pixel Creative Agency is a professional creative agency based in Algeria, founded in 2018.
@@ -14,11 +14,11 @@ We specialize in photography, graphic design, web development, and audio product
 - Photo Lab: portrait sessions, professional printing, photo retouching
 
 ## Key Pages
-- Homepage: https://pixeldz.store/
-- Portfolio: https://pixeldz.store/portfolio
-- Wedding packages: https://pixeldz.store/wedding
-- Shop: https://pixeldz.store/shop
-- Contact: https://pixeldz.store/contact
+- Homepage: https://pixelcreativeagency.net/
+- Portfolio: https://pixelcreativeagency.net/portfolio
+- Wedding packages: https://pixelcreativeagency.net/wedding
+- Shop: https://pixelcreativeagency.net/shop
+- Contact: https://pixelcreativeagency.net/contact
 
 ## Contact
 - Phone: +213-799-01-82-88

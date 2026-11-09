@@ -221,7 +221,7 @@ export function CardPage({ username, card, lang, pageUrl }: Props) {
               </a>
             ))}
           </nav>
-          <a href="https://pixeldz.store" className={styles.credit} target="_blank" rel="noopener">
+          <a href="https://pixelcreativeagency.net" className={styles.credit} target="_blank" rel="noopener">
             {t.madeBy} <strong>Pixel</strong>
           </a>
         </footer>

@@ -1,4 +1,4 @@
-# Pixel Creative Agency — pixeldz.store
+# Pixel Creative Agency — pixelcreativeagency.net
 
 Website of Pixel Creative Agency (Batna, Algeria): six studios, a portfolio and a shop, in French, English and Arabic.
 

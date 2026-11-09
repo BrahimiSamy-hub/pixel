@@ -1,6 +1,6 @@
 export const site = {
   name: 'Pixel Creative Agency',
-  url: 'https://pixeldz.store',
+  url: 'https://pixelcreativeagency.net',
   api: 'https://api.pixeldz.store',
   email: 'contact@pixeldz.store',
   phone: { display: '0799 01 82 88', href: 'tel:+213799018288', e164: '+213799018288' },

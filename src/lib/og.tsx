@@ -42,7 +42,7 @@ export function brandOgImage({ title, kicker, tone = 'orange' }: { title: string
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 24, color: '#a6a3a0' }}>
             <span>Batna · Algeria · since 2018</span>
-            <span>pixeldz.store</span>
+            <span>pixelcreativeagency.net</span>
           </div>
         </div>
       </div>

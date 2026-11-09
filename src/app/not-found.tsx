@@ -8,7 +8,7 @@ export default function RootNotFound() {
         <main style={{ textAlign: 'center', padding: 24 }}>
           <p style={{ fontSize: 64, fontWeight: 700, margin: 0 }}>404</p>
           <p>Page introuvable · Page not found · الصفحة غير موجودة</p>
-          <Link href="/fr" style={{ color: '#ee7d22' }}>pixeldz.store</Link>
+          <Link href="/fr" style={{ color: '#ee7d22' }}>pixelcreativeagency.net</Link>
         </main>
       </body>
     </html>
