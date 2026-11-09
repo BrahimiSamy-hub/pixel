@@ -12,7 +12,8 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
-    "admin:create": "tsx --env-file-if-exists=.env.local scripts/create-admin.ts"
+    "admin:create": "tsx --env-file-if-exists=.env.local scripts/create-admin.ts",
+    "seed:demo": "tsx --env-file-if-exists=.env.local scripts/seed-demo.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.18.0",
