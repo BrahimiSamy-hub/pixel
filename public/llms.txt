@@ -2,31 +2,40 @@
 # https://pixelcreativeagency.net
 
 ## About
-Pixel Creative Agency is a professional creative agency based in Algeria, founded in 2018.
-We specialize in photography, graphic design, web development, and audio production.
+Pixel Creative Agency is a creative and communication agency based in Batna, Algeria, founded in 2018.
+It works across Algeria in French, Arabic and English, through seven studios.
 
-## Services
-- Professional Photography: weddings, portraits, events, commercial photography
-- Graphic Design: logos, brand identity, packaging, visual communication
-- Web Development: e-commerce sites, landing pages, mobile apps
-- Audio Production: sound effects, voiceovers, original music, jingles
-- Advertising & Printing: neon signs, posters, roll-ups, stickers, banners
-- Photo Lab: portrait sessions, professional printing, photo retouching
+## Services and public prices (Algerian dinars, DA)
+- Pixel Creative (graphic design & print): logo design, brand identity, restaurant menus (from 350 DA each), flyers, roll-ups, stickers; printing on sticker, PVC banner and One Way Vision at 1,800 DA per m².
+- Pixel Enseigne (signage): illuminated signs, cut-out letters, LED neon; Forex from 2,500 DA/m², Alucobond from 5,000 DA/m², PMMA 7,000 DA/m², LED modules from 50 DA each.
+- Pixel Events (weddings): six wedding photo & video packages from 29,000 DA (Rose) to 130,000 DA (Orchidée); extras: drone 14,000 DA, photobook A4 7,000 DA.
+- Pixel Photo Lab: product, food, portrait, fashion and event photography; video production; social media content.
+- Pixel Dev: showcase websites, e-commerce, mobile apps; domain, hosting and maintenance included; payment 20 % / 30 % / 50 %.
+- Pixel Sounds: voice-over in French, English, Arabic and Darija from 5,000 DA; original soundtracks.
+- Tapini (NFC): NFC PVC business cards from 3,500 DA, NFC stickers 2,000 DA, Google review cards.
 
-## Key Pages
-- Homepage: https://pixelcreativeagency.net/
-- Portfolio: https://pixelcreativeagency.net/portfolio
-- Wedding packages: https://pixelcreativeagency.net/wedding
-- Shop: https://pixelcreativeagency.net/shop
-- Contact: https://pixelcreativeagency.net/contact
+## Key pages (French; replace /fr/ with /en/ or /ar/)
+- Home: https://pixelcreativeagency.net/fr
+- Services: https://pixelcreativeagency.net/fr/services
+- Graphic design & print quotes: https://pixelcreativeagency.net/fr/design-graphique
+- Signage estimator: https://pixelcreativeagency.net/fr/publicite
+- Wedding packages: https://pixelcreativeagency.net/fr/mariage
+- Photo & video: https://pixelcreativeagency.net/fr/photo-lab
+- Web development: https://pixelcreativeagency.net/fr/developpement
+- Voice-over & audio: https://pixelcreativeagency.net/fr/sons
+- NFC cards (Tapini): https://pixelcreativeagency.net/fr/tapini
+- Portfolio: https://pixelcreativeagency.net/fr/portfolio
+- Agency in Batna: https://pixelcreativeagency.net/fr/agence-batna
+- Contact: https://pixelcreativeagency.net/fr/contact
 
 ## Contact
-- Phone: +213-799-01-82-88
+- Phone: +213 799 01 82 88
+- WhatsApp: +213 770 69 69 82
 - Email: contact@pixeldz.store
 - Hours: Monday–Friday, 09:00–18:00
 - Location: Batna, Algeria
 
 ## Social
-- Instagram: https://www.instagram.com/pixelcreativeagency
-- Facebook: https://www.facebook.com/pixelcreativeagency
-- LinkedIn: https://www.linkedin.com/company/pixelcreativeagency
+- Instagram: https://www.instagram.com/_pixeldz
+- TikTok: https://www.tiktok.com/@pixel.creativeagency
+- Facebook: https://www.facebook.com/pixel.lab.3110

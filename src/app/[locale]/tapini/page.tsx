@@ -3,16 +3,19 @@ import { TapiniBuilder } from '@/components/quote/small-builders'
 import { QuoteSection } from '@/components/quote/quote-section'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { Container } from '@/components/ui/container'
+import { JsonLd } from '@/components/ui/json-ld'
 import type { Locale } from '@/i18n/routing'
 import { pageMetadata } from '@/lib/seo'
+import { serviceJsonLd } from '@/lib/structured-data'
 import { servicesText } from '@/shared/catalog/text'
 
 const tapini = servicesText.items.tapini
+const titles = { fr: 'Cartes de visite NFC en Algérie — Tapini', en: 'NFC business cards in Algeria — Tapini', ar: 'بطاقات زيارة NFC في الجزائر — Tapini' } as const
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/tapini'>) {
   const { locale } = await params
   const l = locale as Locale
-  return pageMetadata({ locale: l, path: '/tapini', title: `Tapini — ${tapini.tagline[l]}`, description: tapini.desc[l] })
+  return pageMetadata({ locale: l, path: '/tapini', title: titles[l], description: tapini.desc[l] })
 }
 
 /** Tapini: Pixel's NFC cards and connected supports, with their quote builder. */
@@ -24,6 +27,7 @@ export default async function TapiniPage({ params }: PageProps<'/[locale]/tapini
 
   return (
     <>
+      <JsonLd data={serviceJsonLd({ locale, path: '/tapini', name: 'Tapini', description: tapini.desc[locale], price: 2000 })} />
       <section className="border-b border-line">
         <Container className="flex flex-col gap-6.5 pt-12 pb-14 md:pt-20 md:pb-20">
           <Breadcrumbs items={[{ label: tNav('services'), href: '/services' }, { label: 'Tapini' }]} />

@@ -33,8 +33,10 @@ export function pageMetadata({ locale, path, title, description, noIndex }: Page
       url,
       locale: ogLocales[locale],
       alternateLocale: routing.locales.filter((l) => l !== locale).map((l) => ogLocales[l]),
+      // Fallback share image; a route's own opengraph-image file takes precedence.
+      images: [{ url: `${site.url}/og-image.png`, width: 1200, height: 630, alt: site.name }],
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: { card: 'summary_large_image', title, description, images: [`${site.url}/og-image.png`] },
     ...(noIndex ? { robots: { index: false, follow: true } } : {}),
   }
 }

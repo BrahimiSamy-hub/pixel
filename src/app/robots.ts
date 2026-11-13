@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: ['GPTBot', 'ChatGPT-User', 'ClaudeBot', 'PerplexityBot', 'Google-Extended'], allow: '/' },
       { userAgent: 'Bytespider', disallow: '/' },
     ],
-    sitemap: [`${site.url}/sitemap.xml`, `${site.url}/sitemap-images.xml`],
+    sitemap: `${site.url}/sitemap.xml`,
     host: site.url,
   }
 }

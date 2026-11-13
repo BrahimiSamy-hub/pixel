@@ -34,7 +34,7 @@ export default async function SoundPage({ params }: PageProps<'/[locale]/sons'>)
 
   return (
     <>
-      <JsonLd data={serviceJsonLd({ locale, path: '/sons', name: tStudios('sound.name'), description: tMeta('description'), price: 4000 })} />
+      <JsonLd data={serviceJsonLd({ locale, path: '/sons', name: tStudios('sound.name'), description: tMeta('description'), price: 5000 })} />
       <section className="border-b border-line">
         <Container className="flex flex-col gap-6.5 pt-12 pb-14 md:pt-20 md:pb-24">
           <Breadcrumbs items={[{ label: tNav('services'), href: '/services' }, { label: tStudios('sound.short') }]} />

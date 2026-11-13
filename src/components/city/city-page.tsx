@@ -15,6 +15,7 @@ import { cn } from '@/lib/cn'
 
 // Rough position of each city on a schematic map of northern Algeria (percent of the box).
 const pins: Record<CityKey, { x: number; y: number }> = {
+  batna: { x: 66, y: 40 },
   alger: { x: 34, y: 14 },
   oran: { x: 12, y: 22 },
   constantine: { x: 70, y: 30 },

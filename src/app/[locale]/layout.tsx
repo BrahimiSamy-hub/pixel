@@ -12,10 +12,12 @@ import { getDirection, routing } from '@/i18n/routing'
 import { localizedUrl } from '@/lib/seo'
 import { site } from '@/lib/site'
 
+// Only the `latin` subset is loaded (it covers French and English): `latin-ext` was preloaded on
+// every page (+110 kB) for characters the site never uses.
 // Archivo with its width axis: ExtraBold at 112 % echoes the heavy, wide PIXEL wordmark.
-const archivo = Archivo({ subsets: ['latin', 'latin-ext'], axes: ['wdth'], variable: '--font-archivo', display: 'swap' })
+const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo', display: 'swap' })
 // Condensed, wide-tracked capitals: the voice of the "CREATIVE AGENCY" tagline.
-const barlow = Barlow_Condensed({ subsets: ['latin', 'latin-ext'], weight: ['500', '600', '700'], variable: '--font-barlow', display: 'swap' })
+const barlow = Barlow_Condensed({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-barlow', display: 'swap' })
 // Arabic face. Not preloaded: only Arabic pages use it, and preloading would cost FR/EN visitors.
 const readex = Readex_Pro({ subsets: ['arabic', 'latin'], variable: '--font-readex', display: 'swap', preload: false })
 
@@ -37,7 +39,7 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
   const t = await getTranslations({ locale, namespace: 'Metadata.default' })
   return {
     metadataBase: new URL(site.url),
-    title: { default: t('title'), template: `%s | ${site.name}` },
+    title: { default: t('title'), template: '%s | Pixel' },
     description: t('description'),
     applicationName: site.name,
     robots: { index: true, follow: true },
@@ -104,6 +106,10 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
             },
             geo: { '@type': 'GeoCoordinates', latitude: site.geo.latitude, longitude: site.geo.longitude },
             areaServed: { '@type': 'Country', name: 'Algeria' },
+            hasMap: site.mapsUrl,
+            priceRange: 'DZD',
+            knowsLanguage: ['fr', 'ar', 'en'],
+            contactPoint: { '@type': 'ContactPoint', telephone: site.whatsapp.e164, contactType: 'sales', availableLanguage: ['French', 'Arabic', 'English'] },
             sameAs: Object.values(site.socials).map((s) => s.href),
             openingHoursSpecification: {
               '@type': 'OpeningHoursSpecification',

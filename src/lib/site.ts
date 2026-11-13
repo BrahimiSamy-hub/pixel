@@ -4,7 +4,7 @@ export const site = {
   api: 'https://api.pixeldz.store',
   email: 'contact@pixeldz.store',
   phone: { display: '0799 01 82 88', href: 'tel:+213799018288', e164: '+213799018288' },
-  whatsapp: { display: '0770 69 69 82', href: 'https://wa.me/213770696982' },
+  whatsapp: { display: '0770 69 69 82', href: 'https://wa.me/213770696982', e164: '+213770696982' },
   foundingYear: 2018,
   address: { city: 'Batna', region: 'Batna', country: 'DZ' },
   geo: { latitude: 35.5541, longitude: 6.1731 },

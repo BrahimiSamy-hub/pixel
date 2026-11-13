@@ -37,6 +37,7 @@ export function activeNavKey(pathname: string): NavKey | null {
 }
 
 export const cities = [
+  { key: 'batna', href: '/agence-batna' },
   { key: 'alger', href: '/agence-alger' },
   { key: 'oran', href: '/agence-oran' },
   { key: 'constantine', href: '/agence-constantine' },

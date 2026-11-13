@@ -5,12 +5,12 @@
       "description": "Creative agency in Algeria since 2018 — websites, e-commerce, photo shoots, graphic design, advertising signs and audio production. Free quote."
     },
     "home": {
-      "title": "Pixel Creative Agency — Creative agency in Algeria | Web, Photo, Design",
-      "description": "Creative agency in Batna since 2018: web & e-commerce development, photo shoots, graphic design, weddings, audio production, signage and printing. Free quote within 24 hours."
+      "title": "Pixel Creative Agency | Creative & Web Agency in Algeria",
+      "description": "Creative agency in Batna, Algeria since 2018: websites, logos, photo shoots, weddings, illuminated signs and printing. Online quotes across Algeria."
     },
     "services": {
-      "title": "Our services — photo, design, web, sound, advertising",
-      "description": "Six specialised studios, one point of contact: Photo Lab, graphic design, weddings, web development, audio production and advertising in Algeria."
+      "title": "Services: websites, logos, photo, signage, weddings",
+      "description": "Seven studios, one point of contact: web development, graphic design, photo and video, weddings, signage and printing, voice-over, NFC cards. Online quotes."
     },
     "about": {
       "title": "About us — our story since 2018",
@@ -29,28 +29,28 @@
       "description": "Reach Pixel Creative Agency on WhatsApp, by phone or by email. Free quote and a reply within 24 hours, anywhere in Algeria."
     },
     "photo": {
-      "title": "Pixel Photo Lab — photo & video production in Algeria",
+      "title": "Photo & video production in Algeria — Photo Lab",
       "description": "Professional shoots, portraits, product photography, commercials, reels and social media management. Fully equipped studio in Batna, from 4,000 DA."
     },
     "design": {
-      "title": "Graphic design & brand identity in Algeria",
-      "description": "Logos, brand guidelines, packaging, menus, flyers and social media posts. Graphic design from 1,000 DA."
+      "title": "Logo design & graphic design in Algeria",
+      "description": "Logo design, brand identity, restaurant menus, flyers, packaging and social media visuals. Online quotes, printing from 1,800 DA/m²."
     },
     "wedding": {
-      "title": "Wedding photographer & videographer in Algeria",
-      "description": "Six wedding packages, 2 to 6 photographers, FHD, 4K or 6K editing, photobook, frames and drone. From 29,000 DA."
+      "title": "Wedding photographer & videographer in Batna",
+      "description": "Six wedding packages from 29,000 to 130,000 DA: 2 to 6 photographers, FHD, 4K or 6K editing, photobook, frames and drone. Build your package online."
     },
     "dev": {
       "title": "Website & e-commerce development in Algeria",
       "description": "Business websites, online stores, mobile apps, landing pages, PWAs and APIs. Free quote within 24 hours, one year of hosting included."
     },
     "sound": {
-      "title": "Audio production — voice-over, jingles, music",
+      "title": "Voice-over in Darija, Arabic & French, jingles",
       "description": "Sound effects, voice-overs and original music for your commercials, reels and podcasts. Voice-overs from 5,000 DA."
     },
     "ads": {
-      "title": "Advertising & printing — neon, signage, banners",
-      "description": "LED neon, signage, PVC banners, roll-ups, shop-window graphics and printing in every size, anywhere in Algeria."
+      "title": "Illuminated signs, LED neon & printing in Algeria",
+      "description": "Illuminated signs, cut-out letters, LED neon, banners, roll-ups and window graphics. Estimate your sign online: Forex, Alucobond, PMMA, LEDs."
     },
     "shop": {
       "title": "Shop — posters, games & neon",
@@ -77,8 +77,8 @@
       "description": "What our clients say about Pixel Creative Agency: weddings, websites, brand identity."
     },
     "city": {
-      "title": "Creative agency in {city} — web, photo, design",
-      "description": "Pixel Creative Agency works in {city}: websites, e-commerce, photo shoots, graphic design, advertising signs and audio production. Free quote."
+      "title": "Creative & web agency in {city}",
+      "description": "Pixel Creative Agency works in {city}: website design, logos, photo shoots, illuminated signs, printing and weddings. Free online quote."
     },
     "terms": {
       "title": "Terms of use",
@@ -1028,6 +1028,7 @@
       "quote": { "title": "Fast quote", "text": "A reply within 24 hours, with a free, tailored quote for your budget." }
     },
     "names": {
+      "batna": "Batna",
       "alger": "Algiers",
       "oran": "Oran",
       "constantine": "Constantine",

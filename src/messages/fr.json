@@ -1,16 +1,16 @@
 {
   "Metadata": {
     "default": {
-      "title": "Pixel Creative Agency — Agence créative en Algérie",
+      "title": "Pixel Creative Agency — Agence de communication en Algérie",
       "description": "Agence créative en Algérie depuis 2018 — sites web, e-commerce, shooting photo, design graphique, panneaux publicitaires et production audio. Devis gratuit."
     },
     "home": {
-      "title": "Pixel Creative Agency — Agence créative en Algérie | Web, Photo, Design",
-      "description": "Agence créative à Batna depuis 2018 : développement web & e-commerce, shooting photo, design graphique, mariage, production audio, panneaux et impression. Devis gratuit sous 24 h."
+      "title": "Pixel Creative Agency | Agence de communication à Batna",
+      "description": "Agence de communication à Batna depuis 2018 : sites web, logos, shooting photo, mariages, enseignes lumineuses et impression. Devis en ligne partout en Algérie."
     },
     "services": {
-      "title": "Nos services — photo, design, web, son, publicité",
-      "description": "Six studios spécialisés, un seul interlocuteur : Photo Lab, design graphique, mariage, développement web, production audio et publicité en Algérie."
+      "title": "Services : site web, logo, photo, enseignes, mariage",
+      "description": "Sept studios, un seul interlocuteur : sites web, design graphique, photo et vidéo, mariage, enseignes et impression, voix off, cartes NFC. Devis en ligne."
     },
     "about": {
       "title": "À propos — notre histoire depuis 2018",
@@ -29,28 +29,28 @@
       "description": "Contactez Pixel Creative Agency par WhatsApp, téléphone ou e-mail. Devis gratuit et réponse sous 24 h, partout en Algérie."
     },
     "photo": {
-      "title": "Pixel Photo Lab — shooting photo & vidéo en Algérie",
+      "title": "Shooting photo & vidéo en Algérie — Pixel Photo Lab",
       "description": "Shooting professionnel, portrait, produit, spot publicitaire, réels et gestion des réseaux sociaux. Studio équipé à Batna, dès 4 000 DA."
     },
     "design": {
-      "title": "Design graphique & identité visuelle en Algérie",
-      "description": "Logo, charte graphique, packaging, menus, flyers et publications réseaux sociaux. Design graphique dès 1 000 DA."
+      "title": "Création de logo & design graphique en Algérie",
+      "description": "Création de logo, identité visuelle, menus de restaurant, flyers, packaging et visuels réseaux sociaux. Devis en ligne, impression dès 1 800 DA/m²."
     },
     "wedding": {
-      "title": "Photographe & vidéaste de mariage en Algérie",
-      "description": "Six packs mariage, de 2 à 6 photographes, montage FHD, 4K ou 6K, photobook, cadres et drone. Dès 29 000 DA."
+      "title": "Photographe & vidéaste de mariage à Batna, Algérie",
+      "description": "Six packs mariage de 29 000 à 130 000 DA : 2 à 6 photographes, montage FHD, 4K ou 6K, photobook, cadres et drone. Composez votre pack en ligne."
     },
     "dev": {
       "title": "Création de site web & e-commerce en Algérie",
       "description": "Site vitrine, boutique e-commerce, application mobile, landing page, PWA et API. Devis gratuit sous 24 h, hébergement 1 an inclus."
     },
     "sound": {
-      "title": "Production audio — voix off, jingles, musique",
+      "title": "Voix off en darija, arabe et français & jingles",
       "description": "Effets sonores, voix off et production musicale originale pour vos spots, réels et podcasts. Voix off dès 5 000 DA."
     },
     "ads": {
-      "title": "Publicité & impression — néons, enseignes, bâches",
-      "description": "Néons LED, enseignes, bâches PVC, roll-ups, habillage de vitrine et impressions de toutes tailles, partout en Algérie."
+      "title": "Enseignes lumineuses, néon LED & impression Algérie",
+      "description": "Enseignes lumineuses, lettres découpées, néon LED, bâches, roll-ups et vitrophanie. Estimez votre enseigne en ligne : Forex, Alucobond, PMMA, LED."
     },
     "shop": {
       "title": "Boutique — posters, jeux & néons",
@@ -77,8 +77,8 @@
       "description": "Ce que nos clients disent de Pixel Creative Agency : mariage, sites web, identité visuelle."
     },
     "city": {
-      "title": "Agence créative à {city} — web, photo, design",
-      "description": "Pixel Creative Agency intervient à {city} : site web, e-commerce, shooting photo, design graphique, panneaux publicitaires et production audio. Devis gratuit."
+      "title": "Agence de communication & web à {city}",
+      "description": "Pixel Creative Agency intervient à {city} : création de site web, logo, shooting photo, enseignes lumineuses, impression et mariage. Devis gratuit en ligne."
     },
     "terms": {
       "title": "Conditions générales d'utilisation",
@@ -1028,6 +1028,7 @@
       "quote": { "title": "Devis rapide", "text": "Réponse sous 24 h, devis gratuit et sur mesure adapté à votre budget." }
     },
     "names": {
+      "batna": "Batna",
       "alger": "Alger",
       "oran": "Oran",
       "constantine": "Constantine",
