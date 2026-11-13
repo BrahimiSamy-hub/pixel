@@ -5,8 +5,9 @@ import weddingImg from '@/assets/portfolio/wedding/wedding7.jpg'
 import devImg from '@/assets/portfolio/landingPage/BeleghniMockup.jpg'
 import soundImg from '@/assets/services/audio.png'
 import adsImg from '@/assets/portfolio/wall/wall6.jpg'
+import tapiniImg from '@/assets/portfolio/carte-visite/carte5.jpg'
 
-export const studioKeys = ['photo', 'design', 'wedding', 'dev', 'sound', 'ads'] as const
+export const studioKeys = ['photo', 'design', 'wedding', 'dev', 'sound', 'ads', 'tapini'] as const
 export type StudioKey = (typeof studioKeys)[number]
 
 export type Tone = 'teal' | 'yellow' | 'red' | 'lime' | 'violet' | 'orange'
@@ -35,8 +36,11 @@ export const studios: Record<StudioKey, Studio> = {
   design: { key: 'design', href: '/design-graphique', tone: 'yellow', image: designImg, priceFrom: 1000 },
   wedding: { key: 'wedding', href: '/mariage', tone: 'red', image: weddingImg, priceFrom: 29000 },
   dev: { key: 'dev', href: '/developpement', tone: 'lime', image: devImg, priceFrom: null },
-  sound: { key: 'sound', href: '/sons', tone: 'violet', image: soundImg, priceFrom: 4000 },
+  // VoiceOver from 5 000 DA (Sounds.pdf).
+  sound: { key: 'sound', href: '/sons', tone: 'violet', image: soundImg, priceFrom: 5000 },
   ads: { key: 'ads', href: '/publicite', tone: 'orange', image: adsImg, priceFrom: null },
+  // NFC sticker from 2 000 DA (Tapini.pdf).
+  tapini: { key: 'tapini', href: '/tapini', tone: 'teal', image: tapiniImg, priceFrom: 2000 },
 }
 
 export const studioList = studioKeys.map((k) => studios[k])

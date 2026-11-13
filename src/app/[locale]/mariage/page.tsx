@@ -7,7 +7,6 @@ import shoes from '@/assets/portfolio/wedding/wedding9.jpg'
 import hands from '@/assets/portfolio/wedding/wedding11.jpg'
 import groom from '@/assets/portfolio/wedding/wedding3.jpg'
 import bouquet from '@/assets/portfolio/wedding/wedding7.jpg'
-import { PackComparator } from '@/components/wedding/pack-comparator'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
@@ -17,6 +16,7 @@ import { SectionHeader } from '@/components/ui/section-header'
 import type { Locale } from '@/i18n/routing'
 import { staticPageMetadata } from '@/lib/seo'
 import { serviceJsonLd } from '@/lib/structured-data'
+import { EventsBuilder } from '@/components/quote/events-builder'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/mariage'>) {
   const { locale } = await params
@@ -61,7 +61,7 @@ export default async function WeddingPage({ params }: PageProps<'/[locale]/maria
       <section id="packs" className="section-y scroll-mt-6">
         <Container>
           <SectionHeader index="01" tone="red" eyebrow={t('packs.eyebrow')} title={t('packs.title')} />
-          <PackComparator />
+          <EventsBuilder />
         </Container>
       </section>
 

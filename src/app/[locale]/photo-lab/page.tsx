@@ -18,6 +18,8 @@ import type { Locale } from '@/i18n/routing'
 import { staticPageMetadata } from '@/lib/seo'
 import { serviceJsonLd } from '@/lib/structured-data'
 import { JsonLd } from '@/components/ui/json-ld'
+import { PhotoBuilder } from '@/components/quote/photo-builder'
+import { QuoteSection } from '@/components/quote/quote-section'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/photo-lab'>) {
   const { locale } = await params
@@ -138,6 +140,10 @@ export default async function PhotoLabPage({ params }: PageProps<'/[locale]/phot
           />
         </Container>
       </section>
+
+      <QuoteSection index="05">
+        <PhotoBuilder />
+      </QuoteSection>
     </>
   )
 }

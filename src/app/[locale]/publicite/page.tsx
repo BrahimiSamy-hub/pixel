@@ -5,17 +5,18 @@ import rollup from '@/assets/portfolio/rollUp/rollUp.jpg'
 import mural from '@/assets/portfolio/wall/wall6.jpg'
 import billboard from '@/assets/services/publicité.png'
 import neon from '@/assets/portfolio/logo/logo8.jpg'
-import { QuoteForm } from '@/components/forms/quote-form'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { HexDot } from '@/components/ui/hex'
 import { JsonLd } from '@/components/ui/json-ld'
-import { Eyebrow, SectionHeader } from '@/components/ui/section-header'
+import { SectionHeader } from '@/components/ui/section-header'
 import type { Locale } from '@/i18n/routing'
 import { cn } from '@/lib/cn'
 import { staticPageMetadata } from '@/lib/seo'
 import { serviceJsonLd } from '@/lib/structured-data'
+import { EnseigneBuilder, SignsGallery } from '@/components/quote/enseigne-builder'
+import { QuoteSection } from '@/components/quote/quote-section'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/publicite'>) {
   const { locale } = await params
@@ -114,16 +115,15 @@ export default async function AdsPage({ params }: PageProps<'/[locale]/publicite
         </Container>
       </section>
 
-      <section id="devis" className="section-y scroll-mt-6">
-        <Container className="flex flex-wrap items-start gap-x-18 gap-y-10">
-          <div className="flex min-w-0 flex-[1_1_21.25rem] flex-col gap-4.5">
-            <Eyebrow index="02">{t('quote.eyebrow')}</Eyebrow>
-            <h2 className="text-[clamp(2rem,4vw,3.25rem)] leading-[1.05] font-semibold tracking-[-0.035em] rtl:leading-[1.3]">{t('quote.title')}</h2>
-            <p className="leading-relaxed text-mist">{t('quote.lead')}</p>
-          </div>
-          <QuoteForm />
+      <section className="section-y">
+        <Container>
+          <SignsGallery />
         </Container>
       </section>
+
+      <QuoteSection index="03">
+        <EnseigneBuilder />
+      </QuoteSection>
     </>
   )
 }

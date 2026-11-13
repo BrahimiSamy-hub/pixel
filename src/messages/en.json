@@ -46,7 +46,7 @@
     },
     "sound": {
       "title": "Audio production — voice-over, jingles, music",
-      "description": "Sound effects, voice-overs and original music for your commercials, reels and podcasts. From 4,000 DA."
+      "description": "Sound effects, voice-overs and original music for your commercials, reels and podcasts. Voice-overs from 5,000 DA."
     },
     "ads": {
       "title": "Advertising & printing — neon, signage, banners",
@@ -202,6 +202,12 @@
       "category": "Audio",
       "tagline": "Sound made easy: sound effects, voice-overs, jingles and original music production."
     },
+    "tapini": {
+      "name": "Tapini",
+      "short": "Tapini",
+      "category": "NFC",
+      "tagline": "NFC cards and supports: one tap of a phone opens your contacts, reviews or menu."
+    },
     "ads": {
       "name": "Pixel Advertisement",
       "short": "Advertisement",
@@ -352,6 +358,15 @@
     "sound": {
       "lead": "Custom voices, effects and music to give your productions a sound identity.",
       "features": ["Custom sound effects", "Male or female voice-over", "Original composition", "Mixing & mastering included"]
+    },
+    "tapini": {
+      "lead": "NFC business cards, Google review cards, connected menus and stickers: one tap of a phone is enough.",
+      "features": [
+        "NFC PVC business card",
+        "Google review card",
+        "Menu and ordering kiosk",
+        "NFC sticker"
+      ]
     },
     "ads": {
       "lead": "Signs, event displays and prints with outstanding results.",
@@ -1003,7 +1018,8 @@
       "design": "Graphic design & logo",
       "ads": "Advertising signs & printing",
       "wedding": "Wedding photography",
-      "sound": "Audio production & jingles"
+      "sound": "Audio production & jingles",
+      "tapini": "NFC cards and supports"
     },
     "whyTitle": "Why choose Pixel for your project in {city}?",
     "why": {

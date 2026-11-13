@@ -7,6 +7,7 @@ import weddingImg from '@/assets/portfolio/wedding/wedding11.jpg'
 import devImg from '@/assets/portfolio/landingPage/ComfortSpaceMockup.jpg'
 import soundImg from '@/assets/services/audio.png'
 import adsImg from '@/assets/services/publicité.png'
+import tapiniImg from '@/assets/portfolio/carte-visite/carte5.jpg'
 import { PageHero } from '@/components/sections/page-hero'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
@@ -32,6 +33,7 @@ const images: Record<StudioKey, { src: typeof photoImg; alt: (t: Translator) => 
   dev: { src: devImg, alt: () => 'Comfort Space' },
   sound: { src: soundImg, alt: (t) => t('Sound.micAlt') },
   ads: { src: adsImg, alt: (t) => t('Ads.gallery.billboard') },
+  tapini: { src: tapiniImg, alt: () => 'Tapini' },
 }
 
 export default async function ServicesPage({ params }: PageProps<'/[locale]/services'>) {

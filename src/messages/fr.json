@@ -46,7 +46,7 @@
     },
     "sound": {
       "title": "Production audio — voix off, jingles, musique",
-      "description": "Effets sonores, voix off et production musicale originale pour vos spots, réels et podcasts. Dès 4 000 DA."
+      "description": "Effets sonores, voix off et production musicale originale pour vos spots, réels et podcasts. Voix off dès 5 000 DA."
     },
     "ads": {
       "title": "Publicité & impression — néons, enseignes, bâches",
@@ -202,6 +202,12 @@
       "category": "Audio",
       "tagline": "L'art du son à votre portée : effets sonores, voix off, jingles et production musicale originale."
     },
+    "tapini": {
+      "name": "Tapini",
+      "short": "Tapini",
+      "category": "NFC",
+      "tagline": "Cartes et supports NFC : un geste du téléphone ouvre vos contacts, vos avis ou votre menu."
+    },
     "ads": {
       "name": "Pixel Advertisement",
       "short": "Advertisement",
@@ -352,6 +358,15 @@
     "sound": {
       "lead": "Voix, effets et musique sur mesure pour donner une identité sonore à vos productions.",
       "features": ["Effets sonores sur mesure", "Voix off masculine ou féminine", "Composition originale", "Mixage & mastering inclus"]
+    },
+    "tapini": {
+      "lead": "Cartes de visite NFC, cartes avis Google, menus et stickers connectés : un geste du téléphone suffit.",
+      "features": [
+        "Carte de visite PVC NFC",
+        "Carte avis Google",
+        "Menu et borne de commande",
+        "Sticker NFC"
+      ]
     },
     "ads": {
       "lead": "Panneaux, supports événementiels et impressions aux résultats exceptionnels.",
@@ -1003,7 +1018,8 @@
       "design": "Design graphique & logo",
       "ads": "Panneau publicitaire & impression",
       "wedding": "Photographie de mariage",
-      "sound": "Production audio & jingles"
+      "sound": "Production audio & jingles",
+      "tapini": "Cartes et supports NFC"
     },
     "whyTitle": "Pourquoi choisir Pixel pour votre projet à {city} ?",
     "why": {

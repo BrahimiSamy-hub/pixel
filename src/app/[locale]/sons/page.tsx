@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import mic from '@/assets/services/audio.png'
-import { OfferCard } from '@/components/sections/offer-card'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { HexDot } from '@/components/ui/hex'
 import { JsonLd } from '@/components/ui/json-ld'
-import { Eyebrow, SectionHeader } from '@/components/ui/section-header'
+import { Eyebrow } from '@/components/ui/section-header'
 import type { Locale } from '@/i18n/routing'
 import { staticPageMetadata } from '@/lib/seo'
 import { serviceJsonLd } from '@/lib/structured-data'
+import { SoundsBuilder } from '@/components/quote/small-builders'
+import { QuoteSection } from '@/components/quote/quote-section'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/sons'>) {
   const { locale } = await params
@@ -60,16 +61,9 @@ export default async function SoundPage({ params }: PageProps<'/[locale]/sons'>)
         </Container>
       </section>
 
-      <section className="section-y">
-        <Container>
-          <SectionHeader index="01" tone="violet" eyebrow={t('offers.eyebrow')} title={t('offers.title')} />
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(18.75rem,100%),1fr))] gap-6">
-            <OfferCard tone="violet" tag={t('sfx.tag')} title={t('sfx.title')} text={t('sfx.text')} price={4000} features={t.raw('sfx.features') as string[]} />
-            <OfferCard tone="violet" tag={t('voice.tag')} title={t('voice.title')} text={t('voice.text')} price={6000} features={t.raw('voice.features') as string[]} />
-            <OfferCard tone="violet" highlight tag={t('music.tag')} title={t('music.title')} text={t('music.text')} price={10000} features={t.raw('music.features') as string[]} />
-          </div>
-        </Container>
-      </section>
+      <QuoteSection index="01">
+        <SoundsBuilder />
+      </QuoteSection>
 
       <section className="section-y border-y border-line bg-ink-2">
         <Container className="flex flex-wrap items-center gap-x-16 gap-y-12">

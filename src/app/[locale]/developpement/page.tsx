@@ -15,6 +15,8 @@ import type { Locale } from '@/i18n/routing'
 import { cn } from '@/lib/cn'
 import { staticPageMetadata } from '@/lib/seo'
 import { serviceJsonLd } from '@/lib/structured-data'
+import { DevBuilder } from '@/components/quote/small-builders'
+import { QuoteSection } from '@/components/quote/quote-section'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/developpement'>) {
   const { locale } = await params
@@ -153,6 +155,10 @@ export default async function DevPage({ params }: PageProps<'/[locale]/developpe
           </ul>
         </Container>
       </section>
+
+      <QuoteSection index="05">
+        <DevBuilder />
+      </QuoteSection>
     </>
   )
 }

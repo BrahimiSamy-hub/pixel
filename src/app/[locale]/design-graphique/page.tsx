@@ -20,6 +20,8 @@ import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
 import { staticPageMetadata } from '@/lib/seo'
 import { serviceJsonLd } from '@/lib/structured-data'
+import { CreativeBuilder } from '@/components/quote/creative-builder'
+import { QuoteSection } from '@/components/quote/quote-section'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/design-graphique'>) {
   const { locale } = await params
@@ -161,6 +163,10 @@ export default async function DesignPage({ params }: PageProps<'/[locale]/design
           </div>
         </Container>
       </section>
+
+      <QuoteSection index="05">
+        <CreativeBuilder />
+      </QuoteSection>
     </>
   )
 }

@@ -19,6 +19,7 @@ const sections: Record<string, NavKey> = {
   '/developpement': 'services',
   '/sons': 'services',
   '/publicite': 'services',
+  '/tapini': 'services',
   '/portfolio': 'portfolio',
   '/boutique': 'shop',
   '/product': 'shop',
