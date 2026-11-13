@@ -11,7 +11,7 @@ type Doc = 'terms' | 'privacy'
 
 const sectionsOf = {
   terms: ['acceptance', 'services', 'property', 'data', 'liability', 'law', 'changes', 'contact'],
-  privacy: ['intro', 'collected', 'usage', 'retention', 'rights', 'contact'],
+  privacy: ['intro', 'collected', 'usage', 'app', 'retention', 'rights', 'contact'],
 } as const
 
 export async function LegalPage({ doc, locale }: { doc: Doc; locale: Locale }) {
@@ -65,7 +65,7 @@ export async function LegalPage({ doc, locale }: { doc: Doc; locale: Locale }) {
         <article className="flex max-w-190 min-w-0 flex-[999_1_35rem] flex-col gap-11 text-[1.0625rem] leading-[1.75] text-lavender">
           {sections.map((s, i) => {
             const key = `${doc}.${s}` as 'privacy.collected'
-            const items = (s === 'collected' || s === 'usage') && doc === 'privacy' ? (t.raw(`${key}.items`) as string[]) : null
+            const items = (s === 'collected' || s === 'usage' || s === 'app') && doc === 'privacy' ? (t.raw(`${key}.items`) as string[]) : null
             const isContact = s === 'contact'
             return (
               <section key={s} id={s} className={cn('flex scroll-mt-6 flex-col gap-3', isContact && 'rounded-card border border-line bg-ink-2 p-7')}>

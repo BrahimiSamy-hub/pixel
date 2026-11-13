@@ -17,5 +17,5 @@ export const site = {
   gaId: 'G-86F35330NS',
   // Shown in the UI and in structured data — keep in sync with the Google Business profile.
   rating: { value: 4.8, best: 5 },
-  privacyUpdatedAt: '2026-04-03',
+  privacyUpdatedAt: '2026-11-13',
 } as const

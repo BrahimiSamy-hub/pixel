@@ -1077,6 +1077,18 @@
         "text": "Vos données sont utilisées exclusivement pour :",
         "items": ["Répondre à vos demandes de devis ou d'informations", "Gérer vos commandes et la livraison de nos services", "Améliorer nos services et votre expérience sur notre site"]
       },
+      "app": {
+        "title": "Application mobile Pixel",
+        "text": "L’application Pixel traite en plus les données suivantes, uniquement pour fournir ses services :",
+        "items": [
+          "Compte client : identifiant et mot de passe fournis par Pixel ; la session est gardée de façon chiffrée sur votre téléphone.",
+          "Carte digitale : les informations et images (logo, photo, couverture) que vous publiez sont visibles par toute personne qui scanne votre QR code ou ouvre votre page.",
+          "Photos : l’app n’accède à votre galerie que lorsque vous choisissez une image à ajouter à votre carte.",
+          "Demandes de devis : elles sont envoyées par WhatsApp, à votre initiative ; vos brouillons restent sur votre téléphone.",
+          "Aucune publicité, aucun suivi publicitaire, aucune revente de données.",
+          "Suppression : pour supprimer votre compte et ses données, écrivez-nous (coordonnées ci-dessous) ; la suppression est faite sous 30 jours."
+        ]
+      },
       "retention": {
         "title": "Conservation des données",
         "text": "Nous conservons vos données personnelles uniquement pour la durée nécessaire aux finalités pour lesquelles elles ont été collectées, sauf si la loi exige une durée de conservation plus longue."

@@ -1077,6 +1077,18 @@
         "text": "Your data is used exclusively to:",
         "items": ["Reply to your quote or information requests", "Manage your orders and the delivery of our services", "Improve our services and your experience on our website"]
       },
+      "app": {
+        "title": "Pixel mobile app",
+        "text": "The Pixel app also processes the following data, only to provide its services:",
+        "items": [
+          "Client account: username and password provided by Pixel; the session is kept encrypted on your phone.",
+          "Digital card: the details and images (logo, photo, cover) you publish are visible to anyone who scans your QR code or opens your page.",
+          "Photos: the app only accesses your photo library when you choose an image to add to your card.",
+          "Quote requests: sent through WhatsApp, at your initiative; drafts stay on your phone.",
+          "No ads, no advertising tracking, no sale of data.",
+          "Deletion: to delete your account and its data, contact us (details below); deletion is done within 30 days."
+        ]
+      },
       "retention": {
         "title": "Data retention",
         "text": "We keep your personal data only for as long as necessary for the purposes for which it was collected, unless the law requires a longer retention period."
