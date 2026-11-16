@@ -105,10 +105,6 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute inset-e-0 bottom-[18%] flex flex-col gap-0.5 border border-line bg-ink px-4 py-3">
-                <span className="text-sm font-semibold">{t('hero.tagTitle')}</span>
-                <span className="font-mono text-[0.8125rem] font-semibold tracking-[0.2em] text-mist uppercase">{tStudios('photo.name')}</span>
-              </div>
             </div>
           </div>
           <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-7 border-t border-line pt-8 pb-12 md:pb-20">
