@@ -404,12 +404,10 @@
         "batna": "باتنة"
       },
       "roles": {
-        "creativeDirector": "مدير إبداعي",
-        "photographer": "مصور فوتوغرافي",
-        "developer": "مطور ويب وجوال",
-        "videographer": "مصور فيديو للأعراس",
-        "soundEngineer": "مهندس صوت",
-        "signMaker": "مسؤول مشاريع اللافتات"
+        "owner": "المؤسس والمسيّر",
+        "photoLead": "مصور فوتوغرافي، مصور فيديو ومونتير · مسؤول Pixel Photo Lab",
+        "productDeveloper": "مطور ومصمم منتجات",
+        "soundDeveloper": "مطور · Pixel Sounds"
       }
     },
     "tools": "أدواتنا",

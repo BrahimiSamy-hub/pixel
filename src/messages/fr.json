@@ -404,12 +404,10 @@
         "batna": "Batna"
       },
       "roles": {
-        "creativeDirector": "Directeur créatif",
-        "photographer": "Photographe",
-        "developer": "Développeur web & mobile",
-        "videographer": "Vidéaste mariage",
-        "soundEngineer": "Ingénieur son",
-        "signMaker": "Chef de projet enseignes"
+        "owner": "Fondateur & gérant",
+        "photoLead": "Photographe, vidéaste & monteur · Responsable Pixel Photo Lab",
+        "productDeveloper": "Développeur & product designer",
+        "soundDeveloper": "Développeur · Pixel Sounds"
       }
     },
     "tools": "Nos outils",

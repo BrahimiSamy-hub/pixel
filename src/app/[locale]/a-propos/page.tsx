@@ -112,23 +112,25 @@ export default async function AboutPage({ params }: PageProps<'/[locale]/a-propo
             {team.map((member) => (
               <li key={member.name} className="flex flex-col gap-4">
                 {/* Photo when there is one; until then, the initials on a tile in the member's service colour. */}
-                <div className={cn('relative flex aspect-4/5 items-center justify-center overflow-hidden rounded-card border border-line', toneClasses[member.service].soft)}>
+                <div className={cn('relative flex aspect-4/5 items-center justify-center overflow-hidden rounded-card border border-line', toneClasses[member.service ?? 'orange'].soft)}>
                   {member.photo ? (
                     <Image src={member.photo} alt={member.name} fill placeholder="blur" sizes="(min-width: 1280px) 300px, (min-width: 768px) 33vw, 100vw" className="object-cover" />
                   ) : (
-                    <span aria-hidden className={cn('text-[clamp(3.5rem,6vw,5rem)] font-extrabold tracking-[-0.04em] [font-stretch:112%]', toneClasses[member.service].text)}>
+                    <span aria-hidden className={cn('text-[clamp(3.5rem,6vw,5rem)] font-extrabold tracking-[-0.04em] [font-stretch:112%]', toneClasses[member.service ?? 'orange'].text)}>
                       {initials(member.name)}
                     </span>
                   )}
-                  <span className={cn('absolute inset-s-4 top-4 h-3.5 w-3 clip-mark', toneClasses[member.service].bg)} aria-hidden />
+                  <span className={cn('absolute inset-s-4 top-4 h-3.5 w-3 clip-mark', toneClasses[member.service ?? 'orange'].bg)} aria-hidden />
                 </div>
                 <div className="flex flex-col gap-1">
                   <h3 className="text-xl font-semibold tracking-[-0.02em]">{member.name}</h3>
-                  <p className="text-[0.9375rem] text-lavender">{t(`team.roles.${member.role}`)}</p>
-                  <p className="flex items-center gap-1.5 text-sm text-mist">
-                    <MapPin size={14} aria-hidden className={toneClasses[member.service].text} />
-                    {t(`team.studios.${member.studio}`)}
-                  </p>
+                  <p className="text-[0.9375rem] leading-snug text-lavender">{t(`team.roles.${member.role}`)}</p>
+                  {member.studio ? (
+                    <p className="flex items-center gap-1.5 text-sm text-mist">
+                      <MapPin size={14} aria-hidden className={toneClasses[member.service ?? 'orange'].text} />
+                      {t(`team.studios.${member.studio}`)}
+                    </p>
+                  ) : null}
                 </div>
               </li>
             ))}

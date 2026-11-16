@@ -2,30 +2,27 @@ import type { StaticImageData } from 'next/image'
 import type { ServiceId } from '@/lib/studios'
 
 /**
- * The team on the About page. PLACEHOLDERS: these names are made up until the real team is sent.
- * To update: change name/role/studio, and add `photo` (a static import, portrait about 4:5) to
- * replace the initials tile. `role` is a key under About.team.roles in the messages.
+ * The team on the About page. `role` is a key under About.team.roles in the messages; `service`
+ * colours the tile (none: Pixel orange). Add `photo` (a static import, portrait about 4:5) to
+ * replace the initials tile, and `studio` to show the member's city.
  */
 export type TeamMember = {
   name: string
-  role: 'creativeDirector' | 'photographer' | 'developer' | 'videographer' | 'soundEngineer' | 'signMaker'
-  service: ServiceId
-  studio: 'algiers' | 'batna'
+  role: 'owner' | 'photoLead' | 'productDeveloper' | 'soundDeveloper'
+  service?: ServiceId
+  studio?: 'algiers' | 'batna'
   photo?: StaticImageData
 }
 
 export const team: TeamMember[] = [
-  { name: 'Yacine Benali', role: 'creativeDirector', service: 'creative', studio: 'batna' },
-  { name: 'Lina Merabet', role: 'photographer', service: 'photo', studio: 'algiers' },
-  { name: 'Amine Khelifi', role: 'developer', service: 'dev', studio: 'batna' },
-  { name: 'Sarah Bouzid', role: 'videographer', service: 'events', studio: 'algiers' },
-  { name: 'Karim Haddad', role: 'soundEngineer', service: 'sounds', studio: 'batna' },
-  { name: 'Nour Saidi', role: 'signMaker', service: 'enseigne', studio: 'algiers' },
+  { name: 'Mohamed Salah Bouzidi', role: 'owner' },
+  { name: 'Ahmed Cheribet', role: 'photoLead', service: 'photo' },
+  { name: 'Samy Brahimi', role: 'productDeveloper', service: 'dev' },
+  { name: 'Abdelali Bougherara', role: 'soundDeveloper', service: 'sounds' },
 ]
 
-export const initials = (name: string) =>
-  name
-    .split(' ')
-    .map((w) => w[0])
-    .join('')
-    .slice(0, 2)
+/** First letters of the first and last words: "Mohamed Salah Bouzidi" → "MB". */
+export const initials = (name: string) => {
+  const words = name.split(' ')
+  return `${words[0]?.[0] ?? ''}${words.length > 1 ? words[words.length - 1]![0] : ''}`
+}
