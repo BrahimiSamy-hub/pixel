@@ -14,6 +14,8 @@ import type { Locale } from '@/i18n/routing'
 import { cn } from '@/lib/cn'
 import { staticPageMetadata } from '@/lib/seo'
 import { site } from '@/lib/site'
+import { toneClasses } from '@/lib/studios'
+import { initials, team } from '@/data/team'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/a-propos'>) {
   const { locale } = await params
@@ -103,10 +105,41 @@ export default async function AboutPage({ params }: PageProps<'/[locale]/a-propo
         </Container>
       </section>
 
-      <Container>
+      <section className="section-y border-y border-line bg-ink-2">
+        <Container>
+          <SectionHeader index="03" eyebrow={t('team.eyebrow')} title={t('team.title')} />
+          <ul className="grid grid-cols-[repeat(auto-fill,minmax(min(15rem,100%),1fr))] gap-6">
+            {team.map((member) => (
+              <li key={member.name} className="flex flex-col gap-4">
+                {/* Photo when there is one; until then, the initials on a tile in the member's service colour. */}
+                <div className={cn('relative flex aspect-4/5 items-center justify-center overflow-hidden rounded-card border border-line', toneClasses[member.service].soft)}>
+                  {member.photo ? (
+                    <Image src={member.photo} alt={member.name} fill placeholder="blur" sizes="(min-width: 1280px) 300px, (min-width: 768px) 33vw, 100vw" className="object-cover" />
+                  ) : (
+                    <span aria-hidden className={cn('text-[clamp(3.5rem,6vw,5rem)] font-extrabold tracking-[-0.04em] [font-stretch:112%]', toneClasses[member.service].text)}>
+                      {initials(member.name)}
+                    </span>
+                  )}
+                  <span className={cn('absolute inset-s-4 top-4 h-3.5 w-3 clip-mark', toneClasses[member.service].bg)} aria-hidden />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-xl font-semibold tracking-[-0.02em]">{member.name}</h3>
+                  <p className="text-[0.9375rem] text-lavender">{t(`team.roles.${member.role}`)}</p>
+                  <p className="flex items-center gap-1.5 text-sm text-mist">
+                    <MapPin size={14} aria-hidden className={toneClasses[member.service].text} />
+                    {t(`team.studios.${member.studio}`)}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      <Container className="pt-[clamp(4.5rem,9vw,8rem)]">
         <section className="flex flex-wrap overflow-hidden rounded-block border border-line bg-ink-2">
           <div className="flex min-w-0 flex-[1_1_26rem] flex-col gap-5 p-8 sm:p-12 lg:p-16">
-            <Eyebrow index="03">{t('visit.eyebrow')}</Eyebrow>
+            <Eyebrow index="04">{t('visit.eyebrow')}</Eyebrow>
             <h2 className="text-[clamp(2rem,3.6vw,3.25rem)] leading-[1.05] font-semibold tracking-[-0.035em]">{t('visit.title')}</h2>
             <p className="text-[1.0625rem] leading-relaxed text-lavender">{t('visit.text')}</p>
             <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 text-[0.9375rem]">

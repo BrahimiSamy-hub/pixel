@@ -396,6 +396,22 @@
       "eyebrow": "أهم المحطات",
       "title": "من باتنة إلى كل الجزائر."
     },
+    "team": {
+      "eyebrow": "الفريق",
+      "title": "الوجوه وراء Pixel.",
+      "studios": {
+        "algiers": "الجزائر العاصمة",
+        "batna": "باتنة"
+      },
+      "roles": {
+        "creativeDirector": "مدير إبداعي",
+        "photographer": "مصور فوتوغرافي",
+        "developer": "مطور ويب وجوال",
+        "videographer": "مصور فيديو للأعراس",
+        "soundEngineer": "مهندس صوت",
+        "signMaker": "مسؤول مشاريع اللافتات"
+      }
+    },
     "tools": "أدواتنا",
     "visit": {
       "eyebrow": "مقرنا الإبداعي",

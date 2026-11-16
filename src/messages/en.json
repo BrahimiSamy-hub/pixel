@@ -396,6 +396,22 @@
       "eyebrow": "Milestones",
       "title": "From Batna to all of Algeria."
     },
+    "team": {
+      "eyebrow": "The team",
+      "title": "The faces behind Pixel.",
+      "studios": {
+        "algiers": "Algiers",
+        "batna": "Batna"
+      },
+      "roles": {
+        "creativeDirector": "Creative director",
+        "photographer": "Photographer",
+        "developer": "Web & mobile developer",
+        "videographer": "Wedding videographer",
+        "soundEngineer": "Sound engineer",
+        "signMaker": "Signage project lead"
+      }
+    },
     "tools": "Our tools",
     "visit": {
       "eyebrow": "Our creative headquarters",

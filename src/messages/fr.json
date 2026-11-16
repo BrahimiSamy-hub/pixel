@@ -396,6 +396,22 @@
       "eyebrow": "Les grandes étapes",
       "title": "De Batna à toute l'Algérie."
     },
+    "team": {
+      "eyebrow": "L’équipe",
+      "title": "Les visages derrière Pixel.",
+      "studios": {
+        "algiers": "Alger",
+        "batna": "Batna"
+      },
+      "roles": {
+        "creativeDirector": "Directeur créatif",
+        "photographer": "Photographe",
+        "developer": "Développeur web & mobile",
+        "videographer": "Vidéaste mariage",
+        "soundEngineer": "Ingénieur son",
+        "signMaker": "Chef de projet enseignes"
+      }
+    },
     "tools": "Nos outils",
     "visit": {
       "eyebrow": "Notre siège créatif",
