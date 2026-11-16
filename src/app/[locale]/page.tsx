@@ -3,10 +3,11 @@ import Image from 'next/image'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import heroImage from '@/assets/portfolio/Shooting/shooting9.jpg'
 import quincaillerie from '@/assets/portfolio/sam/banner/banner8.webp'
-import waslaStand from '@/assets/portfolio/sam/desk/desk5.webp'
-import mili from '@/assets/portfolio/sam/poster/poster1.webp'
-import speedy from '@/assets/portfolio/sam/qrmenu/qrmenu8.webp'
 import aladdinar from '@/assets/portfolio/sam/web/web1.webp'
+import studioShoot from '@/assets/portfolio/Shooting/shooting12.jpg'
+import weddingFlares from '@/assets/portfolio/wedding/wedding.jpg'
+import mic from '@/assets/services/audio.png'
+import elRiadh from '@/assets/signs/elriadh.jpg'
 import mark from '@/assets/brand/pixel-mark.svg'
 import studioDesk from '@/assets/services/infographie.png'
 import { FeaturedReview, ReviewCard, reviews } from '@/components/sections/review-card'
@@ -26,7 +27,7 @@ import { formatDecimal, formatNumber } from '@/lib/format'
 import { staticPageMetadata } from '@/lib/seo'
 import { site } from '@/lib/site'
 import { ServiceLogo } from '@/components/sections/service-logo'
-import { serviceThemeClass, studioList, toneClasses } from '@/lib/studios'
+import { serviceThemeClass, studioList, studios, toneClasses, type StudioKey } from '@/lib/studios'
 import { portfolioItems, type PortfolioSub } from '@/data/portfolio'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]'>) {
@@ -34,14 +35,20 @@ export async function generateMetadata({ params }: PageProps<'/[locale]'>) {
   return staticPageMetadata(locale as Locale, 'home', '/')
 }
 
-/** Selected work from the SAM portfolio; the caption is its portfolio sub-category, the link its service's page. */
+/**
+ * Selected work: one piece per service (Tapini aside for now), in a 4-column bento. Each row is
+ * one wide (2 columns, 16:10) and two tall (4:5) tiles, which come out the same height.
+ * `title` is the client's name; without one, the portfolio sub-category names the piece
+ * (`titleSub: null`: the studio's own category).
+ */
 const work = [
-  { key: 'quincaillerie', title: 'Quincaillerie Générale', image: quincaillerie, sub: 'banner', href: '/portfolio/creative', wide: true },
-  { key: 'aladdinar', title: 'Aladdinar', image: aladdinar, sub: 'web', href: '/portfolio/dev', wide: false },
-  { key: 'speedy', title: 'Speedy Food', image: speedy, sub: 'qrmenu', href: '/portfolio/dev', wide: false },
-  { key: 'wasla', title: 'Wasla', image: waslaStand, sub: 'desk', href: '/portfolio/creative', wide: false },
-  { key: 'mili', title: 'Mili', image: mili, sub: 'poster', href: '/portfolio/creative', wide: false },
-] as const satisfies ReadonlyArray<{ key: string; title: string; sub: PortfolioSub; href: string; wide: boolean; image: unknown }>
+  { studio: 'design', title: 'Quincaillerie Générale', image: quincaillerie, wide: true },
+  { studio: 'photo', titleSub: 'studio', image: studioShoot, wide: false },
+  { studio: 'dev', title: 'Aladdinar', image: aladdinar, wide: false },
+  { studio: 'sound', titleSub: null, image: mic, wide: false },
+  { studio: 'ads', title: 'El Riadh Bijouterie', image: elRiadh, wide: false },
+  { studio: 'wedding', titleSub: 'wedding', image: weddingFlares, wide: true },
+] as const satisfies ReadonlyArray<{ studio: StudioKey; title?: string; titleSub?: PortfolioSub | null; wide: boolean; image: unknown }>
 
 const steps = ['listen', 'concept', 'production', 'delivery'] as const
 const faqKeys = ['price', 'photo', 'ads', 'ecommerce', 'outside'] as const
@@ -216,38 +223,30 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
               </Link>
             }
           />
-          <div className="flex flex-wrap gap-x-6 gap-y-12">
-            {work.map((item, i) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className={cn(
-                  'group flex min-w-0 flex-col gap-4 text-white',
-                  item.wide ? 'flex-[2_1_35rem]' : 'flex-[1_1_18.75rem]',
-                  i === 3 && 'md:pt-24',
-                )}
-              >
-                <span
-                  className={cn(
-                    'relative block overflow-hidden rounded-card bg-ink-3',
-                    item.wide ? 'aspect-16/10' : i === 1 ? 'aspect-16/10 md:aspect-auto md:flex-1' : 'aspect-4/5',
-                  )}
-                >
-                  <Image
-                    src={item.image}
-                    alt={`${item.title} — ${tPortfolio(`subs.${item.sub}`)}`}
-                    fill
-                    placeholder="blur"
-                    sizes={item.wide ? '(min-width: 1024px) 860px, 100vw' : '(min-width: 1024px) 420px, 100vw'}
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                </span>
-                <span className="flex items-baseline justify-between gap-4">
-                  <span className="text-2xl font-bold tracking-[-0.02em] [font-stretch:112%]">{item.title}</span>
-                  <span className={cn('text-mist', label, 'text-sm')}>{tPortfolio(`subs.${item.sub}`)}</span>
-                </span>
-              </Link>
-            ))}
+          <div className="grid gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+            {work.map((item) => {
+              const studio = studios[item.studio]
+              const title = 'title' in item ? item.title : item.titleSub ? tPortfolio(`subs.${item.titleSub}`) : tStudios(`${item.studio}.category`)
+              const service = tStudios(`${item.studio}.short`)
+              return (
+                <Link key={item.studio} href={studio.href} className={cn('group flex min-w-0 flex-col gap-4 text-white', item.wide && 'md:col-span-2')}>
+                  <span className={cn('relative block overflow-hidden rounded-card bg-ink-3', item.wide ? 'aspect-16/10' : 'aspect-4/5')}>
+                    <Image
+                      src={item.image}
+                      alt={`${title} — ${service}`}
+                      fill
+                      placeholder="blur"
+                      sizes={item.wide ? '(min-width: 1024px) 640px, (min-width: 768px) 100vw, 100vw' : '(min-width: 1024px) 320px, (min-width: 768px) 50vw, 100vw'}
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </span>
+                  <span className="flex items-baseline justify-between gap-4">
+                    <span className="text-xl font-bold tracking-[-0.02em] [font-stretch:112%]">{title}</span>
+                    <span className={cn(label, 'shrink-0 text-xs', toneClasses[studio.tone].text)}>{service}</span>
+                  </span>
+                </Link>
+              )
+            })}
           </div>
         </Container>
       </section>

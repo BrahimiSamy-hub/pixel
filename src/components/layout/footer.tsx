@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import astronaut from '@/assets/astro.png'
 import logo from '@/assets/brand/pixel-logo-dark.svg'
-import signature from '@/assets/brand/pixel-lockup-dark.svg'
 import { FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from '@/components/ui/brand-icons'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
@@ -165,9 +164,6 @@ export function Footer() {
             <CookieSettingsButton label={t('cookies')} />
           </div>
         </div>
-
-        {/* Giant signature: the wordmark at full width closes every page. */}
-        <Image src={signature} alt="" aria-hidden unoptimized className="mb-12 h-auto w-full" />
       </Container>
     </footer>
   )
