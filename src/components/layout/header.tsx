@@ -50,24 +50,27 @@ function TopBar() {
 
 export function Header() {
   const t = useTranslations('Nav')
+  // The info bar scrolls away; only the navbar stays pinned to the top.
   return (
-    <header className="relative z-40 border-b border-line bg-ink">
+    <>
       <TopBar />
-      <div className="mx-auto flex min-h-20 max-w-[1360px] items-center justify-between gap-6 px-4 sm:px-10">
-        <Link href="/" aria-label={t('homeLabel')} className="flex shrink-0 items-center">
-          <HeaderLogo pixel={logo} />
-        </Link>
-        <nav aria-label={t('main')} className="hidden lg:block">
-          <NavLinks />
-        </nav>
-        <div className="flex items-center gap-3">
-          <CartButton />
-          <ButtonLink href="/contact" size="sm" className="hidden sm:inline-flex">
-            {t('cta')}
-          </ButtonLink>
-          <MobileMenu />
+      <header className="sticky top-0 z-40 border-b border-line bg-ink/90 backdrop-blur-md">
+        <div className="mx-auto flex min-h-20 max-w-[1360px] items-center justify-between gap-6 px-4 sm:px-10">
+          <Link href="/" aria-label={t('homeLabel')} className="flex shrink-0 items-center">
+            <HeaderLogo pixel={logo} />
+          </Link>
+          <nav aria-label={t('main')} className="hidden lg:block">
+            <NavLinks />
+          </nav>
+          <div className="flex items-center gap-3">
+            <CartButton />
+            <ButtonLink href="/contact" size="sm" className="hidden sm:inline-flex">
+              {t('cta')}
+            </ButtonLink>
+            <MobileMenu />
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   )
 }

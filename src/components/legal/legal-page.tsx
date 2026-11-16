@@ -49,7 +49,7 @@ export async function LegalPage({ doc, locale }: { doc: Doc; locale: Locale }) {
       </section>
 
       <Container className="flex flex-wrap items-start gap-x-18 gap-y-12 pt-12 pb-6">
-        <nav aria-label={t('toc')} className="flex w-full flex-col gap-1 rounded-card border border-line bg-ink-2 p-6 md:sticky md:top-6 md:max-w-75 md:flex-[1_1_15rem]">
+        <nav aria-label={t('toc')} className="flex w-full flex-col gap-1 rounded-card border border-line bg-ink-2 p-6 md:sticky md:top-26 md:max-w-75 md:flex-[1_1_15rem]">
           <p className="mb-2.5 text-label text-orange">{t('toc')}</p>
           <ol className="flex flex-col">
             {sections.map((s, i) => (
