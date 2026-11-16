@@ -45,13 +45,22 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
     applicationName: site.name,
     robots: { index: true, follow: true },
     icons: {
+      // Generated from the brand symbol by scripts/brand-icons.mjs.
       icon: [
+        { url: '/favicon.svg', type: 'image/svg+xml' },
         { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
         { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       ],
       apple: '/apple-touch-icon.png',
     },
   }
+}
+
+const openingHours = {
+  '@type': 'OpeningHoursSpecification',
+  dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+  opens: '09:00',
+  closes: '18:00',
 }
 
 export default async function LocaleLayout({ children, params }: LayoutProps<'/[locale]'>) {
@@ -96,7 +105,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
             '@id': `${site.url}/#organization`,
             name: site.name,
             url: localizedUrl(locale),
-            logo: `${site.url}/og-image.png`,
+            logo: `${site.url}/android-chrome-512x512.png`,
             image: `${site.url}/og-image.png`,
             telephone: site.phone.e164,
             email: site.email,
@@ -114,11 +123,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
             knowsLanguage: ['fr', 'ar', 'en'],
             contactPoint: { '@type': 'ContactPoint', telephone: site.whatsapp.e164, contactType: 'sales', availableLanguage: ['French', 'Arabic', 'English'] },
             sameAs: Object.values(site.socials).map((s) => s.href),
-            openingHoursSpecification: {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
-              opens: '09:00',
-              closes: '18:00',
+            openingHoursSpecification: openingHours,
+            // The Algiers studio (no street address published yet).
+            department: {
+              '@type': 'LocalBusiness',
+              name: `${site.name} — Alger`,
+              telephone: site.phone.e164,
+              address: { '@type': 'PostalAddress', addressLocality: 'Alger', addressRegion: 'Alger', addressCountry: 'DZ' },
+              openingHoursSpecification: openingHours,
             },
           }}
         />

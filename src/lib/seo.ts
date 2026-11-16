@@ -17,10 +17,19 @@ export function languageAlternates(path = '/') {
   }
 }
 
+/** Pages with their own generated share card (an opengraph-image file in their route folder). */
+const ogCardPaths = new Set(['/', '/design-graphique', '/developpement', '/mariage', '/photo-lab', '/publicite', '/sons', '/tapini'])
+
+/** The page's own share card when it has one, else the site-wide card in public/. */
+function shareImage(locale: Locale, path: string) {
+  return ogCardPaths.has(path) ? `${localizedUrl(locale, path)}/opengraph-image` : `${site.url}/og-image.png`
+}
+
 type PageMeta = { locale: Locale; path: string; title: string; description: string; noIndex?: boolean }
 
 export function pageMetadata({ locale, path, title, description, noIndex }: PageMeta): Metadata {
   const url = localizedUrl(locale, path)
+  const image = shareImage(locale, path)
   return {
     title,
     description,
@@ -33,10 +42,10 @@ export function pageMetadata({ locale, path, title, description, noIndex }: Page
       url,
       locale: ogLocales[locale],
       alternateLocale: routing.locales.filter((l) => l !== locale).map((l) => ogLocales[l]),
-      // Fallback share image; a route's own opengraph-image file takes precedence.
-      images: [{ url: `${site.url}/og-image.png`, width: 1200, height: 630, alt: site.name }],
+      // Set explicitly: an `openGraph` object here would otherwise hide the route's opengraph-image file.
+      images: [{ url: image, width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: 'summary_large_image', title, description, images: [`${site.url}/og-image.png`] },
+    twitter: { card: 'summary_large_image', title, description, images: [image] },
     ...(noIndex ? { robots: { index: false, follow: true } } : {}),
   }
 }

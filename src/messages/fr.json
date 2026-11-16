@@ -5,8 +5,8 @@
       "description": "Agence créative en Algérie depuis 2018 — sites web, e-commerce, shooting photo, design graphique, panneaux publicitaires et production audio. Devis gratuit."
     },
     "home": {
-      "title": "Pixel Creative Agency | Agence de communication à Batna",
-      "description": "Agence de communication à Batna depuis 2018 : sites web, logos, shooting photo, mariages, enseignes lumineuses et impression. Devis en ligne partout en Algérie."
+      "title": "Pixel Creative Agency | Agence de communication à Alger et Batna",
+      "description": "Agence de communication à Alger et Batna depuis 2018 : sites web, logos, shooting photo, mariages, enseignes lumineuses et impression. Devis en ligne partout en Algérie."
     },
     "services": {
       "title": "Services : site web, logo, photo, enseignes, mariage",
@@ -14,11 +14,11 @@
     },
     "about": {
       "title": "À propos — notre histoire depuis 2018",
-      "description": "Pixel Creative Agency, agence créative fondée en 2018 à Batna. Nos engagements, nos grandes étapes et notre studio."
+      "description": "Pixel Creative Agency, agence créative fondée en 2018 à Batna, avec des studios à Alger et à Batna. Nos engagements, nos grandes étapes et notre équipe."
     },
     "portfolio": {
       "title": "Portfolio — nos réalisations en Algérie",
-      "description": "Identités visuelles, print, sites web, photo, vidéo et réseaux sociaux : découvrez plus de 200 réalisations de Pixel Creative Agency."
+      "description": "Bâches, menus, affiches, roll-ups, sites web, enseignes, photo et vidéo : les réalisations de Pixel Creative Agency, service par service."
     },
     "portfolioCategory": {
       "title": "{category} — Portfolio",
@@ -30,14 +30,14 @@
     },
     "photo": {
       "title": "Shooting photo & vidéo en Algérie — Pixel Photo Lab",
-      "description": "Shooting professionnel, portrait, produit, spot publicitaire, réels et gestion des réseaux sociaux. Studio équipé à Batna, dès 4 000 DA."
+      "description": "Shooting professionnel, portrait, produit, spot publicitaire, réels et gestion des réseaux sociaux. Studios à Alger et Batna, dès 4 000 DA."
     },
     "design": {
       "title": "Création de logo & design graphique en Algérie",
       "description": "Création de logo, identité visuelle, menus de restaurant, flyers, packaging et visuels réseaux sociaux. Devis en ligne, impression dès 1 800 DA/m²."
     },
     "wedding": {
-      "title": "Photographe & vidéaste de mariage à Batna, Algérie",
+      "title": "Photographe & vidéaste de mariage à Alger et Batna",
       "description": "Six packs mariage de 29 000 à 130 000 DA : 2 à 6 photographes, montage FHD, 4K ou 6K, photobook, cadres et drone. Composez votre pack en ligne."
     },
     "dev": {
@@ -74,7 +74,7 @@
     },
     "testimonials": {
       "title": "Témoignages clients",
-      "description": "Ce que nos clients disent de Pixel Creative Agency : mariage, sites web, identité visuelle."
+      "description": "Note de 4,8/5 sur 34 avis Google : ce que nos clients disent de Pixel Creative Agency, à Alger, Batna et partout en Algérie."
     },
     "city": {
       "title": "Agence de communication & web à {city}",
