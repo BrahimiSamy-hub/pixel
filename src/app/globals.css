@@ -183,6 +183,11 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  /* Room for glyph overhang (accents, final letter), which background-clip would otherwise cut. */
+  padding-block: 0.1em;
+  padding-inline-end: 0.08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 /* Outlined numerals (process steps, studio indexes). */
@@ -194,14 +199,13 @@
 /* ── Typography scale ───────────────────────────────────────────────────── */
 
 @utility text-display {
-  font-size: clamp(3.5rem, 8.6vw, 8.5rem);
+  font-size: clamp(2.75rem, 8.6vw, 8.5rem);
   line-height: 0.9;
   letter-spacing: -0.045em;
   font-weight: 800;
   font-stretch: 112%;
   text-wrap: balance;
   overflow-wrap: break-word;
-  hyphens: auto;
   &:lang(ar) {
     line-height: 1.22;
     font-weight: 700;
@@ -209,14 +213,13 @@
 }
 
 @utility text-h1 {
-  font-size: clamp(2.875rem, 6.4vw, 6.25rem);
+  font-size: clamp(2.5rem, 6.4vw, 6.25rem);
   line-height: 0.9;
   letter-spacing: -0.045em;
   font-weight: 800;
   font-stretch: 112%;
   text-wrap: balance;
   overflow-wrap: break-word;
-  hyphens: auto;
   &:lang(ar) {
     line-height: 1.25;
     font-weight: 700;
@@ -224,14 +227,13 @@
 }
 
 @utility text-h2 {
-  font-size: clamp(2.375rem, 5vw, 4.75rem);
+  font-size: clamp(2.125rem, 5vw, 4.75rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
   font-weight: 800;
   font-stretch: 112%;
   text-wrap: balance;
   overflow-wrap: break-word;
-  hyphens: auto;
   &:lang(ar) {
     line-height: 1.3;
     font-weight: 700;
