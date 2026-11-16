@@ -2,11 +2,11 @@ import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import heroImage from '@/assets/portfolio/Shooting/shooting9.jpg'
-import fashionWeek from '@/assets/portfolio/Shooting/shooting10.jpg'
-import izem from '@/assets/portfolio/food/food5.jpg'
-import broker from '@/assets/portfolio/landingPage/BrokerMockup.jpg'
-import darYasmine from '@/assets/portfolio/logo/logo4.jpg'
-import groom from '@/assets/portfolio/wedding/wedding3.jpg'
+import quincaillerie from '@/assets/portfolio/sam/banner/banner8.webp'
+import waslaStand from '@/assets/portfolio/sam/desk/desk5.webp'
+import mili from '@/assets/portfolio/sam/poster/poster1.webp'
+import speedy from '@/assets/portfolio/sam/qrmenu/qrmenu8.webp'
+import aladdinar from '@/assets/portfolio/sam/web/web1.webp'
 import mark from '@/assets/brand/pixel-mark.svg'
 import studioDesk from '@/assets/services/infographie.png'
 import { FeaturedReview, ReviewCard, reviews } from '@/components/sections/review-card'
@@ -26,21 +26,22 @@ import { formatDecimal, formatNumber } from '@/lib/format'
 import { staticPageMetadata } from '@/lib/seo'
 import { site } from '@/lib/site'
 import { ServiceLogo } from '@/components/sections/service-logo'
-import { serviceThemeClass, studioList, toneClasses, type Tone } from '@/lib/studios'
-import { portfolioItems } from '@/data/portfolio'
+import { serviceThemeClass, studioList, toneClasses } from '@/lib/studios'
+import { portfolioItems, type PortfolioSub } from '@/data/portfolio'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]'>) {
   const { locale } = await params
   return staticPageMetadata(locale as Locale, 'home', '/')
 }
 
+/** Selected work from the SAM portfolio; the caption is its portfolio sub-category, the link its service's page. */
 const work = [
-  { key: 'daryasmine', title: 'Dar Yasmine', image: darYasmine, tone: 'yellow', wide: true },
-  { key: 'fashionweek', title: 'Fashion Week 2024', image: fashionWeek, tone: 'teal', wide: false },
-  { key: 'izem', title: 'Izem Energy', image: izem, tone: 'teal', wide: false },
-  { key: 'broker', title: 'Broker', image: broker, tone: 'lime', wide: false },
-  { key: 'wedding', title: null, image: groom, tone: 'red', wide: false },
-] as const satisfies ReadonlyArray<{ key: string; tone: Tone; title: string | null; wide: boolean; image: unknown }>
+  { key: 'quincaillerie', title: 'Quincaillerie Générale', image: quincaillerie, sub: 'banner', href: '/portfolio/creative', wide: true },
+  { key: 'aladdinar', title: 'Aladdinar', image: aladdinar, sub: 'web', href: '/portfolio/dev', wide: false },
+  { key: 'speedy', title: 'Speedy Food', image: speedy, sub: 'qrmenu', href: '/portfolio/dev', wide: false },
+  { key: 'wasla', title: 'Wasla', image: waslaStand, sub: 'desk', href: '/portfolio/creative', wide: false },
+  { key: 'mili', title: 'Mili', image: mili, sub: 'poster', href: '/portfolio/creative', wide: false },
+] as const satisfies ReadonlyArray<{ key: string; title: string; sub: PortfolioSub; href: string; wide: boolean; image: unknown }>
 
 const steps = ['listen', 'concept', 'production', 'delivery'] as const
 const faqKeys = ['price', 'photo', 'ads', 'ecommerce', 'outside'] as const
@@ -51,10 +52,10 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   const locale = raw as Locale
   setRequestLocale(locale)
 
-  const [t, tStudios, tWork, tCommon, products] = await Promise.all([
+  const [t, tStudios, tPortfolio, tCommon, products] = await Promise.all([
     getTranslations('Home'),
     getTranslations('Studios'),
-    getTranslations('Work'),
+    getTranslations('Portfolio'),
     getTranslations('Common'),
     getProducts(),
   ])
@@ -219,7 +220,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
             {work.map((item, i) => (
               <Link
                 key={item.key}
-                href="/portfolio"
+                href={item.href}
                 className={cn(
                   'group flex min-w-0 flex-col gap-4 text-white',
                   item.wide ? 'flex-[2_1_35rem]' : 'flex-[1_1_18.75rem]',
@@ -234,7 +235,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                 >
                   <Image
                     src={item.image}
-                    alt={tWork(`${item.key}Alt`)}
+                    alt={`${item.title} — ${tPortfolio(`subs.${item.sub}`)}`}
                     fill
                     placeholder="blur"
                     sizes={item.wide ? '(min-width: 1024px) 860px, 100vw' : '(min-width: 1024px) 420px, 100vw'}
@@ -242,8 +243,8 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   />
                 </span>
                 <span className="flex items-baseline justify-between gap-4">
-                  <span className="text-2xl font-bold tracking-[-0.02em] [font-stretch:112%]">{item.title ?? tWork(item.key)}</span>
-                  <span className={cn('text-mist', label, 'text-sm')}>{item.title ? tWork(item.key) : tStudios('wedding.short')}</span>
+                  <span className="text-2xl font-bold tracking-[-0.02em] [font-stretch:112%]">{item.title}</span>
+                  <span className={cn('text-mist', label, 'text-sm')}>{tPortfolio(`subs.${item.sub}`)}</span>
                 </span>
               </Link>
             ))}
