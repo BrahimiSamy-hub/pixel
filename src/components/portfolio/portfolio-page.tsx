@@ -28,7 +28,7 @@ export async function PortfolioPage({ category }: { category?: PortfolioCategory
   const counts = Object.fromEntries(portfolioCategories.map((c) => [c, portfolioItems.filter((i) => i.category === c).length]))
 
   const chips = [{ key: 'all', href: '/portfolio', label: t('all'), count: portfolioItems.length }].concat(
-    portfolioCategories.map((c) => ({ key: c, href: `/portfolio/${c}`, label: t(`categories.${c}`), count: counts[c] ?? 0 })),
+    portfolioCategories.filter((c) => counts[c]).map((c) => ({ key: c, href: `/portfolio/${c}`, label: t(`categories.${c}`), count: counts[c] ?? 0 })),
   )
 
   return (
