@@ -225,21 +225,7 @@
     "y2025": { "title": "Application mobile", "text": "Suivre vos commandes et collaborer en temps réel avec l'équipe." }
   },
   "Reviews": {
-    "amel": {
-      "name": "Amel B.",
-      "role": "Mariée · juillet 2023",
-      "text": "Les photos de notre mariage sont magnifiques. L'équipe a su capturer chaque instant précieux avec une discrétion et une élégance incroyables."
-    },
-    "mohamed": {
-      "name": "Mohamed R.",
-      "role": "Propriétaire e-commerce",
-      "text": "Une équipe très professionnelle. Ils ont créé mon site de A à Z et le résultat est au-delà de mes attentes. Fortement recommandés !"
-    },
-    "yassine": {
-      "name": "Yassine T.",
-      "role": "Directeur de communication",
-      "text": "Pixel nous accompagne sur notre identité visuelle depuis 2 ans. Leur réactivité et leur créativité font toute la différence."
-    }
+    "source": "Avis Google"
   },
   "Home": {
     "hero": {
@@ -1019,6 +1005,7 @@
     "title": "Ce que nos clients",
     "titleAccent": "racontent.",
     "average": "Note moyenne de nos clients",
+    "count": "{count} avis Google",
     "leaveReview": "Laisser un avis"
   },
   "City": {

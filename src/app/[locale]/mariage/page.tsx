@@ -7,6 +7,7 @@ import shoes from '@/assets/portfolio/wedding/wedding9.jpg'
 import hands from '@/assets/portfolio/wedding/wedding11.jpg'
 import groom from '@/assets/portfolio/wedding/wedding3.jpg'
 import bouquet from '@/assets/portfolio/wedding/wedding7.jpg'
+import { reviews } from '@/data/reviews'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
@@ -27,13 +28,16 @@ export default async function WeddingPage({ params }: PageProps<'/[locale]/maria
   const { locale: raw } = await params
   const locale = raw as Locale
   setRequestLocale(locale)
-  const [t, tNav, tStudios, tMeta, tReview] = await Promise.all([
+  const [t, tNav, tStudios, tMeta, tReviews] = await Promise.all([
     getTranslations('Wedding'),
     getTranslations('Nav'),
     getTranslations('Studios'),
     getTranslations('Metadata.wedding'),
-    getTranslations('Reviews.amel'),
+    getTranslations('Reviews'),
   ])
+
+  // A real Google review about Pixel's photo and video work.
+  const review = reviews.find((r) => r.key === 'hmani')!
 
   return (
     <>
@@ -93,9 +97,9 @@ export default async function WeddingPage({ params }: PageProps<'/[locale]/maria
       <section className="section-y">
         <Container className="flex max-w-275 flex-col items-center gap-7 text-center">
           <Quote size={44} fill="currentColor" strokeWidth={0} aria-hidden className="flip-rtl text-red" />
-          <blockquote className="text-[clamp(1.5rem,3vw,2.5rem)] leading-tight font-semibold tracking-[-0.02em]">{tReview('text')}</blockquote>
+          <blockquote className="text-[clamp(1.5rem,3vw,2.5rem)] leading-tight font-semibold tracking-[-0.02em] whitespace-pre-line">{review.text}</blockquote>
           <p className="text-[0.9375rem] text-mist">
-            <strong className="font-semibold text-white">{tReview('name')}</strong> · {tReview('role')}
+            <strong className="font-semibold text-white">{review.name}</strong> · {tReviews('source')} · {review.year}
           </p>
         </Container>
       </section>

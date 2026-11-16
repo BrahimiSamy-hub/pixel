@@ -4,15 +4,14 @@ import mark from '@/assets/brand/pixel-mark.svg'
 import { useTranslations } from 'next-intl'
 import { HexDot } from '@/components/ui/hex'
 import { cn } from '@/lib/cn'
-import { toneClasses, type Tone } from '@/lib/studios'
+import { reviewInitials, type Review } from '@/data/reviews'
+import { studios, toneClasses } from '@/lib/studios'
 
-export const reviews = [
-  { key: 'amel', initials: 'AB', tone: 'red', studio: 'wedding' },
-  { key: 'mohamed', initials: 'MR', tone: 'lime', studio: 'dev' },
-  { key: 'yassine', initials: 'YT', tone: 'yellow', studio: 'design' },
-] as const
-
-export type ReviewKey = (typeof reviews)[number]['key']
+/** "Avis Google · 2024": the only translated part of a review; quotes stay in their own language. */
+function useSource(review: Review) {
+  const t = useTranslations('Reviews')
+  return `${t('source')} · ${review.year}`
+}
 
 export function Stars({ count = 5, className }: { count?: number; className?: string }) {
   const t = useTranslations('Common')
@@ -26,39 +25,37 @@ export function Stars({ count = 5, className }: { count?: number; className?: st
 }
 
 /** Lead testimonial, set large on the paper section: the P symbol opens the quote. */
-export function FeaturedReview({ reviewKey }: { reviewKey: ReviewKey; initials?: string }) {
-  const t = useTranslations(`Reviews.${reviewKey}`)
+export function FeaturedReview({ review }: { review: Review }) {
+  const source = useSource(review)
   return (
     <figure className="flex flex-col gap-8">
       <Image src={mark} alt="" unoptimized className="h-auto w-10" />
-      <blockquote className="text-[clamp(1.625rem,2.8vw,2.5rem)] leading-[1.2] font-semibold tracking-[-0.025em] text-pretty">
-        «&#8239;{t('text')}&#8239;»
+      <blockquote className="text-[clamp(1.375rem,2.4vw,2.125rem)] leading-[1.25] font-semibold tracking-[-0.025em] text-pretty whitespace-pre-line">
+        «&#8239;{review.text}&#8239;»
       </blockquote>
       <figcaption className="flex items-center gap-3.5 border-t border-[#cfccc8] pt-6">
-        <span className="font-bold">{t('name')}</span>
-        <span className="text-stone">{t('role')}</span>
+        <span className="font-bold">{review.name}</span>
+        <span className="text-stone">{source}</span>
       </figcaption>
     </figure>
   )
 }
 
 export function ReviewCard({
-  reviewKey,
-  initials,
-  tone,
+  review,
   label,
   className,
   onPaper = false,
 }: {
-  reviewKey: ReviewKey
-  initials: string
-  tone: Tone
+  review: Review
+  /** The service the review is about, when it names one. */
   label?: string
   className?: string
   /** Set on the light "paper" section: dark text, no card. */
   onPaper?: boolean
 }) {
-  const t = useTranslations(`Reviews.${reviewKey}`)
+  const source = useSource(review)
+  const tone = review.studio ? studios[review.studio].tone : 'orange'
   return (
     <figure className={cn('flex flex-col gap-6', onPaper ? 'text-ink' : 'rounded-card border border-line bg-ink p-8', className)}>
       <div className="flex items-center justify-between gap-4">
@@ -70,14 +67,14 @@ export function ReviewCard({
         ) : null}
         <Stars />
       </div>
-      <blockquote className={cn('text-[1.0625rem] leading-relaxed', onPaper ? 'text-[1.1875rem] font-medium' : 'text-lavender')}>{t('text')}</blockquote>
+      <blockquote className={cn('text-[1.0625rem] leading-relaxed whitespace-pre-line', onPaper ? 'text-[1.1875rem] font-medium' : 'text-lavender')}>{review.text}</blockquote>
       <figcaption className={cn('mt-auto flex items-center gap-3.5', !onPaper && 'border-t border-line pt-5')}>
         <span className={cn('flex h-12.5 w-11 items-center justify-center font-bold text-ink clip-hex', toneClasses[tone].bg)}>
-          {initials}
+          {reviewInitials(review.name)}
         </span>
         <span>
-          <strong className="block font-semibold">{t('name')}</strong>
-          <span className={cn('text-sm', onPaper ? 'text-stone' : 'text-mist')}>{t('role')}</span>
+          <strong className="block font-semibold">{review.name}</strong>
+          <span className={cn('text-sm', onPaper ? 'text-stone' : 'text-mist')}>{source}</span>
         </span>
       </figcaption>
     </figure>

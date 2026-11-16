@@ -10,7 +10,8 @@ import mic from '@/assets/services/audio.png'
 import elRiadh from '@/assets/signs/elriadh.jpg'
 import mark from '@/assets/brand/pixel-mark.svg'
 import studioDesk from '@/assets/services/infographie.png'
-import { FeaturedReview, ReviewCard, reviews } from '@/components/sections/review-card'
+import { FeaturedReview, ReviewCard } from '@/components/sections/review-card'
+import { homeReviews } from '@/data/reviews'
 import { TimelineList } from '@/components/sections/timeline'
 import { ProductCard } from '@/components/shop/product-card'
 import { ButtonLink } from '@/components/ui/button'
@@ -332,15 +333,13 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
           </div>
           <div className="flex flex-wrap gap-12">
             <div className="min-w-0 flex-[1.5_1_32rem]">
-              <FeaturedReview reviewKey={reviews[0].key} initials={reviews[0].initials} />
+              <FeaturedReview review={homeReviews[0]!} />
             </div>
             <div className="flex min-w-0 flex-[1_1_21rem] flex-col gap-10">
-              {reviews.slice(1).map((r, i) => (
+              {homeReviews.slice(1).map((r, i) => (
                 <ReviewCard
                   key={r.key}
-                  reviewKey={r.key}
-                  initials={r.initials}
-                  tone={r.tone}
+                  review={r}
                   onPaper
                   className={cn(i > 0 && 'border-t border-[#cfccc8] pt-10')}
                 />

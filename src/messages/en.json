@@ -225,21 +225,7 @@
     "y2025": { "title": "Mobile app", "text": "Track your orders and work with the team in real time." }
   },
   "Reviews": {
-    "amel": {
-      "name": "Amel B.",
-      "role": "Bride · July 2023",
-      "text": "Our wedding photos are beautiful. The team captured every precious moment with incredible discretion and elegance."
-    },
-    "mohamed": {
-      "name": "Mohamed R.",
-      "role": "E-commerce owner",
-      "text": "A very professional team. They built my website from A to Z and the result is beyond my expectations. Highly recommended!"
-    },
-    "yassine": {
-      "name": "Yassine T.",
-      "role": "Communications director",
-      "text": "Pixel has handled our brand identity for 2 years. Their responsiveness and creativity make all the difference."
-    }
+    "source": "Google review"
   },
   "Home": {
     "hero": {
@@ -1019,6 +1005,7 @@
     "title": "What our clients",
     "titleAccent": "say.",
     "average": "Average client rating",
+    "count": "{count} Google reviews",
     "leaveReview": "Leave a review"
   },
   "City": {

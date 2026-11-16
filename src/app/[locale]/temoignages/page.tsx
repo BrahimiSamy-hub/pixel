@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { ReviewCard, reviews, Stars } from '@/components/sections/review-card'
+import { ReviewCard, Stars } from '@/components/sections/review-card'
+import { reviews } from '@/data/reviews'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
@@ -19,7 +20,7 @@ export default async function TestimonialsPage({ params }: PageProps<'/[locale]/
   const { locale: raw } = await params
   const locale = raw as Locale
   setRequestLocale(locale)
-  const [t, tStudios, tReviews] = await Promise.all([getTranslations('Testimonials'), getTranslations('Studios'), getTranslations('Reviews')])
+  const [t, tStudios] = await Promise.all([getTranslations('Testimonials'), getTranslations('Studios')])
 
   return (
     <>
@@ -28,9 +29,8 @@ export default async function TestimonialsPage({ params }: PageProps<'/[locale]/
           '@context': 'https://schema.org',
           '@type': 'Review',
           itemReviewed: { '@id': `${site.url}/#organization` },
-          reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-          author: { '@type': 'Person', name: tReviews(`${r.key}.name`) },
-          reviewBody: tReviews(`${r.key}.text`),
+          author: { '@type': 'Person', name: r.name },
+          reviewBody: r.text,
         }))}
       />
       <section className="pt-12 pb-12 md:pt-20">
@@ -48,7 +48,9 @@ export default async function TestimonialsPage({ params }: PageProps<'/[locale]/
               <span className="text-xl text-mist">/ {site.rating.best}</span>
             </p>
             <Stars className="[&_svg]:size-5" />
-            <p className="text-[0.9375rem] text-lavender">{t('average')}</p>
+            <p className="text-[0.9375rem] text-lavender">
+              {t('average')} · {t('count', { count: site.rating.count })}
+            </p>
             <ButtonLink href={site.mapsUrl} size="sm" className="mt-1.5 self-start">
               {t('leaveReview')}
             </ButtonLink>
@@ -58,7 +60,7 @@ export default async function TestimonialsPage({ params }: PageProps<'/[locale]/
 
       <Container className="grid grid-cols-[repeat(auto-fit,minmax(min(20rem,100%),1fr))] gap-6 pb-6">
         {reviews.map((r) => (
-          <ReviewCard key={r.key} reviewKey={r.key} initials={r.initials} tone={r.tone} label={tStudios(`${r.studio}.short`)} className="bg-ink-2" />
+          <ReviewCard key={r.key} review={r} label={r.studio ? tStudios(`${r.studio}.short`) : undefined} className="bg-ink-2" />
         ))}
       </Container>
     </>
