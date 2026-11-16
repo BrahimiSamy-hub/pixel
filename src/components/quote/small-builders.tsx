@@ -7,7 +7,7 @@ import { quoteText } from '@/shared/catalog/text'
 import { cn } from '@/lib/cn'
 import { ChoiceChips, type Contact, ContactBlock, emptyContact, Group, Notes, OptionRow, QSection, QtyStepper, TextField, Ticket, useDraft, useL, useLang, usePriceText } from './kit'
 
-/** Pixel Dev: project types, goal, included services, payment schedule. All on quote. */
+/** Pixel Development: project types, goal, included services, payment schedule. All on quote. */
 export function DevBuilder() {
   const L = useL()
   const lang = useLang()
@@ -65,7 +65,7 @@ export function DevBuilder() {
         </div>
       </QSection>
       <ContactBlock value={contact} onChange={setContact} />
-      <Ticket request={{ service: 'Pixel Dev', answers: [{ label: L(dev.current), value: site }], lines: devLines(s, lang), notes: goal, contact }} />
+      <Ticket request={{ service: 'Pixel Development', answers: [{ label: L(dev.current), value: site }], lines: devLines(s, lang), notes: goal, contact }} />
     </div>
   )
 }

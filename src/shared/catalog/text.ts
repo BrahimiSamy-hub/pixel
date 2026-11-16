@@ -569,9 +569,9 @@ export const servicesText = {
     },
     "dev": {
       "name": {
-        "fr": "Pixel Dev",
-        "en": "Pixel Dev",
-        "ar": "Pixel Dev"
+        "fr": "Pixel Development",
+        "en": "Pixel Development",
+        "ar": "Pixel Development"
       },
       "desc": {
         "fr": "Sites web, plateformes en ligne et solutions digitales.",

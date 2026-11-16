@@ -6,7 +6,7 @@ import { serviceLogos, type ServiceId } from '@/lib/studios'
 export const serviceNames: Record<ServiceId, string> = {
   creative: 'Pixel Creative',
   photo: 'Pixel Photo Lab',
-  dev: 'Pixel Dev',
+  dev: 'Pixel Development',
   events: 'Pixel Events',
   sounds: 'Pixel Sounds',
   enseigne: 'Pixel Enseigne',

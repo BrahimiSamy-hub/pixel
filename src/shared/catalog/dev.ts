@@ -1,6 +1,6 @@
 // SHARED CATALOG: source of truth lives in the website repo (pixel/src/shared/catalog).
 // The mobile app gets a copy with `npm run sync:catalog`; edit here, never in the app copy.
-/** Pixel Dev: development quote request from "Devlopement.pdf". All projects are on quote. */
+/** Pixel Development: development quote request from "Devlopement.pdf". All projects are on quote. */
 import { l, type QuoteLine, type Lang } from './core'
 
 export const devProjects = [

@@ -406,7 +406,7 @@
       "roles": {
         "owner": "Founder & owner",
         "photoLead": "Photographer, videographer & editor · Head of Pixel Photo Lab",
-        "productDeveloper": "Developer & product designer · Head of Pixel Dev",
+        "productDeveloper": "Developer & product designer · Head of Pixel Development",
         "soundDeveloper": "Developer · Head of Pixel Sounds"
       }
     },
@@ -441,7 +441,7 @@
     "categories": {
       "creative": "Pixel Creative",
       "photo": "Pixel Photo Lab",
-      "dev": "Pixel Dev",
+      "dev": "Pixel Development",
       "events": "Pixel Events",
       "enseigne": "Pixel Enseigne"
     },
