@@ -421,7 +421,8 @@
       "hoursValue": "Samedi–jeudi · 9h–18h",
       "phone": "Téléphone",
       "directions": "Itinéraire",
-      "mapLabel": "Emplacement du studio Pixel à Batna"
+      "mapLabel": "Emplacement du studio Pixel à {city}",
+      "mapToggle": "Choisir le studio"
     }
   },
   "Portfolio": {

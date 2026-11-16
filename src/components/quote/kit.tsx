@@ -249,8 +249,8 @@ export function SwatchGrid({ swatches, value, onChange }: { swatches: readonly S
 // Contact + request
 // ---------------------------------------------------------------------------
 
-export type Contact = { name: string; phone: string; city: string; company: string; email: string; date: string; budget: string; reply: 'whatsapp' | 'call' | 'email' }
-export const emptyContact: Contact = { name: '', phone: '', city: '', company: '', email: '', date: '', budget: '', reply: 'whatsapp' }
+export type Contact = { name: string; phone: string; city: string; company: string; email: string; date: string; budget: string }
+export const emptyContact: Contact = { name: '', phone: '', city: '', company: '', email: '', date: '', budget: '' }
 
 export function ContactBlock({ value, onChange }: { value: Contact; onChange: (c: Contact) => void }) {
   const L = useL()
@@ -266,12 +266,6 @@ export function ContactBlock({ value, onChange }: { value: Contact; onChange: (c
         <TextField id="q-date" label={L(quoteText.date)} value={value.date} onChange={set('date')} placeholder={L(quoteText.datePlaceholder)} />
         <TextField id="q-budget" label={L(quoteText.budget)} value={value.budget} onChange={set('budget')} dir="ltr" />
       </div>
-      <p className="text-sm text-mist">{L(quoteText.reply)}</p>
-      <ChoiceChips
-        options={(['whatsapp', 'call', 'email'] as const).map((r) => ({ value: r, label: L(quoteText.replyBy[r]) }))}
-        value={[value.reply]}
-        onChange={(v) => v[0] && onChange({ ...value, reply: v[0] })}
-      />
     </QSection>
   )
 }
@@ -296,7 +290,6 @@ function requestText(req: QuoteRequest, L: ReturnType<typeof useL>) {
   if (c.email) out.push(`${L(quoteText.email)} : ${c.email}`)
   if (c.date) out.push(`${L(quoteText.date)} : ${c.date}`)
   if (c.budget) out.push(`${L(quoteText.budget)} : ${c.budget}`)
-  out.push(`${L(quoteText.reply)} : ${L(quoteText.replyBy[c.reply])}`)
   return out.join('\n')
 }
 

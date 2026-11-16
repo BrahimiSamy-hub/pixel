@@ -133,28 +133,6 @@ export const quoteText = {
     "en": "Indicative budget (DA)",
     "ar": "الميزانية التقريبية (دج)"
   },
-  "reply": {
-    "fr": "Réponse par",
-    "en": "Reply by",
-    "ar": "الرد عبر"
-  },
-  "replyBy": {
-    "whatsapp": {
-      "fr": "WhatsApp",
-      "en": "WhatsApp",
-      "ar": "واتساب"
-    },
-    "call": {
-      "fr": "Appel",
-      "en": "Call",
-      "ar": "مكالمة"
-    },
-    "email": {
-      "fr": "E-mail",
-      "en": "Email",
-      "ar": "البريد الإلكتروني"
-    }
-  },
   "missingTitle": {
     "fr": "Champs obligatoires manquants",
     "en": "Required fields missing",

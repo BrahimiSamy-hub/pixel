@@ -421,7 +421,8 @@
       "hoursValue": "السبت–الخميس · ⁦9:00–18:00⁩",
       "phone": "الهاتف",
       "directions": "الاتجاهات",
-      "mapLabel": "موقع استوديو Pixel في باتنة"
+      "mapLabel": "موقع استوديو Pixel في {city}",
+      "mapToggle": "اختر الاستوديو"
     }
   },
   "Portfolio": {

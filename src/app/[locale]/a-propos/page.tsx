@@ -1,19 +1,17 @@
-import { ArrowUpRight, Check, Clock, MapPin } from 'lucide-react'
+import { Check, Clock, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import stage from '@/assets/portfolio/Shooting/shooting4.jpg'
 import kid from '@/assets/portfolio/Shooting/shooting2.jpg'
 import flares from '@/assets/portfolio/wedding/wedding.jpg'
-import mark from '@/assets/brand/pixel-mark.svg'
+import { StudioMap } from '@/components/sections/studio-map'
 import { TimelineRail } from '@/components/sections/timeline'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
-import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Eyebrow, SectionHeader } from '@/components/ui/section-header'
 import type { Locale } from '@/i18n/routing'
 import { cn } from '@/lib/cn'
 import { staticPageMetadata } from '@/lib/seo'
-import { site } from '@/lib/site'
 import { toneClasses } from '@/lib/studios'
 import { initials, team } from '@/data/team'
 
@@ -150,26 +148,15 @@ export default async function AboutPage({ params }: PageProps<'/[locale]/a-propo
               <dt className="text-mist">{t('visit.hours')}</dt>
               <dd>{t('visit.hoursValue')}</dd>
             </dl>
-            <ButtonLink href={site.mapsUrl} size="sm" className="mt-2 self-start">
-              {t('visit.directions')}
-              <ArrowUpRight size={16} aria-hidden className="flip-rtl" />
-            </ButtonLink>
           </div>
-          <a
-            href={site.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={t('visit.mapLabel')}
-            className="grid min-h-104 min-w-0 flex-[1.2_1_26rem] place-items-center bg-ink-3 bg-[linear-gradient(var(--color-line)_1px,transparent_1px),linear-gradient(90deg,var(--color-line)_1px,transparent_1px)] bg-size-[48px_48px]"
-          >
-            <span className="flex -translate-y-[10%] flex-col items-center gap-2.5">
-              <Image src={mark} alt="" unoptimized className="h-auto w-14" />
-              <span className="rounded-card border border-line bg-ink px-3.5 py-2 text-sm font-semibold whitespace-nowrap">{site.name}</span>
-              <span className="font-mono text-xs text-mist" dir="ltr">
-                {site.geo.latitude}° N · {site.geo.longitude}° E
-              </span>
-            </span>
-          </a>
+          <StudioMap
+            className="flex-[1.2_1_26rem]"
+            labels={{
+              studios: { batna: t('team.studios.batna'), algiers: t('team.studios.algiers') },
+              maps: { batna: t('visit.mapLabel', { city: t('team.studios.batna') }), algiers: t('visit.mapLabel', { city: t('team.studios.algiers') }) },
+              toggle: t('visit.mapToggle'),
+            }}
+          />
         </section>
       </Container>
     </>
