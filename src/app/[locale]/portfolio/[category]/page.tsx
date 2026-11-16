@@ -1,14 +1,14 @@
 import { notFound } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { PortfolioPage } from '@/components/portfolio/portfolio-page'
-import { isPortfolioCategory, portfolioCategories } from '@/data/portfolio'
+import { isPortfolioCategory, portfolioCategoriesWithWork } from '@/data/portfolio'
 import { routing, type Locale } from '@/i18n/routing'
 import { pageMetadata } from '@/lib/seo'
 
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  return routing.locales.flatMap((locale) => portfolioCategories.map((category) => ({ locale, category })))
+  return routing.locales.flatMap((locale) => portfolioCategoriesWithWork.map((category) => ({ locale, category })))
 }
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/portfolio/[category]'>) {

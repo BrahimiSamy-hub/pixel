@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { useDeferredValue, useRef, useState } from 'react'
 import type { PortfolioItem } from '@/data/portfolio'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/cn'
 
 const PAGE_SIZE = 24
 
@@ -13,20 +14,27 @@ function thumb(item: PortfolioItem) {
   return item.type === 'video' ? `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg` : item.image
 }
 
+/** Signs show their lit view: the right half of a lit/unlit pair. */
+const isPair = (item: PortfolioItem) => item.type === 'sign' && item.pair
+
 export function PortfolioGrid({ items }: { items: PortfolioItem[] }) {
   const t = useTranslations('Portfolio')
   const tCommon = useTranslations('Common')
   const [query, setQuery] = useState('')
+  const [sub, setSub] = useState<string | null>(null)
   const [visible, setVisible] = useState(PAGE_SIZE)
   const [active, setActive] = useState<PortfolioItem | null>(null)
   const dialog = useRef<HTMLDialogElement>(null)
   const deferredQuery = useDeferredValue(query)
 
   const label = (item: PortfolioItem) => ('title' in item ? item.title : t(`subs.${item.sub}`))
+  // Inside one service, a second row filters by kind of work (as in the mobile app).
+  const subs = new Set(items.map((i) => i.category)).size === 1 ? [...new Set(items.map((i) => i.sub))] : []
+  const inSub = sub ? items.filter((i) => i.sub === sub) : items
   const needle = deferredQuery.trim().toLocaleLowerCase()
   const filtered = needle
-    ? items.filter((item) => `${label(item)} ${t(`subs.${item.sub}`)} ${t(`categories.${item.category}`)}`.toLocaleLowerCase().includes(needle))
-    : items
+    ? inSub.filter((item) => `${label(item)} ${t(`subs.${item.sub}`)} ${t(`categories.${item.category}`)}`.toLocaleLowerCase().includes(needle))
+    : inSub
   const shown = filtered.slice(0, visible)
 
   const open = (item: PortfolioItem) => {
@@ -36,6 +44,27 @@ export function PortfolioGrid({ items }: { items: PortfolioItem[] }) {
 
   return (
     <>
+      {subs.length > 1 ? (
+        <div className="no-scrollbar -mt-4 mb-6 flex gap-2 overflow-x-auto pb-1">
+          {subs.map((s) => (
+            <button
+              key={s}
+              type="button"
+              aria-pressed={sub === s}
+              onClick={() => {
+                setSub(sub === s ? null : s)
+                setVisible(PAGE_SIZE)
+              }}
+              className={cn(
+                'flex min-h-10 shrink-0 items-center rounded-full border px-4 text-sm whitespace-nowrap',
+                sub === s ? 'border-orange bg-orange/15 font-semibold text-white' : 'border-line bg-ink-2 text-lavender hover:border-line-strong',
+              )}
+            >
+              {t(`subs.${s}`)}
+            </button>
+          ))}
+        </div>
+      ) : null}
       <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
         <p className="text-label text-mist" aria-live="polite">
           {t('count', { count: filtered.length })}
@@ -67,15 +96,18 @@ export function PortfolioGrid({ items }: { items: PortfolioItem[] }) {
                 onClick={() => open(item)}
                 className="group block w-full overflow-hidden rounded-tile border border-line bg-ink-2 text-start"
               >
-                <span className="relative block">
+                <span className="relative block overflow-hidden" style={isPair(item) && item.type !== 'video' ? { aspectRatio: `${item.image.width / 2} / ${item.image.height}` } : undefined}>
                   <Image
                     src={thumb(item)}
                     alt={label(item)}
                     width={item.type === 'video' ? 480 : item.image.width}
                     height={item.type === 'video' ? 360 : item.image.height}
                     placeholder={item.type === 'video' ? 'empty' : 'blur'}
-                    sizes="(min-width: 1280px) 320px, (min-width: 768px) 33vw, 50vw"
-                    className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                    sizes={isPair(item) ? '(min-width: 1280px) 640px, (min-width: 768px) 66vw, 100vw' : '(min-width: 1280px) 320px, (min-width: 768px) 33vw, 50vw'}
+                    className={cn(
+                      'transition-transform duration-500 group-hover:scale-[1.02]',
+                      isPair(item) ? 'absolute inset-y-0 right-0 h-full w-[200%] max-w-none object-cover' : 'h-auto w-full',
+                    )}
                   />
                   <span className="absolute inset-0 flex items-center justify-center bg-ink/0 transition-colors group-hover:bg-ink/40">
                     <span className="flex size-12 scale-90 items-center justify-center rounded-full bg-orange text-ink opacity-0 transition group-hover:scale-100 group-hover:opacity-100 group-focus-visible:opacity-100">

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { portfolioCategories, portfolioItems } from '@/data/portfolio'
+import { portfolioCategoriesWithWork } from '@/data/portfolio'
 import { routing } from '@/i18n/routing'
 import { getCategories, getProducts } from '@/lib/api'
 import { cities } from '@/lib/nav'
@@ -27,7 +27,7 @@ const staticPaths: Array<{ path: string; priority: number; changeFrequency: Meta
   { path: '/conditions-dutilisation', priority: 0.2, changeFrequency: 'yearly' },
   { path: '/politique-de-confidentialite', priority: 0.2, changeFrequency: 'yearly' },
   ...cities.map((c) => ({ path: c.href, priority: 0.7, changeFrequency: 'monthly' as const })),
-  ...portfolioCategories.filter((c) => portfolioItems.some((i) => i.category === c)).map((c) => ({ path: `/portfolio/${c}`, priority: 0.6, changeFrequency: 'monthly' as const })),
+  ...portfolioCategoriesWithWork.map((c) => ({ path: `/portfolio/${c}`, priority: 0.6, changeFrequency: 'monthly' as const })),
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

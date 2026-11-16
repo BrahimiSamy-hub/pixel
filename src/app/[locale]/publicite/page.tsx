@@ -58,7 +58,7 @@ export default async function AdsPage({ params }: PageProps<'/[locale]/publicite
             <p className="max-w-xl text-lead text-lavender">{t('lead')}</p>
             <div className="flex flex-wrap gap-3.5">
               <ButtonLink href="#devis">{t('ctaPrimary')}</ButtonLink>
-              <ButtonLink href="/portfolio/print" variant="secondary">
+              <ButtonLink href="/portfolio/creative" variant="secondary">
                 {t('ctaSecondary')}
               </ButtonLink>
             </div>

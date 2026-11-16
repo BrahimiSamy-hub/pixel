@@ -4,6 +4,14 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
 // Old English slugs that were indexed before the French slugs became canonical.
+const legacyPortfolio: Array<[from: string, to: string]> = [
+  ['conception', 'creative'],
+  ['print', 'creative'],
+  ['social', 'creative'],
+  ['digital', 'dev'],
+  ['video', 'photo'],
+]
+
 const legacySlugs: Array<[from: string, to: string]> = [
   ['about-us', 'a-propos'],
   ['advertisement', 'publicite'],
@@ -59,10 +67,14 @@ const nextConfig: NextConfig = {
     ]
   },
   async redirects() {
-    return legacySlugs.flatMap(([from, to]) => [
-      { source: `/:locale(fr|en|ar)/${from}`, destination: `/:locale/${to}`, permanent: true },
-      { source: `/${from}`, destination: `/fr/${to}`, permanent: true },
-    ])
+    return [
+      ...legacySlugs.flatMap(([from, to]) => [
+        { source: `/:locale(fr|en|ar)/${from}`, destination: `/:locale/${to}`, permanent: true },
+        { source: `/${from}`, destination: `/fr/${to}`, permanent: true },
+      ]),
+      // The portfolio used to filter by medium; it now filters by service, like the mobile app.
+      ...legacyPortfolio.map(([from, to]) => ({ source: `/:locale(fr|en|ar)/portfolio/${from}`, destination: `/:locale/portfolio/${to}`, permanent: true })),
+    ]
   },
 }
 

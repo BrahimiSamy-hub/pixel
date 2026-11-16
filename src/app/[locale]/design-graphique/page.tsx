@@ -143,7 +143,7 @@ export default async function DesignPage({ params }: PageProps<'/[locale]/design
             eyebrow={t('work.eyebrow')}
             title={t('work.title')}
             aside={
-              <Link href="/portfolio/conception" className="font-mono text-[0.8125rem] font-bold tracking-[0.08em] text-orange uppercase">
+              <Link href="/portfolio/creative" className="font-mono text-[0.8125rem] font-bold tracking-[0.08em] text-orange uppercase">
                 {tCommon('seeAllWork')} →
               </Link>
             }

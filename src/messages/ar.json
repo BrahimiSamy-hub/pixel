@@ -424,12 +424,11 @@
     "play": "تشغيل الفيديو",
     "open": "تكبير",
     "categories": {
-      "conception": "الهوية",
-      "print": "المطبوعات",
-      "digital": "الرقمي",
-      "photo": "التصوير",
-      "video": "الفيديو",
-      "social": "الشبكات الاجتماعية"
+      "creative": "Pixel Creative",
+      "photo": "Pixel Photo Lab",
+      "dev": "Pixel Dev",
+      "events": "Pixel Events",
+      "enseigne": "Pixel Enseigne"
     },
     "subs": {
       "logo": "شعار وهوية",
@@ -458,7 +457,8 @@
       "reels": "ريلز وكليبات",
       "trailer": "إعلان تشويقي",
       "cinema": "تصوير سينمائي",
-      "ad": "ومضة إشهارية"
+      "ad": "ومضة إشهارية",
+      "signs": "لافتات"
     }
   },
   "Contact": {

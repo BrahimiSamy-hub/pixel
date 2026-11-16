@@ -424,12 +424,11 @@
     "play": "Lire la vidéo",
     "open": "Agrandir",
     "categories": {
-      "conception": "Conception",
-      "print": "Print",
-      "digital": "Digital",
-      "photo": "Photo",
-      "video": "Vidéo",
-      "social": "Réseaux sociaux"
+      "creative": "Pixel Creative",
+      "photo": "Pixel Photo Lab",
+      "dev": "Pixel Dev",
+      "events": "Pixel Events",
+      "enseigne": "Pixel Enseigne"
     },
     "subs": {
       "logo": "Logo & identité",
@@ -458,7 +457,8 @@
       "reels": "Réels & clips",
       "trailer": "Bande-annonce",
       "cinema": "Cinématographie",
-      "ad": "Spot publicitaire"
+      "ad": "Spot publicitaire",
+      "signs": "Enseignes"
     }
   },
   "Contact": {

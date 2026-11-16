@@ -1,12 +1,12 @@
 import { getTranslations } from 'next-intl/server'
 import { PageHero } from '@/components/sections/page-hero'
 import { Container } from '@/components/ui/container'
-import { portfolioCategories, portfolioItems, type PortfolioCategory } from '@/data/portfolio'
+import { portfolioCategoriesWithWork, portfolioItems, type PortfolioCategory } from '@/data/portfolio'
 import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/cn'
 import { PortfolioGrid } from './portfolio-grid'
 
-/** Round-robin across categories so the "all" view opens on variety, not 24 logo boards. */
+/** Round-robin across services so the "all" view opens on variety, not 24 menus. */
 function interleave<T extends { category: string }>(list: T[]) {
   const groups = Object.values(Object.groupBy(list, (i) => i.category)) as T[][]
   const out: T[] = []
@@ -25,10 +25,9 @@ const allItems = interleave(portfolioItems)
 export async function PortfolioPage({ category }: { category?: PortfolioCategory }) {
   const [t, tNav] = await Promise.all([getTranslations('Portfolio'), getTranslations('Nav')])
   const items = category ? portfolioItems.filter((i) => i.category === category) : allItems
-  const counts = Object.fromEntries(portfolioCategories.map((c) => [c, portfolioItems.filter((i) => i.category === c).length]))
 
   const chips = [{ key: 'all', href: '/portfolio', label: t('all'), count: portfolioItems.length }].concat(
-    portfolioCategories.filter((c) => counts[c]).map((c) => ({ key: c, href: `/portfolio/${c}`, label: t(`categories.${c}`), count: counts[c] ?? 0 })),
+    portfolioCategoriesWithWork.map((c) => ({ key: c, href: `/portfolio/${c}`, label: t(`categories.${c}`), count: portfolioItems.filter((i) => i.category === c).length })),
   )
 
   return (
