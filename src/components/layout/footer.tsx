@@ -11,6 +11,7 @@ import { cities } from '@/lib/nav'
 import { site } from '@/lib/site'
 import { studioList } from '@/lib/studios'
 import { CookieSettingsButton } from './cookie-consent'
+import { RouteLogo } from './route-theme'
 
 const socialLinks = [
   { label: 'Instagram', href: site.socials.instagram.href, Icon: InstagramIcon },
@@ -71,7 +72,7 @@ export function Footer() {
       <Container>
         <div className="flex flex-wrap gap-x-10 gap-y-12 pt-16 md:pt-20">
           <div className="flex min-w-0 flex-[1.6_1_17rem] flex-col gap-5">
-            <Image src={logo} alt="Pixel Creative Agency" unoptimized className="h-auto w-56 self-start" />
+            <RouteLogo pixel={logo} alt={site.name} className="h-auto w-56 self-start" />
             <p className="max-w-xs text-[0.9375rem] leading-relaxed text-mist">{t('about')}</p>
             <ul className="flex gap-2.5">
               {socialLinks.map(({ label, href, Icon }) => (

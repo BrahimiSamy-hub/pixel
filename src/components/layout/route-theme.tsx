@@ -4,6 +4,7 @@ import Image, { type StaticImageData } from 'next/image'
 import type { ReactNode } from 'react'
 import { usePathname } from '@/i18n/navigation'
 import { cn } from '@/lib/cn'
+import { serviceNames } from '@/components/sections/service-logo'
 import { serviceLogos, serviceThemeClass, type ServiceId } from '@/lib/studios'
 
 /** Pages that belong to one sub-brand: the whole site chrome (navbar, page, footer) takes its colours. */
@@ -32,9 +33,14 @@ export function RouteTheme({ children }: { children: ReactNode }) {
   return <div className={cn('flex flex-1 flex-col', service && serviceThemeClass[service])}>{children}</div>
 }
 
-/** The navbar logo: the sub-brand's logo on its pages (as in the mobile app), Pixel's everywhere else. */
-export function HeaderLogo({ pixel }: { pixel: StaticImageData }) {
+/** A logo that follows the page: the sub-brand's on its pages (as in the mobile app), Pixel's elsewhere. */
+export function RouteLogo({ pixel, alt = '', className, preload }: { pixel: StaticImageData; alt?: string; className?: string; preload?: boolean }) {
   const service = useRouteService()
   const logo = service && serviceLogos[service]
-  return <Image src={logo ?? pixel} alt="" unoptimized preload className="h-9 w-auto sm:h-10" />
+  return <Image src={logo ?? pixel} alt={alt && logo ? serviceNames[service!] : alt} unoptimized preload={preload} className={className} />
+}
+
+/** The navbar logo (the link around it carries the accessible name). */
+export function HeaderLogo({ pixel }: { pixel: StaticImageData }) {
+  return <RouteLogo pixel={pixel} preload className="h-9 w-auto sm:h-10" />
 }
