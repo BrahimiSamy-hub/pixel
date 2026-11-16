@@ -86,11 +86,9 @@ export default async function ServicesPage({ params }: PageProps<'/[locale]/serv
                   <span className="sr-only">{tStudios(`${s.key}.name`)}</span>
                   <ServiceLogo service={s.tone} decorative className="h-16 w-auto text-[clamp(2.25rem,4vw,3.5rem)] md:h-20" />
                 </h2>
-                <p className="flex items-center gap-3.5">
-                  <span className={cn('inline-flex h-8 items-center ps-3 pe-5 font-mono text-[0.9375rem] font-bold text-ink clip-chamfer-sm', toneClasses[s.tone].bg)}>
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <span className={cn('text-label', toneClasses[s.tone].text)}>{tStudios(`${s.key}.category`)}</span>
+                <p className={cn('flex items-center gap-3 text-label', toneClasses[s.tone].text)}>
+                  <HexDot tone={s.tone} />
+                  {String(i + 1).padStart(2, '0')} · {tStudios(`${s.key}.category`)}
                 </p>
                 <p className="text-[1.0625rem] leading-relaxed text-lavender">{t(`${s.key}.lead`)}</p>
                 <ul className="grid grid-cols-[repeat(auto-fit,minmax(12.5rem,1fr))] gap-x-6 gap-y-2.5 text-[0.9375rem] text-lavender">
