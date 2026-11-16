@@ -10,7 +10,7 @@
     },
     "services": {
       "title": "Services : site web, logo, photo, enseignes, mariage",
-      "description": "Sept studios, un seul interlocuteur : sites web, design graphique, photo et vidéo, mariage, enseignes et impression, voix off, cartes NFC. Devis en ligne."
+      "description": "Une agence, plusieurs savoir-faire : sites web, design graphique, photo et vidéo, mariage, enseignes et impression, voix off, cartes NFC. Devis en ligne."
     },
     "about": {
       "title": "À propos — notre histoire depuis 2018",
@@ -147,7 +147,7 @@
     "lead": "Discutons ensemble de votre prochain succès — shooting, identité visuelle, site web ou enseigne lumineuse.",
     "cta": "Demander un devis",
     "about": "Agence créative à Batna depuis 2018. Photo, vidéo, design, web, son et publicité — pour toute l'Algérie.",
-    "studios": "Studios",
+    "studios": "Services",
     "agency": "Agence",
     "shop": "Boutique",
     "contact": "Contact",
@@ -232,7 +232,7 @@
       "eyebrow": "Agence créative · Batna · Depuis 2018",
       "title": "La créativité n'a pas de",
       "titleAccent": "limites.",
-      "lead": "Photo, vidéo, design graphique, sites web, son et impression : nos studios réunis sous un même toit pour donner vie à vos idées, partout en Algérie.",
+      "lead": "Photo, vidéo, design graphique, sites web, son et impression : tout réuni sous un même toit pour donner vie à vos idées, partout en Algérie.",
       "ctaPrimary": "Devis gratuit",
       "ctaSecondary": "Voir le portfolio",
       "proof1": "Réponse sous 24 h",
@@ -243,13 +243,13 @@
     },
     "stats": {
       "founded": "Année de création à Batna",
-      "studios": "Studios spécialisés, une seule équipe",
+      "studios": "Savoir-faire, une seule équipe",
       "projects": "Projets publiés au portfolio",
       "rating": "Note moyenne de nos clients"
     },
     "studios": {
-      "eyebrow": "Nos studios",
-      "title": "Chaque métier a son studio.",
+      "eyebrow": "Nos savoir-faire",
+      "title": "Une agence, plusieurs savoir-faire.",
       "lead": "De l'idée à l'objet livré, chaque projet passe entre les mains de spécialistes — et reste suivi par un seul interlocuteur."
     },
     "work": {
@@ -323,7 +323,7 @@
   "Services": {
     "title": "Tout ce qu'il faut pour être",
     "titleAccent": "vu.",
-    "lead": "Des studios spécialisés, un seul interlocuteur. Choisissez un service ou combinez-les — on s'occupe de la cohérence.",
+    "lead": "Plusieurs savoir-faire, un seul interlocuteur. Choisissez un service ou combinez-les — on s'occupe de la cohérence.",
     "seePacks": "Voir les packs",
     "hostingIncluded": "hébergement 1 an inclus",
     "photo": {
@@ -369,7 +369,7 @@
     "galleryHex": "Portrait d'enfant en studio sur fond jaune",
     "gallerySmall": "Cortège de mariage avec fumigènes rouges",
     "introTitle": "Une agence née à Batna, portée par une équipe de passionnés.",
-    "introP1": "Fondée en 2018, Pixel a commencé derrière l'objectif — à capturer des moments uniques et à raconter des histoires en images. Aujourd'hui, nos studios travaillent sous le même toit : photo et vidéo, design graphique, mariage, développement web, son et publicité.",
+    "introP1": "Fondée en 2018, Pixel a commencé derrière l'objectif — à capturer des moments uniques et à raconter des histoires en images. Aujourd'hui, nos équipes travaillent sous le même toit : photo et vidéo, design graphique, mariage, développement web, son et publicité.",
     "introP2": "Que vous soyez une entreprise qui veut promouvoir sa marque, un couple qui célèbre un moment unique ou un artiste qui veut montrer son travail, notre méthode reste la même : comprendre vos besoins, puis allier expertise technique et sens aigu de l'esthétique pour créer des visuels qui se démarquent.",
     "values": {
       "eyebrow": "Ce qui nous guide",
@@ -467,7 +467,7 @@
     "title": "Parlons de votre",
     "titleAccent": "projet.",
     "lead": "Un devis, une question, une idée encore floue ? Écrivez-nous : devis gratuit et réponse sous 24 h.",
-    "studioLegend": "Quel studio vous intéresse ?",
+    "studioLegend": "Quel service vous intéresse ?",
     "other": "Autre / je ne sais pas",
     "fields": {
       "name": "Nom",
