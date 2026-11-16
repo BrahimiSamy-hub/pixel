@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ContactForm, type StudioOption } from '@/components/forms/contact-form'
 import { PageHero } from '@/components/sections/page-hero'
@@ -58,17 +58,6 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/conta
               </span>
             </span>
           </a>
-          <a href={site.phone.href} className="flex items-center gap-4.5 rounded-card border border-line bg-ink-2 p-6 hover:border-line-strong">
-            <HexIcon>
-              <Phone size={22} strokeWidth={2} aria-hidden />
-            </HexIcon>
-            <span className="flex flex-col gap-1">
-              <span className="text-label text-mist">{t('aside.phone')}</span>
-              <span className="text-xl font-semibold" dir="ltr">
-                {site.phone.display}
-              </span>
-            </span>
-          </a>
           <a href={`mailto:${site.email}`} className="flex items-center gap-4.5 rounded-card border border-line bg-ink-2 p-6 hover:border-line-strong">
             <HexIcon>
               <Mail size={22} strokeWidth={2} aria-hidden />
@@ -90,7 +79,7 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/conta
             </div>
             <p className="flex justify-between border-t border-line pt-4 text-[0.9375rem]">
               <span className="text-mist">{t('aside.days')}</span>
-              <span dir="ltr">09:00 – 18:00</span>
+              <span>{t('aside.time')}</span>
             </p>
             <Link href="/a-propos" className="text-label font-bold text-orange">
               {t('aside.map')}

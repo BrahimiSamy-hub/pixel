@@ -136,8 +136,8 @@
     "homeLabel": "Pixel Creative Agency — Home"
   },
   "TopBar": {
-    "location": "Batna, Algeria",
-    "hours": "Mon–Fri 09:00–18:00"
+    "location": "Algiers · Batna",
+    "hours": "Sat–Thu 9am–6pm"
   },
   "Footer": {
     "eyebrow": "Free quote within 24 h",
@@ -162,7 +162,7 @@
     "werewolf": "Werewolf rules",
     "cookies": "Manage cookies",
     "mascotAlt": "Pixel's astronaut mascot",
-    "hours": "Mon–Fri · 09:00–18:00"
+    "hours": "Sat–Thu · 9am–6pm"
   },
   "Cookie": {
     "title": "Cookies",
@@ -249,7 +249,7 @@
       "ctaPrimary": "Free quote",
       "ctaSecondary": "See the portfolio",
       "proof1": "Reply within 24 h",
-      "proof2": "Equipped studio in Batna",
+      "proof2": "Equipped studios in Algiers and Batna",
       "proof3": "Delivery across Algeria",
       "imageAlt": "Artistic shoot in a red dress at the Pixel studio",
       "tagTitle": "Artistic shoot"
@@ -274,12 +274,12 @@
       "title": "Four steps, no surprises.",
       "listen": { "title": "Listen", "text": "Tell us about your project, your timeline and your budget. Free quote within 24 hours." },
       "concept": { "title": "Concept", "text": "Moodboard, mock-ups, art direction: we sign off together before producing anything." },
-      "production": { "title": "Production", "text": "Shoot, design, development or print — it all happens in our Batna studios." },
+      "production": { "title": "Production", "text": "Shoot, design, development or print — it all happens in our Algiers and Batna studios." },
       "delivery": { "title": "Delivery", "text": "HD files, a live website or printed media delivered anywhere in Algeria." }
     },
     "story": {
       "eyebrow": "Our story",
-      "title": "A studio in Batna, a team for all of Algeria.",
+      "title": "Two studios, Algiers and Batna, one team for all of Algeria.",
       "text": "Founded in 2018 by a team of enthusiasts, Pixel combines technical expertise with a keen eye for aesthetics to create visuals that stand out — and leave a lasting impression.",
       "cta": "Discover the agency",
       "imageAlt": "Design desk with a graphics tablet and colour swatches"
@@ -316,8 +316,8 @@
         "a": "Yes: online payment, order management, SEO and a responsive interface. Free quote within 24 hours."
       },
       "outside": {
-        "q": "Do you work outside Batna?",
-        "a": "We're based in Batna and work across Algeria on web, design, photo and advertising projects."
+        "q": "Do you work outside Algiers and Batna?",
+        "a": "With studios in Algiers and Batna, we work across Algeria on web, design, photo and advertising projects."
       }
     }
   },
@@ -389,7 +389,7 @@
       "title": "Three commitments.",
       "quality": { "title": "Quality first", "text": "Excellence in every detail we deliver — from the HD file to the installed neon sign." },
       "support": { "title": "24/7 support", "text": "Always there when you need us most, before and after delivery." },
-      "proximity": { "title": "Close to you", "text": "Strategically based in Batna to serve you better, and active across Algeria." }
+      "proximity": { "title": "Close to you", "text": "Two studios, in Algiers and Batna, to serve you better, and active across Algeria." }
     },
     "timeline": {
       "eyebrow": "Milestones",
@@ -398,12 +398,12 @@
     "tools": "Our tools",
     "visit": {
       "eyebrow": "Our creative headquarters",
-      "title": "Visit our studio.",
+      "title": "Visit our studios.",
       "text": "Come and see where the magic happens: a space designed to inspire innovation and collaboration.",
-      "city": "City",
-      "cityValue": "Batna, Algeria",
+      "city": "Studios",
+      "cityValue": "Algiers · Batna",
       "hours": "Hours",
-      "hoursValue": "Monday–Friday · 09:00–18:00",
+      "hoursValue": "Saturday–Thursday · 9am–6pm",
       "phone": "Phone",
       "directions": "Directions",
       "mapLabel": "Location of the Pixel studio in Batna"
@@ -496,8 +496,9 @@
       "fastest": "Fastest · WhatsApp",
       "phone": "Phone",
       "email": "Email",
-      "studio": "Studio",
-      "days": "Monday – Friday",
+      "studio": "Our studios",
+      "days": "Saturday – Thursday",
+      "time": "9am – 6pm",
       "map": "See the map"
     },
     "faq": {

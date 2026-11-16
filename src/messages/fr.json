@@ -136,8 +136,8 @@
     "homeLabel": "Pixel Creative Agency — Accueil"
   },
   "TopBar": {
-    "location": "Batna, Algérie",
-    "hours": "Lun–Ven 09:00–18:00"
+    "location": "Alger · Batna",
+    "hours": "Sam–Jeu 9h–18h"
   },
   "Footer": {
     "eyebrow": "Devis gratuit sous 24 h",
@@ -162,7 +162,7 @@
     "werewolf": "Règles Loup-Garou",
     "cookies": "Gérer les cookies",
     "mascotAlt": "La mascotte astronaute de Pixel",
-    "hours": "Lun–Ven · 09:00–18:00"
+    "hours": "Sam–Jeu · 9h–18h"
   },
   "Cookie": {
     "title": "Cookies",
@@ -249,7 +249,7 @@
       "ctaPrimary": "Devis gratuit",
       "ctaSecondary": "Voir le portfolio",
       "proof1": "Réponse sous 24 h",
-      "proof2": "Studio équipé à Batna",
+      "proof2": "Studios équipés à Alger et Batna",
       "proof3": "Livraison dans toute l'Algérie",
       "imageAlt": "Shooting artistique en robe rouge réalisé au studio Pixel",
       "tagTitle": "Shooting artistique"
@@ -274,12 +274,12 @@
       "title": "Quatre étapes, zéro surprise.",
       "listen": { "title": "Écoute", "text": "Vous nous parlez de votre projet, de vos délais et de votre budget. Devis gratuit sous 24 h." },
       "concept": { "title": "Concept", "text": "Moodboard, maquettes, direction artistique : on valide ensemble avant de produire." },
-      "production": { "title": "Production", "text": "Shooting, design, développement ou impression — tout se fait dans nos studios de Batna." },
+      "production": { "title": "Production", "text": "Shooting, design, développement ou impression — tout se fait dans nos studios d'Alger et de Batna." },
       "delivery": { "title": "Livraison", "text": "Fichiers HD, site en ligne ou supports imprimés livrés partout en Algérie." }
     },
     "story": {
       "eyebrow": "Notre histoire",
-      "title": "Un studio à Batna, une équipe pour toute l'Algérie.",
+      "title": "Deux studios, Alger et Batna, une équipe pour toute l'Algérie.",
       "text": "Fondée en 2018 par une équipe de passionnés, Pixel allie expertise technique et sens aigu de l'esthétique pour créer des visuels qui se démarquent — et qui laissent une empreinte durable.",
       "cta": "Découvrir l'agence",
       "imageAlt": "Bureau de design avec tablette graphique et nuancier"
@@ -316,8 +316,8 @@
         "a": "Oui : paiement en ligne, gestion des commandes, optimisation SEO et interface responsive. Devis gratuit sous 24 h."
       },
       "outside": {
-        "q": "Êtes-vous disponibles en dehors de Batna ?",
-        "a": "Basés à Batna, nous intervenons dans toute l'Algérie pour le web, le design, la photo et la publicité."
+        "q": "Êtes-vous disponibles en dehors d'Alger et de Batna ?",
+        "a": "Avec nos studios d'Alger et de Batna, nous intervenons dans toute l'Algérie pour le web, le design, la photo et la publicité."
       }
     }
   },
@@ -389,7 +389,7 @@
       "title": "Trois engagements.",
       "quality": { "title": "Qualité d'abord", "text": "L'excellence dans chaque détail que nous livrons — du fichier HD au néon posé." },
       "support": { "title": "Support 24/7", "text": "Toujours là quand vous avez le plus besoin de nous, avant comme après la livraison." },
-      "proximity": { "title": "Proximité", "text": "Stratégiquement situés à Batna pour mieux vous servir, et présents dans toute l'Algérie." }
+      "proximity": { "title": "Proximité", "text": "Deux studios, à Alger et à Batna, pour mieux vous servir, et présents dans toute l'Algérie." }
     },
     "timeline": {
       "eyebrow": "Les grandes étapes",
@@ -398,12 +398,12 @@
     "tools": "Nos outils",
     "visit": {
       "eyebrow": "Notre siège créatif",
-      "title": "Visitez notre studio.",
+      "title": "Visitez nos studios.",
       "text": "Venez voir où la magie se produit : un espace conçu pour inspirer l'innovation et la collaboration.",
-      "city": "Ville",
-      "cityValue": "Batna, Algérie",
+      "city": "Studios",
+      "cityValue": "Alger · Batna",
       "hours": "Horaires",
-      "hoursValue": "Lundi–vendredi · 09:00–18:00",
+      "hoursValue": "Samedi–jeudi · 9h–18h",
       "phone": "Téléphone",
       "directions": "Itinéraire",
       "mapLabel": "Emplacement du studio Pixel à Batna"
@@ -496,8 +496,9 @@
       "fastest": "Le plus rapide · WhatsApp",
       "phone": "Téléphone",
       "email": "E-mail",
-      "studio": "Studio",
-      "days": "Lundi – vendredi",
+      "studio": "Nos studios",
+      "days": "Samedi – jeudi",
+      "time": "9h – 18h",
       "map": "Voir le plan d'accès"
     },
     "faq": {

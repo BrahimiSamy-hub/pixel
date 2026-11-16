@@ -113,7 +113,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
             sameAs: Object.values(site.socials).map((s) => s.href),
             openingHoursSpecification: {
               '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+              dayOfWeek: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
               opens: '09:00',
               closes: '18:00',
             },

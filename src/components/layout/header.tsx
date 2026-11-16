@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import logo from '@/assets/brand/pixel-lockup-dark.svg'
@@ -21,10 +21,6 @@ function TopBar() {
             <MapPin size={15} className="text-orange" aria-hidden />
             {t('location')} · {t('hours')}
           </span>
-          <a href={site.phone.href} className="flex items-center gap-2 hover:text-white">
-            <Phone size={15} className="text-orange" aria-hidden />
-            <bdi dir="ltr">{site.phone.display}</bdi>
-          </a>
           <a href={site.whatsapp.href} className="flex items-center gap-2 hover:text-white">
             <WhatsAppIcon size={15} className="text-whatsapp" />
             WhatsApp <bdi dir="ltr">{site.whatsapp.display}</bdi>

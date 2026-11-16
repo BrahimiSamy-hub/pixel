@@ -114,12 +114,6 @@ export default async function AboutPage({ params }: PageProps<'/[locale]/a-propo
               <dd>{t('visit.cityValue')}</dd>
               <dt className="text-mist">{t('visit.hours')}</dt>
               <dd>{t('visit.hoursValue')}</dd>
-              <dt className="text-mist">{t('visit.phone')}</dt>
-              <dd>
-                <a href={site.phone.href} dir="ltr" className="hover:text-orange-light">
-                  {site.phone.display}
-                </a>
-              </dd>
             </dl>
             <ButtonLink href={site.mapsUrl} size="sm" className="mt-2 self-start">
               {t('visit.directions')}

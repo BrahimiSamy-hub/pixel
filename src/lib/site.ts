@@ -3,9 +3,11 @@ export const site = {
   url: 'https://pixelcreativeagency.net',
   api: 'https://api.pixeldz.store',
   email: 'contact@pixeldz.store',
-  phone: { display: '0799 01 82 88', href: 'tel:+213799018288', e164: '+213799018288' },
+  // One number for calls and WhatsApp.
+  phone: { display: '0770 69 69 82', href: 'tel:+213770696982', e164: '+213770696982' },
   whatsapp: { display: '0770 69 69 82', href: 'https://wa.me/213770696982', e164: '+213770696982' },
   foundingYear: 2018,
+  // Studios in Algiers and Batna; Batna is the registered address used in structured data.
   address: { city: 'Batna', region: 'Batna', country: 'DZ' },
   geo: { latitude: 35.5541, longitude: 6.1731 },
   mapsUrl: 'https://maps.google.com/?q=Pixel+Creative+Agency+Batna',
