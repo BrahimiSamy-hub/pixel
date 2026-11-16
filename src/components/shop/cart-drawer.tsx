@@ -19,6 +19,12 @@ const initial: FormState<OrderField> = { status: 'idle' }
 /** Matches the slide duration below. */
 const ANIMATION_MS = 300
 
+function lockScroll(on: boolean) {
+  const root = document.documentElement.style
+  root.overflow = on ? 'hidden' : ''
+  root.scrollbarGutter = on ? 'stable' : ''
+}
+
 function useHydrated() {
   return useSyncExternalStore(
     (cb) => useCart.persist.onFinishHydration(cb),
@@ -37,6 +43,7 @@ export function CartDrawer() {
   const open = useCart((s) => s.drawerOpen)
   const setOpen = useCart((s) => s.setDrawerOpen)
   const dialog = useRef<HTMLDialogElement>(null)
+  const closeButton = useRef<HTMLButtonElement>(null)
   const [step, setStep] = useState<'cart' | 'delivery'>('cart')
   // A new key resets the order form after a completed order.
   const [formKey, setFormKey] = useState(0)
@@ -49,19 +56,25 @@ export function CartDrawer() {
     const el = dialog.current
     if (!el) return
     if (open) {
+      // Lock the page without the scrollbar disappearing (that would shift the whole page).
+      lockScroll(true)
       if (!el.open) el.showModal()
-      document.documentElement.style.overflow = 'hidden'
+      // The dialog holds focus while it slides in (focusing a button off-screen made it jump).
+      el.focus({ preventScroll: true })
       // Two frames: the first paints the off-screen panel, the second starts the transition.
       let second = 0
       const first = requestAnimationFrame(() => {
         second = requestAnimationFrame(() => setShown(true))
       })
+      // Focus once the panel is in place: focusing it off-screen made the browser scroll to it.
+      const focus = setTimeout(() => closeButton.current?.focus({ preventScroll: true }), ANIMATION_MS)
       return () => {
         cancelAnimationFrame(first)
         cancelAnimationFrame(second)
+        clearTimeout(focus)
       }
     }
-    document.documentElement.style.overflow = ''
+    lockScroll(false)
     const frame = requestAnimationFrame(() => setShown(false))
     const timer = setTimeout(() => {
       if (el.open) el.close()
@@ -83,12 +96,13 @@ export function CartDrawer() {
   return (
     <dialog
       ref={dialog}
+      tabIndex={-1}
       aria-label={title}
       onCancel={(e) => {
         e.preventDefault()
         close()
       }}
-      className="fixed inset-0 m-0 h-dvh max-h-none w-full max-w-none overflow-hidden bg-transparent p-0 text-white backdrop:bg-transparent"
+      className="fixed inset-0 m-0 h-dvh max-h-none w-full max-w-none overflow-clip border-0 bg-transparent p-0 text-white outline-none backdrop:bg-transparent"
     >
       <div
         aria-hidden
@@ -110,7 +124,7 @@ export function CartDrawer() {
             ) : null}
             <h2 className="text-xl font-semibold">{title}</h2>
           </div>
-          <button type="button" onClick={close} aria-label={tCommon('close')} className="flex size-10 items-center justify-center rounded-full bg-line hover:bg-line-strong">
+          <button ref={closeButton} type="button" onClick={close} aria-label={tCommon('close')} className="flex size-10 items-center justify-center rounded-full bg-line hover:bg-line-strong">
             <X size={18} aria-hidden />
           </button>
         </header>
