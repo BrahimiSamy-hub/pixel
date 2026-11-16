@@ -19,6 +19,9 @@ type CartState = {
   setQuantity: (key: string, quantity: number) => void
   remove: (key: string) => void
   clear: () => void
+  /** The cart sidebar; not persisted. */
+  drawerOpen: boolean
+  setDrawerOpen: (open: boolean) => void
 }
 
 const MAX_QUANTITY = 20
@@ -52,16 +55,22 @@ export const useCart = create<CartState>()(
         })),
       remove: (key) => set((state) => ({ items: state.items.filter((i) => i.key !== key) })),
       clear: () => set({ items: [] }),
+      drawerOpen: false,
+      setDrawerOpen: (drawerOpen) => set({ drawerOpen }),
     }),
     {
       name: 'pixel-cart',
       version: 1,
       storage: createJSONStorage(() => localStorage),
+      partialize: (s) => ({ items: s.items }),
       // Rehydrated from <CartHydrator /> after mount so server and first client render match.
       skipHydration: true,
     },
   ),
 )
+
+/** Opens the cart sidebar from anywhere (cart icon, "View cart" toasts, links). */
+export const openCart = () => useCart.getState().setDrawerOpen(true)
 
 export const selectCount = (s: CartState) => s.items.reduce((n, i) => n + i.quantity, 0)
 export const selectSubtotal = (s: CartState) => s.items.reduce((n, i) => n + i.price * i.quantity, 0)

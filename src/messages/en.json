@@ -936,6 +936,8 @@
       "title": "Cash on delivery",
       "text": "You pay in cash when the parcel arrives."
     },
+    "order": "Checkout",
+    "back": "Back to cart",
     "confirm": "Confirm order",
     "sending": "Sending your order…",
     "summary": "Cart",

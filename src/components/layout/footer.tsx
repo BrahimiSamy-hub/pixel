@@ -10,6 +10,7 @@ import { Link } from '@/i18n/navigation'
 import { cities } from '@/lib/nav'
 import { site } from '@/lib/site'
 import { studioList } from '@/lib/studios'
+import { OpenCartLink } from './cart-button'
 import { CookieSettingsButton } from './cookie-consent'
 import { RouteLogo } from './route-theme'
 
@@ -127,7 +128,7 @@ export function Footer() {
               <li><Link href="/boutique" className="text-lavender hover:text-white">{t('posters')}</Link></li>
               <li><Link href="/loup-garou-regles" className="text-lavender hover:text-white">{t('games')}</Link></li>
               <li><Link href="/publicite" className="text-lavender hover:text-white">{t('neons')}</Link></li>
-              <li><Link href="/paiement" className="text-lavender hover:text-white">{t('myCart')}</Link></li>
+              <li><OpenCartLink className="text-lavender hover:text-white">{t('myCart')}</OpenCartLink></li>
             </ul>
           </nav>
 

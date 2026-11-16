@@ -936,6 +936,8 @@
       "title": "Paiement à la livraison",
       "text": "Vous réglez en espèces à la réception du colis."
     },
+    "order": "Commander",
+    "back": "Retour au panier",
     "confirm": "Confirmer la commande",
     "sending": "Envoi de la commande…",
     "summary": "Panier",

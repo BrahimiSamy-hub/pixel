@@ -23,7 +23,6 @@ const sections: Record<string, NavKey> = {
   '/portfolio': 'portfolio',
   '/boutique': 'shop',
   '/product': 'shop',
-  '/paiement': 'shop',
   '/loup-garou-regles': 'shop',
   '/a-propos': 'about',
   '/blog': 'blog',

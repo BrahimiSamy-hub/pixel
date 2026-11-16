@@ -4,13 +4,12 @@ import { Minus, Plus } from 'lucide-react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
-import { toast } from 'sonner'
 import { WhatsAppIcon } from '@/components/ui/brand-icons'
 import { Button } from '@/components/ui/button'
 import { usePriceFormatter } from '@/components/ui/price'
-import { Link, useRouter } from '@/i18n/navigation'
 import { trackAddToCart } from '@/lib/analytics'
-import { useCart } from '@/lib/cart-store'
+import { OpenCartLink } from '@/components/layout/cart-button'
+import { openCart, useCart } from '@/lib/cart-store'
 import { cn } from '@/lib/cn'
 import { site } from '@/lib/site'
 
@@ -29,7 +28,6 @@ export function ProductConfigurator({ product, isNew }: { product: ConfigurableP
   const tShop = useTranslations('Shop')
   const tCommon = useTranslations('Common')
   const price = usePriceFormatter()
-  const router = useRouter()
   const add = useCart((s) => s.add)
   const [variantIndex, setVariantIndex] = useState(0)
   const [sizeIndex, setSizeIndex] = useState(0)
@@ -44,9 +42,8 @@ export function ProductConfigurator({ product, isNew }: { product: ConfigurableP
     if (!unit) return
     add({ productId: product.id, name: product.name, variant: variant?.name, size: size?.name || undefined, price: unit, image }, quantity)
     trackAddToCart({ id: product.id, name: product.name, price: unit, quantity })
-    toast.success(tShop('added', { name: variant ? `${product.name} — ${variant.name}` : product.name }), {
-      action: { label: tShop('viewCart'), onClick: () => router.push('/paiement') },
-    })
+    // No toast: the cart sidebar opens and shows the new line.
+    openCart()
   }
 
   return (
@@ -172,9 +169,7 @@ export function ProductConfigurator({ product, isNew }: { product: ConfigurableP
             </a>
           </li>
         </ul>
-        <Link href="/paiement" className="self-start text-sm text-mist underline underline-offset-4 hover:text-white">
-          {t('viewCart')}
-        </Link>
+        <OpenCartLink className="self-start text-sm text-mist underline underline-offset-4 hover:text-white">{t('viewCart')}</OpenCartLink>
       </div>
     </div>
   )

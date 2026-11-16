@@ -72,6 +72,9 @@ const nextConfig: NextConfig = {
         { source: `/:locale(fr|en|ar)/${from}`, destination: `/:locale/${to}`, permanent: true },
         { source: `/${from}`, destination: `/fr/${to}`, permanent: true },
       ]),
+      // The cart is a sidebar now; the old checkout page sends people to the shop.
+      { source: '/:locale(fr|en|ar)/paiement', destination: '/:locale/boutique', permanent: true },
+      { source: '/paiement', destination: '/fr/boutique', permanent: true },
       // The portfolio used to filter by medium; it now filters by service, like the mobile app.
       ...legacyPortfolio.map(([from, to]) => ({ source: `/:locale(fr|en|ar)/portfolio/${from}`, destination: `/:locale/portfolio/${to}`, permanent: true })),
     ]

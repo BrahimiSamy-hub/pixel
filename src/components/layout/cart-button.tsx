@@ -2,17 +2,20 @@
 
 import { ShoppingCart } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
-import { selectCount, useCart } from '@/lib/cart-store'
+import type { ReactNode } from 'react'
+import { openCart, selectCount, useCart } from '@/lib/cart-store'
 
+/** Opens the cart sidebar (there is no cart page). */
 export function CartButton() {
   const t = useTranslations('Nav')
   const count = useCart(selectCount)
 
   return (
-    <Link
-      href="/paiement"
+    <button
+      type="button"
+      onClick={openCart}
       aria-label={t('cart', { count })}
+      aria-haspopup="dialog"
       className="relative flex size-12 items-center justify-center rounded-card border border-line bg-ink-2 text-white transition-colors hover:border-line-strong"
     >
       <ShoppingCart size={20} strokeWidth={1.8} aria-hidden />
@@ -24,6 +27,15 @@ export function CartButton() {
           {count}
         </span>
       ) : null}
-    </Link>
+    </button>
+  )
+}
+
+/** A text link that opens the cart sidebar (footer, product page). */
+export function OpenCartLink({ children, className }: { children: ReactNode; className?: string }) {
+  return (
+    <button type="button" onClick={openCart} aria-haspopup="dialog" className={className}>
+      {children}
+    </button>
   )
 }
