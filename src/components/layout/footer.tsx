@@ -43,7 +43,7 @@ export function Footer() {
               <br />
               {t('titleAccent')}
             </h2>
-            <p className="max-w-lg text-lg leading-relaxed text-[#2b1a0c]">{t('lead')}</p>
+            <p className="max-w-lg text-lg leading-relaxed text-ink/80">{t('lead')}</p>
             <div className="mt-2 flex flex-wrap gap-3">
               <ButtonLink href="/contact" variant="ink">
                 {t('cta')}

@@ -7,6 +7,7 @@ import { ClientProviders } from '@/components/layout/client-providers'
 import { ConsentAndAnalytics } from '@/components/layout/cookie-consent'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
+import { RouteTheme } from '@/components/layout/route-theme'
 import { JsonLd } from '@/components/ui/json-ld'
 import { getDirection, routing } from '@/i18n/routing'
 import { localizedUrl } from '@/lib/seo'
@@ -78,11 +79,13 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
           {t('skipToContent')}
         </a>
         <NextIntlClientProvider messages={clientMessages}>
-          <Header />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <Footer />
+          <RouteTheme>
+            <Header />
+            <main id="main" className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </RouteTheme>
           <ConsentAndAnalytics />
           <ClientProviders dir={dir} />
         </NextIntlClientProvider>

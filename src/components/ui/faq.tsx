@@ -10,6 +10,13 @@ const openTone: Record<Tone, string> = {
   lime: 'group-open:bg-lime',
   violet: 'group-open:bg-violet',
   orange: 'group-open:bg-orange',
+  creative: 'group-open:bg-creative',
+  photo: 'group-open:bg-photo',
+  dev: 'group-open:bg-dev',
+  events: 'group-open:bg-events',
+  sounds: 'group-open:bg-sounds',
+  enseigne: 'group-open:bg-enseigne',
+  tapini: 'group-open:bg-tapini',
 }
 
 export type FaqItem = { q: string; a: string }

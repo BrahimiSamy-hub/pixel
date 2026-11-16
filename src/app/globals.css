@@ -36,6 +36,31 @@
   --color-violet: #ee7d22;
   --color-whatsapp: #f6a43d;
 
+  /* Sub-brand colours, shared with the mobile app (features/services.ts). Each accent is the
+     logo colour lightened to ≥ 6:1 on ink, so it works as text and as a fill under ink text;
+     -light is its hover, -tint a soft background. */
+  --color-creative: #e76e3f;
+  --color-creative-light: #ed926f;
+  --color-creative-tint: #351d14;
+  --color-photo: #34a668;
+  --color-photo-light: #67bc8e;
+  --color-photo-tint: #0e271a;
+  --color-dev: #5297cc;
+  --color-dev-light: #7db1d9;
+  --color-dev-tint: #10222f;
+  --color-events: #f5b4d1;
+  --color-events-light: #f8c7dd;
+  --color-events-tint: #382e33;
+  --color-sounds: #80949b;
+  --color-sounds-light: #a0afb4;
+  --color-sounds-tint: #212627;
+  --color-enseigne: #f16366;
+  --color-enseigne-light: #f48a8c;
+  --color-enseigne-tint: #371415;
+  --color-tapini: #2ec4b6;
+  --color-tapini-light: #62d3c8;
+  --color-tapini-tint: #15302e;
+
   --font-sans: var(--font-archivo), var(--font-readex), 'Helvetica Neue', Arial, sans-serif;
   --font-mono: var(--font-barlow), var(--font-readex), 'Arial Narrow', sans-serif;
   --font-grotesk: var(--font-barlow), var(--font-readex), 'Arial Narrow', sans-serif;
@@ -261,3 +286,35 @@
     display: none;
   }
 }
+
+/* Service pages: inside `.service-<id>` the brand accent and the old studio tones resolve to that
+   sub-brand's colour, so buttons, eyebrows, dots and highlights follow it (as in the mobile app). */
+.service-creative,
+.service-photo,
+.service-dev,
+.service-events,
+.service-sounds,
+.service-enseigne,
+.service-tapini {
+  --color-orange: var(--svc);
+  --color-flame: var(--svc);
+  --color-orange-light: var(--svc-light);
+  --color-amber: var(--svc-light);
+  --color-yellow: var(--svc-light);
+  --color-orange-deep: var(--svc);
+  --color-ember: var(--svc);
+  --color-orange-tint: var(--svc-tint);
+  --color-teal: var(--svc);
+  --color-red: var(--svc);
+  --color-red-tint: var(--svc-tint);
+  --color-lime: var(--svc);
+  --color-lime-tint: var(--svc-tint);
+  --color-violet: var(--svc);
+}
+.service-creative { --svc: var(--color-creative); --svc-light: var(--color-creative-light); --svc-tint: var(--color-creative-tint); }
+.service-photo { --svc: var(--color-photo); --svc-light: var(--color-photo-light); --svc-tint: var(--color-photo-tint); }
+.service-dev { --svc: var(--color-dev); --svc-light: var(--color-dev-light); --svc-tint: var(--color-dev-tint); }
+.service-events { --svc: var(--color-events); --svc-light: var(--color-events-light); --svc-tint: var(--color-events-tint); }
+.service-sounds { --svc: var(--color-sounds); --svc-light: var(--color-sounds-light); --svc-tint: var(--color-sounds-tint); }
+.service-enseigne { --svc: var(--color-enseigne); --svc-light: var(--color-enseigne-light); --svc-tint: var(--color-enseigne-tint); }
+.service-tapini { --svc: var(--color-tapini); --svc-light: var(--color-tapini-light); --svc-tint: var(--color-tapini-tint); }

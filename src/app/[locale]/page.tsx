@@ -25,7 +25,8 @@ import { cn } from '@/lib/cn'
 import { formatDecimal, formatNumber } from '@/lib/format'
 import { staticPageMetadata } from '@/lib/seo'
 import { site } from '@/lib/site'
-import { studioList, type Tone } from '@/lib/studios'
+import { ServiceLogo } from '@/components/sections/service-logo'
+import { studioList, toneClasses, type Tone } from '@/lib/studios'
 import { portfolioItems } from '@/data/portfolio'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]'>) {
@@ -124,19 +125,19 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
         </Container>
       </section>
 
-      {/* Studios marquee on a flame aplat. Duplicated list = seamless loop. */}
-      <section aria-label={t('studios.eyebrow')} className="overflow-hidden bg-orange text-ink">
-        <div className="flex w-max animate-marquee py-5 motion-reduce:animate-none rtl:[animation-direction:reverse]">
+      {/* Studios marquee: the sub-brand logos, as in the mobile app. Duplicated list = seamless loop. */}
+      <section aria-label={t('studios.eyebrow')} className="overflow-hidden border-y border-line bg-ink-2">
+        <div className="flex w-max animate-marquee py-6 motion-reduce:animate-none rtl:[animation-direction:reverse]">
           {marquee.map((s, i) => (
             <Link
               key={`${s.key}-${i}`}
               href={s.href}
               tabIndex={i >= studioList.length ? -1 : undefined}
               aria-hidden={i >= studioList.length ? true : undefined}
-              className="flex items-center gap-7 pe-7 text-[clamp(1.75rem,3.4vw,3rem)] font-extrabold tracking-[-0.03em] whitespace-nowrap uppercase [font-stretch:112%] hover:text-charcoal"
+              className="flex items-center gap-12 pe-12 whitespace-nowrap opacity-85 transition-opacity hover:opacity-100"
             >
-              {tStudios(`${s.key}.short`)}
-              <span aria-hidden className="h-7 w-6.5 bg-ink clip-mark" />
+              <ServiceLogo service={s.tone} className="h-12 md:h-14" />
+              <span aria-hidden className="h-5 w-4.5 bg-line-strong clip-mark" />
             </Link>
           ))}
         </div>
@@ -171,11 +172,9 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
             {studioList.map((s, i) => (
               <li key={s.key} className="border-t border-line">
                 <Link href={s.href} className="group flex flex-wrap items-center gap-x-10 gap-y-5 py-7 text-white">
-                  <span className="flex-[0_0_3rem] font-mono text-lg font-bold tracking-widest text-orange">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="flex flex-[1_1_17rem] flex-col gap-1.5">
-                    <span className="text-[clamp(1.75rem,2.8vw,2.5rem)] leading-none font-bold tracking-[-0.03em] [font-stretch:112%] group-hover:text-orange">
-                      {tStudios(`${s.key}.short`)}
-                    </span>
+                  <span className={cn('flex-[0_0_3rem] font-mono text-lg font-bold tracking-widest', toneClasses[s.tone].text)}>{String(i + 1).padStart(2, '0')}</span>
+                  <span className="flex flex-[1_1_17rem] flex-col gap-2.5">
+                    <ServiceLogo service={s.tone} className="h-11 w-auto self-start transition-transform duration-300 group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
                     <span className="font-mono text-sm font-semibold tracking-[0.24em] text-mist uppercase">{tStudios(`${s.key}.category`)}</span>
                   </span>
                   <span className="flex-[2_1_18rem] leading-relaxed text-mist">{tStudios(`${s.key}.tagline`)}</span>

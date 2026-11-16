@@ -9,6 +9,7 @@ import soundImg from '@/assets/services/audio.png'
 import adsImg from '@/assets/services/publicité.png'
 import tapiniImg from '@/assets/portfolio/carte-visite/carte5.jpg'
 import { PageHero } from '@/components/sections/page-hero'
+import { ServiceLogo } from '@/components/sections/service-logo'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { HexDot } from '@/components/ui/hex'
@@ -16,7 +17,7 @@ import { Price } from '@/components/ui/price'
 import type { Locale } from '@/i18n/routing'
 import { cn } from '@/lib/cn'
 import { staticPageMetadata } from '@/lib/seo'
-import { studioList, toneClasses, type StudioKey } from '@/lib/studios'
+import { serviceThemeClass, studioList, toneClasses, type StudioKey } from '@/lib/studios'
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/services'>) {
   const { locale } = await params
@@ -70,6 +71,7 @@ export default async function ServicesPage({ params }: PageProps<'/[locale]/serv
               key={s.key}
               id={s.key}
               className={cn(
+                serviceThemeClass[s.tone],
                 'flex scroll-mt-6 flex-wrap items-center gap-x-16 gap-y-12 py-14 md:py-24',
                 i % 2 === 1 && 'flex-wrap-reverse md:flex-row-reverse',
                 i < studioList.length - 1 && 'border-b border-line',
@@ -79,6 +81,7 @@ export default async function ServicesPage({ params }: PageProps<'/[locale]/serv
                 <Image src={image.src} alt={alt} fill placeholder="blur" sizes="(min-width: 1024px) 620px, 100vw" className="object-cover" />
               </div>
               <div className="flex min-w-0 flex-[1_1_28.75rem] flex-col gap-5">
+                <ServiceLogo service={s.tone} className="h-12 w-auto self-start" />
                 <p className={cn('flex items-center gap-3 text-label', toneClasses[s.tone].text)}>
                   <HexDot tone={s.tone} />
                   {String(i + 1).padStart(2, '0')} · {tStudios(`${s.key}.category`)}

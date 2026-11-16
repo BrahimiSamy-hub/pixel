@@ -1,5 +1,4 @@
 import { Mail, MapPin } from 'lucide-react'
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import logo from '@/assets/brand/pixel-lockup-dark.svg'
 import { FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from '@/components/ui/brand-icons'
@@ -10,6 +9,7 @@ import { CartButton } from './cart-button'
 import { LocaleSwitcher } from './locale-switcher'
 import { MobileMenu } from './mobile-menu'
 import { NavLinks } from './nav-links'
+import { HeaderLogo } from './route-theme'
 
 function TopBar() {
   const t = useTranslations('TopBar')
@@ -55,7 +55,7 @@ export function Header() {
       <TopBar />
       <div className="mx-auto flex min-h-20 max-w-[1360px] items-center justify-between gap-6 px-4 sm:px-10">
         <Link href="/" aria-label={t('homeLabel')} className="flex shrink-0 items-center">
-          <Image src={logo} alt="" unoptimized preload className="h-9 w-auto sm:h-10" />
+          <HeaderLogo pixel={logo} />
         </Link>
         <nav aria-label={t('main')} className="hidden lg:block">
           <NavLinks />
