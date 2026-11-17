@@ -1,7 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import heroImage from '@/assets/portfolio/Shooting/shooting9.jpg'
 import quincaillerie from '@/assets/portfolio/sam/banner/banner8.webp'
 import aladdinar from '@/assets/portfolio/sam/web/web1.webp'
 import studioShoot from '@/assets/portfolio/Shooting/shooting12.jpg'
@@ -10,6 +9,7 @@ import mic from '@/assets/services/audio.png'
 import elRiadh from '@/assets/signs/elriadh.jpg'
 import mark from '@/assets/brand/pixel-mark.svg'
 import studioDesk from '@/assets/services/infographie.png'
+import { HomeHeroV1, HomeHeroV2 } from '@/components/sections/home-hero'
 import { FeaturedReview, ReviewCard } from '@/components/sections/review-card'
 import { homeReviews } from '@/data/reviews'
 import { TimelineList } from '@/components/sections/timeline'
@@ -17,7 +17,6 @@ import { ProductCard } from '@/components/shop/product-card'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Faq } from '@/components/ui/faq'
-import { PixelDots } from '@/components/ui/hex'
 import { Price } from '@/components/ui/price'
 import { Eyebrow, SectionHeader } from '@/components/ui/section-header'
 import { Link } from '@/i18n/navigation'
@@ -51,6 +50,9 @@ const work = [
   { studio: 'wedding', titleSub: 'wedding', image: weddingFlares, wide: true },
 ] as const satisfies ReadonlyArray<{ studio: StudioKey; title?: string; titleSub?: PortfolioSub | null; wide: boolean; image: unknown }>
 
+/** Which home hero to show: both stay available (components/sections/home-hero.tsx). */
+const HERO: 'v1' | 'v2' = 'v2'
+
 const steps = ['listen', 'concept', 'production', 'delivery'] as const
 const faqKeys = ['price', 'photo', 'ads', 'ecommerce', 'outside'] as const
 const featuredProductNames = ['Collector', 'Music Nostalgia', 'LES LOUPS GAROUS DE THIERCELIEUX', 'One Piece Wanted']
@@ -80,55 +82,8 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
 
   return (
     <>
-      {/* Hero: oversized headline beside the photo masked by the P symbol. */}
-      <section>
-        <Container className="flex flex-col gap-10 pt-10 md:gap-14 md:pt-20">
-          <div className={cn('flex flex-wrap items-center justify-between gap-x-8 gap-y-3 text-mist', label)}>
-            <span className="flex items-center gap-3">
-              <PixelDots className="h-4.5 w-4" />
-              {t('hero.eyebrow')}
-            </span>
-          </div>
-          <div className="flex flex-wrap items-end gap-x-14 gap-y-10">
-            <h1 className="min-w-0 flex-[999_1_38rem] text-display">
-              {t('hero.title')} <span className="text-brand-gradient">{t('hero.titleAccent')}</span>
-            </h1>
-            <div className="relative mx-auto w-full max-w-[29rem] min-w-0 flex-[1_1_22rem]">
-              <Image src={mark} alt="" unoptimized className="absolute -inset-s-[9%] top-[5%] h-auto w-full opacity-95" />
-              <div className="relative aspect-[0.886] w-full bg-ink-2 clip-mark">
-                <Image
-                  src={heroImage}
-                  alt={t('hero.imageAlt')}
-                  fill
-                  preload
-                  placeholder="blur"
-                  sizes="(min-width: 1024px) 464px, 90vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-7 border-t border-line pt-8 pb-12 md:pb-20">
-            <div className="flex max-w-xl flex-col gap-4">
-              <p className="text-lead text-lavender">{t('hero.lead')}</p>
-              <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-mist">
-                {(['proof1', 'proof2', 'proof3'] as const).map((k) => (
-                  <li key={k} className="flex items-center gap-2">
-                    <span aria-hidden className="h-2.5 w-[0.55rem] bg-orange clip-mark" />
-                    {t(`hero.${k}`)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <ButtonLink href="/contact">{t('hero.ctaPrimary')}</ButtonLink>
-              <ButtonLink href="/portfolio" variant="secondary">
-                {t('hero.ctaSecondary')}
-              </ButtonLink>
-            </div>
-          </div>
-        </Container>
-      </section>
+      {/* Hero: V2 (Claude Design, centred). Set HERO to "v1" for the photo-and-P version. */}
+      {HERO === 'v2' ? <HomeHeroV2 /> : <HomeHeroV1 />}
 
       {/* Studios marquee on a flame aplat. Duplicated list = seamless loop. */}
       <section aria-label={t('studios.eyebrow')} className="overflow-hidden bg-orange text-ink">
