@@ -51,7 +51,7 @@ export function FaqList({ items, tone, className }: { items: FaqItem[]; tone: To
                 <span
                   aria-hidden
                   className={cn(
-                    'flex size-9 shrink-0 items-center justify-center rounded-full bg-line text-white transition-[rotate,background-color,color] duration-300 ease-out group-aria-expanded:rotate-45 group-aria-expanded:text-ink motion-reduce:transition-none',
+                    'brand-dot flex size-9 shrink-0 items-center justify-center rounded-full bg-line text-white transition-[rotate,background-color,color] duration-300 ease-out group-aria-expanded:rotate-45 group-aria-expanded:text-ink motion-reduce:transition-none',
                     openTone[tone],
                   )}
                 >

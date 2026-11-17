@@ -12,8 +12,17 @@ import { Eyebrow, SectionHeader } from '@/components/ui/section-header'
 import type { Locale } from '@/i18n/routing'
 import { cn } from '@/lib/cn'
 import { staticPageMetadata } from '@/lib/seo'
-import { toneClasses } from '@/lib/studios'
-import { initials, team } from '@/data/team'
+import { serviceThemeClass, toneClasses } from '@/lib/studios'
+import { initials, team, teamLinkKeys } from '@/data/team'
+import { BehanceIcon, GitHubIcon, LinkedInIcon, WaslaIcon } from '@/components/ui/brand-icons'
+
+/** Each network's logo in its official colour, no tile. */
+const teamLinkMeta = {
+  linkedin: { label: 'LinkedIn', Icon: LinkedInIcon, tile: 'text-[#0a66c2]' },
+  github: { label: 'GitHub', Icon: GitHubIcon, tile: 'text-white' },
+  behance: { label: 'Behance', Icon: BehanceIcon, tile: 'text-[#1769ff]' },
+  wasla: { label: 'Wasla', Icon: WaslaIcon, tile: '' },
+} as const
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/a-propos'>) {
   const { locale } = await params
@@ -108,9 +117,9 @@ export default async function AboutPage({ params }: PageProps<'/[locale]/a-propo
           <SectionHeader index="03" eyebrow={t('team.eyebrow')} title={t('team.title')} />
           <ul className="grid grid-cols-[repeat(auto-fill,minmax(min(15rem,100%),1fr))] gap-6">
             {team.map((member) => (
-              <li key={member.name} className="flex flex-col gap-4">
+              <li key={member.name} className={cn('flex flex-col gap-4', member.service && serviceThemeClass[member.service])}>
                 {/* Photo when there is one; until then, the initials on a tile in the member's service colour. */}
-                <div className={cn('relative flex aspect-4/5 items-center justify-center overflow-hidden rounded-card border border-line', toneClasses[member.service ?? 'orange'].soft)}>
+                <div className={cn('group relative flex aspect-4/5 items-center justify-center overflow-hidden rounded-card border border-line', toneClasses[member.service ?? 'orange'].soft)}>
                   {member.photo ? (
                     <Image src={member.photo} alt={member.name} fill placeholder="blur" sizes="(min-width: 1280px) 300px, (min-width: 768px) 33vw, 100vw" className="object-cover" />
                   ) : (
@@ -119,6 +128,32 @@ export default async function AboutPage({ params }: PageProps<'/[locale]/a-propo
                     </span>
                   )}
                   <span className={cn('absolute inset-s-4 top-4 h-3.5 w-3 clip-mark', toneClasses[member.service ?? 'orange'].bg)} aria-hidden />
+                  {/* Profile links as the tile's footer: a dark fade keeps them readable over any photo. Mouse devices reveal it on hover or keyboard focus; touch screens always show it. */}
+                  {teamLinkKeys.some((k) => member.links?.[k]) ? (
+                    <div className="absolute inset-x-0 bottom-0 flex justify-center team-links-bar px-4 pt-14 pb-4 transition-[opacity,translate] duration-300 ease-out motion-reduce:transition-none [@media(hover:hover)]:translate-y-2 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-focus-within:translate-y-0 [@media(hover:hover)]:group-focus-within:opacity-100 [@media(hover:hover)]:group-hover:translate-y-0 [@media(hover:hover)]:group-hover:opacity-100">
+                      <ul className="flex flex-wrap justify-center gap-4">
+                        {teamLinkKeys.map((k) => {
+                          const href = member.links?.[k]
+                          if (!href) return null
+                          const { label, Icon, tile } = teamLinkMeta[k]
+                          return (
+                            <li key={k}>
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer me"
+                                aria-label={`${member.name} · ${label}`}
+                                title={label}
+                                className={cn('flex size-11 items-center justify-center rounded-lg drop-shadow-[0_2px_6px_rgb(0_0_0/0.5)] transition-[translate,filter] duration-200 hover:-translate-y-0.5 hover:brightness-125 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none', tile)}
+                              >
+                                <Icon size={k === 'wasla' ? 36 : 28} />
+                              </a>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </div>
+                  ) : null}
                 </div>
                 <div className="flex flex-col gap-1">
                   <h3 className="text-xl font-semibold tracking-[-0.02em]">{member.name}</h3>

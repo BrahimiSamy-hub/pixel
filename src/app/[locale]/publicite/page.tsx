@@ -82,7 +82,7 @@ export default async function AdsPage({ params }: PageProps<'/[locale]/publicite
             {(['print', 'works'] as const).map((k) => {
               const highlight = k === 'works'
               return (
-                <article key={k} className={cn('flex flex-col gap-4.5 rounded-card p-10', highlight ? 'bg-orange text-ink' : 'border border-line bg-ink-2')}>
+                <article key={k} className={cn('flex flex-col gap-4.5 rounded-card p-10', highlight ? 'brand-fill bg-orange text-ink' : 'border border-line bg-ink-2')}>
                   <h3 className="text-h3">{t(`workshops.${k}.title`)}</h3>
                   <p className={cn('leading-relaxed', !highlight && 'text-mist')}>{t(`workshops.${k}.text`)}</p>
                   <ul className={cn('grid grid-cols-[repeat(auto-fit,minmax(13.75rem,1fr))] gap-x-6 text-[0.9375rem]', !highlight && 'text-lavender')}>

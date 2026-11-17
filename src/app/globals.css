@@ -315,10 +315,69 @@
   --color-lime-tint: var(--svc-tint);
   --color-violet: var(--svc);
 }
-.service-creative { --svc: var(--color-creative); --svc-light: var(--color-creative-light); --svc-tint: var(--color-creative-tint); }
-.service-photo { --svc: var(--color-photo); --svc-light: var(--color-photo-light); --svc-tint: var(--color-photo-tint); }
-.service-dev { --svc: var(--color-dev); --svc-light: var(--color-dev-light); --svc-tint: var(--color-dev-tint); }
-.service-events { --svc: var(--color-events); --svc-light: var(--color-events-light); --svc-tint: var(--color-events-tint); }
-.service-sounds { --svc: var(--color-sounds); --svc-light: var(--color-sounds-light); --svc-tint: var(--color-sounds-tint); }
-.service-enseigne { --svc: var(--color-enseigne); --svc-light: var(--color-enseigne-light); --svc-tint: var(--color-enseigne-tint); }
-.service-tapini { --svc: var(--color-tapini); --svc-light: var(--color-tapini-light); --svc-tint: var(--color-tapini-tint); }
+.service-creative { --svc: var(--color-creative); --svc-light: var(--color-creative-light); --svc-tint: var(--color-creative-tint); --svc-from: #d46136; --svc-to: #e0743f; }
+.service-photo { --svc: var(--color-photo); --svc-light: var(--color-photo-light); --svc-tint: var(--color-photo-tint); --svc-from: #214915; --svc-to: #3a8444; }
+.service-dev { --svc: var(--color-dev); --svc-light: var(--color-dev-light); --svc-tint: var(--color-dev-tint); --svc-from: #142d4f; --svc-to: #2b65a5; }
+
+/* Sub-brand pages: primary buttons use the app's brand gradient (Pixel_MobileApp services.ts `colors.from/to`),
+   text picked like the app's onColor(mix(from, to)): light on every brand except the pink Events. */
+:where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini) .btn-primary {
+  background-color: var(--svc-to);
+  background-image: linear-gradient(to right, var(--svc-from), var(--svc-to));
+  color: var(--svc-on, var(--color-white));
+}
+[dir='rtl'] :where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini) .btn-primary {
+  background-image: linear-gradient(to left, var(--svc-from), var(--svc-to));
+}
+:where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini) .btn-primary:hover {
+  filter: brightness(1.15);
+}
+
+/* Brand-coloured surfaces (highlighted offer cards): the same gradient. On dark gradients ink and paper swap
+   inside the card, so its `text-ink`, `border-ink` and `ink` button stay readable. Events (light pink) keeps them. */
+:where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini) .brand-fill {
+  background-color: var(--svc-to);
+  background-image: linear-gradient(to bottom right, var(--svc-from), var(--svc-to));
+  --color-ink: var(--svc-fill-ink, #f0efef);
+  --color-white: var(--svc-fill-white, #0f1010);
+  --color-charcoal: var(--svc-fill-charcoal, #dcdbdb);
+  color: var(--color-ink);
+}
+[dir='rtl'] :where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini) .brand-fill {
+  background-image: linear-gradient(to bottom left, var(--svc-from), var(--svc-to));
+}
+/* The P mark in the footer band: a lighter shade of the brand over its gradient. */
+:where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini) .brand-fill {
+  --color-amber: color-mix(in srgb, var(--svc-to), white 18%);
+}
+
+/* Open FAQ toggle (the round + / ×): the brand gradient, text like the buttons. */
+:where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini) [aria-expanded='true'] > .brand-dot {
+  background-image: linear-gradient(to bottom right, var(--svc-from), var(--svc-to));
+  color: var(--svc-on, var(--color-white));
+}
+
+/* Home studios list: the round arrow of each row is filled with that service's gradient. */
+:where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini) .brand-circle {
+  border-color: transparent;
+  background-image: linear-gradient(to bottom right, var(--svc-from), var(--svc-to));
+  color: var(--svc-on, var(--color-white));
+}
+:where(.service-creative, .service-photo, .service-dev, .service-events, .service-sounds, .service-enseigne, .service-tapini).group:hover .brand-circle {
+  filter: brightness(1.15);
+}
+.service-events { --svc: var(--color-events); --svc-light: var(--color-events-light); --svc-tint: var(--color-events-tint); --svc-from: #ebabd2; --svc-to: #bb6b94; --svc-on: #141414; --svc-fill-ink: #0f1010; --svc-fill-white: #f0efef; --svc-fill-charcoal: #151515; }
+.service-sounds { --svc: var(--color-sounds); --svc-light: var(--color-sounds-light); --svc-tint: var(--color-sounds-tint); --svc-from: #606669; --svc-to: #75858a; }
+.service-enseigne { --svc: var(--color-enseigne); --svc-light: var(--color-enseigne-light); --svc-tint: var(--color-enseigne-tint); --svc-from: #731914; --svc-to: #c9332d; }
+.service-tapini { --svc: var(--color-tapini); --svc-light: var(--color-tapini-light); --svc-tint: var(--color-tapini-tint); --svc-from: #0b6e6e; --svc-to: #2ec4b6; }
+
+/* Team card links (About): a fade tinted with the member's sub-brand (Pixel orange without one), so the bar
+   follows the theme while the white/blue network tiles stay readable over any photo. */
+.team-links-bar {
+  background-image: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--svc-from, var(--color-orange-deep)) 55%, var(--color-ink)) 0%,
+    color-mix(in srgb, var(--svc-from, var(--color-orange-deep)) 30%, transparent) 55%,
+    transparent 100%
+  );
+}

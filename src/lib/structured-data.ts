@@ -11,12 +11,15 @@ export function serviceJsonLd({
   name,
   description,
   price,
+  catalog,
 }: {
   locale: Locale
   path: string
   name: string
   description: string
   price?: number
+  /** Named offers listed as a schema.org/OfferCatalog; `price` omitted when on quote. */
+  catalog?: { name: string; description: string; price?: number | null }[]
 }) {
   return {
     '@context': 'https://schema.org',
@@ -28,6 +31,20 @@ export function serviceJsonLd({
     areaServed: { '@type': 'Country', name: 'Algeria' },
     ...(price
       ? { offers: { '@type': 'AggregateOffer', priceCurrency: 'DZD', lowPrice: price, availability: 'https://schema.org/InStock' } }
+      : {}),
+    ...(catalog?.length
+      ? {
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name,
+            itemListElement: catalog.map((c) => ({
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: c.name, description: c.description },
+              ...(c.price ? { price: c.price, priceCurrency: 'DZD' } : {}),
+              availability: 'https://schema.org/InStock',
+            })),
+          },
+        }
       : {}),
   }
 }

@@ -41,8 +41,12 @@
       "description": "Six packs mariage de 29 000 à 130 000 DA : 2 à 6 photographes, montage FHD, 4K ou 6K, photobook, cadres et drone. Composez votre pack en ligne."
     },
     "dev": {
-      "title": "Création de site web & e-commerce en Algérie",
-      "description": "Site vitrine, boutique e-commerce, application mobile, landing page, PWA et API. Devis gratuit sous 24 h, hébergement 1 an inclus."
+      "title": "Création de site web, e-commerce & application mobile en Algérie",
+      "description": "Site vitrine dès 39 000 DA, landing page dès 5 000 DA, boutique e-commerce 2 000 DA / mois, caisse POS, applications mobiles, ERP/CRM et IA. Devis en ligne."
+    },
+    "devQuote": {
+      "title": "Devis site web, e-commerce & application mobile en Algérie",
+      "description": "Composez votre demande de devis en 4 étapes : site vitrine, boutique e-commerce, application mobile, caisse POS, ERP ou IA. Réponse sous 24 h."
     },
     "sound": {
       "title": "Voix off en darija, arabe et français & jingles",
@@ -684,62 +688,75 @@
     "title": "Des sites qui",
     "titleAccent": "vendent",
     "titleEnd": ", pas juste qui existent.",
-    "lead": "Sites vitrines, boutiques e-commerce, applications mobiles et API : conçus, développés et hébergés par la même équipe.",
+    "lead": "Création de sites web, boutiques e-commerce, applications mobiles, caisses POS et logiciels de gestion en Algérie : conçus, développés et hébergés par la même équipe, à Alger et à Batna.",
     "ctaPrimary": "Devis sous 24 h",
     "ctaSecondary": "Les offres",
     "browser": "Projet client · Beleghni",
     "heroAlt": "Site Beleghni affiché sur ordinateur, tablette et mobile",
     "offers": {
-      "eyebrow": "Offres · sur devis",
-      "title": "Six formats, selon votre ambition.",
-      "lead": "Chaque projet est chiffré sur mesure. Envoyez-nous votre besoin, le devis arrive sous 24 h.",
-      "support": "Support {months} mois"
+      "eyebrow": "Offres & tarifs",
+      "title": "Des prix clairs, du site vitrine à l’ERP.",
+      "lead": "Les prix affichés sont nos tarifs de départ. Le reste est chiffré sur mesure : choisissez une offre, le devis se compose plus bas.",
+      "pick": "Je veux cette offre"
     },
-    "vitrine": {
-      "title": "Site web vitrine",
-      "text": "Présentez votre entreprise, vos services et votre portfolio avec un design moderne et responsive.",
-      "features": ["5 à 10 pages selon vos besoins", "Tableau de bord d'administration", "Hébergement + domaine inclus 1 an"]
+    "faq": {
+      "eyebrow": "Questions fréquentes",
+      "title": "Tout savoir avant de lancer votre projet.",
+      "price": {
+        "q": "Combien coûte un site web en Algérie chez Pixel ?",
+        "a": "Un site vitrine de 5 à 10 pages démarre à 39 000 DA, avec le nom de domaine et l’hébergement offerts la première année et 3 mois de maintenance. Ajoutez un tableau de bord d’administration pour 16 000 DA. Une landing page démarre à 5 000 DA."
+      },
+      "renewal": {
+        "q": "Que se passe-t-il après la première année ?",
+        "a": "Pour un site vitrine, le renouvellement coûte 5 000 DA par an pour l’hébergement et 3 000 DA par an pour le nom de domaine .com. Nous vous prévenons avant chaque échéance."
+      },
+      "ecommerce": {
+        "q": "Comment fonctionne la boutique e-commerce en abonnement ?",
+        "a": "Votre boutique en ligne est prête à vendre sans frais de développement : 2 000 DA par mois, ou 3 000 DA par mois avec l’application mobile de gestion. Les sociétés de livraison sont intégrées pour expédier vers toutes les wilayas. Le nom de domaine n’est pas inclus, mais nous vous guidons pour l’obtenir. Pour une boutique entièrement sur mesure, nous établissons un devis."
+      },
+      "pos": {
+        "q": "Que comprend la caisse POS ?",
+        "a": "La caisse POS pour restaurants, fast-foods et commerces coûte 30 000 DA, installation sur place incluse. Elle gère l’encaissement, les produits, les stocks et les rapports de ventes. Une caisse sur mesure (multi-magasins, tables, livraisons) est chiffrée sur devis."
+      },
+      "delay": {
+        "q": "Combien de temps faut-il pour créer mon site ou mon application ?",
+        "a": "Le délai dépend de la taille du projet et de la disponibilité de vos contenus : textes, photos, logo et, pour une boutique, le catalogue produits. Le planning est fixé dans le devis."
+      },
+      "payment": {
+        "q": "Comment se passe le paiement ?",
+        "a": "Pour les projets sur devis : 20 % à la commande, 30 % à la validation de la maquette et 50 % à la livraison finale. Les offres à prix fixe (site vitrine, landing page, caisse POS) sont détaillées dans le devis."
+      },
+      "seo": {
+        "q": "Mon site sera-t-il bien référencé sur Google ?",
+        "a": "Chaque site est livré avec une base SEO : balises, vitesse, structure et version mobile. Pour aller plus loin, notre offre SEO, GEO et AEO travaille vos mots-clés, votre fiche Google Business Profile et votre visibilité dans les réponses des IA comme ChatGPT et Gemini."
+      },
+      "where": {
+        "q": "Travaillez-vous partout en Algérie ?",
+        "a": "Oui. Nos studios sont à Alger et à Batna, et nous accompagnons des clients dans toutes les wilayas, à distance ou sur place pour l’installation des caisses POS."
+      }
     },
-    "ecommerce": {
-      "title": "Site e-commerce",
-      "text": "Vente en ligne complète : produits, panier, commandes et paiement sécurisé.",
-      "features": ["Catalogue illimité & stocks en temps réel", "Notifications e-mail et SMS", "Hébergement + domaine inclus 1 an"]
-    },
-    "mobile": {
-      "title": "Application mobile",
-      "text": "Native ou hybride pour iOS et Android, avec une interface intuitive.",
-      "features": ["Notifications push & mode hors ligne", "Intégration d'API tierces", "Publication App Store & Google Play"]
-    },
-    "landing": {
-      "title": "Landing page",
-      "text": "Une page pensée pour convertir vos visiteurs en clients.",
-      "features": ["A/B testing intégré", "Formulaires de capture & CRM", "Chargement ultra-rapide"]
-    },
-    "pwa": {
-      "title": "Application web progressive",
-      "text": "Une app web qui s'installe sur l'écran d'accueil comme une application native.",
-      "features": ["Fonctionnement hors ligne", "Synchronisation automatique", "Compatibilité multi-navigateurs"]
-    },
-    "api": {
-      "title": "API & backend",
-      "text": "Des API RESTful et des systèmes robustes pour alimenter vos applications.",
-      "features": ["Authentification JWT", "Documentation & tests automatisés", "Scalabilité cloud & sauvegardes"]
+    "quote": {
+      "eyebrow": "Pixel Development · Devis",
+      "title": "Votre devis en 4 étapes.",
+      "lead": "Choisissez votre offre, décrivez votre projet, laissez vos coordonnées : nous vous répondons sous 24 h avec un devis détaillé.",
+      "crumb": "Devis"
     },
     "work": {
       "eyebrow": "Projets en ligne",
       "title": "Déjà en ligne.",
-      "vitrine": "Site vitrine",
-      "web": "Site web",
-      "ecommerce": "E-commerce"
-    },
-    "base": {
-      "eyebrow": "Dans chaque projet",
-      "title": "Le socle, inclus d'office.",
-      "responsive": { "title": "Responsive", "text": "Mobile, tablette et ordinateur." },
-      "seo": { "title": "SEO", "text": "Optimisation de base pour Google." },
-      "custom": { "title": "Code sur mesure", "text": "Fonctionnalités adaptées à votre activité." },
-      "training": { "title": "Formation", "text": "Vous gérez votre site en autonomie." },
-      "support": { "title": "Support technique", "text": "De 3 à 12 mois selon l'offre." }
+      "lead": "Sites vitrines, boutiques en ligne et plateformes livrés à nos clients, sur ordinateur, tablette et mobile.",
+      "all": "Voir tout le portfolio",
+      "devices": "sur ordinateur, tablette et mobile",
+      "items": {
+        "aladdinar": { "title": "Aladdinar", "kind": "Site vitrine · art" },
+        "bamboo": { "title": "Coffrets en bambou", "kind": "Boutique e-commerce" },
+        "cosmetics": { "title": "Cosmétiques premium", "kind": "Boutique e-commerce" },
+        "industry": { "title": "Équipements industriels", "kind": "Site vitrine" },
+        "qhse": { "title": "Conseil QHSE & ISO", "kind": "Site vitrine" },
+        "ecomPlatform": { "title": "Plateforme e-commerce", "kind": "Plateforme SaaS" },
+        "marketDark": { "title": "Marketplace de services", "kind": "Plateforme web · thème sombre" },
+        "marketLight": { "title": "Marketplace de services", "kind": "Plateforme web · thème clair" }
+      }
     }
   },
   "Sound": {

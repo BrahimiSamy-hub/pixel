@@ -41,8 +41,12 @@
       "description": "Six wedding packages from 29,000 to 130,000 DA: 2 to 6 photographers, FHD, 4K or 6K editing, photobook, frames and drone. Build your package online."
     },
     "dev": {
-      "title": "Website & e-commerce development in Algeria",
-      "description": "Business websites, online stores, mobile apps, landing pages, PWAs and APIs. Free quote within 24 hours, one year of hosting included."
+      "title": "Website, e-commerce & mobile app development in Algeria",
+      "description": "Showcase websites from 39,000 DA, landing pages from 5,000 DA, e-commerce stores at 2,000 DA / month, POS, mobile apps, ERP/CRM and AI. Online quote."
+    },
+    "devQuote": {
+      "title": "Website, e-commerce & mobile app quote in Algeria",
+      "description": "Build your quote request in 4 steps: showcase website, online store, mobile app, POS, ERP or AI. Reply within 24 hours."
     },
     "sound": {
       "title": "Voice-over in Darija, Arabic & French, jingles",
@@ -684,62 +688,75 @@
     "title": "Websites that",
     "titleAccent": "sell",
     "titleEnd": ", not just exist.",
-    "lead": "Business websites, online stores, mobile apps and APIs: designed, built and hosted by the same team.",
+    "lead": "Websites, online stores, mobile apps, POS systems and business software in Algeria: designed, built and hosted by the same team, in Algiers and Batna.",
     "ctaPrimary": "Quote within 24 h",
     "ctaSecondary": "The offers",
     "browser": "Client project · Beleghni",
     "heroAlt": "Beleghni website on desktop, tablet and mobile",
     "offers": {
-      "eyebrow": "Offers · on quote",
-      "title": "Six formats, depending on your ambition.",
-      "lead": "Every project is priced to measure. Send us your brief and the quote arrives within 24 hours.",
-      "support": "{months} months support"
+      "eyebrow": "Offers & pricing",
+      "title": "Clear prices, from showcase site to ERP.",
+      "lead": "Prices shown are our starting rates. Everything else is priced to measure: pick an offer and build your quote below.",
+      "pick": "I want this offer"
     },
-    "vitrine": {
-      "title": "Business website",
-      "text": "Present your company, services and portfolio with a modern, responsive design.",
-      "features": ["5 to 10 pages as needed", "Admin dashboard", "Hosting + domain included for 1 year"]
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Everything to know before you start.",
+      "price": {
+        "q": "How much does a website cost in Algeria at Pixel?",
+        "a": "A 5 to 10-page showcase website starts at 39 000 DA, with the domain name and hosting free for the first year and 3 months of maintenance. Add an admin dashboard for 16 000 DA. A landing page starts at 5 000 DA."
+      },
+      "renewal": {
+        "q": "What happens after the first year?",
+        "a": "For a showcase website, renewal costs 5 000 DA a year for hosting and 3 000 DA a year for the .com domain name. We remind you before each renewal."
+      },
+      "ecommerce": {
+        "q": "How does the e-commerce subscription work?",
+        "a": "Your online store is ready to sell with no development fee: 2 000 DA a month, or 3 000 DA a month with the mobile management app. Delivery companies are built in to ship to every wilaya. The domain name is not included, but we guide you to get one. For a fully custom store, we send a quote."
+      },
+      "pos": {
+        "q": "What does the POS system include?",
+        "a": "The POS for restaurants, fast-food outlets and shops costs 30 000 DA, on-site installation included. It handles checkout, products, stock and sales reports. A custom POS (several stores, tables, delivery) is priced on quote."
+      },
+      "delay": {
+        "q": "How long does it take to build my website or app?",
+        "a": "It depends on the size of the project and on having your content ready: texts, photos, logo and, for a store, the product catalogue. The timeline is set in the quote."
+      },
+      "payment": {
+        "q": "How does payment work?",
+        "a": "For quoted projects: 20% on order, 30% on mock-up approval and 50% on final delivery. Fixed-price offers (showcase website, landing page, POS) are detailed in the quote."
+      },
+      "seo": {
+        "q": "Will my website rank on Google?",
+        "a": "Every website ships with an SEO foundation: tags, speed, structure and mobile version. To go further, our SEO, GEO and AEO offer works on your keywords, your Google Business Profile and your visibility in AI answers such as ChatGPT and Gemini."
+      },
+      "where": {
+        "q": "Do you work across Algeria?",
+        "a": "Yes. Our studios are in Algiers and Batna, and we work with clients in every wilaya, remotely or on site for POS installation."
+      }
     },
-    "ecommerce": {
-      "title": "Online store",
-      "text": "Complete online selling: products, cart, orders and secure payment.",
-      "features": ["Unlimited catalogue & live stock", "Email and SMS notifications", "Hosting + domain included for 1 year"]
-    },
-    "mobile": {
-      "title": "Mobile app",
-      "text": "Native or hybrid for iOS and Android, with an intuitive interface.",
-      "features": ["Push notifications & offline mode", "Third-party API integration", "App Store & Google Play publishing"]
-    },
-    "landing": {
-      "title": "Landing page",
-      "text": "A page built to turn your visitors into customers.",
-      "features": ["Built-in A/B testing", "Lead forms & CRM", "Ultra-fast loading"]
-    },
-    "pwa": {
-      "title": "Progressive web app",
-      "text": "A web app that installs on the home screen like a native app.",
-      "features": ["Works offline", "Automatic sync", "Cross-browser compatibility"]
-    },
-    "api": {
-      "title": "API & backend",
-      "text": "RESTful APIs and robust systems to power your applications.",
-      "features": ["JWT authentication", "Documentation & automated tests", "Cloud scalability & backups"]
+    "quote": {
+      "eyebrow": "Pixel Development · Quote",
+      "title": "Your quote in 4 steps.",
+      "lead": "Pick your offer, describe your project, leave your details: we reply within 24 hours with a detailed quote.",
+      "crumb": "Quote"
     },
     "work": {
       "eyebrow": "Live projects",
       "title": "Already online.",
-      "vitrine": "Business website",
-      "web": "Website",
-      "ecommerce": "E-commerce"
-    },
-    "base": {
-      "eyebrow": "In every project",
-      "title": "The foundations, included.",
-      "responsive": { "title": "Responsive", "text": "Mobile, tablet and desktop." },
-      "seo": { "title": "SEO", "text": "Core optimisation for Google." },
-      "custom": { "title": "Custom code", "text": "Features built for your business." },
-      "training": { "title": "Training", "text": "You manage your site on your own." },
-      "support": { "title": "Technical support", "text": "3 to 12 months depending on the offer." }
+      "lead": "Showcase websites, online stores and platforms delivered to our clients, on desktop, tablet and mobile.",
+      "all": "See the full portfolio",
+      "devices": "on desktop, tablet and mobile",
+      "items": {
+        "aladdinar": { "title": "Aladdinar", "kind": "Showcase website · art" },
+        "bamboo": { "title": "Bamboo boxes", "kind": "Online store" },
+        "cosmetics": { "title": "Premium cosmetics", "kind": "Online store" },
+        "industry": { "title": "Industrial equipment", "kind": "Showcase website" },
+        "qhse": { "title": "QHSE & ISO consulting", "kind": "Showcase website" },
+        "ecomPlatform": { "title": "E-commerce platform", "kind": "SaaS platform" },
+        "marketDark": { "title": "Services marketplace", "kind": "Web platform · dark theme" },
+        "marketLight": { "title": "Services marketplace", "kind": "Web platform · light theme" }
+      }
     }
   },
   "Sound": {

@@ -6,7 +6,8 @@ type Variant = 'primary' | 'secondary' | 'ink' | 'light'
 type Size = 'md' | 'sm'
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-orange text-ink hover:bg-orange-light',
+  // `btn-primary`: sub-brand pages swap the fill for their gradient (globals.css).
+  primary: 'btn-primary bg-orange text-ink hover:bg-orange-light',
   secondary: 'bg-ink-3 text-white hover:bg-line-strong',
   ink: 'bg-ink text-white hover:bg-charcoal',
   light: 'bg-paper text-ink hover:bg-lavender',

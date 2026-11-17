@@ -34,7 +34,7 @@ export function OfferCard({
     <article
       className={cn(
         'relative flex flex-col gap-5 rounded-card p-8 sm:p-9',
-        highlight ? cn(toneClasses[tone].bg, 'text-ink') : 'border border-line bg-ink-2',
+        highlight ? cn('brand-fill', toneClasses[tone].bg, 'text-ink') : 'border border-line bg-ink-2',
       )}
     >
       {badge ? (

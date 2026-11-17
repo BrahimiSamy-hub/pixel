@@ -69,7 +69,8 @@ export function useDraft<T>(key: string, initial: T) {
     }, 400)
     return () => clearTimeout(timer)
   }, [key, loaded, state])
-  return [state, setState] as const
+  /** `loaded`: the saved draft (if any) has been restored. */
+  return [state, setState, loaded] as const
 }
 
 // ---------------------------------------------------------------------------

@@ -195,7 +195,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
                   {/* Inside the row, `orange` is the service colour (serviceThemeClass). */}
                   <span className="flex flex-[0_0_auto] items-center gap-3.5 font-mono text-sm font-bold tracking-[0.16em] text-orange uppercase">
                     {tCommon('seeDetails')}
-                    <span className="flex size-12 items-center justify-center rounded-full border border-orange transition-colors group-hover:bg-orange group-hover:text-ink">
+                    <span className="brand-circle flex size-12 items-center justify-center rounded-full border border-orange transition-colors group-hover:bg-orange group-hover:text-ink">
                       <ArrowRight size={18} aria-hidden className="flip-rtl transition-transform group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5" />
                     </span>
                   </span>

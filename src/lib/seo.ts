@@ -69,6 +69,7 @@ type MetaKey =
   | 'terms'
   | 'privacy'
   | 'werewolf'
+  | 'devQuote'
 
 /** Metadata for a static page whose title/description live under `Metadata.<key>` in the messages. */
 export async function staticPageMetadata(locale: Locale, key: MetaKey, path: string, noIndex = false) {

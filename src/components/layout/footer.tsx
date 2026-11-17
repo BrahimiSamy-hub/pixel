@@ -33,8 +33,8 @@ export function Footer() {
 
   return (
     <footer className="mt-auto">
-      {/* CTA band: a full flame aplat, with an amber P symbol bleeding off the edge. */}
-      <section className="relative overflow-hidden bg-orange text-ink">
+      {/* CTA band: a full flame aplat (the sub-brand gradient on service pages), with an amber P symbol bleeding off the edge. */}
+      <section className="brand-fill relative overflow-hidden bg-orange text-ink">
         <div aria-hidden className="absolute -inset-e-16 -top-24 aspect-[0.886] w-[34rem] bg-amber clip-mark" />
         <Container className="relative flex flex-wrap items-center justify-between gap-10 py-16 md:py-28">
           <div className="flex min-w-0 flex-[1_1_32rem] flex-col gap-6">

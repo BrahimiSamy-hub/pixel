@@ -112,7 +112,7 @@ export default async function ServicesPage({ params }: PageProps<'/[locale]/serv
                       </>
                     )}
                   </p>
-                  <ButtonLink href={s.href} variant="secondary" size="sm">
+                  <ButtonLink href={s.href} size="sm">
                     {s.key === 'wedding' ? t('seePacks') : tCommon('seeOffers')}
                     <ArrowRight size={16} aria-hidden className="flip-rtl" />
                   </ButtonLink>

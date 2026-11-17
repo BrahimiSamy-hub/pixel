@@ -114,7 +114,7 @@ export default async function DesignPage({ params }: PageProps<'/[locale]/design
             ].map((offer) => (
               <article
                 key={offer.key}
-                className={`flex flex-wrap items-end justify-between gap-x-10 gap-y-6 rounded-card p-10 ${offer.highlight ? 'bg-yellow text-ink' : 'border border-line bg-ink'}`}
+                className={`flex flex-wrap items-end justify-between gap-x-10 gap-y-6 rounded-card p-10 ${offer.highlight ? 'brand-fill bg-yellow text-ink' : 'border border-line bg-ink'}`}
               >
                 <div className="flex min-w-0 flex-[1_1_16rem] flex-col gap-3.5">
                   <h3 className="text-h3">{t(`pricing.${offer.key as 'design'}.title`)}</h3>

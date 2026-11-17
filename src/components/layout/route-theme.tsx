@@ -12,6 +12,7 @@ const routes: Record<string, ServiceId> = {
   '/design-graphique': 'creative',
   '/photo-lab': 'photo',
   '/developpement': 'dev',
+  '/developpement/devis': 'dev',
   '/mariage': 'events',
   '/sons': 'sounds',
   '/publicite': 'enseigne',

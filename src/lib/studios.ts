@@ -74,7 +74,8 @@ export const studios: Record<StudioKey, Studio> = {
   photo: { key: 'photo', href: '/photo-lab', tone: 'photo', image: photoImg, logo: serviceLogos.photo, priceFrom: 4000 },
   design: { key: 'design', href: '/design-graphique', tone: 'creative', image: designImg, logo: serviceLogos.creative, priceFrom: 1000 },
   wedding: { key: 'wedding', href: '/mariage', tone: 'events', image: weddingImg, logo: serviceLogos.events, priceFrom: 29000 },
-  dev: { key: 'dev', href: '/developpement', tone: 'dev', image: devImg, logo: serviceLogos.dev, priceFrom: null },
+  // Landing page from 5 000 DA (dev price list, Nov 2026).
+  dev: { key: 'dev', href: '/developpement', tone: 'dev', image: devImg, logo: serviceLogos.dev, priceFrom: 5000 },
   // VoiceOver from 5 000 DA (Sounds.pdf).
   sound: { key: 'sound', href: '/sons', tone: 'sounds', image: soundImg, logo: serviceLogos.sounds, priceFrom: 5000 },
   ads: { key: 'ads', href: '/publicite', tone: 'enseigne', image: adsImg, logo: serviceLogos.enseigne, priceFrom: null },

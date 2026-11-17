@@ -1,74 +1,10 @@
 'use client'
 
-import { dev, devLines, devProjects, type DevState } from '@/shared/catalog/dev'
 import { soundLines, soundOffers, sounds, type SoundsState, voiceLangs, voices } from '@/shared/catalog/sounds'
 import { tapini, tapiniLines, tapiniProducts, type TapiniState } from '@/shared/catalog/tapini'
 import { quoteText } from '@/shared/catalog/text'
 import { cn } from '@/lib/cn'
-import { ChoiceChips, type Contact, ContactBlock, emptyContact, Group, Notes, OptionRow, QSection, QtyStepper, TextField, Ticket, useDraft, useL, useLang, usePriceText } from './kit'
-
-/** Pixel Development: project types, goal, included services, payment schedule. All on quote. */
-export function DevBuilder() {
-  const L = useL()
-  const lang = useLang()
-  const [s, setS] = useDraft<DevState>('dev', { projects: [], emails: false, emailCount: 1 })
-  const [site, setSite] = useDraft('dev.site', '')
-  const [goal, setGoal] = useDraft('dev.goal', '')
-  const [contact, setContact] = useDraft<Contact>('contact', emptyContact)
-  return (
-    <div className="flex flex-col gap-12">
-      <QSection title={L(dev.title)}>
-        <Group>
-          {devProjects.map((p) => {
-            const on = s.projects.includes(p.id)
-            return <OptionRow key={p.id} label={L(p.label)} price={L(quoteText.onQuote)} selected={on} onToggle={() => setS({ ...s, projects: on ? s.projects.filter((x) => x !== p.id) : [...s.projects, p.id] })} />
-          })}
-        </Group>
-        <Notes id="dev-goal" label={L(dev.goal)} value={goal} onChange={setGoal} />
-        <TextField id="dev-site" type="url" label={L(dev.current)} value={site} onChange={setSite} dir="ltr" />
-      </QSection>
-      <QSection title={L(dev.includedTitle)} hint={L(dev.includedNote)}>
-        <ul className="flex flex-wrap gap-x-8 gap-y-2">
-          {dev.included.map((x) => (
-            <li key={x.fr} className="flex items-center gap-2">
-              <span aria-hidden className="text-orange">✓</span>
-              {L(x)}
-            </li>
-          ))}
-        </ul>
-        <Group>
-          <OptionRow label={L(dev.emails)} price={L(quoteText.onQuote)} selected={s.emails} onToggle={() => setS({ ...s, emails: !s.emails })}>
-            <QtyStepper label={L(dev.emailsCount)} value={s.emailCount} onChange={(emailCount) => setS({ ...s, emailCount })} />
-          </OptionRow>
-        </Group>
-      </QSection>
-      <QSection title={L(dev.provideTitle)} hint={L(dev.provideNote)}>
-        <ul className="grid grid-cols-[repeat(auto-fit,minmax(min(15rem,100%),1fr))] gap-2 text-lavender">
-          {dev.provide.map((x) => (
-            <li key={x.fr}>— {L(x)}</li>
-          ))}
-        </ul>
-      </QSection>
-      <QSection title={L(dev.paymentTitle)} hint={L(dev.paymentNote)}>
-        <div className="flex gap-1">
-          {dev.payment.map((p, i) => (
-            <span key={p.pct} className="h-2.5 rounded-full bg-orange" style={{ flex: p.pct, opacity: 0.45 + i * 0.27 }} />
-          ))}
-        </div>
-        <div className="grid grid-cols-3 gap-4">
-          {dev.payment.map((p) => (
-            <div key={p.pct}>
-              <p className="text-3xl font-semibold text-orange">{p.pct} %</p>
-              <p className="text-sm text-mist">{L(p.label)}</p>
-            </div>
-          ))}
-        </div>
-      </QSection>
-      <ContactBlock value={contact} onChange={setContact} />
-      <Ticket request={{ service: 'Pixel Development', answers: [{ label: L(dev.current), value: site }], lines: devLines(s, lang), notes: goal, contact }} />
-    </div>
-  )
-}
+import { ChoiceChips, type Contact, ContactBlock, emptyContact, Group, Notes, OptionRow, QSection, QtyStepper, Ticket, useDraft, useL, useLang, usePriceText } from './kit'
 
 /** Pixel Sounds: offers, voice and languages (darija included). */
 export function SoundsBuilder() {
