@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import astronaut from '@/assets/astro.png'
 import logo from '@/assets/brand/pixel-logo-dark.svg'
-import { FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from '@/components/ui/brand-icons'
+import { AppleIcon, FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from '@/components/ui/brand-icons'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
 import { Link } from '@/i18n/navigation'
@@ -90,6 +90,15 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            <a
+              href={site.apps.ios.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-11 items-center gap-2.5 self-start border border-line bg-ink-2 px-4 text-sm font-semibold text-white hover:border-orange hover:text-orange"
+            >
+              <AppleIcon size={17} />
+              {t('appStore')}
+            </a>
           </div>
 
           <nav aria-labelledby="footer-studios" className="flex-[1_1_11rem]">

@@ -167,7 +167,8 @@
     "werewolf": "Werewolf rules",
     "cookies": "Manage cookies",
     "mascotAlt": "Pixel's astronaut mascot",
-    "hours": "Sat–Thu · 9am–6pm"
+    "hours": "Sat–Thu · 9am–6pm",
+    "appStore": "Download on the App Store"
   },
   "Cookie": {
     "title": "Cookies",
@@ -259,6 +260,39 @@
     "work": {
       "eyebrow": "Our work in action",
       "title": "Projects that get noticed."
+    },
+    "projectsCarousel": {
+      "label": "Featured projects",
+      "carouselRole": "carousel",
+      "previous": "Previous project",
+      "next": "Next project",
+      "pagination": "Choose a project",
+      "slideLabel": "Slide %current% of %total%",
+      "pixelApp": {
+        "eyebrow": "The Pixel app · Your creative studio",
+        "title": "Your creative studio, in your pocket.",
+        "text": "Explore Pixel services, build a quote and manage your digital business card in one app.",
+        "cta": "Discover Pixel",
+        "ctaIos": "Download on the App Store"
+      },
+      "wasla": {
+        "eyebrow": "Wasla Network · Find trusted help",
+        "title": "A trusted pro is closer than you think.",
+        "text": "Connect with verified professionals for repairs and everyday services across Algeria.",
+        "cta": {
+          "web": "Visit Wasla",
+          "android": "Get it on Google Play",
+          "ios": "Download on the App Store"
+        }
+      },
+      "dzEcommerce": {
+        "eyebrow": "DZ Ecommerce · Sell online",
+        "title": "Your Algerian store, ready to sell.",
+        "text": "Create your online store and manage cash-on-delivery orders and local delivery from one place.",
+        "cta": "Explore DZ Ecommerce"
+      },
+      "pause": "Pause autoplay",
+      "play": "Resume autoplay"
     },
     "process": {
       "eyebrow": "Method",

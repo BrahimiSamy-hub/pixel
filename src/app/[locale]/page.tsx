@@ -7,12 +7,9 @@ import studioShoot from '@/assets/portfolio/Shooting/shooting12.jpg'
 import weddingFlares from '@/assets/portfolio/wedding/wedding.jpg'
 import mic from '@/assets/services/audio.png'
 import elRiadh from '@/assets/signs/elriadh.jpg'
-import mark from '@/assets/brand/pixel-mark.svg'
-import studioDesk from '@/assets/services/infographie.png'
 import { HomeHeroV1, HomeHeroV2 } from '@/components/sections/home-hero'
 import { FeaturedReview, ReviewCard } from '@/components/sections/review-card'
 import { homeReviews } from '@/data/reviews'
-import { TimelineList } from '@/components/sections/timeline'
 import { ProductCard } from '@/components/shop/product-card'
 import { ButtonLink } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
@@ -26,6 +23,7 @@ import { cn } from '@/lib/cn'
 import { formatDecimal, formatNumber } from '@/lib/format'
 import { staticPageMetadata } from '@/lib/seo'
 import { site } from '@/lib/site'
+import { ProjectCarousel } from '@/components/sections/project-carousel'
 import { ServiceLogo } from '@/components/sections/service-logo'
 import { serviceThemeClass, studioList, studios, toneClasses, type StudioKey } from '@/lib/studios'
 import { portfolioItems, type PortfolioSub } from '@/data/portfolio'
@@ -203,6 +201,47 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
         </Container>
       </section>
 
+      <ProjectCarousel
+        dir={locale === 'ar' ? 'rtl' : 'ltr'}
+        copy={{
+          label: t('projectsCarousel.label'),
+          carouselRole: t('projectsCarousel.carouselRole'),
+          previous: t('projectsCarousel.previous'),
+          next: t('projectsCarousel.next'),
+          pagination: t('projectsCarousel.pagination'),
+          slideLabel: t('projectsCarousel.slideLabel'),
+          pause: t('projectsCarousel.pause'),
+          play: t('projectsCarousel.play'),
+          projects: {
+            pixelApp: {
+              eyebrow: t('projectsCarousel.pixelApp.eyebrow'),
+              brand: 'Pixel Creative Agency',
+              title: t('projectsCarousel.pixelApp.title'),
+              text: t('projectsCarousel.pixelApp.text'),
+              cta: { web: t('projectsCarousel.pixelApp.cta'), android: t('projectsCarousel.pixelApp.cta'), ios: t('projectsCarousel.pixelApp.ctaIos') },
+            },
+            wasla: {
+              eyebrow: t('projectsCarousel.wasla.eyebrow'),
+              brand: 'Wasla Network',
+              title: t('projectsCarousel.wasla.title'),
+              text: t('projectsCarousel.wasla.text'),
+              cta: {
+                web: t('projectsCarousel.wasla.cta.web'),
+                android: t('projectsCarousel.wasla.cta.android'),
+                ios: t('projectsCarousel.wasla.cta.ios'),
+              },
+            },
+            dzEcommerce: {
+              eyebrow: t('projectsCarousel.dzEcommerce.eyebrow'),
+              brand: 'DZ Ecommerce',
+              title: t('projectsCarousel.dzEcommerce.title'),
+              text: t('projectsCarousel.dzEcommerce.text'),
+              cta: { web: t('projectsCarousel.dzEcommerce.cta'), android: t('projectsCarousel.dzEcommerce.cta'), ios: t('projectsCarousel.dzEcommerce.cta') },
+            },
+          },
+        }}
+      />
+
       {/* Process: big numerals, the first filled, the rest outlined. */}
       <section className="section-y">
         <Container>
@@ -221,32 +260,12 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
         </Container>
       </section>
 
-      {/* Story */}
-      <section className="section-y border-t border-line">
-        <Container className="flex flex-wrap items-center gap-14">
-          <div className="relative aspect-5/6 max-h-170 min-w-0 flex-[1_1_30rem] overflow-hidden rounded-card bg-ink-2">
-            <Image src={studioDesk} alt={t('story.imageAlt')} fill placeholder="blur" sizes="(min-width: 1024px) 600px, 100vw" className="object-cover" />
-            <Image src={mark} alt="" unoptimized className="absolute inset-e-6 top-6 h-auto w-14" />
-          </div>
-          <div className="flex min-w-0 flex-[1_1_30rem] flex-col gap-6">
-            <Eyebrow index="04">{t('story.eyebrow')}</Eyebrow>
-            <h2 className="text-h2">{t('story.title')}</h2>
-            <p className="text-lead text-lavender">{t('story.text')}</p>
-            <TimelineList />
-            <Link href="/a-propos" className={cn(arrowLink, 'self-start')}>
-              {t('story.cta')}
-              <ArrowRight size={18} aria-hidden className="flip-rtl" />
-            </Link>
-          </div>
-        </Container>
-      </section>
-
       {/* Shop teaser */}
       {shopPicks.length > 0 ? (
         <section className="section-y border-t border-line">
           <Container>
             <SectionHeader
-              index="05"
+              index="04"
               eyebrow={t('shop.eyebrow')}
               title={t('shop.title')}
               aside={
@@ -273,7 +292,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
           <div className="mb-14 flex flex-wrap items-end justify-between gap-x-12 gap-y-6">
             <div className="max-w-3xl">
               <div className={cn('flex items-center gap-3 text-stone', label)}>
-                <span className="text-[#b84a12]">06</span>
+                <span className="text-[#b84a12]">05</span>
                 <span aria-hidden className="h-px w-8 bg-[#b9b6b2]" />
                 <span>{t('testimonials.eyebrow')}</span>
               </div>
@@ -308,7 +327,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
       <section className="section-y">
         <Container className="flex flex-wrap gap-x-20 gap-y-12">
           <div className="flex min-w-0 flex-[1_1_24rem] flex-col gap-5">
-            <Eyebrow index="07">{t('faq.eyebrow')}</Eyebrow>
+            <Eyebrow index="06">{t('faq.eyebrow')}</Eyebrow>
             <h2 className="text-h2">{t('faq.title')}</h2>
             <p className="text-[1.0625rem] leading-relaxed text-mist">{t('faq.lead')}</p>
           </div>

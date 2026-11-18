@@ -167,7 +167,8 @@
     "werewolf": "Règles Loup-Garou",
     "cookies": "Gérer les cookies",
     "mascotAlt": "La mascotte astronaute de Pixel",
-    "hours": "Sam–Jeu · 9h–18h"
+    "hours": "Sam–Jeu · 9h–18h",
+    "appStore": "Télécharger sur l’App Store"
   },
   "Cookie": {
     "title": "Cookies",
@@ -259,6 +260,39 @@
     "work": {
       "eyebrow": "Notre travail en action",
       "title": "Des projets qui se voient."
+    },
+    "projectsCarousel": {
+      "label": "Projets à la une",
+      "carouselRole": "carrousel",
+      "previous": "Projet précédent",
+      "next": "Projet suivant",
+      "pagination": "Choisir un projet",
+      "slideLabel": "Projet %current% sur %total%",
+      "pixelApp": {
+        "eyebrow": "L’app Pixel · Votre studio créatif",
+        "title": "Votre studio créatif, dans votre poche.",
+        "text": "Découvrez les services Pixel, préparez un devis et gérez votre carte de visite digitale dans une seule app.",
+        "cta": "Découvrir Pixel",
+        "ctaIos": "Télécharger sur l’App Store"
+      },
+      "wasla": {
+        "eyebrow": "Wasla Network · Des pros de confiance",
+        "title": "Un professionnel de confiance, tout près.",
+        "text": "Trouvez des professionnels vérifiés pour vos réparations et services du quotidien, partout en Algérie.",
+        "cta": {
+          "web": "Visiter Wasla",
+          "android": "Disponible sur Google Play",
+          "ios": "Télécharger sur l’App Store"
+        }
+      },
+      "dzEcommerce": {
+        "eyebrow": "DZ Ecommerce · Vendez en ligne",
+        "title": "Votre boutique algérienne, prête à vendre.",
+        "text": "Créez votre boutique en ligne et gérez les commandes à la livraison et les expéditions depuis un seul espace.",
+        "cta": "Découvrir DZ Ecommerce"
+      },
+      "pause": "Mettre le défilement en pause",
+      "play": "Reprendre le défilement"
     },
     "process": {
       "eyebrow": "Méthode",

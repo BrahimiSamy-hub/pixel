@@ -1,6 +1,4 @@
 import { Star } from 'lucide-react'
-import Image from 'next/image'
-import mark from '@/assets/brand/pixel-mark.svg'
 import { useTranslations } from 'next-intl'
 import { HexDot } from '@/components/ui/hex'
 import { cn } from '@/lib/cn'
@@ -24,12 +22,11 @@ export function Stars({ count = 5, className }: { count?: number; className?: st
   )
 }
 
-/** Lead testimonial, set large on the paper section: the P symbol opens the quote. */
+/** Lead testimonial, set large on the paper section. */
 export function FeaturedReview({ review }: { review: Review }) {
   const source = useSource(review)
   return (
     <figure className="flex flex-col gap-8">
-      <Image src={mark} alt="" unoptimized className="h-auto w-10" />
       <blockquote className="text-[clamp(1.375rem,2.4vw,2.125rem)] leading-[1.25] font-semibold tracking-[-0.025em] text-pretty whitespace-pre-line">
         «&#8239;{review.text}&#8239;»
       </blockquote>

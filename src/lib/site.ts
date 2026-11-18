@@ -29,6 +29,10 @@ export const site = {
     tiktok: { href: 'https://www.tiktok.com/@pixel.creativeagency', handle: '@pixel.creativeagency' },
     facebook: { href: 'https://www.facebook.com/pixel.lab.3110', handle: 'pixel.lab' },
   },
+  /** The Pixel app on the App Store (Smart App Banner, App Links, MobileApplication structured data). */
+  apps: {
+    ios: { id: '6832631315', url: 'https://apps.apple.com/app/pixel-creative-agency/id6832631315', minOs: '16.4' },
+  },
   gaId: 'G-86F35330NS',
   // Shown in the UI and in structured data — keep in sync with the Google Business profile.
   rating: { value: 4.8, best: 5, count: 34 },

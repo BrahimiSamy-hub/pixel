@@ -44,6 +44,9 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
     description: t('description'),
     applicationName: site.name,
     robots: { index: true, follow: true },
+    // Safari on iPhone shows the Smart App Banner ("Open" / "Get") for the Pixel app.
+    itunes: { appId: site.apps.ios.id },
+    appLinks: { ios: { url: site.apps.ios.url, app_store_id: site.apps.ios.id, app_name: site.name } },
     icons: {
       // Generated from the brand symbol by scripts/brand-icons.mjs.
       icon: [
@@ -71,6 +74,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   const messages = await getMessages()
   const clientMessages = Object.fromEntries(clientNamespaces.map((ns) => [ns, messages[ns]]))
   const t = await getTranslations('Common')
+  const tApp = await getTranslations('Home.projectsCarousel.pixelApp')
   const dir = getDirection(locale)
 
   return (
@@ -98,6 +102,24 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
           <ConsentAndAnalytics />
           <ClientProviders dir={dir} />
         </NextIntlClientProvider>
+        <JsonLd
+          data={{
+            '@context': 'https://schema.org',
+            '@type': 'MobileApplication',
+            '@id': `${site.url}/#ios-app`,
+            name: site.name,
+            description: tApp('text'),
+            url: site.apps.ios.url,
+            installUrl: site.apps.ios.url,
+            downloadUrl: site.apps.ios.url,
+            image: `${site.url}/android-chrome-512x512.png`,
+            operatingSystem: `iOS ${site.apps.ios.minOs} or later`,
+            applicationCategory: 'BusinessApplication',
+            inLanguage: ['fr', 'ar', 'en'],
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'DZD' },
+            publisher: { '@id': `${site.url}/#organization` },
+          }}
+        />
         <JsonLd
           data={{
             '@context': 'https://schema.org',

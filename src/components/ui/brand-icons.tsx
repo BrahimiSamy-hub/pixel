@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import type { SVGProps } from 'react'
+import { siApple } from 'simple-icons'
 import waslaLogo from '@/assets/brand/wasla.png'
 
 // Brand marks are not part of lucide; drawn here in the same 24px stroke style.
@@ -21,6 +22,15 @@ function Base({ size = 18, children, ...props }: IconProps & { children: React.R
       {...props}
     >
       {children}
+    </svg>
+  )
+}
+
+/** Filled Apple mark (simple-icons), for App Store links. */
+export function AppleIcon({ size = 18, ...props }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden focusable="false" {...props}>
+      <path d={siApple.path} />
     </svg>
   )
 }

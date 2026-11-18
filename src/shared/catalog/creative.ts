@@ -17,6 +17,12 @@ export const creativeTabs: readonly { id: CreativeTab; label: L10n }[] = [
 
 export type Option<K extends string = string> = { id: K; label: L10n; hint?: L10n; price?: Price }
 
+/** A brand logo from "Types of Logos.ai"; the image is `logo-types/{id}.png` (website `public/`, app `assets/`). */
+export type LogoExample = { id: string; name: string }
+
+/** A logo type, with the example logos the infographic shows for it. */
+export type LogoTypeOption = Option & { examples?: readonly LogoExample[] }
+
 // ---------------------------------------------------------------------------
 // 01 · Logo & identité visuelle
 // ---------------------------------------------------------------------------
@@ -24,9 +30,9 @@ export type Option<K extends string = string> = { id: K; label: L10n; hint?: L10
 export const logo = {
   title: l('Logo & identité visuelle', 'Logo & visual identity', 'الشعار والهوية البصرية'),
   intro: l(
-    'Décrivez votre marque, choisissez au maximum deux styles de logo et indiquez les usages prévus.',
-    'Describe your brand, pick up to two logo styles and tell us where it will be used.',
-    'صف علامتك التجارية، اختر نمطين للشعار كحد أقصى وحدد أماكن استعماله.',
+    'Décrivez votre marque, choisissez un style de logo et indiquez les usages prévus.',
+    'Describe your brand, pick one logo style and tell us where it will be used.',
+    'صف علامتك التجارية، اختر نمطًا واحدًا للشعار وحدد أماكن استعماله.',
   ),
   nature: [
     { id: 'new', label: l('Création d’un nouveau logo', 'New logo design', 'تصميم شعار جديد'), hint: l('2 propositions initiales ; 1 piste retenue ; 3 séries de modifications incluses', '2 initial proposals; 1 direction kept; 3 rounds of changes included', 'مقترحان أوليان؛ اختيار مقترح واحد؛ 3 جولات تعديل مشمولة'), price: null },
@@ -50,17 +56,85 @@ export const logo = {
     refs: l('Marques, liens ou références appréciés', 'Brands, links or references you like', 'علامات أو روابط أو مراجع تعجبك'),
     avoid: l('Ce que vous ne voulez surtout pas', 'What you definitely don’t want', 'ما لا تريده إطلاقًا'),
   },
-  typesTitle: l('Types de logo préférés · 2 choix maximum', 'Preferred logo types · 2 choices max', 'أنواع الشعار المفضلة · اختياران كحد أقصى'),
+  typesTitle: l('Type de logo préféré', 'Preferred logo type', 'نوع الشعار المفضل'),
   types: [
-    { id: 'type', label: l('Typographique', 'Wordmark', 'كتابي'), hint: l('Le nom travaillé par un dessin de lettres distinctif', 'The name drawn with distinctive lettering', 'الاسم بخط مميز') },
-    { id: 'mono', label: l('Monogramme', 'Monogram', 'حروف أولى'), hint: l('Initiales stylisées, adaptées aux noms longs', 'Stylised initials, good for long names', 'حروف أولى منسقة، مناسبة للأسماء الطويلة') },
-    { id: 'picto', label: l('Pictogramme figuratif', 'Pictorial mark', 'رمز تصويري'), hint: l('Symbole reconnaissable : objet, activité ou idée', 'A recognisable symbol: object, activity or idea', 'رمز واضح: شيء أو نشاط أو فكرة') },
-    { id: 'abstract', label: l('Symbole abstrait', 'Abstract mark', 'رمز تجريدي'), hint: l('Forme originale, sans représentation littérale', 'An original shape, not literal', 'شكل أصلي غير حرفي') },
-    { id: 'combo', label: l('Logo combiné', 'Combination mark', 'شعار مركب'), hint: l('Nom + symbole, ensemble ou séparément', 'Name + symbol, together or apart', 'اسم + رمز، معًا أو منفصلين') },
-    { id: 'emblem', label: l('Emblème / badge', 'Emblem / badge', 'شارة'), hint: l('Texte et symbole dans un sceau ou écusson', 'Text and symbol inside a seal or crest', 'نص ورمز داخل ختم أو درع') },
-    { id: 'mascot', label: l('Mascotte / personnage', 'Mascot / character', 'شخصية / تميمة'), hint: l('Personnage représentant l’univers de marque', 'A character embodying the brand', 'شخصية تمثل عالم العلامة') },
+    {
+      id: 'type',
+      label: l('Typographique (logotype)', 'Wordmark (logotype)', 'شعار كتابي'),
+      hint: l(
+        'Uniquement du texte : un traitement typographique unique du nom, qui devient l’identification immédiate de la marque.',
+        'Text only: a unique typographic treatment of the name, so the name itself becomes the brand’s instant identifier.',
+        'نص فقط: معالجة خطية فريدة للاسم تجعل الاسم نفسه هو ما يميّز العلامة فورًا.',
+      ),
+      examples: [{ id: 'coca-cola', name: 'Coca-Cola' }, { id: 'zara', name: 'Zara' }, { id: 'disney', name: 'Disney' }],
+    },
+    {
+      id: 'mono',
+      label: l('Monogramme (lettermark)', 'Lettermark (monogram)', 'شعار حرفي (مونوغرام)'),
+      hint: l(
+        'Une à trois lettres, souvent les initiales, combinées en un seul symbole décoratif. Idéal pour les noms longs.',
+        'One to three letters, usually the initials, combined into a single decorative symbol. Ideal for long names.',
+        'حرف إلى ثلاثة أحرف، غالبًا الحروف الأولى، مدمجة في رمز زخرفي واحد. مثالي للأسماء الطويلة.',
+      ),
+      examples: [{ id: 'lg', name: 'LG' }, { id: 'hbo', name: 'HBO' }, { id: 'hp', name: 'HP' }, { id: 'mcdonalds', name: 'McDonald’s' }],
+    },
+    {
+      id: 'picto',
+      label: l('Pictogramme (symbole)', 'Pictorial mark (logo symbol)', 'رمز تصويري'),
+      hint: l(
+        'Un logo basé sur une icône ou une image reconnaissable : c’est souvent ce qui vient à l’esprit quand on pense « logo ».',
+        'An icon- or graphic-based logo built on a recognisable image: often what comes to mind when you think “logo”.',
+        'شعار قائم على أيقونة أو صورة يسهل التعرف عليها: غالبًا ما يخطر بالبال عند التفكير في كلمة «شعار».',
+      ),
+      examples: [{ id: 'twitter', name: 'Twitter' }, { id: 'apple', name: 'Apple' }, { id: 'lacoste', name: 'Lacoste' }, { id: 'microsoft', name: 'Microsoft' }],
+    },
+    {
+      id: 'abstract',
+      label: l('Symbole abstrait', 'Abstract mark', 'رمز تجريدي'),
+      hint: l(
+        'Une forme géométrique non figurative qui représente votre activité de façon conceptuelle et porte plusieurs niveaux de sens. Mémorable et propice à la conversation.',
+        'A non-literal geometric shape that represents your business conceptually and carries layers of meaning. Memorable and conversation-starting.',
+        'شكل هندسي غير حرفي يعبّر عن نشاطك بطريقة مفاهيمية ويحمل عدة طبقات من المعنى. لا يُنسى ويثير الفضول.',
+      ),
+      examples: [{ id: 'toyota', name: 'Toyota' }, { id: 'mastercard', name: 'Mastercard' }, { id: 'pepsi', name: 'Pepsi' }, { id: 'nike', name: 'Nike' }],
+    },
+    {
+      id: 'combo',
+      label: l('Logo combiné', 'Combination mark', 'شعار مركّب'),
+      hint: l(
+        'Logotype + symbole réunis : le texte et l’image se renforcent et expliquent ce que fait l’entreprise. Intégrés ou utilisables séparément.',
+        'Wordmark + symbol in one logo: text and image reinforce each other and clarify what the business does. Integrated or usable apart.',
+        'اسم + رمز في شعار واحد: يتكامل النص والصورة لتوضيح نشاط المؤسسة. مدمجان أو قابلان للاستعمال منفصلين.',
+      ),
+      examples: [{ id: 'amazon', name: 'Amazon' }, { id: 'nba', name: 'NBA' }, { id: 'burger-king', name: 'Burger King' }, { id: 'puma', name: 'Puma' }],
+    },
+    {
+      id: 'emblem',
+      label: l('Emblème / badge', 'Emblem / badge', 'شارة / درع'),
+      hint: l(
+        'Texte, symbole ou image à l’intérieur d’une forme (écusson, sceau, badge). Plus riche en détails, il donne une allure officielle et traditionnelle.',
+        'Text, symbol or imagery inside a shape (crest, seal, badge). Richer in detail, it gives an official, traditional look.',
+        'نص أو رمز أو صورة داخل شكل (درع، ختم، شارة). أغنى بالتفاصيل ويمنح طابعًا رسميًا وتقليديًا.',
+      ),
+      examples: [{ id: 'porsche', name: 'Porsche' }, { id: 'real-madrid', name: 'Real Madrid' }, { id: 'warner-bros', name: 'Warner Bros.' }, { id: 'starbucks', name: 'Starbucks' }],
+    },
+    {
+      id: 'mascot',
+      label: l('Mascotte / personnage', 'Mascot', 'تميمة / شخصية'),
+      hint: l(
+        'Un personnage vivant qui représente l’entreprise et a une vie en dehors du logo (réseaux, packaging, publicité).',
+        'A living character that represents the business and has a life outside the logo (social, packaging, ads).',
+        'شخصية حيّة تمثّل المؤسسة ولها حياة خارج الشعار (مواقع التواصل، التغليف، الإشهار).',
+      ),
+      examples: [{ id: 'michelin', name: 'Michelin' }, { id: 'ghostbusters', name: 'Ghostbusters' }, { id: 'pringles', name: 'Pringles' }, { id: 'kfc', name: 'KFC' }],
+    },
     { id: 'advise', label: l('Je laisse Pixel me conseiller', 'Let Pixel advise me', 'أترك Pixel تنصحني'), hint: l('Direction choisie selon le marché et le positionnement', 'Direction chosen for your market and positioning', 'اتجاه يُختار حسب السوق والتموضع') },
-  ] as const satisfies readonly Option[],
+  ] as const satisfies readonly LogoTypeOption[],
+  typesIntro: l(
+    '7 styles qui définissent les marques, illustrés par des logos connus.',
+    '7 distinct styles that define brands, shown with well-known logos.',
+    '7 أنماط مميزة تُعرّف العلامات، موضّحة بشعارات معروفة.',
+  ),
   directionTitle: l('Direction artistique', 'Art direction', 'التوجه الفني'),
   directions: [
     { id: 'minimal', label: l('Minimaliste', 'Minimalist', 'بسيط') },

@@ -90,15 +90,16 @@ export function QSection({ title, hint, children }: { title: string; hint?: stri
 }
 
 /** Bordered box whose rows are separated by hairlines. */
+/** Grid of choice cards; fills as many columns as fit (one on phones). */
 export function Group({ children }: { children: ReactNode }) {
-  return <div className="flex flex-col divide-y divide-line overflow-hidden rounded-card border border-line bg-ink-2">{children}</div>
+  return <div className="grid grid-cols-[repeat(auto-fill,minmax(min(15rem,100%),1fr))] gap-3">{children}</div>
 }
 
 // ---------------------------------------------------------------------------
 // Choices
 // ---------------------------------------------------------------------------
 
-export function OptionRow({ label, hint, price, selected, onToggle, kind = 'check', disabled, children }: {
+export function OptionRow({ label, hint, price, selected, onToggle, kind = 'check', disabled, extra, children }: {
   label: string
   hint?: string
   price?: string
@@ -106,35 +107,39 @@ export function OptionRow({ label, hint, price, selected, onToggle, kind = 'chec
   onToggle: () => void
   kind?: 'check' | 'radio'
   disabled?: boolean
+  /** Content shown under the hint, inside the row (e.g. example logos). */
+  extra?: ReactNode
   children?: ReactNode
 }) {
+  const open = selected && Boolean(children)
   return (
-    <div>
+    <div
+      className={cn(
+        'flex flex-col rounded-card border transition-colors',
+        selected ? 'border-orange bg-orange-tint' : 'border-line bg-ink-2 hover:border-line-strong',
+        disabled && 'opacity-40',
+      )}
+    >
       <button
         type="button"
         role={kind === 'radio' ? 'radio' : 'checkbox'}
         aria-checked={selected}
         disabled={disabled}
         onClick={onToggle}
-        className="flex w-full items-center gap-4 px-5 py-4 text-start transition-colors hover:bg-ink-3 disabled:cursor-not-allowed disabled:opacity-40"
+        className="flex h-full w-full flex-col gap-3 p-4 text-start disabled:cursor-not-allowed"
       >
-        <span
-          aria-hidden
-          className={cn(
-            'flex size-5.5 shrink-0 items-center justify-center border-2',
-            kind === 'radio' ? 'rounded-full' : 'rounded-[4px]',
-            selected ? 'border-orange bg-orange' : 'border-line-strong',
-          )}
-        >
-          {selected ? <span className={cn('bg-ink', kind === 'radio' ? 'size-2 rounded-full' : 'size-2.5 rounded-[2px]')} /> : null}
+        <span className="flex w-full items-start gap-3">
+          {/* Check = the Pixel mark: grey when off, brand gradient when picked. */}
+          <span aria-hidden className={cn('mt-0.5 h-5.5 w-5 shrink-0 clip-mark transition-colors', selected ? 'bg-linear-90 from-ember via-flame to-amber' : 'bg-line-strong')} />
+          <span className="min-w-0 flex-1 text-base font-semibold">{label}</span>
+          {price ? <span className="text-end text-sm font-semibold text-orange">{price}</span> : null}
         </span>
-        <span className="flex min-w-0 flex-1 flex-col gap-0.5">
-          <span className="text-base">{label}</span>
+        <span className="flex min-w-0 flex-col gap-1">
           {hint ? <span className="text-[0.8125rem] text-mist">{hint}</span> : null}
+          {extra}
         </span>
-        {price ? <span className="shrink-0 text-end text-sm font-semibold text-orange">{price}</span> : null}
       </button>
-      {selected && children ? <div className="flex flex-col gap-3 px-5 pb-5 ps-15">{children}</div> : null}
+      {open ? <div className="flex flex-col gap-3 border-t border-line px-4 pt-4 pb-5">{children}</div> : null}
     </div>
   )
 }
@@ -175,8 +180,8 @@ export function QtyStepper({ value, onChange, min = 1, step = 1, label }: { valu
   const L = useL()
   const btn = 'flex size-11 items-center justify-center rounded-field border border-line-strong bg-ink text-xl text-orange hover:border-mist'
   return (
-    <div className="flex items-center gap-2">
-      {label ? <span className="flex-1 text-sm text-mist">{label}</span> : null}
+    <div className="flex flex-wrap items-center gap-2">
+      {label ? <span className="min-w-32 flex-1 text-sm text-mist">{label}</span> : null}
       <button type="button" aria-label={L(quoteText.less)} className={btn} onClick={() => onChange(Math.max(min, value - step))}>
         −
       </button>

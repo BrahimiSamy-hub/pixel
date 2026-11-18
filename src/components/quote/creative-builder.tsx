@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 import {
   ads,
@@ -11,6 +12,7 @@ import {
   emptyMenu,
   emptyPrint,
   logo,
+  type LogoExample,
   logoLines,
   type LogoState,
   menuLines,
@@ -110,11 +112,21 @@ function LogoTab({ s, set }: { s: LogoState; set: (p: Partial<LogoState>) => voi
           <TextField id="lg-words" label={L(logo.brand.words)} value={s.brand.words} onChange={brand('words')} />
         </div>
       </QSection>
-      <QSection title={L(logo.typesTitle)} hint={L(quoteText.maxChoices, { n: 2 })}>
+      <QSection title={L(logo.typesTitle)} hint={L(logo.typesIntro)}>
         <Group>
           {logo.types.map((x) => {
             const on = s.types.includes(x.id)
-            return <OptionRow key={x.id} label={L(x.label)} hint={L(x.hint)} selected={on} disabled={!on && s.types.length >= 2} onToggle={() => set({ types: on ? s.types.filter((k) => k !== x.id) : [...s.types, x.id] })} />
+            return (
+              <OptionRow
+                key={x.id}
+                kind="radio"
+                label={L(x.label)}
+                hint={L(x.hint)}
+                extra={'examples' in x ? <LogoStrip examples={x.examples} /> : null}
+                selected={on}
+                onToggle={() => set({ types: on ? [] : [x.id] })}
+              />
+            )
           })}
         </Group>
       </QSection>
@@ -136,6 +148,17 @@ function LogoTab({ s, set }: { s: LogoState; set: (p: Partial<LogoState>) => voi
         </Group>
       </QSection>
     </div>
+  )
+}
+
+/** The example logos of a type, as on "Types of Logos.ai" (SVG, straight on the dark card; black logos use their white version). */
+function LogoStrip({ examples }: { examples: readonly LogoExample[] }) {
+  return (
+    <span className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-3">
+      {examples.map((e) => (
+        <Image key={e.id} src={`/logo-types/${e.id}.svg`} alt={e.name} title={e.name} width={0} height={0} unoptimized className="h-7 w-auto sm:h-9" />
+      ))}
+    </span>
   )
 }
 
